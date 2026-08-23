@@ -1,4 +1,4 @@
-# NYC Ride-Hailing PhD Research Platform
+# Ride-Hailing Platform Simulation
 
 ## 1. Project overview
 
