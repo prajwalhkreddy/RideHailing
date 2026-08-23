@@ -1,0 +1,79 @@
+# First-milestone settings. The 3 km square grid is the legacy NB1 default;
+# it is parameterized here without introducing alternative grid methodologies.
+data:
+  month: "2026-01"
+  yellow_taxi_path: "data/raw/yellow_taxi/yellow_tripdata_2026-01.parquet"
+  taxi_zones_path: "data/raw/taxi_zones/taxi_zones.shp"
+  processed_dir: "data/processed"
+  weather_path: "data/processed/weather/nyc_weather_processed_2026_01.parquet"
+  demand_master_path: "data/processed/demand_master_2026_01.parquet"
+  cnn_dataset_dir: "data/processed/cnn"
+
+grid:
+  size_meters: 3000
+  geometry: "square"
+  metric_crs: "EPSG:2263"
+
+random_seed: 42
+
+time:
+  interval_minutes: 30
+
+# Fleet-state milestone settings. Uniform placement is a provisional baseline.
+simulation:
+  fleet_size: 5000
+  main_slot_minutes: 30
+  mini_slot_minutes: 2
+  initialization_method: "uniform_valid_grid"
+
+# NB10 energy provenance: Ding et al. Table I supplies capacity, 60-kWh
+# reference initial energy, 7.5-kWh reference minimum, consumption and power.
+# Supervisor baseline supplies truncated SOC and <=20% trigger; release is provisional.
+energy:
+  battery_capacity_kwh: 75.0
+  initial_energy_kwh: 60.0
+  minimum_energy_kwh: 7.5
+  consumption_rate_kwh_per_km: 0.15
+  charging_power_kw: 30.0
+  charging_efficiency: 0.90
+  charging_release_energy_kwh: 75.0
+  mean_initial_soc: 0.50
+  initial_soc_std: 0.05
+  initial_soc_min: 0.50
+  initial_soc_max: 0.70
+  charging_trigger_soc: 0.20
+
+charging:
+  number_of_charging_stations: 15
+  station_max_power_kw: 3000.0
+
+# Requests/dispatch milestone engineering baselines.  Empirical OD sampling
+# is research-data-based; arrival/search/contention/duration remain provisional.
+dispatch:
+  arrival_method: "uniform_seeded_mini_slot"
+  search_method: "same_grid_then_direct_neighbours"
+  contention_method: "fcfs_mini_slot_then_request_id"
+  default_trip_duration_minutes: 2
+
+# NB9 provisional engineering settings; final alpha/initialization await
+# supervisor approval. Statistics update once at end of each main slot.
+statistics:
+  ewma_alpha: 0.30
+  ewma_initialization: "first_observation"
+
+routing:
+  speed_kmph: 15.0
+  reposition_distance_km: 3.0
+  max_reposition_minutes: 30.0
+
+# Legacy weather-utility parameters. The timezone remains intentionally unset
+# to reproduce the historical notebook; its alignment with naive taxi times is
+# recorded as an unresolved research assumption in weather provenance.
+weather:
+  provider: "meteostat"
+  latitude: 40.7128
+  longitude: -74.0060
+  altitude_m: 10
+  start: "2026-01-01 00:00:00"
+  end: "2026-01-31 23:59:59"
+  output: "data/processed/weather/nyc_weather_processed_2026_01.parquet"

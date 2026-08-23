@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments and local configuration
+.venv/
+venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data and generated research artifacts
+data/raw/*
+!data/raw/.gitkeep
+data/interim/*
+!data/interim/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+models/*
+!models/.gitkeep
+!models/demand/
+!models/demand/.gitkeep
+!models/routing/
+!models/routing/.gitkeep
+!models/pricing/
+!models/pricing/.gitkeep
+outputs/*
+!outputs/.gitkeep
+!outputs/figures/
+!outputs/metrics/
+!outputs/logs/
+outputs/figures/*
+!outputs/figures/.gitkeep
+outputs/metrics/*
+!outputs/metrics/.gitkeep
+outputs/logs/*
+!outputs/logs/.gitkeep
