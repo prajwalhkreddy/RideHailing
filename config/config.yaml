@@ -66,6 +66,19 @@ routing:
   reposition_distance_km: 3.0
   max_reposition_minutes: 30.0
 
+# NB12 provisional local-learning settings.  They are not a research reward or
+# federation methodology: reward is the next-slot dispatch outcome only.
+routing_learning:
+  hidden_units: [64, 32]
+  learning_rate: 0.001
+  gamma: 0.95
+  replay_capacity: 1000
+  batch_size: 32
+  epsilon_start: 0.10
+  epsilon_min: 0.01
+  epsilon_decay: 0.995
+  target_update_interval_slots: 5
+
 # Legacy weather-utility parameters. The timezone remains intentionally unset
 # to reproduce the historical notebook; its alignment with naive taxi times is
 # recorded as an unresolved research assumption in weather provenance.

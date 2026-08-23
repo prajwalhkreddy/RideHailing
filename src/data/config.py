@@ -119,4 +119,18 @@ def load_config(path: str | Path = "config/config.yaml") -> dict[str, Any]:
             raise ValueError("routing configuration must contain speed_kmph, reposition_distance_km, max_reposition_minutes.")
         if not all(isinstance(routing[key], (int, float)) and routing[key] > 0 for key in routing):
             raise ValueError("routing configuration values must be positive.")
+    if "routing_learning" in config:
+        learning = config["routing_learning"]
+        required_learning = {"hidden_units", "learning_rate", "gamma", "replay_capacity", "batch_size", "epsilon_start", "epsilon_min", "epsilon_decay", "target_update_interval_slots"}
+        if not isinstance(learning, dict) or set(learning) != required_learning:
+            raise ValueError("routing_learning configuration has an invalid key set.")
+        units = learning["hidden_units"]
+        if not isinstance(units, list) or len(units) != 2 or any(not isinstance(unit, int) or unit <= 0 for unit in units):
+            raise ValueError("routing_learning.hidden_units must contain two positive integers.")
+        if not isinstance(learning["learning_rate"], (int, float)) or learning["learning_rate"] <= 0 or not isinstance(learning["gamma"], (int, float)) or not 0 <= learning["gamma"] <= 1:
+            raise ValueError("routing_learning learning_rate/gamma are invalid.")
+        if not all(isinstance(learning[key], int) and learning[key] > 0 for key in ("replay_capacity", "batch_size", "target_update_interval_slots")) or learning["batch_size"] > learning["replay_capacity"]:
+            raise ValueError("routing_learning replay/batch/target settings are invalid.")
+        if not all(isinstance(learning[key], (int, float)) for key in ("epsilon_start", "epsilon_min", "epsilon_decay")) or not 0 <= learning["epsilon_min"] <= learning["epsilon_start"] <= 1 or not 0 < learning["epsilon_decay"] <= 1:
+            raise ValueError("routing_learning epsilon settings are invalid.")
     return config
