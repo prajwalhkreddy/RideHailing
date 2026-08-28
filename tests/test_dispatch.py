@@ -18,7 +18,13 @@ from src.fleet.supply import aggregate_grid_supply, validate_grid_supply
 class DispatchTests(unittest.TestCase):
     def setUp(self) -> None:
         self.grids = [0, 1, 2, 3]
-        self.trips = pd.DataFrame({"PUGridID": [0, 0, 0, 1, 2], "DOGridID": [0, 1, 1, 2, 3]})
+        pickup = pd.to_datetime(["2026-01-01 00:00:00", "2026-01-01 00:01:00", "2026-01-01 00:02:00", "2026-01-01 00:03:00", "2026-01-01 00:04:00"])
+        self.trips = pd.DataFrame({
+            "PUGridID": [0, 0, 0, 1, 2], "DOGridID": [0, 1, 1, 2, 3],
+            "tpep_pickup_datetime": pickup,
+            "tpep_dropoff_datetime": pickup + pd.to_timedelta([5, 6, 7, 8, 9], unit="minute"),
+            "trip_distance": [1., 2., 3., 4., 5.], "fare_amount": [10., 20., 30., 40., 50.],
+        })
         self.od = build_empirical_od_distribution(self.trips, self.grids)
         map_frame = pd.DataFrame({"GridID": [0, 1, 1, 2], "NeighbourGridID": [1, 0, 2, 1]})
         self.neighbours = build_neighbour_lookup(map_frame, self.grids)
@@ -55,6 +61,8 @@ class DispatchTests(unittest.TestCase):
         self.assertEqual([(r.request_id, r.request_time, r.origin_grid, r.destination_grid) for r in first], [(r.request_id, r.request_time, r.origin_grid, r.destination_grid) for r in second])
         self.assertEqual(sorted(r.request_id for r in first), list(range(6)))
         self.assertTrue(all(r.origin_grid in self.grids and r.destination_grid in self.grids and 0 <= r.request_time < 15 for r in first))
+        self.assertTrue(all(r.trip_duration_minutes > 0 and r.trip_distance_km == r.trip_distance_miles * 1.609344 for r in first))
+        self.assertTrue(all(r.base_fare is not None and r.source_trip_id is not None for r in first))
         self.assertEqual(generate_requests({0: 0}, self.od, self.grids, 15, 42), [])
 
     def test_same_grid_is_preferred_even_when_neighbour_has_lower_id(self) -> None:

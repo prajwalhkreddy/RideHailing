@@ -1,4 +1,4 @@
-"""Focused NB12 local routing-learning contracts with synthetic NB11 states."""
+"""Focused corrected-NB12 supervised local policy contracts."""
 
 from __future__ import annotations
 
@@ -7,116 +7,148 @@ import unittest
 
 import numpy as np
 
-from src.routing.baseline import ACTION_ORDER, GridRoutingFeatures, RoutingAction, RoutingState
+from src.charging.energy import EnergyParameters
+from src.routing.baseline import (
+    ACTION_ORDER, CandidateUtilityInput, GridRoutingFeatures, RoutingAction,
+    RoutingState, select_action,
+)
 from src.routing.learning import (
-    STATE_DIMENSION,
-    STATE_FEATURE_ORDER,
-    LocalReplayBuffer,
-    LocalRoutingExperience,
-    LocalRoutingLearner,
-    RoutingLearningParameters,
-    action_mask_array,
-    encode_routing_state,
+    POLICY_ARCHITECTURE_VERSION, STATE_DIMENSION, STATE_FEATURE_ORDER,
+    LocalObservationBuffer, LocalPolicyObservation, LocalRoutingLearner,
+    RoutingLearningParameters, action_mask_array, build_routing_policy_model,
+    encode_routing_state, masked_softmax,
 )
 
 
 def _features(grid_id: int, value: float) -> GridRoutingFeatures:
-    return GridRoutingFeatures(grid_id, value, 2, 1, 1, 0, value + .1, .2, value + .3, .4, value + .5, .6, value + .7, .8, True, .9)
+    return GridRoutingFeatures(grid_id, value, 2, 1, 1, 0, 10., 2., value + .3, .4, 6., 2., value + .7, .8, True, .9)
 
 
 def _state(*, east: bool = True, demand: float = 10.0) -> RoutingState:
     current = _features(10, demand)
-    return RoutingState(
-        vehicle_id=8,
-        current_grid=10,
-        energy_level=40.0,
-        current_features=current,
-        action_features={
-            RoutingAction.STAY: current,
-            RoutingAction.NORTH: _features(9, 20.0),
-            RoutingAction.EAST: _features(11, 30.0) if east else None,
-            RoutingAction.SOUTH: None,
-            RoutingAction.WEST: None,
-        },
-    )
+    return RoutingState(8, 10, 40., current, {
+        RoutingAction.STAY: current,
+        RoutingAction.NORTH: _features(9, 20.),
+        RoutingAction.EAST: _features(11, 30.) if east else None,
+        RoutingAction.SOUTH: None,
+        RoutingAction.WEST: None,
+    })
 
 
 class RoutingLearningTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.parameters = RoutingLearningParameters(replay_capacity=8, batch_size=1, target_update_interval_slots=1)
+        self.parameters = RoutingLearningParameters(learning_rate=.01, local_observation_capacity=8, batch_size=8, local_epochs=10)
         self.state = _state()
-        self.next_state = _state(demand=12.0)
 
-    def test_fixed_vector_order_mask_and_invalid_candidate_encoding(self) -> None:
-        vector = encode_routing_state(_state(east=False))
-        self.assertEqual(STATE_DIMENSION, 87)
-        self.assertEqual(vector.dtype, np.float32)
-        self.assertEqual(vector.shape, (87,))
-        self.assertTrue(np.isfinite(vector).all())
-        self.assertEqual(STATE_FEATURE_ORDER[:2], ("vehicle.current_grid", "vehicle.energy_level"))
-        self.assertEqual(STATE_FEATURE_ORDER[2:5], ("STAY.valid", "STAY.grid_id", "STAY.predicted_demand"))
+    def test_fixed_deterministic_float32_state_contract(self) -> None:
+        first = encode_routing_state(_state(east=False))
+        second = encode_routing_state(_state(east=False))
+        self.assertEqual((STATE_DIMENSION, first.shape, first.dtype), (87, (87,), np.dtype("float32")))
+        self.assertTrue(np.array_equal(first, second))
+        self.assertTrue(np.isfinite(first).all())
+        self.assertEqual(STATE_FEATURE_ORDER[:5], ("vehicle.current_grid", "vehicle.energy_level", "STAY.valid", "STAY.grid_id", "STAY.predicted_demand"))
+        self.assertEqual(STATE_FEATURE_ORDER[-17], "WEST.valid")
         east_start = 2 + 2 * 17
-        self.assertTrue(np.array_equal(vector[east_start:east_start + 17], np.zeros(17, dtype=np.float32)))
-        self.assertTrue(np.array_equal(action_mask_array(_state(east=False)), np.array([True, True, False, False, False])))
+        self.assertTrue(np.array_equal(first[east_start:east_start + 17], np.zeros(17, dtype=np.float32)))
+        missing = replace(self.state, current_features=replace(self.state.current_features, charging_available=None))
+        missing.action_features[RoutingAction.STAY] = missing.current_features
+        self.assertEqual(encode_routing_state(missing)[2 + 15], -1.)
 
-    def test_q_contract_masks_invalid_actions_and_seeded_exploration_is_deterministic(self) -> None:
-        first = LocalRoutingLearner(8, self.parameters, seed=19)
-        second = LocalRoutingLearner(8, self.parameters, seed=19)
-        self.assertEqual(first.q_values(self.state).shape, (5,))
-        # Give invalid SOUTH/WEST huge values: NB11 masking still prevents them.
-        first.q_values = lambda _: np.asarray([0., 1., 2., 999., 998.], dtype=np.float32)  # type: ignore[method-assign]
-        self.assertEqual(first.choose_action(self.state, training=False), RoutingAction.EAST)
-        first.epsilon = second.epsilon = 1.0
-        first_actions = [first.choose_action(self.state, training=True) for _ in range(10)]
-        second_actions = [second.choose_action(self.state, training=True) for _ in range(10)]
-        self.assertEqual(first_actions, second_actions)
-        self.assertTrue(all(action in (RoutingAction.STAY, RoutingAction.NORTH, RoutingAction.EAST) for action in first_actions))
+    def test_common_model_is_87_64_32_5_logits_only(self) -> None:
+        first = build_routing_policy_model(self.parameters, seed=4)
+        second = build_routing_policy_model(self.parameters, seed=5)
+        self.assertEqual((first.input_shape, first.output_shape), ((None, 87), (None, 5)))
+        self.assertEqual([layer.units for layer in first.layers[1:]], [64, 32, 5])
+        self.assertEqual(first.layers[-1].name, "action_logits")
+        self.assertEqual([weight.shape for weight in first.get_weights()], [weight.shape for weight in second.get_weights()])
+        learner = LocalRoutingLearner(1, self.parameters, seed=1)
+        self.assertFalse(hasattr(learner, "target_model"))
+        self.assertFalse(hasattr(learner, "online_model"))
 
-    def test_next_slot_binary_reward_replay_capacity_and_no_unfinished_experience(self) -> None:
-        learner = LocalRoutingLearner(8, self.parameters, seed=3)
-        self.assertFalse(learner.record_completed_outcome(self.state, RoutingAction.STAY, None, self.next_state))
-        self.assertEqual(len(learner.replay), 0)
-        self.assertTrue(learner.record_completed_outcome(self.state, RoutingAction.STAY, True, self.next_state))
-        self.assertTrue(learner.record_completed_outcome(self.state, RoutingAction.NORTH, False, self.next_state))
-        self.assertEqual([item.reward for item in learner.replay._items], [1.0, 0.0])
-        with self.assertRaisesRegex(ValueError, "masked"):
-            learner.record_completed_outcome(self.state, RoutingAction.SOUTH, True, self.next_state)
-        buffer = LocalReplayBuffer(1)
-        item = next(iter(learner.replay._items))
-        buffer.add(item)
-        buffer.add(item)
-        self.assertEqual(len(buffer), 1)
+    def test_masked_policy_normalizes_valid_actions_only(self) -> None:
+        probabilities = masked_softmax(np.array([0., 1., 2., 999., 998.]), np.array([True, True, True, False, False]))
+        self.assertEqual(probabilities.shape, (5,))
+        self.assertTrue(np.isfinite(probabilities).all())
+        self.assertTrue((probabilities >= 0).all())
+        self.assertEqual((probabilities[3], probabilities[4]), (0., 0.))
+        self.assertAlmostEqual(float(probabilities.sum()), 1.)
+        only_east = masked_softmax(np.arange(5.), np.array([False, False, True, False, False]))
+        self.assertTrue(np.array_equal(only_east, np.array([0., 0., 1., 0., 0.], dtype=np.float32)))
 
-    def test_once_per_slot_training_target_sync_and_federated_safe_export(self) -> None:
+    def test_nb11_selected_action_is_supervised_label_not_utility_target(self) -> None:
+        energy = EnergyParameters(75, 60, 7.5, .15, 30, .9, 75, .5, .05, .5, .7, .2)
+        inputs = {
+            RoutingAction.STAY: CandidateUtilityInput(8., 8., .2),
+            RoutingAction.NORTH: CandidateUtilityInput(10., 6., .1),
+            RoutingAction.EAST: CandidateUtilityInput(12., 4., .05),
+        }
+        decision = select_action(self.state, inputs, energy)
+        self.assertEqual(decision.chosen_action, RoutingAction.EAST)
         learner = LocalRoutingLearner(8, self.parameters, seed=7)
+        audit = np.array([value if value is not None else np.nan for value in decision.utility_vector.values()], dtype=np.float32)
+        learner.record_observation(self.state, decision.chosen_action, action_mask=action_mask_array(self.state), utility_vector=audit, slot_id=3)
+        item = learner.observations._items[0]
+        self.assertEqual(item.chosen_action_index, ACTION_ORDER.index(RoutingAction.EAST))
+        self.assertEqual(item.state.shape, (87,))
+        self.assertFalse(hasattr(item, "reward"))
+        self.assertFalse(hasattr(item, "next_state"))
+
+    def test_supervised_training_increases_chosen_probability_and_zero_data_skips(self) -> None:
+        learner = LocalRoutingLearner(8, self.parameters, seed=12)
+        before_weights = [weight.copy() for weight in learner.policy_model.get_weights()]
         self.assertIsNone(learner.train_for_slot(0))
-        self.assertTrue(learner.record_completed_outcome(self.state, RoutingAction.EAST, True, self.next_state))
+        self.assertTrue(all(np.array_equal(a, b) for a, b in zip(before_weights, learner.policy_model.get_weights())))
+        before = float(learner.policy_probabilities(self.state)[ACTION_ORDER.index(RoutingAction.EAST)])
+        learner.record_observation(self.state, RoutingAction.EAST)
         loss = learner.train_for_slot(1)
+        after = float(learner.policy_probabilities(self.state)[ACTION_ORDER.index(RoutingAction.EAST)])
         self.assertIsInstance(loss, float)
-        self.assertEqual((learner.gradient_updates, learner.local_sample_count), (1, 1))
-        self.assertLess(learner.epsilon, self.parameters.epsilon_start)
-        for online, target in zip(learner.online_model.get_weights(), learner.target_model.get_weights()):
-            self.assertTrue(np.array_equal(online, target))
+        self.assertGreater(after, before)
+        self.assertGreater(learner.gradient_updates, 0)
         with self.assertRaisesRegex(ValueError, "at most once"):
             learner.train_for_slot(1)
+
+    def test_local_buffers_are_bounded_and_vehicle_isolated(self) -> None:
+        parameters = replace(self.parameters, local_observation_capacity=2, batch_size=2)
+        first, second = LocalRoutingLearner(1, parameters, seed=1), LocalRoutingLearner(2, parameters, seed=2)
+        for action in (RoutingAction.STAY, RoutingAction.NORTH, RoutingAction.EAST):
+            first.record_observation(self.state, action)
+        self.assertEqual((len(first.observations), len(second.observations)), (2, 0))
+        with self.assertRaisesRegex(ValueError, "valid"):
+            second.record_observation(self.state, RoutingAction.SOUTH)
+
+    def test_common_initialization_then_different_labels_diverge(self) -> None:
+        first = LocalRoutingLearner(1, self.parameters, seed=3)
+        second = LocalRoutingLearner(2, self.parameters, seed=9)
+        common = first.policy_model.get_weights()
+        second.reset_from_global_weights(common)
+        self.assertTrue(np.allclose(first.policy_probabilities(self.state), second.policy_probabilities(self.state)))
+        first.record_observation(self.state, RoutingAction.EAST)
+        second.record_observation(self.state, RoutingAction.STAY)
+        first.train_for_slot(1)
+        second.train_for_slot(1)
+        self.assertFalse(np.allclose(first.policy_probabilities(self.state), second.policy_probabilities(self.state)))
+        self.assertEqual([w.shape for w in first.policy_model.get_weights()], [w.shape for w in second.policy_model.get_weights()])
+
+    def test_federated_ready_export_excludes_raw_observations(self) -> None:
+        learner = LocalRoutingLearner(8, self.parameters, seed=5)
+        learner.record_observation(self.state, RoutingAction.EAST)
+        learner.train_for_slot(2)
         exported = learner.export_local_update()
         self.assertEqual((exported["vehicle_id"], exported["sample_count"], exported["state_dimension"]), (8, 1, 87))
         self.assertEqual(exported["action_order"], [action.value for action in ACTION_ORDER])
-        self.assertNotIn("replay", exported)
-        receiver = LocalRoutingLearner(9, self.parameters, seed=11)
-        receiver.reset_from_global_weights(exported["weights"])
-        for expected, actual in zip(exported["weights"], receiver.online_model.get_weights()):
-            self.assertTrue(np.array_equal(expected, actual))
+        self.assertEqual(exported["architecture_version"], POLICY_ARCHITECTURE_VERSION)
+        self.assertEqual([w.shape for w in exported["weights"]], [w.shape for w in learner.policy_model.get_weights()])
+        self.assertTrue({"observations", "states", "actions", "utility_vector"}.isdisjoint(exported))
 
-    def test_invalid_contracts_are_rejected(self) -> None:
+    def test_invalid_state_observation_and_parameter_contracts(self) -> None:
         with self.assertRaisesRegex(ValueError, "batch_size"):
-            RoutingLearningParameters(replay_capacity=1, batch_size=2).validate()
-        invalid = LocalRoutingExperience(np.zeros(2, dtype=np.float32), 0, 1.0, np.zeros(STATE_DIMENSION, dtype=np.float32), np.ones(5, dtype=bool))
-        with self.assertRaisesRegex(ValueError, "vector dimension"):
-            LocalReplayBuffer(1).add(invalid)
-        bad_state = replace(self.state, energy_level=float("nan"))
+            RoutingLearningParameters(local_observation_capacity=1, batch_size=2).validate()
+        invalid = LocalPolicyObservation(np.zeros(2, dtype=np.float32), 0, np.ones(5, dtype=bool))
+        with self.assertRaisesRegex(ValueError, "87-feature"):
+            LocalObservationBuffer(1).add(invalid)
         with self.assertRaisesRegex(ValueError, "finite"):
-            encode_routing_state(bad_state)
+            encode_routing_state(replace(self.state, energy_level=float("nan")))
 
 
 if __name__ == "__main__":

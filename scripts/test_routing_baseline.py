@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run a small deterministic NB11 score/mask/repositioning demonstration."""
+"""Run a small deterministic NB11 utility/mask/repositioning demonstration."""
 
 from __future__ import annotations
 
@@ -15,25 +15,34 @@ import pandas as pd
 from src.charging.energy import energy_parameters_from_config
 from src.data.config import load_config
 from src.fleet.state import VehicleState, VehicleStatus
-from src.routing.baseline import RoutingAction, RoutingParameters, build_grid_routing_features, build_routing_state, execute_reposition, select_action, valid_action_mask
-from src.simulation.statistics import OperationalStatistics
+from src.routing.baseline import CandidateUtilityInput, GridRoutingFeatures, RoutingAction, RoutingParameters, build_routing_state, execute_reposition, select_action
 
 
 def main() -> int:
     config = load_config(ROOT / "config/config.yaml")
     energy = energy_parameters_from_config(config)
     routing = RoutingParameters(**config["routing"])
-    stats = OperationalStatistics([0, 1, 2], config["statistics"]["ewma_alpha"]).update_slot(0)
-    supply = pd.DataFrame({"grid_id": [0, 1, 2], "supply_total": [1, 2, 1], "supply_idle": [1, 2, 1], "supply_busy": [0, 0, 0], "supply_charging": [0, 0, 0]})
-    features = build_grid_routing_features({0: 5., 1: 10., 2: 20.}, supply, stats)
+    def feature(grid_id: int) -> GridRoutingFeatures:
+        return GridRoutingFeatures(grid_id, 10., 1, 1, 0, 0, 10., 2., 10., 2., 6., 2., 6., 2., True, 0.)
+    features = {grid_id: feature(grid_id) for grid_id in (0, 1, 2)}
     neighbours = pd.DataFrame({"GridID": [1, 1], "NeighbourGridID": [0, 2], "Direction": ["north", "east"]})
     vehicle = VehicleState(0, 1, VehicleStatus.IDLE, None, 0, "idle", 30.)
     state = build_routing_state(vehicle, features, neighbours)
-    action = select_action(state, {RoutingAction.STAY: .1, RoutingAction.NORTH: .3, RoutingAction.EAST: .9, RoutingAction.SOUTH: 99., RoutingAction.WEST: 98.})
-    transition = execute_reposition(vehicle, state, action, routing, energy)
+    inputs = {
+        RoutingAction.STAY: CandidateUtilityInput(8., 8., .20),
+        RoutingAction.NORTH: CandidateUtilityInput(10., 6., .10),
+        RoutingAction.EAST: CandidateUtilityInput(12., 4., .05),
+        # Explicit high-preference input cannot make masked SOUTH selectable.
+        RoutingAction.SOUTH: CandidateUtilityInput(100., 0., 0.),
+    }
+    decision = select_action(state, inputs, energy)
+    transition = execute_reposition(vehicle, state, decision.chosen_action, routing, energy)
     print("NB11 ROUTING BASELINE: PASS")
-    print(f"mask: {valid_action_mask(state)}")
-    print(f"selected_action: {action.value}; destination_grid: {transition.destination_grid}")
+    print("candidate U_price U_wait U_charge U_total")
+    for action in (RoutingAction.STAY, RoutingAction.NORTH, RoutingAction.EAST, RoutingAction.SOUTH, RoutingAction.WEST):
+        item = decision.components[action]
+        print(f"{action.value:9} MASKED") if item is None else print(f"{action.value:9} {item.price:.3f}   {item.wait:.3f}  {item.charging:.3f}    {item.total:.3f}")
+    print(f"selected maximum-utility action: {decision.chosen_action.value}; destination_grid: {transition.destination_grid}")
     print(f"movement: {transition.distance_km:.1f} km at 15 km/h = {transition.duration_minutes:.1f} min")
     print(f"energy: {transition.energy_before_kwh:.2f} -> {transition.energy_after_kwh:.2f} kWh (consumed 0.45 kWh)")
     return 0

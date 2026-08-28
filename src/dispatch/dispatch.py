@@ -8,7 +8,10 @@ from typing import Collection, Iterable, Mapping
 from src.dispatch.request import RequestState, RequestStatus
 from src.fleet.fleet import Fleet
 from src.fleet.state import VehicleStatus
-from src.charging.energy import EnergyParameters, requires_charging
+from src.charging.energy import EnergyParameters, deduct_passenger_trip_energy, energy_consumed_kwh, requires_charging
+
+
+PASSENGER_ENERGY_FEASIBILITY = "existing_check"
 
 
 def build_neighbour_lookup(neighbour_map, valid_grid_ids: Collection[int]) -> dict[int, tuple[int, ...]]:
@@ -28,7 +31,8 @@ def build_neighbour_lookup(neighbour_map, valid_grid_ids: Collection[int]) -> di
 
 def find_eligible_vehicle(request: RequestState, fleet: Fleet, neighbour_lookup: Mapping[int, Iterable[int]], energy_parameters: EnergyParameters | None = None):
     """Find lowest-ID idle supply: same grid, then direct neighbours only."""
-    eligible = lambda vehicle: vehicle.trip_status is VehicleStatus.IDLE and (energy_parameters is None or not requires_charging(vehicle, energy_parameters))
+    required_energy = None if energy_parameters is None or request.trip_distance_km is None else energy_consumed_kwh(request.trip_distance_km, energy_parameters)
+    eligible = lambda vehicle: vehicle.trip_status is VehicleStatus.IDLE and (energy_parameters is None or (not requires_charging(vehicle, energy_parameters) and (required_energy is None or vehicle.energy_level >= required_energy)))
     same_grid = [vehicle for vehicle in fleet.vehicles if eligible(vehicle) and vehicle.current_grid == request.origin_grid]
     if same_grid:
         return min(same_grid, key=lambda vehicle: vehicle.vehicle_id)
@@ -50,8 +54,8 @@ def dispatch_requests(
     This is the approved engineering baseline.  Search failures are terminal
     UNSERVED results; no multi-mini-slot persistence or queue is introduced.
     """
-    if not isinstance(default_trip_duration_minutes, int) or default_trip_duration_minutes <= 0:
-        raise ValueError("default_trip_duration_minutes must be a positive integer placeholder.")
+    if isinstance(default_trip_duration_minutes, bool) or not isinstance(default_trip_duration_minutes, (int, float)) or default_trip_duration_minutes <= 0:
+        raise ValueError("default_trip_duration_minutes must be a positive compatibility fallback.")
     ordered = sorted(requests, key=lambda request: (request.request_time, request.request_id))
     if len({request.request_id for request in ordered}) != len(ordered):
         raise ValueError("Request IDs must be unique within a dispatch batch.")
@@ -63,10 +67,22 @@ def dispatch_requests(
         if vehicle is None:
             request.status = RequestStatus.UNSERVED
         else:
-            fleet.assign_busy(vehicle.vehicle_id, request.destination_grid, default_trip_duration_minutes)
+            duration = request.trip_duration_minutes if request.trip_duration_minutes is not None else float(default_trip_duration_minutes)
+            energy_before = vehicle.energy_level
+            consumed = None
+            if energy_parameters is not None and request.trip_distance_km is not None:
+                consumed = deduct_passenger_trip_energy(vehicle, request.trip_distance_km, energy_parameters)
+            fleet.assign_busy(vehicle.vehicle_id, request.destination_grid, duration)
             request.status = RequestStatus.ASSIGNED
             request.assigned_vehicle_id = vehicle.vehicle_id
             request.wait_time = 0
+            if request.trip_duration_minutes is not None:
+                request.trip_start_minute = float(request.request_time * fleet.mini_slot_minutes)
+                request.busy_until_minute = request.trip_start_minute + duration
+            if consumed is not None:
+                request.passenger_energy_kwh = consumed
+                request.passenger_energy_before_kwh = energy_before
+                request.passenger_energy_after_kwh = vehicle.energy_level
         request.validate(fleet.valid_grid_ids, mini_slots_per_main_slot)
     summary = request_summary(ordered)
     if summary["requests_total"] != summary["requests_served"] + summary["requests_unserved"]:

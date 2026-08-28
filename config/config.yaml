@@ -66,18 +66,21 @@ routing:
   reposition_distance_km: 3.0
   max_reposition_minutes: 30.0
 
-# NB12 provisional local-learning settings.  They are not a research reward or
-# federation methodology: reward is the next-slot dispatch outcome only.
+# NB12 provisional engineering settings for local supervised policy learning.
 routing_learning:
   hidden_units: [64, 32]
   learning_rate: 0.001
-  gamma: 0.95
-  replay_capacity: 1000
+  local_observation_capacity: 1000
   batch_size: 32
-  epsilon_start: 0.10
-  epsilon_min: 0.01
-  epsilon_decay: 0.995
-  target_update_interval_slots: 5
+  local_epochs: 1
+
+# Standalone pricing baseline. Alpha 1.0 is a provisional tuning value because
+# the LinUCB paper defines alpha through an unspecified confidence parameter.
+pricing:
+  method: "linucb"
+  factors: [0.85, 0.90, 0.95, 1.00, 1.05, 1.10, 1.15]
+  linucb_alpha: 1.0
+  acceptance_seed: 42
 
 # Legacy weather-utility parameters. The timezone remains intentionally unset
 # to reproduce the historical notebook; its alignment with naive taxi times is

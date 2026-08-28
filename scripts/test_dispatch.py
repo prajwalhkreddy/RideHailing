@@ -31,7 +31,10 @@ def main() -> int:
             raise FileNotFoundError("Dispatch requires frozen grid/trip artifacts: " + ", ".join(missing))
         valid_grid_ids = sorted(pd.read_parquet(grid_path, columns=["GridID"])["GridID"].astype(int).tolist())
         neighbours = build_neighbour_lookup(pd.read_parquet(neighbour_path), valid_grid_ids)
-        trips = pd.read_parquet(trips_path, columns=["PUGridID", "DOGridID"])
+        trips = pd.read_parquet(trips_path, columns=[
+            "PUGridID", "DOGridID", "tpep_pickup_datetime", "tpep_dropoff_datetime",
+            "trip_distance", "fare_amount",
+        ])
         od = build_empirical_od_distribution(trips, valid_grid_ids)
         validate_od_distribution(od, valid_grid_ids)
         simulation, dispatch_config = config["simulation"], config["dispatch"]

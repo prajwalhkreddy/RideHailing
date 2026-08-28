@@ -2,16 +2,16 @@
 
 ## 1. Project overview
 
-This repository is a modular research implementation for studying NYC ride-hailing demand prediction, fleet operations, EV charging, vehicle repositioning, and future federated routing and pricing. It uses January 2026 NYC Yellow Taxi data and a shared spatial representation to keep demand, vehicle, and operational state contracts consistent.
+This repository is a modular research implementation for studying NYC ride-hailing demand prediction, fleet operations, EV charging, vehicle repositioning, federated routing-policy aggregation, and contextual pricing/customer acceptance. It uses January 2026 NYC Yellow Taxi data and a shared spatial representation to keep demand, vehicle, and operational state contracts consistent.
 
 The work has two distinct layers:
 
 - **Demand prediction (offline):** prepare taxi, spatial, and weather data; construct a grid-time demand table; build CNN tensors; train and validate a demand predictor.
-- **Operations and learning (online components):** represent a fleet, generate empirical OD requests, dispatch vehicles, track operating statistics, manage EV energy/charging, execute deterministic repositioning, and train local routing Q-networks.
+- **Operations and learning (online components):** represent a fleet, generate empirical OD requests, price requests, draw customer acceptance, dispatch accepted requests, track operating statistics, manage EV energy/charging, execute utility-based repositioning, and learn/federate routing policies.
 
-Demand prediction estimates future grid demand. Routing selects a vehicle movement action. Pricing, customer response, federated aggregation, and a complete slot-level simulator are separate future components; they are not implemented by the current codebase.
+Demand prediction estimates future grid demand. NB11 utility selects actual vehicle movement, while NB12/NB13 policy probabilities provide a learned signal to pricing rather than movement commands. One complete controlled 30-minute slot and a short four-slot/two-hour temporal driver are implemented; full-scale and January simulation remain future work.
 
-The legacy NB1-NB5 notebooks remain reference material and are not modified. The modular implementation currently extends through NB12.
+The legacy NB1-NB5 notebooks remain reference material and are not modified. The modular implementation currently extends through NB13.
 
 ## 2. Current implementation status
 
@@ -23,16 +23,20 @@ The legacy NB1-NB5 notebooks remain reference material and are not modified. The
 | CNN tensors (NB4) | COMPLETE | Seven-channel, one-step-ahead tensor dataset |
 | CNN training/inference (NB5) | COMPLETE | Legacy CNN, persisted model, normalization, predictions, and metrics |
 | Fleet baseline | COMPLETE | Vehicle state, seeded placement, supply aggregation |
-| Request/OD generation | COMPLETE | Empirical conditional OD sampling and seeded mini-slot arrivals |
-| Baseline dispatch | COMPLETE | FCFS same-grid/direct-neighbour dispatch baseline |
+| Request/empirical-trip generation | COMPLETE | Intact empirical trip-row sampling and empirical within-slot arrivals |
+| Baseline dispatch | COMPLETE | FCFS same-grid/direct-neighbour dispatch with empirical duration and passenger energy |
 | Operational statistics (NB9) | COMPLETE | Grid/slot fare, wait, EWMA, and charging context |
 | EV energy (NB10A) | COMPLETE | SOC initialization, energy consumption, trigger, charge/release transitions |
 | Charging infrastructure (NB10B) | COMPLETE | Popularity-based stations, power-limited charging, FCFS queue |
-| Routing/repositioning baseline (NB11) | COMPLETE | Fixed actions, action mask, deterministic selection, EV transition |
-| Local routing learning (NB12) | COMPLETE | Per-vehicle local DQN-style learner and federation-ready export payload |
-| Federated aggregation (NB13) | PENDING | No participant selection, aggregation, or global model exists |
-| Pricing integration | PENDING | No pricing state, learner, offered fare, or customer-response model exists |
-| Integrated simulator / experiments | PENDING | No end-to-end multi-slot controller or experiment suite exists |
+| Utility-based routing/repositioning (NB11) | CORRECTED / COMPLETE | Equal-weight component utilities, action mask, maximum-utility selection, EV transition |
+| Local routing policy learning (NB12) | CORRECTED / COMPLETE | Per-vehicle supervised policy learning from NB11 utility-selected actions |
+| Federated routing aggregation (NB13) | COMPLETE | Compatibility-validated, sample-count-weighted FedAvg of local policy networks |
+| Pricing state + contextual LinUCB | COMPLETE (standalone) | Eight-feature context, seven factor arms, disjoint LinUCB |
+| Customer acceptance + pricing payoff | COMPLETE (standalone) | Ordinary ride-hailing Eq. (31), seeded draw, accumulated accepted offered revenue |
+| Pricing/customer/dispatch one-slot integration | COMPLETE | One frozen factor per context, pre-dispatch acceptance, separate accepted/served revenue |
+| One-main-slot orchestration | COMPLETE | Pricing through optional FedAvg and next-slot pricing-input boundary |
+| Short multi-slot temporal orchestration | COMPLETE | Four consecutive 30-minute slots with persistent state and explicit federation schedule |
+| Full-scale simulator / experiments | PENDING | No production-scale or January experiment suite exists |
 
 ## 3. High-level architecture
 
@@ -71,29 +75,32 @@ Fleet state <---- requests / empirical OD --> Dispatch
                          Routing state
                               |
                               v
-               NB11 deterministic repositioning
+               NB11 utility-based repositioning
                               |
                               v
-                  NB12 local routing Q-learning
+               NB12 local supervised policy network
                               |
                               v
                  Local weights and sample count only
                               |
                               v
-            NB13 federated aggregation [PENDING]
+            NB13 policy-network FedAvg
                               |
                               v
-                    Global routing model [PENDING]
+                    Common routing policy
                               |
                               v
-                 Pricing / integrated simulation [PENDING]
+          Contextual LinUCB pricing + acceptance
+                              |
+                              v
+                 Integrated simulation [PENDING]
 ```
 
 NB11 and NB12 intentionally have different responsibilities:
 
-- **NB11** defines state construction, the fixed action set, invalid-action masking, deterministic score selection, and EV repositioning mechanics.
-- **NB12** learns local Q-values from completed outcomes using the NB11 state and mask.
-- **NB13** will aggregate local model updates into a common model. It is not implemented.
+- **NB11** constructs state, calculates price/wait/charging utilities per valid candidate, combines them with fixed equal weights, and selects the maximum-utility action before applying the EV transition. NB11 is not DQN or Q-learning.
+- **NB12** learns a masked local policy `P(action | state)` from NB11's `(state, chosen_action)` observations. It does not select the actual routing action in this milestone.
+- **NB13** validates explicitly supplied local policy updates and applies sample-count-weighted FedAvg to produce new common policy weights.
 
 ## 4. Repository layout
 
@@ -126,8 +133,8 @@ Important source packages:
 | `src/dispatch/` | Request state, empirical OD generation, deterministic dispatch |
 | `src/simulation/` | Grid/main-slot operational statistics and EWMA state |
 | `src/charging/` | EV energy operations and charging station infrastructure |
-| `src/routing/` | NB11 baseline routing and NB12 local learning |
-| `src/federated/`, `src/pricing/` | Package placeholders; research logic is pending |
+| `src/routing/` | NB11 utility routing, NB12 local policy learning, and NB13 policy FedAvg |
+| `src/pricing/` | Standalone pricing context, LinUCB, customer acceptance, and revenue payoff |
 
 ## 5. Data and external inputs
 
@@ -252,11 +259,17 @@ The configured fleet contains 5,000 vehicles, initially sampled uniformly over v
 | --- | --- |
 | Modules | `src/dispatch/request.py`, `src/dispatch/generation.py`, `src/dispatch/dispatch.py` |
 | Demonstration | `python scripts/test_dispatch.py` |
-| Source | Frozen `PUGridID -> DOGridID` pairs from cleaned January trips |
+| Source | Frozen January trip rows containing OD, timestamps, distance, and fare |
 
-The empirical OD distribution has 3,699,638 source trips and 191,762 observed OD pairs. One request is generated per integer grid-demand unit; an origin's destination is sampled from its seeded empirical conditional distribution. Requests are assigned uniformly and reproducibly across the 15 two-minute mini-slots inside a 30-minute main slot, then processed FCFS by `(request_time, request_id)`.
+The frozen processed table contains 3,699,638 source trips. Runtime empirical sampling preserves one source row's `PUGridID`, `DOGridID`, pickup/drop-off timestamps, duration, distance, and base fare together rather than independently resampling its fields. The source NB2 policy did not filter duration or fare; runtime validation therefore excludes non-positive duration, negative/non-finite distance, and negative/non-finite fare candidates without clipping or rebuilding the parquet. In the current artifact, 44,612 rows have non-positive duration, 38,793 have negative fare, and distance has no negative or non-finite rows; accounting for overlap, 83,405 rows are excluded from runtime sampling.
 
-The current dispatch policy is an engineering baseline: find the lowest-ID eligible `IDLE` vehicle in the origin grid, then direct canonical neighbours; exclude BUSY/CHARGING and low-energy vehicles; mark a failure `UNSERVED`. The configured two-minute trip duration is a placeholder, not an empirical travel-time model.
+One request is generated per integer grid-demand unit. The empirical pickup timestamp's absolute historical date and time are not replayed. Instead, its offset from the start of its original 30-minute bucket determines the corresponding simulated two-minute mini-slot: `floor(within_slot_offset_seconds / 120)`. For example, `08:17:43` is 17 minutes 43 seconds into the `08:00` bucket, maps to mini-slot 8, and arrives at minute 16 of whichever simulated main slot is active. Requests are then processed FCFS by `(request_time, request_id)`. The mini-slot controls simulated arrival discretization only; it is not passenger-trip duration.
+
+Empirical-row selection remains seeded. Arrival placement consumes no random draw, and customer acceptance retains its separate explicit RNG stream.
+
+The current dispatch policy finds the lowest-ID eligible `IDLE` vehicle in the origin grid, then direct canonical neighbours; it excludes BUSY/CHARGING, charging-threshold vehicles, and vehicles lacking energy for the sampled passenger distance. A failure is `UNSERVED`. Served empirical requests use `tpep_dropoff_datetime - tpep_pickup_datetime` as their positive trip duration. Remaining travel time is decremented by each two-minute mini-slot and may cross 30-minute boundaries; completion moves the vehicle to the sampled empirical destination. The configured default duration remains only a compatibility fallback for synthetic/manual requests that lack empirical fields.
+
+NYC TLC `trip_distance` is retained as `trip_distance_miles` for source audit. Kilometres are the simulation's canonical operational distance unit, converted exactly once as `trip_distance_km = trip_distance_miles * 1.609344`. At successful assignment, before the vehicle transitions from `IDLE` to `BUSY`, passenger energy is deducted exactly once with the existing consumption rate: `trip_distance_km * 0.15 kWh/km`. The request records before, consumed, and after energy. Mini-slot advancement does not deduct it again. A completed low-energy vehicle enters the existing NB10 charging workflow; BUSY vehicles cannot charge or reposition.
 
 ### 6.8 NB9 operational statistics
 
@@ -293,25 +306,25 @@ The code adopts selected Table I values from Ding et al.: 75 kWh battery capacit
 
 Fifteen station grids are selected by descending pickup-plus-dropoff popularity (with lower GridID resolving a tie). A station has a 3,000 kW power limit and each active EV reserves 30 kW. It uses a power-only representation rather than a physical charger count. Nearest-station selection uses projected grid-centroid distance, charging queues are FCFS by arrival order with seeded random priority for simultaneous arrivals, and queued wait increments by mini-slot duration. Charging gain is `power * efficiency * hours` and is capped at battery capacity.
 
-### 6.11 NB11 deterministic routing/repositioning
+### 6.11 NB11 utility-based routing/repositioning
 
 | Item | Current contract |
 | --- | --- |
 | Module | `src/routing/baseline.py` |
 | Demonstration | `python scripts/test_routing_baseline.py` |
 
-Only eligible `IDLE` vehicles not requiring charging may reposition. The fixed action order is `[STAY, NORTH, EAST, SOUTH, WEST]`; absent boundary neighbours are invalid and masked. The state combines the current grid and valid candidate-grid features: predicted demand, supply totals/statuses, current and EWMA fare/wait statistics, charging availability/wait, plus vehicle energy. The selector chooses the highest valid externally supplied score and breaks ties by fixed action order.
+Only eligible `IDLE` vehicles not requiring charging may reposition. The fixed action order is `[STAY, NORTH, EAST, SOUTH, WEST]`; absent boundary neighbours are invalid and masked. For each valid candidate, NB11 calculates normalized price, decreasing waiting-time, and charging utilities, then uses `U_total = (U_price + U_wait + U_charge) / 3`. The actual decision is `state -> component utilities -> equal-weight total utility -> maximum valid utility -> STAY or MOVE`, with fixed action order breaking ties. Explicit price/wait preferences and an explicitly normalized degradation penalty are required; production values are not fabricated. The utility vector is audit data, not Q-values or probabilities. NB11 is not DQN or Q-learning.
 
 The baseline uses 15 km/h, a 3 km repositioning threshold, and <=30-minute feasibility. Thus a non-stay movement takes 12 minutes and consumes 0.45 kWh under the current energy model. NB11 has no reward or learning logic.
 
-### 6.12 NB12 local routing learning
+### 6.12 NB12 local supervised routing-policy learning
 
 | Item | Current contract |
 | --- | --- |
 | Module | `src/routing/learning.py` |
 | Demonstration | `python scripts/test_local_routing_learning.py` |
 
-NB12 uses one local learner per participating vehicle. It has a fixed finite `float32` state vector of **87** elements, exactly:
+Each participating vehicle has a local supervised learner trained from the actual `(state, chosen_action)` observations produced by NB11. The fixed deterministic `float32` state vector has **87** elements:
 
 ```text
 vehicle.current_grid, vehicle.energy_level,
@@ -330,16 +343,80 @@ An invalid candidate has an all-zero block, including `valid=0`; `valid` remains
 87 -> Dense(64, ReLU) -> Dense(32, ReLU) -> Dense(5, linear)
 ```
 
-The five outputs are Q-values, not probabilities, in `[STAY, NORTH, EAST, SOUTH, WEST]` order. Greedy selection is the NB11 masked deterministic argmax. During training, seeded epsilon-greedy exploration samples only valid actions.
-
-An experience is recorded only when the dispatch result from the **next 30-minute main slot** is known:
+The shared architecture is:
 
 ```text
-(state_t, action_t, reward_t, state_t+1, next_action_mask, terminal)
-reward_t = 1.0 if dispatched in the next slot, else 0.0
+87 -> Dense(64, ReLU) -> Dense(32, ReLU) -> 5 action logits
 ```
 
-`STAY` may receive reward 1. Raw replay stays local in a bounded per-vehicle buffer; incomplete outcomes create no experience. The learner has online and target networks, trains at most one minibatch per main slot, uses the masked target-network maximum for nonterminal DQN bootstrap, and synchronizes target weights every configured interval. Its federation-ready export contains only copied online weights, vehicle ID, local sample count, state dimension, and action order. No aggregation or shared/global model is implemented.
+Invalid logits are excluded before softmax, so invalid actions have probability zero and valid probabilities sum to one. The supervised target is NB11's chosen action, not its utility vector, and training minimizes sparse categorical cross-entropy/negative log likelihood. Local observations contain state, chosen action, and action mask; an optional utility vector and slot ID are audit-only. Training runs at most once at the end of each 30-minute main slot, and zero observations produce no update.
+
+Each vehicle retains a bounded local observation buffer. Federation-ready export contains only copied policy weights, vehicle ID, sample count, state dimension, action order, and architecture version; raw local observations are never exported.
+
+### 6.13 NB13 federated routing-policy aggregation
+
+| Item | Current contract |
+| --- | --- |
+| Module | `src/routing/federated.py` |
+| Demonstration | `python scripts/test_federated_routing.py` |
+
+One synchronous federated round consumes corrected-NB12 export payloads, validates state dimension, action order, architecture version, tensor count/shapes, finite weights, and non-negative integer sample counts, then computes each global tensor as `sum(n_i * theta_i) / sum(n_i)`. Zero-sample clients are validated but excluded. If every submitted client has zero samples, the round returns an explicit no-update result with no fabricated weights.
+
+The common and local policies share the same `87 -> 64 -> 32 -> 5 logits` architecture, so aggregated weights load directly into fresh NB12 learners. The interface aggregates model weights only; raw states, chosen actions, masks, utilities, trajectories, and rewards are neither required nor transmitted. This baseline does not claim differential privacy, secure aggregation, client-failure simulation, or production communication behavior. Federation cadence remains a later simulator-integration decision.
+
+### 6.14 Standalone contextual pricing and customer acceptance
+
+| Item | Current contract |
+| --- | --- |
+| Modules | `src/pricing/state.py`, `linucb.py`, `customer.py`, `reward.py` |
+| Demonstration | `python scripts/test_pricing.py` |
+
+Pricing uses a disjoint-arm contextual LinUCB learner. Its raw, unnormalized eight-feature context is `[predicted demand, current supply, P(STAY), P(NORTH), P(EAST), P(SOUTH), P(WEST), popularity]`; the complete routing-policy vector is required. The fixed arms are `[0.85, 0.90, 0.95, 1.00, 1.05, 1.10, 1.15]`. Each arm maintains `A = I` and `b = 0`, is scored with `theta^T x + alpha * sqrt(x^T A^-1 x)` using linear solves, and only the selected arm receives the context-specific payoff update.
+
+The offered fare is the provided base fare multiplied by the selected factor. Ordinary ride-hailing acceptance uses Eq. (31) from the cited MARL pricing paper: `1 / (1 + exp(0.67 * factor * supply / potential_demand - 1.67))`. This project maps its selected factor to the paper's ordinary-order factor `lambda^1`; the paper does not supply this project's exact seven-arm set. A seeded RNG draws acceptance before dispatch. Accepted requests contribute their full offered fare to the context payoff whether or not a later vehicle assignment succeeds; rejected requests contribute zero. Context payoffs sum to the 30-minute slot reward. Production request/dispatch wiring is not implemented yet.
+
+LinUCB state is copy-exportable/importable in memory. Feature scaling is not silently applied and remains an experiment/tuning consideration because raw LinUCB contexts are scale-sensitive.
+
+### 6.15 One-slot pricing, acceptance, and dispatch
+
+| Item | Current contract |
+| --- | --- |
+| Module | `src/simulation/pricing_dispatch.py` |
+| Demonstration | `python scripts/test_pricing_dispatch.py` |
+
+For each explicitly supplied grid context, pricing is selected once at the start of a 30-minute slot and remains frozen across all 15 two-minute mini-slots. The runtime interface receives predicted demand, the complete current global routing-policy probability vector, and existing popularity explicitly; current supply is snapshotted with the canonical fleet supply aggregator. Each generated request retains its base fare and records factor, offered fare, acceptance probability, and its single seeded customer decision. Processing order is `pricing -> customer acceptance -> dispatch`; rejected requests never enter dispatch.
+
+The pricing payoff is **accepted revenue**, the sum of offered fares for all customer-accepted requests, including accepted requests that dispatch cannot serve. **Served revenue** is reported separately and includes only accepted requests assigned by the existing dispatch baseline. Every supplied/active context receives exactly one end-of-slot LinUCB update, including a zero-reward update when it has no request or no acceptance. If no context is active, no decision or synthetic update is created.
+
+### 6.16 One-main-slot orchestration and grid policy aggregation
+
+| Item | Current contract |
+| --- | --- |
+| Modules | `src/simulation/main_slot.py`, `grid_policy.py` |
+| Demonstration | `python scripts/test_main_slot.py` |
+
+One controlled main slot executes the completed modules in this order: pricing/customer acceptance/dispatch across 15 mini-slots; NB10 charging advancement and NB9 end-slot statistics; NB11 maximum-utility routing and existing movement/energy transition; NB12 local supervised observation and at-most-once slot training; optional NB13 FedAvg and global-weight redistribution; global-policy inference; and construction of the next pricing inputs. It stops before selecting the next pricing factors. Predicted demand and popularity remain explicit inputs, and production federation cadence remains unresolved rather than being hardcoded to every slot.
+
+The grid routing probability supplied to pricing uses an explicit **project baseline aggregation rule**, not a professor- or paper-prescribed formula. The global NB12/NB13 policy first produces an individually masked `[STAY, NORTH, EAST, SOUTH, WEST]` probability vector for every eligible idle vehicle from its real 87-D routing state. These probability vectors are averaged arithmetically within each grid. One vehicle uses its vector unchanged. A grid with zero eligible vehicles carries its previous grid vector; first use without history requires explicit initialization. This aggregation is a learned policy tendency only and may be revisited in sensitivity analysis. **NB11 maximum utility remains the sole source of actual repositioning actions.**
+
+### 6.17 Short temporal simulation
+
+| Item | Current contract |
+| --- | --- |
+| Module | `src/simulation/multi_slot.py` |
+| Demonstration | `python scripts/test_multi_slot.py` |
+
+The controlled temporal driver invokes the completed one-slot orchestrator exactly four times, advancing timestamps by 30 minutes. It reuses the same fleet and charging infrastructure, LinUCB learner, acceptance RNG stream, NB9 EWMA engine, local NB12 learners, and global policy learner. The latest grid probability becomes the next zero-vehicle carry-forward value. Federation slots are an explicit caller-supplied set rather than a claimed final cadence. Each slot receives only its explicitly supplied boundary forecast, popularity, requests, and utility inputs; no later realized outcome is inspected.
+
+### 6.18 24-hour small-fleet validation
+
+The temporal driver now supports an arbitrary positive slot count while retaining the four-slot compatibility wrapper. A deterministic **SMALL-FLEET VALIDATION** runs 48 consecutive 30-minute slots with 50 vehicles and four active grids. It is an integration-health milestone, not the final thesis experiment and not evidence that the 5,000-vehicle January simulation is complete.
+
+The fixture uses a controlled deterministic demand series (`controlled_validation_fixture`) and an explicit deterministic popularity series (`explicit_deterministic_validation_fixture`). Its every-fourth-slot federation schedule is validation-only; the production cadence remains unresolved. Two seed-42 runs produced identical aggregate trajectories. The validation checks request, fleet-state, energy, charging, pricing, routing, NB9, NB12, federation, and grid-policy invariants, and writes aggregate CSV tables and diagnostic charts under `results/tables/` and `results/figures/`. Run it with `python scripts/test_validation_24h.py`.
+
+Pending before the final experiment are frozen-CNN demand and popularity runtime wiring, final federation cadence, 5,000-vehicle scaling, January execution, and research tuning/evaluation.
+
+Passenger-trip duration and energy now use the intact sampled empirical TLC row. Busy state is temporally persistent across mini-slot and main-slot boundaries, and passenger energy remains deducted once across those advances. No centroid distance, grid-hop estimate, assumed speed, or external route model is used.
 
 ## 7. Configuration reference
 
@@ -355,9 +432,10 @@ reward_t = 1.0 if dispatched in the next slot, else 0.0
 | EV energy | 75 kWh, 0.15 kWh/km, 30 kW | Ding et al. Table I values adopted in code |
 | EV operations | SOC mean 0.50, SD 0.05, [0.50,0.70]; <=20% trigger; 0.90 efficiency; full-charge release | Supervisor/project/provisional settings as identified above |
 | Charging | 15 stations; 3,000 kW per station | Project baseline; power-only capacity model |
-| Dispatch | Seeded uniform mini-slot arrival; same-grid then direct-neighbour FCFS | Current engineering baseline; 2-minute duration placeholder |
-| Routing | Action order; 15 km/h; 3 km; <=30 minutes | Current NB11 baseline |
-| Routing learning | [64,32], LR 0.001, gamma 0.95, replay 1000, batch 32, epsilon 0.10->0.01 x0.995, target sync 5 slots | Provisional NB12 learning hyperparameters |
+| Dispatch | Empirical within-slot arrival and duration; same-grid then direct-neighbour FCFS | Empirical timing with synthetic-request fallback |
+| Routing | Equal component weights; one-sigma ranges; action order; 15 km/h; 3 km; <=30 minutes | Corrected NB11 baseline |
+| Routing policy learning | [64,32], LR 0.001, local observation capacity 1000, batch 32, 1 local epoch | Provisional NB12 engineering hyperparameters |
+| Pricing | LinUCB; factors 0.85-1.15; alpha 1.0; acceptance seed 42 | Approved method/arms; alpha is provisional because the paper's formula depends on unspecified confidence parameter delta |
 
 ## 8. Fresh-machine installation
 
@@ -477,12 +555,14 @@ python -m unittest discover -s tests -q
 | NB5 | `cnn_metrics.csv`, `cnn_predictions.npy`, `cnn_history.pkl`, `cnn_provenance.json` | Evaluation, outputs, training history, provenance |
 | NB5 | `outputs/figures/cnn_*.png` | Training, map, scatter, and error visualizations |
 | NB10B | `charging_stations_2026_01.parquet` | Popularity-ranked station definitions |
+| Validation | `results/tables/validation_24h_*.csv` | Aggregate 48-slot small-fleet diagnostics and pricing-factor frequencies |
+| Validation | `results/figures/validation_24h_*.png` | Fleet, energy, request, and revenue health plots |
 
-`models/routing/`, `models/pricing/`, `outputs/metrics/`, and `outputs/logs/` are currently reserved areas rather than evidence of completed global routing, pricing, or integrated experiments.
+`models/routing/`, `models/pricing/`, `outputs/metrics/`, and `outputs/logs/` remain reserved persistence/output areas; NB13 and pricing currently expose copy-safe in-memory state and do not implement production persistence or integrated experiments.
 
 ## 12. Testing
 
-The suite contains **83** defined test methods across 16 files:
+The suite contains **153** defined test methods across 25 files:
 
 ```bash
 python -m unittest discover -s tests -q
@@ -495,13 +575,19 @@ python -m unittest discover -s tests -q
 | CNN tensors/model | `test_cnn_tensors.py`, `test_cnn_model.py` |
 | Fleet/dispatch/statistics | `test_fleet_state.py`, `test_dispatch.py`, `test_statistics.py` |
 | EV energy/charging | `test_energy.py`, `test_charging_stations.py` |
-| Routing/local learning | `test_routing_baseline.py`, `test_routing_learning.py` |
+| Routing/local learning/federation | `test_routing_baseline.py`, `test_routing_learning.py`, `test_routing_federated.py` |
+| Pricing and one-slot dispatch integration | `test_pricing.py`, `test_pricing_dispatch.py` |
+| Grid policy aggregation and main-slot orchestration | `test_grid_policy.py`, `test_main_slot.py` |
+| Four-slot temporal continuity | `test_multi_slot.py` |
+| Empirical trip duration/distance/passenger energy | `test_passenger_trip.py` |
+| Empirical within-slot arrival timing | `test_empirical_arrivals.py` |
+| Generic temporal driver and 24-hour small-fleet validation | `test_validation_24h.py` |
 
 Tests primarily exercise small deterministic and synthetic fixtures. Passing them validates module contracts; it does not constitute a completed full-month integrated simulation or a completed research experiment.
 
 ## 13. Reproducibility boundaries
 
-The code centralizes seed 42 and uses deterministic ordering where possible: GridID ordering; zone-to-grid mapping; fleet placement; OD destination sampling; mini-slot request arrival; initial SOC sampling; simultaneous charging priority; and NB12 exploration/replay sampling. NB4 uses a chronological split, and NB5 fits normalization on training features only.
+The code centralizes seed 42 and uses deterministic ordering where possible: GridID ordering; zone-to-grid mapping; fleet placement; empirical trip-row sampling; empirical pickup-to-mini-slot mapping; initial SOC sampling; simultaneous charging priority; and NB12 state/action encoding. Customer acceptance uses its own explicit persistent RNG. NB4 uses a chronological split, and NB5 fits normalization on training features only.
 
 The saved grid, weather, demand, tensor, station, and CNN provenance metadata provide artifact-level traceability. TensorFlow training is configured for best-effort deterministic behaviour, but identical training results should not be assumed bit-for-bit across operating systems, devices, TensorFlow builds, or CPU kernels.
 
@@ -514,24 +600,23 @@ The following distinctions are material to interpreting results:
 3. Taxi/weather timestamps are naive; their alignment is unresolved.
 4. Weather is point-derived Meteostat data, and `WeatherCode` is retained without additional transformation.
 5. Padded invalid grid cells remain in NB5 normalization/loss/metrics to reproduce the legacy baseline.
-6. The four-direction neighbour map, uniform fleet placement, request mini-slot timing, dispatch search, and two-minute trip duration are current engineering baselines, not final empirical methodology.
+6. The four-direction neighbour map, uniform fleet placement, and dispatch search are current engineering baselines. Passenger arrival position, duration, distance, and fare are derived jointly from an empirical TLC row; arrival remains discretized to two-minute resolution.
 7. Station placement is popularity-based; charging navigation uses projected centroid distance rather than road-network travel.
 8. Charging capacity is power-only; the 0.90 efficiency and full-charge release rule are project/provisional choices.
 9. NB11 movement uses 15 km/h and a 3 km threshold, not road-network routing.
-10. NB12 uses a binary next-slot dispatch reward. Its architecture and hyperparameters are provisional and should not be represented as a final research reward/utility formulation.
-11. No federated aggregation, global routing model, pricing mechanism, customer acceptance model, or full integrated simulator exists yet.
+10. NB12 learns a local masked policy from utility-selected actions; policy inference does not replace NB11's actual maximum-utility decision in the current implementation.
+11. One controlled slot and a four-slot temporal driver connect pricing through NB13 and next pricing inputs. Empirical passenger duration/distance/energy are integrated; final federation cadence, automatic frozen-CNN/popularity wiring, full-scale persistence, and the January simulator remain pending.
 
 ## 15. Methodology provenance
 
-Not all values in this repository have the same evidentiary status. NB1/NB2/NB3/NB4/NB5 compatibility decisions preserve the legacy notebooks. Operational baselines are documented in code/configuration as project or supervisor decisions where applicable. Unresolved modelling choices remain explicitly provisional.
+Not all values in this repository have the same evidentiary status. Methodology authority is, in order: the corrected final implementation process; supervisor clarifications; cited mathematical sources for degradation, LinUCB pricing, and ordinary customer acceptance; and the broader execution plan where not superseded. NB1-NB5 compatibility decisions preserve the legacy notebooks. Unresolved modelling choices remain explicitly provisional.
 
 For EV energy, the adopted Table I reference is: Zhaohao Ding et al., *Pricing Based Charging Navigation Scheme for Highway Transportation to Enhance Renewable Generation Integration*, IEEE Transactions on Industry Applications (2023). The code adopts its documented capacity, reference energy, consumption, and charging-power values; it does not claim that every operational SOC, queue, or release rule is literature-derived.
 
 ## 16. Pending work and roadmap
 
-1. **NB13 federated learning:** define eligibility, participant sampling, aggregation algorithm/weights, global-model persistence, and redistribution.
-2. **Pricing:** freeze pricing state/action/reward, customer response, offered-fare logic, and learning method.
-3. **Integrated simulation:** connect predicted demand, fleet, requests, dispatch, statistics, EV charging, routing, local learning, federation, and pricing on the 30-minute/2-minute timeline.
-4. **Research experiments:** multi-slot/month runs, EV-penetration scenarios, sensitivity analysis, baselines/ablations, research metrics, thesis figures/tables, and final reproducibility validation.
+1. **Runtime methodology completion:** connect frozen CNN predictions/popularity and finalize federation cadence.
+2. **Full simulation and evaluation:** scale the fleet, run January/full-scale experiments, and produce evaluation/reporting outputs.
+3. **Research experiments and tuning:** evaluate grid-policy aggregation sensitivity, context feature scaling, LinUCB alpha, other sensitivity analysis, and baselines/ablations.
 
 These items are intentionally pending. They must not be inferred from package names, reserved directories, or the presence of local NB12 exports.

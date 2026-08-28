@@ -104,6 +104,18 @@ def energy_consumed_kwh(distance_km: float, parameters: EnergyParameters) -> flo
     return float(distance_km * parameters.consumption_rate_kwh_per_km)
 
 
+def deduct_passenger_trip_energy(vehicle: VehicleState, distance_km: float, parameters: EnergyParameters) -> float:
+    """Deduct one assigned passenger trip before IDLE -> BUSY transition."""
+    validate_vehicle_energy(vehicle, parameters)
+    if vehicle.trip_status is not VehicleStatus.IDLE:
+        raise ValueError("Passenger-trip energy can only be deducted from the selected IDLE vehicle.")
+    consumed = energy_consumed_kwh(distance_km, parameters)
+    if consumed > vehicle.energy_level:
+        raise ValueError("Vehicle lacks energy for the empirical passenger-trip distance.")
+    vehicle.energy_level -= consumed
+    return consumed
+
+
 def requires_charging(vehicle: VehicleState, parameters: EnergyParameters) -> bool:
     """Return whether an EV is strictly below the configured minimum energy."""
     validate_vehicle_energy(vehicle, parameters)

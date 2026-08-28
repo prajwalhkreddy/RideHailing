@@ -28,7 +28,7 @@ class VehicleState:
     current_grid: int
     trip_status: VehicleStatus
     destination: int | None
-    remaining_travel_time: int
+    remaining_travel_time: float
     current_action: str
     energy_level: float
 
@@ -41,8 +41,8 @@ class VehicleState:
             raise ValueError("trip_status must be a VehicleStatus value.")
         if self.current_grid not in grids:
             raise ValueError("current_grid must be a canonical valid GridID.")
-        if not isinstance(self.remaining_travel_time, int) or self.remaining_travel_time < 0:
-            raise ValueError("remaining_travel_time must be a non-negative integer number of minutes.")
+        if isinstance(self.remaining_travel_time, bool) or not isinstance(self.remaining_travel_time, (int, float)) or not math.isfinite(self.remaining_travel_time) or self.remaining_travel_time < 0:
+            raise ValueError("remaining_travel_time must be finite non-negative minutes.")
         if not isinstance(self.current_action, str) or not self.current_action:
             raise ValueError("current_action must be a non-empty string.")
         if not isinstance(self.energy_level, (int, float)) or not math.isfinite(self.energy_level) or self.energy_level < 0:
@@ -52,4 +52,3 @@ class VehicleState:
                 raise ValueError("BUSY vehicles require a valid destination and positive remaining travel time.")
         elif self.destination is not None or self.remaining_travel_time != 0:
             raise ValueError("IDLE and CHARGING vehicles cannot retain a trip destination or travel time.")
-

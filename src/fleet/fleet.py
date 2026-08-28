@@ -98,18 +98,18 @@ class Fleet:
                 return vehicle
         raise ValueError(f"Unknown vehicle_id: {vehicle_id}")
 
-    def assign_busy(self, vehicle_id: int, destination: int, travel_duration_minutes: int) -> None:
+    def assign_busy(self, vehicle_id: int, destination: int, travel_duration_minutes: float) -> None:
         """Apply the future-dispatch IDLE -> BUSY transition contract."""
         vehicle = self.vehicle(vehicle_id)
         if vehicle.trip_status is not VehicleStatus.IDLE:
             raise ValueError("Only IDLE vehicles can be assigned a trip.")
         if destination not in self.valid_grid_ids:
             raise ValueError("Trip destination must be a canonical valid GridID.")
-        if not isinstance(travel_duration_minutes, int) or travel_duration_minutes <= 0:
-            raise ValueError("travel_duration_minutes must be a positive integer.")
+        if isinstance(travel_duration_minutes, bool) or not isinstance(travel_duration_minutes, (int, float)) or not np.isfinite(travel_duration_minutes) or travel_duration_minutes <= 0:
+            raise ValueError("travel_duration_minutes must be positive finite minutes.")
         vehicle.trip_status = VehicleStatus.BUSY
         vehicle.destination = destination
-        vehicle.remaining_travel_time = travel_duration_minutes
+        vehicle.remaining_travel_time = float(travel_duration_minutes)
         vehicle.current_action = "transporting"
         vehicle.validate(self.valid_grid_ids)
 

@@ -1,9 +1,10 @@
-"""NB11 deterministic routing/repositioning baseline; no learning or rewards."""
+"""NB11 utility-based routing/repositioning; no learning or rewards."""
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 from enum import Enum
+import math
 from typing import Mapping
 
 import pandas as pd
@@ -83,6 +84,63 @@ class RoutingTransition:
     status_after: VehicleStatus
 
 
+@dataclass(frozen=True)
+class CandidateUtilityInput:
+    """Explicit vehicle preference/degradation inputs for one candidate grid."""
+    price_preference: float
+    wait_preference: float
+    normalized_degradation_penalty: float
+
+
+@dataclass(frozen=True)
+class UtilityComponents:
+    price: float
+    wait: float
+    charging: float
+    total: float
+
+
+@dataclass(frozen=True)
+class RoutingDecision:
+    """Auditable NB11 observation for later supervised policy learning."""
+    state: RoutingState
+    chosen_action: RoutingAction
+    valid_action_mask: dict[RoutingAction, bool]
+    utility_vector: dict[RoutingAction, float | None]
+    components: dict[RoutingAction, UtilityComponents | None]
+
+
+@dataclass(frozen=True)
+class DegradationParameters:
+    """All-explicit Chauhan/Jain parameters; the project supplies no defaults."""
+    proportionality_constant_a: float
+    activation_energy_ea: float
+    gas_constant_r: float
+    ambient_temperature_k: float
+    thermal_resistance: float
+    charging_power_kw: float
+    discharging_power_kw: float
+    slot_duration: float
+    slot_count: int
+    battery_replacement_cost: float
+    battery_capacity_kwh: float
+    charging_duration: float
+    discharging_duration: float
+    battery_investment_cost: float
+    battery_life_cycles: float
+    dod_increment: float
+
+
+@dataclass(frozen=True)
+class DegradationCost:
+    temperature_power_k: float
+    capacity_fading_rate: float
+    cumulative_capacity_fading: float
+    temperature_cost: float
+    dod_cost: float
+    total_cost: float
+
+
 def build_grid_routing_features(predicted_demand: Mapping[int, float], supply: pd.DataFrame, statistics: list[GridSlotStatistics]) -> dict[int, GridRoutingFeatures]:
     """Combine frozen grid-level demand/supply/NB9 records into routing features."""
     supply_by_grid = supply.set_index("grid_id").to_dict("index")
@@ -111,13 +169,117 @@ def valid_action_mask(state: RoutingState) -> dict[RoutingAction, bool]:
     return {action: state.action_features[action] is not None for action in ACTION_ORDER}
 
 
-def select_action(state: RoutingState, action_scores: Mapping[RoutingAction | str, float]) -> RoutingAction:
-    """Choose highest externally supplied valid score with fixed action-order ties."""
+def _finite(value: float, name: str) -> float:
+    result = float(value)
+    if not math.isfinite(result):
+        raise ValueError(f"{name} must be finite.")
+    return result
+
+
+def price_utility(price_preference: float, mean_price: float, sigma_price: float, sigma_multiplier: float = 1.0) -> float:
+    """Increasing linear utility over mean price +/- one sigma by default."""
+    preference, mean = _finite(price_preference, "price_preference"), _finite(mean_price, "mean_price")
+    sigma, multiplier = _finite(sigma_price, "sigma_price"), _finite(sigma_multiplier, "sigma_multiplier")
+    if sigma < 0 or multiplier <= 0:
+        raise ValueError("sigma_price must be non-negative and sigma_multiplier positive.")
+    lower, upper = mean - multiplier * sigma, mean + multiplier * sigma
+    if upper == lower:
+        return 0.0 if preference < lower else 1.0
+    return float(min(1.0, max(0.0, (preference - lower) / (upper - lower))))
+
+
+def wait_utility(wait_preference: float, mean_wait: float, sigma_wait: float, sigma_multiplier: float = 1.0) -> float:
+    """Decreasing linear utility: lower preferred waiting time is better."""
+    preference, mean = _finite(wait_preference, "wait_preference"), _finite(mean_wait, "mean_wait")
+    sigma, multiplier = _finite(sigma_wait, "sigma_wait"), _finite(sigma_multiplier, "sigma_multiplier")
+    if sigma < 0 or multiplier <= 0:
+        raise ValueError("sigma_wait must be non-negative and sigma_multiplier positive.")
+    lower, upper = mean - multiplier * sigma, mean + multiplier * sigma
+    if upper == lower:
+        return 1.0 if preference <= lower else 0.0
+    return float(min(1.0, max(0.0, (upper - preference) / (upper - lower))))
+
+
+def charging_time_to_full_minutes(current_energy_kwh: float, energy: EnergyParameters) -> float:
+    """Time to full using NB10's effective power = power * efficiency."""
+    energy.validate()
+    current = _finite(current_energy_kwh, "current_energy_kwh")
+    if not 0 <= current <= energy.battery_capacity_kwh:
+        raise ValueError("current_energy_kwh must be within battery capacity.")
+    effective_power = energy.charging_power_kw * energy.charging_efficiency
+    required = energy.battery_capacity_kwh - current
+    if effective_power == 0:
+        return 0.0 if required == 0 else math.inf
+    return required / effective_power * 60.0
+
+
+def charging_time_utility(current_energy_kwh: float, energy: EnergyParameters) -> float:
+    """Return 1 - T_charge/T_max from the NB10 SOC threshold to full."""
+    threshold_energy = energy.charging_trigger_soc * energy.battery_capacity_kwh
+    maximum = charging_time_to_full_minutes(threshold_energy, energy)
+    current = charging_time_to_full_minutes(current_energy_kwh, energy)
+    if maximum == 0 or not math.isfinite(maximum):
+        raise ValueError("A finite positive maximum charging time is required.")
+    return float(min(1.0, max(0.0, 1.0 - current / maximum)))
+
+
+def battery_degradation_cost(parameters: DegradationParameters) -> DegradationCost:
+    """Compute Chauhan/Jain equations (14)-(20) from explicit inputs only."""
+    if any(not isinstance(value, (int, float)) or not math.isfinite(value) for value in parameters.__dict__.values()):
+        raise ValueError("All degradation parameters must be finite numeric values.")
+    if (parameters.proportionality_constant_a < 0 or parameters.gas_constant_r <= 0 or
+            parameters.battery_capacity_kwh <= 0 or parameters.slot_duration < 0 or parameters.slot_count < 0 or
+            parameters.battery_life_cycles <= 0 or parameters.dod_increment <= 0 or
+            min(parameters.charging_duration, parameters.discharging_duration,
+                parameters.charging_power_kw, parameters.discharging_power_kw) < 0):
+        raise ValueError("Degradation parameters violate the paper equation domains.")
+    power_temperature = parameters.ambient_temperature_k + parameters.thermal_resistance * parameters.charging_power_kw
+    if power_temperature <= 0:
+        raise ValueError("Tpower must be positive Kelvin.")
+    fading_rate = parameters.proportionality_constant_a * math.exp(
+        (-parameters.activation_energy_ea / parameters.gas_constant_r) / power_temperature
+    )
+    cumulative_fading = fading_rate * parameters.slot_duration * parameters.slot_count
+    temperature_cost = cumulative_fading / parameters.battery_capacity_kwh * parameters.battery_replacement_cost
+    level_cost = parameters.battery_investment_cost / (2.0 * parameters.battery_life_cycles * parameters.battery_capacity_kwh * parameters.dod_increment)
+    dod_cost = level_cost * (parameters.charging_duration * parameters.charging_power_kw + parameters.discharging_duration * parameters.discharging_power_kw)
+    return DegradationCost(power_temperature, fading_rate, cumulative_fading, temperature_cost, dod_cost, temperature_cost + dod_cost)
+
+
+def charging_utility(current_energy_kwh: float, energy: EnergyParameters, normalized_degradation_penalty: float) -> float:
+    """Subtract an explicit normalized penalty; raw degradation cost is invalid here."""
+    penalty = _finite(normalized_degradation_penalty, "normalized_degradation_penalty")
+    if not 0 <= penalty <= 1:
+        raise ValueError("normalized_degradation_penalty must already be normalized to [0, 1].")
+    return float(min(1.0, max(0.0, charging_time_utility(current_energy_kwh, energy) - penalty)))
+
+
+def candidate_utility(features: GridRoutingFeatures, inputs: CandidateUtilityInput, current_energy_kwh: float, energy: EnergyParameters) -> UtilityComponents:
+    """Calculate the three isolated components and fixed equal-weight total."""
+    if features.mean_fare is None or features.std_fare is None or features.mean_wait is None or features.std_wait is None:
+        raise ValueError("Candidate utility requires mean/std fare and waiting statistics.")
+    price = price_utility(inputs.price_preference, features.mean_fare, features.std_fare)
+    wait = wait_utility(inputs.wait_preference, features.mean_wait, features.std_wait)
+    charging = charging_utility(current_energy_kwh, energy, inputs.normalized_degradation_penalty)
+    return UtilityComponents(price, wait, charging, (price + wait + charging) / 3.0)
+
+
+def select_action(state: RoutingState, utility_inputs: Mapping[RoutingAction | str, CandidateUtilityInput], energy: EnergyParameters) -> RoutingDecision:
+    """Evaluate valid candidates and choose maximum total utility with fixed ties."""
     mask = valid_action_mask(state)
-    scores = {RoutingAction(key): float(value) for key, value in action_scores.items()}
-    if not all(action in scores for action in ACTION_ORDER):
-        raise ValueError("Action scores must include STAY, NORTH, EAST, SOUTH, and WEST.")
-    return max((action for action in ACTION_ORDER if mask[action]), key=lambda action: (scores[action], -ACTION_ORDER.index(action)))
+    inputs = {RoutingAction(key): value for key, value in utility_inputs.items()}
+    missing = [action.value for action in ACTION_ORDER if mask[action] and action not in inputs]
+    if missing:
+        raise ValueError(f"Utility inputs are required for every valid candidate: {missing}.")
+    components: dict[RoutingAction, UtilityComponents | None] = {}
+    utilities: dict[RoutingAction, float | None] = {}
+    for action in ACTION_ORDER:
+        feature = state.action_features[action]
+        component = candidate_utility(feature, inputs[action], state.energy_level, energy) if feature is not None else None
+        components[action] = component
+        utilities[action] = component.total if component is not None else None
+    chosen = max((action for action in ACTION_ORDER if mask[action]), key=lambda action: (utilities[action], -ACTION_ORDER.index(action)))
+    return RoutingDecision(state, chosen, mask, utilities, components)
 
 
 def execute_reposition(vehicle: VehicleState, state: RoutingState, action: RoutingAction, parameters: RoutingParameters, energy: EnergyParameters) -> RoutingTransition:
