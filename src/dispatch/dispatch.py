@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from collections import defaultdict
+from dataclasses import dataclass
 from typing import Collection, Iterable, Mapping
 
 from src.dispatch.request import RequestState, RequestStatus
@@ -12,6 +13,15 @@ from src.charging.energy import EnergyParameters, deduct_passenger_trip_energy, 
 
 
 PASSENGER_ENERGY_FEASIBILITY = "existing_check"
+
+
+@dataclass(frozen=True)
+class DriverWaitObservation:
+    """One driver-idle episode completed by a dispatch."""
+
+    vehicle_id: int
+    grid_id: int
+    wait_minutes: float
 
 
 def build_neighbour_lookup(neighbour_map, valid_grid_ids: Collection[int]) -> dict[int, tuple[int, ...]]:
@@ -48,6 +58,7 @@ def dispatch_requests(
     default_trip_duration_minutes: int,
     mini_slots_per_main_slot: int,
     energy_parameters: EnergyParameters | None = None,
+    driver_wait_observations: list[DriverWaitObservation] | None = None,
 ) -> dict[str, int]:
     """Immediately process PENDING requests in FCFS mini-slot/request-ID order.
 
@@ -67,12 +78,19 @@ def dispatch_requests(
         if vehicle is None:
             request.status = RequestStatus.UNSERVED
         else:
+            if vehicle.idle_wait_grid is None:
+                raise ValueError("Selected IDLE vehicle lacks an active driver-wait episode.")
+            completed_wait = DriverWaitObservation(
+                vehicle.vehicle_id, vehicle.idle_wait_grid, float(vehicle.idle_wait_minutes),
+            )
             duration = request.trip_duration_minutes if request.trip_duration_minutes is not None else float(default_trip_duration_minutes)
             energy_before = vehicle.energy_level
             consumed = None
             if energy_parameters is not None and request.trip_distance_km is not None:
                 consumed = deduct_passenger_trip_energy(vehicle, request.trip_distance_km, energy_parameters)
             fleet.assign_busy(vehicle.vehicle_id, request.destination_grid, duration)
+            if driver_wait_observations is not None:
+                driver_wait_observations.append(completed_wait)
             request.status = RequestStatus.ASSIGNED
             request.assigned_vehicle_id = vehicle.vehicle_id
             request.wait_time = 0

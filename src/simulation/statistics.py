@@ -15,6 +15,7 @@ import numpy as np
 import pandas as pd
 
 from src.dispatch.request import RequestState, RequestStatus
+from src.dispatch.dispatch import DriverWaitObservation
 
 
 @dataclass(frozen=True)
@@ -88,6 +89,7 @@ class OperationalStatistics:
         fare_observations: Iterable[FareObservation] = (),
         requests: Iterable[RequestState] = (),
         charging_observations: Mapping[int, tuple[bool, float]] | None = None,
+        driver_wait_observations: Iterable[DriverWaitObservation] = (),
     ) -> list[GridSlotStatistics]:
         """Aggregate a completed main slot and update EWMAs once per grid.
 
@@ -112,13 +114,10 @@ class OperationalStatistics:
                 raise ValueError("Fare observation references an invalid GridID.")
             if observation.successful:
                 fares[observation.grid_id].extend(_validated_values([observation.fare], "Fare"))
-        for request in requests:
-            if request.origin_grid not in valid:
-                raise ValueError("Request waiting observation references an invalid GridID.")
-            if request.status is RequestStatus.ASSIGNED:
-                if request.wait_time is None:
-                    raise ValueError("ASSIGNED request lacks a finalized wait_time.")
-                waits[request.origin_grid].extend(_validated_values([request.wait_time], "Wait"))
+        for observation in driver_wait_observations:
+            if observation.grid_id not in valid:
+                raise ValueError("Driver waiting observation references an invalid GridID.")
+            waits[observation.grid_id].extend(_validated_values([observation.wait_minutes], "Wait"))
 
         results: list[GridSlotStatistics] = []
         for grid_id in self.valid_grid_ids:

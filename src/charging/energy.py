@@ -133,6 +133,7 @@ def enter_charging(vehicle: VehicleState, parameters: EnergyParameters) -> None:
         raise ValueError("A BUSY vehicle must complete its movement before entering CHARGING.")
     if not requires_charging(vehicle, parameters):
         raise ValueError("Vehicle energy is not below the charging minimum.")
+    vehicle.abandon_idle_wait()
     vehicle.trip_status = VehicleStatus.CHARGING
     vehicle.current_action = "charging"
 
@@ -179,4 +180,5 @@ def charge_vehicle(vehicle: VehicleState, charging_duration_minutes: float, para
     if vehicle.energy_level >= parameters.charging_release_energy_kwh:
         vehicle.trip_status = VehicleStatus.IDLE
         vehicle.current_action = "idle"
+        vehicle.start_idle_wait()
     return float(vehicle.energy_level - before)

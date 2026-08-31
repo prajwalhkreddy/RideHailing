@@ -5,11 +5,16 @@ from __future__ import annotations
 import unittest
 
 from src.dispatch.request import RequestState, RequestStatus
+from src.dispatch.dispatch import DriverWaitObservation
 from src.simulation.statistics import FareObservation, OperationalStatistics, routing_feature_frame
 
 
 def assigned(request_id: int, grid_id: int, wait: int) -> RequestState:
     return RequestState(request_id, 0, grid_id, grid_id, RequestStatus.ASSIGNED, request_id, wait)
+
+
+def waits(grid_id: int, *values: float) -> list[DriverWaitObservation]:
+    return [DriverWaitObservation(index, grid_id, value) for index, value in enumerate(values)]
 
 
 class OperationalStatisticsTests(unittest.TestCase):
@@ -23,25 +28,25 @@ class OperationalStatisticsTests(unittest.TestCase):
         records = self.by_grid(self.engine.update_slot(
             0,
             [FareObservation(10, 100), FareObservation(10, 120), FareObservation(10, 140)],
-            [assigned(0, 10, 0), assigned(1, 10, 2), assigned(2, 10, 4)],
+            driver_wait_observations=waits(10, 2, 6, 8, 4, 10),
         ))
         row = records[10]
-        self.assertEqual((row.fare_count, row.wait_count), (3, 3))
+        self.assertEqual((row.fare_count, row.wait_count), (3, 5))
         self.assertAlmostEqual(row.mean_fare, 120.0)
         self.assertAlmostEqual(row.std_fare, (800 / 3) ** 0.5)
-        self.assertAlmostEqual(row.mean_wait, 2.0)
-        self.assertAlmostEqual(row.std_wait, (8 / 3) ** 0.5)
+        self.assertAlmostEqual(row.mean_wait, 6.0)
+        self.assertAlmostEqual(row.std_wait, (40 / 5) ** 0.5)
         self.assertAlmostEqual(row.ewma_std_fare, row.std_fare)
         self.assertAlmostEqual(row.ewma_std_wait, row.std_wait)
 
     def test_only_successful_fares_and_assigned_waits_are_included(self) -> None:
         unserved = RequestState(1, 0, 10, 10, RequestStatus.UNSERVED)
-        row = self.by_grid(self.engine.update_slot(0, [FareObservation(10, 10), FareObservation(10, 999, successful=False)], [assigned(0, 10, 3), unserved]))[10]
+        row = self.by_grid(self.engine.update_slot(0, [FareObservation(10, 10), FareObservation(10, 999, successful=False)], [assigned(0, 10, 3), unserved], driver_wait_observations=waits(10, 3)))[10]
         self.assertEqual((row.fare_count, row.mean_fare, row.wait_count, row.mean_wait), (1, 10.0, 1, 3.0))
 
     def test_first_observation_and_exact_incremental_ewma_formula(self) -> None:
-        first = self.by_grid(self.engine.update_slot(0, [FareObservation(10, 100)], [assigned(0, 10, 2)]))[10]
-        second = self.by_grid(self.engine.update_slot(1, [FareObservation(10, 200)], [assigned(1, 10, 12)]))[10]
+        first = self.by_grid(self.engine.update_slot(0, [FareObservation(10, 100)], driver_wait_observations=waits(10, 2)))[10]
+        second = self.by_grid(self.engine.update_slot(1, [FareObservation(10, 200)], driver_wait_observations=waits(10, 12)))[10]
         self.assertEqual((first.ewma_fare, first.ewma_wait), (100.0, 2.0))
         self.assertAlmostEqual(second.ewma_fare, 0.3 * 200 + 0.7 * 100)
         self.assertAlmostEqual(second.ewma_wait, 0.3 * 12 + 0.7 * 2)
@@ -57,7 +62,7 @@ class OperationalStatisticsTests(unittest.TestCase):
             OperationalStatistics([10], 1.1)
 
     def test_no_observation_carries_existing_ewma_and_never_observed_remains_missing(self) -> None:
-        self.engine.update_slot(0, [FareObservation(10, 100)], [assigned(0, 10, 3)])
+        self.engine.update_slot(0, [FareObservation(10, 100)], driver_wait_observations=waits(10, 3))
         rows = self.by_grid(self.engine.update_slot(1))
         self.assertEqual((rows[10].fare_count, rows[10].mean_fare, rows[10].ewma_fare), (0, None, 100.0))
         self.assertEqual((rows[20].ewma_fare, rows[20].ewma_wait), (None, None))

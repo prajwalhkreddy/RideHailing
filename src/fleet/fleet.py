@@ -89,6 +89,9 @@ class Fleet:
             raise ValueError("Fleet requires canonical valid GridIDs.")
         if not isinstance(self.mini_slot_minutes, int) or self.mini_slot_minutes <= 0:
             raise ValueError("mini_slot_minutes must be a positive integer.")
+        for vehicle in self.vehicles:
+            if vehicle.trip_status is VehicleStatus.IDLE and vehicle.idle_wait_grid is None:
+                vehicle.start_idle_wait()
         validate_fleet(self.vehicles, self.valid_grid_ids)
 
     def vehicle(self, vehicle_id: int) -> VehicleState:
@@ -107,6 +110,7 @@ class Fleet:
             raise ValueError("Trip destination must be a canonical valid GridID.")
         if isinstance(travel_duration_minutes, bool) or not isinstance(travel_duration_minutes, (int, float)) or not np.isfinite(travel_duration_minutes) or travel_duration_minutes <= 0:
             raise ValueError("travel_duration_minutes must be positive finite minutes.")
+        vehicle.abandon_idle_wait()
         vehicle.trip_status = VehicleStatus.BUSY
         vehicle.destination = destination
         vehicle.remaining_travel_time = float(travel_duration_minutes)
@@ -114,8 +118,12 @@ class Fleet:
         vehicle.validate(self.valid_grid_ids)
 
     def advance_mini_slot(self) -> None:
-        """Advance BUSY vehicle travel by exactly one configured mini-slot."""
+        """Advance BUSY travel and persistent driver-idle waits one mini-slot."""
         for vehicle in self.vehicles:
+            if vehicle.trip_status is VehicleStatus.IDLE:
+                vehicle.advance_idle_wait(self.mini_slot_minutes)
+                vehicle.validate(self.valid_grid_ids)
+                continue
             if vehicle.trip_status is not VehicleStatus.BUSY:
                 continue
             vehicle.remaining_travel_time = max(0, vehicle.remaining_travel_time - self.mini_slot_minutes)
@@ -125,4 +133,5 @@ class Fleet:
                 vehicle.trip_status = VehicleStatus.IDLE
                 vehicle.destination = None
                 vehicle.current_action = "idle"
+                vehicle.start_idle_wait()
             vehicle.validate(self.valid_grid_ids)

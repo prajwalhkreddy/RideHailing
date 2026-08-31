@@ -269,6 +269,8 @@ Empirical-row selection remains seeded. Arrival placement consumes no random dra
 
 The current dispatch policy finds the lowest-ID eligible `IDLE` vehicle in the origin grid, then direct canonical neighbours; it excludes BUSY/CHARGING, charging-threshold vehicles, and vehicles lacking energy for the sampled passenger distance. A failure is `UNSERVED`. Served empirical requests use `tpep_dropoff_datetime - tpep_pickup_datetime` as their positive trip duration. Remaining travel time is decremented by each two-minute mini-slot and may cross 30-minute boundaries; completion moves the vehicle to the sampled empirical destination. The configured default duration remains only a compatibility fallback for synthetic/manual requests that lack empirical fields.
 
+**Waiting-time semantics:** NB9/NB11 waiting means driver/vehicle idle time in a grid before receiving a dispatch, not passenger waiting time. An available IDLE vehicle begins an episode at zero in its current grid and gains two minutes after each completed mini-slot that it remains IDLE. Dispatch closes the episode and records its completed duration against the vehicle's waiting grid, including when a neighboring vehicle serves the request. Main-slot boundaries and NB11 STAY do not reset it. BUSY trip time, charging time, and reposition travel are not idle waiting. Passenger-trip completion and charging completion start a new zero-minute episode at the vehicle's available grid. Under the current instantaneous reposition transition, a MOVE abandons the origin episode without recording it and immediately starts a new zero-minute episode at the destination; no abandoned-wait statistic is fabricated.
+
 NYC TLC `trip_distance` is retained as `trip_distance_miles` for source audit. Kilometres are the simulation's canonical operational distance unit, converted exactly once as `trip_distance_km = trip_distance_miles * 1.609344`. At successful assignment, before the vehicle transitions from `IDLE` to `BUSY`, passenger energy is deducted exactly once with the existing consumption rate: `trip_distance_km * 0.15 kWh/km`. The request records before, consumed, and after energy. Mini-slot advancement does not deduct it again. A completed low-energy vehicle enters the existing NB10 charging workflow; BUSY vehicles cannot charge or reposition.
 
 ### 6.8 NB9 operational statistics
@@ -278,7 +280,7 @@ NYC TLC `trip_distance` is retained as `trip_distance_miles` for source audit. K
 | Module | `src/simulation/statistics.py` |
 | Demonstration | `python scripts/test_statistics.py` |
 
-For every grid/main slot, the module records fare and wait counts, means, and population standard deviations (`ddof=0`), along with `ewma_fare`, `ewma_std_fare`, `ewma_wait`, and `ewma_std_wait`. It also carries charging availability and wait context where supplied. The configured `alpha = 0.30` uses first observation initialization and no-observation carry-forward:
+For every grid/main slot, the module records successful-trip fares and completed driver-idle dispatch waits, with separate counts, means, and population standard deviations (`ddof=0`), along with `ewma_fare`, `ewma_std_fare`, `ewma_wait`, and `ewma_std_wait`. A vehicle that remains idle has not completed an episode and creates no observation; a grid with no completed wait retains the existing missing/current and EWMA carry-forward behavior. It also carries charging availability and charging-queue wait context where supplied. The configured `alpha = 0.30` uses first observation initialization and no-observation carry-forward:
 
 ```text
 EWMA_next = (1 - alpha) * EWMA_previous + alpha * current_observation
@@ -371,11 +373,27 @@ The common and local policies share the same `87 -> 64 -> 32 -> 5 logits` archit
 | Modules | `src/pricing/state.py`, `linucb.py`, `customer.py`, `reward.py` |
 | Demonstration | `python scripts/test_pricing.py` |
 
-Pricing uses a disjoint-arm contextual LinUCB learner. Its raw, unnormalized eight-feature context is `[predicted demand, current supply, P(STAY), P(NORTH), P(EAST), P(SOUTH), P(WEST), popularity]`; the complete routing-policy vector is required. The fixed arms are `[0.85, 0.90, 0.95, 1.00, 1.05, 1.10, 1.15]`. Each arm maintains `A = I` and `b = 0`, is scored with `theta^T x + alpha * sqrt(x^T A^-1 x)` using linear solves, and only the selected arm receives the context-specific payoff update.
+Pricing uses a disjoint-arm contextual LinUCB learner. Its bounded eight-feature context is `[scaled predicted demand, scaled current supply, P(STAY), P(NORTH), P(EAST), P(SOUTH), P(WEST), popularity]`; the complete routing-policy vector is required. The fixed arms are `[0.85, 0.90, 0.95, 1.00, 1.05, 1.10, 1.15]`. Each arm maintains `A = I` and `b = 0`, is scored with `theta^T x + alpha * sqrt(x^T A^-1 x)` using linear solves, and only the selected arm receives the context-specific payoff update. Before ordinary score selection begins, a deterministic global cold-start assigns each arm in that order until every arm has one actual reward observation. Assignments awaiting end-of-slot feedback are tracked as pending so simultaneous grid decisions use different unassigned arms. After cold start, numerically tied maximum scores are resolved with a seeded reproducible RNG rather than fixed lowest-index selection. There is no epsilon-greedy exploration.
 
-The offered fare is the provided base fare multiplied by the selected factor. Ordinary ride-hailing acceptance uses Eq. (31) from the cited MARL pricing paper: `1 / (1 + exp(0.67 * factor * supply / potential_demand - 1.67))`. This project maps its selected factor to the paper's ordinary-order factor `lambda^1`; the paper does not supply this project's exact seven-arm set. A seeded RNG draws acceptance before dispatch. Accepted requests contribute their full offered fare to the context payoff whether or not a later vehicle assignment succeeds; rejected requests contribute zero. Context payoffs sum to the 30-minute slot reward. Production request/dispatch wiring is not implemented yet.
+**Pricing popularity semantics:** popularity is destination attractiveness from empirical drop-off activity, not pickup demand, predicted demand, supply, combined pickup/drop-off activity, or charging-station popularity. Trips are attributed by `DOGridID` and the 30-minute slot containing `tpep_dropoff_datetime`. For grid `g` and slot `t`, the feature uses a strictly lagged simple mean of observed drop-off counts in slots `t-6` through `t-1`—a three-hour window—with all available prior slots used during warm-up. Observed zero-drop-off grid-slots remain zeros; unavailable pre-period history remains unavailable rather than being fabricated.
 
-LinUCB state is copy-exportable/importable in memory. Feature scaling is not silently applied and remains an experiment/tuning consideration because raw LinUCB contexts are scale-sensitive.
+Fixed global `Q20/Q40/Q60/Q80` thresholds are fitted only on the chronological reference/training period and then applied unchanged to test/runtime data. Inclusive upper boundaries produce `Very Low`, `Low`, `Medium`, `High`, and `Very High`, encoded respectively as `0`, `0.25`, `0.5`, `0.75`, and `1`. Duplicate thresholds are retained and the same deterministic inequalities still apply. The label remains in the popularity artifact for audit while the eighth LinUCB feature receives only its scalar encoding, preserving the eight-dimensional context.
+
+#### Pricing context scaling
+
+Only demand and supply are transformed. Raw frozen-CNN demand is clipped at zero, transformed as `log1p(max(0, demand)) / log1p(45.085255432128896)`, then clipped to `[0,1]`. The denominator is the P99 of non-negative frozen-CNN predictions produced by inference on the existing chronological training/reference tensors (2026-01-01 00:00 through 2026-01-25 18:00); held-out predictions were not used. Negative raw demand remains available in diagnostics alongside its non-negative and scaled values.
+
+Supply retains the existing `supply_total` semantics and is transformed as `log1p(supply_total) / log1p(9)`, then clipped to `[0,1]`. The reference value `9` is the P99 reproduced from the configured seed-42 uniform initialization of 5,000 vehicles over 1,213 canonical grids. This initialization distribution does not capture later endogenous vehicle concentration caused by dispatch, repositioning, or charging. Values above the fixed reference are therefore clipped to one and clipping counts/rates are recorded; the scaler is never dynamically refitted.
+
+Routing probabilities and the five-level popularity value are unchanged. The deterministic parameters, artifact hashes, fitting provenance, transforms, clipping policy, and methodology version are persisted in `config/pricing_context_scaler.json`. LinUCB `alpha = 1.0` remains provisional and has not been optimized for the scaled context; scaling behaviour must stabilize before alpha sensitivity analysis.
+
+The January artifact uses the frozen cleaned-trip destination and drop-off timestamp fields. No pre-January drop-off observation exists locally, so all January 1 00:00 grid moving averages are unavailable; January 1 00:30 uses only the observed 00:00 counts, and the history expands until six slots are available. This is an explicit initialization limitation, not future filling. The static charging-station field named `popularity` remains the separate whole-month `pickup_count + dropoff_count` ranking and is never used as the pricing feature.
+
+The offered fare is the provided base fare multiplied by the selected factor. Ordinary ride-hailing acceptance uses Eq. (31) from the cited MARL pricing paper: `1 / (1 + exp(0.67 * factor * supply / potential_demand - 1.67))`. This project maps its selected factor to the paper's ordinary-order factor `lambda^1`; the paper does not supply this project's exact seven-arm set. A seeded RNG draws acceptance before dispatch. Accepted requests contribute their full offered fare whether or not a later vehicle assignment succeeds; rejected requests contribute zero revenue while remaining denominator opportunities.
+
+The LinUCB reward measures realized accepted revenue per incoming pricing opportunity: `raw_revenue_per_opportunity = accepted_revenue / generated_requests`, followed by `normalized_reward = clip(raw_revenue_per_opportunity / 73, 0, 1)`. The denominator contains every generated request offered the selected price, not only accepted or served requests, so the reward preserves both offered-fare magnitude and acceptance/rejection effects without allowing raw grid request volume to dominate. The fixed fare reference `73` is the P99 of 2,898,376 finite positive empirical base fares in the chronological training/reference period `[2026-01-01 00:00, 2026-01-25 18:30)`; provenance is persisted in `config/pricing_reward.json`. Contexts with no generated request produce no learning observation or zero-reward update. LinUCB receives only the normalized value, while raw opportunity revenue remains available diagnostically.
+
+LinUCB state is copy-exportable/importable in memory. Scaling is applied once at the methodology-derived pricing-context boundary; the LinUCB equations and eight-dimensional state contract are unchanged.
 
 ### 6.15 One-slot pricing, acceptance, and dispatch
 
@@ -386,7 +404,7 @@ LinUCB state is copy-exportable/importable in memory. Feature scaling is not sil
 
 For each explicitly supplied grid context, pricing is selected once at the start of a 30-minute slot and remains frozen across all 15 two-minute mini-slots. The runtime interface receives predicted demand, the complete current global routing-policy probability vector, and existing popularity explicitly; current supply is snapshotted with the canonical fleet supply aggregator. Each generated request retains its base fare and records factor, offered fare, acceptance probability, and its single seeded customer decision. Processing order is `pricing -> customer acceptance -> dispatch`; rejected requests never enter dispatch.
 
-The pricing payoff is **accepted revenue**, the sum of offered fares for all customer-accepted requests, including accepted requests that dispatch cannot serve. **Served revenue** is reported separately and includes only accepted requests assigned by the existing dispatch baseline. Every supplied/active context receives exactly one end-of-slot LinUCB update, including a zero-reward update when it has no request or no acceptance. If no context is active, no decision or synthetic update is created.
+The pricing revenue is the sum of offered fares for all customer-accepted requests, including accepted requests that dispatch cannot serve. The learning reward is that accepted revenue divided by all generated requests in the context and then normalized by the fixed training-fare P99. **Served revenue** remains a separate operational diagnostic and includes only accepted requests assigned by dispatch. An active context with generated requests receives one end-of-slot update, including a legitimate zero reward when requests were offered but none accepted. An active context with no generated request receives no learning update; if no context is active, no decision or synthetic update is created.
 
 ### 6.16 One-main-slot orchestration and grid policy aggregation
 
@@ -511,6 +529,7 @@ python scripts/train_cnn.py
 
 # 6. NB10 station placement
 python scripts/build_charging_stations.py
+python scripts/build_destination_popularity.py
 
 # 7. Deterministic component demonstrations
 python scripts/test_fleet_state.py
@@ -538,6 +557,7 @@ python scripts/build_demand_master.py --validate
 python scripts/build_cnn_dataset.py --validate
 python scripts/train_cnn.py --validate
 python scripts/build_charging_stations.py --validate
+python scripts/build_destination_popularity.py --validate
 python -m unittest discover -s tests -q
 ```
 
@@ -555,6 +575,7 @@ python -m unittest discover -s tests -q
 | NB5 | `cnn_metrics.csv`, `cnn_predictions.npy`, `cnn_history.pkl`, `cnn_provenance.json` | Evaluation, outputs, training history, provenance |
 | NB5 | `outputs/figures/cnn_*.png` | Training, map, scatter, and error visualizations |
 | NB10B | `charging_stations_2026_01.parquet` | Popularity-ranked station definitions |
+| Pricing popularity | `destination_popularity_2026_01.parquet`, metadata JSON | Leakage-safe destination/drop-off trailing SMA, fixed global quintiles, labels, and scalar encodings |
 | Validation | `results/tables/validation_24h_*.csv` | Aggregate 48-slot small-fleet diagnostics and pricing-factor frequencies |
 | Validation | `results/figures/validation_24h_*.png` | Fleet, energy, request, and revenue health plots |
 
@@ -562,7 +583,7 @@ python -m unittest discover -s tests -q
 
 ## 12. Testing
 
-The suite contains **153** defined test methods across 25 files:
+The suite contains **165** defined test methods across 27 files:
 
 ```bash
 python -m unittest discover -s tests -q
@@ -582,6 +603,8 @@ python -m unittest discover -s tests -q
 | Empirical trip duration/distance/passenger energy | `test_passenger_trip.py` |
 | Empirical within-slot arrival timing | `test_empirical_arrivals.py` |
 | Generic temporal driver and 24-hour small-fleet validation | `test_validation_24h.py` |
+| Driver/vehicle idle-wait lifecycle and grid attribution | `test_driver_waiting.py` |
+| Destination/drop-off popularity aggregation, leakage, quintiles, and encoding | `test_destination_popularity.py` |
 
 Tests primarily exercise small deterministic and synthetic fixtures. Passing them validates module contracts; it does not constitute a completed full-month integrated simulation or a completed research experiment.
 
@@ -600,7 +623,7 @@ The following distinctions are material to interpreting results:
 3. Taxi/weather timestamps are naive; their alignment is unresolved.
 4. Weather is point-derived Meteostat data, and `WeatherCode` is retained without additional transformation.
 5. Padded invalid grid cells remain in NB5 normalization/loss/metrics to reproduce the legacy baseline.
-6. The four-direction neighbour map, uniform fleet placement, and dispatch search are current engineering baselines. Passenger arrival position, duration, distance, and fare are derived jointly from an empirical TLC row; arrival remains discretized to two-minute resolution.
+6. The four-direction neighbour map, uniform fleet placement, and dispatch search are current engineering baselines. Passenger arrival position, duration, distance, and fare are derived jointly from an empirical TLC row; arrival remains discretized to two-minute resolution. NB9 waiting is completed driver-idle waiting before dispatch, not passenger waiting; reposition is still instantaneous in the current transition model.
 7. Station placement is popularity-based; charging navigation uses projected centroid distance rather than road-network travel.
 8. Charging capacity is power-only; the 0.90 efficiency and full-charge release rule are project/provisional choices.
 9. NB11 movement uses 15 km/h and a 3 km threshold, not road-network routing.

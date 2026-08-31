@@ -31,6 +31,28 @@ class VehicleState:
     remaining_travel_time: float
     current_action: str
     energy_level: float
+    idle_wait_minutes: float = 0.0
+    idle_wait_grid: int | None = None
+
+    def start_idle_wait(self) -> None:
+        """Start a new driver-idle waiting episode in the current grid."""
+        if self.trip_status is not VehicleStatus.IDLE:
+            raise ValueError("Only an IDLE vehicle can start an idle-wait episode.")
+        self.idle_wait_minutes = 0.0
+        self.idle_wait_grid = self.current_grid
+
+    def abandon_idle_wait(self) -> None:
+        """End an active wait without producing a completed observation."""
+        self.idle_wait_minutes = 0.0
+        self.idle_wait_grid = None
+
+    def advance_idle_wait(self, duration_minutes: float) -> None:
+        """Accumulate one completed interval for a continuously IDLE vehicle."""
+        if self.trip_status is not VehicleStatus.IDLE or self.idle_wait_grid is None:
+            return
+        if self.idle_wait_grid != self.current_grid:
+            raise ValueError("Active idle-wait grid must match the vehicle current grid.")
+        self.idle_wait_minutes += duration_minutes
 
     def validate(self, valid_grid_ids: Collection[int]) -> None:
         """Validate state against canonical GridIDs and status invariants."""
@@ -47,6 +69,14 @@ class VehicleState:
             raise ValueError("current_action must be a non-empty string.")
         if not isinstance(self.energy_level, (int, float)) or not math.isfinite(self.energy_level) or self.energy_level < 0:
             raise ValueError("energy_level must be a finite non-negative value.")
+        if not isinstance(self.idle_wait_minutes, (int, float)) or not math.isfinite(self.idle_wait_minutes) or self.idle_wait_minutes < 0:
+            raise ValueError("idle_wait_minutes must be finite and non-negative.")
+        if self.idle_wait_grid is not None and self.idle_wait_grid not in grids:
+            raise ValueError("idle_wait_grid must be a canonical valid GridID when active.")
+        if self.idle_wait_grid is not None and (self.trip_status is not VehicleStatus.IDLE or self.idle_wait_grid != self.current_grid):
+            raise ValueError("Only an IDLE vehicle may have an active wait in its current grid.")
+        if self.idle_wait_grid is None and self.idle_wait_minutes != 0:
+            raise ValueError("An inactive idle-wait episode must have zero minutes.")
         if self.trip_status is VehicleStatus.BUSY:
             if self.destination not in grids or self.remaining_travel_time <= 0:
                 raise ValueError("BUSY vehicles require a valid destination and positive remaining travel time.")

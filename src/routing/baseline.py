@@ -294,6 +294,10 @@ def execute_reposition(vehicle: VehicleState, state: RoutingState, action: Routi
     distance = 0.0 if action is RoutingAction.STAY else parameters.reposition_distance_km
     duration = 0.0 if action is RoutingAction.STAY else parameters.duration_minutes()
     if action is not RoutingAction.STAY:
+        vehicle.abandon_idle_wait()
         vehicle.current_grid = destination.grid_id
         apply_distance_energy(vehicle, distance, energy)
+        if vehicle.trip_status is VehicleStatus.IDLE:
+            # Reposition arrival is instantaneous in the existing movement model.
+            vehicle.start_idle_wait()
     return RoutingTransition(vehicle.vehicle_id, action, origin, vehicle.current_grid, distance, duration, before_energy, vehicle.energy_level, before_status, vehicle.trip_status)
