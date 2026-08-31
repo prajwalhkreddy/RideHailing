@@ -432,6 +432,12 @@ The temporal driver now supports an arbitrary positive slot count while retainin
 
 The fixture uses a controlled deterministic demand series (`controlled_validation_fixture`) and an explicit deterministic popularity series (`explicit_deterministic_validation_fixture`). Its every-fourth-slot federation schedule is validation-only; the production cadence remains unresolved. Two seed-42 runs produced identical aggregate trajectories. The validation checks request, fleet-state, energy, charging, pricing, routing, NB9, NB12, federation, and grid-policy invariants, and writes aggregate CSV tables and diagnostic charts under `results/tables/` and `results/figures/`. Run it with `python scripts/test_validation_24h.py`.
 
+### Reproducible validation reporting
+
+Run `python scripts/generate_validation_figures.py` to reproduce the compact pricing, customer-response, and dispatch reporting package from the deterministic 50-vehicle, four-grid, 48-slot, seed-42 engineering validation. The script consumes completed simulator results, validates reporting invariants, and writes one-row-per-pricing-context and one-row-per-slot datasets under `results/validation/validation_50v_4g_48slots_seed42/`, human-readable summaries under `results/tables/{pricing,customer_response,dispatch}/`, and 240-DPI figures under `results/figures/{pricing,customer_response,dispatch}/`. `summary.json` records the run configuration and reconciled totals; `figure_manifest.json` maps every figure to its compact source CSV.
+
+These artifacts describe integration behaviour only. They are not results from the intended 5,000-vehicle January experiment, do not establish causal pricing effects, and do not identify an optimal pricing factor.
+
 Pending before the final experiment are frozen-CNN demand and popularity runtime wiring, final federation cadence, 5,000-vehicle scaling, January execution, and research tuning/evaluation.
 
 Passenger-trip duration and energy now use the intact sampled empirical TLC row. Busy state is temporally persistent across mini-slot and main-slot boundaries, and passenger energy remains deducted once across those advances. No centroid distance, grid-hop estimate, assumed speed, or external route model is used.

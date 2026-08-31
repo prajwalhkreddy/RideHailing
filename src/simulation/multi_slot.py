@@ -48,7 +48,11 @@ class TemporalSlotSummary:
     pricing_raw_opportunity_reward: dict[int, float | None]
     pricing_normalized_reward: dict[int, float | None]
     pricing_reward_clipped: dict[int, bool]
-    pricing_context_audit: dict[int, dict[str, float | bool]]
+    pricing_generated: dict[int, int]
+    pricing_accepted: dict[int, int]
+    pricing_accepted_revenue: dict[int, float]
+    pricing_acceptance_probability_summary: dict[int, tuple[float, float, float] | None]
+    pricing_context_audit: dict[int, dict[str, float | bool | np.ndarray]]
     generated: int
     accepted: int
     rejected: int
@@ -214,6 +218,20 @@ def run_multi_slot_simulation(
             pricing_raw_opportunity_reward={grid: item.raw_revenue_per_opportunity for grid, item in result.pricing_dispatch.pricing_by_context.items()},
             pricing_normalized_reward={grid: item.normalized_reward for grid, item in result.pricing_dispatch.pricing_by_context.items()},
             pricing_reward_clipped={grid: item.reward_clipped for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_generated={grid: item.generated for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_accepted={grid: item.accepted for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_accepted_revenue={grid: item.accepted_revenue for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_acceptance_probability_summary={
+                grid: (
+                    None if not probabilities else
+                    (float(np.mean(probabilities)), float(np.min(probabilities)), float(np.max(probabilities)))
+                )
+                for grid in result.pricing_dispatch.pricing_by_context
+                for probabilities in [[
+                    audit.acceptance_probability for audit in result.pricing_dispatch.request_audit
+                    if audit.context_id == grid
+                ]]
+            },
             pricing_context_audit={
                 grid: {
                     "raw_predicted_demand": item.raw_predicted_demand,
@@ -221,6 +239,7 @@ def run_multi_slot_simulation(
                     "scaled_predicted_demand": item.scaled_predicted_demand,
                     "raw_supply": item.raw_supply,
                     "scaled_supply": item.scaled_supply,
+                    "routing_probabilities": item.decision.context[2:7].copy(),
                     "demand_negative_clipped": item.demand_negative_clipped,
                     "demand_upper_clipped": item.demand_upper_clipped,
                     "supply_upper_clipped": item.supply_upper_clipped,

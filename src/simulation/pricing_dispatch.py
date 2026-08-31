@@ -90,9 +90,9 @@ def run_pricing_dispatch_slot(
 ) -> PricingDispatchSlotResult:
     """Run exactly one main slot, selecting once and updating at slot end.
 
-    Every supplied context is active and therefore receives one update, even
-    when its realized payoff is zero. An empty ``context_inputs`` mapping
-    creates neither a pricing decision nor a synthetic update.
+    Every supplied context is active and receives a decision. It receives an
+    update only when at least one request creates a pricing opportunity. An
+    empty ``context_inputs`` mapping creates neither a decision nor an update.
     """
     if not isinstance(acceptance_rng, np.random.Generator):
         raise ValueError("acceptance_rng must be an explicit numpy.random.Generator.")
