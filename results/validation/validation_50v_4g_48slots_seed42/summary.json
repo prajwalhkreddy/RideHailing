@@ -1,0 +1,42 @@
+{
+  "acceptance_rate": 0.74609375,
+  "accepted": 1146,
+  "accepted_unserved": 87,
+  "dispatch_success_rate": 0.9240837696335078,
+  "energy_reconciliation_error": -1.1368683772161603e-12,
+  "generated": 1536,
+  "grids": 4,
+  "main_slot_minutes": 30,
+  "mini_slot_minutes": 2,
+  "pricing_reward": {
+    "clipping_count": 0,
+    "normalized_max": 0.3071917808219178,
+    "normalized_median": 0.17448630136986304,
+    "normalized_min": 0.019691780821917807,
+    "normalized_p95": 0.2671232876712329,
+    "raw_max": 22.424999999999997,
+    "raw_median": 12.7375,
+    "raw_min": 1.4375,
+    "raw_p95": 19.5
+  },
+  "pricing_selection_counts": {
+    "0.85": 24,
+    "0.90": 27,
+    "0.95": 25,
+    "1.00": 28,
+    "1.05": 28,
+    "1.10": 29,
+    "1.15": 31
+  },
+  "regression_metadata": {
+    "baseline_tests": 175,
+    "fixture": "engineering_validation_only"
+  },
+  "rejected": 390,
+  "run_name": "validation_50v_4g_48slots_seed42",
+  "seed": 42,
+  "served": 1059,
+  "service_rate": 0.689453125,
+  "slots": 48,
+  "vehicles": 50
+}

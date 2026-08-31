@@ -1,0 +1,9 @@
+metric,value
+generated,1536
+accepted,1146
+rejected,390
+served,1059
+accepted_unserved,87
+acceptance_rate,0.74609375
+dispatch_success_rate,0.924083769634
+service_rate,0.689453125
