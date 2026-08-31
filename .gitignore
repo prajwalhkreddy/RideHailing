@@ -33,7 +33,6 @@ outputs/*
 !outputs/figures/
 !outputs/metrics/
 !outputs/logs/
-outputs/figures/*
 !outputs/figures/.gitkeep
 outputs/metrics/*
 !outputs/metrics/.gitkeep
