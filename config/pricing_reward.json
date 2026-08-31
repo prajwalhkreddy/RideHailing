@@ -1,0 +1,28 @@
+{
+  "methodology_version": "pricing_reward_opportunity_v1",
+  "fare_ref_p99": 73.0,
+  "formula": "clip((accepted_revenue / generated_requests) / fare_ref_p99, 0, 1)",
+  "denominator": "all_generated_offered_requests",
+  "accepted_but_unserved_policy": "included_in_accepted_revenue",
+  "zero_request_policy": "no_learning_observation",
+  "fare_reference": {
+    "source": "data/processed/cleaned_trips.parquet",
+    "source_sha256": "648dfe389ed924ce597f88745af840f03d592737d5dd35015d018c255bc2b65e",
+    "timestamp_column": "tpep_pickup_datetime",
+    "fare_column": "fare_amount",
+    "period_start_inclusive": "2026-01-01T00:00:00",
+    "period_end_exclusive": "2026-01-25T18:30:00",
+    "boundary_authority": "frozen chronological CNN train/test split",
+    "time_train_sha256": "c770a3bae4588245b609b3354caeb5f3fafc80e078e5b3105b47af5500e9d03a",
+    "time_test_sha256": "64979180ebcc2782de70cd06a6cae78289591c6ac297fa28241a0654e03ebf57",
+    "filter": "finite fare_amount > 0",
+    "count": 2898376,
+    "min": 0.01,
+    "median": 14.9,
+    "p95": 54.66,
+    "p99": 73.0,
+    "max": 2555.2,
+    "mean": 20.233906794701575,
+    "held_out_fares_used": false
+  }
+}
