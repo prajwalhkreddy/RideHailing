@@ -38,6 +38,17 @@ class RequestState:
     offered_fare: float | None = None
     acceptance_probability: float | None = None
     customer_accepted: bool | None = None
+    customer_model: str | None = None
+    weather_code: float | None = None
+    period: int | None = None
+    historical_p_base: float | None = None
+    historical_d_base: float | None = None
+    epsilon_customer: float | None = None
+    p_max: float | None = None
+    pricing_context: tuple[float, ...] | None = None
+    selected_arm: int | None = None
+    linucb_reward: float | None = None
+    sensitivity_lookup_level: str | None = None
     source_trip_id: int | None = None
     empirical_pickup_datetime: datetime | None = None
     empirical_dropoff_datetime: datetime | None = None
@@ -97,15 +108,48 @@ class RequestState:
             consumed, before, after = (float(value) for value in energy_values)  # type: ignore[arg-type]
             if not all(math.isfinite(value) and value >= 0 for value in (consumed, before, after)) or not math.isclose(before - consumed, after):
                 raise ValueError("Passenger-energy audit does not reconcile.")
-        audit_values = (self.pricing_factor, self.offered_fare, self.acceptance_probability)
-        if any(value is not None for value in audit_values) or self.customer_accepted is not None:
+        audit_values = (self.pricing_factor, self.offered_fare)
+        historical_values = (
+            self.weather_code, self.period, self.historical_p_base, self.historical_d_base,
+            self.epsilon_customer, self.p_max,
+        )
+        if any(value is not None for value in audit_values + historical_values) or self.customer_accepted is not None or self.customer_model is not None:
             if self.base_fare is None or any(value is None for value in audit_values) or not isinstance(self.customer_accepted, bool):
                 raise ValueError("Priced requests require the complete pricing and acceptance audit.")
-            factor, offered, probability = (float(value) for value in audit_values)  # type: ignore[arg-type]
-            if not all(math.isfinite(value) for value in (base, factor, offered, probability)):
+            factor, offered = (float(value) for value in audit_values)  # type: ignore[arg-type]
+            if not all(math.isfinite(value) for value in (base, factor, offered)):
                 raise ValueError("Request pricing values must be finite.")
-            if base < 0 or factor <= 0 or offered < 0 or not 0 <= probability <= 1:
+            if base < 0 or factor <= 0 or offered < 0:
                 raise ValueError("Request pricing values are outside their valid ranges.")
+            if self.customer_model == "eq31":
+                if self.acceptance_probability is None or any(value is not None for value in historical_values):
+                    raise ValueError("Eq.31 requests require probability and no historical-sensitivity audit.")
+                probability = float(self.acceptance_probability)
+                if not math.isfinite(probability) or not 0 <= probability <= 1:
+                    raise ValueError("Eq.31 acceptance probability must be finite and in [0, 1].")
+            elif self.customer_model == "historical_sensitivity":
+                if self.acceptance_probability is not None or any(value is None for value in historical_values):
+                    raise ValueError("Historical-sensitivity requests require the complete deterministic audit.")
+                weather, period, p_base, d_base, epsilon, p_max = historical_values
+                numeric = tuple(float(value) for value in (weather, p_base, d_base, epsilon, p_max))
+                if not all(math.isfinite(value) for value in numeric) or numeric[1] <= 0 or numeric[2] <= 0 or numeric[3] <= 0:
+                    raise ValueError("Historical-sensitivity audit values are invalid.")
+                if isinstance(period, bool) or not isinstance(period, int) or not 0 <= period <= 47:
+                    raise ValueError("Historical-sensitivity Period must be an integer in 0..47.")
+            else:
+                raise ValueError("Priced requests require a recognized customer_model.")
+        request_level_values = (self.pricing_context, self.selected_arm, self.linucb_reward, self.sensitivity_lookup_level)
+        if any(value is not None for value in request_level_values):
+            if self.pricing_context is None or self.selected_arm is None:
+                raise ValueError("Request-level pricing requires its context and selected arm.")
+            if len(self.pricing_context) != 8 or not all(math.isfinite(float(value)) and 0 <= float(value) <= 1 for value in self.pricing_context):
+                raise ValueError("Request-level pricing context must contain eight finite bounded values.")
+            if isinstance(self.selected_arm, bool) or not isinstance(self.selected_arm, int) or not 0 <= self.selected_arm < 7:
+                raise ValueError("Request-level selected_arm must be an index in 0..6.")
+            if self.linucb_reward is not None and (not math.isfinite(float(self.linucb_reward)) or self.linucb_reward < 0):
+                raise ValueError("Request-level LinUCB reward must be finite and non-negative.")
+            if self.sensitivity_lookup_level is not None and self.sensitivity_lookup_level not in {"exact", "period", "weather", "global"}:
+                raise ValueError("Sensitivity lookup level is invalid.")
         if self.status is RequestStatus.PENDING:
             if self.assigned_vehicle_id is not None or self.wait_time is not None:
                 raise ValueError("PENDING requests cannot have assignment or wait-time results.")

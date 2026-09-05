@@ -134,11 +134,25 @@ def load_config(path: str | Path = "config/config.yaml") -> dict[str, Any]:
             raise ValueError("routing_learning capacity/batch/epoch settings are invalid.")
     if "pricing" in config:
         pricing = config["pricing"]
-        required_pricing = {"method", "factors", "linucb_alpha", "acceptance_seed"}
+        required_pricing = {"method", "decision_mode", "sensitivity_fallback", "customer_response_model", "reward_model", "supply_model", "factors", "linucb_alpha", "acceptance_seed"}
         if not isinstance(pricing, dict) or set(pricing) != required_pricing:
             raise ValueError("pricing configuration has an invalid key set.")
         if pricing["method"] != "linucb":
             raise ValueError("pricing.method must be linucb.")
+        if pricing["decision_mode"] not in {"legacy_grid", "request_8d"}:
+            raise ValueError("pricing.decision_mode must be legacy_grid or request_8d.")
+        if pricing["sensitivity_fallback"] not in {"error", "hierarchical"}:
+            raise ValueError("pricing.sensitivity_fallback must be error or hierarchical.")
+        if pricing["customer_response_model"] not in {"eq31", "historical_sensitivity"}:
+            raise ValueError("pricing.customer_response_model must be eq31 or historical_sensitivity.")
+        if pricing["reward_model"] not in {"legacy_normalized_accepted_revenue", "served_dispatch_revenue"}:
+            raise ValueError("pricing.reward_model must select the legacy or served-dispatch reward.")
+        if pricing["supply_model"] not in {"legacy_all_statuses", "idle_plus_incoming"}:
+            raise ValueError("pricing.supply_model must select legacy or corrected pricing supply.")
+        if pricing["decision_mode"] == "request_8d" and pricing["supply_model"] != "idle_plus_incoming":
+            raise ValueError("request_8d pricing requires supply_model=idle_plus_incoming.")
+        if pricing["decision_mode"] == "request_8d" and pricing["reward_model"] != "served_dispatch_revenue":
+            raise ValueError("request_8d pricing requires reward_model=served_dispatch_revenue.")
         expected_factors = [0.85, 0.90, 0.95, 1.00, 1.05, 1.10, 1.15]
         if pricing["factors"] != expected_factors:
             raise ValueError("pricing.factors must preserve the seven approved arms in fixed order.")

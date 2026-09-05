@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections import Counter, defaultdict
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Iterable, Mapping, Sequence
 
 import numpy as np
@@ -16,6 +17,7 @@ from src.fleet.fleet import Fleet
 from src.fleet.state import VehicleStatus
 from src.fleet.supply import aggregate_grid_supply
 from src.pricing.linucb import DisjointLinUCB
+from src.pricing.customer_sensitivity import HistoricalCustomerSensitivityModel
 from src.routing.baseline import (
     ACTION_ORDER, CandidateUtilityInput, RoutingAction, RoutingDecision,
     RoutingParameters, RoutingState, RoutingTransition, build_grid_routing_features,
@@ -119,6 +121,17 @@ def run_main_slot(
     federation_round_index: int = 0,
     previous_grid_probabilities: Mapping[int, Sequence[float] | np.ndarray] | None = None,
     initial_grid_policy_probabilities: Mapping[int, Sequence[float] | np.ndarray] | None = None,
+    customer_response_model: str = "eq31",
+    historical_customer_model: HistoricalCustomerSensitivityModel | None = None,
+    weather_code: float | None = None,
+    period: int | None = None,
+    simulation_timestamp: datetime | None = None,
+    reward_model: str = "legacy_normalized_accepted_revenue",
+    supply_model: str = "legacy_all_statuses",
+    pricing_decision_mode: str = "legacy_grid",
+    grid_lookup: pd.DataFrame | None = None,
+    popularity_table: pd.DataFrame | None = None,
+    sensitivity_fallback: str = "error",
 ) -> MainSlotResult:
     """Coordinate one slot and stop immediately before next-slot pricing selection."""
     if set(next_predicted_demand) != set(pricing_context_inputs) or set(next_popularity) != set(pricing_context_inputs):
@@ -145,6 +158,16 @@ def run_main_slot(
         requests, pricing_context_inputs, learner, fleet, neighbour_lookup,
         default_trip_duration_minutes, mini_slots_per_main_slot, acceptance_rng,
         energy_parameters, mini_slot_callback=advance_charging,
+        customer_response_model=customer_response_model,
+        historical_customer_model=historical_customer_model,
+        weather_code=weather_code, period=period,
+        simulation_timestamp=simulation_timestamp,
+        reward_model=reward_model,
+        supply_model=supply_model,
+        pricing_decision_mode=pricing_decision_mode,
+        grid_lookup=grid_lookup,
+        popularity_table=popularity_table,
+        sensitivity_fallback=sensitivity_fallback,
     )
     stage_order.append("pricing_acceptance_dispatch")
     stage_order.append("nb10_charging")

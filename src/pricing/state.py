@@ -44,13 +44,10 @@ def build_pricing_context(
 
 
 def validate_pricing_context(context) -> np.ndarray:
-    """Validate an already constructed context without silently normalizing it."""
+    """Validate either approved bounded 8D context without normalizing it."""
     values = np.asarray(context, dtype=np.float64)
     if values.shape != (PRICING_CONTEXT_DIMENSION,) or not np.isfinite(values).all():
         raise ValueError("Pricing context must be a finite eight-element vector.")
     if (values < 0).any() or (values > 1).any():
         raise ValueError("Pricing context features must be within [0,1].")
-    probabilities = values[2:7]
-    if not np.isclose(probabilities.sum(), 1.0, rtol=1e-7, atol=1e-8):
-        raise ValueError("Routing probabilities must sum to one.")
     return values.copy()

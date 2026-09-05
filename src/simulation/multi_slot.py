@@ -15,6 +15,7 @@ from src.dispatch.request import RequestState
 from src.fleet.fleet import Fleet
 from src.fleet.supply import aggregate_grid_supply
 from src.pricing.linucb import DisjointLinUCB
+from src.pricing.customer_sensitivity import HistoricalCustomerSensitivityModel
 from src.routing.baseline import CandidateUtilityInput, RoutingAction, RoutingParameters
 from src.routing.learning import LocalRoutingLearner
 from src.simulation.grid_policy import GridPolicyProbabilities
@@ -35,6 +36,7 @@ class TemporalSlotInput:
     next_predicted_demand: Mapping[int, float]
     next_popularity: Mapping[int, float]
     utility_inputs_by_vehicle: Mapping[int, Mapping[RoutingAction | str, CandidateUtilityInput]]
+    weather_code: float | None = None
 
 
 @dataclass(frozen=True)
@@ -51,6 +53,15 @@ class TemporalSlotSummary:
     pricing_generated: dict[int, int]
     pricing_accepted: dict[int, int]
     pricing_accepted_revenue: dict[int, float]
+    pricing_served_revenue: dict[int, float]
+    pricing_served: dict[int, int]
+    pricing_accepted_but_unserved: dict[int, int]
+    pricing_rejected: dict[int, int]
+    pricing_reward_model: dict[int, str]
+    pricing_linucb_reward: dict[int, float | None]
+    pricing_supply_model: dict[int, str]
+    pricing_idle_supply: dict[int, int | None]
+    pricing_incoming_supply: dict[int, int | None]
     pricing_acceptance_probability_summary: dict[int, tuple[float, float, float] | None]
     pricing_context_audit: dict[int, dict[str, float | bool | np.ndarray]]
     generated: int
@@ -61,7 +72,7 @@ class TemporalSlotSummary:
     accepted_revenue: float
     served_revenue: float
     acceptance_outcomes: tuple[bool, ...]
-    acceptance_probabilities: tuple[float, ...]
+    acceptance_probabilities: tuple[float | None, ...]
     driver_wait_observations: tuple[DriverWaitObservation, ...]
     fleet_counts: dict[str, int]
     supply_by_grid: dict[int, dict[str, int]]
@@ -130,6 +141,14 @@ def run_multi_slot_simulation(
     global_policy_learner: LocalRoutingLearner,
     default_trip_duration_minutes: int,
     mini_slots_per_main_slot: int = 15,
+    customer_response_model: str = "eq31",
+    historical_customer_model: HistoricalCustomerSensitivityModel | None = None,
+    reward_model: str = "legacy_normalized_accepted_revenue",
+    supply_model: str = "legacy_all_statuses",
+    pricing_decision_mode: str = "legacy_grid",
+    grid_lookup: pd.DataFrame | None = None,
+    popularity_table: pd.DataFrame | None = None,
+    sensitivity_fallback: str = "error",
 ) -> MultiSlotResult:
     """Execute N consecutive slots while reusing every mutable state owner."""
     count = len(slot_inputs) if slot_count is None else slot_count
@@ -174,6 +193,18 @@ def run_multi_slot_simulation(
             federation_round_index=slot_index,
             previous_grid_probabilities=previous_grid_probabilities,
             initial_grid_policy_probabilities=initial_grid_policy_probabilities,
+            customer_response_model=customer_response_model,
+            historical_customer_model=historical_customer_model,
+            weather_code=slot_input.weather_code,
+            period=(start_time + timedelta(minutes=30 * slot_index)).hour * 2
+            + (start_time + timedelta(minutes=30 * slot_index)).minute // 30,
+            simulation_timestamp=start_time + timedelta(minutes=30 * slot_index),
+            reward_model=reward_model,
+            supply_model=supply_model,
+            pricing_decision_mode=pricing_decision_mode,
+            grid_lookup=grid_lookup,
+            popularity_table=popularity_table,
+            sensitivity_fallback=sensitivity_fallback,
         )
         previous_grid_probabilities = {
             grid_id: policy.probabilities.copy() for grid_id, policy in result.next_grid_policy.items()
@@ -221,6 +252,15 @@ def run_multi_slot_simulation(
             pricing_generated={grid: item.generated for grid, item in result.pricing_dispatch.pricing_by_context.items()},
             pricing_accepted={grid: item.accepted for grid, item in result.pricing_dispatch.pricing_by_context.items()},
             pricing_accepted_revenue={grid: item.accepted_revenue for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_served_revenue={grid: item.served_revenue for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_served={grid: item.served for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_accepted_but_unserved={grid: item.accepted_but_unserved for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_rejected={grid: item.rejected for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_reward_model={grid: item.reward_model for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_linucb_reward={grid: item.linucb_reward for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_supply_model={grid: item.supply_model for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_idle_supply={grid: item.idle_supply for grid, item in result.pricing_dispatch.pricing_by_context.items()},
+            pricing_incoming_supply={grid: item.incoming_supply for grid, item in result.pricing_dispatch.pricing_by_context.items()},
             pricing_acceptance_probability_summary={
                 grid: (
                     None if not probabilities else
@@ -229,7 +269,7 @@ def run_multi_slot_simulation(
                 for grid in result.pricing_dispatch.pricing_by_context
                 for probabilities in [[
                     audit.acceptance_probability for audit in result.pricing_dispatch.request_audit
-                    if audit.context_id == grid
+                    if audit.context_id == grid and audit.acceptance_probability is not None
                 ]]
             },
             pricing_context_audit={

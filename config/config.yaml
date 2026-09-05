@@ -78,6 +78,11 @@ routing_learning:
 # the LinUCB paper defines alpha through an unspecified confidence parameter.
 pricing:
   method: "linucb"
+  decision_mode: "legacy_grid"
+  sensitivity_fallback: "error"
+  customer_response_model: "eq31"
+  reward_model: "legacy_normalized_accepted_revenue"
+  supply_model: "legacy_all_statuses"
   factors: [0.85, 0.90, 0.95, 1.00, 1.05, 1.10, 1.15]
   linucb_alpha: 1.0
   acceptance_seed: 42

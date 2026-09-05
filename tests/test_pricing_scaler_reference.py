@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from datetime import datetime
 from pathlib import Path
 import unittest
 
@@ -11,8 +12,8 @@ import numpy as np
 import pandas as pd
 
 from src.fleet.fleet import initialize_fleet
-from src.fleet.supply import aggregate_grid_supply
-from src.pricing.scaler import PricingContextScaler
+from src.pricing.scaler import PricingContextScaler, fit_supply_reference_p99
+from src.pricing.supply import build_raw_pricing_supply
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,14 +56,37 @@ class PricingScalerReferenceTests(unittest.TestCase):
             reference["fleet_size"], grids, reference["random_seed"], initial_energy_level=60.,
             initialization_method=reference["initialization_method"],
         )
-        supply = aggregate_grid_supply(vehicles, grids)["supply_total"].to_numpy(dtype=np.float64)
-        self.assertEqual(float(np.percentile(supply, 99)), self.metadata["supply_ref_p99"])
+        supply = build_raw_pricing_supply(
+            vehicles, grids, datetime.fromisoformat(reference["calibration_observation_time"]),
+        )["total_supply"].to_numpy(dtype=np.float64)
+        times = np.repeat(np.datetime64(reference["calibration_observation_time"]), len(supply))
+        fitted = fit_supply_reference_p99(
+            supply, times, reference["training_start_inclusive"], reference["training_end_exclusive"],
+        )
+        self.assertEqual(fitted, self.metadata["supply_ref_p99"])
         self.assertEqual(len(supply), reference["valid_grid_count"])
+        self.assertEqual(reference["supply_semantics"], "idle_plus_incoming")
+        self.assertEqual((reference["idle_count"], reference["incoming_count"]), (5000, 0))
+
+    def test_supply_reference_is_p99_training_only_and_held_out_cannot_change_it(self) -> None:
+        cutoff = "2026-01-25T18:30:00"
+        training = np.array([0., 1., 2., 9., 10.])
+        times = np.array(["2026-01-01"] * len(training), dtype="datetime64[ns]")
+        baseline = fit_supply_reference_p99(training, times, "2026-01-01", cutoff)
+        combined = np.concatenate([[1.e12], training, [1.e12, 1.e12]])
+        combined_times = np.concatenate([
+            np.array(["2025-12-31"], dtype="datetime64[ns]"), times,
+            np.array(["2026-01-26", "2026-01-31"], dtype="datetime64[ns]"),
+        ])
+        self.assertEqual(fit_supply_reference_p99(combined, combined_times, "2026-01-01", cutoff), baseline)
+        self.assertEqual(baseline, float(np.percentile(training, 99)))
+        self.assertFalse(self.metadata["supply_reference"]["held_out_observations_used"])
 
     def test_metadata_round_trip_is_deterministic(self) -> None:
         scaler = PricingContextScaler.load(ROOT / "config/pricing_context_scaler.json")
         self.assertEqual((scaler.demand_ref_p99, scaler.supply_ref_p99), (45.085255432128896, 9.))
-        self.assertEqual(self.metadata["methodology_version"], "pricing_context_scaling_v1")
+        self.assertEqual(self.metadata["methodology_version"], "pricing_context_scaling_v1_1_corrected_supply")
+        self.assertEqual(self.metadata["legacy_supply_ref_p99"], 9.)
 
     def test_fare_reference_is_positive_training_only_and_serialized(self) -> None:
         with (ROOT / "config/pricing_reward.json").open(encoding="utf-8") as handle:

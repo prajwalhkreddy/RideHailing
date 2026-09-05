@@ -1,0 +1,186 @@
+{
+  "accepted": 29541,
+  "accepted_unserved": 6507,
+  "artifact_hashes": {
+    "config/pricing_context_scaler.json": "fcb617109b31408401d42dad2af96aee4ab7cc19c44d94d9ce080959a7215dff",
+    "data/processed/customer_price_sensitivity_2026_01.parquet": "2f9554665ced24d0cecfe136b9f7d3dd29d99ec2b4248c930909bbe6cf1b0088",
+    "data/processed/customer_price_sensitivity_fallback_2026_01.parquet": "8d511bb09421154b2185935db204af8497c42dd729db39333cb323fc0649e826",
+    "models/demand/cnn_model.keras": "f4e093906f7c8d65a570dd8d8f174bc9aa2cf3888867e3434ad3a139ed529b78"
+  },
+  "configuration": {
+    "customer_response_model": "historical_sensitivity",
+    "decision_mode": "request_8d",
+    "fleet_size": 5000,
+    "reward_model": "served_dispatch_revenue",
+    "sensitivity_fallback": "hierarchical",
+    "slots": 48,
+    "supply_model": "idle_plus_incoming"
+  },
+  "dispatch_base_ratio_p5_median_mean_p95": [
+    0.8499999999999999,
+    0.85,
+    0.8656402468893895,
+    0.9500000000000001
+  ],
+  "end_exclusive": "2026-01-26T18:30:00",
+  "epsilon_p5_median_p95_p99": [
+    0.35478888039976936,
+    3.6298659163102567,
+    10.61894892615826,
+    14.939277126223118
+  ],
+  "fallback": {
+    "exact": 41859,
+    "period": 9176
+  },
+  "finite_contexts": true,
+  "finite_rewards": true,
+  "generated": 51035,
+  "missing_pairs": [
+    [
+      14.0,
+      10
+    ],
+    [
+      14.0,
+      11
+    ],
+    [
+      16.0,
+      0
+    ],
+    [
+      16.0,
+      1
+    ],
+    [
+      16.0,
+      2
+    ],
+    [
+      16.0,
+      3
+    ],
+    [
+      16.0,
+      4
+    ],
+    [
+      16.0,
+      5
+    ],
+    [
+      16.0,
+      37
+    ],
+    [
+      16.0,
+      38
+    ],
+    [
+      16.0,
+      39
+    ],
+    [
+      16.0,
+      40
+    ],
+    [
+      16.0,
+      41
+    ],
+    [
+      16.0,
+      42
+    ],
+    [
+      16.0,
+      43
+    ],
+    [
+      16.0,
+      44
+    ],
+    [
+      16.0,
+      45
+    ],
+    [
+      16.0,
+      46
+    ],
+    [
+      16.0,
+      47
+    ]
+  ],
+  "offered_revenue": 878308.1028480915,
+  "pending": 0,
+  "pmax_base_ratio_p5_median_p95": [
+    -0.3029068945142409,
+    0.8898162677547506,
+    1.9450290578225418
+  ],
+  "pmax_nonpositive": 3342,
+  "requests_per_second": 1007.8907342960221,
+  "runtime_seconds": 50.63544912499492,
+  "score_summary_median_p95_max": {
+    "0": {
+      "abs_exploitation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "exploration": [
+        2.234564464290962,
+        2.358042716786579,
+        2.3913114793609456
+      ],
+      "ratio": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    "24": {
+      "abs_exploitation": [
+        5.200440491991134,
+        17.898996319965757,
+        27.066324241305992
+      ],
+      "exploration": [
+        0.29634394371456996,
+        0.5703057138971462,
+        0.6566502329034342
+      ],
+      "ratio": [
+        15.504451398422315,
+        270.6482465401149,
+        394.8377628764541
+      ]
+    },
+    "47": {
+      "abs_exploitation": [
+        4.780609190785821,
+        15.050962367464601,
+        22.68260068466171
+      ],
+      "exploration": [
+        0.315368179587057,
+        0.541271685042615,
+        0.6150554177053259
+      ],
+      "ratio": [
+        23.29370679547523,
+        572.6180723655388,
+        834.226252875138
+      ]
+    }
+  },
+  "seed": 42,
+  "selections": 51035,
+  "served": 23034,
+  "served_reward": 400322.05725004995,
+  "start": "2026-01-25T18:30:00",
+  "updates": 51035
+}
