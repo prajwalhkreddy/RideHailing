@@ -1,0 +1,9 @@
+{
+  "acceptance_rng": "70fbe09bedc27710822e468a4083fe9354c0008ea4bcf22a0985b91b4a39fc91",
+  "customer_rng": "9e611088a3b3877a56b4e72e5758f06bc026fae537c5ae590e044f663bda1fdb",
+  "linucb_updates": 7155,
+  "request_rng": "fc3c9d99b943379dee2c5a350504ca45af3a6b42d10fb0dbc79c1ac5d5ddb3fb",
+  "seed": 42,
+  "slots_completed": 2,
+  "trajectory_sha256": "fe10aad63a391c4d98c91e776049226dedacdcac742d98f31663acc6628ae231"
+}

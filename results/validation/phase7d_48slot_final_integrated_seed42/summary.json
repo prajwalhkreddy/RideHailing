@@ -1,0 +1,185 @@
+{
+  "configuration": {
+    "available_held_out_target_slots": 298,
+    "cnn_target_timestamp_mapping": "cnn_input_timestamp + 30 minutes",
+    "evaluation_end_exclusive": "2026-01-26T19:00:00",
+    "evaluation_start": "2026-01-25T19:00:00",
+    "fleet_size": 5000,
+    "seed": 42,
+    "slots": 48
+  },
+  "driver_wait_minutes": {
+    "count": 27967,
+    "max": 1364.0,
+    "mean": 32.31959094647263,
+    "median": 0.0,
+    "min": 0.0,
+    "p25": 0.0,
+    "p75": 10.0,
+    "p90": 74.0,
+    "p95": 204.0,
+    "p99": 540.6800000000003
+  },
+  "nb11_degradation_penalty": {
+    "count": 1028006,
+    "max": 1.0,
+    "mean": 0.6607777332558145,
+    "median": 0.6403540524498172,
+    "min": 0.0,
+    "p25": 0.6061567666297394,
+    "p75": 0.7078228834541932,
+    "p90": 0.7774637013364423,
+    "p95": 0.8302345798337193,
+    "p99": 0.9347536705141327
+  },
+  "requests_per_second": 31.603481156592167,
+  "runtime_seconds": 3377.1279648329946,
+  "source_manifest": {
+    "charging_stations": {
+      "authority": "production-authoritative",
+      "grids": 15,
+      "path": "data/processed/charging_stations_2026_01.parquet",
+      "role": "charging network",
+      "rows": 15,
+      "sha256": "8d35a192f9f60907176c95f7bdfd9fbf6b1711d93e1426847637861e5f1e36a9",
+      "timestamps": null
+    },
+    "cleaned_trips": {
+      "authority": "production-authoritative",
+      "grids": 1067,
+      "path": "data/processed/cleaned_trips.parquet",
+      "role": "empirical request source",
+      "rows": 3699638,
+      "sha256": "648dfe389ed924ce597f88745af840f03d592737d5dd35015d018c255bc2b65e",
+      "timestamps": null
+    },
+    "cnn_model": {
+      "authority": "production-authoritative",
+      "grids": null,
+      "path": "models/demand/cnn_model.keras",
+      "role": "frozen demand model",
+      "rows": null,
+      "sha256": "f4e093906f7c8d65a570dd8d8f174bc9aa2cf3888867e3434ad3a139ed529b78",
+      "timestamps": null
+    },
+    "cnn_predictions": {
+      "authority": "production-authoritative",
+      "grids": 1213,
+      "path": "models/demand/cnn_predictions.npy",
+      "role": "held-out demand forecast",
+      "rows": null,
+      "sha256": "28959a92e1d4ee816fe09d817d91991f737f9d21c558e9c791bb9e76e533efe3",
+      "timestamps": 298
+    },
+    "cnn_times": {
+      "authority": "production-authoritative",
+      "grids": null,
+      "path": "data/processed/cnn/time_test.npy",
+      "role": "production timestamp mapping",
+      "rows": 298,
+      "sha256": "64979180ebcc2782de70cd06a6cae78289591c6ac297fa28241a0654e03ebf57",
+      "timestamps": 298
+    },
+    "driver_profiles": {
+      "authority": "production-authoritative",
+      "grids": null,
+      "path": "data/processed/driver_preferences_seed42.parquet",
+      "role": "persistent driver preferences",
+      "rows": 5000,
+      "sha256": "dcb422e5e492f44a85815aad5f22a50f833f7071a67a126edf09a09270c0764d",
+      "timestamps": null
+    },
+    "fare_bootstrap": {
+      "authority": "production-authoritative",
+      "grids": 1213,
+      "path": "data/processed/nb9_fare_bootstrap_2026_01_25_1830.parquet",
+      "role": "pre-cutoff NB9 fare prior",
+      "rows": 1213,
+      "sha256": "38d9503b38b34c00f13ee39b4238ad197add0014a0c26d1d552c7da450ca0560",
+      "timestamps": null
+    },
+    "grid": {
+      "authority": "production-authoritative",
+      "grids": 1213,
+      "path": "data/processed/grid_lookup.parquet",
+      "role": "canonical spatial grid",
+      "rows": 1213,
+      "sha256": "fec538a1c4049fd439f94c1cc6c86df3673ef1d328b64dfe2b4ceda0edc75217",
+      "timestamps": null
+    },
+    "neighbours": {
+      "authority": "production-authoritative",
+      "grids": 1213,
+      "path": "data/processed/neighbour_map.parquet",
+      "role": "canonical directional adjacency",
+      "rows": 4544,
+      "sha256": "4ac1726158a7a79ccd1e726058ce78c478f5d1bbde0f2c7b3b46998298f41a52",
+      "timestamps": null
+    },
+    "popularity": {
+      "authority": "production-authoritative",
+      "grids": 1213,
+      "path": "data/processed/destination_popularity_2026_01.parquet",
+      "role": "causal destination popularity",
+      "rows": 1804944,
+      "sha256": "a09ac76acc391eb622ea5a56699211207c1e0c095d8911eee3b59a1f91f067c5",
+      "timestamps": 1488
+    },
+    "pricing_scaler": {
+      "authority": "production-authoritative",
+      "grids": null,
+      "path": "config/pricing_context_scaler.json",
+      "role": "8D context scaler",
+      "rows": null,
+      "sha256": "fcb617109b31408401d42dad2af96aee4ab7cc19c44d94d9ce080959a7215dff",
+      "timestamps": null
+    },
+    "routing_initialization": {
+      "authority": "production-authoritative",
+      "grids": null,
+      "path": "models/routing/nb12_nb13_common_initialization_seed42.npz",
+      "role": "common NB12/NB13 initial weights",
+      "rows": null,
+      "sha256": "d6b74cf700dd0a85890b878e992f689bb7c29715ea9c5974a53ec3cd187d9c75",
+      "timestamps": null
+    },
+    "sensitivity": {
+      "authority": "production-authoritative",
+      "grids": null,
+      "path": "data/processed/customer_price_sensitivity_2026_01.parquet",
+      "role": "customer sensitivity",
+      "rows": 243,
+      "sha256": "2f9554665ced24d0cecfe136b9f7d3dd29d99ec2b4248c930909bbe6cf1b0088",
+      "timestamps": null
+    },
+    "sensitivity_fallback": {
+      "authority": "production-authoritative",
+      "grids": null,
+      "path": "data/processed/customer_price_sensitivity_fallback_2026_01.parquet",
+      "role": "hierarchical sensitivity fallback",
+      "rows": 62,
+      "sha256": "8d511bb09421154b2185935db204af8497c42dd729db39333cb323fc0649e826",
+      "timestamps": null
+    },
+    "weather": {
+      "authority": "production-authoritative",
+      "grids": null,
+      "path": "data/processed/weather/nyc_weather_processed_2026_01.parquet",
+      "role": "production weather context",
+      "rows": 744,
+      "sha256": "3bce173f18b2239b61d7646a5f5c1f3672c28c95024cd99bf9161db40c413512",
+      "timestamps": 744
+    }
+  },
+  "totals": {
+    "accepted": 61863.0,
+    "accepted_unserved": 33896.0,
+    "generated": 106729.0,
+    "linucb_selections": 106729.0,
+    "linucb_updates": 106729.0,
+    "raw_served_revenue": 513292.39943358075,
+    "rejected": 44866.0,
+    "scaled_learning_reward": 17217.795563454834,
+    "served": 27967.0
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "experiment_name": "final_proposed_complete_held_out_january_test_window",
+  "status": "blocked_preflight_no_experiment_started",
+  "seed": 42,
+  "evaluation_start_inclusive": "2026-01-25T18:30:00",
+  "evaluation_end_exclusive": "2026-02-01T00:00:00",
+  "expected_slot_count": 299,
+  "fleet_size": 5000,
+  "configuration": {
+    "decision_mode": "request_8d",
+    "supply_model": "idle_plus_incoming",
+    "customer_response_model": "historical_sensitivity",
+    "reward_model": "served_dispatch_revenue",
+    "linucb_reward_scaling": "training_reference",
+    "sensitivity_fallback": "hierarchical",
+    "dispatch_model": "driver_contention",
+    "linucb_alpha": 1.0,
+    "pricing_arms": [0.85, 0.90, 0.95, 1.0, 1.05, 1.1, 1.15],
+    "reward_ref": 29.81173737032025
+  },
+  "pricing_scaler_references": {
+    "demand_ref_p99": 45.085255432128896,
+    "supply_ref_p99": 9.0,
+    "distance_ref_p99_km": 31.02815232,
+    "base_price_ref_p99": 25.923249887235002
+  },
+  "sha256": {
+    "customer_sensitivity": "2f9554665ced24d0cecfe136b9f7d3dd29d99ec2b4248c930909bbe6cf1b0088",
+    "customer_sensitivity_metadata": "701e6eacd2d6a9798743f739ea60ce78271882a5a988dd5c433b085833350aa9",
+    "fallback_sensitivity": "8d511bb09421154b2185935db204af8497c42dd729db39333cb323fc0649e826",
+    "fallback_sensitivity_metadata": "b34182a51a0f4757a2282ecde2beae22a0abda04e50a1906c162a2dbe3f6fdfb",
+    "pricing_context_scaler": "fcb617109b31408401d42dad2af96aee4ab7cc19c44d94d9ce080959a7215dff",
+    "cnn_model": "f4e093906f7c8d65a570dd8d8f174bc9aa2cf3888867e3434ad3a139ed529b78",
+    "cnn_predictions": "28959a92e1d4ee816fe09d817d91991f737f9d21c558e9c791bb9e76e533efe3",
+    "grid_lookup": "fec538a1c4049fd439f94c1cc6c86df3673ef1d328b64dfe2b4ceda0edc75217",
+    "neighbour_map": "4ac1726158a7a79ccd1e726058ce78c478f5d1bbde0f2c7b3b46998298f41a52",
+    "destination_popularity": "a09ac76acc391eb622ea5a56699211207c1e0c095d8911eee3b59a1f91f067c5"
+  },
+  "git_head": "7994f169c7287256095a8bc7dc53a8d643fec136",
+  "git_status_before_preflight": [],
+  "regression": {
+    "tests_run": 242,
+    "failures": 0,
+    "errors": 0,
+    "runtime_seconds": 48.320
+  },
+  "blocking_preflight": {
+    "reason": "Authoritative final NB11/NB12/NB13 runtime inputs are absent.",
+    "details": [
+      "models/routing contains only .gitkeep; no trained NB12/NB13 policy weights or policy output artifact exists.",
+      "No approved 5000-vehicle CandidateUtilityInput preference artifact or generation rule exists.",
+      "Only scripts/test_main_slot.py, scripts/test_multi_slot.py, and src/simulation/validation_24h.py provide utility inputs and initial routing probabilities; these are explicit test/validation fixtures, not final experiment inputs.",
+      "Substituting CandidateUtilityInput(15, 0, 0.1) or uniform [0.2,0.2,0.2,0.2,0.2] policy probabilities would fabricate final methodology."
+    ]
+  }
+}

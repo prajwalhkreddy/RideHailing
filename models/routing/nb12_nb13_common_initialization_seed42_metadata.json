@@ -1,0 +1,27 @@
+{
+  "action_order": [
+    "STAY",
+    "NORTH",
+    "EAST",
+    "SOUTH",
+    "WEST"
+  ],
+  "aggregation_cadence": "end of every 30-minute main slot",
+  "architecture_version": "routing-policy-87-64-32-5-v1",
+  "batch_size": 32,
+  "fedavg_rule": "sample-count-weighted mean of new-observation participating clients",
+  "first_slot_probability_rule": "uniform over valid actions; invalid actions zero",
+  "hidden_sizes": [
+    64,
+    32
+  ],
+  "initialization_procedure": "one TensorFlow/Keras seed-42 model copied exactly to every local and global policy",
+  "input_dimension": 87,
+  "learning_rate": 0.001,
+  "local_epochs": 1,
+  "local_observation_capacity": 1000,
+  "model_parameter_sha256": "d6b74cf700dd0a85890b878e992f689bb7c29715ea9c5974a53ec3cd187d9c75",
+  "optimizer": "Adam",
+  "participation_rule": "vehicle has at least one new valid NB11 observation in the completed slot",
+  "seed": 42
+}

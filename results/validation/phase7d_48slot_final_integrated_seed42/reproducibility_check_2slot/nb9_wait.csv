@@ -1,0 +1,3 @@
+slot_index,timestamp,completed_waits,nonzero_waits,real_wait_history_grids,wait_real_candidates,wait_neutral_candidates,wait_min,wait_median,wait_mean,wait_p95,wait_max
+0,2026-01-25T19:00:00,1102,898,572,8357,11504,0.0,8.0,10.152450090744102,26.0,28.0
+1,2026-01-25T19:30:00,1222,684,682,9558,9040,0.0,2.0,12.147299509001636,48.0,58.0

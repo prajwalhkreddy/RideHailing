@@ -1,0 +1,9 @@
+{
+  "experiment_name": "final_proposed_complete_held_out_january_test_window",
+  "verdict": "FAILED",
+  "failure_stage": "preflight",
+  "experiment_started": false,
+  "slots_processed": 0,
+  "requests_processed": 0,
+  "reason": "The frozen final configuration requires authoritative NB11 driver preferences and NB12/NB13 routing-policy state, but the repository contains only explicit test/validation fixtures for those inputs. Running with them would not be an authoritative final proposed-system evaluation."
+}
