@@ -22,6 +22,8 @@ from src.simulation.grid_policy import GridPolicyProbabilities
 from src.simulation.main_slot import run_main_slot
 from src.simulation.pricing_dispatch import PricingContextInput
 from src.dispatch.dispatch import DriverWaitObservation
+from src.dispatch.contention import DriverContentionInputs
+from src.dispatch.dispatch import DISPATCH_MODEL_LEGACY
 from src.simulation.statistics import EWMAState, GridSlotStatistics, OperationalStatistics
 
 
@@ -37,6 +39,7 @@ class TemporalSlotInput:
     next_popularity: Mapping[int, float]
     utility_inputs_by_vehicle: Mapping[int, Mapping[RoutingAction | str, CandidateUtilityInput]]
     weather_code: float | None = None
+    contention_inputs: DriverContentionInputs | None = None
 
 
 @dataclass(frozen=True)
@@ -149,6 +152,8 @@ def run_multi_slot_simulation(
     grid_lookup: pd.DataFrame | None = None,
     popularity_table: pd.DataFrame | None = None,
     sensitivity_fallback: str = "error",
+    linucb_reward_scaling: str = "none",
+    dispatch_model: str = DISPATCH_MODEL_LEGACY,
 ) -> MultiSlotResult:
     """Execute N consecutive slots while reusing every mutable state owner."""
     count = len(slot_inputs) if slot_count is None else slot_count
@@ -205,6 +210,9 @@ def run_multi_slot_simulation(
             grid_lookup=grid_lookup,
             popularity_table=popularity_table,
             sensitivity_fallback=sensitivity_fallback,
+            linucb_reward_scaling=linucb_reward_scaling,
+            dispatch_model=dispatch_model,
+            contention_inputs=slot_input.contention_inputs,
         )
         previous_grid_probabilities = {
             grid_id: policy.probabilities.copy() for grid_id, policy in result.next_grid_policy.items()

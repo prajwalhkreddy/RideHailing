@@ -21,8 +21,22 @@ class ConfigTests(unittest.TestCase):
         self.assertEqual(config["pricing"]["customer_response_model"], "eq31")
         self.assertEqual(config["pricing"]["decision_mode"], "legacy_grid")
         self.assertEqual(config["pricing"]["sensitivity_fallback"], "error")
+        self.assertEqual(config["pricing"]["linucb_reward_scaling"], "none")
         self.assertEqual(config["pricing"]["reward_model"], "legacy_normalized_accepted_revenue")
         self.assertEqual(config["pricing"]["supply_model"], "legacy_all_statuses")
+        self.assertEqual(config["dispatch"]["dispatch_model"], "legacy_fcfs_lowest_id")
+
+    def test_driver_contention_dispatch_selector_is_supported(self) -> None:
+        config = yaml.safe_load(Path("config/config.yaml").read_text(encoding="utf-8"))
+        config["dispatch"]["dispatch_model"] = "driver_contention"
+        with tempfile.TemporaryDirectory() as directory:
+            path = Path(directory) / "config.yaml"
+            path.write_text(yaml.safe_dump(config), encoding="utf-8")
+            self.assertEqual(load_config(path)["dispatch"]["dispatch_model"], "driver_contention")
+            config["dispatch"]["dispatch_model"] = "unknown"
+            path.write_text(yaml.safe_dump(config), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "dispatch_model"):
+                load_config(path)
 
     def test_invalid_grid_geometry_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -39,6 +53,7 @@ class ConfigTests(unittest.TestCase):
         config["pricing"].update({
             "decision_mode": "request_8d", "supply_model": "idle_plus_incoming",
             "reward_model": "served_dispatch_revenue", "sensitivity_fallback": "hierarchical",
+            "linucb_reward_scaling": "training_reference",
         })
         with tempfile.TemporaryDirectory() as directory:
             path = Path(directory) / "config.yaml"

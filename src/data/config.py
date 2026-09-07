@@ -70,11 +70,13 @@ def load_config(path: str | Path = "config/config.yaml") -> dict[str, Any]:
             raise ValueError("simulation.initialization_method must be uniform_valid_grid for this baseline.")
     if "dispatch" in config:
         dispatch = config["dispatch"]
-        required_dispatch = {"arrival_method", "search_method", "contention_method", "default_trip_duration_minutes"}
+        required_dispatch = {"dispatch_model", "arrival_method", "search_method", "contention_method", "default_trip_duration_minutes"}
         if not isinstance(dispatch, dict) or (missing := required_dispatch - set(dispatch)):
             raise ValueError(f"dispatch configuration missing keys: {sorted(missing)}")
         if dispatch["arrival_method"] != "uniform_seeded_mini_slot" or dispatch["search_method"] != "same_grid_then_direct_neighbours" or dispatch["contention_method"] != "fcfs_mini_slot_then_request_id":
             raise ValueError("dispatch configuration is incompatible with the approved baseline.")
+        if dispatch["dispatch_model"] not in {"legacy_fcfs_lowest_id", "driver_contention"}:
+            raise ValueError("dispatch.dispatch_model must be legacy_fcfs_lowest_id or driver_contention.")
         if not isinstance(dispatch["default_trip_duration_minutes"], int) or dispatch["default_trip_duration_minutes"] <= 0:
             raise ValueError("dispatch.default_trip_duration_minutes must be a positive integer.")
     if "statistics" in config:
@@ -134,7 +136,7 @@ def load_config(path: str | Path = "config/config.yaml") -> dict[str, Any]:
             raise ValueError("routing_learning capacity/batch/epoch settings are invalid.")
     if "pricing" in config:
         pricing = config["pricing"]
-        required_pricing = {"method", "decision_mode", "sensitivity_fallback", "customer_response_model", "reward_model", "supply_model", "factors", "linucb_alpha", "acceptance_seed"}
+        required_pricing = {"method", "decision_mode", "sensitivity_fallback", "linucb_reward_scaling", "customer_response_model", "reward_model", "supply_model", "factors", "linucb_alpha", "acceptance_seed"}
         if not isinstance(pricing, dict) or set(pricing) != required_pricing:
             raise ValueError("pricing configuration has an invalid key set.")
         if pricing["method"] != "linucb":
@@ -143,6 +145,10 @@ def load_config(path: str | Path = "config/config.yaml") -> dict[str, Any]:
             raise ValueError("pricing.decision_mode must be legacy_grid or request_8d.")
         if pricing["sensitivity_fallback"] not in {"error", "hierarchical"}:
             raise ValueError("pricing.sensitivity_fallback must be error or hierarchical.")
+        if pricing["linucb_reward_scaling"] not in {"none", "training_reference"}:
+            raise ValueError("pricing.linucb_reward_scaling must be none or training_reference.")
+        if pricing["decision_mode"] != "request_8d" and pricing["linucb_reward_scaling"] != "none":
+            raise ValueError("training_reference reward scaling applies only to request_8d pricing.")
         if pricing["customer_response_model"] not in {"eq31", "historical_sensitivity"}:
             raise ValueError("pricing.customer_response_model must be eq31 or historical_sensitivity.")
         if pricing["reward_model"] not in {"legacy_normalized_accepted_revenue", "served_dispatch_revenue"}:

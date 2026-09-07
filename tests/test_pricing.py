@@ -10,9 +10,11 @@ import numpy as np
 from src.pricing.customer import customer_acceptance_probability, draw_customer_acceptance, offered_fare
 from src.pricing.linucb import PRICING_FACTORS, DisjointLinUCB
 from src.pricing.reward import (
-    FARE_REF_P99, ContextRevenueAccumulator, accepted_fare_revenue,
+    FARE_REF_P99, MAX_PRICING_FACTOR, REQUEST_REWARD_REF,
+    ContextRevenueAccumulator, accepted_fare_revenue, request_learning_reward,
     revenue_opportunity_reward, slot_accepted_revenue,
 )
+from src.pricing.scaler import DEFAULT_BASE_PRICE_REF_P99
 from src.pricing.scaler import PricingContextScaler
 from src.pricing.state import PRICING_CONTEXT_DIMENSION, PRICING_CONTEXT_FEATURE_ORDER, build_pricing_context
 
@@ -57,6 +59,17 @@ class PricingTests(unittest.TestCase):
         for invalid in (-1., float("nan"), float("inf"), -float("inf")):
             with self.subTest(kind="supply", invalid=invalid), self.assertRaises(ValueError):
                 scaler.scale_supply(invalid)
+
+    def test_request_reward_reference_and_unclipped_linear_scaling(self) -> None:
+        self.assertEqual(MAX_PRICING_FACTOR, 1.15)
+        self.assertEqual(REQUEST_REWARD_REF, DEFAULT_BASE_PRICE_REF_P99 * 1.15)
+        self.assertEqual(request_learning_reward(0., "training_reference"), 0.)
+        self.assertEqual(request_learning_reward(REQUEST_REWARD_REF, "training_reference"), 1.)
+        self.assertEqual(request_learning_reward(REQUEST_REWARD_REF * 2., "training_reference"), 2.)
+        self.assertEqual(request_learning_reward(17., "none"), 17.)
+        self.assertAlmostEqual(
+            request_learning_reward(20., "training_reference") / request_learning_reward(10., "training_reference"), 2.,
+        )
 
     def test_scaler_fit_is_persisted_and_independent_of_held_out_values(self) -> None:
         metadata = {

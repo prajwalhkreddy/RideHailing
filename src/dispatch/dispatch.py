@@ -4,12 +4,18 @@ from __future__ import annotations
 
 from collections import defaultdict
 from dataclasses import dataclass
-from typing import Collection, Iterable, Mapping
+from typing import Callable, Collection, Iterable, Mapping
 
 from src.dispatch.request import RequestState, RequestStatus
 from src.fleet.fleet import Fleet
 from src.fleet.state import VehicleStatus
 from src.charging.energy import EnergyParameters, deduct_passenger_trip_energy, energy_consumed_kwh, requires_charging
+from src.dispatch.contention import ContentionEvaluation, DriverContentionInputs, evaluate_request_contention
+
+
+DISPATCH_MODEL_LEGACY = "legacy_fcfs_lowest_id"
+DISPATCH_MODEL_CONTENTION = "driver_contention"
+DISPATCH_MODELS = (DISPATCH_MODEL_LEGACY, DISPATCH_MODEL_CONTENTION)
 
 
 PASSENGER_ENERGY_FEASIBILITY = "existing_check"
@@ -51,6 +57,26 @@ def find_eligible_vehicle(request: RequestState, fleet: Fleet, neighbour_lookup:
     return min(neighbouring, key=lambda vehicle: vehicle.vehicle_id) if neighbouring else None
 
 
+def eligible_local_vehicles(
+    request: RequestState, fleet: Fleet, neighbour_lookup: Mapping[int, Iterable[int]],
+    energy_parameters: EnergyParameters, vehicles_by_grid: Mapping[int, Iterable] | None = None,
+):
+    """Return all feasible IDLE vehicles in the origin/direct-neighbour pool."""
+    required_energy = None if request.trip_distance_km is None else energy_consumed_kwh(request.trip_distance_km, energy_parameters)
+    candidate_grids = {request.origin_grid, *(int(value) for value in neighbour_lookup.get(request.origin_grid, ()))}
+    source = fleet.vehicles if vehicles_by_grid is None else (
+        vehicle for grid in candidate_grids for vehicle in vehicles_by_grid.get(grid, ())
+    )
+    return [
+        vehicle for vehicle in source
+        if vehicle.current_grid in candidate_grids
+        and vehicle.trip_status is VehicleStatus.IDLE
+        and vehicle.current_action not in {"charging", "charging_queue"}
+        and not requires_charging(vehicle, energy_parameters)
+        and (required_energy is None or vehicle.energy_level >= required_energy)
+    ]
+
+
 def dispatch_requests(
     requests: Iterable[RequestState],
     fleet: Fleet,
@@ -59,6 +85,9 @@ def dispatch_requests(
     mini_slots_per_main_slot: int,
     energy_parameters: EnergyParameters | None = None,
     driver_wait_observations: list[DriverWaitObservation] | None = None,
+    dispatch_model: str = DISPATCH_MODEL_LEGACY,
+    contention_inputs: DriverContentionInputs | None = None,
+    contention_observer: Callable[[ContentionEvaluation], None] | None = None,
 ) -> dict[str, int]:
     """Immediately process PENDING requests in FCFS mini-slot/request-ID order.
 
@@ -67,14 +96,53 @@ def dispatch_requests(
     """
     if isinstance(default_trip_duration_minutes, bool) or not isinstance(default_trip_duration_minutes, (int, float)) or default_trip_duration_minutes <= 0:
         raise ValueError("default_trip_duration_minutes must be a positive compatibility fallback.")
+    if dispatch_model not in DISPATCH_MODELS:
+        raise ValueError(f"dispatch_model must be one of {DISPATCH_MODELS}.")
+    if dispatch_model == DISPATCH_MODEL_CONTENTION and contention_inputs is None:
+        raise ValueError("driver_contention dispatch requires explicit current NB11 contention inputs.")
     ordered = sorted(requests, key=lambda request: (request.request_time, request.request_id))
+    vehicles_by_grid: dict[int, list] = defaultdict(list)
+    if dispatch_model == DISPATCH_MODEL_CONTENTION:
+        for vehicle in fleet.vehicles:
+            vehicles_by_grid[vehicle.current_grid].append(vehicle)
     if len({request.request_id for request in ordered}) != len(ordered):
         raise ValueError("Request IDs must be unique within a dispatch batch.")
     for request in ordered:
         request.validate(fleet.valid_grid_ids, mini_slots_per_main_slot)
         if request.status is not RequestStatus.PENDING:
             raise ValueError("Dispatch accepts only PENDING requests.")
-        vehicle = find_eligible_vehicle(request, fleet, neighbour_lookup, energy_parameters)
+        selected_evaluation = None
+        if dispatch_model == DISPATCH_MODEL_LEGACY:
+            vehicle = find_eligible_vehicle(request, fleet, neighbour_lookup, energy_parameters)
+        else:
+            assert contention_inputs is not None
+            candidates = eligible_local_vehicles(
+                request, fleet, neighbour_lookup, contention_inputs.energy_parameters, vehicles_by_grid,
+            )
+            request.eligible_vehicle_count = len(candidates)
+            evaluations = [
+                evaluate_request_contention(
+                    vehicle=candidate, request=request,
+                    routing_features=contention_inputs.routing_features,
+                    directional_neighbour_map=contention_inputs.directional_neighbour_map,
+                    alternative_inputs=contention_inputs.utility_inputs_by_vehicle[candidate.vehicle_id],
+                    energy=contention_inputs.energy_parameters,
+                    centroids=contention_inputs.centroids,
+                    pickup_reference=contention_inputs.pickup_distance_ref,
+                )
+                for candidate in candidates
+            ]
+            if contention_observer is not None:
+                for evaluation in evaluations:
+                    contention_observer(evaluation)
+            contenders = [evaluation for evaluation in evaluations if evaluation.contends]
+            request.contender_count = len(contenders)
+            selected_evaluation = min(
+                contenders,
+                key=lambda value: (value.pickup_distance, -value.request_utility, value.vehicle_id),
+                default=None,
+            )
+            vehicle = None if selected_evaluation is None else fleet.vehicle(selected_evaluation.vehicle_id)
         if vehicle is None:
             request.status = RequestStatus.UNSERVED
         else:
@@ -93,6 +161,14 @@ def dispatch_requests(
                 driver_wait_observations.append(completed_wait)
             request.status = RequestStatus.ASSIGNED
             request.assigned_vehicle_id = vehicle.vehicle_id
+            request.assigned_vehicle_origin_grid = vehicle.current_grid
+            if selected_evaluation is not None:
+                request.selected_vehicle_origin_grid = selected_evaluation.vehicle_origin_grid
+                request.selected_pickup_distance = selected_evaluation.pickup_distance
+                request.selected_pickup_distance_unit = selected_evaluation.pickup_distance_unit
+                request.selected_request_utility = selected_evaluation.request_utility
+                request.selected_best_alternative_utility = selected_evaluation.best_alternative_utility
+                request.selected_utility_margin = selected_evaluation.utility_margin
             request.wait_time = 0
             if request.trip_duration_minutes is not None:
                 request.trip_start_minute = float(request.request_time * fleet.mini_slot_minutes)

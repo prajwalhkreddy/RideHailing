@@ -264,20 +264,29 @@ def candidate_utility(features: GridRoutingFeatures, inputs: CandidateUtilityInp
     return UtilityComponents(price, wait, charging, (price + wait + charging) / 3.0)
 
 
-def select_action(state: RoutingState, utility_inputs: Mapping[RoutingAction | str, CandidateUtilityInput], energy: EnergyParameters) -> RoutingDecision:
-    """Evaluate valid candidates and choose maximum total utility with fixed ties."""
+def evaluate_action_utilities(
+    state: RoutingState,
+    utility_inputs: Mapping[RoutingAction | str, CandidateUtilityInput],
+    energy: EnergyParameters,
+) -> tuple[dict[RoutingAction, bool], dict[RoutingAction, UtilityComponents | None]]:
+    """Purely evaluate every valid NB11 alternative without choosing or moving."""
     mask = valid_action_mask(state)
     inputs = {RoutingAction(key): value for key, value in utility_inputs.items()}
     missing = [action.value for action in ACTION_ORDER if mask[action] and action not in inputs]
     if missing:
         raise ValueError(f"Utility inputs are required for every valid candidate: {missing}.")
-    components: dict[RoutingAction, UtilityComponents | None] = {}
-    utilities: dict[RoutingAction, float | None] = {}
-    for action in ACTION_ORDER:
-        feature = state.action_features[action]
-        component = candidate_utility(feature, inputs[action], state.energy_level, energy) if feature is not None else None
-        components[action] = component
-        utilities[action] = component.total if component is not None else None
+    components = {
+        action: candidate_utility(state.action_features[action], inputs[action], state.energy_level, energy)
+        if mask[action] else None
+        for action in ACTION_ORDER
+    }
+    return mask, components
+
+
+def select_action(state: RoutingState, utility_inputs: Mapping[RoutingAction | str, CandidateUtilityInput], energy: EnergyParameters) -> RoutingDecision:
+    """Evaluate valid candidates and choose maximum total utility with fixed ties."""
+    mask, components = evaluate_action_utilities(state, utility_inputs, energy)
+    utilities = {action: None if component is None else component.total for action, component in components.items()}
     chosen = max((action for action in ACTION_ORDER if mask[action]), key=lambda action: (utilities[action], -ACTION_ORDER.index(action)))
     return RoutingDecision(state, chosen, mask, utilities, components)
 

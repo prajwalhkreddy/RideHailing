@@ -93,6 +93,7 @@ class DispatchTests(unittest.TestCase):
         self.assertEqual(summary, {"requests_total": 2, "requests_served": 1, "requests_unserved": 1})
         self.assertEqual(earlier.status, RequestStatus.ASSIGNED)
         self.assertEqual(earlier.assigned_vehicle_id, 3)
+        self.assertEqual(earlier.assigned_vehicle_origin_grid, 0)
         self.assertEqual(earlier.wait_time, 0)
         self.assertEqual(later.status, RequestStatus.UNSERVED)
         self.assertEqual(fleet.vehicle(3).trip_status, VehicleStatus.BUSY)

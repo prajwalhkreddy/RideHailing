@@ -13,6 +13,8 @@ import pandas as pd
 from src.charging.energy import EnergyParameters, requires_charging
 from src.charging.stations import ChargingInfrastructure
 from src.dispatch.request import RequestState, RequestStatus
+from src.dispatch.contention import DriverContentionInputs
+from src.dispatch.dispatch import DISPATCH_MODEL_LEGACY
 from src.fleet.fleet import Fleet
 from src.fleet.state import VehicleStatus
 from src.fleet.supply import aggregate_grid_supply
@@ -132,6 +134,9 @@ def run_main_slot(
     grid_lookup: pd.DataFrame | None = None,
     popularity_table: pd.DataFrame | None = None,
     sensitivity_fallback: str = "error",
+    linucb_reward_scaling: str = "none",
+    dispatch_model: str = DISPATCH_MODEL_LEGACY,
+    contention_inputs: DriverContentionInputs | None = None,
 ) -> MainSlotResult:
     """Coordinate one slot and stop immediately before next-slot pricing selection."""
     if set(next_predicted_demand) != set(pricing_context_inputs) or set(next_popularity) != set(pricing_context_inputs):
@@ -168,6 +173,9 @@ def run_main_slot(
         grid_lookup=grid_lookup,
         popularity_table=popularity_table,
         sensitivity_fallback=sensitivity_fallback,
+        linucb_reward_scaling=linucb_reward_scaling,
+        dispatch_model=dispatch_model,
+        contention_inputs=contention_inputs,
     )
     stage_order.append("pricing_acceptance_dispatch")
     stage_order.append("nb10_charging")

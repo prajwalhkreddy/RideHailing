@@ -82,7 +82,7 @@ class PricingDispatchIntegrationTests(unittest.TestCase):
             reward_model=reward_model,
         )
 
-    def run_request_mode(self, requests, fleet, *, learner=None, model=None):
+    def run_request_mode(self, requests, fleet, *, learner=None, model=None, reward_scaling="none"):
         grid = pd.DataFrame({"GridID": [0, 1], "Row": [0, 0], "Column": [0, 1]})
         popularity = pd.DataFrame({
             "TimeSlot": [datetime(2026, 1, 1)] * 2,
@@ -98,6 +98,7 @@ class PricingDispatchIntegrationTests(unittest.TestCase):
             reward_model=REWARD_MODEL_SERVED, supply_model=SUPPLY_MODEL_CORRECTED,
             pricing_decision_mode=PRICING_DECISION_MODE_REQUEST,
             grid_lookup=grid, popularity_table=popularity,
+            linucb_reward_scaling=reward_scaling,
         )
 
     def test_request_mode_selects_each_request_then_updates_exactly_once_after_dispatch(self) -> None:
@@ -211,6 +212,37 @@ class PricingDispatchIntegrationTests(unittest.TestCase):
         self.assertEqual((audit.sensitivity_lookup_level, audit.historical_p_base, audit.historical_d_base), ("period", 40., 8.))
         self.assertAlmostEqual(audit.pricing_context[5], DEFAULT_PRICING_CONTEXT_SCALER.scale_base_price(40.))
         self.assertEqual((audit.offered_fare, audit.p_max), (34., 40.))
+
+    def test_request_mode_training_reference_scales_only_learning_updates(self) -> None:
+        from src.pricing.reward import REQUEST_REWARD_REF
+
+        served = self.empirical_request(0, 4.); served.destination_grid = 0
+        unserved = self.empirical_request(1, 4.)
+        rejected = self.empirical_request(2, 2.)
+        learner = DisjointLinUCB(1.)
+        original_update = learner.update
+        with patch.object(learner, "update", wraps=original_update) as updates:
+            result = self.run_request_mode(
+                [served, unserved, rejected], self.fleet(0), learner=learner,
+                reward_scaling="training_reference",
+            )
+        audits = result.request_audit
+        self.assertEqual([audit.raw_served_revenue for audit in audits], [17., 0., 0.])
+        self.assertEqual([audit.linucb_learning_reward for audit in audits], [17. / REQUEST_REWARD_REF, 0., 0.])
+        self.assertEqual([audit.linucb_reward for audit in audits], [17. / REQUEST_REWARD_REF, 0., 0.])
+        self.assertEqual([call.args[2] for call in updates.call_args_list], [17. / REQUEST_REWARD_REF, 0., 0.])
+        self.assertEqual(result.served_revenue, 17.)
+        self.assertEqual(result.raw_request_served_revenue, 17.)
+        self.assertEqual(result.linucb_learning_reward, 17. / REQUEST_REWARD_REF)
+        self.assertEqual(result.request_reward_ref, REQUEST_REWARD_REF)
+        self.assertEqual(result.linucb_updates_performed, 3)
+
+    def test_request_mode_none_preserves_raw_learning_reward(self) -> None:
+        request = self.empirical_request(0, 4.); request.destination_grid = 0
+        result = self.run_request_mode([request], self.fleet(0), reward_scaling="none")
+        audit = result.request_audit[0]
+        self.assertEqual((audit.raw_served_revenue, audit.linucb_learning_reward, audit.linucb_reward), (17., 17., 17.))
+        self.assertIsNone(result.request_reward_ref)
 
     def test_served_reward_counts_only_final_served_offers_and_updates_once(self) -> None:
         served = self.empirical_request(0, 4., fare=999.)

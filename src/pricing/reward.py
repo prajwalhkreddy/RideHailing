@@ -8,11 +8,29 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Iterable
 
+from src.pricing.linucb import PRICING_FACTORS
+from src.pricing.scaler import DEFAULT_BASE_PRICE_REF_P99
+
 
 DEFAULT_REWARD_METADATA_PATH = Path(__file__).resolve().parents[2] / "config/pricing_reward.json"
 with DEFAULT_REWARD_METADATA_PATH.open(encoding="utf-8") as _handle:
     _REWARD_METADATA = json.load(_handle)
 FARE_REF_P99 = float(_REWARD_METADATA["fare_ref_p99"])
+MAX_PRICING_FACTOR = max(PRICING_FACTORS)
+REQUEST_REWARD_REF = DEFAULT_BASE_PRICE_REF_P99 * MAX_PRICING_FACTOR
+REQUEST_REWARD_SCALING_NONE = "none"
+REQUEST_REWARD_SCALING_TRAINING = "training_reference"
+REQUEST_REWARD_SCALING_MODES = (REQUEST_REWARD_SCALING_NONE, REQUEST_REWARD_SCALING_TRAINING)
+
+
+def request_learning_reward(raw_served_revenue: float, scaling: str) -> float:
+    """Return the optional linear LinUCB scale without changing economic revenue."""
+    raw = float(raw_served_revenue)
+    if not math.isfinite(raw) or raw < 0:
+        raise ValueError("Raw served revenue must be finite and non-negative.")
+    if scaling not in REQUEST_REWARD_SCALING_MODES:
+        raise ValueError(f"Request reward scaling must be one of {REQUEST_REWARD_SCALING_MODES}.")
+    return raw if scaling == REQUEST_REWARD_SCALING_NONE else raw / REQUEST_REWARD_REF
 
 
 @dataclass(frozen=True)

@@ -10,14 +10,22 @@ import numpy as np
 import pandas as pd
 
 from src.charging.energy import EnergyParameters
-from src.dispatch.dispatch import DriverWaitObservation, dispatch_requests
+from src.dispatch.contention import ContentionEvaluation, DriverContentionInputs
+from src.dispatch.dispatch import (
+    DISPATCH_MODEL_CONTENTION, DISPATCH_MODEL_LEGACY, DISPATCH_MODELS,
+    DriverWaitObservation, dispatch_requests,
+)
 from src.dispatch.request import RequestState, RequestStatus
 from src.fleet.fleet import Fleet
 from src.fleet.supply import aggregate_grid_supply
 from src.pricing.customer import draw_customer_acceptance, offered_fare
 from src.pricing.customer_sensitivity import HistoricalCustomerSensitivityModel
 from src.pricing.linucb import DisjointLinUCB, PricingDecision
-from src.pricing.reward import ContextRevenueAccumulator, revenue_opportunity_reward, slot_accepted_revenue
+from src.pricing.reward import (
+    REQUEST_REWARD_REF, REQUEST_REWARD_SCALING_MODES, REQUEST_REWARD_SCALING_NONE,
+    ContextRevenueAccumulator, request_learning_reward, revenue_opportunity_reward,
+    slot_accepted_revenue,
+)
 from src.pricing.request_context import build_request_pricing_context, grid_positions
 from src.pricing.scaler import DEFAULT_PRICING_CONTEXT_SCALER
 from src.pricing.supply import build_raw_pricing_supply
@@ -73,6 +81,17 @@ class RequestPricingAudit:
     linucb_reward: float | None
     final_status: str
     sensitivity_lookup_level: str | None
+    raw_served_revenue: float | None
+    linucb_learning_reward: float | None
+    eligible_vehicle_count: int | None
+    contender_count: int | None
+    selected_vehicle_id: int | None
+    selected_vehicle_origin_grid: int | None
+    selected_pickup_distance: float | None
+    selected_pickup_distance_unit: str | None
+    selected_request_utility: float | None
+    selected_best_alternative_utility: float | None
+    selected_utility_margin: float | None
 
 
 @dataclass(frozen=True)
@@ -120,6 +139,11 @@ class PricingDispatchSlotResult:
     driver_wait_observations: tuple[DriverWaitObservation, ...]
     pricing_decision_mode: str
     linucb_selections_performed: int
+    linucb_reward_scaling: str
+    request_reward_ref: float | None
+    raw_request_served_revenue: float | None
+    linucb_learning_reward: float | None
+    dispatch_model: str
 
 
 @dataclass(frozen=True)
@@ -157,6 +181,17 @@ def _request_audit(request: RequestState) -> RequestPricingAudit:
         linucb_reward=request.linucb_reward,
         final_status=request.status.value,
         sensitivity_lookup_level=request.sensitivity_lookup_level,
+        raw_served_revenue=request.raw_served_revenue,
+        linucb_learning_reward=request.linucb_learning_reward,
+        eligible_vehicle_count=request.eligible_vehicle_count,
+        contender_count=request.contender_count,
+        selected_vehicle_id=request.assigned_vehicle_id,
+        selected_vehicle_origin_grid=request.selected_vehicle_origin_grid,
+        selected_pickup_distance=request.selected_pickup_distance,
+        selected_pickup_distance_unit=request.selected_pickup_distance_unit,
+        selected_request_utility=request.selected_request_utility,
+        selected_best_alternative_utility=request.selected_best_alternative_utility,
+        selected_utility_margin=request.selected_utility_margin,
     )
 
 
@@ -169,6 +204,9 @@ def _run_request_pricing_dispatch_slot(
     historical_customer_model: HistoricalCustomerSensitivityModel, weather_code: float,
     period: int, simulation_timestamp: datetime, corrected_supply: pd.DataFrame,
     grid_lookup: pd.DataFrame, popularity_table: pd.DataFrame,
+    linucb_reward_scaling: str, dispatch_model: str,
+    contention_inputs: DriverContentionInputs | None,
+    contention_observer: Callable[[ContentionEvaluation], None] | None,
 ) -> PricingDispatchSlotResult:
     """Select every request first, dispatch accepted requests, then update each once."""
     timestamp = pd.Timestamp(simulation_timestamp)
@@ -241,6 +279,8 @@ def _run_request_pricing_dispatch_slot(
             dispatch_requests(
                 arrivals, fleet, neighbour_lookup, default_trip_duration_minutes,
                 mini_slots_per_main_slot, energy_parameters, driver_wait_observations,
+                dispatch_model, contention_inputs,
+                contention_observer,
             )
         fleet.advance_mini_slot()
         if mini_slot_callback is not None:
@@ -249,9 +289,12 @@ def _run_request_pricing_dispatch_slot(
     by_id = {request.request_id: request for request in ordered}
     for item in pending:
         request = by_id[item.request_id]
-        reward = item.offered_fare if item.accepted and request.status is RequestStatus.ASSIGNED else 0.0
-        learner.update(item.context, item.decision.arm_index, reward)
-        request.linucb_reward = reward
+        raw_reward = item.offered_fare if item.accepted and request.status is RequestStatus.ASSIGNED else 0.0
+        learning_reward = request_learning_reward(raw_reward, linucb_reward_scaling)
+        learner.update(item.context, item.decision.arm_index, learning_reward)
+        request.raw_served_revenue = raw_reward
+        request.linucb_learning_reward = learning_reward
+        request.linucb_reward = learning_reward
         request.validate(fleet.valid_grid_ids, mini_slots_per_main_slot)
     audits = tuple(_request_audit(request) for request in ordered)
     accepted = sum(audit.customer_accepted for audit in audits)
@@ -267,11 +310,19 @@ def _run_request_pricing_dispatch_slot(
         driver_wait_observations=tuple(driver_wait_observations),
         pricing_decision_mode=PRICING_DECISION_MODE_REQUEST,
         linucb_selections_performed=len(selected),
+        linucb_reward_scaling=linucb_reward_scaling,
+        request_reward_ref=REQUEST_REWARD_REF if linucb_reward_scaling != REQUEST_REWARD_SCALING_NONE else None,
+        raw_request_served_revenue=served_revenue,
+        linucb_learning_reward=float(sum(float(a.linucb_learning_reward) for a in audits)),
+        dispatch_model=dispatch_model,
     )
     if result.generated != result.linucb_selections_performed or result.generated != result.linucb_updates_performed:
         raise ValueError("Every request-level selection must receive exactly one final update.")
-    if not np.isclose(sum(float(a.linucb_reward) for a in audits), result.served_revenue):
-        raise ValueError("Request-level rewards must equal served P_dispatch revenue exactly.")
+    if not np.isclose(sum(float(a.raw_served_revenue) for a in audits), result.served_revenue):
+        raise ValueError("Raw request rewards must equal served P_dispatch revenue exactly.")
+    expected_learning = request_learning_reward(result.served_revenue, linucb_reward_scaling)
+    if not np.isclose(sum(float(a.linucb_learning_reward) for a in audits), expected_learning):
+        raise ValueError("Request learning rewards do not reconcile with the configured linear scale.")
     return result
 
 
@@ -297,6 +348,10 @@ def run_pricing_dispatch_slot(
     grid_lookup: pd.DataFrame | None = None,
     popularity_table: pd.DataFrame | None = None,
     sensitivity_fallback: str = "error",
+    linucb_reward_scaling: str = REQUEST_REWARD_SCALING_NONE,
+    dispatch_model: str = DISPATCH_MODEL_LEGACY,
+    contention_inputs: DriverContentionInputs | None = None,
+    contention_observer: Callable[[ContentionEvaluation], None] | None = None,
 ) -> PricingDispatchSlotResult:
     """Run exactly one main slot, selecting once and updating at slot end.
 
@@ -316,6 +371,16 @@ def run_pricing_dispatch_slot(
         raise ValueError(f"pricing_decision_mode must be one of {PRICING_DECISION_MODES}.")
     if sensitivity_fallback not in {"error", "hierarchical"}:
         raise ValueError("sensitivity_fallback must be error or hierarchical.")
+    if linucb_reward_scaling not in REQUEST_REWARD_SCALING_MODES:
+        raise ValueError(f"linucb_reward_scaling must be one of {REQUEST_REWARD_SCALING_MODES}.")
+    if dispatch_model not in DISPATCH_MODELS:
+        raise ValueError(f"dispatch_model must be one of {DISPATCH_MODELS}.")
+    if dispatch_model == DISPATCH_MODEL_CONTENTION and contention_inputs is None:
+        raise ValueError("driver_contention requires explicit current NB11 contention inputs.")
+    if pricing_decision_mode != PRICING_DECISION_MODE_REQUEST and linucb_reward_scaling != REQUEST_REWARD_SCALING_NONE:
+        raise ValueError("LinUCB request reward scaling applies only to request_8d pricing.")
+    if pricing_decision_mode != PRICING_DECISION_MODE_REQUEST and dispatch_model != DISPATCH_MODEL_LEGACY:
+        raise ValueError("driver_contention dispatch applies only to request_8d pricing.")
     if pricing_decision_mode == PRICING_DECISION_MODE_REQUEST:
         if supply_model != SUPPLY_MODEL_CORRECTED:
             raise ValueError("request_8d pricing requires supply_model=idle_plus_incoming.")
@@ -364,6 +429,9 @@ def run_pricing_dispatch_slot(
             historical_customer_model=historical_customer_model, weather_code=float(weather_code),
             period=int(period), simulation_timestamp=simulation_timestamp,
             corrected_supply=corrected_supply, grid_lookup=grid_lookup, popularity_table=popularity_table,
+            linucb_reward_scaling=linucb_reward_scaling,
+            dispatch_model=dispatch_model, contention_inputs=contention_inputs,
+            contention_observer=contention_observer,
         )
     decisions: dict[int, PricingDecision] = {}
     accumulators: dict[int, ContextRevenueAccumulator] = {}
@@ -517,6 +585,11 @@ def run_pricing_dispatch_slot(
         driver_wait_observations=tuple(driver_wait_observations),
         pricing_decision_mode=PRICING_DECISION_MODE_LEGACY,
         linucb_selections_performed=len(decisions),
+        linucb_reward_scaling=REQUEST_REWARD_SCALING_NONE,
+        request_reward_ref=None,
+        raw_request_served_revenue=None,
+        linucb_learning_reward=None,
+        dispatch_model=DISPATCH_MODEL_LEGACY,
     )
     if result.generated != result.accepted + result.rejected:
         raise ValueError("Generated request counts do not reconcile.")

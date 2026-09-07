@@ -50,6 +50,7 @@ charging:
 # Requests/dispatch milestone engineering baselines.  Empirical OD sampling
 # is research-data-based; arrival/search/contention/duration remain provisional.
 dispatch:
+  dispatch_model: "legacy_fcfs_lowest_id"
   arrival_method: "uniform_seeded_mini_slot"
   search_method: "same_grid_then_direct_neighbours"
   contention_method: "fcfs_mini_slot_then_request_id"
@@ -80,6 +81,7 @@ pricing:
   method: "linucb"
   decision_mode: "legacy_grid"
   sensitivity_fallback: "error"
+  linucb_reward_scaling: "none"
   customer_response_model: "eq31"
   reward_model: "legacy_normalized_accepted_revenue"
   supply_model: "legacy_all_statuses"

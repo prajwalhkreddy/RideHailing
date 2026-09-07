@@ -8,8 +8,10 @@ from src.pricing.customer_sensitivity import (
 )
 from src.pricing.linucb import PRICING_FACTORS, DisjointLinUCB, PricingDecision
 from src.pricing.reward import (
-    FARE_REF_P99, ContextRevenueAccumulator, OpportunityReward,
-    accepted_fare_revenue, revenue_opportunity_reward, slot_accepted_revenue,
+    FARE_REF_P99, MAX_PRICING_FACTOR, REQUEST_REWARD_REF,
+    REQUEST_REWARD_SCALING_MODES, ContextRevenueAccumulator, OpportunityReward,
+    accepted_fare_revenue, request_learning_reward, revenue_opportunity_reward,
+    slot_accepted_revenue,
 )
 from src.pricing.request_context import (
     REQUEST_PRICING_CONTEXT_DIMENSION, REQUEST_PRICING_CONTEXT_FEATURE_ORDER,
@@ -29,6 +31,8 @@ __all__ = [
     "PRICING_FACTORS", "DisjointLinUCB", "PricingDecision", "ContextRevenueAccumulator",
     "accepted_fare_revenue", "slot_accepted_revenue", "PRICING_CONTEXT_DIMENSION",
     "FARE_REF_P99", "OpportunityReward", "revenue_opportunity_reward",
+    "MAX_PRICING_FACTOR", "REQUEST_REWARD_REF", "REQUEST_REWARD_SCALING_MODES",
+    "request_learning_reward",
     "PRICING_CONTEXT_FEATURE_ORDER", "build_pricing_context",
     "PricingContextScaler", "DEFAULT_PRICING_CONTEXT_SCALER",
     "HistoricalCustomerDecision", "HistoricalCustomerSensitivityModel",
