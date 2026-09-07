@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 from dataclasses import dataclass
+from datetime import datetime, timedelta
 from typing import Callable, Collection, Iterable, Mapping
 
 from src.dispatch.request import RequestState, RequestStatus
@@ -28,6 +29,8 @@ class DriverWaitObservation:
     vehicle_id: int
     grid_id: int
     wait_minutes: float
+    idle_start_time: datetime | None = None
+    dispatch_time: datetime | None = None
 
 
 def build_neighbour_lookup(neighbour_map, valid_grid_ids: Collection[int]) -> dict[int, tuple[int, ...]]:
@@ -88,6 +91,7 @@ def dispatch_requests(
     dispatch_model: str = DISPATCH_MODEL_LEGACY,
     contention_inputs: DriverContentionInputs | None = None,
     contention_observer: Callable[[ContentionEvaluation], None] | None = None,
+    slot_start_time: datetime | None = None,
 ) -> dict[str, int]:
     """Immediately process PENDING requests in FCFS mini-slot/request-ID order.
 
@@ -150,6 +154,8 @@ def dispatch_requests(
                 raise ValueError("Selected IDLE vehicle lacks an active driver-wait episode.")
             completed_wait = DriverWaitObservation(
                 vehicle.vehicle_id, vehicle.idle_wait_grid, float(vehicle.idle_wait_minutes),
+                None if slot_start_time is None else slot_start_time + timedelta(minutes=request.request_time * fleet.mini_slot_minutes) - timedelta(minutes=vehicle.idle_wait_minutes),
+                None if slot_start_time is None else slot_start_time + timedelta(minutes=request.request_time * fleet.mini_slot_minutes),
             )
             duration = request.trip_duration_minutes if request.trip_duration_minutes is not None else float(default_trip_duration_minutes)
             energy_before = vehicle.energy_level

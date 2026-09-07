@@ -109,7 +109,11 @@ class MainSlotOrchestrationTests(unittest.TestCase):
             valid_utilities = {action: value for action, value in audit.decision.utility_vector.items() if value is not None}
             self.assertEqual(audit.decision.chosen_action, max(valid_utilities, key=lambda action: (valid_utilities[action], -ACTION_ORDER.index(action))))
             self.assertEqual(audit.transition.action, audit.decision.chosen_action)
-            self.assertEqual(fleet.vehicle(audit.vehicle_id).current_grid, audit.transition.destination_grid)
+            vehicle = fleet.vehicle(audit.vehicle_id)
+            if audit.transition.action is RoutingAction.STAY:
+                self.assertEqual(vehicle.current_grid, audit.transition.destination_grid)
+            else:
+                self.assertEqual((vehicle.current_grid, vehicle.destination, vehicle.remaining_travel_time, vehicle.current_action), (audit.transition.origin_grid, audit.transition.destination_grid, 12., "repositioning"))
         vehicle_one = next(audit for audit in result.routing_audit if audit.vehicle_id == 1)
         policy_argmax = ACTION_ORDER[int(np.argmax(global_policy.policy_probabilities(vehicle_one.state)))]
         self.assertEqual(policy_argmax, RoutingAction.EAST)
@@ -127,7 +131,7 @@ class MainSlotOrchestrationTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "at most once"):
                 learners[audit.vehicle_id].train_for_slot(0)
         self.assertTrue(result.federated.updated)
-        self.assertEqual((result.federated.metadata.submitted_updates, result.federated.metadata.participating_updates, result.federated.metadata.total_sample_count), (3, 2, 2))
+        self.assertEqual((result.federated.metadata.submitted_updates, result.federated.metadata.participating_updates, result.federated.metadata.total_sample_count), (2, 2, 2))
         self.assertTrue(all({"weights", "sample_count", "vehicle_id", "state_dimension", "action_order", "architecture_version"} == set(local.export_local_update()) for local in learners.values()))
 
     def test_next_global_probabilities_are_masked_grid_means_with_audit_sources(self) -> None:
@@ -136,7 +140,7 @@ class MainSlotOrchestrationTests(unittest.TestCase):
             self.assertAlmostEqual(float(context.routing_probabilities.sum()), 1.)
             self.assertTrue((context.routing_probabilities >= 0).all())
             self.assertEqual((context.predicted_demand, context.popularity), ((12., .8) if grid_id == 0 else (8., .6)))
-        self.assertEqual((result.next_pricing_contexts[0].probability_source, result.next_pricing_contexts[0].eligible_vehicle_vectors), ("current_vehicle_mean", 2))
+        self.assertEqual((result.next_pricing_contexts[0].probability_source, result.next_pricing_contexts[0].eligible_vehicle_vectors), ("current_vehicle_mean", 1))
         self.assertEqual((result.next_pricing_contexts[1].probability_source, result.next_pricing_contexts[1].eligible_vehicle_vectors), ("initialization", 0))
         self.assertEqual(result.next_pricing_contexts[0].routing_probabilities[ACTION_ORDER.index(RoutingAction.NORTH)], 0.)
         np.testing.assert_allclose(result.next_pricing_contexts[1].routing_probabilities, [.2] * 5)

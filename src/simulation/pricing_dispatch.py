@@ -281,6 +281,7 @@ def _run_request_pricing_dispatch_slot(
                 mini_slots_per_main_slot, energy_parameters, driver_wait_observations,
                 dispatch_model, contention_inputs,
                 contention_observer,
+                simulation_timestamp,
             )
         fleet.advance_mini_slot()
         if mini_slot_callback is not None:
@@ -507,6 +508,7 @@ def run_pricing_dispatch_slot(
                 arrivals, fleet, neighbour_lookup, default_trip_duration_minutes,
                 mini_slots_per_main_slot, energy_parameters,
                 driver_wait_observations,
+                slot_start_time=simulation_timestamp,
             )
         fleet.advance_mini_slot()
         if mini_slot_callback is not None:

@@ -137,6 +137,7 @@ def run_main_slot(
     linucb_reward_scaling: str = "none",
     dispatch_model: str = DISPATCH_MODEL_LEGACY,
     contention_inputs: DriverContentionInputs | None = None,
+    contention_observer=None,
 ) -> MainSlotResult:
     """Coordinate one slot and stop immediately before next-slot pricing selection."""
     if set(next_predicted_demand) != set(pricing_context_inputs) or set(next_popularity) != set(pricing_context_inputs):
@@ -176,6 +177,7 @@ def run_main_slot(
         linucb_reward_scaling=linucb_reward_scaling,
         dispatch_model=dispatch_model,
         contention_inputs=contention_inputs,
+        contention_observer=contention_observer,
     )
     stage_order.append("pricing_acceptance_dispatch")
     stage_order.append("nb10_charging")
@@ -203,8 +205,8 @@ def run_main_slot(
         state = build_routing_state(vehicle, routing_features, directional_neighbour_map)
         if any(
             feature is not None and (
-                feature.mean_fare is None or feature.std_fare is None
-                or feature.mean_wait is None or feature.std_wait is None
+                (feature.mean_fare is None or feature.std_fare is None)
+                and (feature.ewma_fare is None or feature.ewma_std_fare is None)
             )
             for feature in state.action_features.values()
         ):
@@ -228,8 +230,10 @@ def run_main_slot(
     # A move may cross the charging threshold; register that existing NB10 state.
     presented += _present_low_energy_vehicles(fleet, charging_infrastructure, energy_parameters, (slot_id + 1) * mini_slots_per_main_slot)
 
+    participating_vehicle_ids = {audit.vehicle_id for audit in routing_audits}
     trained = 0
-    for vehicle_id, local in sorted(local_learners.items()):
+    for vehicle_id in sorted(participating_vehicle_ids):
+        local = local_learners[vehicle_id]
         loss = local.train_for_slot(slot_id)
         trained += int(loss is not None)
     learning_summary = LocalLearningSummary(
@@ -241,7 +245,11 @@ def run_main_slot(
 
     federated_result: FederatedRoundResult | None = None
     if federate:
-        exports = [local.export_local_update() for _, local in sorted(local_learners.items())]
+        exports = []
+        for vehicle_id in sorted(participating_vehicle_ids):
+            payload = local_learners[vehicle_id].export_local_update()
+            payload["sample_count"] = 1
+            exports.append(payload)
         federated_result = aggregate_policy_updates(exports, round_index=federation_round_index)
         if federated_result.updated:
             global_policy_learner.reset_from_global_weights(federated_result.weights)

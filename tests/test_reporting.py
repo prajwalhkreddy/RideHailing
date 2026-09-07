@@ -41,9 +41,9 @@ class ValidationReportingTests(unittest.TestCase):
         self.assertEqual(totals, EXPECTED_TOTALS)
         self.assertTrue((self.dispatch.accepted == self.dispatch.served + self.dispatch.accepted_unserved).all())
         metrics = dispatch_metric_summary(self.dispatch).set_index("metric").value
-        self.assertAlmostEqual(metrics.acceptance_rate, 1146 / 1536)
-        self.assertAlmostEqual(metrics.dispatch_success_rate, 1059 / 1146)
-        self.assertAlmostEqual(metrics.service_rate, 1059 / 1536)
+        self.assertAlmostEqual(metrics.acceptance_rate, 1159 / 1536)
+        self.assertAlmostEqual(metrics.dispatch_success_rate, 1065 / 1159)
+        self.assertAlmostEqual(metrics.service_rate, 1065 / 1536)
 
     def test_factor_summaries_use_aggregate_count_ratios(self) -> None:
         pricing = pricing_factor_summary(self.pricing)

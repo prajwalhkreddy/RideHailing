@@ -46,8 +46,8 @@ class MultiSlotTemporalTests(unittest.TestCase):
                 next_predicted_demand={0: 100. + slot, 1: 80. + slot},
                 next_popularity={0: .8 + .01 * slot, 1: .6 + .01 * slot},
                 utility_inputs_by_vehicle={
-                    1: {RoutingAction.STAY: low, RoutingAction.EAST: low},
-                    2: {RoutingAction.STAY: second, RoutingAction.WEST: second},
+                    1: {action: low for action in RoutingAction},
+                    2: {action: second for action in RoutingAction},
                 },
             ))
         rng = np.random.default_rng(seed)
@@ -96,7 +96,7 @@ class MultiSlotTemporalTests(unittest.TestCase):
         rows0 = [{row.grid_id: row for row in slot.statistics}[0] for slot in result.slots]
         self.assertEqual(rows0[1].ewma_fare, .3 * rows0[1].mean_fare + .7 * rows0[0].ewma_fare)
         self.assertEqual(statistics.ewma_state[0], result.slots[-1].ewma_state[0])
-        self.assertTrue(all(result.slots[i].local_sample_counts[1] < result.slots[i + 1].local_sample_counts[1] for i in range(3)))
+        self.assertEqual([slot.local_sample_counts[1] for slot in result.slots], [1, 3, 6, 10])
         self.assertEqual(learners[1]._trained_slots, {0, 1, 2, 3})
 
     def test_nb11_authority_federation_schedule_and_global_persistence(self) -> None:
@@ -110,15 +110,14 @@ class MultiSlotTemporalTests(unittest.TestCase):
             self.assertNotIn("rewards", exported)
             self.assertNotIn("next_states", exported)
         self.assertEqual(result.slots[0].routing_action_counts, {"STAY": 1, "WEST": 1})
-        # No completed driver waits in a candidate grid means no fabricated
-        # instantaneous NB9 wait value and therefore no NB11 decision that slot.
-        self.assertEqual(result.slots[1].routing_action_counts, {})
+        # Unseen waits use the neutral utility without creating NB9 records.
+        self.assertEqual(result.slots[1].routing_action_counts, {"STAY": 2})
 
     def test_grid_policy_initialization_then_mean_then_latest_carry_forward(self) -> None:
         result, *_ = self.build()
         grid_one = [slot.grid_policy[1] for slot in result.slots]
-        self.assertEqual([item.source for item in grid_one[:3]], ["initialization", "current_vehicle_mean", "current_vehicle_mean"])
-        self.assertEqual([item.vehicle_vector_count for item in grid_one[:3]], [0, 1, 1])
+        self.assertEqual([item.source for item in grid_one[:3]], ["initialization", "carry_forward", "current_vehicle_mean"])
+        self.assertEqual([item.vehicle_vector_count for item in grid_one[:3]], [0, 0, 1])
         self.assertFalse(np.allclose(grid_one[2].probabilities, [.2] * 5))
 
     def test_passenger_energy_limitation_and_busy_state_can_cross_boundaries(self) -> None:

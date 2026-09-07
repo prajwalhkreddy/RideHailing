@@ -147,8 +147,10 @@ def generate_requests(
     od_distribution: EmpiricalODDistribution,
     valid_grid_ids: Collection[int],
     mini_slots_per_main_slot: int,
-    random_seed: int,
+    random_seed: int | None,
     request_id_start: int = 0,
+    *,
+    rng: np.random.Generator | None = None,
 ) -> list[RequestState]:
     """Generate exactly one request per integer demand unit.
 
@@ -163,7 +165,14 @@ def generate_requests(
         raise ValueError("Empirical arrival mapping requires 15 two-minute mini-slots.")
     if not isinstance(request_id_start, int) or request_id_start < 0:
         raise ValueError("request_id_start must be non-negative.")
-    rng = np.random.default_rng(random_seed)
+    if rng is not None and random_seed is not None:
+        raise ValueError("Supply either random_seed or a persistent rng, not both.")
+    if rng is None:
+        if random_seed is None:
+            raise ValueError("Request generation requires random_seed or a persistent rng.")
+        rng = np.random.default_rng(random_seed)
+    elif not isinstance(rng, np.random.Generator):
+        raise ValueError("rng must be a numpy.random.Generator.")
     requests: list[RequestState] = []
     request_id = request_id_start
     for origin_grid, demand in sorted(grid_demand.items()):

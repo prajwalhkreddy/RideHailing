@@ -1,10 +1,12 @@
 """Focused deterministic NB11 utility, masking, and EV reposition tests."""
 
 from __future__ import annotations
+from dataclasses import replace
 import unittest
 import pandas as pd
 
-from src.charging.energy import EnergyParameters
+from src.charging.energy import EnergyParameters, enter_charging
+from src.fleet.fleet import Fleet
 from src.fleet.state import VehicleState, VehicleStatus
 from src.routing.baseline import (
     CandidateUtilityInput, DegradationParameters, GridRoutingFeatures, RoutingAction,
@@ -66,6 +68,14 @@ class RoutingBaselineTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "normalized"):
             candidate_utility(_feature(1), CandidateUtilityInput(10., 6., 5.), 75., self.energy)
 
+    def test_unseen_wait_is_neutral_and_causal_history_replaces_it(self) -> None:
+        unseen = _feature(1)
+        unseen = replace(unseen, mean_wait=None, std_wait=None, ewma_wait=None, ewma_std_wait=None)
+        inputs = CandidateUtilityInput(10., 6., .1)
+        self.assertEqual(candidate_utility(unseen, inputs, 75., self.energy).wait, .5)
+        carried = replace(unseen, ewma_wait=8., ewma_std_wait=2.)
+        self.assertEqual(candidate_utility(carried, inputs, 75., self.energy).wait, 1.)
+
     def test_state_mask_maximum_utility_and_fixed_tie(self) -> None:
         state = self._state()
         inputs = {
@@ -90,7 +100,7 @@ class RoutingBaselineTests(unittest.TestCase):
         transition = execute_reposition(self.vehicle, self._state(), RoutingAction.EAST, self.routing, self.energy)
         self.assertEqual((transition.origin_grid, transition.destination_grid, transition.distance_km, transition.duration_minutes), (1, 2, 3., 12.))
         self.assertAlmostEqual(self.vehicle.energy_level, 29.55)
-        self.assertEqual(self.vehicle.trip_status, VehicleStatus.IDLE)
+        self.assertEqual((self.vehicle.trip_status, self.vehicle.current_grid, self.vehicle.destination, self.vehicle.remaining_travel_time), (VehicleStatus.BUSY, 1, 2, 12.))
         with self.assertRaisesRegex(ValueError, "feasibility"):
             RoutingParameters(15, 3, 10).validate()
 
@@ -104,7 +114,13 @@ class RoutingBaselineTests(unittest.TestCase):
             execute_reposition(low, build_routing_state(low, self.features, self.neighbours), RoutingAction.NORTH, self.routing, self.energy)
         crossing = VehicleState(10, 1, VehicleStatus.IDLE, None, 0, "idle", 15.1)
         transition = execute_reposition(crossing, build_routing_state(crossing, self.features, self.neighbours), RoutingAction.NORTH, self.routing, self.energy)
-        self.assertEqual((transition.status_after, crossing.trip_status), (VehicleStatus.CHARGING, VehicleStatus.CHARGING))
+        self.assertEqual((transition.status_after, crossing.trip_status, crossing.current_action), (VehicleStatus.BUSY, VehicleStatus.BUSY, "repositioning"))
+        fleet = Fleet([crossing], frozenset((0, 1, 2)), 2)
+        for _ in range(6):
+            fleet.advance_mini_slot()
+        self.assertEqual((crossing.trip_status, crossing.current_grid, crossing.idle_wait_minutes), (VehicleStatus.IDLE, 0, 0))
+        enter_charging(crossing, self.energy)
+        self.assertEqual(crossing.trip_status, VehicleStatus.CHARGING)
 
     def test_stay_is_zero_distance_zero_energy(self) -> None:
         transition = execute_reposition(self.vehicle, self._state(), RoutingAction.STAY, self.routing, self.energy)

@@ -9,7 +9,7 @@ from typing import Mapping
 
 import pandas as pd
 
-from src.charging.energy import EnergyParameters, apply_distance_energy, requires_charging
+from src.charging.energy import EnergyParameters, energy_consumed_kwh, requires_charging
 from src.fleet.state import VehicleState, VehicleStatus
 from src.simulation.statistics import GridSlotStatistics
 
@@ -256,10 +256,20 @@ def charging_utility(current_energy_kwh: float, energy: EnergyParameters, normal
 
 def candidate_utility(features: GridRoutingFeatures, inputs: CandidateUtilityInput, current_energy_kwh: float, energy: EnergyParameters) -> UtilityComponents:
     """Calculate the three isolated components and fixed equal-weight total."""
-    if features.mean_fare is None or features.std_fare is None or features.mean_wait is None or features.std_wait is None:
-        raise ValueError("Candidate utility requires mean/std fare and waiting statistics.")
-    price = price_utility(inputs.price_preference, features.mean_fare, features.std_fare)
-    wait = wait_utility(inputs.wait_preference, features.mean_wait, features.std_wait)
+    if features.mean_fare is not None and features.std_fare is not None:
+        price = price_utility(inputs.price_preference, features.mean_fare, features.std_fare)
+    elif features.ewma_fare is not None and features.ewma_std_fare is not None:
+        price = price_utility(inputs.price_preference, features.ewma_fare, features.ewma_std_fare)
+    else:
+        raise ValueError("Candidate utility requires current or historical mean/std fare statistics.")
+    if features.mean_wait is not None and features.std_wait is not None:
+        wait = wait_utility(inputs.wait_preference, features.mean_wait, features.std_wait)
+    elif features.ewma_wait is not None and features.ewma_std_wait is not None:
+        wait = wait_utility(inputs.wait_preference, features.ewma_wait, features.ewma_std_wait)
+    else:
+        # Neutral normalized utility for a genuinely unseen grid. This is not
+        # an observation and therefore never enters NB9 or its EWMA state.
+        wait = 0.5
     charging = charging_utility(current_energy_kwh, energy, inputs.normalized_degradation_penalty)
     return UtilityComponents(price, wait, charging, (price + wait + charging) / 3.0)
 
@@ -292,7 +302,7 @@ def select_action(state: RoutingState, utility_inputs: Mapping[RoutingAction | s
 
 
 def execute_reposition(vehicle: VehicleState, state: RoutingState, action: RoutingAction, parameters: RoutingParameters, energy: EnergyParameters) -> RoutingTransition:
-    """Apply one feasible action, its 3-km energy use, and a structured transition."""
+    """Start one feasible reposition movement and its energy transition."""
     parameters.validate()
     if vehicle.trip_status is not VehicleStatus.IDLE or requires_charging(vehicle, energy):
         raise ValueError("Only idle vehicles not requiring charging can reposition.")
@@ -303,10 +313,15 @@ def execute_reposition(vehicle: VehicleState, state: RoutingState, action: Routi
     distance = 0.0 if action is RoutingAction.STAY else parameters.reposition_distance_km
     duration = 0.0 if action is RoutingAction.STAY else parameters.duration_minutes()
     if action is not RoutingAction.STAY:
+        consumed = energy_consumed_kwh(distance, energy)
+        if consumed > vehicle.energy_level:
+            raise ValueError("Movement is impossible because it would make vehicle energy negative.")
         vehicle.abandon_idle_wait()
-        vehicle.current_grid = destination.grid_id
-        apply_distance_energy(vehicle, distance, energy)
-        if vehicle.trip_status is VehicleStatus.IDLE:
-            # Reposition arrival is instantaneous in the existing movement model.
-            vehicle.start_idle_wait()
-    return RoutingTransition(vehicle.vehicle_id, action, origin, vehicle.current_grid, distance, duration, before_energy, vehicle.energy_level, before_status, vehicle.trip_status)
+        vehicle.energy_level -= consumed
+        # Reuse the fleet's timed travel state: the vehicle remains unavailable
+        # at its origin until the frozen 12-minute movement completes.
+        vehicle.trip_status = VehicleStatus.BUSY
+        vehicle.destination = destination.grid_id
+        vehicle.remaining_travel_time = duration
+        vehicle.current_action = "repositioning"
+    return RoutingTransition(vehicle.vehicle_id, action, origin, destination.grid_id, distance, duration, before_energy, vehicle.energy_level, before_status, vehicle.trip_status)

@@ -23,8 +23,8 @@ from src.reporting.pricing import (
 from src.simulation.validation_24h import Validation24hReport, run_small_fleet_validation
 
 
-EXPECTED_TOTALS = {"generated": 1536, "accepted": 1146, "rejected": 390, "served": 1059, "accepted_unserved": 87}
-EXPECTED_FACTORS = {0.85: 24, 0.90: 27, 0.95: 25, 1.00: 28, 1.05: 28, 1.10: 29, 1.15: 31}
+EXPECTED_TOTALS = {"generated": 1536, "accepted": 1159, "rejected": 377, "served": 1065, "accepted_unserved": 94}
+EXPECTED_FACTORS = {0.85: 23, 0.90: 24, 0.95: 23, 1.00: 29, 1.05: 28, 1.10: 30, 1.15: 35}
 
 
 def _write_csv(frame, path: Path) -> None:

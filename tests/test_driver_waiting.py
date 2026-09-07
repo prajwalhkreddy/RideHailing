@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import unittest
+from datetime import datetime, timedelta
 
 from src.charging.energy import EnergyParameters, charge_vehicle, enter_charging
 from src.dispatch.dispatch import DriverWaitObservation, dispatch_requests
@@ -27,10 +28,10 @@ class DriverWaitingTests(unittest.TestCase):
     def fleet(self, *vehicles) -> Fleet:
         return Fleet(list(vehicles), self.grids, 2)
 
-    def dispatch(self, fleet, *, origin=0, destination=1, request_id=0):
+    def dispatch(self, fleet, *, origin=0, destination=1, request_id=0, request_time=0, slot_start_time=None):
         observations: list[DriverWaitObservation] = []
-        request = RequestState(request_id, 0, origin, destination)
-        dispatch_requests([request], fleet, self.neighbours, 2, 15, driver_wait_observations=observations)
+        request = RequestState(request_id, request_time, origin, destination)
+        dispatch_requests([request], fleet, self.neighbours, 2, 15, driver_wait_observations=observations, slot_start_time=slot_start_time)
         return observations
 
     def test_initialization_increment_and_three_slots_before_dispatch(self) -> None:
@@ -61,11 +62,10 @@ class DriverWaitingTests(unittest.TestCase):
 
     def test_cross_main_slot_boundary_preserves_active_wait(self) -> None:
         fleet = self.fleet(self.idle())
-        # Episode starts at 10:28; the first advance reaches the 10:30 boundary.
-        for _ in range(3): fleet.advance_mini_slot()
-        self.assertEqual(self.dispatch(fleet)[0].wait_minutes, 6)
+        for _ in range(16): fleet.advance_mini_slot()
+        self.assertEqual(self.dispatch(fleet)[0].wait_minutes, 32)
 
-    def test_stay_preserves_and_move_abandons_then_restarts_at_destination(self) -> None:
+    def test_stay_preserves_and_move_waits_for_arrival_before_restart(self) -> None:
         vehicle = self.idle()
         fleet = self.fleet(vehicle)
         for _ in range(3): fleet.advance_mini_slot()
@@ -77,9 +77,23 @@ class DriverWaitingTests(unittest.TestCase):
         execute_reposition(vehicle, state, RoutingAction.STAY, RoutingParameters(15, 3, 30), self.energy)
         self.assertEqual((vehicle.idle_wait_minutes, vehicle.idle_wait_grid), (6, 0))
         execute_reposition(vehicle, state, RoutingAction.EAST, RoutingParameters(15, 3, 30), self.energy)
-        self.assertEqual((vehicle.current_grid, vehicle.idle_wait_minutes, vehicle.idle_wait_grid), (1, 0, 1))
+        self.assertEqual((vehicle.current_grid, vehicle.trip_status, vehicle.remaining_travel_time, vehicle.idle_wait_grid), (0, VehicleStatus.BUSY, 12, None))
+        for _ in range(5): fleet.advance_mini_slot()
+        self.assertEqual((vehicle.current_grid, vehicle.trip_status, vehicle.remaining_travel_time, vehicle.idle_wait_grid), (0, VehicleStatus.BUSY, 2, None))
+        fleet.advance_mini_slot()
+        self.assertEqual((vehicle.current_grid, vehicle.trip_status, vehicle.idle_wait_minutes, vehicle.idle_wait_grid), (1, VehicleStatus.IDLE, 0, 1))
         for _ in range(3): fleet.advance_mini_slot()
         self.assertEqual(self.dispatch(fleet, origin=0)[0], DriverWaitObservation(0, 1, 6.))
+
+    def test_completed_wait_records_assignment_clock_once(self) -> None:
+        fleet = self.fleet(self.idle())
+        for _ in range(3):
+            fleet.advance_mini_slot()
+        start = datetime(2026, 1, 1, 10, 0)
+        observation = self.dispatch(fleet, request_time=3, slot_start_time=start)[0]
+        self.assertEqual((observation.idle_start_time, observation.dispatch_time), (start, start + timedelta(minutes=6)))
+        self.assertEqual(observation.wait_minutes, 6)
+        self.assertEqual(self.dispatch(fleet, request_id=1), [])
 
     def test_entering_charging_abandons_idle_wait(self) -> None:
         vehicle = self.idle(energy=6.)
