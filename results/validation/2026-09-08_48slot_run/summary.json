@@ -1,0 +1,26 @@
+{
+  "fleet": 5000,
+  "rates": {
+    "acceptance": 0.5796269055270826,
+    "served_accepted": 0.45207959523463137,
+    "served_generated": 0.26203749683778543
+  },
+  "revenue": 513292.39943358075,
+  "run_date": "2026-09-08",
+  "scaled_reward": 17217.795563454834,
+  "seed": 42,
+  "slots": 48,
+  "source": "results/validation/phase7d_48slot_final_integrated_seed42",
+  "totals": {
+    "accepted": 61863,
+    "accepted_unserved": 33896,
+    "generated": 106729,
+    "rejected": 44866,
+    "served": 27967
+  },
+  "verdict": "READY_FOR_PHASE_8A",
+  "window": {
+    "end_exclusive": "2026-01-26T19:00:00",
+    "start": "2026-01-25T19:00:00"
+  }
+}

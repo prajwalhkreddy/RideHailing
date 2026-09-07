@@ -1,0 +1,397 @@
+{
+  "charts": [
+    {
+      "chart": "01_request_funnel",
+      "outputs": [
+        {
+          "file": "charts/01_request_funnel.png",
+          "sha256": "aa6d20634e9fa71fa423358ce91eddb86c1f240a4b9747f39ec570b26b318694"
+        },
+        {
+          "file": "charts/01_request_funnel.pdf",
+          "sha256": "62ef12ab966dc03113cceda0d53c5bff46b867c37c1ccbb5d6eef8df8521626b"
+        }
+      ],
+      "rows_or_aggregation": "48-slot sums",
+      "source_columns": [
+        "generated",
+        "accepted",
+        "served"
+      ],
+      "source_file": "summary.json + per_slot.csv"
+    },
+    {
+      "chart": "02_request_outcomes",
+      "outputs": [
+        {
+          "file": "charts/02_request_outcomes.png",
+          "sha256": "acf694d30e17b0c4bc3d152799b8f302ff93de3598813777520e9194496f3dbe"
+        },
+        {
+          "file": "charts/02_request_outcomes.pdf",
+          "sha256": "d93de186364256f0cd616ce290b9782a943bffa717ee99dc1a2496a9541d024a"
+        }
+      ],
+      "rows_or_aggregation": "48-slot sums",
+      "source_columns": [
+        "rejected",
+        "served",
+        "accepted_unserved"
+      ],
+      "source_file": "summary.json + per_slot.csv"
+    },
+    {
+      "chart": "03_linucb_arm_distribution",
+      "outputs": [
+        {
+          "file": "charts/03_linucb_arm_distribution.png",
+          "sha256": "a635026698f5ca206cee4b439279b90b2b280ad6338420567f299fb6f2141d52"
+        },
+        {
+          "file": "charts/03_linucb_arm_distribution.pdf",
+          "sha256": "4448fb94dfc0ebaaa1cd3debc21d6bed54defea63579474a855c92486086d11c"
+        }
+      ],
+      "rows_or_aggregation": "48-slot sums",
+      "source_columns": [
+        "arm_085",
+        "arm_090",
+        "arm_095",
+        "arm_100",
+        "arm_105",
+        "arm_110",
+        "arm_115"
+      ],
+      "source_file": "per_slot.csv"
+    },
+    {
+      "chart": "04_linucb_arm_evolution",
+      "outputs": [
+        {
+          "file": "charts/04_linucb_arm_evolution.png",
+          "sha256": "562545920841624a729d39036d7b0ba9fa9525507e82c8954faae1f7bb2113ba"
+        },
+        {
+          "file": "charts/04_linucb_arm_evolution.pdf",
+          "sha256": "bde7e0844f1631d1ebbef71ebb01ec3e588992a2f8907cd7d3bf9bdecf890fb7"
+        }
+      ],
+      "rows_or_aggregation": "48 rows; within-slot shares",
+      "source_columns": [
+        "arm_085",
+        "arm_090",
+        "arm_095",
+        "arm_100",
+        "arm_105",
+        "arm_110",
+        "arm_115"
+      ],
+      "source_file": "per_slot.csv"
+    },
+    {
+      "chart": "05_revenue_reward_over_time",
+      "outputs": [
+        {
+          "file": "charts/05_revenue_reward_over_time.png",
+          "sha256": "43d243ea0ee873e003e7abf679e92ad53a8a1bb2e6e6f026d803b405a2ec3e74"
+        },
+        {
+          "file": "charts/05_revenue_reward_over_time.pdf",
+          "sha256": "5aca69710dbdd014b9b811c13921f5ff653c91677e06b06ee0dc4a4e1aeefa04"
+        }
+      ],
+      "rows_or_aggregation": "48 rows",
+      "source_columns": [
+        "raw_served_revenue",
+        "scaled_learning_reward"
+      ],
+      "source_file": "per_slot.csv"
+    },
+    {
+      "chart": "05b_cumulative_revenue",
+      "outputs": [
+        {
+          "file": "charts/05b_cumulative_revenue.png",
+          "sha256": "e15a3c40a081af43b4e17fdd54ec55b83a9351392c0d1ae30b3aa51de12d3e16"
+        },
+        {
+          "file": "charts/05b_cumulative_revenue.pdf",
+          "sha256": "18c1add2a65b893a7564f7267c0fc8b627cd20f08926b274b9db8de8a01cdaa8"
+        }
+      ],
+      "rows_or_aggregation": "48-row cumulative sum",
+      "source_columns": [
+        "raw_served_revenue"
+      ],
+      "source_file": "per_slot.csv"
+    },
+    {
+      "chart": "06_nb11_action_distribution",
+      "outputs": [
+        {
+          "file": "charts/06_nb11_action_distribution.png",
+          "sha256": "ff12ff70aacebcf61c9c3efeda4db886b8787d8428d78cb3b19c162f2d54e779"
+        },
+        {
+          "file": "charts/06_nb11_action_distribution.pdf",
+          "sha256": "3bcc3a603479387bca5ca7ad9c540767bd055c2405bc94bccfb77b77610bc821"
+        }
+      ],
+      "rows_or_aggregation": "48-slot sums",
+      "source_columns": [
+        "action_stay",
+        "action_north",
+        "action_east",
+        "action_south",
+        "action_west"
+      ],
+      "source_file": "per_slot.csv"
+    },
+    {
+      "chart": "07_routing_p5_evolution",
+      "outputs": [
+        {
+          "file": "charts/07_routing_p5_evolution.png",
+          "sha256": "19e8d40addb4a6865ae4bf04ef0d26d7d7453eb2b5f9346e034b8f2d6ecede1f"
+        },
+        {
+          "file": "charts/07_routing_p5_evolution.pdf",
+          "sha256": "a3dc678bda695dd572fb9c5e034c79c2e03dcb44a4697cc7b630f88279c423ef"
+        }
+      ],
+      "rows_or_aggregation": "48 rows",
+      "source_columns": [
+        "mean_p_stay",
+        "mean_p_north",
+        "mean_p_east",
+        "mean_p_south",
+        "mean_p_west"
+      ],
+      "source_file": "routing_rounds.csv"
+    },
+    {
+      "chart": "08_nb13_parameter_change",
+      "outputs": [
+        {
+          "file": "charts/08_nb13_parameter_change.png",
+          "sha256": "d98461c9e556d1711da18c817330236b419c0e80717106de3a5a62b43ea3b019"
+        },
+        {
+          "file": "charts/08_nb13_parameter_change.pdf",
+          "sha256": "1fd3e20aae6d49f722e810b331f23b41c9d32e6e65199f33130eaea4f31d8a23"
+        }
+      ],
+      "rows_or_aggregation": "48 rows",
+      "source_columns": [
+        "global_parameter_change_norm"
+      ],
+      "source_file": "routing_rounds.csv"
+    },
+    {
+      "chart": "09_nb12_participation",
+      "outputs": [
+        {
+          "file": "charts/09_nb12_participation.png",
+          "sha256": "d00038264c7d781d7fecf139bd67b3f9ff08dda266e23e3081da312729542087"
+        },
+        {
+          "file": "charts/09_nb12_participation.pdf",
+          "sha256": "e376ade8b2a04c043c282f8da5c87ceafd63d93a681c2f8073d3e39d24ca2232"
+        }
+      ],
+      "rows_or_aggregation": "48 rows",
+      "source_columns": [
+        "nb12_participants",
+        "zero_observation_clients"
+      ],
+      "source_file": "routing_rounds.csv"
+    },
+    {
+      "chart": "10_driver_wait_statistics",
+      "outputs": [
+        {
+          "file": "charts/10_driver_wait_statistics.png",
+          "sha256": "2a14d4b73124ef69f32e7043cee72d5b51ca0fe8672650b7d84b405470a5a492"
+        },
+        {
+          "file": "charts/10_driver_wait_statistics.pdf",
+          "sha256": "702234485fedd5164c7dc27941b834c9209c564b7c0cc7a227e4abab18391393"
+        }
+      ],
+      "rows_or_aggregation": "27,967 waits; aggregate statistics (not a histogram)",
+      "source_columns": [
+        "min",
+        "p25",
+        "median",
+        "mean",
+        "p75",
+        "p90",
+        "p95",
+        "p99",
+        "max"
+      ],
+      "source_file": "summary.json"
+    },
+    {
+      "chart": "11_wait_history_coverage",
+      "outputs": [
+        {
+          "file": "charts/11_wait_history_coverage.png",
+          "sha256": "c46a8666eb6405fd1461bb088b1f29741915caec57b17c9a16bec68b03f49e05"
+        },
+        {
+          "file": "charts/11_wait_history_coverage.pdf",
+          "sha256": "544222cfeb60da172e77808118ab60daa05572e878574739bd447e8b9b91707c"
+        }
+      ],
+      "rows_or_aggregation": "48 rows",
+      "source_columns": [
+        "real_wait_history_grids",
+        "wait_real_candidates",
+        "wait_neutral_candidates"
+      ],
+      "source_file": "nb9_wait.csv"
+    },
+    {
+      "chart": "12_contention_service",
+      "outputs": [
+        {
+          "file": "charts/12_contention_service.png",
+          "sha256": "ae18f218b3a493eb0a3ddb0ef89cb97c7abe1c83eff500f490c3e8e2a8367c0d"
+        },
+        {
+          "file": "charts/12_contention_service.pdf",
+          "sha256": "d4f0b4f153dcd2f01885a9d74172c656e606c8affd3178f78a7cf2101fecca12"
+        }
+      ],
+      "rows_or_aggregation": "48-slot sums",
+      "source_columns": [
+        "eligible_evaluations",
+        "contenders",
+        "zero_eligible_requests",
+        "eligible_zero_contender_requests",
+        "served"
+      ],
+      "source_file": "per_slot.csv"
+    },
+    {
+      "chart": "13_repositioning",
+      "outputs": [
+        {
+          "file": "charts/13_repositioning.png",
+          "sha256": "3a8df3df60f418ef1989937ef5126196328fc35858dcfc19ee125b9367a6e1b2"
+        },
+        {
+          "file": "charts/13_repositioning.pdf",
+          "sha256": "e93bc224832e63d5c5d1b1cae9276c9672a7aaaa2b0a70522cc7ed8bed638b1f"
+        }
+      ],
+      "rows_or_aggregation": "48 rows",
+      "source_columns": [
+        "reposition_starts",
+        "reposition_completions",
+        "repositioning_at_boundary"
+      ],
+      "source_file": "per_slot.csv"
+    },
+    {
+      "chart": "14_fleet_state_evolution",
+      "outputs": [
+        {
+          "file": "charts/14_fleet_state_evolution.png",
+          "sha256": "9fbff034c068624041c9d06021ae1bf86f813d386c6d6ea8ed5a3aba9a47da65"
+        },
+        {
+          "file": "charts/14_fleet_state_evolution.pdf",
+          "sha256": "1e4b1af00904e61c8ce7cce84625c305a2d3bb619e7c40fe4ba4927b45626d05"
+        }
+      ],
+      "rows_or_aggregation": "48 rows; each row sums to 5,000",
+      "source_columns": [
+        "fleet_idle",
+        "busy_passenger",
+        "busy_repositioning",
+        "fleet_charging"
+      ],
+      "source_file": "fleet_states.csv"
+    },
+    {
+      "chart": "15_charging_activity",
+      "outputs": [
+        {
+          "file": "charts/15_charging_activity.png",
+          "sha256": "e270abb8698ab22f9909d19d1711adb66d6e69eb4b0a42c95348017fabd85424"
+        },
+        {
+          "file": "charts/15_charging_activity.pdf",
+          "sha256": "4c89fb08bcfa64e1a4885ce8fba089feb9b7e6f71e3d744ee25bc16f400b6eef"
+        }
+      ],
+      "rows_or_aggregation": "48 rows",
+      "source_columns": [
+        "charging_active",
+        "charging_entered",
+        "charging_completed",
+        "charging_queued"
+      ],
+      "source_file": "fleet_states.csv"
+    },
+    {
+      "chart": "16_energy_health",
+      "outputs": [
+        {
+          "file": "charts/16_energy_health.png",
+          "sha256": "69168e1a5d7366013e11f9ac2720496f9a01ecebd1f344debbbde3adef198d07"
+        },
+        {
+          "file": "charts/16_energy_health.pdf",
+          "sha256": "ad304c9057b3e80622619eb85184c495c1f3af79a9ebb256449d9c96a261786e"
+        }
+      ],
+      "rows_or_aggregation": "48 rows",
+      "source_columns": [
+        "energy_min",
+        "energy_median",
+        "energy_mean",
+        "energy_p95",
+        "energy_max"
+      ],
+      "source_file": "fleet_states.csv"
+    },
+    {
+      "chart": "17_time_of_day_performance",
+      "outputs": [
+        {
+          "file": "charts/17_time_of_day_performance.png",
+          "sha256": "296c376c7ccd245b1db18cf8fc4ea378f376831172154be48041dffd66925486"
+        },
+        {
+          "file": "charts/17_time_of_day_performance.pdf",
+          "sha256": "3cd2b028710184cf85c1fe0c8a2921293a3bee05635c68558c8426ae7a83e2aa"
+        }
+      ],
+      "rows_or_aggregation": "48 Period rows",
+      "source_columns": [
+        "period",
+        "generated",
+        "accepted",
+        "served"
+      ],
+      "source_file": "per_period.csv"
+    }
+  ],
+  "source_artifacts": {
+    "analysis.json": "f1e2ab0d8af4a56c21f129e43fc75be30e48a4aa009d4b55e9768718aaa9ce86",
+    "fleet_states.csv": "e0f52b0357dd4ab4964ee76a9e6dbd604efdbf9a6c507ab30b36041146f9ae88",
+    "linucb_factors.csv": "1b744e9b205acd6658480c447b42dfdb993fc10abe909da86ac04fe19f529352",
+    "nb9_fare_representative.csv": "3fdd2bb7144b442c0b83208bd77b591ccadaa77dbac5cd53387907154687e87b",
+    "nb9_wait.csv": "ab415e3cafd3d1af696e7bc80aa0f71f8253f568d33a83c39c32fe87db1dfd77",
+    "per_period.csv": "e1edc1a0d776523ee66ac05151b620cc624095c66deeb3c2099c247b41ee39ea",
+    "per_slot.csv": "7aaf923455b9818699dc89000b4c67a5005b0b4127c938c6c820f8d9917b4370",
+    "reproducibility.json": "d4480deb44d6dde9c380f8e8dc9cbd71836f99018885e31657dd541e18273e95",
+    "routing_grid_representative.csv": "fea23ba707f78067952f59675238d1cec642d453514fb2d6a9689f6eb50d3b2b",
+    "routing_rounds.csv": "bc3af4a92b4d0c4a6590be20bc3d9257a07279314f13abf56fb6e32dd635696e",
+    "summary.json": "6363b11f0de1a5d2baa9c5c155550ec7c26e4f61dbcc0fedf0dfb9bdd2587fa2"
+  },
+  "source_directory": "results/validation/phase7d_48slot_final_integrated_seed42"
+}
