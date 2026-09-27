@@ -1,0 +1,77 @@
+{
+  "deterministic_repeat": {
+    "byte_identical": true,
+    "compact_artifacts_compared": 48,
+    "scope": "14 CSVs, README, summary.json, 16 PNGs, 16 PDFs; separate standalone analysis invocation"
+  },
+  "focused_tests": {
+    "command": "python -m unittest discover -s tests -p test_passenger_sensitivity_m10.py -v",
+    "count": 18,
+    "passed": 18
+  },
+  "full_regression": {
+    "command": "python -m unittest discover -s tests -q",
+    "count": 276,
+    "note": "Existing fixture-based unit tests only; no production experiment invoked.",
+    "passed": 276,
+    "seconds": 41.723
+  },
+  "git_diff_check": "PASS",
+  "independent_numeric_checks": [
+    "historical-only timestamps",
+    "positive finite epsilon and signed deviations",
+    "independent mean base recomputation",
+    "M10 formula",
+    "M12 inverse identity",
+    "condition totals and funnel reconciliation",
+    "disjoint exhaustive delta_P bins"
+  ],
+  "legacy_phase7d_and_reporting_hashes_unchanged": true,
+  "new_text_files_whitespace_check": "PASS",
+  "private_parquet_git_ignored": true,
+  "production_behavior_changed": false,
+  "production_experiments_run": 0,
+  "production_files_unchanged_vs_HEAD": {
+    "config/.gitkeep": true,
+    "config/config.yaml": true,
+    "config/pricing_context_scaler.json": true,
+    "config/pricing_reward.json": true,
+    "src/dispatch/__init__.py": true,
+    "src/dispatch/contention.py": true,
+    "src/dispatch/dispatch.py": true,
+    "src/dispatch/generation.py": true,
+    "src/dispatch/request.py": true,
+    "src/pricing/__init__.py": true,
+    "src/pricing/customer.py": true,
+    "src/pricing/customer_sensitivity.py": true,
+    "src/pricing/historical_sensitivity.py": true,
+    "src/pricing/linucb.py": true,
+    "src/pricing/request_context.py": true,
+    "src/pricing/reward.py": true,
+    "src/pricing/scaler.py": true,
+    "src/pricing/state.py": true,
+    "src/pricing/supply.py": true,
+    "src/routing/__init__.py": true,
+    "src/routing/baseline.py": true,
+    "src/routing/federated.py": true,
+    "src/routing/learning.py": true,
+    "src/routing/production.py": true,
+    "src/simulation/__init__.py": true,
+    "src/simulation/grid_policy.py": true,
+    "src/simulation/main_slot.py": true,
+    "src/simulation/multi_slot.py": true,
+    "src/simulation/pricing_dispatch.py": true,
+    "src/simulation/production.py": true,
+    "src/simulation/statistics.py": true,
+    "src/simulation/validation_24h.py": true
+  },
+  "visual_qa": {
+    "pdf_figures_rendered_and_inspected": 16,
+    "png_figures_inspected": 16,
+    "source_equation_pages_visually_inspected": [
+      13,
+      14,
+      16
+    ]
+  }
+}

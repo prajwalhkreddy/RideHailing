@@ -1,0 +1,5 @@
+variant,population,possible_conditions,observed_conditions,missing_conditions,historical_weather_codes,observed_n_min,observed_n_p25,observed_n_median,observed_n_p75,observed_n_max,observed_groups_n_lt_30,all_possible_groups_n_lt_30,observed_groups_n_lt_100,all_possible_groups_n_lt_100,observed_groups_n_lt_500,all_possible_groups_n_lt_500,observed_groups_n_ge_500
+30min,base,624,243,381,13,158,2682.5,4559,16189.5,58619,0,381,0,381,14,395,229
+30min,epsilon,624,238,386,13,1,612.5,1039.5,2447.5,14578,4,390,16,402,54,440,184
+hourly,base,312,122,190,13,328,5405.5,8909.5,32762.25,115425,0,190,0,190,3,193,119
+hourly,epsilon,312,117,195,13,30,1269,2013,5051,28113,0,195,3,198,14,209,103

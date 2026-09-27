@@ -1,0 +1,295 @@
+{
+  "charts": [
+    {
+      "chart": "01_epsilon_histogram",
+      "files": [
+        "charts/01_epsilon_histogram.png",
+        "charts/01_epsilon_histogram.pdf"
+      ],
+      "note": "No analysis observations removed. Raw and log1p panels use log count axes; the P99 view is a display limit only."
+    },
+    {
+      "chart": "02_epsilon_histogram_zoomed",
+      "files": [
+        "charts/02_epsilon_histogram_zoomed.png",
+        "charts/02_epsilon_histogram_zoomed.pdf"
+      ],
+      "note": "No analysis observations removed. Raw and log1p panels use log count axes; the P99 view is a display limit only."
+    },
+    {
+      "chart": "03_log_epsilon_distribution",
+      "files": [
+        "charts/03_log_epsilon_distribution.png",
+        "charts/03_log_epsilon_distribution.pdf"
+      ],
+      "note": "No analysis observations removed. Raw and log1p panels use log count axes; the P99 view is a display limit only."
+    },
+    {
+      "chart": "04_epsilon_ecdf",
+      "files": [
+        "charts/04_epsilon_ecdf.png",
+        "charts/04_epsilon_ecdf.pdf"
+      ],
+      "note": "The logarithmic x-axis displays the full positive tail; no iid significance test is implied."
+    },
+    {
+      "chart": "05_epsilon_by_weather",
+      "files": [
+        "charts/05_epsilon_by_weather.png",
+        "charts/05_epsilon_by_weather.pdf"
+      ],
+      "note": "Boxes: P25-P75; center: median; whiskers: P5-P95. Tails omitted visually only; codes remain separate."
+    },
+    {
+      "chart": "06_mean_epsilon_by_time_weather",
+      "files": [
+        "charts/06_mean_epsilon_by_time_weather.png",
+        "charts/06_mean_epsilon_by_time_weather.pdf"
+      ],
+      "note": "Missing conditions remain gaps. Descriptive historical association; unequal support is shown in chart 09."
+    },
+    {
+      "chart": "07_median_epsilon_by_time_weather",
+      "files": [
+        "charts/07_median_epsilon_by_time_weather.png",
+        "charts/07_median_epsilon_by_time_weather.pdf"
+      ],
+      "note": "Missing conditions remain gaps. Descriptive historical association; unequal support is shown in chart 09."
+    },
+    {
+      "chart": "08_mean_epsilon_by_hour_weather",
+      "files": [
+        "charts/08_mean_epsilon_by_hour_weather.png",
+        "charts/08_mean_epsilon_by_hour_weather.pdf"
+      ],
+      "note": "Missing conditions remain gaps. Descriptive historical association; unequal support is shown in chart 09."
+    },
+    {
+      "chart": "09_condition_sample_counts",
+      "files": [
+        "charts/09_condition_sample_counts.png",
+        "charts/09_condition_sample_counts.pdf"
+      ],
+      "note": "Grey = missing or zero. Possible conditions use only weather codes present in the pre-cutoff weather artifact."
+    },
+    {
+      "chart": "10_epsilon_vs_delta_p",
+      "files": [
+        "charts/10_epsilon_vs_delta_p.png",
+        "charts/10_epsilon_vs_delta_p.pdf"
+      ],
+      "note": "All retained rows contribute to density bins; the formula mechanically relates these variables, so this is not independent causal evidence."
+    },
+    {
+      "chart": "11_epsilon_vs_relative_distance",
+      "files": [
+        "charts/11_epsilon_vs_relative_distance.png",
+        "charts/11_epsilon_vs_relative_distance.pdf"
+      ],
+      "note": "All retained rows contribute to density bins; the formula mechanically relates these variables, so this is not independent causal evidence."
+    },
+    {
+      "chart": "12_small_delta_p_tail",
+      "files": [
+        "charts/12_small_delta_p_tail.png",
+        "charts/12_small_delta_p_tail.pdf"
+      ],
+      "note": "Bins are disjoint and exhaustive among valid M10 rows. No additional denominator floor is applied."
+    },
+    {
+      "chart": "13_outlier_rule_comparison",
+      "files": [
+        "charts/13_outlier_rule_comparison.png",
+        "charts/13_outlier_rule_comparison.pdf"
+      ],
+      "note": "PROFESSOR DECISION REQUIRED. Global pooled diagnostic thresholds; not per-condition production rules."
+    },
+    {
+      "chart": "14_sampling_distribution_comparison",
+      "files": [
+        "charts/14_sampling_distribution_comparison.png",
+        "charts/14_sampling_distribution_comparison.pdf"
+      ],
+      "note": "Descriptive pooled fits only; truncated Normal uses underlying empirical mean/SD, not matched truncated moments. No family is selected."
+    },
+    {
+      "chart": "15_m12_tolerance",
+      "files": [
+        "charts/15_m12_tolerance.png",
+        "charts/15_m12_tolerance.pdf"
+      ],
+      "note": "ILLUSTRATIVE - NOT PRODUCTION INTEGRATION. Positive distance scenarios only; small epsilon can produce very high willingness to pay."
+    },
+    {
+      "chart": "16_condition_summary",
+      "files": [
+        "charts/16_condition_summary.png",
+        "charts/16_condition_summary.pdf"
+      ],
+      "note": "Grey = absent or zero statistic; singleton population SD is zero. Use condition N before interpreting extreme means/SDs."
+    }
+  ],
+  "condition_universe": "all time buckets x codes observed in pre-cutoff hourly weather, not all theoretical weather codes",
+  "distance_unit": "miles",
+  "epsilon_unit": "1/USD",
+  "fallback": null,
+  "fare_unit": "USD",
+  "formula_frozen_in_pdf": true,
+  "input_population": {
+    "historical_max_positive_distance_miles": 236216.69,
+    "historical_positive_finite": 2812329,
+    "historical_positive_finite_above_100_miles": 93,
+    "historical_rows": 2931451,
+    "invalid_pickup_timestamps": 0,
+    "outside_history": 768187,
+    "source_rows": 3699638
+  },
+  "input_rule": "finite positive fare and distance; no legacy 100-mile cap or .01-mile deviation threshold",
+  "open_decisions": [
+    "time grouping",
+    "source cleaning cap",
+    "outlier treatment",
+    "minimum delta_P",
+    "sampling family/parameters",
+    "sparse fallback"
+  ],
+  "outlier_rule_selected": null,
+  "private_rows_persisted": true,
+  "production_changed": false,
+  "runtime_model_frozen": false,
+  "sampling_configuration": null,
+  "software": {
+    "matplotlib": "3.11.1",
+    "numpy": "1.26.4",
+    "pandas": "3.0.5",
+    "python": "3.12.13",
+    "scipy": "1.14.1"
+  },
+  "source_hashes": {
+    "analysis_module": {
+      "path": "src/analysis/passenger_sensitivity_m10.py",
+      "sha256": "f5f6a3aeacbba2433de170c08bbd0953e621f66f0f25ffb01e06e0275d5de5c0"
+    },
+    "analysis_script": {
+      "path": "scripts/analyze_passenger_sensitivity_m10.py",
+      "sha256": "fa15f9ed3eee768d4f3559df195ad7928f558a3414a7ac52d17226cf86b70a28"
+    },
+    "authoritative_pdf": {
+      "path": "notebooks/plan/Final_Module_Wise_Algorithm_Input_Output_Document.pdf",
+      "sha256": "d8b4effc503ba5192f6ac5b8777d7182b761406c047cc3c7202df394f80bf31a"
+    },
+    "legacy_fallback": {
+      "path": "data/processed/customer_price_sensitivity_fallback_2026_01.parquet",
+      "sha256": "8d511bb09421154b2185935db204af8497c42dd729db39333cb323fc0649e826"
+    },
+    "legacy_module": {
+      "path": "src/pricing/historical_sensitivity.py",
+      "sha256": "2ed1d081576004cf76348f92e6cbff77ac10460972b97def98f683343fdfd5ec"
+    },
+    "legacy_sampler": {
+      "path": "src/pricing/customer_sensitivity.py",
+      "sha256": "e383e83ecfc217d138a10ff764833dee5d1406995430239361144082cc66577f"
+    },
+    "legacy_sensitivity": {
+      "path": "data/processed/customer_price_sensitivity_2026_01.parquet",
+      "sha256": "2f9554665ced24d0cecfe136b9f7d3dd29d99ec2b4248c930909bbe6cf1b0088"
+    },
+    "trips": {
+      "path": "data/processed/cleaned_trips.parquet",
+      "sha256": "648dfe389ed924ce597f88745af840f03d592737d5dd35015d018c255bc2b65e"
+    },
+    "weather": {
+      "path": "data/processed/weather/nyc_weather_processed_2026_01.parquet",
+      "sha256": "3bce173f18b2239b61d7646a5f5c1f3672c28c95024cd99bf9161db40c413512"
+    }
+  },
+  "status": "READY_FOR_PROFESSOR_REVIEW",
+  "training_cutoff_exclusive": "2026-01-25T18:30:00",
+  "training_start_inclusive": "2026-01-01T00:00:00",
+  "variants": {
+    "30min": {
+      "base_conditions": 243,
+      "epsilon_conditions": 238,
+      "raw_epsilon": {
+        "count": 526892,
+        "max": 36880.69739790059,
+        "mean": 0.38018534688492545,
+        "median": 0.06698686697514245,
+        "min": 2.043314629290629e-07,
+        "p01": 0.001121771850115048,
+        "p05": 0.0059004424146811155,
+        "p10": 0.011381846878842977,
+        "p25": 0.03134885285324385,
+        "p75": 0.0922012678234768,
+        "p90": 0.12864872142232212,
+        "p95": 0.17918429754161763,
+        "p99": 0.5762443200955674,
+        "p995": 1.0915627634411265,
+        "p999": 6.478437594680778,
+        "skewness": 432.0446755670593,
+        "std_population": 67.09079113701819
+      },
+      "weather_codes": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        21
+      ]
+    },
+    "30min_source_distance_audit": {
+      "epsilon_sum_share_above_100_miles": 0.5804585397848413,
+      "valid_epsilon_rows_above_100_miles": 54
+    },
+    "hourly": {
+      "base_conditions": 122,
+      "epsilon_conditions": 117,
+      "raw_epsilon": {
+        "count": 487710,
+        "max": 97164.03212104032,
+        "mean": 0.5888757622045073,
+        "median": 0.05370048393318429,
+        "min": 3.722075602979091e-07,
+        "p01": 0.0009692623125649113,
+        "p05": 0.004562228503291803,
+        "p10": 0.009108376379467127,
+        "p25": 0.02240521153176987,
+        "p75": 0.08479991636534659,
+        "p90": 0.11676359407162658,
+        "p95": 0.15840272170750808,
+        "p99": 0.4937889355378478,
+        "p995": 0.9235222342657623,
+        "p999": 4.264155770828399,
+        "skewness": 541.7128809850665,
+        "std_population": 154.57515616068395
+      },
+      "weather_codes": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        15,
+        16,
+        21
+      ]
+    },
+    "hourly_source_distance_audit": {
+      "epsilon_sum_share_above_100_miles": 0.8410943805738981,
+      "valid_epsilon_rows_above_100_miles": 56
+    }
+  }
+}

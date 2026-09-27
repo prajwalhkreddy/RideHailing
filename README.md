@@ -400,6 +400,21 @@ The January artifact uses the frozen cleaned-trip destination and drop-off times
 
 #### Offline historical customer sensitivity — Phase 1
 
+**M10 methodology update (2026-09-27, professor review only):** The new
+[`Final_Module_Wise_Algorithm_Input_Output_Document.pdf`](notebooks/plan/Final_Module_Wise_Algorithm_Input_Output_Document.pdf)
+specifies condition-mean bases and `epsilon = ((L-L_base)/L_base)/(P-P_base)`,
+retaining positive distance/price deviations and finite positive epsilon.
+This has been implemented in the isolated `src/analysis/passenger_sensitivity_m10.py`
+and analyzed by `scripts/analyze_passenger_sensitivity_m10.py` for both half-hour
+and hourly conditions. The [professor-review package](results/analysis/2026-09-27_passenger_sensitivity_m10/README.md)
+documents the empirical results. Time grouping, source-cleaning policy, outlier
+treatment, any minimum price-deviation threshold, runtime sampling, and sparse-condition
+fallback remain under review; the new runtime model is **not frozen or production-ready**.
+The prior sensitivity implementation/artifacts described below remain unchanged
+and are legacy relative to this new document. Production still uses that prior
+behavior until a separately approved integration; no DQN replacement or M12
+production change is included in this analysis.
+
 `src/pricing/historical_sensitivity.py` and `scripts/build_customer_sensitivity.py` build the pre-cutoff sensitivity inputs later consumed by production. Training trips before the exclusive `2026-01-25 18:30` boundary are pooled by `(WeatherCode, Period)`. Source-valid rows require positive finite `fare_amount` and positive finite TLC `trip_distance` no greater than 100 miles. Within each group, `P_base` and `D_base` are the respective means. An observation enters the ratio only when `abs(trip_distance - D_base) >= 0.01` mile, matching source resolution; retained observations use `epsilon = abs(((P-P_base)/P_base) / ((D-D_base)/D_base))`. The group and hierarchical-fallback tables retain population/sample SD and diagnostic quantiles. These build-stage rules are not epsilon clipping or winsorization; runtime positive-truncated sampling and `P_max` evaluation occur separately.
 
 Production resolves sensitivity hierarchically for `(WeatherCode, Period)` using `exact -> Period -> Weather -> Global`, samples epsilon from the stored mean/population SD with a positive lower-truncated Normal draw, and computes `P_dispatch = P_base * alpha` and `P_max = P_base + (((D-D_base)/D_base) * P_base / epsilon_customer)`. The request is accepted exactly when `P_dispatch <= P_max`. Resolution and sampling occur once per request and retain the complete sensitivity/price audit. The ordinary Eq.31 response remains a legacy comparison mode, not the production configuration.

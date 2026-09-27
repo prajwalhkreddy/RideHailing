@@ -1,0 +1,16 @@
+requirement,current_implementation,new_pdf_requirement,compatible,action
+epsilon formula,abs(relative price / relative distance),relative distance / raw price deviation,NO,Isolated new M10; legacy preserved
+delta_L filter,Absolute distance deviation >= .01 mile,delta_L > 0,NO,Strict positive; no .01 rule
+delta_P filter,No positive-only deviation filter,delta_P > 0,NO,Strict positive; no extra floor
+absolute value,Applied,Not applied,NO,No abs in new formula
+base price,Arithmetic condition mean fare,Arithmetic condition mean fare,"YES, definition",Recompute from documented M10 eligible inputs
+base distance,Arithmetic condition mean distance,Arithmetic condition mean distance,"YES, definition",Recompute; do not reuse old capped-row bases
+Time grouping,30-minute Period 0..47,Time-of-Day width unspecified; M3 operational slots 30min,OPEN,Compare 30min/hourly; do not freeze
+Weather grouping,"Hourly NYC WeatherCode, naive timestamps",Document join rule; no category regrouping specified,COMPATIBLE convention,Retain individual codes and disclose alignment assumption
+input validity,"Finite positive fare, 0 < miles <=100",M1 documented invalid rules; no numeric cap in M9/M10,PARTIAL,Positive finite input rule; disclose omission of old 100-mile cap; no new rule
+outliers,No epsilon cap; .01-mile delta and 100-mile source rules,"Document/apply chosen rule, no rule specified",OPEN,Diagnostic alternatives only; PROFESSOR DECISION REQUIRED
+mean/std,"Mean, population and sample SD",Mean/std/count; ddof unspecified,COMPATIBLE with task,Population ddof=0 per explicit task
+sampling family,Positive-truncated Normal using historical mean/SD,Inspect empirical distribution before freezing,OPEN,Empirical/Normal/truncated Normal/lognormal diagnostics; no runtime sampler
+fallback,Exact -> Period -> Weather -> Global,No hierarchy specified,OPEN,No pooling or imputation in M10
+M12,P_base + relative distance * P_base / epsilon,P_base + relative distance / epsilon,NO,New equation analysis only; production untouched
+privacy,epsilon in request/customer audit; not eight-dimensional pricing or routing vector,Individual epsilon private; excluded from DQN,PARTIAL architecture,"Private local diagnostics; explicit aggregate-only future schema, no DQN implementation"
