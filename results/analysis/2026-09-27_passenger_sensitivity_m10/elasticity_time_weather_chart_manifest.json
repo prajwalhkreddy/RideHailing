@@ -1,0 +1,4901 @@
+{
+  "purpose": "Reporting only; frozen CSV statistics, no recomputation or filtering.",
+  "weather_labels": {
+    "1": "Weather 1",
+    "2": "Weather 2",
+    "3": "Weather 3",
+    "5": "Weather 5",
+    "7": "Weather 7",
+    "8": "Weather 8",
+    "9": "Weather 9",
+    "12": "Weather 12",
+    "13": "Weather 13",
+    "14": "Weather 14",
+    "15": "Weather 15",
+    "16": "Weather 16",
+    "21": "Weather 21"
+  },
+  "distribution_minimum_n": 2,
+  "minimum_n_explanation": "Only empty and singleton groups are absent from distribution plots; this is a display rule, not a research support threshold.",
+  "source_hashes": {
+    "sensitivity_conditions_hourly.csv": "9e85f4f9af15de2b0e38acfc56303b0d746fa057a8e7afe43c8017a1f665b9fa",
+    "sensitivity_conditions_30min.csv": "90a34d5aa56dd098b1841f22e0b5c46c5bc4f71501ba63b4ba34c206360b3916",
+    "overall_sensitivity_summary.csv": "0ffae48b5970d79cefeb767a885a4a2b22af093d03d042c622676cdf1f8759b1"
+  },
+  "charts": [
+    {
+      "variant": "hourly",
+      "files": [
+        "charts/17_mean_elasticity_vs_time_weather.png",
+        "charts/17_mean_elasticity_vs_time_weather.pdf"
+      ],
+      "statistics": [
+        "mean_epsilon"
+      ],
+      "scale": "log",
+      "view_only_upper_limit": null,
+      "conditions_with_iqr_above_view_limit": [],
+      "exact_source_value_check": "passed"
+    },
+    {
+      "variant": "hourly",
+      "files": [
+        "charts/18_elasticity_distribution_channel_vs_time_weather.png",
+        "charts/18_elasticity_distribution_channel_vs_time_weather.pdf"
+      ],
+      "statistics": [
+        "median",
+        "p25",
+        "p75"
+      ],
+      "scale": "linear",
+      "view_only_upper_limit": 0.4937889355378478,
+      "conditions_with_iqr_above_view_limit": [],
+      "exact_source_value_check": "passed"
+    },
+    {
+      "variant": "30min",
+      "files": [
+        "charts/17b_mean_elasticity_vs_halfhour_weather.png",
+        "charts/17b_mean_elasticity_vs_halfhour_weather.pdf"
+      ],
+      "statistics": [
+        "mean_epsilon"
+      ],
+      "scale": "log",
+      "view_only_upper_limit": null,
+      "conditions_with_iqr_above_view_limit": [],
+      "exact_source_value_check": "passed"
+    },
+    {
+      "variant": "30min",
+      "files": [
+        "charts/18b_elasticity_distribution_channel_vs_halfhour_weather.png",
+        "charts/18b_elasticity_distribution_channel_vs_halfhour_weather.pdf"
+      ],
+      "statistics": [
+        "median",
+        "p25",
+        "p75"
+      ],
+      "scale": "linear",
+      "view_only_upper_limit": 0.5762443200955674,
+      "conditions_with_iqr_above_view_limit": [
+        {
+          "time_bucket": 15,
+          "WeatherCode": 1,
+          "sample_count": 7,
+          "p25": 0.0014544872025887765,
+          "median": 0.0070497558887258355,
+          "p75": 317.7687699949844
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 5,
+          "sample_count": 2,
+          "p25": 40.212666262743134,
+          "median": 80.38569228279873,
+          "p75": 120.55871830285433
+        }
+      ],
+      "exact_source_value_check": "passed"
+    }
+  ],
+  "support": {
+    "hourly": {
+      "observations": 487710,
+      "possible_combinations": 312,
+      "observed_combinations": 117,
+      "missing_combinations": 195,
+      "observations_by_weather": {
+        "1": 127078,
+        "2": 35902,
+        "3": 254000,
+        "5": 15365,
+        "7": 3028,
+        "8": 6018,
+        "9": 14085,
+        "12": 16129,
+        "13": 2047,
+        "14": 5827,
+        "15": 7491,
+        "16": 740,
+        "21": 0
+      },
+      "singleton_distribution_omissions": [],
+      "condition_sample_counts": [
+        {
+          "time_bucket": 0,
+          "WeatherCode": 1,
+          "sample_count": 7618
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 2,
+          "sample_count": 754
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 3,
+          "sample_count": 10091
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 5,
+          "sample_count": 468
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 8,
+          "sample_count": 1861
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 9,
+          "sample_count": 2146
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 12,
+          "sample_count": 1051
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 1,
+          "sample_count": 3989
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 2,
+          "sample_count": 1996
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 3,
+          "sample_count": 5937
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 5,
+          "sample_count": 232
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 9,
+          "sample_count": 1728
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 12,
+          "sample_count": 559
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 1,
+          "sample_count": 874
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 2,
+          "sample_count": 380
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 3,
+          "sample_count": 2396
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 5,
+          "sample_count": 146
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 9,
+          "sample_count": 1381
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 1,
+          "sample_count": 96
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 3,
+          "sample_count": 1390
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 5,
+          "sample_count": 113
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 8,
+          "sample_count": 914
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 14,
+          "sample_count": 244
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 1,
+          "sample_count": 1853
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 3,
+          "sample_count": 4246
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 5,
+          "sample_count": 126
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 8,
+          "sample_count": 523
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 14,
+          "sample_count": 215
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 1,
+          "sample_count": 2156
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 3,
+          "sample_count": 3791
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 1,
+          "sample_count": 1945
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 2,
+          "sample_count": 1532
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 3,
+          "sample_count": 2759
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 5,
+          "sample_count": 757
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 14,
+          "sample_count": 619
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 1,
+          "sample_count": 88
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 3,
+          "sample_count": 5051
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 5,
+          "sample_count": 348
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 14,
+          "sample_count": 573
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 1,
+          "sample_count": 1688
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 3,
+          "sample_count": 8509
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 5,
+          "sample_count": 30
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 1,
+          "sample_count": 3084
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 2,
+          "sample_count": 668
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 3,
+          "sample_count": 7130
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 5,
+          "sample_count": 1443
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 14,
+          "sample_count": 1347
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 1,
+          "sample_count": 9864
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 2,
+          "sample_count": 2941
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 3,
+          "sample_count": 1889
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 5,
+          "sample_count": 1385
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 7,
+          "sample_count": 1339
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 1,
+          "sample_count": 8818
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 2,
+          "sample_count": 1269
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 3,
+          "sample_count": 6544
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 5,
+          "sample_count": 1352
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 14,
+          "sample_count": 1846
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 1,
+          "sample_count": 5372
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 3,
+          "sample_count": 20428
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 5,
+          "sample_count": 1374
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 15,
+          "sample_count": 728
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 1,
+          "sample_count": 3890
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 2,
+          "sample_count": 4530
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 3,
+          "sample_count": 17652
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 5,
+          "sample_count": 1458
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 15,
+          "sample_count": 2013
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 1,
+          "sample_count": 11019
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 2,
+          "sample_count": 678
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 3,
+          "sample_count": 14608
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 5,
+          "sample_count": 2969
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 15,
+          "sample_count": 2053
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 1,
+          "sample_count": 7747
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 2,
+          "sample_count": 4839
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 3,
+          "sample_count": 10201
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 5,
+          "sample_count": 3164
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 7,
+          "sample_count": 1689
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 16,
+          "sample_count": 383
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 1,
+          "sample_count": 15101
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 3,
+          "sample_count": 9618
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 12,
+          "sample_count": 1667
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 14,
+          "sample_count": 983
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 16,
+          "sample_count": 357
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 1,
+          "sample_count": 5073
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 2,
+          "sample_count": 1778
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 3,
+          "sample_count": 8774
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 12,
+          "sample_count": 1942
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 15,
+          "sample_count": 728
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 1,
+          "sample_count": 6446
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 2,
+          "sample_count": 2852
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 3,
+          "sample_count": 23755
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 12,
+          "sample_count": 2128
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 15,
+          "sample_count": 1969
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 1,
+          "sample_count": 7148
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 2,
+          "sample_count": 3276
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 3,
+          "sample_count": 15135
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 8,
+          "sample_count": 2720
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 12,
+          "sample_count": 1740
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 13,
+          "sample_count": 2047
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 1,
+          "sample_count": 2461
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 2,
+          "sample_count": 1986
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 3,
+          "sample_count": 22501
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 9,
+          "sample_count": 2179
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 12,
+          "sample_count": 3391
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 1,
+          "sample_count": 7455
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 2,
+          "sample_count": 3585
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 3,
+          "sample_count": 6973
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 9,
+          "sample_count": 1967
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 12,
+          "sample_count": 1482
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 1,
+          "sample_count": 3706
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 3,
+          "sample_count": 28113
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 9,
+          "sample_count": 2346
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 12,
+          "sample_count": 743
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 1,
+          "sample_count": 9587
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 2,
+          "sample_count": 2838
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 3,
+          "sample_count": 16509
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 9,
+          "sample_count": 2338
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 12,
+          "sample_count": 1426
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 21,
+          "sample_count": 0
+        }
+      ]
+    },
+    "30min": {
+      "observations": 526892,
+      "possible_combinations": 624,
+      "observed_combinations": 238,
+      "missing_combinations": 386,
+      "observations_by_weather": {
+        "1": 135009,
+        "2": 40689,
+        "3": 276424,
+        "5": 16496,
+        "7": 3037,
+        "8": 6051,
+        "9": 14081,
+        "12": 16436,
+        "13": 2045,
+        "14": 6079,
+        "15": 9184,
+        "16": 761,
+        "21": 600
+      },
+      "singleton_distribution_omissions": [
+        {
+          "time_bucket": 7,
+          "WeatherCode": 1,
+          "sample_count": 1
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 2,
+          "sample_count": 1
+        }
+      ],
+      "condition_sample_counts": [
+        {
+          "time_bucket": 0,
+          "WeatherCode": 1,
+          "sample_count": 4123
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 2,
+          "sample_count": 137
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 3,
+          "sample_count": 5448
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 5,
+          "sample_count": 281
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 8,
+          "sample_count": 978
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 9,
+          "sample_count": 1150
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 12,
+          "sample_count": 603
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 0,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 1,
+          "sample_count": 3478
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 2,
+          "sample_count": 1505
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 3,
+          "sample_count": 4606
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 5,
+          "sample_count": 190
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 8,
+          "sample_count": 912
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 9,
+          "sample_count": 1019
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 12,
+          "sample_count": 444
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 1,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 1,
+          "sample_count": 2201
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 2,
+          "sample_count": 1053
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 3,
+          "sample_count": 5501
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 5,
+          "sample_count": 136
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 9,
+          "sample_count": 908
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 12,
+          "sample_count": 312
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 2,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 1,
+          "sample_count": 1821
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 2,
+          "sample_count": 947
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 3,
+          "sample_count": 1208
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 5,
+          "sample_count": 95
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 9,
+          "sample_count": 843
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 12,
+          "sample_count": 252
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 3,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 1,
+          "sample_count": 499
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 2,
+          "sample_count": 40
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 3,
+          "sample_count": 415
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 5,
+          "sample_count": 87
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 9,
+          "sample_count": 764
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 4,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 1,
+          "sample_count": 375
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 2,
+          "sample_count": 1910
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 3,
+          "sample_count": 3409
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 5,
+          "sample_count": 61
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 9,
+          "sample_count": 610
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 15,
+          "sample_count": 144
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 5,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 1,
+          "sample_count": 999
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 3,
+          "sample_count": 3824
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 5,
+          "sample_count": 52
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 8,
+          "sample_count": 492
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 14,
+          "sample_count": 131
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 6,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 1,
+          "sample_count": 1
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 3,
+          "sample_count": 105
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 5,
+          "sample_count": 61
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 8,
+          "sample_count": 416
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 14,
+          "sample_count": 112
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 7,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 1,
+          "sample_count": 1113
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 2,
+          "sample_count": 164
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 3,
+          "sample_count": 2540
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 5,
+          "sample_count": 56
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 8,
+          "sample_count": 340
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 14,
+          "sample_count": 121
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 8,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 1,
+          "sample_count": 813
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 3,
+          "sample_count": 1778
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 5,
+          "sample_count": 73
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 8,
+          "sample_count": 189
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 14,
+          "sample_count": 98
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 9,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 1,
+          "sample_count": 832
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 2,
+          "sample_count": 387
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 3,
+          "sample_count": 2362
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 10,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 1,
+          "sample_count": 1324
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 3,
+          "sample_count": 1450
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 11,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 1,
+          "sample_count": 2113
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 2,
+          "sample_count": 627
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 3,
+          "sample_count": 56
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 5,
+          "sample_count": 320
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 14,
+          "sample_count": 280
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 12,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 1,
+          "sample_count": 607
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 2,
+          "sample_count": 907
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 3,
+          "sample_count": 4328
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 5,
+          "sample_count": 442
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 14,
+          "sample_count": 336
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 13,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 1,
+          "sample_count": 2232
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 3,
+          "sample_count": 245
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 5,
+          "sample_count": 578
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 14,
+          "sample_count": 299
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 14,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 1,
+          "sample_count": 7
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 3,
+          "sample_count": 8121
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 5,
+          "sample_count": 93
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 14,
+          "sample_count": 290
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 15,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 1,
+          "sample_count": 496
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 3,
+          "sample_count": 2004
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 5,
+          "sample_count": 806
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 16,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 1,
+          "sample_count": 1437
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 3,
+          "sample_count": 8153
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 5,
+          "sample_count": 2
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 17,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 1,
+          "sample_count": 1313
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 2,
+          "sample_count": 80
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 3,
+          "sample_count": 6689
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 5,
+          "sample_count": 716
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 14,
+          "sample_count": 590
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 18,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 1,
+          "sample_count": 1819
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 2,
+          "sample_count": 1425
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 3,
+          "sample_count": 1833
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 5,
+          "sample_count": 737
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 14,
+          "sample_count": 754
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 19,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 1,
+          "sample_count": 4876
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 2,
+          "sample_count": 1455
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 3,
+          "sample_count": 1842
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 5,
+          "sample_count": 698
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 7,
+          "sample_count": 620
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 20,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 1,
+          "sample_count": 4906
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 2,
+          "sample_count": 1488
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 3,
+          "sample_count": 233
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 5,
+          "sample_count": 687
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 7,
+          "sample_count": 728
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 21,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 1,
+          "sample_count": 4254
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 2,
+          "sample_count": 623
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 3,
+          "sample_count": 4208
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 5,
+          "sample_count": 657
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 14,
+          "sample_count": 852
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 22,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 1,
+          "sample_count": 4495
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 2,
+          "sample_count": 636
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 3,
+          "sample_count": 2460
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 5,
+          "sample_count": 701
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 14,
+          "sample_count": 975
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 23,
+          "WeatherCode": 21,
+          "sample_count": 600
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 1,
+          "sample_count": 4631
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 3,
+          "sample_count": 10266
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 5,
+          "sample_count": 660
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 15,
+          "sample_count": 1632
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 24,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 1,
+          "sample_count": 1744
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 3,
+          "sample_count": 10215
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 5,
+          "sample_count": 718
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 15,
+          "sample_count": 129
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 25,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 1,
+          "sample_count": 3720
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 2,
+          "sample_count": 2225
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 3,
+          "sample_count": 11369
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 5,
+          "sample_count": 733
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 15,
+          "sample_count": 1013
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 26,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 1,
+          "sample_count": 1069
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 2,
+          "sample_count": 2283
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 3,
+          "sample_count": 7274
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 5,
+          "sample_count": 722
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 15,
+          "sample_count": 988
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 27,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 1,
+          "sample_count": 5741
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 2,
+          "sample_count": 1
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 3,
+          "sample_count": 5641
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 5,
+          "sample_count": 1463
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 15,
+          "sample_count": 1022
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 28,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 1,
+          "sample_count": 5387
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 2,
+          "sample_count": 1527
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 3,
+          "sample_count": 9696
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 5,
+          "sample_count": 1509
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 15,
+          "sample_count": 1035
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 29,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 1,
+          "sample_count": 2914
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 2,
+          "sample_count": 2443
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 3,
+          "sample_count": 2958
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 5,
+          "sample_count": 1619
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 7,
+          "sample_count": 855
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 16,
+          "sample_count": 192
+        },
+        {
+          "time_bucket": 30,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 1,
+          "sample_count": 5652
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 2,
+          "sample_count": 2377
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 3,
+          "sample_count": 9461
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 5,
+          "sample_count": 1543
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 7,
+          "sample_count": 834
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 12,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 16,
+          "sample_count": 192
+        },
+        {
+          "time_bucket": 31,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 1,
+          "sample_count": 7568
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 3,
+          "sample_count": 8355
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 12,
+          "sample_count": 835
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 14,
+          "sample_count": 276
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 16,
+          "sample_count": 192
+        },
+        {
+          "time_bucket": 32,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 1,
+          "sample_count": 7441
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 3,
+          "sample_count": 2720
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 12,
+          "sample_count": 829
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 14,
+          "sample_count": 965
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 16,
+          "sample_count": 185
+        },
+        {
+          "time_bucket": 33,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 1,
+          "sample_count": 2331
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 2,
+          "sample_count": 880
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 3,
+          "sample_count": 7785
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 12,
+          "sample_count": 989
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 15,
+          "sample_count": 166
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 34,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 1,
+          "sample_count": 2677
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 2,
+          "sample_count": 899
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 3,
+          "sample_count": 2449
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 12,
+          "sample_count": 959
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 15,
+          "sample_count": 1096
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 35,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 1,
+          "sample_count": 2839
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 2,
+          "sample_count": 1411
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 3,
+          "sample_count": 11440
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 12,
+          "sample_count": 1018
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 15,
+          "sample_count": 940
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 36,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 1,
+          "sample_count": 3747
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 2,
+          "sample_count": 1435
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 3,
+          "sample_count": 12307
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 12,
+          "sample_count": 1127
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 15,
+          "sample_count": 1019
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 37,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 1,
+          "sample_count": 3582
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 2,
+          "sample_count": 1624
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 3,
+          "sample_count": 5509
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 8,
+          "sample_count": 1404
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 12,
+          "sample_count": 948
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 13,
+          "sample_count": 1115
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 38,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 1,
+          "sample_count": 3569
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 2,
+          "sample_count": 1641
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 3,
+          "sample_count": 11190
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 8,
+          "sample_count": 1320
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 9,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 12,
+          "sample_count": 814
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 13,
+          "sample_count": 930
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 39,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 1,
+          "sample_count": 1622
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 2,
+          "sample_count": 640
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 3,
+          "sample_count": 11130
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 9,
+          "sample_count": 1186
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 12,
+          "sample_count": 1680
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 40,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 1,
+          "sample_count": 1019
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 2,
+          "sample_count": 1496
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 3,
+          "sample_count": 11269
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 9,
+          "sample_count": 995
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 12,
+          "sample_count": 1680
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 41,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 1,
+          "sample_count": 3761
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 2,
+          "sample_count": 1815
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 3,
+          "sample_count": 2502
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 9,
+          "sample_count": 923
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 12,
+          "sample_count": 768
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 42,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 1,
+          "sample_count": 3780
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 2,
+          "sample_count": 1768
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 3,
+          "sample_count": 5542
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 9,
+          "sample_count": 1040
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 12,
+          "sample_count": 721
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 43,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 1,
+          "sample_count": 1039
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 3,
+          "sample_count": 14578
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 9,
+          "sample_count": 1167
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 12,
+          "sample_count": 920
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 44,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 1,
+          "sample_count": 3435
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 2,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 3,
+          "sample_count": 13544
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 9,
+          "sample_count": 1160
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 12,
+          "sample_count": 125
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 45,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 1,
+          "sample_count": 4912
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 2,
+          "sample_count": 1555
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 3,
+          "sample_count": 8794
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 9,
+          "sample_count": 1077
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 12,
+          "sample_count": 722
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 46,
+          "WeatherCode": 21,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 1,
+          "sample_count": 4695
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 2,
+          "sample_count": 1285
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 3,
+          "sample_count": 7612
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 5,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 7,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 8,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 9,
+          "sample_count": 1239
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 12,
+          "sample_count": 690
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 13,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 14,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 15,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 16,
+          "sample_count": 0
+        },
+        {
+          "time_bucket": 47,
+          "WeatherCode": 21,
+          "sample_count": 0
+        }
+      ]
+    }
+  },
+  "verification": {
+    "exact_plot_statistics": "passed",
+    "original_artifacts_unchanged": [
+      "summary.json",
+      "base_conditions_hourly.csv",
+      ".DS_Store",
+      "sensitivity_conditions_hourly.csv",
+      "outlier_rule_comparison.csv",
+      "weather_sensitivity_summary.csv",
+      "sensitivity_conditions_30min.csv",
+      "current_vs_new_m10.csv",
+      "filter_funnel_30min.csv",
+      "small_delta_p_diagnostic.csv",
+      "verification.json",
+      "m12_acceptance_sanity.csv",
+      "sampling_distribution_diagnostic.csv",
+      "overall_sensitivity_summary.csv",
+      "base_conditions_30min.csv",
+      "time_grouping_comparison.csv",
+      "filter_funnel_hourly.csv",
+      "charts/02_epsilon_histogram_zoomed.png",
+      "charts/02_epsilon_histogram_zoomed.pdf",
+      "charts/08_mean_epsilon_by_hour_weather.pdf",
+      "charts/07_median_epsilon_by_time_weather.pdf",
+      "charts/07_median_epsilon_by_time_weather.png",
+      "charts/08_mean_epsilon_by_hour_weather.png",
+      "charts/04_epsilon_ecdf.png",
+      "charts/09_condition_sample_counts.png",
+      "charts/06_mean_epsilon_by_time_weather.pdf",
+      "charts/09_condition_sample_counts.pdf",
+      "charts/06_mean_epsilon_by_time_weather.png",
+      "charts/04_epsilon_ecdf.pdf",
+      "charts/12_small_delta_p_tail.png",
+      "charts/05_epsilon_by_weather.png",
+      "charts/15_m12_tolerance.png",
+      "charts/16_condition_summary.pdf",
+      "charts/16_condition_summary.png",
+      "charts/15_m12_tolerance.pdf",
+      "charts/12_small_delta_p_tail.pdf",
+      "charts/05_epsilon_by_weather.pdf",
+      "charts/11_epsilon_vs_relative_distance.png",
+      "charts/11_epsilon_vs_relative_distance.pdf",
+      "charts/03_log_epsilon_distribution.png",
+      "charts/03_log_epsilon_distribution.pdf",
+      "charts/10_epsilon_vs_delta_p.pdf",
+      "charts/13_outlier_rule_comparison.pdf",
+      "charts/01_epsilon_histogram.png",
+      "charts/01_epsilon_histogram.pdf",
+      "charts/13_outlier_rule_comparison.png",
+      "charts/10_epsilon_vs_delta_p.png",
+      "charts/14_sampling_distribution_comparison.png",
+      "charts/14_sampling_distribution_comparison.pdf"
+    ],
+    "missing_statistics_are_nan": true,
+    "production_code_modified": false
+  }
+}

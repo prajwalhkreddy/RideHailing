@@ -281,6 +281,22 @@ The script reads only historical rows for computations; it hashes full source fi
 Plots use log axes where needed, with units and tail-display omissions labeled. Scatter-density hexagons use all valid observations, not an undisclosed sample. Missing condition cells stay grey/gapped. Charts summarize historical association, not final runtime model behavior.
 
 
+## PROFESSOR-REQUESTED ELASTICITY VS TIME/WEATHER PLOTS
+
+Graph 1 plots the existing `mean_epsilon` for each time-of-day × WeatherCode condition as a separate weather line. Its logarithmic y-axis shows every observed mean without clipping, trimming, or changing values.
+
+Graph 2 plots the existing median ε with the empirical P25–P75 shaded band. Thin vertical IQR marks also show isolated supported points. The term distribution channel in Graph 2 refers only to the empirical interquartile band (P25–P75). It is not a newly defined channelization metric.
+
+Hourly versions (`17_mean_elasticity_vs_time_weather` and `18_elasticity_distribution_channel_vs_time_weather`) are the primary presentation versions. The 30-minute versions (`17b_mean_elasticity_vs_halfhour_weather` and `18b_elasticity_distribution_channel_vs_halfhour_weather`) are supplementary because final Time-of-Day grouping remains subject to professor confirmation. Each is available as PNG and PDF in `charts/`.
+
+The project has no authoritative descriptive weather-name mapping for these tables, so labels are Weather 1, 2, 3, 5, 7, 8, 9, 12, 13, 14, 15, 16, and 21. No categories are merged. Hourly charts represent 487,710 valid observations across 117 of 312 combinations and 12 observed weather codes; Weather 21 remains in the legend with no data. The 195 missing hourly combinations remain gaps. The supplementary charts represent 526,892 observations across 238 of 624 combinations and all 13 weather codes; 386 missing combinations remain gaps.
+
+No values are interpolated, zero-filled, or forward-filled. Means require N ≥ 1. Distribution plots omit empty and singleton groups (N < 2), the minimum display rule needed to avoid a single-observation distribution; this does not define a new methodological sample-size threshold. Hourly data have no singleton groups. The 30-minute distribution omits Period 7 / 03:30 / Weather 1 (N=1) and Period 28 / 14:00 / Weather 2 (N=1); their means remain on Graph 1. All condition sample sizes, including zero support, are recorded in `elasticity_time_weather_chart_manifest.json`.
+
+Graph 2 uses a **view-only** y-axis range from zero to pooled raw ε P99: 0.493789 for hourly and 0.576244 for 30-minute data (exact limits in the chart manifest). This keeps the central distribution readable; portions of IQRs/medians above this display limit are clipped only in the rendering. Statistics use the full untrimmed valid M10 population. The manifest lists each affected condition and its unchanged quantiles. No maxima, filtering changes, or new outlier rule are introduced.
+
+Reproduce this reporting-only addition with `MPLCONFIGDIR=/tmp/m10_mpl_cache python scripts/plot_m10_time_weather.py`. It reads only the existing condition tables and pooled summary. Exact source-to-plot equality and preservation of all original package files except this README and chart manifests are checked during generation. The original `summary.json` and `verification.json` describe the original analysis run; the supplementary chart manifest records these additions, and `artifact_manifest.json` includes their hashes.
+
 ## QUESTIONS FOR PROFESSOR
 
 1. M9 does not define Time-of-Day width: should 30-minute Period or Hour be frozen, given the support and distribution differences?
