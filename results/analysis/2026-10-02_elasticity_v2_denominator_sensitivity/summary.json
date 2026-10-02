@@ -1,0 +1,133 @@
+{
+  "original_N": 10620887,
+  "cleaned_N": 10620409,
+  "removed_distance_gt100": 478,
+  "P_base": 21.34586956773507,
+  "L_base": 3.46907003958134,
+  "exact_zero_delta_P": 0,
+  "excluded_percentage_denominator": "cleaned_N; denominator exclusions only",
+  "global_bases_policy": "Recomputed once after distance <=100; fixed across all five scenarios, never refit per scenario or group.",
+  "scenarios": [
+    {
+      "scenario": "A",
+      "condition": "abs(delta_P) > 0",
+      "retained_N": 10620409,
+      "excluded_N": 0,
+      "excluded_percent": 0.0,
+      "mean_epsilon": 1.4267522152151018,
+      "population_SD": 28.115013447332053,
+      "median": 1.2257615500673438,
+      "P95": 4.053348801668187,
+      "P99": 16.506130874536773,
+      "minimum": -28441.948428776388,
+      "maximum": 30585.381366265632
+    },
+    {
+      "scenario": "B",
+      "condition": "abs(delta_P) >= 0.0001",
+      "retained_N": 10620409,
+      "excluded_N": 0,
+      "excluded_percent": 0.0,
+      "mean_epsilon": 1.4267522152151018,
+      "population_SD": 28.115013447332053,
+      "median": 1.2257615500673438,
+      "P95": 4.053348801668187,
+      "P99": 16.506130874536773,
+      "minimum": -28441.948428776388,
+      "maximum": 30585.381366265632
+    },
+    {
+      "scenario": "C",
+      "condition": "abs(delta_P) >= 0.001",
+      "retained_N": 10618405,
+      "excluded_N": 2004,
+      "excluded_percent": 0.018869329796997462,
+      "mean_epsilon": 1.4387662444622684,
+      "population_SD": 10.298163019210316,
+      "median": 1.2257615500673438,
+      "P95": 4.0498490590954495,
+      "P99": 16.360642805974706,
+      "minimum": -3432.4635182153474,
+      "maximum": 4846.007639966809
+    },
+    {
+      "scenario": "D",
+      "condition": "abs(delta_P) >= 0.005",
+      "retained_N": 10606991,
+      "excluded_N": 13418,
+      "excluded_percent": 0.12634165030744107,
+      "mean_epsilon": 1.4295646107547095,
+      "population_SD": 7.576908911314188,
+      "median": 1.2257615500673438,
+      "P95": 4.02493391917277,
+      "P99": 15.548904925370627,
+      "minimum": -941.9826344446112,
+      "maximum": 3686.0362044014764
+    },
+    {
+      "scenario": "E",
+      "condition": "abs(delta_P) >= 0.01",
+      "retained_N": 10469348,
+      "excluded_N": 151061,
+      "excluded_percent": 1.4223651838643878,
+      "mean_epsilon": 1.26751929218251,
+      "population_SD": 3.5333655294028885,
+      "median": 1.2251596706628793,
+      "P95": 3.7042703625766915,
+      "P99": 9.587018130077146,
+      "minimum": -906.0872894190813,
+      "maximum": 1320.3437442374125
+    }
+  ],
+  "weather_hour_stability": [
+    {
+      "scenario": "A",
+      "maximum_absolute_weather_hour_mean": 5.933447003001817,
+      "median_absolute_weather_hour_mean": 1.385421425725585,
+      "maximum_weather_hour_SD": 149.3919444501211,
+      "cells_abs_mean_gt10": 0,
+      "cells_abs_mean_gt100": 0
+    },
+    {
+      "scenario": "B",
+      "maximum_absolute_weather_hour_mean": 5.933447003001817,
+      "median_absolute_weather_hour_mean": 1.385421425725585,
+      "maximum_weather_hour_SD": 149.3919444501211,
+      "cells_abs_mean_gt10": 0,
+      "cells_abs_mean_gt100": 0
+    },
+    {
+      "scenario": "C",
+      "maximum_absolute_weather_hour_mean": 2.6925376698322125,
+      "median_absolute_weather_hour_mean": 1.364266127452866,
+      "maximum_weather_hour_SD": 39.61148464851055,
+      "cells_abs_mean_gt10": 0,
+      "cells_abs_mean_gt100": 0
+    },
+    {
+      "scenario": "D",
+      "maximum_absolute_weather_hour_mean": 2.2413097264577795,
+      "median_absolute_weather_hour_mean": 1.3128817346467574,
+      "maximum_weather_hour_SD": 25.239872692379997,
+      "cells_abs_mean_gt10": 0,
+      "cells_abs_mean_gt100": 0
+    },
+    {
+      "scenario": "E",
+      "maximum_absolute_weather_hour_mean": 1.9320157008553702,
+      "median_absolute_weather_hour_mean": 1.290128503614912,
+      "maximum_weather_hour_SD": 6.936580220387969,
+      "cells_abs_mean_gt10": 0,
+      "cells_abs_mean_gt100": 0
+    }
+  ],
+  "canonical_hashes_unchanged": {
+    "weather_code_hour_mean_matrix.csv": "df4703e40f4b154b79e78dcc7f408edc930745d9a86324d156130ad56f7237a5",
+    "population_manifest.json": "1655838e8d3d312adba3f5d58017982ab1ee6ad9f4b15a431c3188e55b631803",
+    "preliminary_weather_code_hour_elasticity.csv": "bf1bcdd7ff6ae2ede094066c8685026875c271b6349f7dac386f24355410c7e1",
+    "elasticity_input_2026_01_03.parquet": "ed7aec6e93ac981af1d952e565cff7a1ab03963f8d318a8205bd24ca11cec7b6",
+    "global_bases.json": "14bcff09a8f8e366d5159e7322b8437e43f63c0fdde545632cf9170dc308eabb"
+  },
+  "validation": "PASS: canonical hashes unchanged; epsilon finite in all scenarios; grouped counts reconcile; retained counts monotone.",
+  "verdict": "PROFESSOR_DENOMINATOR_DECISION_REQUIRED"
+}

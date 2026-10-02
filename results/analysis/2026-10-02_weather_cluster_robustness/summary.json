@@ -1,0 +1,203 @@
+{
+  "input_sha256": {
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/clustering_matrix.csv": "39b34f284a3b95dbe594078f78da389d708bfc783f2f3894e37ca0f62a1eea28",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/clustering_imputation_mask.csv": "122428ed590163562e09cab684bfdc04ad1740ba485747abbdff390ab6324f03",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/cluster_centroids.csv": "1550e7e67fcb36eb509fe38a69e1b61852c77b9de18b78e2406a55e4c5bd8869",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/weather_code_class_mapping.csv": "7215d2913bccc854c57c7f70ad85eda01f795633cca269407482b1676895d232",
+    "data/processed/elasticity_v2/weather_code_hour_elasticity_final_preclustering.csv": "a4d6c39b4aa4e85402799c3588117069216a90dca6b30eb658d3becacc99cabf"
+  },
+  "distance_definition": "Euclidean distance on unchanged completed 24-hour vectors; margin = second-best distance minus assigned distance",
+  "assigned_singleton_contribution_caveat": "Singleton centroid equals its sole vector; assigned squared components are zero (floating-point tolerance), so imputed share is undefined. Separation attribution uses squared distance to Class-1 centroid, reported separately.",
+  "singletons": [
+    {
+      "distance": {
+        "WeatherCode": 15,
+        "assigned_class": 2,
+        "distance_to_class1_centroid": 6.012843137638503,
+        "distance_to_class2_centroid": 0.0,
+        "distance_to_class3_centroid": 9.564484199332195,
+        "second_best_class": 1,
+        "margin_to_second_best": 6.012843137638503,
+        "observed_hours": 20,
+        "imputed_hours": 4,
+        "trip_count": 106563
+      },
+      "contribution": {
+        "WeatherCode": 15,
+        "observed_distance_component": 0.0,
+        "imputed_distance_component": 0.0,
+        "imputed_share_of_total_distance": null,
+        "class1_observed_squared_distance": 35.931522978960935,
+        "class1_imputed_squared_distance": 0.22275961888550197,
+        "class1_observed_share": 0.9938386381120234
+      },
+      "largest_observed_differences": [
+        {
+          "hour": 3,
+          "n_valid": 259,
+          "mean_elasticity": 5.8949076016432125,
+          "std_elasticity": 106.66267780252342,
+          "class1_centroid": 1.1621064978591575,
+          "difference_from_class1": 4.732801103784055
+        },
+        {
+          "hour": 5,
+          "n_valid": 902,
+          "mean_elasticity": -1.7923768401013491,
+          "std_elasticity": 99.00788212716995,
+          "class1_centroid": 1.3418158313581288,
+          "difference_from_class1": -3.134192671459478
+        },
+        {
+          "hour": 23,
+          "n_valid": 855,
+          "mean_elasticity": 2.183750784684686,
+          "std_elasticity": 15.875446496436979,
+          "class1_centroid": 1.0137316272469035,
+          "difference_from_class1": 1.1700191574377825
+        },
+        {
+          "hour": 14,
+          "n_valid": 9884,
+          "mean_elasticity": 0.7483491017818643,
+          "std_elasticity": 39.61454954199264,
+          "class1_centroid": 1.4935216818159558,
+          "difference_from_class1": -0.7451725800340915
+        },
+        {
+          "hour": 2,
+          "n_valid": 1267,
+          "mean_elasticity": 1.4832049091288646,
+          "std_elasticity": 24.971455880385825,
+          "class1_centroid": 0.8276891360002149,
+          "difference_from_class1": 0.6555157731286497
+        }
+      ]
+    },
+    {
+      "distance": {
+        "WeatherCode": 16,
+        "assigned_class": 3,
+        "distance_to_class1_centroid": 8.131413054400124,
+        "distance_to_class2_centroid": 9.564484199332195,
+        "distance_to_class3_centroid": 5.23691153334427e-16,
+        "second_best_class": 1,
+        "margin_to_second_best": 8.131413054400124,
+        "observed_hours": 15,
+        "imputed_hours": 9,
+        "trip_count": 16556
+      },
+      "contribution": {
+        "WeatherCode": 16,
+        "observed_distance_component": 2.742524240807424e-31,
+        "imputed_distance_component": 0.0,
+        "imputed_share_of_total_distance": null,
+        "class1_observed_squared_distance": 66.09530767936504,
+        "class1_imputed_squared_distance": 0.02457058190371431,
+        "class1_observed_share": 0.9996283934188955
+      },
+      "largest_observed_differences": [
+        {
+          "hour": 0,
+          "n_valid": 1238,
+          "mean_elasticity": -3.750667954649478,
+          "std_elasticity": 123.975311313754,
+          "class1_centroid": 0.958077567037607,
+          "difference_from_class1": -4.708745521687085
+        },
+        {
+          "hour": 23,
+          "n_valid": 1111,
+          "mean_elasticity": 4.83255180445609,
+          "std_elasticity": 65.76380996244713,
+          "class1_centroid": 1.0137316272469035,
+          "difference_from_class1": 3.8188201772091865
+        },
+        {
+          "hour": 15,
+          "n_valid": 1617,
+          "mean_elasticity": 3.881985314098865,
+          "std_elasticity": 62.96206867508904,
+          "class1_centroid": 1.4621169534714094,
+          "difference_from_class1": 2.4198683606274556
+        },
+        {
+          "hour": 21,
+          "n_valid": 1260,
+          "mean_elasticity": -1.2495038152264735,
+          "std_elasticity": 91.57642111633162,
+          "class1_centroid": 1.149107585925022,
+          "difference_from_class1": -2.3986114011514954
+        },
+        {
+          "hour": 20,
+          "n_valid": 1455,
+          "mean_elasticity": -1.1039091785541533,
+          "std_elasticity": 70.6515037097402,
+          "class1_centroid": 0.9877340206311765,
+          "difference_from_class1": -2.09164319918533
+        }
+      ]
+    }
+  ],
+  "closest_assignment_margins": [
+    {
+      "WeatherCode": 12,
+      "assigned_class": 1,
+      "distance_to_class1_centroid": 3.207236472956895,
+      "distance_to_class2_centroid": 6.885756476984253,
+      "distance_to_class3_centroid": 8.539782213472721,
+      "second_best_class": 2,
+      "margin_to_second_best": 3.678520004027358,
+      "observed_hours": 14,
+      "imputed_hours": 10,
+      "trip_count": 146607
+    },
+    {
+      "WeatherCode": 7,
+      "assigned_class": 1,
+      "distance_to_class1_centroid": 1.3090669676331248,
+      "distance_to_class2_centroid": 5.338489297713722,
+      "distance_to_class3_centroid": 8.203902777229452,
+      "second_best_class": 2,
+      "margin_to_second_best": 4.029422330080598,
+      "observed_hours": 16,
+      "imputed_hours": 8,
+      "trip_count": 93470
+    },
+    {
+      "WeatherCode": 8,
+      "assigned_class": 1,
+      "distance_to_class1_centroid": 1.2156274895950798,
+      "distance_to_class2_centroid": 5.900407811375219,
+      "distance_to_class3_centroid": 8.175019129673629,
+      "second_best_class": 2,
+      "margin_to_second_best": 4.684780321780139,
+      "observed_hours": 20,
+      "imputed_hours": 4,
+      "trip_count": 217536
+    },
+    {
+      "WeatherCode": 17,
+      "assigned_class": 1,
+      "distance_to_class1_centroid": 1.5251563678484594,
+      "distance_to_class2_centroid": 6.2519965433482225,
+      "distance_to_class3_centroid": 8.319350042410925,
+      "second_best_class": 2,
+      "margin_to_second_best": 4.726840175499763,
+      "observed_hours": 2,
+      "imputed_hours": 22,
+      "trip_count": 5018
+    }
+  ],
+  "partition_changes": {
+    "0": false,
+    "1": false,
+    "2": false,
+    "10": false,
+    "42": false,
+    "100": false
+  },
+  "extreme_tail_assessment": "Not determinable from means and SD alone. Required final-method median/P95/P99/min/max are absent from permitted artifacts. No trip parquet read, no legacy-method quantiles substituted.",
+  "verdict": "CLUSTER_ASSIGNMENT_REQUIRES_REVIEW"
+}

@@ -1,0 +1,12 @@
+{
+  "P_base": 21.35186645051401,
+  "L_base": 6.454384905893453,
+  "N": 10620887,
+  "distance_gt100": 478,
+  "abs_epsilon_ge1000": 1594,
+  "both": 306,
+  "abs_epsilon_ge1000_distance_le100": 1288,
+  "distance_gt100_abs_epsilon_lt1000": 172,
+  "interpretation": "Subset counts are descriptive associations, not causal or validity classifications.",
+  "input_sha256": "ed7aec6e93ac981af1d952e565cff7a1ab03963f8d318a8205bd24ca11cec7b6"
+}

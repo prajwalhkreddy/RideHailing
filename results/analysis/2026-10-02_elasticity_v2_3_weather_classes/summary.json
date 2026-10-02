@@ -1,0 +1,235 @@
+{
+  "reference": {
+    "methodology_status": "PROJECT_IMPLEMENTATION_DECISION_FINAL_PRECLUSTERING",
+    "date_window": {
+      "start_inclusive": "2026-01-01 00:00:00",
+      "end_exclusive": "2026-04-01 00:00:00"
+    },
+    "source_cleaning_rule": "0 < trip_distance <= 100 miles",
+    "source_cleaning_authority": "PROJECT_IMPLEMENTATION_DECISION, not a professor-specified cutoff",
+    "original_N": 10620887,
+    "cleaned_N": 10620409,
+    "removed_row_count": 478,
+    "P_base": 21.34586956773507,
+    "P_base_rule": "Single global mean fare over cleaned training population",
+    "fare_window_USD": 1.0,
+    "fare_window_rule": "abs(fare - P_base) <= 1.00 USD",
+    "fare_window_authority": "PROJECT_IMPLEMENTATION_DECISION based on professor instruction to derive distance reference from fares close to P_base",
+    "L_base": 3.01799878914405,
+    "L_base_rule": "Mean trip distance of cleaned source rows inside inclusive fare window",
+    "L_base_support_N": 479000,
+    "fare_units": "USD",
+    "distance_units": "miles",
+    "epsilon_units": "dimensionless",
+    "formulas": {
+      "delta_P": "(fare - P_base)/P_base",
+      "delta_L": "(trip_distance - L_base)/L_base",
+      "epsilon": "delta_L/delta_P"
+    },
+    "denominator_rule": "Exclude exact delta_P == 0 only; no minimum absolute delta_P",
+    "exact_zero_delta_P_excluded": 0,
+    "signed_epsilon_retained": true,
+    "clipping": false,
+    "normalization": false,
+    "ddof": 0,
+    "imputation": false,
+    "clustering": false,
+    "overall_epsilon": {
+      "N": 10620409,
+      "mean": 1.2976079311589745,
+      "population_SD": 30.380326568418912,
+      "median": 1.156744958511438,
+      "P95": 4.330111327221168,
+      "P99": 15.903852332796689,
+      "negative_share": 0.11582877834554206,
+      "negative_share_percent": 11.582877834554207
+    },
+    "matrix": {
+      "shape": [
+        14,
+        24
+      ],
+      "populated_cells": 225,
+      "missing_cells": 111
+    },
+    "input_hashes": {
+      "original": "ed7aec6e93ac981af1d952e565cff7a1ab03963f8d318a8205bd24ca11cec7b6",
+      "cleaned": "0262e8a6df63bcaa25fd40c63dfc9ac2ea424fe0ca940661a63639bd52439396"
+    },
+    "artifact_sha256": {
+      "weather_code_hour_elasticity_final_preclustering.csv": "a4d6c39b4aa4e85402799c3588117069216a90dca6b30eb658d3becacc99cabf",
+      "weather_code_hour_mean_matrix_final.csv": "89e1f9601242fd47596bde8b6754cb0d4a5a177d8658a10af474ccbf67700458"
+    },
+    "focused_checks": "PASS: source equality and boundaries; 478 removals; recomputed global price and window-distance reference; hand-calculated signed/zero/near-zero ratios; all group population SDs; count conservation; exact CSV value roundtrip (CSV integer widths not preserved); unchanged source hashes."
+  },
+  "source_sha256": "0262e8a6df63bcaa25fd40c63dfc9ac2ea424fe0ca940661a63639bd52439396",
+  "clustering": {
+    "K": 3,
+    "random_state": 42,
+    "n_init": 50,
+    "algorithm": "lloyd",
+    "sklearn_version": "1.9.0",
+    "scaling": "none",
+    "sample_weight": "none; one sample per WeatherCode",
+    "class_numbering": "Ascending smallest member WeatherCode",
+    "completion": "Missing cells only: same-hour mean across actual trip epsilon, trip-weighted by construction",
+    "pooled_hour_mean": {
+      "0": 1.0351895837638005,
+      "1": 0.9402625852894296,
+      "2": 0.8421648598657073,
+      "3": 1.1388163924436303,
+      "4": 1.347610609648261,
+      "5": 1.2397160962294416,
+      "6": 1.0822174106684563,
+      "7": 1.106139057302339,
+      "8": 1.2767751498039925,
+      "9": 1.4616422916329643,
+      "10": 1.5943159252416268,
+      "11": 1.5245740291567853,
+      "12": 1.5352464327195043,
+      "13": 1.537371088882279,
+      "14": 1.4815318928611982,
+      "15": 1.471110653491386,
+      "16": 1.456959010380696,
+      "17": 1.4205353552355755,
+      "18": 1.312525509014641,
+      "19": 1.1730600018501682,
+      "20": 1.073366899313743,
+      "21": 1.0357730689527467,
+      "22": 1.0959994708705123,
+      "23": 1.0595875005769126
+    },
+    "mask_semantics": "1 = clustering-only fill; 0 = observed",
+    "observed_cells": 225,
+    "filled_cells": 111,
+    "inertia": 25.605147312277392,
+    "silhouette": 0.5870014156583582
+  },
+  "classes": [
+    {
+      "weather_class": 1,
+      "members": [
+        1,
+        2,
+        3,
+        5,
+        7,
+        8,
+        9,
+        12,
+        13,
+        14,
+        17,
+        21
+      ],
+      "number_codes": 12,
+      "trips": 10497290,
+      "trip_share_percent": 98.84073202830513,
+      "weather_hours": 2103,
+      "weather_hour_share_percent": 97.36111111111111
+    },
+    {
+      "weather_class": 2,
+      "members": [
+        15
+      ],
+      "number_codes": 1,
+      "trips": 106563,
+      "trip_share_percent": 1.0033794367053095,
+      "weather_hours": 39,
+      "weather_hour_share_percent": 1.8055555555555556
+    },
+    {
+      "weather_class": 3,
+      "members": [
+        16
+      ],
+      "number_codes": 1,
+      "trips": 16556,
+      "trip_share_percent": 0.15588853498956584,
+      "weather_hours": 18,
+      "weather_hour_share_percent": 0.8333333333333334
+    }
+  ],
+  "final_rows": 59,
+  "missing_class_hour_groups": [
+    [
+      2,
+      0
+    ],
+    [
+      2,
+      4
+    ],
+    [
+      2,
+      20
+    ],
+    [
+      2,
+      22
+    ],
+    [
+      3,
+      5
+    ],
+    [
+      3,
+      6
+    ],
+    [
+      3,
+      7
+    ],
+    [
+      3,
+      10
+    ],
+    [
+      3,
+      11
+    ],
+    [
+      3,
+      12
+    ],
+    [
+      3,
+      13
+    ],
+    [
+      3,
+      14
+    ],
+    [
+      3,
+      17
+    ]
+  ],
+  "final_statistics_population": "Actual trip-level epsilon only; completed matrix never used for final aggregation",
+  "mean_range": [
+    -3.750667954649478,
+    5.8949076016432125
+  ],
+  "SD_range": [
+    4.242513939979185,
+    132.79928104148718
+  ],
+  "checks": "PASS: reproduced references; observed cells preserved; exact 111 same-hour fills; finite matrix; deterministic K=3; unique complete mapping; actual-trip counts and independent mean/SD checks; variance identity; <=72 unique cells; input hash unchanged",
+  "verdict": "CLUSTERING_RESULT_REQUIRES_REVIEW",
+  "artifact_sha256": {
+    "clustering_matrix.csv": "39b34f284a3b95dbe594078f78da389d708bfc783f2f3894e37ca0f62a1eea28",
+    "cluster_centroids.csv": "1550e7e67fcb36eb509fe38a69e1b61852c77b9de18b78e2406a55e4c5bd8869",
+    "clustering_imputation_mask.csv": "122428ed590163562e09cab684bfdc04ad1740ba485747abbdff390ab6324f03",
+    "weather_code_class_mapping.csv": "7215d2913bccc854c57c7f70ad85eda01f795633cca269407482b1676895d232",
+    "elasticity_3_weather_classes.csv": "1378129112da0788be9aec9548e0b0141c518d6dd2f812f537aff21e57bdcd27",
+    "charts/std_elasticity_3_weather_classes.png": "74b6682787713e0098c073b6d88a4fb7ef574fa5ba775e33b37c12397051e36e",
+    "charts/weather_code_clusters_24h.png": "a442acbbfda297bd357282aa26e14117a09cc554eae654388b3e8e55a65da529",
+    "charts/mean_elasticity_3_weather_classes.png": "34014c820b8050f8b8b160f2e02f3304ea3886188177cafe0e1d0f43a1f6072c"
+  },
+  "concerns": [
+    "Class 1 contains 12 codes and 98.8407% of trips; classes 2 and 3 are single-code clusters.",
+    "111 of 336 clustering features are filled; sparse-code assignments may be influenced by completion.",
+    "13 final class/hour groups remain unsupported; no final statistics were imputed."
+  ]
+}

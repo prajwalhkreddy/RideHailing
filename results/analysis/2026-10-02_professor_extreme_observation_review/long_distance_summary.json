@@ -1,0 +1,26 @@
+{
+  "distance": {
+    "min": 100.01,
+    "median": 51907.16,
+    "P95": 187668.13999999993,
+    "max": 328522.2
+  },
+  "fare": {
+    "min": 0.01,
+    "median": 33.66,
+    "P95": 696.91,
+    "max": 1843.3
+  },
+  "fare_per_mile": {
+    "min": 4.529956950916077e-05,
+    "median": 0.0005802921011998266,
+    "P95": 6.091238818740436,
+    "max": 8.954143592732924,
+    "P5": 8.985722974429076e-05
+  },
+  "pearson_distance_fare": -0.4833331578078084,
+  "spearman_distance_fare": -0.43751302201047776,
+  "distance_rank": "Descending trip distance over full population; ties share minimum rank.",
+  "guidance_pdf_available": false,
+  "authority_used": "Explicit user task instructions; named PDF absent."
+}
