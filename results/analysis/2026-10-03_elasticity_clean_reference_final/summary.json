@@ -1,0 +1,236 @@
+{
+  "status": "CLEAN_REFERENCE_ELASTICITY_FINAL",
+  "authority": "notebooks/plan/Passenger_Price_Sensitivity_Implementation_Steps_Clean.pdf",
+  "authority_sha256": "0b46963ecb1f1d128ebe4aa81b1cd784c2ba91171009209e884929e3a5761eed",
+  "interpretation": "User instruction: three classes mean actual conditions Clear/Rain/Snowfall; no weather reduction or clustering",
+  "date_window": {
+    "start_inclusive": "2026-01-01 00:00:00",
+    "end_exclusive": "2026-04-01 00:00:00"
+  },
+  "cleaned_N": 10620409,
+  "source_cleaning": "0 < trip_distance <= 100 miles; retained existing project decision",
+  "P_base": 21.34586956773507,
+  "L_base": 3.46907003958134,
+  "base_population": "Complete cleaned population, all weather codes/hours/months/ODs; both arithmetic means",
+  "fare_units": "USD",
+  "distance_units": "miles",
+  "epsilon_units": "dimensionless",
+  "formulas": {
+    "delta_P": "(fare-P_base)/P_base",
+    "delta_L": "(trip_distance-L_base)/L_base",
+    "epsilon": "delta_L/delta_P"
+  },
+  "denominator_rule": "Exclude exact delta_P == 0 only",
+  "exact_zero_exclusions_all_cleaned": 0,
+  "signed_epsilon": true,
+  "trimming": false,
+  "clipping": false,
+  "normalization": false,
+  "clustering": false,
+  "imputation": false,
+  "ddof": 0,
+  "row_count": 64,
+  "selected_epsilon_N": 3409670,
+  "support": [
+    {
+      "weather_code": 1,
+      "weather_name": "Clear",
+      "weather_hours": 605,
+      "trip_count": 3085571,
+      "represented_hours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "missing_hours": []
+    },
+    {
+      "weather_code": 8,
+      "weather_name": "Rain",
+      "weather_hours": 39,
+      "trip_count": 217536,
+      "represented_hours": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7,
+        8,
+        9,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23
+      ],
+      "missing_hours": [
+        5,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "weather_code": 15,
+      "weather_name": "Snowfall",
+      "weather_hours": 39,
+      "trip_count": 106563,
+      "represented_hours": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        21,
+        23
+      ],
+      "missing_hours": [
+        0,
+        4,
+        20,
+        22
+      ]
+    }
+  ],
+  "ranges": {
+    "Clear": {
+      "mean": [
+        0.9204058882823367,
+        1.895926600805885
+      ],
+      "SD": [
+        12.194799451526372,
+        43.9864029153689
+      ]
+    },
+    "Rain": {
+      "mean": [
+        0.8028742865299328,
+        1.6827933567786775
+      ],
+      "SD": [
+        5.271877939311509,
+        39.57481897375605
+      ]
+    },
+    "Snowfall": {
+      "mean": [
+        -1.962059921941452,
+        4.671880953278239
+      ],
+      "SD": [
+        3.6701626850862934,
+        108.41194789062354
+      ]
+    }
+  },
+  "supersedes": [
+    "Previous \u00b1$1 fare-window L_base=3.01799878914405 for this final analysis",
+    "Previous K-means/weather-class analysis for final weather comparison"
+  ],
+  "checks": "PASS: full cleaned population global means; frozen cleaning and dates; hand-calculated relative formulas/sign/exact-zero/near-zero; actual selected observations; independent all-group population SD/mean; variance identity; support gaps; exact CSV roundtrip; unchanged protected source/history hashes",
+  "protected_sha256": {
+    "data/processed/elasticity_v2/final_elasticity_methodology.json": "5c9cc94b497d0637cf9014e646f6b9334174a0ab08c565cdf6c4efe3dcc77870",
+    "data/processed/elasticity_v2/weather_code_class_mapping_final.csv": "51aef271ff9408b290b23a55f0d5edf58e4e4d07fd6124ddc71652cd75b72557",
+    "data/processed/elasticity_v2/weather_code_hour_mean_matrix.csv": "df4703e40f4b154b79e78dcc7f408edc930745d9a86324d156130ad56f7237a5",
+    "data/processed/elasticity_v2/weather_code_hour_mean_matrix_final.csv": "89e1f9601242fd47596bde8b6754cb0d4a5a177d8658a10af474ccbf67700458",
+    "data/processed/elasticity_v2/population_manifest.json": "1655838e8d3d312adba3f5d58017982ab1ee6ad9f4b15a431c3188e55b631803",
+    "data/processed/elasticity_v2/elasticity_3_weather_classes_final.csv": "765e1aaa52e23844f7bfcce34372d42ff8f76b219ecd77be8cff6341185367ec",
+    "data/processed/elasticity_v2/source_cleaning_manifest.json": "7734808952c940c3f776d508d4eee19ce2114704a3cee4a6b568a3cb4ec41c52",
+    "data/processed/elasticity_v2/elasticity_3_actual_weather_conditions_final.csv": "7e551a825251a25a095c622d32f5b386ecb5199c861ae8fb683d376b7b11ec18",
+    "data/processed/elasticity_v2/elasticity_input_2026_01_03_cleaned.parquet": "0262e8a6df63bcaa25fd40c63dfc9ac2ea424fe0ca940661a63639bd52439396",
+    "data/processed/elasticity_v2/preliminary_weather_code_hour_elasticity.csv": "bf1bcdd7ff6ae2ede094066c8685026875c271b6349f7dac386f24355410c7e1",
+    "data/processed/elasticity_v2/weather_code_hour_elasticity_final_preclustering.csv": "a4d6c39b4aa4e85402799c3588117069216a90dca6b30eb658d3becacc99cabf",
+    "data/processed/elasticity_v2/elasticity_input_2026_01_03.parquet": "ed7aec6e93ac981af1d952e565cff7a1ab03963f8d318a8205bd24ca11cec7b6",
+    "data/processed/elasticity_v2/weather_code_hour_mean_matrix_clustering_imputation_mask.csv": "122428ed590163562e09cab684bfdc04ad1740ba485747abbdff390ab6324f03",
+    "data/processed/elasticity_v2/elasticity_v2_reference.json": "8e05a1409a922a71c1d9947fabf15c1883474b7fe65db8d738677d37a3e6b48f",
+    "data/processed/elasticity_v2/weather_code_hour_mean_matrix_clustering.csv": "39b34f284a3b95dbe594078f78da389d708bfc783f2f3894e37ca0f62a1eea28",
+    "data/processed/elasticity_v2/professor_price_distance_arrays_2026_01_03.parquet": "d31d5661a78fd0f841a22647fe124ffdb7b03f85f30f536b3b85bb08d257ca97",
+    "data/processed/elasticity_v2/global_bases.json": "14bcff09a8f8e366d5159e7322b8437e43f63c0fdde545632cf9170dc308eabb",
+    "results/analysis/2026-10-03_elasticity_v2_actual_weather_conditions/summary.json": "209edc72ac0fc4654b77b713bff95c697695d2d7a722de040b3b59d6cca8f67b",
+    "results/analysis/2026-10-03_elasticity_v2_actual_weather_conditions/actual_weather_support.csv": "1d4c6a8e8fe2b0f5d12ffc0cef63b9bbd91572737933f6dc2340061338ee96c0",
+    "results/analysis/2026-10-03_elasticity_v2_actual_weather_conditions/README.md": "3dab340603a660d33be0124dd0299644aeccdeb991e24ec4f4a1d5752eacbe77",
+    "results/analysis/2026-10-03_elasticity_v2_actual_weather_conditions/actual_weather_hour_elasticity.csv": "7e551a825251a25a095c622d32f5b386ecb5199c861ae8fb683d376b7b11ec18",
+    "results/analysis/2026-10-03_elasticity_v2_actual_weather_conditions/charts/mean_elasticity_actual_weather.png": "8a2b6db5dfc8edfca43e2260f7ff76612ad7fe092de28a16d70ca2e50f9f1a2a",
+    "results/analysis/2026-10-03_elasticity_v2_actual_weather_conditions/charts/std_elasticity_actual_weather.png": "dbfc959c3819d5fcb1807cf7fe2ad28f0ba56982f6cb07fb04cc03ba319367e7",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/summary.json": "33f49b7dd618ade65616368d8ad170688432398dd90f4d0b28059e6a833e8219",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/clustering_matrix.csv": "39b34f284a3b95dbe594078f78da389d708bfc783f2f3894e37ca0f62a1eea28",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/cluster_centroids.csv": "1550e7e67fcb36eb509fe38a69e1b61852c77b9de18b78e2406a55e4c5bd8869",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/clustering_imputation_mask.csv": "122428ed590163562e09cab684bfdc04ad1740ba485747abbdff390ab6324f03",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/README.md": "62ba4632f6ea9971cf6c2fb8a5af446ca2d8fb4aa9818d62f586821287ad906b",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/weather_code_class_mapping.csv": "7215d2913bccc854c57c7f70ad85eda01f795633cca269407482b1676895d232",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/elasticity_3_weather_classes.csv": "1378129112da0788be9aec9548e0b0141c518d6dd2f812f537aff21e57bdcd27",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/charts/std_elasticity_3_weather_classes.png": "74b6682787713e0098c073b6d88a4fb7ef574fa5ba775e33b37c12397051e36e",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/charts/weather_code_clusters_24h.png": "a442acbbfda297bd357282aa26e14117a09cc554eae654388b3e8e55a65da529",
+    "results/analysis/2026-10-02_elasticity_v2_3_weather_classes/charts/mean_elasticity_3_weather_classes.png": "34014c820b8050f8b8b160f2e02f3304ea3886188177cafe0e1d0f43a1f6072c",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/seed_stability.csv": "b9b904d4f6ad0dba05310e2d3f5886c32f69b8b7faa8801e5f0f7a892c49a4b8",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/summary.json": "f83ddd2029d7648008182e8dc011096bafc596f23e9fb83486400cc18dcb4486",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/cluster_centroids.csv": "23b4e147b5e0165782342438844ff11bcda0374c8be197867456a23821fc0e61",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/trim_sensitivity.csv": "3f7bc335f55941861c992d786be507aeed1c92c706c8836f0f47bac65534498d",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/clustering_imputation_mask.csv": "122428ed590163562e09cab684bfdc04ad1740ba485747abbdff390ab6324f03",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/README.md": "1817f89173aea72acc81636b9bc6bb2b7568fe430a9557cae12311a66fe34d1b",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/trimmed_1pct_matrix.csv": "83a5191c1b88da10cd63233f1a278779e7207033b54ca35c927227537735ec12",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/trimmed_5pct_matrix.csv": "e7ad40bab8e9d4360e59b1f86881aeded2e85fb8c4e318f51e9b5cff1b3b964c",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/weather_code_hour_trimmed_features.csv": "0f54ce3940fe9f7e9520ec8ce094deec74721ba97ae1a31af8107dd056a69c88",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/weather_code_class_mapping.csv": "51aef271ff9408b290b23a55f0d5edf58e4e4d07fd6124ddc71652cd75b72557",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/elasticity_3_weather_classes.csv": "765e1aaa52e23844f7bfcce34372d42ff8f76b219ecd77be8cff6341185367ec",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/charts/std_elasticity_3_weather_classes.png": "6484675bd34f9a9d8228033b376df9ee0faea3c469e9e6ab3a745470ab88a790",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/charts/weather_code_clusters_1pct_24h.png": "465fb5fee1614fa9ffcdc7b0efe099b8f228f0d4cd398cb53344c1256efcc79a",
+    "results/analysis/2026-10-02_elasticity_v2_robust_weather_classes/charts/mean_elasticity_3_weather_classes.png": "9c296d68bda5dac5a040d16d3ed5d1404a9c91e48583bb91e439fa2b1ffc3e0f",
+    "results/analysis/2026-10-02_elasticity_v2_final/methodology_summary.json": "5c9cc94b497d0637cf9014e646f6b9334174a0ab08c565cdf6c4efe3dcc77870",
+    "results/analysis/2026-10-02_elasticity_v2_final/sensitivity_summary.json": "dbc870adce710b42ca24632859111d06021eff4f76f9d44c9e74ee6889e5dd84",
+    "results/analysis/2026-10-02_elasticity_v2_final/weather_code_class_mapping_final.csv": "51aef271ff9408b290b23a55f0d5edf58e4e4d07fd6124ddc71652cd75b72557",
+    "results/analysis/2026-10-02_elasticity_v2_final/elasticity_3_weather_classes_final.csv": "765e1aaa52e23844f7bfcce34372d42ff8f76b219ecd77be8cff6341185367ec",
+    "results/analysis/2026-10-02_elasticity_v2_final/README.md": "12ef8e1a2abc1efea543daeb262f6f514a447ed3b267d5c1f11e88e860fbb3c0",
+    "results/analysis/2026-10-02_elasticity_v2_final/charts/std_elasticity_3_weather_classes.png": "6484675bd34f9a9d8228033b376df9ee0faea3c469e9e6ab3a745470ab88a790",
+    "results/analysis/2026-10-02_elasticity_v2_final/charts/mean_elasticity_3_weather_classes.png": "9c296d68bda5dac5a040d16d3ed5d1404a9c91e48583bb91e439fa2b1ffc3e0f"
+  },
+  "output_sha256": {
+    "actual_weather_support.csv": "1d4c6a8e8fe2b0f5d12ffc0cef63b9bbd91572737933f6dc2340061338ee96c0",
+    "actual_weather_hour_elasticity.csv": "f12f167e2274a9338984366b0e676fc5563cd87c44d837db8b350d8a9cda41a8",
+    "charts/mean_elasticity_actual_weather_clean_reference.png": "8dc3dbe43d8e4a893367e071f0bd8482f64b162fa0e5bdb14f86e89068de712e",
+    "charts/std_elasticity_actual_weather_clean_reference.png": "70826625fba80278b39713141d07a49ae4259968874610b91555a25c73d44b96"
+  }
+}
