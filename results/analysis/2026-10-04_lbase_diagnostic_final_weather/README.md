@@ -11,8 +11,7 @@ No data preparation, clustering or production changes were run. Diagnostic chart
 ## Reused inputs and verification
 
 - `data/processed/elasticity_v2/elasticity_input_2026_01_03_cleaned.parquet`: unchanged trip-level input.
-- `results/analysis/2026-10-02_elasticity_v2_lbase_reference/lbase_window_comparison.csv`: reused conditioned bases/support. Each support count and distance mean was verified from the cleaned rows inside its inclusive fare window.
-- Same folder, `elasticity_window_comparison.csv`: reused conditioned overall distribution summaries; mean and population SD independently checked against current formulas. Maximum absolute epsilon is max(abs(minimum), abs(maximum)).
+- Local `overall_lbase_comparison.csv` and `summary.json` embed the complete candidate bases, support counts and overall distribution summaries. These values were reused from earlier diagnostics; each support count and distance mean was verified against cleaned rows inside its inclusive fare window, and overall mean and population SD were independently checked. No earlier results folder is required. Maximum absolute epsilon is max(abs(minimum), abs(maximum)).
 - `results/analysis/2026-10-03_elasticity_clean_reference_final/summary.json`: canonical global bases; both verified against complete cleaned source means.
 - `data/processed/elasticity_v2/elasticity_actual_weather_clean_reference_final.csv`: all 64 baseline hourly means, SDs and counts reproduced within floating-point tolerance.
 
@@ -109,3 +108,7 @@ Optional combined figures use three vertically arranged weather panels with shar
 - [All-weather population SD comparison](charts/std_elasticity_lbase_all_weather.png)
 
 Plot checks verified exact plotted-value agreement with the existing CSV, observed support preservation, missing-hour gaps and axis limits containing every value. SHA-256 checks verified unchanged diagnostic CSV/JSON files, canonical final CSV and canonical clean-reference final folder.
+
+## Self-contained numerical provenance
+
+The fixed P_base is 21.34586956773507 USD. Exact conditioned references and support are: ±$0.25: 3.0486708328788574 miles / 155,857; ±$0.50: 2.9910786705717562 / 196,325; ±$1: 3.01799878914405 / 479,000; ±$2: 3.0333960338928465 / 937,897. The global baseline is 3.46907003958134 miles / 10,620,409. These values and all comparison statistics are preserved locally. Metadata cleanup removed obsolete historical folder hash references without changing any diagnostic values.

@@ -400,20 +400,9 @@ The January artifact uses the frozen cleaned-trip destination and drop-off times
 
 #### Offline historical customer sensitivity — Phase 1
 
-**M10 methodology update (2026-09-27, professor review only):** The new
-[`Final_Module_Wise_Algorithm_Input_Output_Document.pdf`](notebooks/plan/Final_Module_Wise_Algorithm_Input_Output_Document.pdf)
-specifies condition-mean bases and `epsilon = ((L-L_base)/L_base)/(P-P_base)`,
-retaining positive distance/price deviations and finite positive epsilon.
-This has been implemented in the isolated `src/analysis/passenger_sensitivity_m10.py`
-and analyzed by `scripts/analyze_passenger_sensitivity_m10.py` for both half-hour
-and hourly conditions. The [professor-review package](results/analysis/2026-09-27_passenger_sensitivity_m10/README.md)
-documents the empirical results. Time grouping, source-cleaning policy, outlier
-treatment, any minimum price-deviation threshold, runtime sampling, and sparse-condition
-fallback remain under review; the new runtime model is **not frozen or production-ready**.
-The prior sensitivity implementation/artifacts described below remain unchanged
-and are legacy relative to this new document. Production still uses that prior
-behavior until a separately approved integration; no DQN replacement or M12
-production change is included in this analysis.
+**Current final offline passenger elasticity:** See the [clean-reference final analysis](results/analysis/2026-10-03_elasticity_clean_reference_final/README.md) and `data/processed/elasticity_v2/final_elasticity_clean_reference_methodology.json`. It uses the cleaned Jan–Mar 2026 population, global mean fare and distance references, signed relative-change elasticity, and actual Clear/Rain/Snowfall conditions. The [current L_base diagnostic](results/analysis/2026-10-04_lbase_diagnostic_final_weather/README.md) compares alternative references without replacing the final method. No clustering, trimming or imputation enters the final method.
+
+M10 was a historical development stage and is superseded for this offline analysis. This final offline result does not change production behavior; the existing production implementation described below remains separate.
 
 `src/pricing/historical_sensitivity.py` and `scripts/build_customer_sensitivity.py` build the pre-cutoff sensitivity inputs later consumed by production. Training trips before the exclusive `2026-01-25 18:30` boundary are pooled by `(WeatherCode, Period)`. Source-valid rows require positive finite `fare_amount` and positive finite TLC `trip_distance` no greater than 100 miles. Within each group, `P_base` and `D_base` are the respective means. An observation enters the ratio only when `abs(trip_distance - D_base) >= 0.01` mile, matching source resolution; retained observations use `epsilon = abs(((P-P_base)/P_base) / ((D-D_base)/D_base))`. The group and hierarchical-fallback tables retain population/sample SD and diagnostic quantiles. These build-stage rules are not epsilon clipping or winsorization; runtime positive-truncated sampling and `P_max` evaluation occur separately.
 

@@ -1,5 +1,5 @@
 {
-  "status": "ELASTICITY_V2_OFFLINE_FROZEN",
+  "status": "LEGACY_SUPERSEDED_FOR_FINAL_WEATHER_COMPARISON",
   "freeze_date": "2026-10-02",
   "authority": "Explicit approved project decisions",
   "training_window": {
@@ -138,5 +138,8 @@
     "elasticity_3_weather_classes_final.csv": "765e1aaa52e23844f7bfcce34372d42ff8f76b219ecd77be8cff6341185367ec"
   },
   "validation": "PASS: frozen references and support; exact approved mapping; 68 unique rows; 10,620,409 observations; variance consistency; exact missing groups; sensitivity evidence; byte-identical tables/charts; approved source hashes unchanged.",
-  "production_runtime_modified": false
+  "production_runtime_modified": false,
+  "original_status": "ELASTICITY_V2_OFFLINE_FROZEN",
+  "superseded_by": "data/processed/elasticity_v2/final_elasticity_clean_reference_methodology.json",
+  "legacy_notice": "Historical robust K-means and fare-conditioned L_base methodology. Existing fields retain their original historical meaning; provenance paths are archival, not current dependencies."
 }

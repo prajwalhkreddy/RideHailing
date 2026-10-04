@@ -17,7 +17,7 @@
   "ddof": 0,
   "quantile_method": "linear",
   "alterations": "No clipping, trimming, normalization, imputation, clustering or data preparation",
-  "reuse": "Conditioned bases and overall distribution summaries reused from 2026-10-02_elasticity_v2_lbase_reference; bases/support and overall mean/SD verified from cleaned source. Global summary and all weather-hour distributions computed for this diagnostic.",
+  "reuse": "Conditioned reference values and overall distributions were reused from earlier diagnostics and verified against the cleaned input. All necessary numerical provenance is embedded in overall and weather_summary and the local comparison CSVs; no older results folder is required.",
   "overall": [
     {
       "definition": "A",
@@ -554,19 +554,14 @@
   },
   "tests": "PASS: cleaned count/distance/date; both global bases; all four candidate supports/means; reused overall mean/SD; global hourly results match canonical; 64 observed groups per definition; 3,409,670 selected trips per definition; finite statistics; protected hashes unchanged; independent relative-formula/sign/near-zero/exact-zero spot-check; all five missing-hour sets verified",
   "protected_sha256": {
-    "results/analysis/2026-10-03_elasticity_clean_reference_final/summary.json": "a720ddf7d19cedb8ff4d1040cab29405fc06562d3b6197dd5a9aaf4da64909bc",
+    "results/analysis/2026-10-03_elasticity_clean_reference_final/summary.json": "5c0a6ec4380f469766a254393a5731977619b039fde0a86a41a21c838577671c",
     "results/analysis/2026-10-03_elasticity_clean_reference_final/actual_weather_support.csv": "1d4c6a8e8fe2b0f5d12ffc0cef63b9bbd91572737933f6dc2340061338ee96c0",
     "results/analysis/2026-10-03_elasticity_clean_reference_final/README.md": "1502e5b189ff868a44a78b6a70599b62f8fe96f88dcac62cd394584ed3726506",
     "results/analysis/2026-10-03_elasticity_clean_reference_final/actual_weather_hour_elasticity.csv": "f12f167e2274a9338984366b0e676fc5563cd87c44d837db8b350d8a9cda41a8",
     "results/analysis/2026-10-03_elasticity_clean_reference_final/charts/mean_elasticity_actual_weather_clean_reference.png": "8dc3dbe43d8e4a893367e071f0bd8482f64b162fa0e5bdb14f86e89068de712e",
     "results/analysis/2026-10-03_elasticity_clean_reference_final/charts/std_elasticity_actual_weather_clean_reference.png": "70826625fba80278b39713141d07a49ae4259968874610b91555a25c73d44b96",
     "data/processed/elasticity_v2/elasticity_actual_weather_clean_reference_final.csv": "f12f167e2274a9338984366b0e676fc5563cd87c44d837db8b350d8a9cda41a8",
-    "data/processed/elasticity_v2/elasticity_input_2026_01_03_cleaned.parquet": "0262e8a6df63bcaa25fd40c63dfc9ac2ea424fe0ca940661a63639bd52439396",
-    "results/analysis/2026-10-02_elasticity_v2_lbase_reference/summary.json": "5d62ab5fcc29f751b3eb5e172cb2c7dc88f03be4342ca01e3f6bb67a055c75be",
-    "results/analysis/2026-10-02_elasticity_v2_lbase_reference/elasticity_window_comparison.csv": "06a24b0b357c7cb045e7e7b4bc26c4d7a45fb2375858ed667707cf4ace8313c6",
-    "results/analysis/2026-10-02_elasticity_v2_lbase_reference/lbase_window_comparison.csv": "5b2eb35b3651561a694d605efe1beffb16ed9c53821f3a629c8a05924e1a1014",
-    "results/analysis/2026-10-02_elasticity_v2_lbase_reference/README.md": "81996b238eab7c7d2e4b8c7390ccdda8c4c2d5ad81fc3148ea96fdd65edf2ce7",
-    "results/analysis/2026-10-02_elasticity_v2_lbase_reference/weather_hour_window_summary.csv": "c850cbc0332664156ae9200f5cede7a0cc9411a525bfdeb54f114796b3b9d45c"
+    "data/processed/elasticity_v2/elasticity_input_2026_01_03_cleaned.parquet": "0262e8a6df63bcaa25fd40c63dfc9ac2ea424fe0ca940661a63639bd52439396"
   },
   "interpretation": {
     "A_SD": "No broad reduction. Overall population SD increases 7.23\u20138.82%. Clear median hourly SD changes little, but its maximum rises; Rain maximum SD falls modestly; Snowfall maximum SD is similar while median SD rises.",
@@ -574,5 +569,42 @@
     "C_stability": "The +/-$0.50, +/-$1 and +/-$2 candidates are reasonably close descriptively: L_base span 1.415% of smallest; overall SD span 1.100%. This is descriptive, not a formal stability test. Weather-hour summaries are close but not identical.",
     "D_pattern": "Broad pattern persists: Clear/Rain hourly means stay positive; Snowfall includes negative and large positive hourly means and the largest peak SD. Fine rankings change: global median hourly mean ranks Clear > Snowfall > Rain; conditioned candidates rank Clear > Rain > Snowfall. Do not infer causal weather effects or statistical significance.",
     "decision": "Diagnostic only; no winner selected and current canonical global L_base remains unchanged."
-  }
+  },
+  "numerical_provenance": {
+    "P_base": 21.34586956773507,
+    "candidates": [
+      {
+        "definition": "A",
+        "L_base_definition": "global",
+        "L_base": 3.46907003958134,
+        "L_base_support_N": 10620409
+      },
+      {
+        "definition": "B",
+        "L_base_definition": "+/-$0.25",
+        "L_base": 3.0486708328788574,
+        "L_base_support_N": 155857
+      },
+      {
+        "definition": "C",
+        "L_base_definition": "+/-$0.50",
+        "L_base": 2.9910786705717562,
+        "L_base_support_N": 196325
+      },
+      {
+        "definition": "D",
+        "L_base_definition": "+/-$1.00",
+        "L_base": 3.01799878914405,
+        "L_base_support_N": 479000
+      },
+      {
+        "definition": "E",
+        "L_base_definition": "+/-$2.00",
+        "L_base": 3.0333960338928465,
+        "L_base_support_N": 937897
+      }
+    ],
+    "verification": "Support counts and candidate distance means checked against inclusive abs(fare-P_base) fare windows in the cleaned source; conditioned overall mean and population SD independently checked."
+  },
+  "metadata_maintenance": "2026-10-04: removed historical folder hash references; retained numerical results and self-contained candidate provenance; final summary metadata hash refreshed."
 }
