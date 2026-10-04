@@ -6,7 +6,7 @@ Status: LBASE_DIAGNOSTIC_READY_FOR_REVIEW. Diagnostic only; no canonical methodo
 
 The requested `notebooks/plan/Passenger_Price_Sensitivity_Lbase_Diagnostic.pdf` was not present under `notebooks/plan` when checked. This package follows the explicit diagnostic instructions in the user request; it does not claim verification against that unavailable document. The existing clean-reference final package remains authoritative for canonical results.
 
-No data preparation, clustering, production changes or charts were run. The complete existing cleaned Jan–Mar 2026 population contains 10,620,409 trips with 0 < trip_distance <= 100 miles. The 100-mile rule remains the existing project source-cleaning decision. All weather codes contribute to overall statistics and the fixed global P_base; only codes 1 (Clear), 8 (Rain), 15 (Snowfall) enter weather-hour comparisons.
+No data preparation, clustering or production changes were run. Diagnostic charts were subsequently added from the existing comparison CSV. The complete existing cleaned Jan–Mar 2026 population contains 10,620,409 trips with 0 < trip_distance <= 100 miles. The 100-mile rule remains the existing project source-cleaning decision. All weather codes contribute to overall statistics and the fixed global P_base; only codes 1 (Clear), 8 (Rain), 15 (Snowfall) enter weather-hour comparisons.
 
 ## Reused inputs and verification
 
@@ -85,3 +85,27 @@ Changing L_base changes the relative-distance numerator for every trip while ret
 - `README.md`: this record.
 
 Focused checks passed: population count/date/distance constraints; global references; all candidate supports and means; reused conditioned mean/SD; baseline equality to canonical hourly CSV; selected support counts; finite outputs; exact missing groups; independent relative-formula, sign, near-zero and exact-zero spot checks. Before/after SHA-256 hashes confirm the cleaned source, reused diagnostics, entire existing clean-reference final package and canonical final CSV were unchanged. No canonical files were written.
+
+## Graphical Comparison
+
+These diagnostic curves compare **only alternative L_base definitions**. P_base (21.34586956773507 USD), the cleaned Jan–Mar population, actual Clear/Rain/Snowfall conditions and relative-change elasticity formula are unchanged. All values come directly from `actual_weather_hour_lbase_comparison.csv`; no trip-level statistics or methodology were recomputed. No thresholding, clipping, trimming, normalization, imputation or clustering was introduced.
+
+The four fare-conditioned mean curves mostly overlap; the global curve follows similar hourly patterns with visible offsets, particularly at Snowfall peaks. SD curves also mostly overlap in shape, with noticeable separations at some peaks. Thus the curves are close in many places, but are not identical; shared axes should not be interpreted as proof of negligible differences. These plots do **not** replace the canonical final Clear/Rain/Snowfall graphs and do not select a new L_base.
+
+All three mean charts share one linear y-axis range, and all three SD charts share another. All observed values are included with padding beyond the extrema. The full 0–23 hour index is used only to draw NaN gaps: Rain lacks hours 5, 10, 11, 12; Snowfall lacks 0, 4, 20, 22; Clear has all hours. No missing value is filled. Colors, line styles and markers distinguish the five definitions.
+
+Required charts:
+
+- [Clear mean](charts/mean_elasticity_lbase_clear.png)
+- [Rain mean](charts/mean_elasticity_lbase_rain.png)
+- [Snowfall mean](charts/mean_elasticity_lbase_snowfall.png)
+- [Clear population SD](charts/std_elasticity_lbase_clear.png)
+- [Rain population SD](charts/std_elasticity_lbase_rain.png)
+- [Snowfall population SD](charts/std_elasticity_lbase_snowfall.png)
+
+Optional combined figures use three vertically arranged weather panels with shared axes, rather than placing 15 curves in one panel:
+
+- [All-weather mean comparison](charts/mean_elasticity_lbase_all_weather.png)
+- [All-weather population SD comparison](charts/std_elasticity_lbase_all_weather.png)
+
+Plot checks verified exact plotted-value agreement with the existing CSV, observed support preservation, missing-hour gaps and axis limits containing every value. SHA-256 checks verified unchanged diagnostic CSV/JSON files, canonical final CSV and canonical clean-reference final folder.
