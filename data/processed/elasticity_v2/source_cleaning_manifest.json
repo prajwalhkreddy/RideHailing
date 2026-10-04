@@ -1,0 +1,18 @@
+{
+  "decision_status": "PROJECT_IMPLEMENTATION_DECISION",
+  "rule": "retain 0 < trip_distance <= 100 miles",
+  "authority": "Project implementation decision; not a professor-specified numerical cutoff.",
+  "original_N": 10620887,
+  "removed_rows": 478,
+  "cleaned_N": 10620409,
+  "original_input": "data/processed/elasticity_v2/elasticity_input_2026_01_03.parquet",
+  "original_sha256": "ed7aec6e93ac981af1d952e565cff7a1ab03963f8d318a8205bd24ca11cec7b6",
+  "cleaned_input": "data/processed/elasticity_v2/elasticity_input_2026_01_03_cleaned.parquet",
+  "cleaned_sha256": "0262e8a6df63bcaa25fd40c63dfc9ac2ea424fe0ca940661a63639bd52439396",
+  "P_base": 21.34586956773507,
+  "date_window": {
+    "start_inclusive": "2026-01-01",
+    "end_exclusive": "2026-04-01"
+  },
+  "other_filters_added": false
+}

@@ -18,7 +18,6 @@ env/
 # Data and generated research artifacts
 data/interim/*
 !data/interim/.gitkeep
-data/processed/*
 !data/processed/.gitkeep
 models/*
 !models/.gitkeep

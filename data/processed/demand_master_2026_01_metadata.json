@@ -1,0 +1,27 @@
+{
+  "build_timestamp_utc": "2026-08-21T18:07:22.606449+00:00",
+  "data_month": "2026-01",
+  "grid_metadata": {
+    "grid_columns": 52,
+    "grid_rows": 51,
+    "grid_size_meters": 3000,
+    "metric_crs": "EPSG:2263",
+    "valid_cells": 1213
+  },
+  "legacy_traceability": {
+    "demand": "Pickup count by (TimeSlot, PUGridID); DOGridID is not used.",
+    "historical_demand": "Strictly earlier expanding mean by GridID, DayOfWeek, Period.",
+    "normalization": "None in NB3.",
+    "notebook": "NB3_DemandAggregation.ipynb",
+    "timezone": "Unresolved legacy timezone-naive taxi/weather alignment; no conversion applied."
+  },
+  "rows": 1804944,
+  "source_grid": "data/processed/grid_lookup.parquet",
+  "source_trips": "data/processed/cleaned_trips.parquet",
+  "source_weather": "data/processed/weather/nyc_weather_processed_2026_01.parquet",
+  "time_interval_minutes": 30,
+  "time_slots": 1488,
+  "trips_within_month": 3699633,
+  "valid_grid_ids": 1213,
+  "weather_records": 744
+}

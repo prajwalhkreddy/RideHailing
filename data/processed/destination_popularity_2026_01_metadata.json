@@ -1,0 +1,19 @@
+{
+  "duplicates_present": true,
+  "encoding": {
+    "High": 0.75,
+    "Low": 0.25,
+    "Medium": 0.5,
+    "Very High": 1.0,
+    "Very Low": 0.0
+  },
+  "methodology_version": "destination_dropoff_trailing_6slot_global_quintiles_v1",
+  "q20": 0.0,
+  "q40": 0.0,
+  "q60": 0.16666666666666666,
+  "q80": 0.6666666666666666,
+  "reference_end_exclusive": "2026-01-25T18:30:00",
+  "reference_start": "2026-01-01T00:00:00",
+  "slot_minutes": 30,
+  "window_slots": 6
+}

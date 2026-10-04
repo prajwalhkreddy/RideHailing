@@ -1,0 +1,37 @@
+{
+  "altitude_m": 10,
+  "build_timestamp_utc": "2026-08-21T18:07:12.160826+00:00",
+  "columns": [
+    "Datetime",
+    "Temperature",
+    "WindSpeed",
+    "WeatherCode"
+  ],
+  "end": "2026-01-31 23:59:59",
+  "latitude": 40.7128,
+  "longitude": -74.006,
+  "meteostat_version": "1.7.6",
+  "missing_values": {
+    "after_fill": {
+      "Temperature": 0,
+      "WeatherCode": 0,
+      "WindSpeed": 0
+    },
+    "before_fill": {
+      "Temperature": 0,
+      "WeatherCode": 0,
+      "WindSpeed": 0
+    }
+  },
+  "output_sha256": "3bce173f18b2239b61d7646a5f5c1f3672c28c95024cd99bf9161db40c413512",
+  "processed_row_count": 744,
+  "provider": "meteostat",
+  "query_method": "Hourly(Point(latitude, longitude, altitude_m), start, end).fetch()",
+  "raw_row_count": 744,
+  "start": "2026-01-01 00:00:00",
+  "taxi_timezone_status": "naive / legacy unspecified",
+  "timestamp_dtype": "datetime64[us]",
+  "timezone_alignment": "legacy behaviour reproduced; explicit research decision pending",
+  "weather_artifact_path": "/Users/prajwalhk/Keerthi/Implementation/data/processed/weather/nyc_weather_processed_2026_01.parquet",
+  "weather_timezone_status": "timezone-naive returned by Meteostat; no conversion applied"
+}

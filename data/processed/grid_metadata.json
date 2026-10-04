@@ -1,0 +1,61 @@
+{
+  "build_timestamp_utc": "2026-08-21T17:15:57.954920+00:00",
+  "data_month": "2026-01",
+  "filtering_statistics": {
+    "invalid_zone_ids": 25251,
+    "missing_location_ids": 0,
+    "records_after_filtering": 3699638,
+    "records_loaded": 3724889
+  },
+  "generated_cells": 2652,
+  "geometry": "square",
+  "grid_columns": 52,
+  "grid_rows": 51,
+  "grid_size_meters": 3000,
+  "legacy_traceability": {
+    "assignment_method": "seeded_zone_to_grid_sampling",
+    "coordinate_limitation": "The January 2026 source has no longitude/latitude columns; NB2's LocationID-based seeded sampling is preserved explicitly.",
+    "grid": "NB1_Spatial_Info_Build.ipynb",
+    "neighbor_convention": "New persisted artifact: side-adjacent square cells only; NB1/NB2 did not define neighbors.",
+    "trip_assignment": "NB2_GridToTripAssignment"
+  },
+  "mapping_statistics": {
+    "dropoff_mapped": 3699638,
+    "dropoff_unmapped": 0,
+    "pickup_mapped": 3699638,
+    "pickup_unmapped": 0
+  },
+  "metric_crs": "EPSG:2263",
+  "neighbor_links": 4544,
+  "platform": "macOS-26.1-arm64-arm-64bit",
+  "python_version": "3.12.13",
+  "random_seed": 42,
+  "source_columns": [
+    "VendorID",
+    "tpep_pickup_datetime",
+    "tpep_dropoff_datetime",
+    "passenger_count",
+    "trip_distance",
+    "RatecodeID",
+    "store_and_fwd_flag",
+    "PULocationID",
+    "DOLocationID",
+    "payment_type",
+    "fare_amount",
+    "extra",
+    "mta_tax",
+    "tip_amount",
+    "tolls_amount",
+    "improvement_surcharge",
+    "total_amount",
+    "congestion_surcharge",
+    "Airport_fee",
+    "cbd_congestion_fee"
+  ],
+  "source_dataset": "data/raw/yellow_taxi/yellow_tripdata_2026-01.parquet",
+  "source_records": 3724889,
+  "taxi_zone_source": "data/raw/taxi_zones/taxi_zones.shp",
+  "time_interval_minutes": 30,
+  "valid_cells": 1213,
+  "zone_grid_mappings": 2667
+}

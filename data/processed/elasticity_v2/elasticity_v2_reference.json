@@ -1,0 +1,63 @@
+{
+  "methodology_status": "PROJECT_IMPLEMENTATION_DECISION_FINAL_PRECLUSTERING",
+  "date_window": {
+    "start_inclusive": "2026-01-01 00:00:00",
+    "end_exclusive": "2026-04-01 00:00:00"
+  },
+  "source_cleaning_rule": "0 < trip_distance <= 100 miles",
+  "source_cleaning_authority": "PROJECT_IMPLEMENTATION_DECISION, not a professor-specified cutoff",
+  "original_N": 10620887,
+  "cleaned_N": 10620409,
+  "removed_row_count": 478,
+  "P_base": 21.34586956773507,
+  "P_base_rule": "Single global mean fare over cleaned training population",
+  "fare_window_USD": 1.0,
+  "fare_window_rule": "abs(fare - P_base) <= 1.00 USD",
+  "fare_window_authority": "PROJECT_IMPLEMENTATION_DECISION based on professor instruction to derive distance reference from fares close to P_base",
+  "L_base": 3.01799878914405,
+  "L_base_rule": "Mean trip distance of cleaned source rows inside inclusive fare window",
+  "L_base_support_N": 479000,
+  "fare_units": "USD",
+  "distance_units": "miles",
+  "epsilon_units": "dimensionless",
+  "formulas": {
+    "delta_P": "(fare - P_base)/P_base",
+    "delta_L": "(trip_distance - L_base)/L_base",
+    "epsilon": "delta_L/delta_P"
+  },
+  "denominator_rule": "Exclude exact delta_P == 0 only; no minimum absolute delta_P",
+  "exact_zero_delta_P_excluded": 0,
+  "signed_epsilon_retained": true,
+  "clipping": false,
+  "normalization": false,
+  "ddof": 0,
+  "imputation": false,
+  "clustering": false,
+  "overall_epsilon": {
+    "N": 10620409,
+    "mean": 1.2976079311589745,
+    "population_SD": 30.380326568418912,
+    "median": 1.156744958511438,
+    "P95": 4.330111327221168,
+    "P99": 15.903852332796689,
+    "negative_share": 0.11582877834554206,
+    "negative_share_percent": 11.582877834554207
+  },
+  "matrix": {
+    "shape": [
+      14,
+      24
+    ],
+    "populated_cells": 225,
+    "missing_cells": 111
+  },
+  "input_hashes": {
+    "original": "ed7aec6e93ac981af1d952e565cff7a1ab03963f8d318a8205bd24ca11cec7b6",
+    "cleaned": "0262e8a6df63bcaa25fd40c63dfc9ac2ea424fe0ca940661a63639bd52439396"
+  },
+  "artifact_sha256": {
+    "weather_code_hour_elasticity_final_preclustering.csv": "a4d6c39b4aa4e85402799c3588117069216a90dca6b30eb658d3becacc99cabf",
+    "weather_code_hour_mean_matrix_final.csv": "89e1f9601242fd47596bde8b6754cb0d4a5a177d8658a10af474ccbf67700458"
+  },
+  "focused_checks": "PASS: source equality and boundaries; 478 removals; recomputed global price and window-distance reference; hand-calculated signed/zero/near-zero ratios; all group population SDs; count conservation; exact CSV value roundtrip (CSV integer widths not preserved); unchanged source hashes."
+}

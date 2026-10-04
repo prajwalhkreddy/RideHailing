@@ -1,0 +1,14 @@
+{
+  "global_fallback_rows": 185,
+  "global_mean_fare": 20.233906794701575,
+  "global_std_fare": 16.299856940413804,
+  "global_valid_row_count": 2898376,
+  "grid_level_rows": 1028,
+  "grouping": "PUGridID",
+  "parquet_sha256": "38d9503b38b34c00f13ee39b4238ad197add0014a0c26d1d552c7da450ca0560",
+  "purpose": "historical initialization only; not a held-out outcome or NB9 current-slot observation",
+  "source_file": "data/processed/cleaned_trips.parquet",
+  "standard_deviation_ddof": 0,
+  "training_cutoff_exclusive": "2026-01-25T18:30:00",
+  "validity": "finite fare_amount > 0; finite canonical PUGridID; pickup before cutoff"
+}

@@ -1,0 +1,23 @@
+{
+  "base_formulas": "P_base=mean(fare_amount); D_base=mean(trip_distance), independently per fallback group",
+  "distance_denominator_resolution_miles": 0.01,
+  "epsilon_formula": "abs(((P-P_base)/P_base)/((D-D_base)/D_base))",
+  "global_group_count": 1,
+  "grouping": {
+    "global": "all valid training rows",
+    "period": "Period across WeatherCodes",
+    "weather": "WeatherCode across Periods"
+  },
+  "methodology_version": "customer_price_distance_sensitivity_hierarchical_fallback_v1",
+  "output_artifact": "data/processed/customer_price_sensitivity_fallback_2026_01.parquet",
+  "output_sha256": "8d511bb09421154b2185935db204af8497c42dd729db39333cb323fc0649e826",
+  "period_group_count": 48,
+  "source_trip_artifact": "data/processed/cleaned_trips.parquet",
+  "source_trip_sha256": "648dfe389ed924ce597f88745af840f03d592737d5dd35015d018c255bc2b65e",
+  "training_cutoff_exclusive": "2026-01-25T18:30:00",
+  "training_start_inclusive": "2026-01-01T00:00:00",
+  "validity": "finite fare_amount > 0; finite 0 < trip_distance <= 100.0 miles; valid WeatherCode and Period",
+  "weather_group_count": 13,
+  "weather_time_lookup_artifact": "data/processed/demand_master_2026_01.parquet",
+  "weather_time_lookup_sha256": "7619b750ecda90de35bf7263fb889e535ae4219ccbae1915257d789037cdde61"
+}

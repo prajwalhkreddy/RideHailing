@@ -1,0 +1,18 @@
+{
+  "fare_source": "data/processed/cleaned_trips.parquet",
+  "fare_valid_row_count": 2898376,
+  "fare_validity": "finite fare_amount > 0 and pickup timestamp before cutoff",
+  "mu_price": 20.233906794701575,
+  "parquet_sha256": "dcb422e5e492f44a85815aad5f22a50f833f7071a67a126edf09a09270c0764d",
+  "persistence": "fixed per driver for complete simulation",
+  "price_high": 36.53376373511538,
+  "price_low": 3.934049854287771,
+  "profile_generation_version": "driver-preferences-v1",
+  "profile_row_count": 5000,
+  "sampling_distribution": "uniform",
+  "seed": 42,
+  "sigma_price": 16.299856940413804,
+  "training_cutoff_exclusive": "2026-01-25T18:30:00",
+  "wait_distribution": "Uniform(0,30 minutes)",
+  "wait_preference_source": "Synthetic project assumption"
+}
