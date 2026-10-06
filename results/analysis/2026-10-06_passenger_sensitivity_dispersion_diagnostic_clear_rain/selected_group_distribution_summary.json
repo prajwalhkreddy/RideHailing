@@ -1,0 +1,31 @@
+{
+  "weather_code": 1,
+  "weather_name": "Clear",
+  "hour": 23,
+  "N": 113775,
+  "min_epsilon": -10599.50944994294,
+  "max_epsilon": 3919.354668418438,
+  "mean_epsilon": 1.122914799855299,
+  "median_epsilon": 1.1788847911421974,
+  "variance": 1934.8036414331598,
+  "population_SD": 43.98640291536874,
+  "max_abs_epsilon": 10599.50944994294,
+  "P01": -15.60257399982188,
+  "P05": -2.0340949827470363,
+  "P25": 0.8591662205927354,
+  "P50": 1.1788847911421974,
+  "P75": 1.8402287794509233,
+  "P95": 4.324441697953121,
+  "P99": 16.55564187611557,
+  "sign_counts": {
+    "negative_N": 14989,
+    "negative_percentage": 13.174247418149857,
+    "positive_N": 98786,
+    "positive_percentage": 86.82575258185014,
+    "zero_N": 0,
+    "negative_price_above_distance_below": 9512,
+    "negative_price_below_distance_above": 5477
+  },
+  "top20_share_squared_deviations_pct": 93.96712933602848,
+  "abs_delta_P_lt_0_001_share_squared_deviations_pct": 95.40348859717054
+}
