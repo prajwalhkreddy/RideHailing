@@ -1,0 +1,33 @@
+{
+  "input_N": 10620409,
+  "output_N": 10620409,
+  "rows_removed": 0,
+  "reason_counts": {
+    "invalid_fare": 0,
+    "invalid_distance": 0,
+    "invalid_hour": 0,
+    "invalid_weather": 0,
+    "invalid_timestamp": 0
+  },
+  "weather_validation": "Integer Meteostat condition code 1..27; observed codes recorded below",
+  "observed_weather_codes": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    8,
+    9,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    21
+  ],
+  "source": "data/processed/elasticity_v2/elasticity_input_2026_01_03_cleaned.parquet",
+  "source_sha256": "0262e8a6df63bcaa25fd40c63dfc9ac2ea424fe0ca940661a63639bd52439396",
+  "source_row_index": "Zero-based position in unchanged cleaned source, not a fabricated trip ID",
+  "distance_rule": "0 < trip_distance <=100 miles, existing project rule"
+}

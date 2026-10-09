@@ -17,6 +17,7 @@ env/
 
 # Data and generated research artifacts
 data/interim/*
+data/processed/price_distance_sensitivity_record029/*
 !data/interim/.gitkeep
 !data/processed/.gitkeep
 models/*
