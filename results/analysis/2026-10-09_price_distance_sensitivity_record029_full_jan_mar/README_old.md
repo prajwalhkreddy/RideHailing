@@ -8,43 +8,6 @@ The analysis characterizes historical price–distance sensitivity, assesses its
 
 All primary estimates use 10,620,409 cleaned January–March trips, across all observed weather conditions. Detailed hourly comparisons cover actual Clear (WeatherCode 1) and Rain (8). The 1,000-observation inspection concept does not limit the estimation population.
 
-
-## Final Methodology and Results Summary
-
-This table is the current frozen project methodology. Later sections preserve the full analytical path, including candidate comparisons and interim recommendations, as supporting evidence. Where an earlier phase-specific statement says that a choice was still unresolved, the frozen decision in this summary and in the final sections below takes precedence.
-
-| Component | Frozen decision / result |
-| --- | --- |
-| Historical cleaned population | 10,620,409 January–March 2026 trips |
-| Price field | TLC `fare_amount` (USD), renamed `fare` |
-| P_base | 21.34586956773507 USD |
-| Price-conditioning rule | `abs(fare - P_base) <= 1.00` USD |
-| tau_P | ±$1.00 |
-| L_base | 3.01799878914405 miles |
-| L_base reference support | 479,000 observations |
-| Sensitivity formula | `epsilon = relative_price_deviation / relative_distance_deviation` |
-| Distance measurement resolution | 0.01 mile |
-| Unresolved denominator rule | `abs(trip_distance - L_base) < 0.005` mile |
-| Unresolved-denominator observations | 9,017; retained historically with null epsilon |
-| L_min | Not adopted |
-| Authoritative VALID epsilon N | 10,611,392 |
-| Simulation-support rule | Inclusive empirical P0.5–P99.5 |
-| epsilon_min | -12.890744316473482 |
-| epsilon_max | 15.442447741158892 |
-| Supported VALID epsilon N | 10,505,278 (98.999999% of VALID epsilon) |
-| Final conditioning variable | Time of day only |
-| Time groups | T1 00–03; T2 04–05; T3 06–15; T4 16–23 |
-| Weather treatment | Clear and Rain share the time-group sampler (`TIME_ONLY`) |
-| Final simulation population in Clear/Rain scope | 3,265,135 supported observations |
-| Distribution family | Empirical |
-| Sampling rule | Uniform row resampling with replacement within time group; duplicate values retain empirical frequency |
-| Randomness | Caller-controlled random seed |
-| Unsupported weather | Requires separately approved fallback; not supplied by this model |
-
-### How to read the remainder of this record
-
-The report intentionally retains earlier diagnostic stages so that each final choice is traceable to evidence. Sections labelled **interim** or **subsequently resolved** describe the state of the analysis at that stage and are not competing current methodology. The final authority is the frozen methodology above together with **Frozen Empirical Epsilon Support**, **Final Time Grouping**, **Final Weather Decision**, **Final Simulation Distribution**, and **Simulation Input Specification**.
-
 ## Established Results
 
 ### Population, validation and price provenance
@@ -83,7 +46,7 @@ r_{L,i}=\frac{L_i-L_{base}}{L_{base}},\quad
 =\frac{(P_i-P_{base})/P_{base}}{(L_i-L_{base})/L_{base}}.
 \]
 
-The numerator is relative price deviation and the denominator is relative distance deviation. Epsilon is signed and dimensionless. Exact-zero denominators would yield undefined epsilon, explicitly flagged while preserving the source row. The observed exact-zero count is **zero for all four candidates**. At this candidate-diagnostic stage, all nonzero near-zero denominators and large epsilon values were retained without clipping, winsorization, trimming, extra normalization or fitted distribution. The later authoritative denominator and simulation-support rules are specified in the frozen-method sections below.
+The numerator is relative price deviation and the denominator is relative distance deviation. Epsilon is signed and dimensionless. Exact-zero denominators would yield undefined epsilon, explicitly flagged while preserving the source row. The observed exact-zero count is **zero for all four candidates**. The historical candidate diagnostics retained all nonzero near-zero denominators and large epsilon values; the current authoritative denominator rule is specified below. No clipping, winsorization, trimming, extra normalization or fitted sensitivity distribution is applied.
 
 ### Full-population candidate comparison
 
@@ -192,23 +155,6 @@ References, denominator-resolution handling, no L_min and inclusive P0.5–P99.5
 
 Paths below are relative to this analysis folder unless a processed-data path is stated. The current artifacts form a complete evidence package; `summary.json` records the original full-data run and is not a consolidated summary of every subsequent extension.
 
-
-### Final model artifacts — start here for professor review
-
-- [`README.md`](README.md): This complete technical record, including the analytical path, frozen decisions and simulation specification.
-- [`final_time_grouping_comparison.csv`](final_time_grouping_comparison.csv): K=1–4 contiguous time-group comparison and evidence supporting T1–T4.
-- [`final_weather_within_time_groups.csv`](final_weather_within_time_groups.csv): Clear-versus-Rain comparison inside the frozen time groups and evidence for `TIME_ONLY`.
-- [`final_distribution_fit_comparison.csv`](final_distribution_fit_comparison.csv): Empirical-versus-truncated-Normal fit evidence, including descriptive KS and quantile errors.
-- [`final_passenger_sensitivity_parameters.csv`](final_passenger_sensitivity_parameters.csv): Final time-group support and `EMPIRICAL_RESAMPLE` simulation specification.
-- [`charts/final_time_grouping.png`](charts/final_time_grouping.png): Final time-grouping evidence plot.
-- [`charts/final_distribution_fit.png`](charts/final_distribution_fit.png): Final empirical-versus-truncated-Normal comparison plot.
-- Processed `data/processed/price_distance_sensitivity_record029/final_passenger_sensitivity_methodology.json`: Machine-readable record of all frozen methodology and sampling semantics.
-- Processed `data/processed/price_distance_sensitivity_record029/final_passenger_sensitivity_empirical.parquet`: Minimal empirical sampling pool containing the frozen time-group assignment and epsilon values.
-- Processed `data/processed/price_distance_sensitivity_record029/authoritative_epsilon_jan_mar_2026.parquet`: One authoritative epsilon/status record for every retained historical trip.
-- Processed `data/processed/price_distance_sensitivity_record029/frozen_epsilon_support.json`: Exact P0.5/P99.5 simulation-support endpoints, retained/excluded counts and rationale.
-
-### Supporting and diagnostic evidence
-
 - [cleaning_summary.json](cleaning_summary.json): Input/output counts and original basic-validity checks.
 - [summary.json](summary.json): Original full-data references, candidate summaries, authority and preservation metadata.
 - [lbase_price_window_comparison.csv](lbase_price_window_comparison.csv): Exact references, support and within-window distance statistics.
@@ -261,9 +207,9 @@ Paths below are relative to this analysis folder unless a processed-data path is
 - [price_distance_conditional_spreads.png](charts/price_distance_conditional_spreads.png): Median/P05–P95 spreads at repeated exact fares and distances.
 - [price_distance_full_density.png](charts/price_distance_full_density.png): Full-range aggregated price–distance density.
 
-## Interim Evidence Boundaries — Subsequently Resolved
+## Evidence Boundaries
 
-At this stage, the work had established full-population candidate calculations, numerical reference sensitivity, source-validation findings and a traceable population with review flags. The ±$1 reference window had been frozen by project decision, while denominator handling, simulation support and the simulation distribution were still being resolved. Review labels and diagnostic bounds preserved observations rather than adjudicating validity. These interim open items were subsequently resolved in the frozen-method sections below; this section is retained to document the decision path.
+The completed work establishes full-population candidate calculations, numerical reference sensitivity, source-validation findings and a traceable population with review flags. The ±$1 reference window is now frozen by project decision; a universal distance cutoff, epsilon deletion policy and simulation-ready distribution are not established. Review labels and diagnostic bounds preserve observations rather than adjudicating validity. Methodological agreement and subsequent frozen-method implementation remain distinct stages.
 
 ## Frozen Reference Definition
 
@@ -298,7 +244,7 @@ Phase 1–3 additions: `data/processed/price_distance_sensitivity_record029/froz
 
 The authoritative dataset is `data/processed/price_distance_sensitivity_record029/authoritative_epsilon_jan_mar_2026.parquet`, with current methodology in `authoritative_epsilon_methodology.json` in the same namespace. Earlier four-candidate and consolidated-population Parquets are preserved as historical diagnostic inputs; their unmasked epsilon values are not the authoritative distribution after this decision. Existing `analysis_status` columns are retained as historical review labels; `epsilon_status` alone determines inclusion in the present distribution.
 
-The formula is relative_price_deviation=(fare−P_base)/P_base, relative_distance_deviation=(trip_distance−L_base)/L_base, and epsilon=relative_price_deviation/relative_distance_deviation. Signed values remain retained in the authoritative historical dataset; no clipping or trimming is applied to that dataset. The later P0.5–P99.5 rule defines simulation support only and does not rewrite historical epsilon values.
+The formula is relative_price_deviation=(fare−P_base)/P_base, relative_distance_deviation=(trip_distance−L_base)/L_base, and epsilon=relative_price_deviation/relative_distance_deviation. Signed values remain retained; no clipping, trimming or range bounds are applied.
 
 ## Measurement-Resolution Denominator Treatment
 
@@ -362,7 +308,7 @@ All statistics use all VALID rows. SD is population SD (ddof=0) and quantiles us
 
 Candidate endpoints come from the observed empirical quantiles, not predetermined sensitivity values. Inclusive bounds preserve ties, so retained percentages can differ slightly from nominal quantile coverage. These are counterfactual subset summaries, not changes to the authoritative data. The P1–P99 candidate retains approximately 98.005% and has SD 1.0331, compared with full VALID SD 7.0373, while its median remains approximately 0.76717. This quantifies tail influence without selecting epsilon_min or epsilon_max.
 
-## Authoritative Evidence Files and Interim Remaining Decisions — Subsequently Resolved
+## Authoritative Evidence Files and Remaining Decisions
 
 - Processed `authoritative_epsilon_jan_mar_2026.parquet`: one authoritative epsilon field/status for every historical row.
 - Processed `authoritative_epsilon_methodology.json`: exact frozen references, resolution rule, counts and unresolved decisions.
@@ -375,7 +321,7 @@ Candidate endpoints come from the observed empirical quantiles, not predetermine
 - `charts/authoritative_epsilon_histogram_p01_p99.png`: central P01–P99 display only.
 - `charts/authoritative_epsilon_ecdf.png`: empirical cumulative probabilities from full-data ranks.
 
-At this stage, the remaining decisions were epsilon bounds, final weather/time grouping and simulation distribution. Those decisions were subsequently resolved: P0.5–P99.5 support was frozen, `TIME_ONLY` T1–T4 grouping was adopted for Clear/Rain, and empirical resampling was selected. Historical/diagnostic outputs remained unchanged except the authorized README updates. Validation confirmed row identifiers/order, persisted null/status masks, finite valid values, reconciled population totals and historical artifact hashes.
+The remaining decisions are epsilon bounds, final weather-group distribution parameters and simulation distribution. Historical/diagnostic outputs remain unchanged except the authorized README update. Validation confirms all row identifiers/order, persisted null/status masks, finite valid values, reconciled population totals and historical artifact hashes.
 
 ## Empirical Sensitivity Range — Phase 5
 
@@ -453,11 +399,11 @@ Tail observations combine proximity to the denominator boundary and differing fa
 
 There are 44 observed groups for each of the six candidates, with no imputation. Across-group summaries weight each group equally; changes are signed retained-minus-original statistics. Minimum/maximum retention identifies uneven exclusion across weather/hour groups and does not assume global quantile coverage applies equally to each group. The complete 264-row table records each group's response.
 
-### Phase-5 Recommendation Status — Subsequently Resolved
+### Recommendation status and remaining choice
 
 The evidence does not uniquely justify one empirical cutoff. **PROJECT METHODOLOGY RECOMMENDATION FOR REVIEW:** prioritize P0.1–P99.9 and P1–P99 as the two clearest contrasting candidates: the former preserves approximately 99.8% and limits truncation of observed behavior; the latter retains approximately 98% and provides a substantially more concentrated central range while preserving the global median. This shortlist balances retained probability, central-location stability and interpretability; it is not a claim that either boundary marks invalid data or a verified structural break. The intermediate P0.5–P99.5 remains a valid compromise and is not statistically ruled out.
 
-At this Phase-5 stage, no range had yet been frozen. The subsequent project methodology decision selected the inclusive empirical P0.5–P99.5 range after considering retained probability, central-location stability, tail influence and group-specific retention. This paragraph is retained as historical evidence of the pre-freeze decision state.
+No range is frozen or supervisor-approved. Selection requires an explicit judgement about acceptable tail probability and group-specific retention, followed by model validation; no distribution fitting or simulation work is performed here.
 
 ### Phase 5 evidence files
 
@@ -545,11 +491,11 @@ The comparison CSV includes pooled weather, all 20 same-hour Clear/Rain pairs, a
 
 Hourly median ranges are 0.495891–0.804114 for Clear and 0.429326–0.905519 for Rain; SD ranges are 1.220852–1.798144 and 1.137559–2.071300. Within-weather hourly Wasserstein distances have median 0.194272 and maximum 0.620803, exceeding the pooled weather distance in typical comparisons. Same-hour weather distance has median 0.113856 and maximum 0.301670, so weather differences cannot be dismissed uniformly. Rain support varies substantially (for example, 970 supported observations at 01:00), which limits strong claims from individual hourly contrasts.
 
-### Interim Grouping Recommendation — Subsequently Resolved
+### Simplest supported grouping recommendation
 
 A single pooled Clear/Rain distribution is a plausible coarse baseline because aggregate centers, IQR and SD are close. It is not sufficient to preserve the observed time-of-day variation. Merely separating Clear from Rain does not address that variation. Conversely, the evidence does not justify automatically fitting 44 independent Weather × Hour distributions.
 
-**INTERIM PROJECT RECOMMENDATION AT THIS STAGE:** evaluate a small number of shared time-of-day groups across Clear/Rain as the simplest supported next modelling structure. Hour was the clearer conditioning dimension in the descriptive evidence. The subsequent grouping analysis resolved this recommendation by freezing T1=00–03, T2=04–05, T3=06–15 and T4=16–23, with Clear/Rain shared within each time group. No K-means or unconstrained clustering was used.
+**PROJECT RECOMMENDATION, not a fitted or approved grouping:** evaluate a small number of shared time-of-day groups across Clear/Rain as the simplest supported next modelling structure. Hour is the clearer conditioning dimension in the present descriptive evidence. Exact group number and boundaries are not identified by these pairwise comparisons and should be validated before adoption; same-hour weather discrepancies should be checked within proposed shared groups. No data-driven clustering, boundary optimization or final distribution selection has been performed.
 
 ### Files and validation
 
@@ -559,7 +505,7 @@ A single pooled Clear/Rain distribution is a plausible coarse baseline because a
 - `charts/final_hourly_epsilon_median.png`: supported hourly medians with gaps for unobserved hours.
 - `charts/final_hourly_epsilon_sd.png`: supported hourly population SDs with the same gaps.
 
-Frozen endpoints were read with round-trip precision from Phase 5. Full support counts reproduce the existing range comparison, 44 groups are retained, and every historical authoritative/diagnostic artifact remained unchanged apart from authorized README updates. At this stage the simulation family/grouping were still open; the subsequent final sections resolve them as T1–T4 `TIME_ONLY` empirical resampling.
+Frozen endpoints were read with round-trip precision from Phase 5. Full support counts reproduce the existing range comparison, 44 groups are retained, and every historical authoritative/diagnostic artifact remains unchanged apart from this authorized README update. No simulation distribution is fitted; family, grouping and parameters remain open.
 
 ## Final Time Grouping
 
