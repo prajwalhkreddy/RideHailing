@@ -1,0 +1,139 @@
+{
+  "N": 54993,
+  "percentage": 0.5178049169292821,
+  "source_sha256": "0262e8a6df63bcaa25fd40c63dfc9ac2ea424fe0ca940661a63639bd52439396",
+  "raw_sha256": {
+    "data/raw/yellow_taxi/yellow_tripdata_2026-01.parquet": "8b3933fe6f0d7b6d8826613c0dd724edc680ff7c49e2bd4c7635c05102728637",
+    "data/raw/yellow_taxi/yellow_tripdata_2026-02.parquet": "5352ca800f29c40a221ed5b0c6392c451fde7fcd236a73651bd5aea74713a26c",
+    "data/raw/yellow_taxi/yellow_tripdata_2026-03.parquet": "d7af794a7ac06cbbb5afb4d1df9e86d84f2e878584de708ff2ffca4bd7d234d9"
+  },
+  "match_method": "pickup_timestamp + fare + trip_distance + occurrence ordinal in source order; raw file and raw row position retained; full matching count verified",
+  "duplicate_key_rows": 366,
+  "duration_seconds": {
+    "N": 54993,
+    "minimum": 0.0,
+    "P05": 9.0,
+    "P25": 510.0,
+    "median": 883.0,
+    "P75": 1314.0,
+    "P95": 2160.0,
+    "P99": 3160.0800000000017,
+    "maximum": 105306.0,
+    "mean": 960.9223537541142
+  },
+  "duration_minutes": {
+    "N": 54993,
+    "minimum": 0.0,
+    "P05": 0.15,
+    "P25": 8.5,
+    "median": 14.716666666666667,
+    "P75": 21.9,
+    "P95": 36.0,
+    "P99": 52.66800000000003,
+    "maximum": 1755.1,
+    "mean": 16.01537256256857
+  },
+  "duration_bands": [
+    {
+      "band": "<=0",
+      "N": 68,
+      "percentage": 0.12365210117651337
+    },
+    {
+      "band": "(0,1] min",
+      "N": 6321,
+      "percentage": 11.494190169657957
+    },
+    {
+      "band": "(1,5] min",
+      "N": 2379,
+      "percentage": 4.326005127925372
+    },
+    {
+      "band": "(5,15] min",
+      "N": 19382,
+      "percentage": 35.2444856618115
+    },
+    {
+      "band": "(15,30] min",
+      "N": 21350,
+      "percentage": 38.82312294292001
+    },
+    {
+      "band": ">30 min",
+      "N": 5493,
+      "percentage": 9.988543996508646
+    }
+  ],
+  "same_zone_N": 7570,
+  "same_zone_pct": 13.765388322150091,
+  "different_zone_N": 47423,
+  "different_zone_pct": 86.23461167784991,
+  "missing_zone_N": 0,
+  "fare": {
+    "N": 54993,
+    "minimum": 0.01,
+    "P05": 3.7,
+    "P25": 16.8,
+    "median": 25.19,
+    "P75": 36.73,
+    "P95": 70.0,
+    "P99": 90.19,
+    "maximum": 623.7,
+    "mean": 29.370123106577196
+  },
+  "total_amount": {
+    "N": 54993,
+    "minimum": 1.9,
+    "P05": 9.9,
+    "P25": 21.91,
+    "median": 30.75,
+    "P75": 43.03,
+    "P95": 75.34399999999994,
+    "P99": 109.0440000000001,
+    "maximum": 628.45,
+    "mean": 35.40078373611187
+  },
+  "RatecodeID_counts": {
+    "nan": 48814,
+    "1.0": 3005,
+    "5.0": 1994,
+    "2.0": 951,
+    "3.0": 195,
+    "99.0": 34
+  },
+  "payment_type_counts": {
+    "0": 48814,
+    "2": 2610,
+    "1": 2425,
+    "4": 862,
+    "3": 282
+  },
+  "monthly": [
+    {
+      "month": "2026-01",
+      "N": 18440,
+      "valid_monthly_N": 3560712,
+      "percentage": 0.5178739532992278
+    },
+    {
+      "month": "2026-02",
+      "N": 19590,
+      "valid_monthly_N": 3249875,
+      "percentage": 0.6027924150928882
+    },
+    {
+      "month": "2026-03",
+      "N": 16963,
+      "valid_monthly_N": 3809822,
+      "percentage": 0.4452438985338423
+    }
+  ],
+  "nonpositive_duration_N": 68,
+  "missing_duration_N": 0,
+  "manual_review_N": 500,
+  "missing_ratecode_and_payment0_N": 48814,
+  "missing_ratecode_and_payment0_pct": 88.76402451221064,
+  "location_outside_1_to_263_N": 160,
+  "traceability_caveat": "No unique trip identifier in processed input. Repeated timestamp/fare/distance keys matched by occurrence order; multiplicities reconcile, but identity within otherwise indistinguishable duplicate keys is not independently provable."
+}

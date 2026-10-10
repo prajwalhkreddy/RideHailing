@@ -1,146 +1,233 @@
-# Record-029 Price–Distance Sensitivity — Full January–March 2026 Analysis
+# Record-029 Passenger Price–Distance Sensitivity — Technical Record
 
-## Scope and source population
+Full-population estimation, numerical-stability diagnostics and source-quality investigation for January–March 2026.
 
-This analysis implements the price–distance sensitivity formulation in `notebooks/plan/Price_Distance_Sensitivity_Implementation_Guide.docx`. The quantity describes paired historical price and distance; it is not a direct estimate of classical price-demand elasticity. All main calculations use the complete validated January–March 2026 population, not an inspection sample.
+## Analysis Objective and Scope
 
-The source is `data/processed/elasticity_v2/elasticity_input_2026_01_03_cleaned.parquet`. All 10,620,409 rows pass the additional checks: finite positive fare and distance, distance no greater than 100 miles, valid timestamp within 2026-01-01 inclusive to 2026-04-01 exclusive, hour consistent with timestamp and within 0–23, and integer Meteostat condition codes within 1–27. No additional rows were removed. Reason counts and observed weather codes are in cleaning_summary.json. The existing 100-mile rule is retained as a project source-cleaning decision.
+The analysis characterizes historical price–distance sensitivity, assesses its dependence on price-conditioned reference distance, and identifies numerical and source-data issues that must be resolved before a passenger-sensitivity model is used in simulation. It describes paired fare/distance observations, not a directly identified causal price-demand elasticity.
 
-Fare is in USD, distance in miles. Pickup timestamp, hour, weather code and original paired values are retained. `source_row_index` is the zero-based row position in the unchanged input, not a new claim of unique trip identity. Row order is preserved.
+All primary estimates use 10,620,409 cleaned January–March trips, across all observed weather conditions. Detailed hourly comparisons cover actual Clear (WeatherCode 1) and Rain (8). The 1,000-observation inspection concept does not limit the estimation population.
 
-## Global price reference and price-conditioned distance references
+## Established Results
 
-P_base is the arithmetic mean fare over all 10,620,409 rows: **21.34586956773507 USD**. Weather/hour subsets are not used to estimate it.
+### Population, validation and price provenance
 
-The working specification defines distance reference through proximity to the global fare reference:
+The existing source-cleaning rule is 0 < trip_distance ≤ 100 miles, with valid timestamps and finite positive fares. The training window is 2026-01-01 inclusive to 2026-04-01 exclusive. Additional Record-029 validation removed zero rows. All 10,620,409 observations remain retained.
+
+The source price is TLC `fare_amount`, renamed `fare` in the processed data; it is measured in USD. It is not a derived total fare, per-mile price or synthetic model-generated price. Distance is measured in miles. Pickup timestamps, source row positions, hour and weather code retain source traceability.
+
+### Global price reference and candidate distance references
+
+The single global P_base is **21.34586956773507 USD**, calculated from all cleaned observations. No weather-specific or hourly base is used. L_base is price-conditioned:
 
 \[
-L_{base}(\tau_P)=\operatorname{mean}\{L_i: |P_i-P_{base}|\leq\tau_P\}.
+L_{base}(\tau_P)=\operatorname{mean}\{L_i:|P_i-P_{base}|\leq\tau_P\}.
 \]
 
-The reference subset establishes L_base only; it does not limit the population used for sensitivity estimation. No candidate window is designated supervisor-approved or final. Distance SD in this table is population SD (ddof=0).
+The conditioning subset estimates the distance reference only; epsilon statistics use the complete historical population for every candidate.
 
-| tau_P | support_N | support_percentage | L_base | distance_median | distance_SD | distance_P05 | distance_P95 |
-| --- | --- | --- | --- | --- | --- | --- | --- |
-| 0.25 | 155857 | 1.46752352 | 3.04867083 | 3 | 1.42580086 | 1.19 | 4.89 |
-| 0.5 | 196325 | 1.84856346 | 2.99107867 | 2.9 | 1.48284323 | 1.11 | 5 |
-| 1 | 479000 | 4.51018412 | 3.01799879 | 2.95 | 1.42984655 | 1.17 | 4.93 |
-| 2 | 937897 | 8.83108174 | 3.03339603 | 2.97 | 1.43856042 | 1.15 | 5.04 |
+| tau_P (USD) | Exact L_base (miles) | Reference support N |
+| --- | --- | ---: |
+| ±$0.25 | 3.0486708328788574 | 155,857 |
+| ±$0.50 | 2.9910786705717562 | 196,325 |
+| ±$1.00 | 3.01799878914405 | 479,000 |
+| ±$2.00 | 3.0333960338928465 | 937,897 |
 
-## Formulation and denominator handling
+### Record-029 formulation
 
 \[
-\mathrm{price\_diff}_i=P_i-P_{base},\qquad
+\mathrm{price\_diff}_i=P_i-P_{base},\quad
 \mathrm{distance\_diff}_i=L_i-L_{base},
 \]
 \[
-r_{P,i}=\frac{P_i-P_{base}}{P_{base}},\qquad
-r_{L,i}=\frac{L_i-L_{base}}{L_{base}},\qquad
-\epsilon_i=\frac{r_{P,i}}{r_{L,i}}.
+r_{P,i}=\frac{P_i-P_{base}}{P_{base}},\quad
+r_{L,i}=\frac{L_i-L_{base}}{L_{base}},\quad
+\epsilon_i=\frac{r_{P,i}}{r_{L,i}}
+=\frac{(P_i-P_{base})/P_{base}}{(L_i-L_{base})/L_{base}}.
 \]
 
-This is relative price divided by relative distance, the reverse of the previous elasticity_v2 formulation. No earlier epsilon values are reused. Each candidate is calculated independently for every cleaned observation. Signed values are retained; exact r_L=0 is the only exclusion from epsilon calculation, represented by an explicit Boolean flag and null epsilon. All four candidates have zero such cases. No nonzero near-zero denominator is discarded.
+The numerator is relative price deviation and the denominator is relative distance deviation. Epsilon is signed and dimensionless. Exact-zero denominators would yield undefined epsilon, explicitly flagged while preserving the source row. The observed exact-zero count is **zero for all four candidates**. No nonzero near-zero denominator or large epsilon is excluded. No clipping, winsorization, trimming, extra normalization or fitted sensitivity distribution is applied.
 
-The full epsilon Parquet stores price_diff and relative_price_deviation, plus distance_diff, relative_distance_deviation, epsilon and exact-zero flags for each suffix `tau_025`, `tau_050`, `tau_100`, `tau_200`. No denominator threshold, sensitivity clipping, trimming, winsorization, extra normalization, minimum raw distance, distribution fitting or simulation change is applied.
+### Full-population candidate comparison
 
-## Full-population sensitivity distributions
+| tau_P | mean_epsilon | median_epsilon | SD_epsilon | P95 | P99 | max_abs_epsilon |
+| --- | --- | --- | --- | --- | --- | --- |
+| 0.250000 | 0.787444 | 0.764566 | 28.904610 | 1.903402 | 7.735824 | 24569.490215 |
+| 0.500000 | 0.445895 | 0.768680 | 34.102016 | 1.957584 | 7.803063 | 11516.595900 |
+| 1.000000 | 0.739608 | 0.767133 | 19.277050 | 1.943506 | 7.995343 | 7676.417735 |
+| 2.000000 | 0.613266 | 0.766457 | 13.589164 | 1.917327 | 7.888783 | 11660.273365 |
 
-| tau_P | N_valid_epsilon | N_exact_zero_denominator | mean | median | population_SD | P01 | P99 | max_abs_epsilon | negative_pct |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 0.25 | 10620409 | 0 | 0.787444031 | 0.764565894 | 28.9046105 | -7.0710261 | 7.73582409 | 24569.4902 | 11.5449885 |
-| 0.5 | 10620409 | 0 | 0.445894558 | 0.768680082 | 34.1020157 | -7.4124447 | 7.80306334 | 11516.5959 | 11.6732322 |
-| 1 | 10620409 | 0 | 0.739608303 | 0.767133106 | 19.27705 | -7.09494554 | 7.9953435 | 7676.41774 | 11.5828778 |
-| 2 | 10620409 | 0 | 0.613266391 | 0.766456795 | 13.5891643 | -7.00257395 | 7.8887834 | 11660.2734 | 11.5573138 |
+Each candidate has 10,620,409 valid epsilon observations. Population SD uses ddof=0; empirical quantiles use linear interpolation. Medians are comparatively stable, while means, SDs and extreme magnitudes vary appreciably. Signed epsilon is retained, including negative values; sign is not an automatic source-validity classification.
 
-Medians are close across candidates, whereas means and SDs are appreciably reference-sensitive. No candidate is selected because its SD is smallest. The complete summary CSV also reports variance, extrema, P05/P25/P75/P95, sign counts and percentages. Population SD uses ddof=0; quantiles use linear interpolation. Sign shares use valid epsilon N.
+### Clear/Rain hourly results
 
-For each candidate, the full-range histogram uses 40 equal-width bins spanning observed extrema, with a symmetric-log count axis so rare tail bins remain visible. Supplementary P01–P99 histograms use 40 bins on that central view, with linear counts. Bin intervals include the left edge and exclude the right, except the last includes both. Full-view counts reconcile to valid N. Central-view restrictions affect visualization only. The bin CSV provides percentages relative both to all valid rows and to displayed rows.
+There are 44 observed groups per candidate: 24 Clear and 20 Rain, or 176 candidate/group records. Their support is 3,303,107 observations per candidate. Rain hours 5, 10, 11 and 12 remain absent. No weather clustering or imputation is used. The existing hourly tables are complete candidate comparisons, but are not final frozen-method group models.
 
-`extreme_sensitivity_examples_by_lbase.csv` preserves 20 largest-absolute-epsilon examples per candidate with original source positions, fare, distance, time/weather and both relative deviations. These observations are retained; their appearance is not an invalidity determination.
+### Consolidated historical analysis population
 
-## Near-zero relative-distance deviations
+The authoritative consolidated population is `data/processed/price_distance_sensitivity_record029/record029_analysis_population_jan_mar_2026.parquet`. It contains all 10,620,409 rows in source order, reference-dependent epsilon/deviation columns, integer pickup month, and explicit review flags. Exact reference values and status definitions are embedded in `record029_population_metadata` in the Parquet schema.
 
-| tau_P | band | N | percentage | max_abs_epsilon |
-| --- | --- | --- | --- | --- |
-| 0.25 | 0 <= abs(relative_distance_deviation) < 1e-05 | 0 | 0 | nan |
-| 0.25 | 1e-05 <= abs(relative_distance_deviation) < 0.0001 | 0 | 0 | nan |
-| 0.25 | 0.0001 <= abs(relative_distance_deviation) < 0.001 | 8826 | 0.0831041441 | 24569.4902 |
-| 0.25 | 0.001 <= abs(relative_distance_deviation) < 0.01 | 44649 | 0.420407538 | 2131.5645 |
-| 0.25 | 0.01 <= abs(relative_distance_deviation) < inf | 10566934 | 99.4964883 | 495.329365 |
-| 0.5 | 0 <= abs(relative_distance_deviation) < 1e-05 | 0 | 0 | nan |
-| 0.5 | 1e-05 <= abs(relative_distance_deviation) < 0.0001 | 0 | 0 | nan |
-| 0.5 | 0.0001 <= abs(relative_distance_deviation) < 0.001 | 9427 | 0.0887630599 | 11516.5959 |
-| 0.5 | 0.001 <= abs(relative_distance_deviation) < 0.01 | 66398 | 0.625192495 | 1362.93354 |
-| 0.5 | 0.01 <= abs(relative_distance_deviation) < inf | 10544584 | 99.2860444 | 1003.20989 |
-| 1 | 0 <= abs(relative_distance_deviation) < 1e-05 | 0 | 0 | nan |
-| 1 | 1e-05 <= abs(relative_distance_deviation) < 0.0001 | 0 | 0 | nan |
-| 1 | 0.0001 <= abs(relative_distance_deviation) < 0.001 | 9017 | 0.0849025683 | 7676.41774 |
-| 1 | 0.001 <= abs(relative_distance_deviation) < 0.01 | 66358 | 0.624815862 | 3282.8091 |
-| 1 | 0.01 <= abs(relative_distance_deviation) < inf | 10545034 | 99.2902816 | 1010.22439 |
-| 2 | 0 <= abs(relative_distance_deviation) < 1e-05 | 0 | 0 | nan |
-| 2 | 1e-05 <= abs(relative_distance_deviation) < 0.0001 | 0 | 0 | nan |
-| 2 | 0.0001 <= abs(relative_distance_deviation) < 0.001 | 0 | 0 | nan |
-| 2 | 0.001 <= abs(relative_distance_deviation) < 0.01 | 53725 | 0.50586564 | 11660.2734 |
-| 2 | 0.01 <= abs(relative_distance_deviation) < inf | 10566684 | 99.4941344 | 369.241614 |
+Short-distance flags describe exact 0.01 mile and cumulative bounds of 0.05, 0.10, 0.25 and 0.50 miles. Candidate suffixes 025/050/100/200 identify the fare windows; denominator-flag suffixes 0001/001/005/01 mean absolute relative-distance deviations below 0.0001/0.001/0.005/0.01. These are diagnostic flags, **not exclusions**.
 
-The denominator is small when distance is close to the candidate L_base, approximately three miles, not when raw distance itself approaches zero. No candidate has abs(relative_distance_deviation)<0.0001. The 0.0001–0.001 band contains 8,826, 9,427 and 9,017 observations for the first three windows, respectively; it is empty for ±$2. These differences illustrate sensitivity to where the continuous reference lies among recorded distance values. Counts and percentiles are evidence for numerical inspection, not a filtering policy. Band N includes exact-zero denominators if present; epsilon summaries use defined values only, and the file separately reports both counts.
+Source review in this consolidated file uses the investigated exact 0.01-mile cohort. Numerical review uses abs(relative_distance_deviation)<0.001 for any candidate. Combined review means both; VALID_STANDARD means neither selected trigger, not certification of every source record. Other short-distance flags remain independent. Duration and raw source-quality fields exist in the separate 0.01-mile source diagnostic, not in the consolidated full-population file; they were not inferred or joined into it.
 
-## Very short raw distances
-
-| percentile | distance_miles |
+| metric | N |
 | --- | --- |
-| P0 | 0.01 |
-| P0.1 | 0.01 |
-| P0.5 | 0.01 |
-| P1 | 0.15 |
-| P5 | 0.5 |
-| P10 | 0.68 |
-| P50 | 1.89 |
-| P90 | 8.68 |
-| P95 | 12.62 |
-| P99 | 19.56 |
-| P100 | 99.93 |
+| is_distance_001 | 54993 |
+| is_distance_le_005 | 81302 |
+| is_distance_le_010 | 97124 |
+| is_distance_le_025 | 146460 |
+| is_distance_le_050 | 553301 |
+| SOURCE_QUALITY_REVIEW | 54993 |
+| NUMERICAL_STABILITY_REVIEW | 27270 |
+| SOURCE_AND_NUMERICAL_REVIEW | 0 |
+| VALID_STANDARD | 10538146 |
 
-Overall mean distance is 3.46907003958134 miles. The minimum 0.01-mile value occurs 54,993 times (0.517805%). Empirical quantile boundaries, after merging repeated values, define descriptive bands in `distance_distribution_diagnostic.csv`; bands partition the entire cleaned population. No L_min is adopted.
+All rows remain retained. No universal L_min or review-based filtering rule is adopted.
 
-The 100 shortest observations, ordered by distance then original row position, appear in `short_distance_examples.csv`. Their fares range from $3.00 to $125.00. This is an inspection set, not a basis for population statistics or an automatic invalidity label. A raw distance near zero gives relative_distance_deviation near −1 for these references; it is different from a distance near L_base, which gives a near-zero denominator.
+## Diagnostic Findings
 
-## Price–distance relationship
+### Distance precision and denominator instability
 
-Full-population Pearson correlation is 0.852985; this is descriptive association, not a causal or fitted demand model. The full-range density chart bins every observation deterministically in a 180×180 grid. The supplementary density view restricts both axes to their marginal P99 values only for display, with displayed N labelled; all statistics use full data.
+The observed distances comprise 5,712 unique values on an approximately 0.01-mile grid. All rows align to this grid within the reported floating-point tolerance; strict equality of 100×distance to an integer holds for 88.304801%. Binary representation error is distinct from actual finer measurement precision.
 
-`price_distance_summary.csv` contains overall means/ranges and full-support summaries for the 20 most frequent exact fares and 20 most frequent exact distances. Conditional P05–P95 spreads show different distances at identical fares (flat-price patterns) and different fares at identical distances. The conditional-spread figure presents these medians/ranges without fitting a functional form. Repeated fares do not alone identify a tariff or prove a source error; the charts do not establish a unique piecewise model.
+| tau_P | L_base | nearest_distance_below | nearest_distance_above | absolute_gap_below | absolute_gap_above | relative_deviation_below | relative_deviation_above | count_at_nearest_below | count_at_nearest_above |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.250000 | 3.048671 | 3.040000 | 3.050000 | 0.008671 | 0.001329 | -0.002844 | 0.000436 | 8981 | 8826 |
+| 0.500000 | 2.991079 | 2.990000 | 3.000000 | 0.001079 | 0.008921 | -0.000361 | 0.002983 | 9427 | 29874 |
+| 1.000000 | 3.017999 | 3.010000 | 3.020000 | 0.007999 | 0.002001 | -0.002650 | 0.000663 | 9076 | 9017 |
+| 2.000000 | 3.033396 | 3.030000 | 3.040000 | 0.003396 | 0.006604 | -0.001120 | 0.002177 | 9000 | 8981 |
 
-## Clear/Rain hourly analysis
+| tau_P | near_zero_denominator_N | near_zero_denominator_pct | near_zero_variance_pct |
+| --- | --- | --- | --- |
+| 0.250000 | 8826 | 0.083104 | 94.407415 |
+| 0.500000 | 9427 | 0.088763 | 95.193236 |
+| 1.000000 | 9017 | 0.084903 | 86.682230 |
+| 2.000000 | 0 | 0.000000 | 0.000000 |
 
-Detailed reporting covers actual Clear (1) and Rain (8) observations only, while global references and main summaries use all weather codes. There are 44 populated groups per candidate: 24 Clear and 20 Rain, or 176 rows across four candidates. They contain 3,303,107 actual observations per candidate. Rain hours 5, 10, 11 and 12 remain absent. No weather clustering or missing-cell imputation is used. The hourly CSV reports N, mean, median, population SD, extrema, P95 and P99.
+Here the near-zero region is abs(relative_distance_deviation)<0.001, a descriptive comparison rather than an adopted filtering rule. No candidate has observations below 0.0001. Squared-deviation contributions are measured about the full-candidate mean, not a recentered subset mean.
 
-## Research decisions remaining open
+The first three references lie sufficiently close to populated grid values to create near-zero denominators. The ±$2 reference has no observations inside the 0.001 region. Its lower SD is consistent with greater numerical separation from the discrete grid, but is not sufficient evidence to select it. Reference placement, corresponding fare deviations and the remaining observations jointly determine dispersion. Choosing a reference solely for low SD could favor a numerical coincidence rather than a substantively justified reference.
 
-The final price window tau_P, corresponding final L_base, any minimum meaningful raw distance L_min, any treatment of near-zero relative-distance deviations, epsilon outlier bounds, final sensitivity distribution and truncated-normal parameters remain unresolved. No bounded distribution, synthetic population or downstream simulation integration is selected here. The observed reference sensitivity and tails should inform subsequent methodological decisions rather than automatically determine them.
+### Distribution and price–distance evidence
 
-## Files and reproducibility
+The full and P01–P99 histograms describe empirical candidate distributions. Full plots retain all observations; central plots restrict visualization only. Full-range count axes are symmetric-log to expose rare tails. Histogram bin totals, sign counts and extrema are preserved in the supporting CSVs. Extreme exports trace large ratios to paired fares/distances rather than labelling them invalid automatically.
 
-Processed namespace: `data/processed/price_distance_sensitivity_record029/`
+Full-data price–distance density and conditional summaries reveal different distances at identical fares and different fares at identical distances. The median/IQR curve over 0–10 miles uses all observations within fixed distance bins for its calculations. No complex price model is fitted; plotted patterns alone do not establish a tariff mechanism or causality.
 
-- `cleaned_price_distance_jan_mar_2026.parquet`: all validated rows and source positions.
-- `cleaning_summary.json`: input/output counts and validity checks.
-- `full_jan_mar_sensitivity_by_lbase.parquet`: all rows, four candidate epsilon calculations and supporting formula columns.
+### Very short distances and raw-source validation
 
-Analysis files:
+Exactly 0.01 mile occurs in **54,993 trips (0.517805%)**. It is distinct from distance close to L_base: raw distance near zero generally yields a relative-distance deviation near −1, whereas distance near L_base makes the ratio denominator small.
 
-- `cleaning_summary.json`: identical copy of processed cleaning report.
-- `lbase_price_window_comparison.csv`: four reference windows and support/distribution statistics.
-- `near_zero_distance_deviation_diagnostic.csv`: denominator-band counts and absolute-epsilon summaries.
-- `distance_distribution_diagnostic.csv`: raw-distance quantiles, mean and empirical bands.
-- `short_distance_examples.csv`: 100 shortest traceable observations.
-- `full_jan_mar_sensitivity_summary_by_lbase.csv`: complete-population candidate summaries.
-- `full_jan_mar_epsilon_bins_by_lbase.csv`: full and central-view bin counts.
-- `price_distance_summary.csv`: full-data overall and exact-value conditional summaries.
-- `clear_rain_hour_sensitivity_by_lbase.csv`: actual weather/hour summaries.
-- `extreme_sensitivity_examples_by_lbase.csv`: traceable full-population extreme examples.
-- `summary.json`: authority hash, references, results, unresolved decisions and preservation checks.
+| month | N | valid_monthly_N | percentage |
+| --- | --- | --- | --- |
+| 2026-01 | 18440 | 3560712 | 0.517874 |
+| 2026-02 | 19590 | 3249875 | 0.602792 |
+| 2026-03 | 16963 | 3809822 | 0.445244 |
 
-Charts: `epsilon_tau_025_full.png`, `epsilon_tau_025_p01_p99.png`, and corresponding `050`, `100`, `200` figures; `price_distance_full_density.png`, `price_distance_central_density.png`, `price_distance_conditional_spreads.png`.
+The pattern occurs across all three months. Duration median is 14.716667 minutes, P05 0.150000, P95 36.000000, and maximum 1755.100000. There are 68 zero-duration records, retained and flagged; no missing durations were reported for this cohort.
 
-No optional 1,000-row sample was created. All main calculations use the full January–March population. Focused validation checks cover basic validity, row preservation, all persisted formula columns for every row and candidate, exact-zero flags, 44-group support/gaps, histogram and denominator-band totals, and unchanged hashes for prior passenger-sensitivity artifacts. The analysis is isolated from previous results and production code.
+Only 13.765388% have identical recorded pickup/dropoff zones; 86.234612% differ. This does not directly measure geographic distance, but it argues against a uniformly stationary/local interpretation.
+
+Fare median is $25.19, mean $29.370123, P05 $3.70, P95 $70.00, and maximum $623.70. Median total_amount is $30.75. Missing RatecodeID and payment_type 0 coincide in 48,814 records. These raw code values are not assigned unverified semantic meanings.
+
+| distance | N | median_fare | median_duration_minutes | same_zone_percentage | missing_location_N |
+| --- | --- | --- | --- | --- | --- |
+| 0.010000 | 54993 | 25.190000 | 14.716667 | 13.765388 | 0 |
+| 0.020000 | 14337 | 24.200000 | 10.750000 | 29.964428 | 0 |
+| 0.030000 | 4656 | 20.435000 | 0.533333 | 67.160653 | 0 |
+| 0.040000 | 3888 | 24.000000 | 0.400000 | 70.344650 | 0 |
+| 0.050000 | 3428 | 25.980000 | 0.450000 | 65.985998 | 0 |
+| 0.100000 | 6294 | 5.100000 | 1.866667 | 59.850651 | 0 |
+| 0.250000 | 4460 | 5.100000 | 2.700000 | 46.457399 | 0 |
+| 0.500000 | 70158 | 5.800000 | 4.491667 | 24.074232 | 0 |
+| 1.000000 | 107638 | 9.010000 | 7.983333 | 3.260930 | 0 |
+
+The 0.01-mile and 0.02-mile cohorts have substantially elevated fares/durations relative to several adjacent short-distance values. Source evidence is mixed: zero/extreme durations, missing metadata and substantial fares with tiny recorded distances warrant review, but do not prove all short trips invalid. Zone boundaries, waiting time and different fare arrangements cannot be resolved conclusively from these fields. A universal L_min is **not justified**.
+
+The raw source diagnostic preserves 54,993 matched rows and available fare components, timestamps and zone/rate/payment fields. Matching uses pickup timestamp, fare, distance and occurrence order for duplicate keys. Multiplicities reconcile, but identity within otherwise indistinguishable duplicate keys is not independently provable. The 500-row manual review is a deterministic inspection set, not the population used for statistics.
+
+## Current Methodological Status
+
+The following remain unresolved methodology decisions; none is finalized:
+
+- tau_P.
+- The resulting final L_base.
+- L_min.
+- Near-zero relative-distance-deviation treatment.
+- epsilon_min and epsilon_max.
+- Final sensitivity distribution.
+- Truncated-normal parameters.
+
+Existing candidate estimates and review flags are evidence for those decisions, not approved parameter choices. All full-data observations remain retained. The available results neither authorize automatic deletion of extremes nor establish a truncated Normal distribution as the appropriate model.
+
+## Required Next Steps
+
+1. **Supervisor/research agreement:** decide tau_P and final L_base using substantive reference rationale and the documented numerical sensitivity.
+2. **Supervisor/methodology agreement:** decide principled handling of observations where abs((L−L_base)/L_base) approaches zero; review numerical and source-quality implications separately.
+3. **Implementation after steps 1–2:** recalculate the authoritative epsilon distribution using those frozen decisions and document support and exclusions, if any.
+4. **Empirical assessment and methodology agreement:** determine empirically justified epsilon_min and epsilon_max; do not infer them solely from the current tails or candidate SD ranking.
+5. **Implementation after the relevant decisions:** rerun/finalize Clear/Rain weather-hour statistics using the frozen method.
+6. **Comparative analysis and research decision:** compare group distributions and determine whether separate sensitivity models are necessary.
+7. **Model selection, agreement and validation:** select and validate the bounded/truncated empirical distribution; estimate parameters only for the agreed model and population.
+8. **Implementation after model validation:** only then define the passenger-sensitivity sampler for simulation. Simulation integration is not established by the present diagnostic results.
+
+## Key Files for Review
+
+Paths below are relative to this analysis folder unless a processed-data path is stated. The current artifacts form a complete evidence package; `summary.json` records the original full-data run and is not a consolidated summary of every subsequent extension.
+
+- [cleaning_summary.json](cleaning_summary.json): Input/output counts and original basic-validity checks.
+- [summary.json](summary.json): Original full-data references, candidate summaries, authority and preservation metadata.
+- [lbase_price_window_comparison.csv](lbase_price_window_comparison.csv): Exact references, support and within-window distance statistics.
+- [full_jan_mar_sensitivity_summary_by_lbase.csv](full_jan_mar_sensitivity_summary_by_lbase.csv): Complete-population candidate mean, median, SD, variance, quantiles, sign counts and extrema.
+- [clear_rain_hour_sensitivity_by_lbase.csv](clear_rain_hour_sensitivity_by_lbase.csv): 176 observed candidate/weather/hour records.
+- [full_jan_mar_epsilon_bins_by_lbase.csv](full_jan_mar_epsilon_bins_by_lbase.csv): Full and central-view bin counts and percentages.
+- [near_zero_distance_deviation_diagnostic.csv](near_zero_distance_deviation_diagnostic.csv): Five relative-distance-deviation bands for each candidate.
+- [distance_distribution_diagnostic.csv](distance_distribution_diagnostic.csv): Full raw-distance distribution and descriptive bands.
+- [short_distance_examples.csv](short_distance_examples.csv): 100 shortest observations for inspection.
+- [price_distance_summary.csv](price_distance_summary.csv): Full-data overall and repeated-price/distance conditional summaries.
+- [extreme_sensitivity_examples_by_lbase.csv](extreme_sensitivity_examples_by_lbase.csv): Initial top-20 extreme inspection per candidate.
+- [distance_precision_summary.csv](distance_precision_summary.csv): Grid-alignment metrics, increments, frequent values and counts around 2.90–3.10 miles.
+- [lbase_nearest_distance_grid.csv](lbase_nearest_distance_grid.csv): Observed distances immediately below/above each reference.
+- [variance_contribution_by_distance_denominator_band.csv](variance_contribution_by_distance_denominator_band.csv): Five-band contributions to full-candidate squared deviations.
+- [extreme_epsilon_by_lbase.csv](extreme_epsilon_by_lbase.csv): Expanded top-100 inspection per candidate (400 rows).
+- [short_distance_cohort_summary.csv](short_distance_cohort_summary.csv): Overlapping short-distance cohorts with fare/distance/weather/hour summaries.
+- [distance_001_examples.csv](distance_001_examples.csv): Stable 100-row exact 0.01-mile inspection.
+- [lbase_candidate_decision_table.csv](lbase_candidate_decision_table.csv): Reference, sensitivity and near-zero variance comparison.
+- [price_distance_binned_curve.csv](price_distance_binned_curve.csv): Full-data distance-bin fare medians and quartiles.
+- [short_distance_disjoint_cohorts.csv](short_distance_disjoint_cohorts.csv): Non-overlapping distance cohort support and fare statistics.
+- [distance_001_full_source_diagnostic.parquet](distance_001_full_source_diagnostic.parquet): All 54,993 source-linked 0.01-mile records and duration/source-quality fields.
+- [distance_001_duration_bands.csv](distance_001_duration_bands.csv): Selected cohort duration support, including nonpositive duration.
+- [distance_001_fare_bands.csv](distance_001_fare_bands.csv): Fare-band support for exact 0.01-mile trips.
+- [distance_001_top_location_pairs.csv](distance_001_top_location_pairs.csv): Twenty most frequent raw zone pairs.
+- [distance_001_monthly_stability.csv](distance_001_monthly_stability.csv): Monthly cohort counts and percentages of valid monthly trips.
+- [short_distance_exact_value_comparison.csv](short_distance_exact_value_comparison.csv): Exact-distance fare/duration and same-zone comparisons.
+- [distance_001_manual_review.csv](distance_001_manual_review.csv): 500 distinct representative raw-linked rows with selection labels.
+- [short_distance_source_validation_summary.json](short_distance_source_validation_summary.json): Raw-source checksums, traceability caveat and source-validation statistics.
+- [record029_analysis_population_summary.csv](record029_analysis_population_summary.csv): Consolidated population flags/status counts overall and monthly.
+
+### Processed full-population files
+
+- [cleaned_price_distance_jan_mar_2026.parquet](../../../data/processed/price_distance_sensitivity_record029/cleaned_price_distance_jan_mar_2026.parquet): Validated full-population source fields and original row position.
+- [cleaning_summary.json](../../../data/processed/price_distance_sensitivity_record029/cleaning_summary.json): Processed copy of the validity report.
+- [full_jan_mar_sensitivity_by_lbase.parquet](../../../data/processed/price_distance_sensitivity_record029/full_jan_mar_sensitivity_by_lbase.parquet): Completed four-candidate formula columns and epsilon for all rows.
+- [record029_analysis_population_jan_mar_2026.parquet](../../../data/processed/price_distance_sensitivity_record029/record029_analysis_population_jan_mar_2026.parquet): Consolidated historical population with diagnostic flags, review statuses and embedded definitions.
+
+### Figures
+
+- [epsilon_tau_025_full.png](charts/epsilon_tau_025_full.png): Candidate distribution: full observed range, all tails retained.
+- [epsilon_tau_025_p01_p99.png](charts/epsilon_tau_025_p01_p99.png): Candidate distribution: central P01–P99 visualization only.
+- [epsilon_tau_050_full.png](charts/epsilon_tau_050_full.png): Candidate distribution: full observed range, all tails retained.
+- [epsilon_tau_050_p01_p99.png](charts/epsilon_tau_050_p01_p99.png): Candidate distribution: central P01–P99 visualization only.
+- [epsilon_tau_100_full.png](charts/epsilon_tau_100_full.png): Candidate distribution: full observed range, all tails retained.
+- [epsilon_tau_100_p01_p99.png](charts/epsilon_tau_100_p01_p99.png): Candidate distribution: central P01–P99 visualization only.
+- [epsilon_tau_200_full.png](charts/epsilon_tau_200_full.png): Candidate distribution: full observed range, all tails retained.
+- [epsilon_tau_200_p01_p99.png](charts/epsilon_tau_200_p01_p99.png): Candidate distribution: central P01–P99 visualization only.
+- [price_distance_binned_median_and_short_trips.png](charts/price_distance_binned_median_and_short_trips.png): 0–10-mile median/IQR curve and disjoint short-distance fare comparison.
+- [price_distance_central_density.png](charts/price_distance_central_density.png): Marginal-P99 density view; full-data statistics unchanged.
+- [price_distance_conditional_spreads.png](charts/price_distance_conditional_spreads.png): Median/P05–P95 spreads at repeated exact fares and distances.
+- [price_distance_full_density.png](charts/price_distance_full_density.png): Full-range aggregated price–distance density.
+
+## Evidence Boundaries
+
+The completed work establishes full-population candidate calculations, numerical reference sensitivity, source-validation findings and a traceable population with review flags. It does not establish the final reference window, a universal distance cutoff, an epsilon deletion policy or a simulation-ready distribution. Review labels and diagnostic bounds preserve observations rather than adjudicating validity. Methodological agreement and subsequent frozen-method implementation remain distinct stages.
