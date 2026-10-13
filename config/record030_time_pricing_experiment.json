@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED_PENDING_RECORD029_RESPONSE_INTEGRATION",
+  "seed": 42,
+  "sampler": "EMPIRICAL_RESAMPLE",
+  "empirical_source": "data/processed/price_distance_sensitivity_record029/final_passenger_sensitivity_empirical.parquet",
+  "policies": [
+    {"mode": "EXPERIMENT_A", "daytime_factor": 1.0, "other_factor": 1.0},
+    {"mode": "TIME_OF_DAY", "daytime_factor": 0.95, "other_factor": 1.0},
+    {"mode": "TIME_OF_DAY", "daytime_factor": 1.05, "other_factor": 1.0},
+    {"mode": "TIME_OF_DAY", "daytime_factor": 1.10, "other_factor": 1.0},
+    {"mode": "TIME_OF_DAY", "daytime_factor": 1.0, "other_factor": 1.05}
+  ]
+}

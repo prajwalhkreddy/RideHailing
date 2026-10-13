@@ -1,0 +1,24 @@
+stage,rule,resulting_N,removed_or_excluded_N,percentage_removed_or_excluded,percentage_denominator_N,note,source,mean,median,population_SD
+upstream,Initial three Jan–Mar input files,11077206.0,,,,,population_manifest.json sources.raw_rows,,,
+upstream,"Pickup in [2026-01-01,2026-04-01)",11077196.0,10.0,9.0275471991764e-05,11077206.0,,population_manifest.json sources.in_window_rows,,,
+upstream validity audit,invalid_timestamp,,0.0,0.0,11077196.0,Overlapping failure count; sequential removal count not separately persisted,population_manifest.json failures_in_window,,,
+upstream validity audit,nonfinite_fare,,0.0,0.0,11077196.0,Overlapping failure count; sequential removal count not separately persisted,population_manifest.json failures_in_window,,,
+upstream validity audit,nonfinite_distance,,0.0,0.0,11077196.0,Overlapping failure count; sequential removal count not separately persisted,population_manifest.json failures_in_window,,,
+upstream validity audit,nonpositive_fare,,94363.0,0.851867205383023,11077196.0,Overlapping failure count; sequential removal count not separately persisted,population_manifest.json failures_in_window,,,
+upstream validity audit,nonpositive_distance,,370198.0,3.341982935031573,11077196.0,Overlapping failure count; sequential removal count not separately persisted,population_manifest.json failures_in_window,,,
+upstream,Combined finite positive fare/distance and valid timestamp,10620887.0,456309.0,4.11935475367593,11077196.0,Union count from persisted input/output totals; individual counts overlap,population_manifest.json,,,
+upstream,Hourly weather match,10620887.0,0.0,0.0,10620887.0,,population_manifest.json,,,
+source cleaning,Retain 0 < trip_distance <=100 miles,10620409.0,478.0,0.0045005657248777,10620887.0,,source_cleaning_manifest.json,,,
+Record-029 revalidation,invalid_fare,10620409.0,0.0,0.0,10620409.0,No additional removal,Record-029 cleaning_summary.json,,,
+Record-029 revalidation,invalid_distance,10620409.0,0.0,0.0,10620409.0,No additional removal,Record-029 cleaning_summary.json,,,
+Record-029 revalidation,invalid_hour,10620409.0,0.0,0.0,10620409.0,No additional removal,Record-029 cleaning_summary.json,,,
+Record-029 revalidation,invalid_weather,10620409.0,0.0,0.0,10620409.0,No additional removal,Record-029 cleaning_summary.json,,,
+Record-029 revalidation,invalid_timestamp,10620409.0,0.0,0.0,10620409.0,No additional removal,Record-029 cleaning_summary.json,,,
+denominator resolution,Unresolved: abs(distance-L_base)<0.005 mile,9017.0,,,10620409.0,"Retained historical rows; undefined epsilon, not source removal",Record-029 README and authoritative epsilon status,,,
+denominator resolution,VALID epsilon,10611392.0,,,,"9,017 unresolved rows remain in historical data",authoritative epsilon status,0.6471808321368215,0.7671724775333326,7.037255473849047
+simulation support,Below empirical P0.5,,53057.0,0.5000003769533724,10611392.0,Valid history excluded only from simulation support,frozen_epsilon_support.json,,,
+simulation support,Above empirical P99.5,,53057.0,0.5000003769533724,10611392.0,Valid history excluded only from simulation support,frozen_epsilon_support.json,,,
+simulation support,"Inclusive frozen support, all weather",10505278.0,106114.0,1.0000007539067448,10611392.0,Not cleaning,frozen_epsilon_support.json,,,
+reporting scope,Supported Clear/Rain,3265135.0,,,,"Weather scope, not a validity filter",authoritative epsilon and hourly counts,,,
+descriptive supported weather summary,Clear,3050121.0,,,,Not a cleaning step,Authoritative supported epsilon; reconciles to hourly CSV,0.6217374587344199,0.734564667636877,1.4783786610521161
+descriptive supported weather summary,Rain,215014.0,,,,Not a cleaning step,Authoritative supported epsilon; reconciles to hourly CSV,0.6547038693007173,0.7790428199242082,1.5125826352672285

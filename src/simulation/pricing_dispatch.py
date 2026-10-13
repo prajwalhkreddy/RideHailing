@@ -18,6 +18,7 @@ from src.dispatch.dispatch import (
 from src.dispatch.request import RequestState, RequestStatus
 from src.fleet.fleet import Fleet
 from src.fleet.supply import aggregate_grid_supply
+from src.pricing.time_policy import TimePricingPolicy
 from src.pricing.customer import draw_customer_acceptance, offered_fare
 from src.pricing.customer_sensitivity import HistoricalCustomerSensitivityModel
 from src.pricing.linucb import DisjointLinUCB, PricingDecision
@@ -353,6 +354,7 @@ def run_pricing_dispatch_slot(
     dispatch_model: str = DISPATCH_MODEL_LEGACY,
     contention_inputs: DriverContentionInputs | None = None,
     contention_observer: Callable[[ContentionEvaluation], None] | None = None,
+    time_pricing_policy: TimePricingPolicy | None = None,
 ) -> PricingDispatchSlotResult:
     """Run exactly one main slot, selecting once and updating at slot end.
 
@@ -360,6 +362,8 @@ def run_pricing_dispatch_slot(
     update only when at least one request creates a pricing opportunity. An
     empty ``context_inputs`` mapping creates neither a decision nor an update.
     """
+    if time_pricing_policy is not None:
+        time_pricing_policy.require_runtime_support()
     if not isinstance(acceptance_rng, np.random.Generator):
         raise ValueError("acceptance_rng must be an explicit numpy.random.Generator.")
     if customer_response_model not in CUSTOMER_RESPONSE_MODELS:
