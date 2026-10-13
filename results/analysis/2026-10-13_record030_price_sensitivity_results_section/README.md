@@ -21,7 +21,7 @@ The hourly CSV reuses all 44 observed groups (24 Clear, 20 Rain). Missing Rain h
 | Clear | 3050121 | 0.621737 | 0.734565 | 1.478379 |
 | Rain | 215014 | 0.654704 | 0.779043 | 1.512583 |
 
-Hourly means vary less than hourly dispersion; lower SD is not synonymous with lower mean sensitivity. See the separate hourly mean and SD figures.
+Hourly means vary less than hourly dispersion; lower SD is not synonymous with lower mean sensitivity. The separate hourly mean and SD figure titles identify the frozen P0.5–P99.5 support. The six-hour figure presents only mean and population SD; medians remain in the CSV.
 
 ## 5. Grouped 6-Hour Results
 G1=00–05, G2=06–11, G3=12–17 and G4=18–23. Quantiles and population SD are pooled from actual stored epsilon, not averaged hourly quantiles. Both conditions have minimum SD in G3 and maximum SD in G1; mean ordering differs.
@@ -38,7 +38,7 @@ G1=00–05, G2=06–11, G3=12–17 and G4=18–23. Quantiles and population SD a
 | Rain | G4 | 18–23 | 72271 | 0.635867 | 0.792883 | 1.539304 |
 
 ## 6. 8 AM–8 PM Variability Check
-Clear descriptive difference: daytime (08–19) has lower dispersion than OTHER (20–23 and 00–07) in both weather conditions. Clear pooled SD is 1.383509 versus 1.651547 (difference −0.268038; ratio 0.837705), and Rain is 1.298893 versus 1.763551 (difference −0.464658; ratio 0.736521). Weighted mean hourly SD and median hourly SD show the same direction. This does not establish a continuous trend, a causal weather effect, or lower average sensitivity.
+Descriptive evidence of lower daytime dispersion: daytime (08–19) has lower dispersion than OTHER (20–23 and 00–07) in both weather conditions. Clear pooled SD is 1.383509 versus 1.651547 (difference −0.268038; ratio 0.837705), and Rain is 1.298893 versus 1.763551 (difference −0.464658; ratio 0.736521). Weighted mean hourly SD and median hourly SD show the same direction. This does not establish a continuous trend, a causal weather effect, or lower average sensitivity.
 
 | weather_name | period | N | mean | median | population_SD | weighted_mean_hourly_SD | median_hourly_SD |
 | --- | --- | --- | --- | --- | --- | --- | --- |

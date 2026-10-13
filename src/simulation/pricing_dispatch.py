@@ -208,6 +208,7 @@ def _run_request_pricing_dispatch_slot(
     linucb_reward_scaling: str, dispatch_model: str,
     contention_inputs: DriverContentionInputs | None,
     contention_observer: Callable[[ContentionEvaluation], None] | None,
+    time_pricing_policy: TimePricingPolicy | None = None,
 ) -> PricingDispatchSlotResult:
     """Select every request first, dispatch accepted requests, then update each once."""
     timestamp = pd.Timestamp(simulation_timestamp)
@@ -246,6 +247,7 @@ def _run_request_pricing_dispatch_slot(
     for request in ordered:
         context, decision, resolved = selected[request.request_id]
         inputs = context_inputs[request.origin_grid]
+        effective_factor = decision.pricing_factor if time_pricing_policy is None else time_pricing_policy.apply(decision.pricing_factor, simulation_timestamp.hour)
         if customer_response_model == CUSTOMER_MODEL_EQ31:
             fare = offered_fare(request.base_fare, decision.pricing_factor)
             acceptance = draw_customer_acceptance(
@@ -258,7 +260,7 @@ def _run_request_pricing_dispatch_slot(
             if request.trip_distance_miles is None:
                 raise ValueError("historical_sensitivity mode requires request trip_distance_miles.")
             historical = historical_customer_model.evaluate_resolved(
-                resolved, request.trip_distance_miles, decision.pricing_factor,
+                resolved, request.trip_distance_miles, effective_factor,
             )
             fare, accepted, probability = historical.p_dispatch, historical.accepted, None
             request.customer_model = CUSTOMER_MODEL_HISTORICAL
@@ -266,7 +268,7 @@ def _run_request_pricing_dispatch_slot(
             request.historical_p_base, request.historical_d_base = historical.p_base, historical.d_base
             request.epsilon_customer, request.p_max = historical.epsilon_customer, historical.p_max
             request.sensitivity_lookup_level = historical.sensitivity_lookup_level
-        request.pricing_factor, request.offered_fare = decision.pricing_factor, fare
+        request.pricing_factor, request.offered_fare = effective_factor, fare
         request.acceptance_probability, request.customer_accepted = probability, accepted
         request.pricing_context, request.selected_arm = tuple(context.tolist()), decision.arm_index
         pending.append(PendingRequestPricingDecision(request.request_id, context.copy(), decision, float(fare), bool(accepted)))
@@ -363,7 +365,9 @@ def run_pricing_dispatch_slot(
     empty ``context_inputs`` mapping creates neither a decision nor an update.
     """
     if time_pricing_policy is not None:
-        time_pricing_policy.require_runtime_support()
+        time_pricing_policy.require_runtime_support(customer_response_model)
+        if time_pricing_policy.mode != "BASELINE" and simulation_timestamp is None:
+            raise ValueError("Experimental time pricing requires simulation_timestamp")
     if not isinstance(acceptance_rng, np.random.Generator):
         raise ValueError("acceptance_rng must be an explicit numpy.random.Generator.")
     if customer_response_model not in CUSTOMER_RESPONSE_MODELS:
@@ -436,7 +440,7 @@ def run_pricing_dispatch_slot(
             corrected_supply=corrected_supply, grid_lookup=grid_lookup, popularity_table=popularity_table,
             linucb_reward_scaling=linucb_reward_scaling,
             dispatch_model=dispatch_model, contention_inputs=contention_inputs,
-            contention_observer=contention_observer,
+            contention_observer=contention_observer, time_pricing_policy=time_pricing_policy,
         )
     decisions: dict[int, PricingDecision] = {}
     accumulators: dict[int, ContextRevenueAccumulator] = {}
@@ -465,6 +469,7 @@ def run_pricing_dispatch_slot(
         context_id = request.origin_grid
         decision = decisions[context_id]
         context_input = context_inputs[context_id]
+        effective_factor = decision.pricing_factor if time_pricing_policy is None or time_pricing_policy.mode == "BASELINE" else time_pricing_policy.apply(decision.pricing_factor, simulation_timestamp.hour)
         if customer_response_model == CUSTOMER_MODEL_EQ31:
             fare = offered_fare(request.base_fare, decision.pricing_factor)
             acceptance = draw_customer_acceptance(
@@ -481,7 +486,7 @@ def run_pricing_dispatch_slot(
             try:
                 historical = historical_customer_model.evaluate(  # type: ignore[union-attr]
                     float(weather_code), int(period), request.trip_distance_miles,
-                    decision.pricing_factor,
+                    effective_factor,
                 )
             except KeyError as error:
                 raise KeyError(
@@ -496,7 +501,7 @@ def run_pricing_dispatch_slot(
             request.historical_d_base = historical.d_base
             request.epsilon_customer = historical.epsilon_customer
             request.p_max = historical.p_max
-        request.pricing_factor = decision.pricing_factor
+        request.pricing_factor = effective_factor
         request.offered_fare = fare
         request.acceptance_probability = probability
         request.customer_accepted = accepted

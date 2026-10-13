@@ -1,7 +1,7 @@
 # Passenger Price–Distance Sensitivity Results
 
 ### A. Dataset and study period
-The analysis uses January–March 2026 taxi observations with actual Clear and Rain weather conditions. The source counts and population transitions are reported in [Table 1](record030_dataset_cleaning_flow.csv).
+The analysis uses the full cleaned January–March 2026 historical population. Detailed hourly weather comparisons in this subsection focus on observations classified as Clear or Rain. The source counts and population transitions are reported in [Table 1](record030_dataset_cleaning_flow.csv).
 
 ### B. Cleaning and retained observations
 The three January–March 2026 input files contain 11,077,206 trips. Ten lie outside the pickup window [2026-01-01,2026-04-01), leaving 11,077,196. Combined finite-positive fare/distance and timestamp validity leaves 10,620,887 (456,309 excluded). The existing ≤100-mile source rule removes 478, yielding 10,620,409 cleaned trips. Record-029 revalidation removes zero additional rows. The denominator rule marks 9,017 historical rows unresolved, leaving 10,611,392 VALID epsilon observations. Inclusive simulation support retains 10,505,278; 53,057 valid observations below and 53,057 above remain historical data. Supported Clear/Rain scope contains 3,265,135 observations: Clear 3,050,121 and Rain 215,014.
@@ -22,6 +22,8 @@ Across all 10,611,392 VALID observations before simulation-support restriction, 
 | Clear | 3050121 | 0.621737 | 0.734565 | 1.478379 |
 | Rain | 215014 | 0.654704 | 0.779043 | 1.512583 |
 
+The full authoritative VALID population contains 10,611,392 observations and has population SD 7.037255. The hourly Clear/Rain figures use the frozen P0.5–P99.5 supported population: empirical tails outside simulation support are excluded from those plots. Their lower plotted SDs reflect this population-definition difference, together with weather/hour grouping, rather than contradictory statistics.
+
 ### F. Hourly Clear/Rain results
 [Table 2](record030_hourly_clear_rain_statistics.csv) reports N, mean, median, population SD and P05/P25/P75/P95 for each observed hour. Clear covers every hour; Rain lacks hours 05, 10, 11 and 12. [Figure 1](charts/record030_hourly_mean_clear_rain.png) presents means and [Figure 2](charts/record030_hourly_sd_clear_rain.png) presents SD separately, preserving gaps. Hourly fluctuations are descriptive, and the two curves need not rank weather conditions identically.
 
@@ -29,7 +31,7 @@ Across all 10,611,392 VALID observations before simulation-support restriction, 
 [Table 3](record030_six_hour_group_statistics.csv) and [Figure 3](charts/record030_six_hour_clear_rain_comparison.png) use G1 00–05, G2 06–11, G3 12–17 and G4 18–23 for presentation only. Clear SD is 1.666147, 1.536148, 1.337078 and 1.530691, respectively; Rain SD is 1.942595, 1.538050, 1.209440 and 1.539304. Both have their lowest dispersion in G3 and highest in G1. These periods do not replace the simulation T groups.
 
 ### H. 8 AM–8 PM variability finding
-Clear descriptive difference: daytime (08–19) has lower dispersion than OTHER (20–23 and 00–07) in both weather conditions. Clear pooled SD is 1.383509 versus 1.651547 (difference −0.268038; ratio 0.837705), and Rain is 1.298893 versus 1.763551 (difference −0.464658; ratio 0.736521). Weighted mean hourly SD and median hourly SD show the same direction. This does not establish a continuous trend, a causal weather effect, or lower average sensitivity. [Table 4](record030_8am_8pm_variability_check.csv) reports pooled means, medians, SD and both hourly-SD summaries. Daytime is explicitly hours 08–19; OTHER is hours 20–23 and 00–07.
+Descriptive evidence of lower daytime dispersion: daytime (08–19) has lower dispersion than OTHER (20–23 and 00–07) in both weather conditions. Clear pooled SD is 1.383509 versus 1.651547 (difference −0.268038; ratio 0.837705), and Rain is 1.298893 versus 1.763551 (difference −0.464658; ratio 0.736521). Weighted mean hourly SD and median hourly SD show the same direction. This does not establish a continuous trend, a causal weather effect, or lower average sensitivity. [Table 4](record030_8am_8pm_variability_check.csv) reports pooled means, medians, SD and both hourly-SD summaries. Daytime is explicitly hours 08–19; OTHER is hours 20–23 and 00–07.
 
 ### I. Interpretation
-Average sensitivity and dispersion are distinct: a smaller SD denotes a tighter distribution, not necessarily a smaller mean. These observations do not identify causal price elasticity or causal willingness-to-pay. Unequal weather/hour composition and absent Rain hours limit comparisons. Gaussian ±4 sigma was discussed as a possible simulation representation; it is not the selected model. Record-029 compared truncated Normal with empirical distributions and found material quartile/tail mismatch despite moment agreement. EMPIRICAL_RESAMPLE remains selected. No Gaussian was fitted here; sigma=2.18 is not adopted as a current parameter.
+Unequal weather/hour composition and absent Rain hours limit comparisons. Lower SD means lower dispersion, not necessarily lower mean sensitivity. Hourly and grouped results are descriptive; they do not establish causal price elasticity or causal willingness-to-pay.

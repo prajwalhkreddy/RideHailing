@@ -1,13 +1,38 @@
 {
-  "status": "BLOCKED_PENDING_RECORD029_RESPONSE_INTEGRATION",
+  "description": "TIME-OF-DAY PRICING POLICY EXPERIMENT UNDER EXISTING PASSENGER RESPONSE MODEL",
   "seed": 42,
-  "sampler": "EMPIRICAL_RESAMPLE",
-  "empirical_source": "data/processed/price_distance_sensitivity_record029/final_passenger_sensitivity_empirical.parquet",
+  "slots": 4,
+  "customer_response_model": "historical_sensitivity",
   "policies": [
-    {"mode": "EXPERIMENT_A", "daytime_factor": 1.0, "other_factor": 1.0},
-    {"mode": "TIME_OF_DAY", "daytime_factor": 0.95, "other_factor": 1.0},
-    {"mode": "TIME_OF_DAY", "daytime_factor": 1.05, "other_factor": 1.0},
-    {"mode": "TIME_OF_DAY", "daytime_factor": 1.10, "other_factor": 1.0},
-    {"mode": "TIME_OF_DAY", "daytime_factor": 1.0, "other_factor": 1.05}
+    {
+      "name": "control",
+      "mode": "EXPERIMENT_A",
+      "daytime_factor": 1.0,
+      "other_factor": 1.0
+    },
+    {
+      "name": "A",
+      "mode": "TIME_OF_DAY",
+      "daytime_factor": 1.05,
+      "other_factor": 1.0
+    },
+    {
+      "name": "B",
+      "mode": "TIME_OF_DAY",
+      "daytime_factor": 1.1,
+      "other_factor": 1.0
+    },
+    {
+      "name": "C",
+      "mode": "TIME_OF_DAY",
+      "daytime_factor": 1.0,
+      "other_factor": 1.05
+    },
+    {
+      "name": "D",
+      "mode": "TIME_OF_DAY",
+      "daytime_factor": 0.95,
+      "other_factor": 1.0
+    }
   ]
 }

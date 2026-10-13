@@ -23,6 +23,6 @@ class TimePricingTests(unittest.TestCase):
 
     def test_control_guard_before_state_mutation(self):
         policy=TimePricingPolicy.from_config({'mode':'EXPERIMENT_A'})
-        with self.assertRaisesRegex(RuntimeError,'signed Record-029'):
+        with self.assertRaisesRegex(ValueError,'historical_sensitivity'):
             run_pricing_dispatch_slot([],{},None,None,{},2,15,None,time_pricing_policy=policy)
         TimePricingPolicy().require_runtime_support()

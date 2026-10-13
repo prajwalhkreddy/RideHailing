@@ -176,7 +176,8 @@ def _weight_distance(before: Iterable[np.ndarray], after: Iterable[np.ndarray]) 
 class ProductionExperiment:
     """One causally persistent authoritative production experiment."""
 
-    def __init__(self, root: str | Path, *, seed: int = 42, fleet_size: int = FLEET_SIZE) -> None:
+    def __init__(self, root: str | Path, *, seed: int = 42, fleet_size: int = FLEET_SIZE, time_pricing_policy=None) -> None:
+        self.time_pricing_policy = time_pricing_policy
         self.root = Path(root).resolve()
         self.seed = int(seed)
         self.fleet_size = int(fleet_size)
@@ -449,6 +450,7 @@ class ProductionExperiment:
             federate=True, federation_round_index=self.slot_index,
             previous_grid_probabilities=self.previous_grid_probabilities,
             initial_grid_policy_probabilities=self.initial_probabilities,
+            time_pricing_policy=self.time_pricing_policy,
             customer_response_model=CUSTOMER_MODEL_HISTORICAL,
             historical_customer_model=self.customer, weather_code=self._weather_code(timestamp),
             period=timestamp.hour * 2 + timestamp.minute // 30, simulation_timestamp=timestamp,

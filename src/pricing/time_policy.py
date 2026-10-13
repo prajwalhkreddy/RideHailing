@@ -1,13 +1,7 @@
-"""Opt-in Record-030 pricing interface; empirical-response integration is pending."""
+"""Opt-in Record-030 pricing factors under the existing passenger-response model."""
 from dataclasses import dataclass
 import math
 from typing import Mapping
-
-BLOCKER = (
-    'Record-030 experiment blocked: runtime historical_sensitivity samples positive '
-    'truncated Normal and divides by epsilon in maximum_price; it does not implement '
-    'the frozen signed Record-029 empirical sampler or its passenger-response adapter.'
-)
 
 @dataclass(frozen=True)
 class TimePricingPolicy:
@@ -39,7 +33,7 @@ class TimePricingPolicy:
         factor = self.daytime_factor if 8 <= hour <= 19 else self.other_factor
         return existing_factor * factor
 
-    def require_runtime_support(self):
-        """Fail before any simulator mutation, including for the experimental control."""
-        if self.mode != 'BASELINE':
-            raise RuntimeError(BLOCKER)
+    def require_runtime_support(self, customer_response_model='eq31'):
+        """Opt-in factors use the existing historical model without changing Eq31."""
+        if self.mode != 'BASELINE' and customer_response_model != 'historical_sensitivity':
+            raise ValueError('Time pricing experiments require existing historical_sensitivity response')

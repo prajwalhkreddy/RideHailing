@@ -70,7 +70,7 @@ class PricingDispatchIntegrationTests(unittest.TestCase):
 
     def run_historical(
         self, requests, fleet, *, model=None, acceptance_seed=99,
-        learner=None, reward_model="legacy_normalized_accepted_revenue",
+        learner=None, reward_model="legacy_normalized_accepted_revenue", time_pricing_policy=None,
     ):
         return run_pricing_dispatch_slot(
             requests, {0: self.contexts[0]}, learner or DisjointLinUCB(alpha=1.), fleet,
@@ -79,7 +79,7 @@ class PricingDispatchIntegrationTests(unittest.TestCase):
             historical_customer_model=model or self.historical_model(),
             weather_code=1., period=0,
             simulation_timestamp=datetime(2026, 1, 1),
-            reward_model=reward_model,
+            reward_model=reward_model, time_pricing_policy=time_pricing_policy,
         )
 
     def run_request_mode(self, requests, fleet, *, learner=None, model=None, reward_scaling="none"):
@@ -300,6 +300,20 @@ class PricingDispatchIntegrationTests(unittest.TestCase):
         self.assertEqual((context.accepted, context.served, context.accepted_but_unserved), (1, 0, 1))
         self.assertEqual((context.served_revenue, context.linucb_reward), (0., 0.))
         self.assertEqual(learner.update_counts.sum(), 1)
+
+    def test_option_a_factor_preserves_customer_draw_and_threshold(self):
+        from src.pricing.time_policy import TimePricingPolicy
+        def run(policy):
+            return self.run_historical([self.empirical_request(0, 4.)], self.fleet(0),
+                model=self.historical_model(seed=42, sigma=.5), time_pricing_policy=policy).request_audit[0]
+        baseline=run(None)
+        control=run(TimePricingPolicy('EXPERIMENT_A'))
+        change=run(TimePricingPolicy('TIME_OF_DAY',1.,1.05))
+        self.assertEqual(baseline, control)
+        self.assertEqual(control.epsilon_customer,change.epsilon_customer)
+        self.assertEqual(control.p_max,change.p_max)
+        self.assertAlmostEqual(change.offered_fare,control.offered_fare*1.05)
+        self.assertEqual(change.customer_accepted,change.offered_fare<=change.p_max)
 
     def test_historical_mode_uses_artifact_base_miles_and_complete_audit(self) -> None:
         request = self.empirical_request(0, 4., fare=999.)

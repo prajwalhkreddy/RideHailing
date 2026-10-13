@@ -1,0 +1,12 @@
+dimension,current_runtime_sensitivity,record029_epsilon
+parameter name,epsilon_customer (E),epsilon_record029 / epsilon_price_distance (e)
+formula,P_max=P_base*(1+r/E); E=r/relative_threshold_price_deviation where defined,e=relative_price_deviation/relative_distance_deviation
+sign constraints,Strictly positive,Signed; negative and positive supported
+units,Dimensionless inverse coefficient,Dimensionless ratio
+range,"(0,+infinity); or positive point mass if sigma=0","Frozen inclusive support [-12.890744316473482,15.442447741158892]"
+source,Weather/half-hour Normal parameter artifacts and hierarchical fallback,Cleaned Jan–Mar paired fare/distance; frozen empirical T1–T4 sampler
+interpretation,Code-assumed maximum-price inverse distance coefficient,Descriptive historical price-distance sensitivity; not causal WTP
+role in acceptance equation,Divisor in threshold; accept offered<=P_max; absent from Eq31,No established acceptance role; multiplies distance deviation when historical equation rearranged
+behavior near zero,Singular for nonzero relative distance; zero prohibited,Implied fare tends to P_base at fixed distance; reciprocal is singular
+whether reciprocal is mathematically meaningful,E=1/e aligns forms only if e nonzero and references/price meaning match,Algebraic only; negative reciprocals violate runtime sign constraint; no behavioural justification
+whether direct substitution is valid,No,No; DIFFERENT_PARAMETERS
