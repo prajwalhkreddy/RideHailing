@@ -1,6 +1,6 @@
 # Supported weather/time scenario analysis — clarified decision population
 
-## 1. Professor clarification and authority
+## 1. Supported-population analysis definition
 The strict combined population SD < 4 decision rule applies AFTER the already-frozen empirical support restriction. PRIMARY decision population is 10,505,278 supported VALID observations; unrestricted VALID N=10,611,392 is retained ONLY as diagnostic evidence of tail sensitivity. Support was frozen before this weather clustering decision and was not introduced merely to make SD < 4 pass. No epsilon, support, reference or behavioural method changed.
 
 ## 2. Populations and unchanged scenario definitions
@@ -40,7 +40,7 @@ Unscaled Euclidean distance=sqrt((mean_A−mean_B)^2+(SD_A−SD_B)^2); average-l
 These are descriptive statistical similarities, not tested equivalence of full distributions.
 
 ## 5. Candidate K comparison and recommendation
-All clusters at every evaluated K pass the strict pooled SD rule. That rule alone does not determine a useful K. For weather, K2 silhouette=0.798705 with minimum N=16,123; K3=0.608023 separates Heavy Sleet; K4=0.462833 additionally separates shower scenarios. K3/K4 increase fragmentation without improving silhouette. K5–8 also score below K2 and add groups. K2 is recommended because simplicity, separation and support agree, not because a numeric maximum is automatically approved. Its minority group is only about 0.15% of the population, so transportability still needs review.
+All clusters at every evaluated K pass the strict pooled SD rule. That rule alone does not determine a useful K. For weather, K2 silhouette=0.798705 with minimum N=16,123; K3=0.608023 separates Heavy Sleet; K4=0.462833 additionally separates shower scenarios. K3/K4 increase fragmentation without improving silhouette. K5–8 also score below K2 and add groups. K2 is recommended because simplicity, separation and support agree, not because a numeric maximum is automatically selected. Its minority group is only about 0.15% of the population, so transportability still needs review.
 
 | K | silhouette_score | number_of_clusters | minimum_cluster_N | maximum_cluster_N |
 | --- | --- | --- | --- | --- |
@@ -90,7 +90,7 @@ Recommended time diagnostic K2 isolates W16_T4 (Heavy Snowfall 18–23), N=9,746
 | 2 | 9746 | 0.473593 | 0.502160 | 2.347770 | ACCEPT |
 
 ## 9. Manual three-bucket reference
-Reference only, not automatically approved. All three pass SD<4, but semantic labels did not drive the data-derived clusters. Closest pairs cross semantic families (Cloudy–Snowfall; Sleet–Light Snowfall).
+Reference only, not automatically selected. All three pass SD<4, but semantic labels did not drive the data-derived clusters. Closest pairs cross semantic families (Cloudy–Snowfall; Sleet–Light Snowfall).
 
 | group | N | mean_epsilon | median_epsilon | population_SD | Decision |
 | --- | --- | --- | --- | --- | --- |
@@ -98,8 +98,8 @@ Reference only, not automatically approved. All three pass SD<4, but semantic la
 | RAIN | 524578 | 0.647767 | 0.767860 | 1.463619 | ACCEPT |
 | SNOW/FROZEN | 367244 | 0.655315 | 0.786209 | 1.513771 | ACCEPT |
 
-## 10. Professor-facing answers and sign-off
-A: all 14 weather scenarios have SD<4. B: closest is Cloudy–Snowfall, followed by Sleet–Light Snowfall. C: recommend weather-only K2 as a candidate. D/E: pooled SDs 1.443171 and 2.172872, both strictly passing. F: manual three buckets pass, but that alone does not validate semantic grouping. G: time changes some membership but lowers silhouette and does not materially improve the case for a richer representation. H: take weather-only K2 to the professor, alongside the passing manual reference and the caveat that K1 also meets the SD threshold. Final group count, average linkage, support adequacy and downstream distribution representation still require approval.
+## 10. Diagnostic findings and methodology review
+A: all 14 weather scenarios have SD<4. B: closest is Cloudy–Snowfall, followed by Sleet–Light Snowfall. C: recommend weather-only K2 as a candidate. D/E: pooled SDs 1.443171 and 2.172872, both strictly passing. F: manual three buckets pass, but that alone does not validate semantic grouping. G: time changes some membership but lowers silhouette and does not materially improve the case for a richer representation. H: consider weather-only K2 in methodology review, alongside the passing manual reference and the caveat that K1 also meets the SD threshold. Final group count, average linkage, support adequacy and downstream distribution representation remained subject to methodology review in this earlier analysis.
 
 ## 11. Diagnostic provenance and file guide
 Current decision outputs are the 11 requested CSVs ending `_supported.csv`. The original weather/time supported statistics are unchanged; new supported pairwise, K evaluations, pooled-cluster summaries, recommended mappings and manual reference are added. Recommended mappings preserve original_weather_code, original_weather_name and original_time_period.

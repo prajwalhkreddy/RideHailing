@@ -1,4 +1,4 @@
-# Professor weather/time scenario analysis
+# Earlier weather/time scenario diagnostic analysis
 
 ## 1. Objective
 Assess original scenarios using descriptive mean/SD geometry and true pooled SD. No semantic regrouping or model training is performed.
@@ -7,7 +7,7 @@ Assess original scenarios using descriptive mean/SD geometry and true pooled SD.
 PRIMARY: all 10,611,392 VALID epsilon rows, before support restriction. SECONDARY: 10,505,278 VALID rows within inclusive [−12.890744316473482,15.442447741158892]. Existing epsilon is read, never recalculated. Primary statistics alone govern clustering and strict SD decisions.
 
 ## 3. Original weather scenarios
-All 14 codes retain the labels specified in the professor request.
+All 14 codes retain the original Meteostat labels.
 
 | weather_code | weather_name | N | mean_epsilon | median_epsilon | population_SD |
 | --- | --- | --- | --- | --- | --- |
@@ -41,7 +41,7 @@ Euclidean distance in unscaled [mean, population SD], using signed A−B differe
 | W01 | W12 | 0.173329 |
 
 ## 6. Clustering method
-Agglomerative average linkage, Euclidean metric, no scaling and no weather-name inputs. Linkage and sparse threshold are implementation choices, not professor prescriptions. Scenarios ordered by code/time; IDs canonicalized by first member. Weather K=2–8 and weather-time K=2–12. Silhouette uses scenario points, not replicated trips. Recommendation eligibility requires every cluster SD<4 and minimum cluster N≥1,000; among eligible choices highest silhouette wins, ties lower K. Interpretability still requires review; no automatic approval.
+Agglomerative average linkage, Euclidean metric, no scaling and no weather-name inputs. Linkage and sparse threshold are implementation choices, not frozen methodology decisions. Scenarios ordered by code/time; IDs canonicalized by first member. Weather K=2–8 and weather-time K=2–12. Silhouette uses scenario points, not replicated trips. Recommendation eligibility requires every cluster SD<4 and minimum cluster N≥1,000; among eligible choices highest silhouette wins, ties lower K. Interpretability still requires review; no automatic methodology selection.
 
 ## 7. Candidate clustering results
 Weather recommendation: NO ACCEPTABLE CLUSTERING FOUND. Weather-time recommendation: NO ACCEPTABLE CLUSTERING FOUND.
@@ -110,11 +110,11 @@ Support restricts tails and changes dispersion; its results must not be substitu
 | 17 | 4.238875 | 1.428979 |
 | 21 | 3.759910 | 1.475881 |
 
-## 13. Recommended professor-facing conclusion
-No acceptable exhaustive grouping is established on the primary population. Cloudy/Clear/Fair/Fog and rain/snow semantics are not assumed interchangeable; compare their distances and candidate memberships below. Adding time changes the points and memberships, but does not resolve the full-population SD constraint. A single approved grouping for later representation is not supported by this analysis. No causal inference or willingness-to-pay interpretation is made.
+## 13. Diagnostic conclusion
+No acceptable exhaustive grouping is established on the primary population. Cloudy/Clear/Fair/Fog and rain/snow semantics are not assumed interchangeable; compare their distances and candidate memberships below. Adding time changes the points and memberships, but does not resolve the full-population SD constraint. A single final grouping for later representation is not supported by this analysis. No causal inference or willingness-to-pay interpretation is made.
 
-## 14. Methodology decisions still requiring approval
-Average linkage, candidate-K selection and support adequacy criteria require review. If the strict rule remains necessary, the professor must decide whether selected subsets or another explicitly approved population definition is intended. Do not silently switch to supported rows. Observations were NOT combined for joint model training; raw records are only pooled for correct descriptive statistics. Original labels remain preserved; grouping uses sensitivity statistics, not semantic names. DQN/RL, acceptance and pricing are out of scope.
+## 14. Earlier unresolved methodology decisions
+Average linkage, candidate-K selection and support adequacy criteria require review. If the strict rule remains necessary, methodology review must establish whether selected subsets or another explicitly defined population definition is intended. Do not silently switch to supported rows. Observations were NOT combined for joint model training; raw records are only pooled for correct descriptive statistics. Original labels remain preserved; grouping uses sensitivity statistics, not semantic names. DQN/RL, acceptance and pricing are out of scope.
 
 ## Validation and files
 Counts reconcile for both weather and weather-time populations. Every retained observation has exactly one code and one presentation period. No epsilon values or protected files changed; hashes verified after generation. Four figures use primary statistics and explicitly show infeasibility when no recommendation exists. Recommended mapping CSVs retain original scenarios with blank candidate IDs and an explicit no-solution status when applicable. All required CSVs and figures are in this folder; reproduce_analysis.py is the self-contained reproduction entry point.
@@ -193,7 +193,7 @@ Not acceptable unless all pooled clusters pass.
 | W17_T2 | Rain Shower | 1 |
 | W21_T2 | Snow Shower | 1 |
 
-## Direct answers to the professor's scenario questions
+## Direct answers to the diagnostic scenario questions
 
 A. Closest mean/SD pairs are Cloudy–Fog (distance 0.030951), Fair–Light Rain (0.104557), Clear–Heavy Rain (0.120378), and Heavy Sleet–Light Snowfall (0.134429). These are descriptive proximity statements, not statistical-equivalence findings.
 

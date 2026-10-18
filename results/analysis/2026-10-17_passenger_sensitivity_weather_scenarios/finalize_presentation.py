@@ -16,8 +16,8 @@ for weather,fn,title in [(True,'weather_mean_sd_scatter.png','Original weather s
    label=f"{int(r.weather_code)} {r.weather_name}" if weather else r.Scenario_ID
    ax.annotate(label,(r.mean_epsilon,r.population_SD),xytext=(tx,y),ha='right' if side else 'left',va='center',fontsize=9,arrowprops=dict(arrowstyle='-',color='gray',lw=.5),bbox=dict(facecolor='white',edgecolor='none',pad=1))
  ax.axhline(4,color='firebrick',ls='--');ax.set(xlabel='Mean epsilon — full VALID population',ylabel='Population SD',title=title+'\nAll points retained; dashed line marks SD=4 (acceptance requires strictly below)');fig.tight_layout();fig.savefig(O/'charts'/fn,dpi=240);plt.close(fig)
-p=O/'README.md';s=p.read_text().split('## Direct answers to the professor')[0].rstrip()+'\n';s+='''
-## Direct answers to the professor's scenario questions
+p=O/'README.md';s=p.read_text().split('## Direct answers to the diagnostic')[0].rstrip()+'\n';s+='''
+## Direct answers to the diagnostic scenario questions
 
 A. Closest mean/SD pairs are Cloudy–Fog (distance 0.030951), Fair–Light Rain (0.104557), Clear–Heavy Rain (0.120378), and Heavy Sleet–Light Snowfall (0.134429). These are descriptive proximity statements, not statistical-equivalence findings.
 
