@@ -1,0 +1,15 @@
+weather_code,original_weather_name,final_weather_scenario,scenario_interpretation,N,percentage_of_supported_population
+1,Clear,CLEAR,NON-PRECIPITATION CONDITIONS,3050121,29.034176915641833
+2,Fair,CLEAR,NON-PRECIPITATION CONDITIONS,769018,7.320301280937068
+3,Cloudy,CLEAR,NON-PRECIPITATION CONDITIONS,5177886,49.288424352025714
+5,Fog,CLEAR,NON-PRECIPITATION CONDITIONS,616431,5.867821870111386
+7,Light Rain,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",92492,0.8804336258402681
+8,Rain,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",215014,2.046723561242263
+9,Heavy Rain,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",212103,2.019013680551814
+12,Sleet,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",144849,1.3788211982586278
+13,Heavy Sleet,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",21709,0.2066485056368808
+14,Light Snowfall,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",74930,0.71326051533334
+15,Snowfall,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",105496,1.0042190220953695
+16,Heavy Snowfall,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",16123,0.15347523406805608
+17,Rain Shower,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",4969,0.04730003337370035
+21,Snow Shower,RAIN,"PRECIPITATION CONDITIONS, including liquid, frozen and mixed precipitation",4137,0.03938020488367847
