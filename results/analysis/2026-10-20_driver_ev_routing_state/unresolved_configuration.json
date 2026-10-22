@@ -1,0 +1,87 @@
+{
+  "items": {
+    "mu recurrence": {
+      "source_classification": "FOUND_IMPLEMENTATION_ONLY",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "No final authoritative specification/value located in targeted sources."
+    },
+    "sigma recurrence": {
+      "source_classification": "FOUND_IMPLEMENTATION_ONLY",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "No final authoritative specification/value located in targeted sources."
+    },
+    "alpha": {
+      "source_classification": "FOUND_IMPLEMENTATION_ONLY",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "0.3 provisional statistics.ewma_alpha; not manuscript alpha."
+    },
+    "beta": {
+      "source_classification": "FOUND_IMPLEMENTATION_ONLY",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "0.3 shared provisional SD EWMA; not manuscript beta."
+    },
+    "delta": {
+      "source_classification": "NOT_FOUND",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "F_hat recurrence FOUND_AUTHORITATIVE at roadmap paragraph 154; coefficient value NOT_FOUND."
+    },
+    "kappa": {
+      "source_classification": "NOT_FOUND",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "H_hat recurrence FOUND_AUTHORITATIVE at roadmap paragraph 155; coefficient value NOT_FOUND."
+    },
+    "zeta": {
+      "source_classification": "NOT_FOUND",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "Mentioned at roadmap paragraph 156; value and relation NOT_FOUND; not applied."
+    },
+    "sigma safeguard": {
+      "source_classification": "NOT_FOUND",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "No final authoritative specification/value located in targeted sources."
+    },
+    "H_hat safeguard": {
+      "source_classification": "NOT_FOUND",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "No final authoritative specification/value located in targeted sources."
+    },
+    "initial mu prior": {
+      "source_classification": "FOUND_IMPLEMENTATION_ONLY",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "Existing fare bootstrap cutoff Jan25 18:30 only valid for later start; not universal production initialization."
+    },
+    "initial sigma prior": {
+      "source_classification": "FOUND_IMPLEMENTATION_ONLY",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "Existing fare bootstrap cutoff Jan25 18:30 only valid for later start; not universal production initialization."
+    },
+    "initial F_hat prior": {
+      "source_classification": "NOT_FOUND",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "No final authoritative specification/value located in targeted sources."
+    },
+    "initial H_hat prior": {
+      "source_classification": "NOT_FOUND",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "No final authoritative specification/value located in targeted sources."
+    },
+    "charging-wait aggregation": {
+      "source_classification": "FOUND_IMPLEMENTATION_ONLY",
+      "decision_classification": "PROJECT_CONFIG_DECISION_REQUIRED",
+      "note": "No final authoritative specification/value located in targeted sources."
+    }
+  },
+  "additional_blockers": [
+    "155 versus roadmap 169 state dimension",
+    "normalized distance-cost coefficient/definition"
+  ],
+  "scope": [
+    "roadmap paragraphs 137-189",
+    "Charging_Implementation_Step_by_Step.docx",
+    "supervisor/Final_Next_Implementation_Process.docx",
+    "Final_Module_Wise_Algorithm_Input_Output_Document.pdf pages 3 and 11",
+    "supervisor/Implementation Process Document.pdf",
+    "papers/Joint_Optimization_of_Pricing_Dispatching_and_Repositioning_in_Ride-Hailing_With_Multiple_Models_Interplayed_Reinforcement_Learning.pdf targeted term search"
+  ],
+  "production_training_ready": false
+}

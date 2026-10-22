@@ -1,0 +1,13 @@
+{
+  "seed": 42,
+  "requested_start": "2026-03-16 00:00:00",
+  "requested_end": "2026-03-16 02:00:00",
+  "requested_slots": 4,
+  "maximum_conditional_slots": 8,
+  "status": "BLOCKED_BEFORE_EPISODE",
+  "grid_count": 142,
+  "pricing_state_dimension": 13,
+  "routing_state_dimension": 169,
+  "pricing_initialization": "fresh seed42 requested; not reached",
+  "production_entrypoint": "src.simulation.production.ProductionExperiment"
+}

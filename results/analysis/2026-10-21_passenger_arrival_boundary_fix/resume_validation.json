@@ -1,0 +1,28 @@
+{
+  "PASSENGER_ARRIVAL_BLOCKER_RESOLVED": "YES",
+  "resume_from": "2026-03-01 00:30:00",
+  "stopped_at": "2026-03-01 03:00:00",
+  "additional_slots": 5,
+  "subsequent_slots_after_0100": 4,
+  "total_committed_slots": 6,
+  "new_experiences": 22439,
+  "total_experiences": 27009,
+  "duplicate_experiences": 0,
+  "state_dimension": 169,
+  "mask_dimension": 9,
+  "finite_states": true,
+  "labels_valid_under_masks": true,
+  "fleet_count": 5000,
+  "unique_vehicle_count": 5000,
+  "operational_state_finite": true,
+  "due_commitments_at_publication": 0,
+  "boundary_fixture": "PASS",
+  "focused_tests": {
+    "passed": 9,
+    "failed": 0
+  },
+  "temporal_semantics_preserved": true,
+  "training_or_fedavg_executed": false,
+  "full_generation_launched": false,
+  "blocker": null
+}

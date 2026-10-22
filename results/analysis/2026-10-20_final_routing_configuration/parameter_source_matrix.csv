@@ -1,0 +1,18 @@
+parameter,meaning,authoritative_value,current_provisional_value,final_project_value,status,source_classification
+mu_recurrence,Retained existing project EWMA; manuscript exact equation NOT_FOUND,NOT_FOUND,,alpha*previous_completed_slot_assigned_price_mean+(1-alpha)*prior_mu,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+sigma_recurrence,Retained existing project EWMA; not pooled variance or manuscript-exact,NOT_FOUND,,beta*previous_completed_slot_assigned_price_population_SD+(1-beta)*prior_sigma,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+sigma_safeguard,"USD; explicit numerical-only floor, 10^-4 of one cent, not measurement estimate; max(sigma,floor)",NOT_FOUND,,1e-06,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+H_hat_safeguard,"minutes (60 microseconds); explicit numerical-only floor, not observed waiting time; max(H_hat,floor)",NOT_FOUND,,1e-06,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+mu_initialization,Verified 142-grid historical artifact; 136 grid-specific + 6 global fallbacks; early starts rejected,NOT_FOUND,,historical_priors: fare_bootstrap_legacy_cutoff.parquet mean_fare; first decision strictly after 2026-01-25 18:30,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+sigma_initialization,Same historical cutoff and fingerprint guard; no held-out refit,NOT_FOUND,,same historical artifact std_fare population SD,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+F_hat_initialization,Explicit user baseline decision; not manuscript-reported,NOT_FOUND,,0.0,PROJECT_IMPLEMENTATION_DECISION,NOT_FOUND
+H_hat_initialization,Explicit user baseline decision; not manuscript-reported,NOT_FOUND,,0.0,PROJECT_IMPLEMENTATION_DECISION,NOT_FOUND
+reposition_cost_definition,Normalized movement-distance project hyperparameter; physical time/energy distances unchanged,NOT_FOUND,,0.25 * distance_metres / (3000*sqrt(2)); full path distance for charging,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+reposition_cost_coefficient,Explicit user baseline decision; not manuscript-reported,NOT_FOUND,,0.25,PROJECT_IMPLEMENTATION_DECISION,NOT_FOUND
+charging_wait_aggregation,User authorizes existing pooled implementation; no contrary source located,NOT_FOUND,,"Mean elapsed wait over all queued EVs at co-located stations, weighted by queue count; empty observed station grid zero; absent/nonstation observation carries prior",PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+empty_observation_rule,Existing deterministic producer; no fabricated observations,NOT_FOUND,,mu/sigma/H_hat carry; F_hat decays with zero successful count,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+alpha,Explicit user baseline decision; not manuscript-reported,NOT_FOUND,0.3,0.3,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+beta,Explicit user baseline decision; not manuscript-reported,NOT_FOUND,0.3,0.3,PROJECT_IMPLEMENTATION_DECISION,PROJECT_IMPLEMENTATION_ONLY
+delta,Explicit user baseline decision; not manuscript-reported,NOT_FOUND,,0.3,PROJECT_IMPLEMENTATION_DECISION,NOT_FOUND
+kappa,Explicit user baseline decision; not manuscript-reported,NOT_FOUND,,0.3,PROJECT_IMPLEMENTATION_DECISION,NOT_FOUND
+zeta,Not used in frozen mu/sigma/F_hat/H_hat equations; dispatch smoothing outside this module remains unspecified,NOT_FOUND,,,NOT_REQUIRED_FOR_CURRENT_MODULE,NOT_FOUND

@@ -24,6 +24,8 @@ def main() -> int:
     args = parser.parse_args()
     try:
         config = load_config(ROOT / "config/config.yaml")
+        if config["grid"].get("grid_version") == "true_3km_v1":
+            raise ValueError("Stations are remapped in spatial_3km_jan_mar_2026; legacy activity reranking is disabled.")
         processed = ROOT / config["data"]["processed_dir"]
         output = processed / "charging_stations_2026_01.parquet"
         grid = pd.read_parquet(processed / "grid_lookup.parquet", columns=["GridID"])

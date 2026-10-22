@@ -1,61 +1,62 @@
 {
-  "build_timestamp_utc": "2026-08-21T17:15:57.954920+00:00",
-  "data_month": "2026-01",
-  "filtering_statistics": {
-    "invalid_zone_ids": 25251,
-    "missing_location_ids": 0,
-    "records_after_filtering": 3699638,
-    "records_loaded": 3724889
-  },
-  "generated_cells": 2652,
-  "geometry": "square",
-  "grid_columns": 52,
-  "grid_rows": 51,
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "status": "ACTIVE_NEW",
+  "metric_crs": "EPSG:32118",
+  "grid_construction_crs": "EPSG:32118",
+  "grid_cell_size_m": 3000,
   "grid_size_meters": 3000,
-  "legacy_traceability": {
-    "assignment_method": "seeded_zone_to_grid_sampling",
-    "coordinate_limitation": "The January 2026 source has no longitude/latitude columns; NB2's LocationID-based seeded sampling is preserved explicitly.",
-    "grid": "NB1_Spatial_Info_Build.ipynb",
-    "neighbor_convention": "New persisted artifact: side-adjacent square cells only; NB1/NB2 did not define neighbors.",
-    "trip_assignment": "NB2_GridToTripAssignment"
-  },
-  "mapping_statistics": {
-    "dropoff_mapped": 3699638,
-    "dropoff_unmapped": 0,
-    "pickup_mapped": 3699638,
-    "pickup_unmapped": 0
-  },
-  "metric_crs": "EPSG:2263",
-  "neighbor_links": 4544,
-  "platform": "macOS-26.1-arm64-arm-64bit",
-  "python_version": "3.12.13",
-  "random_seed": 42,
-  "source_columns": [
-    "VendorID",
-    "tpep_pickup_datetime",
-    "tpep_dropoff_datetime",
-    "passenger_count",
-    "trip_distance",
-    "RatecodeID",
-    "store_and_fwd_flag",
-    "PULocationID",
-    "DOLocationID",
-    "payment_type",
-    "fare_amount",
-    "extra",
-    "mta_tax",
-    "tip_amount",
-    "tolls_amount",
-    "improvement_surcharge",
-    "total_amount",
-    "congestion_surcharge",
-    "Airport_fee",
-    "cbd_congestion_fee"
+  "valid_cells": 142,
+  "grid_rows": 16,
+  "grid_columns": 16,
+  "generated_cells": 256,
+  "unused_cells": 114,
+  "neighbor_links": 958,
+  "neighbour_topology": "eight_way",
+  "geometry_tolerance_m": 1e-06,
+  "source_candidate": "data/processed/grid_3km_candidate",
+  "sources": [
+    {
+      "path": "data/processed/legacy_914m_provenance/cleaned_trips.parquet",
+      "sha256": "648dfe389ed924ce597f88745af840f03d592737d5dd35015d018c255bc2b65e"
+    },
+    {
+      "path": "data/raw/yellow_taxi/yellow_tripdata_2026-02.parquet",
+      "sha256": "5352ca800f29c40a221ed5b0c6392c451fde7fcd236a73651bd5aea74713a26c"
+    },
+    {
+      "path": "data/raw/yellow_taxi/yellow_tripdata_2026-03.parquet",
+      "sha256": "d7af794a7ac06cbbb5afb4d1df9e86d84f2e878584de708ff2ffca4bd7d234d9"
+    }
   ],
-  "source_dataset": "data/raw/yellow_taxi/yellow_tripdata_2026-01.parquet",
-  "source_records": 3724889,
-  "taxi_zone_source": "data/raw/taxi_zones/taxi_zones.shp",
-  "time_interval_minutes": 30,
-  "valid_cells": 1213,
-  "zone_grid_mappings": 2667
+  "action_order": [
+    "STAY",
+    "NORTH",
+    "NORTHEAST",
+    "EAST",
+    "SOUTHEAST",
+    "SOUTH",
+    "SOUTHWEST",
+    "WEST",
+    "NORTHWEST"
+  ],
+  "topology": {
+    "directed_links": 958,
+    "mean_neighbors": 6.746478873239437,
+    "min_neighbors": 3,
+    "max_neighbors": 8,
+    "boundary_grids": 67,
+    "isolated_grids": [],
+    "connected_component_sizes": [
+      142
+    ]
+  },
+  "cnn_status": "PREPROCESSING_AND_RETRAINING_REQUIRED",
+  "historical_demand": "Deferred: fit with training data only",
+  "popularity_status": "REGENERATED_EXISTING_REFERENCE_CUTOFF_RUNTIME_AVAILABLE_FROM_2026_01_25_1830"
 }

@@ -1,0 +1,37 @@
+{
+  "checks": {
+    "train_only_fit_verified": true,
+    "heldout_perturbation_invariant": true,
+    "exact_saved_tensors_verified": true,
+    "same_test_targets_and_mask": true,
+    "fallbacks_verified": true,
+    "mask_and_gradient_verified": true,
+    "saved_architecture_verified": true,
+    "optimizer_iterations_restored": 4500,
+    "lr": 0.0010000000474974513,
+    "zero_prediction_share_valid_test": 0.8150858274647887,
+    "zero_prediction_share_positive_targets": 0.7928670497325143,
+    "historical_scale": 87.81456756591797
+  },
+  "trend": {
+    "last_10_epochs": {
+      "from_epoch": 90,
+      "to_epoch": 100,
+      "from_MSE": 546.2714659594118,
+      "to_MSE": 531.8234437839918,
+      "absolute_change": -14.448022175419965,
+      "percentage_change": -2.644842917073298
+    },
+    "last_20_epochs": {
+      "from_epoch": 80,
+      "to_epoch": 100,
+      "from_MSE": 554.1337371478054,
+      "to_MSE": 531.8234437839918,
+      "absolute_change": -22.31029336381357,
+      "percentage_change": -4.026156840521455
+    }
+  },
+  "classification": "TRAINING_TRUNCATED",
+  "gate": true,
+  "materiality_interpretation": "Continuous final20 improvements and >1% relative validation MSE reduction; diagnostic criterion, no hyperparameter selection."
+}

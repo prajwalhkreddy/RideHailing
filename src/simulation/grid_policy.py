@@ -21,7 +21,7 @@ class GridPolicyProbabilities:
 def _validated_probability_vector(values: Sequence[float] | np.ndarray, name: str) -> np.ndarray:
     vector = np.asarray(values, dtype=np.float64)
     if vector.shape != (len(ACTION_ORDER),):
-        raise ValueError(f"{name} must follow the five-action order STAY/NORTH/EAST/SOUTH/WEST.")
+        raise ValueError(f"{name} must follow the canonical nine-action order.")
     if not np.isfinite(vector).all() or (vector < 0).any():
         raise ValueError(f"{name} must be finite and non-negative.")
     total = float(vector.sum())

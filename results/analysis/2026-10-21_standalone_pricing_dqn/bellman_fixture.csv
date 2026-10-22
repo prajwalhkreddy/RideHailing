@@ -1,0 +1,3 @@
+reward,gamma,max_target_next_q,done,expected_target,actual_target
+10,0.99,6,False,15.94,15.940000534057617
+10,0.99,6,True,10.0,10.0

@@ -1,0 +1,17 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "rows": 1278,
+  "notes": "",
+  "sources": [
+    "data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet",
+    "data/processed/spatial_3km_jan_mar_2026/grid_lookup.parquet"
+  ],
+  "sha256": "8722c8f2c99760fdd66e9fefe243188e551dbe33ae3850f027f999897e3fe8d8",
+  "source_version": "Existing local 2026 Jan\u2013Mar sources; source hashes in source_reconciliation.json and artifact_index.json"
+}

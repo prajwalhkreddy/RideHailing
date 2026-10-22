@@ -1,0 +1,15 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "source_candidate": "data/processed/grid_3km_candidate",
+  "sha256": "b364dbff9fc325fac01155f23bcb5b1061fdc10136b047414d3602a1773e834f",
+  "sources": [
+    "data/processed/grid_3km_candidate/grid_raster_mapping_3km.parquet"
+  ],
+  "source_version": "Existing local 2026 Jan\u2013Mar sources; source hashes in source_reconciliation.json and artifact_index.json"
+}

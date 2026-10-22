@@ -1,0 +1,11 @@
+{
+  "run": 91,
+  "failures": [],
+  "errors": [],
+  "training_tests_not_run": [
+    "test_routing_learning.RoutingLearningTests.test_common_initialization_then_different_labels_diverge",
+    "test_routing_learning.RoutingLearningTests.test_federated_ready_export_excludes_raw_observations",
+    "test_routing_learning.RoutingLearningTests.test_supervised_training_increases_chosen_probability_and_zero_data_skips",
+    "test_routing_federated.RoutingFederatedTests.test_nb12_local_divergence_unequal_fedavg_and_global_reload"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "source_status": "VARIABLE_ONLY_NO_CALIBRATION",
+  "decision_type": "PROJECT_CALIBRATION",
+  "baseline_minutes": 10.0,
+  "planned_sensitivity_values": [
+    5,
+    10,
+    20
+  ],
+  "profiles_examined": 5000,
+  "profiles_populated": 5000,
+  "profiles_rejected": 0,
+  "startup_result": "PASS",
+  "grid_count": 142,
+  "raster": [
+    16,
+    16
+  ],
+  "routing_input": 169,
+  "routing_output": 9,
+  "pricing_input": 13,
+  "pricing_output": 7,
+  "operational_state": "ACCEPTED",
+  "timed_charging": "ACCEPTED",
+  "driver_profiles": "ACCEPTED",
+  "H_I_MAX_RESOLVED": "YES",
+  "FINAL_HIERARCHICAL_RUNNER_READY": "YES",
+  "U3_10_over_10": 0.6321205588285577,
+  "tests": {
+    "passed": 9,
+    "failed": 0,
+    "command": "python -B -m unittest tests.test_himax_contract tests.test_himax_baseline"
+  },
+  "episode_slots_executed": 0,
+  "optimizer_updates": 0,
+  "models_retrained": false,
+  "runner_modified": false,
+  "sensitivity_experiments_run": false,
+  "blocker": null
+}

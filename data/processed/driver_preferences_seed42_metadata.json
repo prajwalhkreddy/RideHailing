@@ -1,9 +1,28 @@
 {
+  "H_i_max_calibration": {
+    "baseline": 10.0,
+    "parameter": "H_i_max_minutes",
+    "planned_sensitivity_values": [
+      5,
+      10,
+      20
+    ],
+    "profiles_examined": 5000,
+    "profiles_populated": 5000,
+    "profiles_rejected": 0,
+    "rationale": "The methodology defines H_i_max without numerical calibration. A constant avoids unsupported driver-level heterogeneity. The project baseline is 10 minutes; it is not manuscript-derived or an authoritative source value.",
+    "runtime_alias": "Explicit persisted copy of H_i_max_minutes; no runtime default.",
+    "runtime_column": "charging_wait_preference_minutes",
+    "sensitivity_experiments_run": false,
+    "source_status": "VARIABLE_ONLY_NO_CALIBRATION",
+    "status": "PROJECT_CALIBRATION",
+    "units": "minutes"
+  },
   "fare_source": "data/processed/cleaned_trips.parquet",
   "fare_valid_row_count": 2898376,
   "fare_validity": "finite fare_amount > 0 and pickup timestamp before cutoff",
   "mu_price": 20.233906794701575,
-  "parquet_sha256": "dcb422e5e492f44a85815aad5f22a50f833f7071a67a126edf09a09270c0764d",
+  "parquet_sha256": "e1c41d5bacf542a58605dbd84a94effb845b33125495d591aa5c2a1a0627ecb1",
   "persistence": "fixed per driver for complete simulation",
   "price_high": 36.53376373511538,
   "price_low": 3.934049854287771,

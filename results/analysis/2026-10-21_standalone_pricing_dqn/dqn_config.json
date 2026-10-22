@@ -1,0 +1,26 @@
+{
+  "gamma": 0.99,
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "replay_capacity": 100000,
+  "minimum_replay_size": 1000,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_steps": 50000,
+  "soft_target_tau": 0.005,
+  "seed": 42,
+  "architecture": [
+    13,
+    64,
+    64,
+    7
+  ],
+  "hidden_activation": "ReLU",
+  "output": "raw Q",
+  "optimizer": "Adam",
+  "loss": "Huber delta=1",
+  "normalization": "identity",
+  "epsilon_step_counter": "completed optimizer updates",
+  "fixture_updates": 100,
+  "checkpoint_status": "SYNTHETIC_FIXTURE_NOT_FINAL_EXPERIMENTAL_MODEL"
+}

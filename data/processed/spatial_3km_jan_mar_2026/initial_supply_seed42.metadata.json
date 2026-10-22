@@ -1,0 +1,17 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "rows": 142,
+  "notes": "Existing uniform valid-grid initialization, 5000 vehicles, seed42. Static supply only; no simulation.",
+  "sources": [
+    "src/fleet/fleet.py",
+    "data/processed/grid_lookup.parquet"
+  ],
+  "sha256": "c7a683b9e24cdcc924782fcc6a11fc07127a726b8b40fa699c13ab3e99cc54d1",
+  "source_version": "Existing local 2026 Jan\u2013Mar sources; source hashes in source_reconciliation.json and artifact_index.json"
+}

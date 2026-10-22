@@ -1,108 +1,67 @@
 # Ride-Hailing Platform Simulation
 
+## Active project status — 21 October 2026
+
+The active foundation is **true 3,000 m × 3,000 m, EPSG:32118, 142 valid grids, 16×16 raster and nine routing actions**. Jan–Mar data, the epoch-200 CNN, final operational/routing/pricing interfaces, persisted driver calibration and a four-slot hierarchical integration episode are complete. **Final simulator-derived routing training and final learned pricing performance are not complete.** Current work is paused routing-experience collection, not a running training job.
+
+### Current Resume Point
+
+| Item | Verified state |
+| --- | --- |
+| Task | Complete March 1–15 simulator-derived routing experiences |
+| Committed | **6 / 720 slots**, March 1 00:00–03:00 |
+| Experiences | **27,009**, unique and valid; **22,439** appended after the boundary fix |
+| Remaining | **714 slots** |
+| Latest resume checkpoint | [generation_checkpoint.pkl](data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl) |
+| Collection state | [PAUSED_AT_REQUESTED_BOUNDARY](results/analysis/2026-10-21_simulator_derived_routing_policy/generation_status.json) |
+| Integrity evidence | [Checkpoint/slot hashes](results/analysis/2026-10-21_passenger_arrival_boundary_fix/checkpoint_integrity.json) |
+
+Resume this checkpoint; **do not regenerate committed slots**. The preserved `generation_checkpoint_before_boundary_fix.pkl` is historical 00:30 evidence, not the current resume point. Do not train routing/FedAvg until all 720 slots are committed and validated. Section 10 contains the verified resume command. Nothing was simulated or trained for this README update.
+
 ## 1. Project overview
 
-This repository is a modular research implementation for studying NYC ride-hailing demand prediction, fleet operations, EV charging, vehicle repositioning, federated routing-policy aggregation, and contextual pricing/customer acceptance. It uses January 2026 NYC Yellow Taxi data and a shared spatial representation to keep demand, vehicle, and operational state contracts consistent.
+This modular research implementation studies NYC ride-hailing demand forecasting, passenger acceptance, fleet dispatch/movement, EV charging, utility-based repositioning, federated routing-policy learning and dynamic pricing. The active source period is **January–March 2026**. Offline demand prediction and online operations share a versioned spatial/temporal contract.
 
-The work has two distinct layers:
+The pricing DQN is the pricing learning component. Lower-level U1/U2/U3 rules select driver/EV movements; a separate routing network learns these decisions. Plain sample-weighted FedAvg aggregates local routing models, whose nine masked probabilities feed the pricing state. Routing probabilities do not replace utility-selected movement. Privacy/security and adversarial layers remain later research stages.
 
-- **Demand prediction (offline):** prepare taxi, spatial, and weather data; construct a grid-time demand table; build CNN tensors; train and validate a demand predictor.
-- **Operations and learning (online components):** represent a fleet, generate empirical OD requests, price requests, draw customer acceptance, dispatch accepted requests, track operating statistics, manage EV energy/charging, execute utility-based repositioning, and learn/federate routing policies.
-
-Demand prediction estimates future grid demand. NB11 utility selects actual vehicle movement, while NB12/NB13 policy probabilities provide a learned signal to pricing rather than movement commands. The production assembler executes the complete request-level pricing, historical customer, contention dispatch, EV, routing, and federated-learning pipeline continuously over aligned held-out CNN targets. Phase 7D validated one 48-slot/24-hour trajectory with 5,000 vehicles; the authoritative 298-slot held-out experiment is the next proposed run.
-
-The legacy NB1-NB5 notebooks remain reference material and are not modified. The modular implementation currently extends through NB13.
+NB1–NB13 implementation history remains useful provenance. Legacy January-only, LinUCB, 1,213-grid and five-action results are not final-system performance evidence. The former 298-slot experiment is superseded by the chronological protocol below.
 
 ## 2. Current implementation status
 
 | Component | Status | Current scope |
 | --- | --- | --- |
-| Spatial/data preparation (NB1-NB2) | COMPLETE | January taxi cleaning, zone/grid artifacts, deterministic legacy-compatible mapping |
-| Weather preparation | COMPLETE | Legacy-compatible January Meteostat artifact |
-| Demand master (NB3) | COMPLETE | Half-hour grid-level pickup-demand master table |
-| CNN tensors (NB4) | COMPLETE | Seven-channel, one-step-ahead tensor dataset |
-| CNN training/inference (NB5) | COMPLETE | Legacy CNN, persisted model, normalization, predictions, and metrics |
-| Fleet baseline | COMPLETE | Vehicle state, seeded placement, supply aggregation |
-| Request/empirical-trip generation | COMPLETE | Intact empirical trip-row sampling and empirical within-slot arrivals |
-| Baseline dispatch | COMPLETE | FCFS same-grid/direct-neighbour dispatch with empirical duration and passenger energy |
-| Operational statistics (NB9) | COMPLETE | Grid/slot fare, wait, EWMA, and charging context |
-| EV energy (NB10A) | COMPLETE | SOC initialization, energy consumption, trigger, charge/release transitions |
-| Charging infrastructure (NB10B) | COMPLETE | Popularity-based stations, power-limited charging, FCFS queue |
-| Utility-based routing/repositioning (NB11) | CORRECTED / COMPLETE | Equal-weight component utilities, action mask, maximum-utility selection, EV transition |
-| Local routing policy learning (NB12) | CORRECTED / COMPLETE | Per-vehicle supervised policy learning from NB11 utility-selected actions |
-| Federated routing aggregation (NB13) | COMPLETE | Compatibility-validated, sample-count-weighted FedAvg of local policy networks |
-| Pricing state + contextual LinUCB | COMPLETE / PRODUCTION | Request-level 8D context, seven factor arms, disjoint LinUCB, served-revenue feedback |
-| Customer acceptance + pricing payoff | COMPLETE / PRODUCTION | Historical sensitivity, hierarchical fallback, positive truncated-Normal draw, `P_max` decision |
-| Pricing/customer/dispatch integration | COMPLETE | One request-level decision, pre-dispatch historical acceptance, contention, served-revenue feedback |
-| One-main-slot orchestration | COMPLETE | Pricing through FedAvg and next-slot pricing-input boundary; production federates every slot |
-| Short multi-slot temporal orchestration | COMPLETE | Four consecutive 30-minute slots with persistent state and explicit federation schedule |
-| Production assembler | COMPLETE | Authoritative loading, persistent state/RNG, aligned CNN targets, one NB13 round per slot |
-| Integrated production validation | COMPLETE | Phase 7D: 48 slots, seed 42, 5,000 vehicles; `READY_FOR_PHASE_8A` |
-| Final held-out experiment | NEXT | Proposed 298-slot run over the frozen held-out target window |
+| Jan–Mar spatial/data foundation | COMPLETE / FROZEN | 11,006,194 requests; true 3 km, 142 grids |
+| CNN preprocessing/training/inference | COMPLETE | TRAIN-only preprocessing; epoch 200; historical-average baseline remains superior |
+| Record-029 and final analytical weather scenarios | FROZEN OFFLINE | Signed descriptive sensitivity; separate from runtime behavioural E |
+| Fleet, empirical requests, FCFS dispatch | IMPLEMENTED / INTEGRATION VALIDATED | 5,000 vehicles; intact January empirical trip sampling driven by forecasts |
+| Operational grid state | FROZEN / VALIDATED | Causal mu, sigma, F_hat, H_hat |
+| Driver/EV utilities and timed charging | IMPLEMENTED / VALIDATED | Nine actions, multihop charging, no teleportation |
+| Routing architecture and plain FedAvg | IMPLEMENTED | 169→64→32→9; current checkpoint synthetic/provisional |
+| Pricing contract and DQN | IMPLEMENTED / VALIDATED | Identity-normalized 13D state; seven actions |
+| Final hierarchical runner | STARTUP / SHORT EPISODE VALIDATED | Public final interfaces; legacy runner isolated |
+| March-16 four-slot episode | COMPLETE, INTEGRATION ONLY | One optimizer update; checkpoint quarantined |
+| Passenger-arrival boundary correction | COMPLETE / VALIDATED | Absolute-time completion selection; 9 focused tests |
+| Simulator-derived routing collection | IN PROGRESS, PAUSED | 6/720 slots; 27,009 experiences |
+| Final routing/FedAvg and pricing training | PENDING | No final learned-performance claim |
+| Protected hierarchical evaluation | PENDING | March 17–31, no updates |
+| Privacy, security, robustness and final ablations | PENDING | Not implied by plain single-process FedAvg |
 
 ## 3. High-level architecture
 
 ```text
-NYC Yellow Taxi records + Taxi Zones + Meteostat weather
-                         |
-                         v
-              Spatial and data preparation (NB1-NB2)
-                         |
-                         v
-                 Demand master table (NB3)
-                         |
-                         v
-                   CNN tensors (NB4)
-                         |
-                         v
-                CNN demand predictor (NB5)
-                         |
-                         v
-                 Predicted grid demand
-                         |
-       +-----------------+------------------+
-       |                                    |
-       v                                    v
-Fleet state <---- requests / empirical OD --> Dispatch
-       |                                    |
-       +-------------> operational statistics
-                              |
-                    +---------+---------+
-                    |                   |
-                    v                   v
-                 EV energy        Charging system
-                    \                   /
-                     \                 /
-                      v               v
-                         Routing state
-                              |
-                              v
-               NB11 utility-based repositioning
-                              |
-                              v
-               NB12 local supervised policy network
-                              |
-                              v
-                 Local weights and sample count only
-                              |
-                              v
-            NB13 policy-network FedAvg
-                              |
-                              v
-                    Common routing policy
-                              |
-                              v
-          Contextual LinUCB pricing + acceptance
-                              |
-                              v
-                 Integrated production simulation
+Yellow Taxi + Taxi Zones + Meteostat
+    -> true 3 km / half-hour aggregation -> CNN J_hat
+    -> pricing state [demand, dispatch history, incoming, routing p, popularity]
+    -> pricing DQN -> offered fare -> behavioural-E passenger acceptance
+    -> FCFS dispatch -> passenger/vehicle movement and timed charging
+    -> completed-slot operational mu / sigma / F_hat / H_hat
+    -> U1/U2/U3 driver decisions -> local routing-policy learning
+    -> plain sample-weighted FedAvg -> global routing probabilities
+    -> next pricing state / assignment-time reward / replay
+    -> later privacy, security and robustness experiments
 ```
 
-NB11 and NB12 intentionally have different responsibilities:
-
-- **NB11** constructs state, calculates price/wait/charging utilities per valid candidate, combines them with fixed equal weights, and selects the maximum-utility action before applying the EV transition. NB11 is not DQN or Q-learning.
-- **NB12** learns a masked local policy `P(action | state)` from NB11's `(state, chosen_action)` observations. It does not select the actual routing action in this milestone.
-- **NB13** validates explicitly supplied local policy updates and applies sample-count-weighted FedAvg to produce new common policy weights.
+NB11 supplies utility labels, NB12 learns masked routing probabilities, and NB13 aggregates weights/counts. Pricing DQN learns Q-values over fare factors. These are different learning and decision responsibilities.
 
 ## 4. Repository layout
 
@@ -111,13 +70,17 @@ config/                 Runtime configuration
 data/raw/               Externally supplied taxi and taxi-zone inputs
 data/interim/           Reserved intermediate data area
 data/processed/         Versioned stage artifacts (grid, weather, demand, CNN, stations)
-models/demand/          Persisted NB5 model and associated artifacts
+models/demand/          Legacy NB5 provenance
+models/cnn/             Final 3-km CNN checkpoints
 models/routing/         Frozen NB12/NB13 common initialization and metadata
-models/pricing/         Reserved for future pricing artifacts
+models/pricing/         Legacy pricing artifacts
+models/pricing_dqn/     Fixture/integration pricing checkpoints
+models/routing_policy/ Final-interface provisional routing checkpoint
 outputs/figures/        NB5 figures
 outputs/metrics/        Reserved metrics outputs
 outputs/logs/           Reserved execution logs
-results/validation/     Engineering/production validation and dated reporting packages
+results/validation/     Historical engineering/production validation
+results/analysis/       Dated authoritative module/status reports
 src/                    Importable implementation packages
 scripts/                Stage build, validation, and deterministic demonstration scripts
 tests/                  Unit tests using small synthetic/deterministic fixtures
@@ -141,28 +104,160 @@ Important source packages:
 
 ## 5. Data and external inputs
 
-The configured study period is **January 2026**. Place these raw inputs at the configured relative paths before building the first stages:
+The demand population uses existing valid-zone preparation, **not** Record-029 fare/distance cleaning. Source-file month and actual pickup month differ at boundaries; the following are pickup-calendar-month counts.
 
-| Input | Configured path | Notes |
-| --- | --- | --- |
-| NYC Yellow Taxi parquet | `data/raw/yellow_taxi/yellow_tripdata_2026-01.parquet` | January 2026 trip records |
-| NYC Taxi Zone shapefile | `data/raw/taxi_zones/taxi_zones.shp` | Include companion `.shx`, `.dbf`, `.prj`, and other shapefile sidecars |
-| Weather | fetched by `scripts/build_weather.py` | Meteostat network access is required only when fetching/rebuilding weather |
+| Month | Source requests | Half-hour slots |
+| --- | ---: | ---: |
+| January | 3,699,644 | 1,488 |
+| February | 3,377,979 | 1,344 |
+| March | 3,928,571 | 1,488 |
+| Total | **11,006,194** | **4,320** |
 
-The persisted spatial metadata records 3,724,889 raw taxi records and 3,699,638 retained records after valid-zone filtering. The raw January file has `PULocationID` and `DOLocationID`, but not pickup/dropoff coordinates. Therefore the implementation deliberately preserves NB2's seeded within-zone `LocationID -> GridID` sampling rather than claiming point-level trip locations.
+Dense demand has **613,440 = 4,320 × 142** grid/time rows, including zero-demand cells. LocationID records lack point coordinates; seeded within-zone intersection-grid sampling remains a spatial approximation. Timestamps retain the existing naive convention. Persisted monthly Meteostat weather is reused; passenger analytical CLEAR/RAIN is not CNN weather encoding.
 
-Spatial contract:
+| Spatial contract | Active value |
+| --- | --- |
+| CRS / units | EPSG:32118 / metres |
+| Cell / area | 3,000×3,000 m / 9 km² |
+| Valid IDs / raster | 0–141 / 16×16; 114 unused positions masked |
+| Actions | STAY, N, NE, E, SE, S, SW, W, NW |
+| Topology | 958 directed non-STAY links; mean 6.746479 neighbours; connected, zero isolated cells |
+| Distances | STAY 0 m; cardinal 3,000 m; diagonal 4,242.640687119286 m |
+| Active geometry | [grid_lookup.parquet](data/processed/grid_lookup.parquet) |
+| Versioned foundation | [spatial_3km_jan_mar_2026](data/processed/spatial_3km_jan_mar_2026/) |
 
-- CRS: **EPSG:2263**.
-- Square grid cell size: **3,000 m**.
-- Layout: **51 rows x 52 columns**.
-- Valid cells: **1,213**, with deterministic GridIDs **0-1212** ordered north-to-south then west-to-east.
-- Zone/Grid assignment: seeded candidate-grid sampling per taxi zone; pickup and dropoff assignments use the same deterministic RNG stream.
-- Neighbours: side-adjacent north/east/south/west valid grid cells only; this is an engineering convention because NB1/NB2 did not define a neighbour method.
+EPSG:2263 used US survey feet: old 3,000-unit cells measured **914.401829 m**, with 1,213 cells on 51×52. Those artifacts are **SUPERSEDED / PROVENANCE ONLY**, preserved in `data/processed/legacy_914m_provenance/`. The corrected geometry is measured, not inferred from a variable name. Fifteen provisional charging-station identities occupy four new cells; straight-line adjacency does not establish road/bridge connectivity.
+
+[Spatial migration, reconciliation and artifact manifest](results/analysis/2026-10-19_true_3km_grid_activation/README.md)
 
 ## 6. Stage-by-stage implementation
 
-### 6.1 Spatial preparation (NB1-NB2)
+### 6.1 Record-029 descriptive sensitivity and weather scenarios
+
+Source price is TLC `fare_amount` in USD. For source-valid Jan–Mar trips with `0 < trip_distance <= 100 miles`:
+
+```text
+P_base = 21.34586956773507 USD
+tau_P = ±1 USD
+L_base = 3.01799878914405 miles
+reference support = 479,000 trips with abs(fare - P_base) <= 1
+ epsilon = ((P - P_base) / P_base) / ((L - L_base) / L_base)
+```
+
+The ±$1 reference is a project methodology choice, not minimum-SD selection. All **10,620,409** cleaned trips remain historical observations. The 0.01-mile measurement-resolution rule marks `abs(L−L_base) < 0.005 mile` as unresolved denominator (9,017 rows); this is an absolute distance gap, not a relative-price threshold. **10,611,392** have VALID epsilon. Inclusive empirical P0.5–P99.5 support is **[−12.890744316473482, 15.442447741158892]**, containing **10,505,278** (approximately 99%) VALID observations. No universal L_min is adopted; tails remain valid history, excluded only from simulation support. This signed ratio is descriptive, not causal elasticity or willingness-to-pay, and **does not enter runtime behavioural acceptance E**.
+
+| Final analytical scenario | Original weather codes | Supported N | Population SD |
+| --- | --- | ---: | ---: |
+| CLEAR | 1, 2, 3, 5 | 9,613,456 | 1.440831 |
+| RAIN | 7, 8, 9, 12, 13, 14, 15, 16, 17, 21 | 891,822 | 1.484481 |
+
+CLEAR includes fair/cloudy/fog; RAIN includes snow/sleet and showers. Original labels remain traceable. Both have all 24 hours (48 rows total). These analytical groups cover the full supported population and supersede literal code-1/code-8 reporting; they are separate from CNN weather representation and runtime acceptance. Earlier Record-029 T1–T4 empirical sampling artifacts remain offline analysis provenance, not the runtime E sampler.
+
+[Final weather scenario evidence](results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/README.md); [Record-029 technical record](results/analysis/2026-10-09_price_distance_sensitivity_record029_full_jan_mar/README.md).
+
+### 6.2 CNN demand forecasting
+
+The final CNN is **7→14→7→1**, three 3×3, stride-1, same-padded ReLU convolutions, with valid-cell masking. External tensors are `[B,7,16,16]` to `[B,1,16,16]`. Channels are DayOfWeek, Hour, PeriodWithinHour, WeatherType, Temperature, WindSpeed and HistoricalAverageDemandDistribution. The last plane and learned scalers use January–February TRAIN data only; invalid cells are masked out of loss/metrics. WeatherType retains normalized original code, not CLEAR/RAIN.
+
+J_hat forecasts the next **30-minute** interval (DOCUMENTED_ADAPTATION from the paper's 10-minute horizon); the timestamp labels that interval with no additional target shift. The original CNN split is Jan–Feb TRAIN **2,832 slots**, March 1–15 VALIDATION **720**, March 16–31 TEST **768**. This original CNN test is distinct from the later hierarchical holdout.
+
+| Model / original TEST (109,056 valid grid/time rows) | MAE | RMSE | R² |
+| --- | ---: | ---: | ---: |
+| Epoch-100 CNN | 6.072322 | 20.485018 | 0.951101 |
+| Epoch-200 CNN (selected continuation) | 5.242741 | 18.292800 | 0.961007 |
+| TRAIN historical-average baseline | **3.314528** | **16.271804** | **0.969147** |
+
+Epoch-100 **validation**, not test, MAE/RMSE were 6.380307/23.061298. The saved continuation reached best epoch 200; it is not proof of convergence. **CNN_VALID_BUT_HISTORICAL_BASELINE_SUPERIOR** remains the finding. Final checkpoint: `models/cnn/jan_mar_2026_3km_30min_continued/best.keras`. Separate March 1–15 RL forecasts contain **102,240 = 720×142** rows. Historical observed weather is a retrospective condition; live deployment needs issuance-time weather forecasts.
+
+[CNN contract and original evaluation](results/analysis/2026-10-19_final_jan_mar_3km_cnn/README.md); [Continuation and baseline diagnosis](results/analysis/2026-10-19_final_cnn_performance_diagnosis/README.md).
+
+### 6.3 Operational state and driver/EV decisions
+
+State for t is published from completed t−1 observations. `mu` and `sigma` are successful-assignment mean-fare and population-price-SD EWMAs (PROJECT_IMPLEMENTATION_DECISIONS, not manuscript-exact): new estimate = coefficient × observed statistic + (1−coefficient) × prior estimate. Empty-price observations carry the prior.
+
+```text
+F_hat(g,t) = delta * (N_disp(g,t-1)/30) + (1-delta)*F_hat(g,t-1)
+H_hat(g,t) = kappa * H(g,t-1) + (1-kappa)*H_hat(g,t-1)
+U1 = 1 - Phi((P_i_min - mu)/sigma)
+U2 = 1 - exp(-F_hat * W_i_max)
+U3 = 1 - exp(-H_i_max/H_hat)
+non-charging action = argmax(U1 + U2 - C_rep)
+charging destination = argmax(U3 - C_rep)
+C_rep = 0.25 * movement_metres/(3000*sqrt(2))
+```
+
+F_hat units are successful dispatches/minute, H_hat and private wait allowances are minutes. Alpha=beta=delta=kappa=**0.3**, F_hat_0=H_hat_0=**0**; sigma safeguard **1e−6 USD**, H_hat safeguard **1e−6 minutes**. Missing charging observations carry prior H_hat. Historical mu/sigma priors are available after January 25 18:30; earlier starts fail closed. Older reports' null parameters are superseded by the final configuration.
+
+Movement cost is STAY 0, cardinal ≈0.176777, diagonal 0.25; full charging-path cost can exceed 0.25. Energy equal to the threshold enters charging. Charging navigation is timed multihop; no remote admission or teleportation. Existing 15 km/h movement gives cardinal 12 minutes and diagonal 16.970563 minutes.
+
+**H_i_max=10.0 minutes** is explicitly persisted for **5,000/5,000** production profiles (`H_i_max_minutes` and corresponding runtime `charging_wait_preference_minutes`). Source status is VARIABLE_ONLY_NO_CALIBRATION; decision is PROJECT_CALIBRATION. A constant avoids unsupported driver heterogeneity. Missing/null/nonfinite/nonpositive values reject; no fallback. U3(10,10)=**0.6321205588285577**. Planned sensitivity [5,10,20] minutes has not run.
+
+[Operational state](results/analysis/2026-10-19_operational_grid_state/README.md); [Driver/EV interface](results/analysis/2026-10-20_driver_ev_routing_state/README.md); [Frozen routing configuration](results/analysis/2026-10-20_final_routing_configuration/README.md); [H_i_max resolution](results/analysis/2026-10-21_himax_resolution/README.md).
+
+### 6.4 Routing network and FedAvg
+
+State is **169D = 9×[mu,sigma,F_hat] + H_hat for all 142 grids**. Canonical action indices 0..8 are STAY/N/NE/E/SE/S/SW/W/NW. The **169→64→32→9** network masks invalid actions before normalization. Plain FedAvg is sample-count weighted; zero-sample clients are excluded. No privacy guarantee follows from weights-only aggregation.
+
+The current checkpoint is **PROVISIONAL_ROUTING_BASELINE**, trained on **3,408 controlled synthetic experiences**, split 2,272/1,136. Five fixed FedAvg rounds with Adam 0.001, batch 32, one local epoch, seed 42 produced best round 5 validation accuracy **29.2254%**, cross-entropy **1.829169**, below majority accuracy **33.6268%**. Predicted STAY **61.44%**; SE never predicted. Invalid actions **0**. This proves structural validity, not a successful final policy. Synthetic clients used grid-modulo grouping; the new simulator collector retains driver IDs for one-driver-per-client training.
+
+[Synthetic routing evidence and limitations](results/analysis/2026-10-20_final_routing_policy/README.md).
+
+### 6.5 Passenger acceptance, pricing contract and DQN
+
+Runtime baseline is `behavioural_E_threshold`, using the separately verified legacy January positive Normal(mean, population SD) conditioned on E>0. Its metadata describes absolute price-distance-ratio calibration; no transformation of Record-029 signed epsilon occurs. Runtime P_base and D_base resolve weather/half-hour TLC fare/distance means via exact → period → weather → global fallback, with January 25 18:30 training cutoff. Runtime P_base is **not** the Record-029 global reference.
+
+```text
+P_disp = factor * runtime P_base
+P_max = P_base + ((distance-D_base)/D_base) * P_base/E
+accept iff P_disp <= P_max
+state = [J_hat(g,t), J_disp(g,t-1), I(g,t),
+         p_STAY,p_N,p_NE,p_E,p_SE,p_S,p_SW,p_W,p_NW,
+         destination_popularity(g',t)]
+```
+
+The **13D state uses identity normalization**. J_disp is previous completed-slot successful assignments, not F_hat. I counts already-known passenger commitments arriving in **(t,t+30min]**, excluding reposition/charging and unknown future assignments. Routing p is the full nine-action vector; popularity is the regenerated lagged ordinal feature, not a probability distribution.
+
+Action indices 0..6 map to **[0.85,0.90,0.95,1.00,1.05,1.10,1.15]**. Reward is gross accepted **and successfully assigned** fare at assignment time; rejected/unmatched/failed requests yield zero. No utility, charging or reposition cost is deducted. An OD action is held within its slot; reward is attributed to that OD rather than duplicated across transitions.
+
+| Pricing DQN setting | Frozen value |
+| --- | --- |
+| Network | 13→64 ReLU→64 ReLU→7 raw Q-values |
+| Gamma / Adam LR | 0.99 / 0.001 |
+| Batch / loss | 64 / Huber |
+| Replay capacity / warmup | 100,000 / 1,000 |
+| Soft-target tau / seed | 0.005 / 42 |
+| Exploration | 1.0→0.05 linearly over 50,000 **optimizer updates** |
+| Target | terminal r; otherwise r + gamma*max Q_target(next_state) |
+
+This is standard DQN, not Double DQN. Warmup does not advance epsilon. The standalone synthetic fixture ran 100 updates, loss **3.50116517→0.15600096**; it is implementation evidence only.
+
+The bounded integration fixture used three vehicles and 36 controlled requests per four-slot run. Greedy factor1.10 rejected all 36. Forced factor1.00 accepted 24, rejected 12, assigned 6, unmatched 18, reward **$128.03439281400887**. Combined replay 24 transitions; no simulator optimizer update. These are branch tests, not historical performance.
+
+[Acceptance/state/reward contract](results/analysis/2026-10-20_pricing_contract_and_dqn_state/README.md); [Standalone DQN](results/analysis/2026-10-21_standalone_pricing_dqn/README.md); [Controlled integration fixture](results/analysis/2026-10-21_pricing_dqn_simulator_integration/README.md).
+
+### 6.6 Final hierarchical runner, episode and arrival correction
+
+`src.simulation.production.ProductionExperiment` exposes the final runner; `LegacyProductionExperiment` retains the historical implementation. Final execution uses 142 grids,169D/9-output routing,13D/7-action pricing, causal state, FCFS matching, timed passenger/reposition/charging movement, assignment rewards and replay. The migration's old H_i_max startup blocker is superseded by explicit profile calibration and successful startup.
+
+The March16 00:00–02:00 **four-slot** real-flow integration run used forecast counts and intact January empirical OD trips: **2,838 requests**, **1,121 accepted/assigned**, **1,717 rejected**, **0 accepted-unmatched**, gross revenue **$22,532.11609157535**, exactly reconciled per slot. Replay **1,104**, one optimizer update; epsilon1.0 during action selection, **0.999981** afterward. Action-decision counts were **[153,170,158,153,138,171,161]**. There were 14,946 STAY and 4,005 reposition decisions,913 passenger completions and 208 terminal passenger commitments. Forty-nine unsupported-origin forecast units were reported separately, not counted as generated requests. No charging events occurred; prior timed-charging tests cover that path. Fleet stayed 5,000, ending 4,298 IDLE/702 BUSY; state/replay/weights remained finite.
+
+The checkpoint is **SHORT_HIERARCHICAL_INTEGRATION_CHECKPOINT / NOT_FINAL_TRAINING_CHECKPOINT / DO_NOT_CONTINUE_FOR_FINAL_EXPERIMENTS**. It is integration proof, not learned pricing performance.
+
+During March1 collection, vehicles 918/4561 scheduled at 01:00 retained tiny positive floating-minute countdowns at the same publication timestamp. `ProductionExperiment.advance_until` now selects due passenger completions by unchanged absolute timestamps, including coincident movement events. Arrivals <=t complete and commitments clear before publication; future arrivals remain pending. I(g,t),30/2-minute timing, utilities and pricing are unchanged. Nine focused regressions pass, including t−1second/t/t+2min/t+30min, fail-closed checks, fleet conservation and append-once resume.
+
+Collection uses factor **1.00**, P_disp=runtime P_base, without pricing replay/training. Initial slot:3,494 requests,494 assignments,4,570 reposition experiences,0 charging experiences,4,570 active/430 zero-experience drivers; labels **[3505,74,113,289,114,296,15,148,16]**. After correction, six slots contain 27,009 experiences, no duplicate IDs, finite 169D states,9-element masks and valid labels; 5,000 unique vehicles. Full collection/training remains pending.
+
+[Runner migration (historical blocker)](results/analysis/2026-10-21_hierarchical_runner_migration/README.md); [Successful four-slot episode](results/analysis/2026-10-21_first_short_hierarchical_dqn_episode/README.md); [Arrival correction](results/analysis/2026-10-21_passenger_arrival_boundary_fix/README.md); [Current collection and preserved blocked-attempt history](results/analysis/2026-10-21_simulator_derived_routing_policy/README.md).
+
+### 6.7 Historical NB1–NB13 implementation reference
+
+<details>
+<summary>Preserved legacy stage documentation — not current run instructions or final contracts</summary>
+
+The following stage descriptions predate the active Jan–Mar/142-grid/DQN system. Their “current”, “final”, “production”, validation counts and commands refer to that historical milestone only. Do not execute these builders against current artifacts; sections 5–7 and 10 supersede their spatial/model/runtime assumptions.
+
+
+#### Legacy 6.1 Spatial preparation (NB1-NB2)
 
 | Item | Current contract |
 | --- | --- |
@@ -175,7 +270,7 @@ Spatial contract:
 
 `cleaned_trips.parquet` contains cleaned taxi fields plus `PUGridID` and `DOGridID`. The random generator is seeded with `random_seed + month_number` (42 + 1 for January) to reproduce the legacy zone-to-candidate-grid allocation. This mapping is an approximation introduced by the coordinate limitation, not an observed trip coordinate assignment.
 
-### 6.2 Weather preparation
+#### Legacy 6.2 Weather preparation
 
 | Item | Current contract |
 | --- | --- |
@@ -191,7 +286,7 @@ The processed table has 744 hourly rows and exactly `Datetime`, `Temperature`, `
 
 Both taxi and weather timestamps are intentionally timezone-naive to reproduce the legacy behaviour. Their temporal alignment remains a research assumption requiring an explicit future decision.
 
-### 6.3 NB3 demand master
+#### Legacy 6.3 NB3 demand master
 
 | Item | Current contract |
 | --- | --- |
@@ -210,7 +305,7 @@ DayOfWeek, Hour, Minute, Period, TimeIndex, HistoricalDemand
 
 Demand is the pickup count by `(TimeSlot, PUGridID)`; dropoff GridID is not used for the target. The January-filtered pickup total is **3,699,633**. This is five fewer than the cleaned-trip total because five trips fall outside the January pickup-time boundary. `HistoricalDemand` is a strictly earlier expanding mean by `GridID`, `DayOfWeek`, and `Period`; it does not use current or future demand. NB3 applies no normalization.
 
-### 6.4 NB4 CNN dataset
+#### Legacy 6.4 NB4 CNN dataset
 
 | Item | Current contract |
 | --- | --- |
@@ -231,7 +326,7 @@ For each ordered time `t`, the feature map is at `t` and the raw pickup-demand t
 
 Persisted artifacts are `X_train.npy`, `y_train.npy`, `X_test.npy`, `y_test.npy`, `time_train.npy`, `time_test.npy`, and `metadata.pkl`.
 
-### 6.5 NB5 CNN demand model
+#### Legacy 6.5 NB5 CNN demand model
 
 | Item | Current contract |
 | --- | --- |
@@ -246,7 +341,7 @@ The network is `Conv2D(32, 3x3, ReLU) -> Conv2D(64, 3x3, ReLU) -> Conv2D(32, 3x3
 
 Persisted artifacts are `normalization.pkl`, `cnn_model.keras`, `cnn_metrics.csv`, `cnn_predictions.npy`, `cnn_history.pkl`, and `cnn_provenance.json`. The current saved metrics are RMSE 2.5915691905, MAE 0.6337751746, MAPE 83.4894835949%, and R² 0.8985528946. The legacy baseline intentionally includes padded positions in normalization, loss, and metrics.
 
-### 6.6 Fleet baseline
+#### Legacy 6.6 Fleet baseline
 
 | Item | Current contract |
 | --- | --- |
@@ -256,7 +351,7 @@ Persisted artifacts are `normalization.pkl`, `cnn_model.keras`, `cnn_metrics.csv
 
 The configured fleet contains 5,000 vehicles, initially sampled uniformly over valid GridIDs. This is a provisional engineering baseline. Each `VehicleState` carries `vehicle_id`, `current_grid`, `trip_status`, `destination`, `remaining_travel_time`, `current_action`, and `energy_level`. The implemented statuses are `IDLE`, `BUSY`, and `CHARGING`. A busy vehicle has a valid destination and positive remaining duration; completing travel returns it to `IDLE` at its destination.
 
-### 6.7 Requests, OD generation, and dispatch
+#### Legacy 6.7 Requests, OD generation, and dispatch
 
 | Item | Current contract |
 | --- | --- |
@@ -276,7 +371,7 @@ Production uses `driver_contention`: accepted requests are announced to eligible
 
 NYC TLC `trip_distance` is retained as `trip_distance_miles` for source audit. Kilometres are the simulation's canonical operational distance unit, converted exactly once as `trip_distance_km = trip_distance_miles * 1.609344`. At successful assignment, before the vehicle transitions from `IDLE` to `BUSY`, passenger energy is deducted exactly once with the existing consumption rate: `trip_distance_km * 0.15 kWh/km`. The request records before, consumed, and after energy. Mini-slot advancement does not deduct it again. A completed low-energy vehicle enters the existing NB10 charging workflow; BUSY vehicles cannot charge or reposition.
 
-### 6.8 NB9 operational statistics
+#### Legacy 6.8 NB9 operational statistics
 
 | Item | Current contract |
 | --- | --- |
@@ -291,7 +386,7 @@ EWMA_next = (1 - alpha) * EWMA_previous + alpha * current_observation
 
 Alpha, initialization, population SD, and no-observation behaviour are provisional engineering decisions.
 
-### 6.9 NB10A EV energy
+#### Legacy 6.9 NB10A EV energy
 
 | Item | Current contract |
 | --- | --- |
@@ -300,7 +395,7 @@ Alpha, initialization, population SD, and no-observation behaviour are provision
 
 The code adopts selected Table I values from Ding et al.: 75 kWh battery capacity, 60 kWh reference initial energy, 7.5 kWh reference minimum, 0.15 kWh/km consumption, and 30 kW charging power. The operational fleet initialization is instead a seeded truncated-normal SOC distribution: mean 0.50, SD 0.05, bounds [0.50, 0.70]. The charging trigger is SOC <= 0.20 (energy <= 15 kWh), so it must not be confused with the 7.5 kWh literature reference. Charging efficiency is 0.90; release occurs at 75 kWh (full charge), which is provisional.
 
-### 6.10 NB10B charging infrastructure
+#### Legacy 6.10 NB10B charging infrastructure
 
 | Item | Current contract |
 | --- | --- |
@@ -311,7 +406,7 @@ The code adopts selected Table I values from Ding et al.: 75 kWh battery capacit
 
 Fifteen station grids are selected by descending pickup-plus-dropoff popularity (with lower GridID resolving a tie). A station has a 3,000 kW power limit and each active EV reserves 30 kW. It uses a power-only representation rather than a physical charger count. Nearest-station selection uses projected grid-centroid distance, charging queues are FCFS by arrival order with seeded random priority for simultaneous arrivals, and queued wait increments by mini-slot duration. Charging gain is `power * efficiency * hours` and is capped at battery capacity.
 
-### 6.11 NB11 utility-based routing/repositioning
+#### Legacy 6.11 NB11 utility-based routing/repositioning
 
 | Item | Current contract |
 | --- | --- |
@@ -328,7 +423,7 @@ The authoritative production assembler is `src/simulation/production.py`, invoke
 
 The frozen CNN is one-step-ahead: each saved prediction produced from `X_test[i]` is keyed in production by the target timestamp `time_test[i] + 30 minutes`. The 298 held-out targets therefore cover 2026-01-25 19:00 inclusive through 2026-02-01 00:00 exclusive; the stored `time_test` array retains its original X/input timestamp meaning.
 
-### 6.12 NB12 local supervised routing-policy learning
+#### Legacy 6.12 NB12 local supervised routing-policy learning
 
 | Item | Current contract |
 | --- | --- |
@@ -364,7 +459,7 @@ Invalid logits are excluded before softmax, so invalid actions have probability 
 
 Each vehicle retains a bounded local observation buffer. Federation-ready export contains only copied policy weights, vehicle ID, sample count, state dimension, action order, and architecture version; raw local observations are never exported.
 
-### 6.13 NB13 federated routing-policy aggregation
+#### Legacy 6.13 NB13 federated routing-policy aggregation
 
 | Item | Current contract |
 | --- | --- |
@@ -375,7 +470,7 @@ One synchronous federated round consumes corrected-NB12 export payloads, validat
 
 The common and local policies share the same `87 -> 64 -> 32 -> 5 logits` architecture, so aggregated weights load directly into fresh NB12 learners. Production performs one round after each main slot using only clients with new observations, applies sample-count-weighted FedAvg, and redistributes the global model. The interface aggregates weights only; raw states, chosen actions, masks, utilities, trajectories, and rewards are neither required nor transmitted. This baseline does not claim differential privacy, secure aggregation, client-failure simulation, or production communication behavior.
 
-### 6.14 Contextual pricing and historical customer acceptance
+#### Legacy 6.14 Contextual pricing and historical customer acceptance
 
 | Item | Current contract |
 | --- | --- |
@@ -414,7 +509,7 @@ The offered fare is the empirical base fare multiplied by the selected factor. P
 
 LinUCB state is copy-exportable/importable in memory. Scaling is applied once at the methodology-derived pricing-context boundary; the LinUCB equations and eight-dimensional state contract are unchanged.
 
-### 6.15 One-slot pricing, acceptance, and dispatch
+#### Legacy 6.15 One-slot pricing, acceptance, and dispatch
 
 | Item | Current contract |
 | --- | --- |
@@ -425,7 +520,7 @@ In production, each generated request receives its own 8D context and one pricin
 
 Raw served revenue includes only accepted requests successfully assigned by dispatch. Accepted-but-unserved and rejected requests yield zero learning reward. The production runner validates one selection and one finalized update per generated request and fails if any reservation remains pending.
 
-### 6.16 One-main-slot orchestration and grid policy aggregation
+#### Legacy 6.16 One-main-slot orchestration and grid policy aggregation
 
 | Item | Current contract |
 | --- | --- |
@@ -436,7 +531,7 @@ One main slot executes pricing/customer acceptance/contention dispatch across 15
 
 The grid routing probability supplied to pricing uses an explicit **project baseline aggregation rule**, not a professor- or paper-prescribed formula. The global NB12/NB13 policy first produces an individually masked `[STAY, NORTH, EAST, SOUTH, WEST]` probability vector for every eligible idle vehicle from its real 87-D routing state. These probability vectors are averaged arithmetically within each grid. One vehicle uses its vector unchanged. A grid with zero eligible vehicles carries its previous grid vector; first use without history requires explicit initialization. This aggregation is a learned policy tendency only and may be revisited in sensitivity analysis. **NB11 maximum utility remains the sole source of actual repositioning actions.**
 
-### 6.17 Short temporal simulation
+#### Legacy 6.17 Short temporal simulation
 
 | Item | Current contract |
 | --- | --- |
@@ -445,7 +540,7 @@ The grid routing probability supplied to pricing uses an explicit **project base
 
 The controlled temporal driver invokes the completed one-slot orchestrator exactly four times, advancing timestamps by 30 minutes. It reuses the same fleet and charging infrastructure, LinUCB learner, acceptance RNG stream, NB9 EWMA engine, local NB12 learners, and global policy learner. The latest grid probability becomes the next zero-vehicle carry-forward value. Federation slots are an explicit caller-supplied set rather than a claimed final cadence. Each slot receives only its explicitly supplied boundary forecast, popularity, requests, and utility inputs; no later realized outcome is inspected.
 
-### 6.18 24-hour small-fleet validation
+#### Legacy 6.18 24-hour small-fleet validation
 
 The temporal driver now supports an arbitrary positive slot count while retaining the four-slot compatibility wrapper. A deterministic **SMALL-FLEET VALIDATION** runs 48 consecutive 30-minute slots with 50 vehicles and four active grids. It is an integration-health milestone, not the final thesis experiment and not evidence that the 5,000-vehicle January simulation is complete.
 
@@ -453,36 +548,50 @@ The fixture uses controlled deterministic demand/popularity and retains an expli
 
 ### Reproducible validation reporting
 
-Run `python scripts/generate_validation_figures.py` to reproduce the compact pricing, customer-response, and dispatch reporting package from the deterministic 50-vehicle, four-grid, 48-slot, seed-42 engineering validation. The script consumes completed simulator results, validates reporting invariants, and writes one-row-per-pricing-context and one-row-per-slot datasets under `results/validation/validation_50v_4g_48slots_seed42/`, human-readable summaries under `results/tables/{pricing,customer_response,dispatch}/`, and 240-DPI figures under `results/figures/{pricing,customer_response,dispatch}/`. `summary.json` records the run configuration and reconciled totals; `figure_manifest.json` maps every figure to its compact source CSV.
+Run `python scripts/generate_validation_figures.py` to reproduce the compact pricing, customer-response, and dispatch reporting package from the deterministic 50-vehicle, four-grid, 48-slot, seed-42 engineering validation. The script consumes completed simulator results, validates reporting invariants, and writes one-row-per-pricing-context and one-row-per-slot datasets under `results/validation/validation_50v_4g_48slots_seed 42/`, human-readable summaries under `results/tables/{pricing,customer_response,dispatch}/`, and 240-DPI figures under `results/figures/{pricing,customer_response,dispatch}/`. `summary.json` records the run configuration and reconciled totals; `figure_manifest.json` maps every figure to its compact source CSV.
 
 These artifacts describe integration behaviour only. They are not results from the intended 5,000-vehicle January experiment, do not establish causal pricing effects, and do not identify an optimal pricing factor.
 
-The completed Phase 7D production validation uses aligned frozen-CNN targets, authoritative popularity, a 5,000-vehicle fleet, and one NB13 round per slot. Its machine output is under `results/validation/phase7d_48slot_final_integrated_seed42/`; the dated professor-review package is under `results/validation/2026-09-08_48slot_run/`. The older Phase 7C-4 output used misaligned prediction timestamps and is invalid for scientific performance interpretation; Phase 7C-6 is the corrected aligned preflight.
+The completed Phase 7D production validation uses aligned frozen-CNN targets, authoritative popularity, a 5,000-vehicle fleet, and one NB13 round per slot. Its machine output is under `results/validation/phase7d_48slot_final_integrated_seed 42/`; the dated professor-review package is under `results/validation/2026-09-08_48slot_run/`. The older Phase 7C-4 output used misaligned prediction timestamps and is invalid for scientific performance interpretation; Phase 7C-6 is the corrected aligned preflight.
 
 Passenger-trip duration and energy now use the intact sampled empirical TLC row. Busy state is temporally persistent across mini-slot and main-slot boundaries, and passenger energy remains deducted once across those advances. No centroid distance, grid-hop estimate, assumed speed, or external route model is used.
 
 ### Production validation status
 
-The latest integrated validation is Phase 7D: 48 consecutive aligned target slots from **2026-01-25 19:00 inclusive to 2026-01-26 19:00 exclusive**, seed 42, fleet 5,000. All accounting/numerical gates passed, a fresh two-slot replay matched exactly, and the latest full regression passes **258 tests**. Status is **`READY_FOR_PHASE_8A`**. Machine output is in `results/validation/phase7d_48slot_final_integrated_seed42/`; the dated chart/table package is in `results/validation/2026-09-08_48slot_run/`. The next proposed authoritative experiment is the complete 298-target held-out window ending 2026-02-01 00:00 exclusive.
+The latest integrated validation is Phase 7D: 48 consecutive aligned target slots from **2026-01-25 19:00 inclusive to 2026-01-26 19:00 exclusive**, seed 42, fleet 5,000. All accounting/numerical gates passed, a fresh two-slot replay matched exactly, and the latest full regression passes **258 tests**. Status is **`READY_FOR_PHASE_8A`**. Machine output is in `results/validation/phase7d_48slot_final_integrated_seed 42/`; the dated chart/table package is in `results/validation/2026-09-08_48slot_run/`. The next proposed authoritative experiment is the complete 298-target held-out window ending 2026-02-01 00:00 exclusive.
+
+
+</details>
 
 ## 7. Configuration reference
 
-`config/config.yaml` is the active configuration source. The table summarizes research-relevant settings rather than repeating every path.
+[config/config.yaml](config/config.yaml) selects active paths; [final temporal protocol](config/final_temporal_protocol.json) governs chronological use. Numeric project choices must not be cited as manuscript calibrations.
 
-| Area | Settings | Status/provenance |
+| Decision | Value | Classification |
 | --- | --- | --- |
-| Data/time | Month `2026-01`; seed 42; 30-minute interval | Study configuration / reproducibility control |
-| Spatial | EPSG:2263; 3,000 m square grid | Legacy NB1-aligned adopted setting |
-| Fleet | 5,000 vehicles; uniform valid-grid initialization; 30/2 minute main/mini slots | Supervisor/project decision; uniform initialization provisional |
-| Weather | Meteostat 1.7.6; NYC point; naive timestamps | Legacy utility compatibility; temporal alignment unresolved |
-| Statistics | Pre-cutoff fare prior; population SD; EWMA alpha 0.30; causal driver waits; missing-history `U_wait=0.5` | Frozen production configuration |
-| EV energy | 75 kWh, 0.15 kWh/km, 30 kW | Ding et al. Table I values adopted in code |
-| EV operations | SOC mean 0.50, SD 0.05, [0.50,0.70]; <=20% trigger; 0.90 efficiency; full-charge release | Supervisor/project/provisional settings as identified above |
-| Charging | 15 stations; 3,000 kW per station | Project baseline; power-only capacity model |
-| Dispatch | FCFS accepted requests; origin/direct-neighbour idle eligibility; driver contention; pickup-distance/utility/ID tie ranking | Final production dispatch with legacy compatibility mode |
-| Routing | Equal component weights; STAY/N/E/S/W; 12-minute/0.45-kWh MOVE; normalized DOD penalty | Frozen production NB11 baseline |
-| Routing policy learning | [64,32], LR 0.001, local observation capacity 1000, batch 32, 1 local epoch | Provisional NB12 engineering hyperparameters |
-| Pricing | Request-level 8D LinUCB; factors 0.85-1.15; alpha 1.0; historical sensitivity; served-revenue/training-reference reward | Frozen production configuration; later sensitivity analysis remains possible |
+| CNN horizon | 30 minutes instead of source10 | DOCUMENTED_ADAPTATION |
+| mu/sigma recurrences | Assignment-fare mean/population-SD EWMA | PROJECT_IMPLEMENTATION_DECISION |
+| alpha, beta, delta, kappa | 0.3 each | PROJECT_CALIBRATION |
+| F_hat_0, H_hat_0 | 0, 0 | PROJECT INITIALIZATION |
+| sigma/H_hat safeguards | 1e−6 USD / minutes | PROJECT NUMERICAL SAFEGUARDS |
+| Reposition coefficient | 0.25 normalized distance | PROJECT_CALIBRATION |
+| H_i_max baseline | 10 minutes, explicit profiles | PROJECT_CALIBRATION, not manuscript-derived |
+| H_i_max sensitivity | [5,10,20] minutes | PLANNED, not run |
+| Pricing actions | 0.85–1.15, seven factors | PROJECT EXPERIMENTAL DESIGN |
+| Record-029 cleaning/reference/support | <=100mi, ±$1, empirical P0.5–P99.5 | PROJECT METHODOLOGY DECISIONS |
+
+### Frozen hierarchical temporal protocol
+
+| Role | Inclusive slot-start range | Slots |
+| --- | --- | ---: |
+| CNN TRAIN | Jan1 00:00–Feb28 23:30 | 2,832 |
+| Hierarchical RL development/training | Mar1 00:00–Mar15 23:30 | 720 |
+| Integration/development exclusion | Mar16 00:00–23:30 | 48 |
+| Final hierarchical evaluation | Mar17 00:00–Mar31 23:30 | 720 |
+
+March16 was used for integration/debugging and one DQN optimizer update; it is excluded from final training/evaluation. March17–31 is protected prospectively for hierarchical evaluation, not claimed never examined in the original CNN evaluation. No model updates, feature fitting, threshold/hyperparameter tuning or checkpoint selection may use it. Guards reject updates on March16 and later and in evaluation mode, before slot mutation. Final pricing training must restart reproducibly from seed 42, not the March16 checkpoint. March1–15 reuses the original CNN validation interval intentionally for RL development.
+
+[Temporal protocol, forecast availability and quarantine evidence](results/analysis/2026-10-21_final_temporal_protocol/README.md).
 
 ## 8. Fresh-machine installation
 
@@ -490,7 +599,7 @@ The latest integrated validation is Phase 7D: 48 consecutive aligned target slot
 
 - Git (or an extracted repository archive)
 - Conda/Miniconda/Anaconda
-- Python 3.12-compatible platform and sufficient disk/RAM for the January taxi parquet and generated arrays
+- Python 3.12-compatible platform and sufficient disk/RAM for the Jan–Mar taxi Parquets and generated arrays
 - Internet access only when building/rebuilding Meteostat weather
 
 ```bash
@@ -500,7 +609,7 @@ cd Implementation
 
 The intended Conda environment is named `ridehailing-phd`. The repository's current `environment.yml` defines only Python 3.12, `requirements.txt` is intentionally empty, and `requirements-lock.txt` contains machine-local build paths. Consequently, none of these files is currently a one-command portable environment specification.
 
-Create the environment and install the verified working dependency set:
+Create the environment and install the previously recorded working dependency set (not a portable lock or a fresh-install verification):
 
 ```bash
 conda create -n ridehailing-phd python=3.12 -y
@@ -522,174 +631,157 @@ python -c "import tensorflow as tf; print(tf.__version__); print(tf.reduce_sum(t
 python -c "import meteostat, numpy, scipy; print(meteostat.__version__, numpy.__version__, scipy.__version__)"
 ```
 
+Run all commands from the repository root; imports use `src` directly rather than an editable package installation. For local module/scripts:
+
+```bash
+export PYTHONPATH=.
+export PYTHONDONTWRITEBYTECODE=1
+export MPLCONFIGDIR=/tmp/ridehailing-matplotlib
+python -c "import src; import pandas, pyarrow, geopandas, yaml; print('imports OK')"
+```
+
+The repository URL is installation-specific; `<repository-url>` above is a placeholder, not a claimed remote. A fully portable dependency lock remains unresolved. No installation or expensive workflow was executed for this documentation change.
+
 ## 9. Required data placement
 
-Before the spatial build, place the following files relative to the repository root:
+Existing artifacts should be reused. Raw rebuilding is not needed to resume collection. Fresh reconstruction requires the January, February and March Yellow Taxi Parquets under `data/raw/yellow_taxi/`, the complete Taxi Zone shapefile/sidecars under `data/raw/taxi_zones/`, and existing monthly weather artifacts. Network access is needed only to fetch absent weather.
 
-```text
-data/raw/yellow_taxi/yellow_tripdata_2026-01.parquet
-data/raw/taxi_zones/taxi_zones.shp
-data/raw/taxi_zones/taxi_zones.shx
-data/raw/taxi_zones/taxi_zones.dbf
-data/raw/taxi_zones/taxi_zones.prj
-```
+Current execution requires the142-grid foundation, Jan empirical request source, saved forecasts/popularity, historical fare/base lookups, behavioural-E calibration, explicit driver profiles, station/navigation artifacts and saved provisional routing model. Exact availability paths are recorded in [training input availability](results/analysis/2026-10-21_final_temporal_protocol/training_input_availability.json). Missing required inputs fail closed. Record-029's global P_base is not a replacement for runtime fare lookup.
 
-Additional shapefile sidecars supplied with the zone dataset should remain in `data/raw/taxi_zones/`. The weather build fetches and persists the Meteostat artifact; later stages consume the persisted parquet rather than downloading weather themselves.
+## 10. Running Locally — reproducible workflow
 
-## 10. Reproducible workflow
+Commands below are verified against existing entrypoints; they are **instructions, not runs performed for this update**. Commands that simulate/train write artifacts and require the corresponding stage to be intentionally started. Use a new output directory for any new experiment.
 
-Run scripts from the repository root with the `ridehailing-phd` environment activated.
+### Lightweight checks and current artifact validation
 
 ```bash
-# 1. Spatial/grid artifacts and cleaned trips
-python scripts/build_grid.py
-
-# 2. Legacy-compatible weather artifact (requires network access if absent)
-python scripts/build_weather.py
-
-# 3. NB3 demand master
-python scripts/build_demand_master.py
-
-# 4. NB4 CNN dataset
-python scripts/build_cnn_dataset.py
-
-# 5. NB5 training (can take materially longer than validation)
-python scripts/train_cnn.py
-
-# 6. NB10 station placement
-python scripts/build_charging_stations.py
-python scripts/build_destination_popularity.py
-
-# 7. Deterministic component demonstrations
-python scripts/test_fleet_state.py
-python scripts/test_dispatch.py
-python scripts/test_statistics.py
-python scripts/test_energy.py
-python scripts/test_charging_infrastructure.py
-python scripts/test_routing_baseline.py
-python scripts/test_local_routing_learning.py
-
-# 8. Unit suite
-python -m unittest discover -s tests -q
-
-# Rebuild the Phase 7D human-readable package from existing results (no simulation)
-python scripts/generate_phase7d_report.py
-
-# Production execution interface; choose slot count/output explicitly
-python scripts/run_production_experiment.py --slots <N> --seed 42 --output <directory>
+python -B -m unittest tests.test_final_temporal_protocol tests.test_passenger_arrival_boundary -q
+python -B scripts/test_final_cnn.py
 ```
 
-For build scripts, `--validate` reloads and validates existing artifacts without rebuilding. `--force` explicitly rebuilds/overwrites that stage's artifacts. `scripts/train_cnn.py --validate` validates saved NB5 artifacts without training; `--force` retrains and overwrites the saved NB5 outputs.
-
-### Quick validation without retraining
-
-If generated artifacts already exist, use:
+These use persisted artifacts; the arrival artifact tests describe the current six-slot checkpoint and may need an explicitly updated expectation after later generation. CNN validation does not retrain. See section12 for historical test evidence rather than assuming all suites are lightweight.
 
 ```bash
-python scripts/build_grid.py --validate
-python scripts/build_weather.py --validate
-python scripts/build_demand_master.py --validate
-python scripts/build_cnn_dataset.py --validate
-python scripts/train_cnn.py --validate
-python scripts/build_charging_stations.py --validate
-python scripts/build_destination_popularity.py --validate
-python -m unittest discover -s tests -q
+python -B scripts/activate_true_3km_foundation.py
 ```
 
-## 11. Generated artifacts
+The grid command takes its validate-only branch **only when** the existing `results/analysis/2026-10-19_true_3km_grid_activation/activation_complete.json` exists. Otherwise it builds/migrates artifacts; do not use it as a generic read-only command on an unprepared checkout. It also checks historical fingerprints, so later intentional artifact changes require interpretation of provenance failures.
 
-| Stage | Artifact | Purpose |
-| --- | --- | --- |
-| Spatial | `data/processed/cleaned_trips.parquet` | Filtered trips with seeded `PUGridID`/`DOGridID` |
-| Spatial | `grid_lookup.parquet`, `grid_mask.npy`, `grid_metadata.json` | Canonical valid-grid geometry, mask, and provenance |
-| Spatial | `zone_grid_mapping.parquet`, `zone_to_grids.pkl`, `neighbour_map.parquet` | Zone candidates and four-direction adjacency |
-| Weather | `weather/nyc_weather_processed_2026_01.parquet`, metadata JSON | Legacy-compatible hourly weather/provenance |
-| NB3 | `demand_master_2026_01.parquet`, metadata JSON | Authoritative complete grid-time demand table |
-| NB4 | `cnn/*.npy`, `cnn/metadata.pkl` | Train/test CNN tensors and chronology |
-| NB5 | `models/demand/normalization.pkl`, `cnn_model.keras` | Training-only normalization and trained CNN |
-| NB5 | `cnn_metrics.csv`, `cnn_predictions.npy`, `cnn_history.pkl`, `cnn_provenance.json` | Evaluation, outputs, training history, provenance |
-| NB5 | `outputs/figures/cnn_*.png` | Training, map, scatter, and error visualizations |
-| NB10B | `charging_stations_2026_01.parquet` | Popularity-ranked station definitions |
-| Pricing popularity | `destination_popularity_2026_01.parquet`, metadata JSON | Leakage-safe destination/drop-off trailing SMA, fixed global quintiles, labels, and scalar encodings |
-| Validation | `results/tables/validation_24h_*.csv` | Aggregate 48-slot small-fleet diagnostics and pricing-factor frequencies |
-| Validation | `results/figures/validation_24h_*.png` | Fleet, energy, request, and revenue health plots |
-| Production | `models/routing/nb12_nb13_common_initialization_seed42.npz`, metadata JSON | Frozen common NB12/NB13 initialization |
-| Production | `driver_preferences_seed42.parquet`, `nb9_fare_bootstrap_2026_01_25_1830.parquet` | Persistent profiles and pre-cutoff fare prior |
-| Phase 7D | `results/validation/phase7d_48slot_final_integrated_seed42/` | Authoritative 48-slot machine output |
-| Phase 7D reporting | `results/validation/2026-09-08_48slot_run/` | Dated charts, tables, manifest, and review index |
+### Existing CNN inference
 
-`models/pricing/`, `outputs/metrics/`, and `outputs/logs/` remain reserved persistence/output areas. Production state remains in memory during a trajectory; compact result artifacts and reproducibility fingerprints are persisted after execution.
+No stable standalone inference CLI currently exists for this workflow; it is invoked through `src.demand.final_cnn.FinalDemandPredictor(model_dir, dataset_dir).predict(forecast_rows, grid)`. Use the epoch-200 model directory and `data/processed/cnn_jan_mar_2026_3km_30min/`. Input columns are TimeSlot, GridID, Row, Column, WeatherCode, Temperature, WindSpeed and ignored placeholder Demand; exactly142 mapped rows per aligned forecast timestamp. Output is a forecast DataFrame; the caller chooses persistence. Reuse the already saved forecasts for simulation. `scripts/train_final_cnn.py` is a training entrypoint, not an inference shortcut.
 
-## 12. Testing
-
-The latest full regression contains **258 passing tests**:
+### Short development runner (inference-only)
 
 ```bash
-python -m unittest discover -s tests -q
+python -B scripts/run_production_experiment.py --slots 4 --seed 42 --output results/local_hierarchical_dev
 ```
 
-| Area | Test file(s) |
+This existing CLI runs1–8 slots from its fixed March16 00:00 development start, defaults to **no DQN training**, and writes `runner_trace.csv`/`runner_metadata.json`. It loads the active fleet/profiles, forecasts, operational priors and provisional routing checkpoint. It is not the final March17–31 evaluation launcher, nor a reproduction of the historical one-update episode. `--driver-profiles` accepts an explicit compatible Parquet. No start-date/training switch is exposed by this CLI.
+
+### Resume current simulator-derived routing collection
+
+```bash
+python -B scripts/generate_simulator_routing_experiences.py --stop-after-slot 720
+```
+
+This resumes the existing `data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl`; the stop argument is an **absolute committed slot target**, not extra slots. Without a checkpoint it starts anew, so verify the current file before invoking. It appends slot Parquets and atomically replaces its checkpoint, updating generation/daily summaries under the simulator-derived routing report. Keep the six saved slot files and latest checkpoint together. This is the next long-running task; it was not launched for this documentation update.
+
+### Later simulator-derived routing/FedAvg training — blocked until collection completes
+
+```bash
+python -B scripts/train_simulator_routing_policy.py
+```
+
+The implemented trainer requires COMPLETE status and all 720 slot files. It uses March1–12 training/March13–15 validation, one driver per client,169→64→32→9, five plain sample-weighted FedAvg rounds, Adam 0.001, batch 32, one local epoch, seed 42. Outputs are planned under `models/routing_policy/mar01_mar15_2026_3km_simulator_169x64x32x9_seed42/` and the existing simulator-derived routing report. This path is an output target, not an existing final model claim. Quality must be reviewed before replacing the synthetic checkpoint.
+
+### Later pricing training and protected evaluation
+
+No stable standalone CLI currently exists for the full March1–15 pricing-training or March17–31 final-evaluation workflow. The verified API is `ProductionExperiment.run_slot(..., train_dqn=..., terminal=...)`; `run(slot_count, train_dqn=False)` is limited to1–8 slots. `src/simulation/temporal_protocol.py` enforces update permissions and quarantined checkpoint rejection. A final long-period orchestration task is still required; do not invent a long-run CLI or bypass guards. Evaluation must disable updates and use approved frozen models. Fresh pricing training starts seed 42 and requires a usable simulator-derived routing model.
+
+### Broad tests / legacy workflows
+
+`python -m unittest discover -s tests -q` is the existing unittest discovery command, but is **not certified as a safe current lightweight suite**: historical tests include training fixtures and old-domain assumptions. Use focused suites for current interfaces. Legacy builders and commands retained in section6.7 are provenance, not active reconstruction instructions.
+
+## 11. Generated artifacts and model status
+
+| Artifact | Status / use |
 | --- | --- |
-| Configuration/spatial grid/artifacts/mapping | `test_config.py`, `test_grid.py`, `test_artifacts.py`, `test_spatial_mapping.py` |
-| Weather and demand | `test_weather_contract.py`, `test_demand_aggregation.py`, `test_demand_artifacts.py` |
-| CNN tensors/model | `test_cnn_tensors.py`, `test_cnn_model.py` |
-| Fleet/dispatch/statistics | `test_fleet_state.py`, `test_dispatch.py`, `test_statistics.py` |
-| EV energy/charging | `test_energy.py`, `test_charging_stations.py` |
-| Routing/local learning/federation | `test_routing_baseline.py`, `test_routing_learning.py`, `test_routing_federated.py` |
-| Pricing and one-slot dispatch integration | `test_pricing.py`, `test_pricing_dispatch.py` |
-| Grid policy aggregation and main-slot orchestration | `test_grid_policy.py`, `test_main_slot.py` |
-| Four-slot temporal continuity | `test_multi_slot.py` |
-| Empirical trip duration/distance/passenger energy | `test_passenger_trip.py` |
-| Empirical within-slot arrival timing | `test_empirical_arrivals.py` |
-| Generic temporal driver and 24-hour small-fleet validation | `test_validation_24h.py` |
-| Driver/vehicle idle-wait lifecycle and grid attribution | `test_driver_waiting.py` |
-| Destination/drop-off popularity aggregation, leakage, quintiles, and encoding | `test_destination_popularity.py` |
-| Historical sensitivity, customer sampling, `P_max`, and hierarchical fallback | `test_historical_sensitivity.py`, `test_customer_sensitivity.py` |
-| Driver contention and request-level pricing | `test_driver_contention.py`, `test_request_pricing_context.py`, `test_pricing_dispatch.py` |
-| Production routing artifacts and aligned assembler | `test_routing_production.py`, `test_production_simulation.py` |
+| [Epoch-200 CNN](models/cnn/jan_mar_2026_3km_30min_continued/best.keras) | FINAL FORECAST CHECKPOINT; historical-average baseline superior |
+| [Provisional routing model](models/routing_policy/jan_mar_2026_3km_169x64x32x9/best.keras) | STRUCTURALLY VALID / synthetic / TO BE SUPERSEDED |
+| [Standalone pricing fixture](models/pricing_dqn/standalone_13x64x64x7_fixture/) | IMPLEMENTATION FIXTURE ONLY |
+| [March16 pricing checkpoint](models/pricing_dqn/first_short_hierarchical_20260316_0000_0200_seed42/) | INTEGRATION ONLY; do not continue for final experiments |
+| [Routing generation checkpoint](data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl) | CURRENT RESUME POINT, March1 03:00 |
+| [RL-period forecasts](data/processed/cnn_jan_mar_2026_3km_30min/j_hat_epoch200_3km_142grids_mar01_15_2026_horizon30min.parquet) | 102,240 rows, March1–15 |
+| [Original test-period forecasts](results/analysis/2026-10-19_operational_grid_state/dqn_ready_forecasts.parquet) | 109,056 rows, March16–31; protocol determines allowed use |
+| [Driver profiles](data/processed/driver_preferences_seed42.parquet) | Explicit H_i_max 10,5,000 profiles |
 
-Tests primarily exercise deterministic and synthetic fixtures plus production loading/contracts. Passing validates module contracts. The separate completed Phase 7D trajectory validates 24-hour integrated production behavior; neither result substitutes for the proposed 298-slot experiment.
+Do not reuse the old ~914m/1,213-grid/51×52 artifacts, five-action or155D routing models, old-grid CNN/simulation results, synthetic routing policy as final, or integration DQN as final training initialization. Preserve them for provenance only.
 
-The final proposed request-level pricing context builder has a fixed order of scaled predicted demand, scaled corrected supply, routing probability mass toward the destination, lagged destination popularity, scaled trip distance in kilometres, scaled historical `P_base(W,T)`, `Period / 47`, and categorical weather severity. Distance and base price use clipped `log1p/P99` transforms with frozen training references.
+## 12. Testing and evidence
 
-Production uses `request_8d` for one LinUCB selection per request. Rewards are finalized only after dispatch: a served request receives its recorded dispatch price, while rejected and accepted-but-unserved requests receive zero. `legacy_grid` remains compatibility-only.
+The following are **recorded stage results**, not tests rerun for this README. Suites overlap; do not sum them as unique project tests.
 
-Production historical sensitivity uses the training-only hierarchical fallback `exact → Period → Weather → Global`, with resolve-once sampling and complete pending-decision accounting.
+| Stage | Recorded tests passed | Evidence |
+| --- | ---: | --- |
+| Final CNN | 22 | [Report](results/analysis/2026-10-19_final_jan_mar_3km_cnn/README.md) |
+| Operational grid state | 36 | [Report](results/analysis/2026-10-19_operational_grid_state/README.md) |
+| Driver/EV interface | 22 | [Report](results/analysis/2026-10-20_driver_ev_routing_state/README.md) |
+| Routing configuration | 34 | [Report](results/analysis/2026-10-20_final_routing_configuration/README.md) |
+| Synthetic routing policy | 35 | [Report](results/analysis/2026-10-20_final_routing_policy/README.md) |
+| Pricing contract/state | 16 | [Report](results/analysis/2026-10-20_pricing_contract_and_dqn_state/README.md) |
+| Standalone DQN | 23 | [Report](results/analysis/2026-10-21_standalone_pricing_dqn/README.md) |
+| DQN simulator integration | 29 | [Report](results/analysis/2026-10-21_pricing_dqn_simulator_integration/README.md) |
+| Runner migration | 70 | [Report](results/analysis/2026-10-21_hierarchical_runner_migration/README.md) |
+| H_i_max | 9 | [Report](results/analysis/2026-10-21_himax_resolution/README.md) |
+| Temporal protocol | 7 | [Report](results/analysis/2026-10-21_final_temporal_protocol/README.md) |
+| Arrival boundary/resume | 9 | [Report](results/analysis/2026-10-21_passenger_arrival_boundary_fix/README.md) |
 
-Production request-level LinUCB uses `training_reference` scaling: raw served `P_dispatch` remains the economic metric, while the learner receives `raw_served_revenue / (BASE_PRICE_REF_P99 × 1.15)` without clipping. Other selectors remain compatibility modes.
+The four-slot episode additionally reconciled every slot reward, valid states/actions/replay, fleet conservation and checkpoint reload. Boundary-resume validation checked finite 169D states, nine-entry masks, allowed labels, contiguous unique IDs and unchanged first-slot hashes. Earlier 258-test legacy regression is historical, not a current whole-project pass count.
 
 ## 13. Reproducibility boundaries
+
 
 The code centralizes seed 42 and uses deterministic ordering where possible: GridID ordering; zone-to-grid mapping; fleet placement; empirical trip-row sampling; empirical pickup-to-mini-slot mapping; initial SOC sampling; simultaneous charging priority; and NB12 state/action encoding. Customer acceptance uses its own explicit persistent RNG. NB4 uses a chronological split, and NB5 fits normalization on training features only.
 
 The saved grid, weather, demand, tensor, station, and CNN provenance metadata provide artifact-level traceability. TensorFlow training is configured for best-effort deterministic behaviour, but identical training results should not be assumed bit-for-bit across operating systems, devices, TensorFlow builds, or CPU kernels.
 
+The canonical temporal JSON, dated module reports and per-artifact metadata govern current reproducibility. Generation checkpoints preserve fleet, charging, operational state, commitments/missions, identifiers and RNG states; load only trusted locally generated checkpoints. Atomic file replacement is used, but retain matching slot/checkpoint files and validate integrity after interruptions. No bitwise cross-platform guarantee is inferred from a seed.
+
 ## 14. Research assumptions and limitations
 
-The following distinctions are material to interpreting results:
-
-1. Taxi records lack trip coordinates; seeded within-zone GridID assignment is an approximation.
-2. The 3 km square grid is an adopted legacy setting, not reselected by this implementation.
-3. Taxi/weather timestamps are naive; their alignment is unresolved.
-4. Weather is point-derived Meteostat data, and `WeatherCode` is retained without additional transformation.
-5. Padded invalid grid cells remain in NB5 normalization/loss/metrics to reproduce the legacy baseline.
-6. The four-direction neighbour map, uniform fleet placement, and origin/direct-neighbour contention region are current engineering baselines. Passenger origin, destination, timestamps, duration, distance, and fare are derived jointly from an empirical TLC row; arrival remains discretized to two-minute resolution. NB9 waiting is completed driver-idle waiting before dispatch, not passenger waiting. Repositioning takes 12 minutes and vehicles remain unavailable during movement.
-7. Station placement is popularity-based; charging navigation uses projected centroid distance rather than road-network travel.
-8. Charging capacity is power-only; the 0.90 efficiency and full-charge release rule are project/provisional choices.
-9. NB11 movement uses 15 km/h and a 3 km threshold, not road-network routing.
-10. NB12 learns a local masked policy from utility-selected actions; policy inference does not replace NB11's actual maximum-utility decision in the current implementation.
-11. The production assembler connects aligned frozen-CNN demand, popularity, request-level pricing, historical sensitivity, driver contention, NB9-NB13, charging, and continuous 5,000-vehicle state. Phase 7D covers 48 slots; conclusions over the full held-out target period await the proposed 298-slot run.
+- CNN underperforms the TRAIN historical-average baseline; final evaluation must report that baseline.
+- Historically observed weather is not an issuance-time weather forecast. Naive taxi/weather alignment remains an inherited assumption.
+- Zone-to-grid sampling approximates unavailable trip coordinates; projected neighbours and charging paths do not certify road connectivity.
+- Current routing policy is synthetic/provisional, below majority accuracy and partially collapsed. Simulator-derived experiences are incomplete.
+- March16 is contaminated for final evaluation and excluded. March17–31 is a prospective hierarchical holdout, not historically unseen by CNN reporting.
+- H_i_max, operational coefficients and normalized movement-cost coefficient are project calibrations. Planned sensitivities are not results.
+- Four-slot real-flow integration did not trigger charging; focused tests, not that episode, validate timed queue/navigation behavior.
+- Runtime requests sample intact January empirical trips with forecast-driven counts; unsupported origins are explicitly reported. This is not replay of every actual March request.
+- Plain FedAvg implementation does not establish differential privacy, secure aggregation or attack resistance. Those experiments remain pending.
+- No final learned pricing-DQN performance or causal real-world optimal-pricing claim is supported.
+- Dependency lock portability and long-period pricing/evaluation launchers remain implementation/documentation gaps, not fabricated commands.
 
 ## 15. Methodology provenance
+
 
 Not all values in this repository have the same evidentiary status. Methodology authority is, in order: the corrected final implementation process; supervisor clarifications; cited mathematical sources for degradation, LinUCB pricing, and ordinary customer acceptance; and the broader execution plan where not superseded. NB1-NB5 compatibility decisions preserve the legacy notebooks. Unresolved modelling choices remain explicitly provisional.
 
 For EV energy, the adopted Table I reference is: Zhaohao Ding et al., *Pricing Based Charging Navigation Scheme for Highway Transportation to Enhance Renewable Generation Integration*, IEEE Transactions on Industry Applications (2023). The code adopts its documented capacity, reference energy, consumption, and charging-power values; it does not claim that every operational SOC, queue, or release rule is literature-derived.
 
+Current final/frozen reports supersede earlier blocked/provisional statuses only for the resolved module. In particular, H_i_max resolution supersedes migration startup blockage; arrival correction supersedes collection's original01:00 blocker; the epoch-200 continuation supersedes epoch 100 as active CNN. The final 169D state supersedes the spatial migration's interim 155D state. Numeric validation/test partitions are not conflated.
+
+[Final hierarchical implementation audit](results/analysis/2026-10-18_final_hierarchical_rl_repo_audit/FINAL_IMPLEMENTATION_AUDIT.md) provides historical gap context; the newer dated reports linked above determine current status. Earlier clustering/literal-weather comparisons and reversed elasticity formulations must not replace Record-029 or the final analytical scenarios.
+
 ## 16. Pending work and roadmap
 
-1. **Phase 8A:** run the proposed 298 aligned held-out target slots with the frozen production configuration.
-2. **Final evaluation:** produce prespecified thesis tables, baselines, and ablations without tuning from headline profitability.
-3. **Separate elasticity analysis:** use approximately three or six months of historical data for time-by-weather elasticity outputs; confirm the channelization definition first.
+1. **Finish routing experience generation:** resume March1 03:00; complete 714 remaining slots. Preserve per-slot atomic checkpoints and daily summaries; validate all720 slots, participant/action/charging coverage and no duplicates.
+2. **Final simulator-derived routing policy:** train March1–12, validate March13–15;169→64→32→9 followed by plain FedAvg. Report loss/accuracy, majority baseline, collapse and invalid actions. Replace synthetic checkpoint only if usable.
+3. **Final non-private pricing DQN training:** reproducible seed 42 reset, March1–15, approved simulator-derived routing model. Never continue the March16 integration checkpoint. Complete the long-period orchestration interface first.
+4. **Final non-private evaluation:** March17–31 only, frozen inference/logging and no updates. Compare appropriate frozen fixed-price/LinUCB baselines without treating legacy-domain results as like-for-like.
+5. **Privacy:** implement/finalize differential privacy, accounting and secure aggregation; plain FedAvg alone is insufficient.
+6. **Robustness/adversarial evaluation:** poisoning, Sybil, strategic/malicious updates and robust aggregation.
+7. **Ablations/sensitivity:** H_i_max 5/10/20 minutes, CNN versus historical-average demand, and only methodology-supported remaining ablations.
+8. **Final experiments:** multiple seeds, uncertainty/statistical summaries, thesis tables/figures and transparent interpretation. No final claims before these stages.
 
-These remaining experiments are intentionally pending; implemented production components and completed Phase 7D validation should not be mistaken for the unrun 298-slot result.
+**ROOT_README_CURRENT = YES** for the documented state, with the explicit unresolved implementation/setup limitations above. This is not a claim that the research programme is complete.

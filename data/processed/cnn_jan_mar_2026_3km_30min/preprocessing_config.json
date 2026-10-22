@@ -1,0 +1,71 @@
+{
+  "dataset_version": "jan_mar_2026_3km_30min_v1",
+  "grid_version": "true_3km_v1",
+  "valid_grids": 142,
+  "raster": [
+    16,
+    16
+  ],
+  "period": [
+    "2026-01-01 00:00:00",
+    "2026-04-01 00:00:00"
+  ],
+  "forecast_minutes": 30,
+  "forecast_status": "DOCUMENTED_ADAPTATION",
+  "forecast_timestamp": "start of target interval [t,t+30min); issued for next main slot",
+  "target_unit": "requests/grid/30min",
+  "sources": {
+    "demand": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+    "demand_sha256": "c343a50fd0d14b583a30886a7b42ab56a82fa2075314228507508a0033a3353f",
+    "grid_sha256": "4e4020fd1c9faf8a3899bc718758052cc24b83e3c05caccb8e20ab98ec24fc2b"
+  },
+  "split_definition": {
+    "train": {
+      "start_inclusive": "2026-01-01 00:00:00",
+      "end_exclusive": "2026-03-01 00:00:00",
+      "slots": 2832
+    },
+    "validation": {
+      "start_inclusive": "2026-03-01 00:00:00",
+      "end_exclusive": "2026-03-16 00:00:00",
+      "slots": 720
+    },
+    "test": {
+      "start_inclusive": "2026-03-16 00:00:00",
+      "end_exclusive": "2026-04-01 00:00:00",
+      "slots": 768
+    }
+  },
+  "fit_start": "2026-01-01 00:00:00",
+  "fit_end_exclusive": "2026-03-01 00:00:00",
+  "fit_slots": 2832,
+  "scalers": {
+    "Temperature": {
+      "mean": 0.1502824858757062,
+      "std": 5.212237060460606
+    },
+    "WindSpeed": {
+      "mean": 10.468785310734463,
+      "std": 7.086069942153758
+    },
+    "HistoricalAverageDemandDistribution": {
+      "scale": 87.81456756591797
+    }
+  },
+  "imputation": "None: all source weather values present; fail on missing values",
+  "encoding": {
+    "DayOfWeek": "Monday=0 through Sunday=6, divided by6",
+    "Hour": "forecast hour/23",
+    "PeriodWithinHour": "minute00=0, minute30=1",
+    "WeatherType": "original Meteostat numeric code /27; deterministic legacy one-plane representation",
+    "Temperature": "TRAIN hourly mean/std z-score",
+    "WindSpeed": "TRAIN hourly mean/std z-score",
+    "HistoricalAverageDemandDistribution": "TRAIN group mean, divided by TRAIN historical-plane population SD"
+  },
+  "fallback": [
+    "GridID+weekday+half-hour-of-day TRAIN mean",
+    "GridID+half-hour-of-day TRAIN mean",
+    "GridID TRAIN mean",
+    "zero only without TRAIN history"
+  ]
+}

@@ -10,11 +10,11 @@ from src.data.config import load_config
 
 
 class ConfigTests(unittest.TestCase):
-    def test_default_configuration_preserves_nb1_grid(self) -> None:
+    def test_default_configuration_uses_metric_grid(self) -> None:
         config = load_config(Path("config/config.yaml"))
         self.assertEqual(
             config["grid"],
-            {"size_meters": 3000, "geometry": "square", "metric_crs": "EPSG:2263"},
+            {"grid_cell_size_m": 3000, "geometry": "square", "grid_construction_crs": "EPSG:32118", "neighbour_topology": "eight_way", "valid_grid_count": 142, "raster_rows": 16, "raster_columns": 16, "grid_version": "true_3km_v1"},
         )
         self.assertEqual(config["random_seed"], 42)
         self.assertEqual(config["time"]["interval_minutes"], 30)

@@ -1,0 +1,13 @@
+{
+  "status": "NOT_RUN",
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "local_epochs": 1,
+  "rounds": 5,
+  "seed": 42,
+  "early_stopping": false,
+  "loss": "masked sparse categorical cross entropy from logits",
+  "source": "existing fixed controlled-baseline routing training configuration",
+  "participant_semantics": "one driver_id is one client; synthetic grid%3 partition is not used"
+}

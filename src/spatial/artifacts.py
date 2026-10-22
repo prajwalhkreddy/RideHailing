@@ -14,7 +14,14 @@ import geopandas as gpd
 import numpy as np
 import pandas as pd
 
-from src.spatial.grid import validate_grid
+from src.spatial.grid import validate_grid as validate_legacy_grid
+from src.spatial.metric_grid import validate_metric_grid
+
+def validate_grid(grid):
+    if grid.crs.to_epsg() == 32118:
+        return validate_metric_grid(grid)
+    return validate_legacy_grid(grid)
+
 from src.spatial.mapping import build_zone_to_grids, validate_neighbor_map
 
 

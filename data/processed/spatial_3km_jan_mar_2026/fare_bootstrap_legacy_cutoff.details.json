@@ -1,0 +1,7 @@
+{
+  "global_valid_row_count": 2898376,
+  "global_mean_fare": 20.233906794701575,
+  "global_std_fare": 16.299856940413804,
+  "grid_level_rows": 136,
+  "global_fallback_rows": 6
+}

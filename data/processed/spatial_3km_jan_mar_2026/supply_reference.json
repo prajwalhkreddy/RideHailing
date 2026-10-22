@@ -1,0 +1,14 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "fleet_size": 5000,
+  "seed": 42,
+  "supply_ref_p99": 50.59,
+  "status": "STATIC_INITIALIZATION_REFERENCE_ONLY",
+  "demand_scaler": "Await new CNN training; do not use old pricing_context_scaler.json as migrated calibration."
+}

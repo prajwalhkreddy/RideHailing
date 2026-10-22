@@ -1,0 +1,16 @@
+{
+  "initial_fixed_loss": 3.5011651657737923,
+  "final_fixed_loss": 0.1560009615674208,
+  "saved_steps": 100,
+  "resumed_next_update_identical": true,
+  "optimizer_restored": true,
+  "online_target_restored": true,
+  "replay_size": 1000,
+  "replay_persisted": true,
+  "rng_restored": true,
+  "checkpoint": "models/pricing_dqn/standalone_13x64x64x7_fixture",
+  "notes": "Checkpoint remains at step100; one unsaved continuation verifies exact resume on this environment.",
+  "tests_passed": 23,
+  "tests_failed": 0,
+  "standalone_pricing_dqn_ready": true
+}

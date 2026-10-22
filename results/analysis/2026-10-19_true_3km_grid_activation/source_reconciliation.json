@@ -1,0 +1,39 @@
+{
+  "source_files": [
+    {
+      "path": "data/processed/legacy_914m_provenance/cleaned_trips.parquet",
+      "sha256": "648dfe389ed924ce597f88745af840f03d592737d5dd35015d018c255bc2b65e"
+    },
+    {
+      "path": "data/raw/yellow_taxi/yellow_tripdata_2026-02.parquet",
+      "sha256": "5352ca800f29c40a221ed5b0c6392c451fde7fcd236a73651bd5aea74713a26c"
+    },
+    {
+      "path": "data/raw/yellow_taxi/yellow_tripdata_2026-03.parquet",
+      "sha256": "d7af794a7ac06cbbb5afb4d1df9e86d84f2e878584de708ff2ffca4bd7d234d9"
+    }
+  ],
+  "source_file_filtering": {
+    "1": {
+      "records_loaded": 3699638,
+      "already_cleaned": true,
+      "outside_jan_mar_pickup_window": 4
+    },
+    "2": {
+      "records_loaded": 3399866,
+      "missing_location_ids": 0,
+      "invalid_zone_ids": 21888,
+      "records_after_filtering": 3377978,
+      "outside_jan_mar_pickup_window": 0
+    },
+    "3": {
+      "records_loaded": 3952451,
+      "missing_location_ids": 0,
+      "invalid_zone_ids": 23865,
+      "records_after_filtering": 3928586,
+      "outside_jan_mar_pickup_window": 4
+    }
+  },
+  "dropoffs_outside_window": 830,
+  "population": "Existing NB2 location-ID cleaning, no new fare/distance/duration filters."
+}

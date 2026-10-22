@@ -1,0 +1,27 @@
+component,artifact_or_module,classification,migration_requirement
+zone to GridID,data/processed/zone_grid_mapping.parquet; zone_to_grids.pkl,MUST_REGENERATE,"New IDs/zone intersections; candidate mapping is isolated, not activated."
+mapped trips,data/processed/cleaned_trips.parquet,MUST_REGENERATE,Reassign PUGridID/DOGridID from existing zone IDs; no raw preparation required.
+active grid/mask/neighbors,data/processed/grid_lookup.parquet;grid_mask.npy;neighbour_map.parquet,MUST_REGENERATE,Activate versioned candidate only after topology and migration sign-off.
+demand aggregation,data/processed/demand_master_2026_01.parquet,MUST_REGENERATE,Recount pickups and historical means on new IDs; retain30-minute horizon.
+destination popularity,data/processed/destination_popularity_2026_01.parquet,MUST_REGENERATE,"New destination grid counts, trailing means and training thresholds."
+CNN tensors,data/processed/cnn/,MUST_REGENERATE,"New raster, masks, feature/target arrays and time-aligned metadata."
+CNN model,models/demand/cnn_model.keras;normalization.pkl,RETRAIN_REQUIRED,New spatial support; fit preprocessing on training data and version new weights.
+CNN predictions,models/demand/cnn_predictions.npy;cnn_metrics.csv,MUST_REGENERATE,"New model/raster predictions, held-out evaluation and provenance."
+request generation,src/dispatch/generation.py,CODE_REUSABLE,Origin-conditioned sampler reusable; rebuild OD tables from new mapped rows.
+fleet initialization,src/fleet/fleet.py;src/charging/energy.py,CODE_REUSABLE,Initialize fresh state using new valid IDs; old vehicle placement not portable.
+neighbor masks,src/routing/baseline.py;src/simulation/grid_policy.py,MUST_REGENERATE,"Rebuild masks; cardinal code reusable,8way requires explicit9-class adaptation."
+driver utility,src/routing/baseline.py,CODE_REUSABLE,Core computations reusable; new candidates and geometry-derived travel cost;8way distance sqrt(2)*3km.
+charging navigation,src/charging/stations.py,CODE_REUSABLE,Rebuild station/centroid inputs; existing zero-time navigation remains a separate roadmap gap.
+charging stations,data/processed/charging_stations_2026_01.parquet,MUST_REGENERATE,Re-rank new-grid activity; station count/capacity need feasibility review.
+fare priors,data/processed/nb9_fare_bootstrap_2026_01_25_1830.parquet,MUST_REGENERATE,Training fares per new grid; no passenger sensitivity re-estimation.
+driver preference values,data/processed/driver_preferences_seed42.parquet,CODE_REUSABLE,Not inherently spatial; retain numerical preferences if source population unchanged.
+pricing normalization,config/pricing_context_scaler.json,MUST_REGENERATE,Grid-demand/supply references and geometry pickup reference must be recalibrated.
+routing-policy training data,src/routing/learning.py local observations,MUST_REGENERATE,Old grid IDs/neighborhood states cannot be mixed with new observations.
+routing-policy model,models/routing/nb12_nb13_common_initialization_seed42.npz,RETRAIN_REQUIRED,"Relearn routing on new states;8way also changes architecture,labels and masks."
+FedAvg implementation,src/routing/federated.py,CODE_REUSABLE,Averaging reusable;8way requires shape/version guards updated before use.
+FedAvg outputs,results/validation/*/routing_rounds.csv,RESULTS_SUPERSEDED,Historical baseline only; new-grid rounds must be regenerated later.
+LinUCB validation,results/validation/phase6*;phase7*,RESULTS_SUPERSEDED,Grid context/action economics change; retain old results as history.
+integrated simulation,results/validation/phase7d_48slot_final_integrated_seed42/,RESULTS_SUPERSEDED,Reinitialize/run new-grid baseline after dependencies and sign-off.
+production assembler,src/simulation/production.py,CODE_REUSABLE,"Update1213-grid guards,paths,hashes and topology assumptions in later migration only."
+spatial consumers,scripts/build_demand_master.py;scripts/build_cnn_dataset.py;src/demand/contracts.py,CODE_REUSABLE,Versioned artifact paths/CRS checks must be adapted; do not feed candidate to EPSG2263 legacy validator.
+Record029/030/weather analysis,data/processed/price_distance_sensitivity_record029/;results/analysis/,CODE_REUSABLE,Nonspatial sensitivity results stay frozen; no regeneration due solely to grid migration.

@@ -1,0 +1,7 @@
+{
+  "SIMULATOR_ROUTING_POLICY_READY": "NO",
+  "ROUTING_EFFECTIVENESS_CONCERN": "NOT_ASSESSED",
+  "checkpoint": null,
+  "old_synthetic_checkpoint": "PROVISIONAL_ROUTING_BASELINE; preserved, unchanged, not superseded",
+  "blocker": "ValueError: Unprocessed passenger arrival. Raised by ProductionExperiment._state_sources while publishing 2026-03-01 01:00 after the second slot. The second slot was not committed; do not use its results."
+}

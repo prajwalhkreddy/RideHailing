@@ -1,0 +1,75 @@
+{
+  "dataset_version": "jan_mar_2026_3km_30min_v1",
+  "grid_version": "true_3km_v1",
+  "valid_grids": 142,
+  "raster": [
+    16,
+    16
+  ],
+  "period": [
+    "2026-01-01 00:00:00",
+    "2026-04-01 00:00:00"
+  ],
+  "forecast_minutes": 30,
+  "forecast_status": "DOCUMENTED_ADAPTATION",
+  "forecast_timestamp": "start of target interval [t,t+30min); issued for next main slot",
+  "target_unit": "requests/grid/30min",
+  "sources": {
+    "demand": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+    "demand_sha256": "c343a50fd0d14b583a30886a7b42ab56a82fa2075314228507508a0033a3353f",
+    "grid_sha256": "4e4020fd1c9faf8a3899bc718758052cc24b83e3c05caccb8e20ab98ec24fc2b"
+  },
+  "split_definition": {
+    "train": {
+      "start_inclusive": "2026-01-01 00:00:00",
+      "end_exclusive": "2026-03-01 00:00:00",
+      "slots": 2832
+    },
+    "validation": {
+      "start_inclusive": "2026-03-01 00:00:00",
+      "end_exclusive": "2026-03-16 00:00:00",
+      "slots": 720
+    },
+    "test": {
+      "start_inclusive": "2026-03-16 00:00:00",
+      "end_exclusive": "2026-04-01 00:00:00",
+      "slots": 768
+    }
+  },
+  "best_epoch": 100,
+  "epochs_run": 100,
+  "validation": {
+    "MAE": 6.380307012682646,
+    "RMSE": 23.061297530364413,
+    "R2": 0.9446916437872532
+  },
+  "test": {
+    "MAE": 6.072322141353772,
+    "RMSE": 20.48501848867863,
+    "R2": 0.9511007257716422
+  },
+  "historical_average": {
+    "MAE": 3.3145281355210443,
+    "RMSE": 16.271804138733728,
+    "R2": 0.9691467364517821
+  },
+  "seasonal": {
+    "MAE": 28.088483443646933,
+    "RMSE": 92.15524822560909,
+    "R2": 0.010376865476304231
+  },
+  "cnn_beats_both_on_mae_and_rmse": false,
+  "forecast_rows": 109056,
+  "forecast_timestamps": 768,
+  "checkpoint_sha256": "ddfdeb485a4cc4d8859e5b342331a6b4187f4e072be70788841a81d46c29757c",
+  "protected_artifacts_unchanged": true,
+  "test_evaluations": 1,
+  "test_prediction_range": [
+    0.0,
+    1414.7974853515625
+  ],
+  "test_observed_range": [
+    0.0,
+    1764.0
+  ]
+}

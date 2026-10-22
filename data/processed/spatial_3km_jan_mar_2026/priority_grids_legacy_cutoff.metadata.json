@@ -1,0 +1,17 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "rows": 5,
+  "notes": "Existing production top-five fare-count convention, retained old cutoff; review after final split, not final DQN statistic.",
+  "sources": [
+    "data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet",
+    "data/processed/spatial_3km_jan_mar_2026/grid_lookup.parquet"
+  ],
+  "sha256": "0f567aec5b78d5e6ecda6ab553b893278bf02fcf316bc180ec53e1f063b1d11f",
+  "source_version": "Existing local 2026 Jan\u2013Mar sources; source hashes in source_reconciliation.json and artifact_index.json"
+}

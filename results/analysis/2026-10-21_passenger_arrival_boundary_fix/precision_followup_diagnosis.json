@@ -1,0 +1,31 @@
+{
+  "error": "Due passenger event was not processed before clock advancement.",
+  "offending": [
+    {
+      "vehicle": 553,
+      "assignment": "2026-03-01 01:43:55",
+      "scheduled": "2026-03-01 02:12:00",
+      "clock": "2026-03-01 02:12:00",
+      "status": "BUSY",
+      "grid": 28,
+      "destination": 70,
+      "remaining_minutes": 1.3452433611504944e-13
+    },
+    {
+      "vehicle": 524,
+      "assignment": "2026-03-01 01:47:18",
+      "scheduled": "2026-03-01 02:12:00",
+      "clock": "2026-03-01 02:12:00",
+      "status": "BUSY",
+      "grid": 47,
+      "destination": 29,
+      "remaining_minutes": 1.3452433611504944e-13
+    }
+  ],
+  "advance_locals": {
+    "delta": "None",
+    "remaining": "None",
+    "end": "2026-03-01 02:12:03",
+    "arrivals": "None"
+  }
+}

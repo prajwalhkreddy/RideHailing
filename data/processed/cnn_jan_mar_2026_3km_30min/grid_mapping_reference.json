@@ -1,0 +1,753 @@
+{
+  "dataset_version": "jan_mar_2026_3km_30min_v1",
+  "grid_version": "true_3km_v1",
+  "valid_grids": 142,
+  "raster": [
+    16,
+    16
+  ],
+  "period": [
+    "2026-01-01 00:00:00",
+    "2026-04-01 00:00:00"
+  ],
+  "forecast_minutes": 30,
+  "forecast_status": "DOCUMENTED_ADAPTATION",
+  "forecast_timestamp": "start of target interval [t,t+30min); issued for next main slot",
+  "target_unit": "requests/grid/30min",
+  "sources": {
+    "demand": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+    "demand_sha256": "c343a50fd0d14b583a30886a7b42ab56a82fa2075314228507508a0033a3353f",
+    "grid_sha256": "4e4020fd1c9faf8a3899bc718758052cc24b83e3c05caccb8e20ab98ec24fc2b"
+  },
+  "split_definition": {
+    "train": {
+      "start_inclusive": "2026-01-01 00:00:00",
+      "end_exclusive": "2026-03-01 00:00:00",
+      "slots": 2832
+    },
+    "validation": {
+      "start_inclusive": "2026-03-01 00:00:00",
+      "end_exclusive": "2026-03-16 00:00:00",
+      "slots": 720
+    },
+    "test": {
+      "start_inclusive": "2026-03-16 00:00:00",
+      "end_exclusive": "2026-04-01 00:00:00",
+      "slots": 768
+    }
+  },
+  "path": "data/processed/grid_lookup.parquet",
+  "mask": "valid_mask.npy",
+  "mapping": [
+    {
+      "GridID": 0,
+      "Row": 0,
+      "Column": 9
+    },
+    {
+      "GridID": 1,
+      "Row": 0,
+      "Column": 10
+    },
+    {
+      "GridID": 2,
+      "Row": 0,
+      "Column": 11
+    },
+    {
+      "GridID": 3,
+      "Row": 1,
+      "Column": 9
+    },
+    {
+      "GridID": 4,
+      "Row": 1,
+      "Column": 10
+    },
+    {
+      "GridID": 5,
+      "Row": 1,
+      "Column": 11
+    },
+    {
+      "GridID": 6,
+      "Row": 1,
+      "Column": 12
+    },
+    {
+      "GridID": 7,
+      "Row": 1,
+      "Column": 13
+    },
+    {
+      "GridID": 8,
+      "Row": 2,
+      "Column": 8
+    },
+    {
+      "GridID": 9,
+      "Row": 2,
+      "Column": 9
+    },
+    {
+      "GridID": 10,
+      "Row": 2,
+      "Column": 10
+    },
+    {
+      "GridID": 11,
+      "Row": 2,
+      "Column": 11
+    },
+    {
+      "GridID": 12,
+      "Row": 2,
+      "Column": 12
+    },
+    {
+      "GridID": 13,
+      "Row": 2,
+      "Column": 13
+    },
+    {
+      "GridID": 14,
+      "Row": 3,
+      "Column": 8
+    },
+    {
+      "GridID": 15,
+      "Row": 3,
+      "Column": 9
+    },
+    {
+      "GridID": 16,
+      "Row": 3,
+      "Column": 10
+    },
+    {
+      "GridID": 17,
+      "Row": 3,
+      "Column": 11
+    },
+    {
+      "GridID": 18,
+      "Row": 3,
+      "Column": 12
+    },
+    {
+      "GridID": 19,
+      "Row": 3,
+      "Column": 13
+    },
+    {
+      "GridID": 20,
+      "Row": 4,
+      "Column": 7
+    },
+    {
+      "GridID": 21,
+      "Row": 4,
+      "Column": 8
+    },
+    {
+      "GridID": 22,
+      "Row": 4,
+      "Column": 9
+    },
+    {
+      "GridID": 23,
+      "Row": 4,
+      "Column": 10
+    },
+    {
+      "GridID": 24,
+      "Row": 4,
+      "Column": 11
+    },
+    {
+      "GridID": 25,
+      "Row": 4,
+      "Column": 12
+    },
+    {
+      "GridID": 26,
+      "Row": 4,
+      "Column": 13
+    },
+    {
+      "GridID": 27,
+      "Row": 5,
+      "Column": 7
+    },
+    {
+      "GridID": 28,
+      "Row": 5,
+      "Column": 8
+    },
+    {
+      "GridID": 29,
+      "Row": 5,
+      "Column": 9
+    },
+    {
+      "GridID": 30,
+      "Row": 5,
+      "Column": 10
+    },
+    {
+      "GridID": 31,
+      "Row": 5,
+      "Column": 11
+    },
+    {
+      "GridID": 32,
+      "Row": 5,
+      "Column": 12
+    },
+    {
+      "GridID": 33,
+      "Row": 5,
+      "Column": 13
+    },
+    {
+      "GridID": 34,
+      "Row": 5,
+      "Column": 14
+    },
+    {
+      "GridID": 35,
+      "Row": 6,
+      "Column": 6
+    },
+    {
+      "GridID": 36,
+      "Row": 6,
+      "Column": 7
+    },
+    {
+      "GridID": 37,
+      "Row": 6,
+      "Column": 8
+    },
+    {
+      "GridID": 38,
+      "Row": 6,
+      "Column": 9
+    },
+    {
+      "GridID": 39,
+      "Row": 6,
+      "Column": 10
+    },
+    {
+      "GridID": 40,
+      "Row": 6,
+      "Column": 11
+    },
+    {
+      "GridID": 41,
+      "Row": 6,
+      "Column": 12
+    },
+    {
+      "GridID": 42,
+      "Row": 6,
+      "Column": 13
+    },
+    {
+      "GridID": 43,
+      "Row": 6,
+      "Column": 14
+    },
+    {
+      "GridID": 44,
+      "Row": 6,
+      "Column": 15
+    },
+    {
+      "GridID": 45,
+      "Row": 7,
+      "Column": 6
+    },
+    {
+      "GridID": 46,
+      "Row": 7,
+      "Column": 7
+    },
+    {
+      "GridID": 47,
+      "Row": 7,
+      "Column": 8
+    },
+    {
+      "GridID": 48,
+      "Row": 7,
+      "Column": 9
+    },
+    {
+      "GridID": 49,
+      "Row": 7,
+      "Column": 10
+    },
+    {
+      "GridID": 50,
+      "Row": 7,
+      "Column": 11
+    },
+    {
+      "GridID": 51,
+      "Row": 7,
+      "Column": 12
+    },
+    {
+      "GridID": 52,
+      "Row": 7,
+      "Column": 13
+    },
+    {
+      "GridID": 53,
+      "Row": 7,
+      "Column": 14
+    },
+    {
+      "GridID": 54,
+      "Row": 7,
+      "Column": 15
+    },
+    {
+      "GridID": 55,
+      "Row": 8,
+      "Column": 1
+    },
+    {
+      "GridID": 56,
+      "Row": 8,
+      "Column": 2
+    },
+    {
+      "GridID": 57,
+      "Row": 8,
+      "Column": 5
+    },
+    {
+      "GridID": 58,
+      "Row": 8,
+      "Column": 6
+    },
+    {
+      "GridID": 59,
+      "Row": 8,
+      "Column": 7
+    },
+    {
+      "GridID": 60,
+      "Row": 8,
+      "Column": 8
+    },
+    {
+      "GridID": 61,
+      "Row": 8,
+      "Column": 9
+    },
+    {
+      "GridID": 62,
+      "Row": 8,
+      "Column": 10
+    },
+    {
+      "GridID": 63,
+      "Row": 8,
+      "Column": 11
+    },
+    {
+      "GridID": 64,
+      "Row": 8,
+      "Column": 12
+    },
+    {
+      "GridID": 65,
+      "Row": 8,
+      "Column": 13
+    },
+    {
+      "GridID": 66,
+      "Row": 8,
+      "Column": 14
+    },
+    {
+      "GridID": 67,
+      "Row": 9,
+      "Column": 1
+    },
+    {
+      "GridID": 68,
+      "Row": 9,
+      "Column": 2
+    },
+    {
+      "GridID": 69,
+      "Row": 9,
+      "Column": 6
+    },
+    {
+      "GridID": 70,
+      "Row": 9,
+      "Column": 7
+    },
+    {
+      "GridID": 71,
+      "Row": 9,
+      "Column": 8
+    },
+    {
+      "GridID": 72,
+      "Row": 9,
+      "Column": 9
+    },
+    {
+      "GridID": 73,
+      "Row": 9,
+      "Column": 10
+    },
+    {
+      "GridID": 74,
+      "Row": 9,
+      "Column": 11
+    },
+    {
+      "GridID": 75,
+      "Row": 9,
+      "Column": 12
+    },
+    {
+      "GridID": 76,
+      "Row": 9,
+      "Column": 13
+    },
+    {
+      "GridID": 77,
+      "Row": 9,
+      "Column": 14
+    },
+    {
+      "GridID": 78,
+      "Row": 10,
+      "Column": 1
+    },
+    {
+      "GridID": 79,
+      "Row": 10,
+      "Column": 2
+    },
+    {
+      "GridID": 80,
+      "Row": 10,
+      "Column": 3
+    },
+    {
+      "GridID": 81,
+      "Row": 10,
+      "Column": 4
+    },
+    {
+      "GridID": 82,
+      "Row": 10,
+      "Column": 5
+    },
+    {
+      "GridID": 83,
+      "Row": 10,
+      "Column": 6
+    },
+    {
+      "GridID": 84,
+      "Row": 10,
+      "Column": 7
+    },
+    {
+      "GridID": 85,
+      "Row": 10,
+      "Column": 8
+    },
+    {
+      "GridID": 86,
+      "Row": 10,
+      "Column": 9
+    },
+    {
+      "GridID": 87,
+      "Row": 10,
+      "Column": 10
+    },
+    {
+      "GridID": 88,
+      "Row": 10,
+      "Column": 11
+    },
+    {
+      "GridID": 89,
+      "Row": 10,
+      "Column": 12
+    },
+    {
+      "GridID": 90,
+      "Row": 10,
+      "Column": 13
+    },
+    {
+      "GridID": 91,
+      "Row": 10,
+      "Column": 14
+    },
+    {
+      "GridID": 92,
+      "Row": 11,
+      "Column": 1
+    },
+    {
+      "GridID": 93,
+      "Row": 11,
+      "Column": 2
+    },
+    {
+      "GridID": 94,
+      "Row": 11,
+      "Column": 3
+    },
+    {
+      "GridID": 95,
+      "Row": 11,
+      "Column": 4
+    },
+    {
+      "GridID": 96,
+      "Row": 11,
+      "Column": 5
+    },
+    {
+      "GridID": 97,
+      "Row": 11,
+      "Column": 6
+    },
+    {
+      "GridID": 98,
+      "Row": 11,
+      "Column": 7
+    },
+    {
+      "GridID": 99,
+      "Row": 11,
+      "Column": 8
+    },
+    {
+      "GridID": 100,
+      "Row": 11,
+      "Column": 9
+    },
+    {
+      "GridID": 101,
+      "Row": 11,
+      "Column": 10
+    },
+    {
+      "GridID": 102,
+      "Row": 11,
+      "Column": 11
+    },
+    {
+      "GridID": 103,
+      "Row": 11,
+      "Column": 12
+    },
+    {
+      "GridID": 104,
+      "Row": 11,
+      "Column": 13
+    },
+    {
+      "GridID": 105,
+      "Row": 11,
+      "Column": 14
+    },
+    {
+      "GridID": 106,
+      "Row": 12,
+      "Column": 1
+    },
+    {
+      "GridID": 107,
+      "Row": 12,
+      "Column": 2
+    },
+    {
+      "GridID": 108,
+      "Row": 12,
+      "Column": 3
+    },
+    {
+      "GridID": 109,
+      "Row": 12,
+      "Column": 4
+    },
+    {
+      "GridID": 110,
+      "Row": 12,
+      "Column": 5
+    },
+    {
+      "GridID": 111,
+      "Row": 12,
+      "Column": 6
+    },
+    {
+      "GridID": 112,
+      "Row": 12,
+      "Column": 7
+    },
+    {
+      "GridID": 113,
+      "Row": 12,
+      "Column": 8
+    },
+    {
+      "GridID": 114,
+      "Row": 12,
+      "Column": 9
+    },
+    {
+      "GridID": 115,
+      "Row": 12,
+      "Column": 10
+    },
+    {
+      "GridID": 116,
+      "Row": 12,
+      "Column": 11
+    },
+    {
+      "GridID": 117,
+      "Row": 12,
+      "Column": 12
+    },
+    {
+      "GridID": 118,
+      "Row": 12,
+      "Column": 13
+    },
+    {
+      "GridID": 119,
+      "Row": 12,
+      "Column": 14
+    },
+    {
+      "GridID": 120,
+      "Row": 13,
+      "Column": 0
+    },
+    {
+      "GridID": 121,
+      "Row": 13,
+      "Column": 1
+    },
+    {
+      "GridID": 122,
+      "Row": 13,
+      "Column": 2
+    },
+    {
+      "GridID": 123,
+      "Row": 13,
+      "Column": 3
+    },
+    {
+      "GridID": 124,
+      "Row": 13,
+      "Column": 4
+    },
+    {
+      "GridID": 125,
+      "Row": 13,
+      "Column": 5
+    },
+    {
+      "GridID": 126,
+      "Row": 13,
+      "Column": 6
+    },
+    {
+      "GridID": 127,
+      "Row": 13,
+      "Column": 7
+    },
+    {
+      "GridID": 128,
+      "Row": 13,
+      "Column": 8
+    },
+    {
+      "GridID": 129,
+      "Row": 13,
+      "Column": 9
+    },
+    {
+      "GridID": 130,
+      "Row": 13,
+      "Column": 10
+    },
+    {
+      "GridID": 131,
+      "Row": 13,
+      "Column": 11
+    },
+    {
+      "GridID": 132,
+      "Row": 14,
+      "Column": 0
+    },
+    {
+      "GridID": 133,
+      "Row": 14,
+      "Column": 1
+    },
+    {
+      "GridID": 134,
+      "Row": 14,
+      "Column": 2
+    },
+    {
+      "GridID": 135,
+      "Row": 14,
+      "Column": 3
+    },
+    {
+      "GridID": 136,
+      "Row": 14,
+      "Column": 4
+    },
+    {
+      "GridID": 137,
+      "Row": 14,
+      "Column": 8
+    },
+    {
+      "GridID": 138,
+      "Row": 14,
+      "Column": 9
+    },
+    {
+      "GridID": 139,
+      "Row": 15,
+      "Column": 0
+    },
+    {
+      "GridID": 140,
+      "Row": 15,
+      "Column": 1
+    },
+    {
+      "GridID": 141,
+      "Row": 15,
+      "Column": 2
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "path": "models/pricing_dqn/first_short_hierarchical_20260316_0000_0200_seed42",
+  "classification": [
+    "SHORT_HIERARCHICAL_INTEGRATION_CHECKPOINT",
+    "NOT_FINAL_TRAINING_CHECKPOINT",
+    "DO_NOT_CONTINUE_FOR_FINAL_EXPERIMENTS"
+  ],
+  "checkpoint_sha256": {
+    "replay.npz": "638630c26ac4204552699d25255f36d23ae2b7d9462fdd8ad5a1f86ecc14920c",
+    "checkpoint.json": "107f53b40424fb74c13425210b323827c9bdad3e6905bd55f05ef1138a6136a8",
+    "target.keras": "06fdaf74566fe00c9d2240eeca5e316e51eb65d1ab13276a4153427d38513720",
+    "online.keras": "8cfe311ac2394258aea3f073ffd74db43cc20657e05162fc65c839aaa8af4a9c"
+  },
+  "final_initialization": "fresh reproducible seed42; do not continue integration checkpoint",
+  "guard": "ProductionExperiment validates checkpoint path before loading for final experiments"
+}

@@ -12,24 +12,12 @@ from tensorflow.keras import Model
 from tensorflow.keras.layers import Dense, Input
 from tensorflow.keras.optimizers import Adam
 
-from src.routing.baseline import ACTION_ORDER, GridRoutingFeatures, RoutingAction, RoutingState, valid_action_mask
+from src.routing.baseline import ACTION_ORDER, RoutingAction
 
 
-# Each valid candidate has a separate validity field. Invalid candidate blocks
-# are all zero. Within a valid block, missing numeric values become zero and a
-# missing charging_available value becomes -1.
-_CANDIDATE_FIELDS = (
-    "valid", "grid_id", "predicted_demand", "supply_total", "supply_idle",
-    "supply_busy", "supply_charging", "mean_fare", "std_fare", "ewma_fare",
-    "ewma_std_fare", "mean_wait", "std_wait", "ewma_wait", "ewma_std_wait",
-    "charging_available", "charging_wait",
-)
-STATE_FEATURE_ORDER = (
-    "vehicle.current_grid",
-    "vehicle.energy_level",
-) + tuple(f"{action.value}.{field}" for action in ACTION_ORDER for field in _CANDIDATE_FIELDS)
-STATE_DIMENSION = len(STATE_FEATURE_ORDER)
-POLICY_ARCHITECTURE_VERSION = "routing-policy-87-64-32-5-v1"
+from src.routing.final_state import RoutingState, STATE_FEATURE_ORDER, encode_routing_state, action_mask_array
+STATE_DIMENSION = 169
+POLICY_ARCHITECTURE_VERSION = "routing-policy-169-64-32-9-v3"
 
 
 @dataclass(frozen=True)
@@ -69,61 +57,10 @@ def routing_learning_parameters_from_config(config: Mapping[str, Any]) -> Routin
     return parameters
 
 
-def _finite_number(value: float | int | None, *, missing: float = 0.0) -> float:
-    if value is None:
-        return missing
-    result = float(value)
-    if not np.isfinite(result):
-        raise ValueError("Routing state features must be finite or None.")
-    return result
-
-
-def _candidate_vector(features: GridRoutingFeatures | None) -> list[float]:
-    if features is None:
-        return [0.0] * len(_CANDIDATE_FIELDS)
-    charging_available = -1.0 if features.charging_available is None else float(features.charging_available)
-    return [
-        1.0,
-        _finite_number(features.grid_id),
-        _finite_number(features.predicted_demand),
-        _finite_number(features.supply_total),
-        _finite_number(features.supply_idle),
-        _finite_number(features.supply_busy),
-        _finite_number(features.supply_charging),
-        _finite_number(features.mean_fare),
-        _finite_number(features.std_fare),
-        _finite_number(features.ewma_fare),
-        _finite_number(features.ewma_std_fare),
-        _finite_number(features.mean_wait),
-        _finite_number(features.std_wait),
-        _finite_number(features.ewma_wait),
-        _finite_number(features.ewma_std_wait),
-        charging_available,
-        _finite_number(features.charging_wait),
-    ]
-
-
-def encode_routing_state(state: RoutingState) -> np.ndarray:
-    """Encode NB11 state deterministically in ``STATE_FEATURE_ORDER``."""
-    values = [_finite_number(state.current_grid), _finite_number(state.energy_level)]
-    for action in ACTION_ORDER:
-        values.extend(_candidate_vector(state.action_features.get(action)))
-    encoded = np.asarray(values, dtype=np.float32)
-    if encoded.shape != (STATE_DIMENSION,) or not np.isfinite(encoded).all():
-        raise ValueError("Routing state does not satisfy the fixed NB12 input contract.")
-    return encoded
-
-
-def action_mask_array(state: RoutingState) -> np.ndarray:
-    """Return a separate boolean mask in fixed action order."""
-    mask = valid_action_mask(state)
-    return np.asarray([mask[action] for action in ACTION_ORDER], dtype=bool)
-
-
 def _validate_mask(mask: np.ndarray) -> np.ndarray:
     result = np.asarray(mask, dtype=bool)
     if result.shape != (len(ACTION_ORDER),) or not result.any():
-        raise ValueError("Action mask must contain five entries and at least one valid action.")
+        raise ValueError("Action mask must contain nine entries and at least one valid action.")
     return result
 
 
@@ -132,7 +69,7 @@ def masked_softmax(logits: np.ndarray, action_mask: np.ndarray) -> np.ndarray:
     values = np.asarray(logits, dtype=np.float64)
     mask = _validate_mask(action_mask)
     if values.shape != (len(ACTION_ORDER),) or not np.isfinite(values).all():
-        raise ValueError("Policy logits must be a finite five-element vector.")
+        raise ValueError("Policy logits must be a finite nine-element vector.")
     shifted = values[mask] - np.max(values[mask])
     valid_exp = np.exp(shifted)
     probabilities = np.zeros(len(ACTION_ORDER), dtype=np.float32)
@@ -141,7 +78,7 @@ def masked_softmax(logits: np.ndarray, action_mask: np.ndarray) -> np.ndarray:
 
 
 def build_routing_policy_model(parameters: RoutingLearningParameters, *, seed: int | None = None) -> Model:
-    """Build the common 87 -> 64 -> 32 -> 5-logit policy architecture."""
+    """Build the common 169 -> 64 -> 32 -> 9-logit policy architecture."""
     parameters.validate()
     if seed is not None:
         tf.keras.utils.set_random_seed(seed)
@@ -186,14 +123,14 @@ class LocalObservationBuffer:
 
 def _validate_observation(observation: LocalPolicyObservation) -> None:
     if observation.state.shape != (STATE_DIMENSION,) or not np.isfinite(observation.state).all():
-        raise ValueError("Observation state violates the fixed 87-feature contract.")
+        raise ValueError("Observation state violates the fixed 169-feature contract.")
     mask = _validate_mask(observation.action_mask)
     if not 0 <= observation.chosen_action_index < len(ACTION_ORDER) or not mask[observation.chosen_action_index]:
         raise ValueError("Chosen action must be valid under the observation mask.")
     if observation.utility_vector is not None:
         utility = np.asarray(observation.utility_vector)
         if utility.shape != (len(ACTION_ORDER),):
-            raise ValueError("Optional audit utility vector must have five entries.")
+            raise ValueError("Optional audit utility vector must have nine entries.")
 
 
 class LocalRoutingLearner:
@@ -250,6 +187,8 @@ class LocalRoutingLearner:
 
     def train_for_slot(self, slot_index: int) -> float | None:
         """Train at most once at the end of a 30-minute main slot."""
+        from src.routing.configuration import require_production_configuration
+        require_production_configuration()
         if slot_index in self._trained_slots:
             raise ValueError("NB12 training may run at most once per main slot.")
         self._trained_slots.add(slot_index)
@@ -283,3 +222,13 @@ class LocalRoutingLearner:
             "action_order": [action.value for action in ACTION_ORDER],
             "architecture_version": POLICY_ARCHITECTURE_VERSION,
         }
+
+
+def load_final_policy(path):
+    """Load only final-shaped models; legacy checkpoints require explicit legacy use."""
+    model = tf.keras.models.load_model(path, compile=False)
+    if model.input_shape != (None, 169) or model.output_shape != (None, 9):
+        raise ValueError("SUPERSEDED_FOR_FINAL_169_INPUT_POLICY: incompatible legacy checkpoint.")
+    if [layer.units for layer in model.layers[1:]] != [64, 32, 9]:
+        raise ValueError("Final architecture must be 169 -> 64 -> 32 -> 9.")
+    return model

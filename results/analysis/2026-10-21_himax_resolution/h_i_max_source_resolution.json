@@ -1,0 +1,83 @@
+{
+  "status": "VARIABLE_ONLY_NO_CALIBRATION",
+  "H_i_max_status": "PROJECT_CALIBRATION",
+  "authoritative_value": null,
+  "authoritative_distribution": null,
+  "equivalent_existing_field": null,
+  "findings": [
+    {
+      "source_path": "notebooks/plan/ImplementationPlan/Complete_Hierarchical_RL_Implementation_Roadmap_CNN_Updated.docx",
+      "section": "Module 8, paragraphs 173–176",
+      "classification": "VARIABLE_ONLY_NO_CALIBRATION",
+      "evidence": "U3_(i,g′,t) = 1 − exp(−H_i_max / H-hat_(g′,t))",
+      "interpretation": "Variable/formula only: no constant, distribution, driver-specific calibration or bounds for H_i_max.",
+      "units": "Same time units as H_hat; minutes in current implementation; equation itself does not specify a time unit."
+    },
+    {
+      "source_path": "notebooks/plan/ImplementationPlan/Complete_Hierarchical_RL_Implementation_Roadmap_CNN_Updated.docx",
+      "section": "Charging assumptions, paragraphs 514–517",
+      "classification": "VARIABLE_ONLY_NO_CALIBRATION",
+      "evidence": "Charging-station locations/count, charging duration, charging rate, battery capacity, energy consumption and charging-queue rules require calibration and are not numerically specified in the roadmap.",
+      "interpretation": "Explicit absence of numerical charging assumptions; not an explicit H_i_max calibration.",
+      "units": "No H_i_max unit or value specified."
+    },
+    {
+      "source_path": "notebooks/plan/supervisor/Record-019.pdf",
+      "section": "page 2",
+      "classification": "NOT_FOUND",
+      "interpretation": "Discusses charging-completion duration divided by maximum charging duration (threshold-to-full), charger power and degradation. This is not maximum acceptable queue waiting time; cannot supply H_i_max.",
+      "units": "Charging-duration slots; not a charging-wait allowance."
+    },
+    {
+      "source_path": "notebooks/plan/Final_Module_Wise_Algorithm_Input_Output_Document.pdf",
+      "section": "M14, pages 4 and 18",
+      "classification": "VARIABLE_ONLY_NO_CALIBRATION",
+      "evidence": "Use public charging availability/waiting statistics plus private preferences.",
+      "interpretation": "Private charging preference is required, without numerical charging-wait calibration.",
+      "units": "Not numerically specified."
+    },
+    {
+      "source_path": "notebooks/plan/Charging_Implementation_Step_by_Step.docx",
+      "section": "paragraphs 42, 48, 135, 159",
+      "classification": "NOT_FOUND",
+      "interpretation": "Station selection, queue waiting and charging progression are described; no maximum acceptable charging-wait allowance calibrated.",
+      "units": "Waiting time; no H_i_max numerical definition."
+    }
+  ],
+  "searched_sources": [
+    "notebooks/plan/Charging_Implementation_Step_by_Step.docx",
+    "notebooks/plan/PhD_Implementation_Clear_Picture_and_Execution_Plan.docx",
+    "notebooks/plan/Corrected_Final_Implementation_Process_NYC_RideHailing_PhD.docx",
+    "notebooks/plan/Final_Module_Wise_Algorithm_Input_Output_Document.pdf",
+    "notebooks/plan/papers/Joint_Optimization_of_Pricing_Dispatching_and_Repositioning_in_Ride-Hailing_With_Multiple_Models_Interplayed_Reinforcement_Learning.pdf",
+    "notebooks/plan/papers/MARL-Based_Pricing_Strategy_via_Mutual_Attention_for_MoD_Systems_with_Ridesharing_and_Repositioning.pdf",
+    "notebooks/plan/papers/Pricing_Based_Charging_Navigation_Scheme_for_Highway_Transportation_to_Enhance_Renewable_Generation_Integration.pdf",
+    "notebooks/plan/papers/A_Reinforcement_Learning_and_Prediction-Based_Lookahead_Policy_for_Vehicle_Repositioning_in_Online_Ride-Hailing_Systems (1).pdf",
+    "notebooks/plan/papers/Scheduling_of_Electric_Vehicles_Power_in_V2G_and_G2V_Modes_Using_an_Improved_ChargeDischarge_Opportunity-Based_Approach.pdf",
+    "notebooks/plan/ImplementationPlan/Complete_Hierarchical_RL_Implementation_Roadmap_CNN_Updated.docx",
+    "notebooks/plan/supervisor/Final_Next_Implementation_Process.docx",
+    "notebooks/plan/supervisor/Implementation Process Document.pdf",
+    "notebooks/plan/supervisor/Record-019.pdf"
+  ],
+  "search_scope": "Available methodology/reference documents under notebooks/plan, excluding passenger-elasticity/sensitivity material; text and DOCX equation text. Negative finding is limited to these available sources.",
+  "decision_required": null,
+  "project_baseline_calibration": {
+    "parameter": "H_i_max_minutes",
+    "baseline": 10.0,
+    "units": "minutes",
+    "status": "PROJECT_CALIBRATION",
+    "source_status": "VARIABLE_ONLY_NO_CALIBRATION",
+    "planned_sensitivity_values": [
+      5,
+      10,
+      20
+    ],
+    "sensitivity_experiments_run": false,
+    "rationale": "The methodology defines H_i_max without numerical calibration. A constant avoids unsupported driver-level heterogeneity. The project baseline is 10 minutes; it is not manuscript-derived or an authoritative source value.",
+    "runtime_column": "charging_wait_preference_minutes",
+    "runtime_alias": "Explicit persisted copy of H_i_max_minutes; no runtime default.",
+    "profiles_examined": 5000,
+    "profiles_populated": 5000,
+    "profiles_rejected": 0
+  }
+}

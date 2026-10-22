@@ -1,0 +1,20 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "validation": "PASS",
+  "no_training": true,
+  "passenger_sensitivity_unchanged": true,
+  "legacy_source_git_commit": "0cca91368bda5f81a5eb6ad1692ed8b2748fbf96",
+  "popularity": "Existing reference cutoff retained; pre-cutoff runtime encoding masked",
+  "new_policy_dimensions": [
+    155,
+    64,
+    32,
+    9
+  ]
+}

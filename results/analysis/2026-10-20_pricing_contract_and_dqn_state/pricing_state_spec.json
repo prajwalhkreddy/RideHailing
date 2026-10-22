@@ -1,0 +1,93 @@
+{
+  "dimension": 13,
+  "features": [
+    {
+      "index": 0,
+      "name": "J_hat",
+      "unit": "expected requests/30min",
+      "normalization": "identity"
+    },
+    {
+      "index": 1,
+      "name": "J_disp_previous",
+      "unit": "successful dispatches/previous30min",
+      "normalization": "identity"
+    },
+    {
+      "index": 2,
+      "name": "I_incoming",
+      "unit": "vehicles",
+      "normalization": "identity"
+    },
+    {
+      "index": 3,
+      "name": "p_STAY",
+      "unit": "probability",
+      "normalization": "identity"
+    },
+    {
+      "index": 4,
+      "name": "p_N",
+      "unit": "probability",
+      "normalization": "identity"
+    },
+    {
+      "index": 5,
+      "name": "p_NE",
+      "unit": "probability",
+      "normalization": "identity"
+    },
+    {
+      "index": 6,
+      "name": "p_E",
+      "unit": "probability",
+      "normalization": "identity"
+    },
+    {
+      "index": 7,
+      "name": "p_SE",
+      "unit": "probability",
+      "normalization": "identity"
+    },
+    {
+      "index": 8,
+      "name": "p_S",
+      "unit": "probability",
+      "normalization": "identity"
+    },
+    {
+      "index": 9,
+      "name": "p_SW",
+      "unit": "probability",
+      "normalization": "identity"
+    },
+    {
+      "index": 10,
+      "name": "p_W",
+      "unit": "probability",
+      "normalization": "identity"
+    },
+    {
+      "index": 11,
+      "name": "p_NW",
+      "unit": "probability",
+      "normalization": "identity"
+    },
+    {
+      "index": 12,
+      "name": "destination_popularity",
+      "unit": "ordinal quintile score",
+      "normalization": "identity"
+    }
+  ],
+  "normalization": {
+    "type": "identity",
+    "fit_required": false,
+    "count_fields": "raw nonnegative counts, no unverified legacy scaler reuse",
+    "routing": "probabilities unchanged",
+    "popularity": "existing ordinal 0,.25,.5,.75,1"
+  },
+  "routing_status": "PROVISIONAL_ROUTING_BASELINE",
+  "timing": "All snapshots target t and are available no later than decision; previous dispatch ledger must be completed exactly through t; arrivals committed strictly before t",
+  "artifact_forecast_assumption": "Saved epoch-200 next-slot forecast treated as available at target slot decision per frozen interface; real forecast-weather provisioning is inherited, not newly established here"
+}

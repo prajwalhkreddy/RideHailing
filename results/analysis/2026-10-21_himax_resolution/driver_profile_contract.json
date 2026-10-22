@@ -1,0 +1,32 @@
+{
+  "parameter": "H_i_max_minutes",
+  "baseline": 10.0,
+  "units": "minutes",
+  "status": "PROJECT_CALIBRATION",
+  "source_status": "VARIABLE_ONLY_NO_CALIBRATION",
+  "planned_sensitivity_values": [
+    5,
+    10,
+    20
+  ],
+  "sensitivity_experiments_run": false,
+  "rationale": "The methodology defines H_i_max without numerical calibration. A constant avoids unsupported driver-level heterogeneity. The project baseline is 10 minutes; it is not manuscript-derived or an authoritative source value.",
+  "runtime_column": "charging_wait_preference_minutes",
+  "runtime_alias": "Explicit persisted copy of H_i_max_minutes; no runtime default.",
+  "profiles_examined": 5000,
+  "profiles_populated": 5000,
+  "profiles_rejected": 0,
+  "requirements": [
+    "finite",
+    "strictly positive",
+    "explicitly persisted for every EV-capable driver",
+    "no runtime fallback"
+  ],
+  "profile_path": "data/processed/driver_preferences_seed42.parquet",
+  "profile_parquet_sha256": "e1c41d5bacf542a58605dbd84a94effb845b33125495d591aa5c2a1a0627ecb1",
+  "previous_profile_sha256": "dcb422e5e492f44a85815aad5f22a50f833f7071a67a126edf09a09270c0764d",
+  "unrelated_attributes_unchanged": true,
+  "min": 10.0,
+  "mean": 10.0,
+  "max": 10.0
+}

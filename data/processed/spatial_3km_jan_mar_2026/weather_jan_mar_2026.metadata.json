@@ -1,0 +1,18 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "rows": 2160,
+  "notes": "Existing hourly weather concatenation; raw Meteostat code unchanged, naive timestamp convention unchanged.",
+  "sources": [
+    "/Users/prajwalhk/Keerthi/Implementation/data/processed/weather/nyc_weather_processed_2026_01.parquet",
+    "/Users/prajwalhk/Keerthi/Implementation/data/processed/weather/nyc_weather_processed_2026_02.parquet",
+    "/Users/prajwalhk/Keerthi/Implementation/data/processed/weather/nyc_weather_processed_2026_03.parquet"
+  ],
+  "sha256": "a898fdeaa10a646d62c7a8934a16a374edc40ac7969c042c7db41ec7a223e77c",
+  "source_version": "Existing local 2026 Jan\u2013Mar sources; source hashes in source_reconciliation.json and artifact_index.json"
+}

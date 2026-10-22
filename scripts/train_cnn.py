@@ -140,6 +140,8 @@ def train(config: dict) -> dict[str, object]:
 def main() -> int:
     args = parse_args()
     config = load_config(ROOT / "config/config.yaml")
+    if config["grid"].get("grid_version") == "true_3km_v1":
+        raise ValueError("Legacy January pipeline is superseded. Use the Jan–Mar 3km source foundation; corrected training-only preprocessing is the next task.")
     try:
         if args.validate:
             report = validate_saved_artifacts(config)

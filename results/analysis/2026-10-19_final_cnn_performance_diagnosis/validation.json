@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "same_test_targets_order": true,
+  "continued_forecast_rows": 109056,
+  "timestamps": 768,
+  "saved_metrics_reproduce": true,
+  "continuation_cap_respected": true,
+  "validation_selected_checkpoint_verified": true,
+  "original_and_protected_files_unchanged": 215,
+  "additional_test_inference_during_validation": false
+}

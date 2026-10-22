@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "rows": 102240,
+  "timestamps": 720,
+  "grids": 142,
+  "first": "2026-03-01 00:00:00",
+  "last": "2026-03-15 23:30:00",
+  "checkpoint": "models/cnn/jan_mar_2026_3km_30min_continued/best.keras",
+  "checkpoint_sha256": "cce7f32457e85df02b730e7fde0d7fb00360a12703e3b27393ffeca6f5472c19",
+  "epoch": 200,
+  "forecast_path": "data/processed/cnn_jan_mar_2026_3km_30min/j_hat_epoch200_3km_142grids_mar01_15_2026_horizon30min.parquet",
+  "forecast_sha256": "ef2066438ab56c2965df4d520d21cb3c1ccfec08e6aefda2804e04ea612b949b",
+  "source_tensors": "X_validation.npy; forecast_timestamp_validation.npy",
+  "input_shape": [
+    720,
+    7,
+    16,
+    16
+  ],
+  "no_refit": true,
+  "no_prediction_clipping": true,
+  "nonnegative": true,
+  "finite": true,
+  "no_duplicates": true,
+  "grid_mapping_matches": true,
+  "minimum": 0.0,
+  "maximum": 1453.7891845703125
+}

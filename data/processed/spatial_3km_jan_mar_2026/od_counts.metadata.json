@@ -1,0 +1,17 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "rows": 11278,
+  "notes": "Descriptive full-period OD counts; not a runtime feature fitted on future trips.",
+  "sources": [
+    "data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet",
+    "data/processed/spatial_3km_jan_mar_2026/grid_lookup.parquet"
+  ],
+  "sha256": "b70dd0a111b8f774a3f8ed0b4778ee567a38531c12e2f98a9204c5737e5380fa",
+  "source_version": "Existing local 2026 Jan\u2013Mar sources; source hashes in source_reconciliation.json and artifact_index.json"
+}

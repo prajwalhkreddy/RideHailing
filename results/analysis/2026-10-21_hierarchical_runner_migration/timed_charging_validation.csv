@@ -1,0 +1,3 @@
+timestamp,vehicle,event,grid,next_grid,distance_m
+2026-03-16 00:30:00,2,charging_travel,27,36.0,2999.9999999999927
+2026-03-16 00:42:00,2,charging,36,,

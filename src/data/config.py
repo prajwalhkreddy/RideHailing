@@ -46,10 +46,15 @@ def load_config(path: str | Path = "config/config.yaml") -> dict[str, Any]:
     grid = config["grid"]
     if grid.get("geometry") != "square":
         raise ValueError("First milestone supports only the NB1 square-grid methodology.")
-    if not isinstance(grid.get("size_meters"), int) or grid["size_meters"] <= 0:
-        raise ValueError("grid.size_meters must be a positive integer.")
-    if grid.get("metric_crs") != "EPSG:2263":
-        raise ValueError("grid.metric_crs must be EPSG:2263 for NB1 compatibility.")
+    if grid.get("grid_cell_size_m") != 3000 or grid.get("grid_construction_crs") != "EPSG:32118":
+        raise ValueError("Active grid requires explicit 3000 metres in EPSG:32118.")
+    if grid.get("neighbour_topology") != "eight_way" or grid.get("valid_grid_count") != 142:
+        raise ValueError("Active topology requires eight-way neighbours and 142 grids.")
+    if (grid.get("raster_rows"), grid.get("raster_columns")) != (16, 16):
+        raise ValueError("Active raster must be 16x16.")
+    cnn = config.get("cnn", {})
+    if cnn.get("forecast_minutes") != 30 or cnn.get("dataset_start") != "2026-01-01 00:00:00" or cnn.get("dataset_end_exclusive") != "2026-04-01 00:00:00":
+        raise ValueError("CNN contract requires Jan–Mar 2026 and next-30-minute forecasts.")
     if config["time"].get("interval_minutes") != 30:
         raise ValueError("time.interval_minutes must remain 30 for this milestone.")
     if not isinstance(config["random_seed"], int):

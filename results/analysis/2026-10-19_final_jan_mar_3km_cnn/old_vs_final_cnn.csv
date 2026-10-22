@@ -1,0 +1,11 @@
+property,Old CNN,Final CNN
+Dataset period,January2026,January–March2026
+Grid cell side,3000USsurveyfeet =914.401829m,3000metres EPSG:32118
+Valid grid count,1213,142
+Raster,51x52,16x16
+Forecast horizon,next30minutes,"next30minutes, explicit forecast_timestamp"
+Input channels,"HistoricalDemand,Temperature,WindSpeed,WeatherCode,DayOfWeek,Hour,Period","DayOfWeek,Hour,PeriodWithinHour,WeatherType,Temperature,WindSpeed,HistoricalAverageDemandDistribution"
+Architecture,"7->32->64->32->1, linear output","7->14->7->1, allReLU, valid-cell mask"
+Split,January outer chronological split plus internal validation,TrainJan–Feb;validationMar1–15;testMar16–31
+Preprocessing,Expanding historical averages; scaling includes internal validation interval,Frozen TRAIN-only lookup/scalers; no imputation needed
+Status,KEEP_PROVENANCE / SUPERSEDED_FOR_FINAL_JAN_MAR_3KM_CNN,Selected best validation checkpoint; test evaluated once

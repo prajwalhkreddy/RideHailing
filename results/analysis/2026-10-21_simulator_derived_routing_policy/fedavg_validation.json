@@ -1,0 +1,6 @@
+{
+  "status": "NOT_RUN",
+  "rounds_completed": 0,
+  "participants_trained": 0,
+  "reason": "ValueError: Unprocessed passenger arrival. Raised by ProductionExperiment._state_sources while publishing 2026-03-01 01:00 after the second slot. The second slot was not committed; do not use its results."
+}

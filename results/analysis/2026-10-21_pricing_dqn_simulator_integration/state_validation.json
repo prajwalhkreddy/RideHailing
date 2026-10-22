@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "runs": 2,
+  "state_vectors": 48,
+  "replay_transitions": 24,
+  "terminal_transitions": 6,
+  "checkpoint_hashes_unchanged": true,
+  "state_dimension": 13,
+  "next_state_timing_verified": true,
+  "J_disp_counts_verified": true,
+  "incoming_counts_verified": true,
+  "terminal_targets_verified": true,
+  "optimizer_updates": 0,
+  "tests_passed": 29,
+  "tests_failed": 0,
+  "DQN_SIMULATOR_INTEGRATION_READY": true
+}

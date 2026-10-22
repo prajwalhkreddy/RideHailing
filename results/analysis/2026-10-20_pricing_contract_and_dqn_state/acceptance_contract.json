@@ -1,0 +1,15 @@
+{
+  "passenger_acceptance_model": "behavioural_E_threshold",
+  "status": "PROJECT_IMPLEMENTATION_DECISION",
+  "formula": "P_max=P_base+((distance_miles-D_base)/D_base)*P_base/E; accept iff factor*P_base <= P_max",
+  "E_distribution": "Normal(legacy epsilon_mean,legacy epsilon_std_population), conditioned on E>0; zero variance uses positive mean",
+  "source": "data/processed/customer_price_sensitivity_2026_01.parquet; customer_price_sensitivity_fallback_2026_01.parquet",
+  "source_provenance": "Separate legacy January absolute price-distance ratio calibration, NOT signed Record-029. No new abs/inversion/clipping transformation performed.",
+  "record029_used": false,
+  "base_price": "Resolved WeatherCode x Period mean TLC fare_amount, USD",
+  "base_distance": "Resolved WeatherCode x Period mean trip_distance, miles",
+  "fallback_order": "exact -> period -> weather -> global",
+  "training_cutoff": "2026-01-25 18:30:00 exclusive",
+  "safeguards": "E, P_base and D_base finite positive; distance finite nonnegative; finite P_max; nonpositive E rejected, not replaced; negative P_max allowed and rejects nonnegative fare",
+  "alternate": "Eq31 logistic retained separately, not selected by final contract"
+}

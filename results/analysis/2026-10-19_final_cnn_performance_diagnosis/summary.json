@@ -1,0 +1,169 @@
+{
+  "checks": {
+    "train_only_fit_verified": true,
+    "heldout_perturbation_invariant": true,
+    "exact_saved_tensors_verified": true,
+    "same_test_targets_and_mask": true,
+    "fallbacks_verified": true,
+    "mask_and_gradient_verified": true,
+    "saved_architecture_verified": true,
+    "optimizer_iterations_restored": 4500,
+    "lr": 0.0010000000474974513,
+    "zero_prediction_share_valid_test": 0.8150858274647887,
+    "zero_prediction_share_positive_targets": 0.7928670497325143,
+    "historical_scale": 87.81456756591797
+  },
+  "trend": {
+    "last_10_epochs": {
+      "from_epoch": 90,
+      "to_epoch": 100,
+      "from_MSE": 546.2714659594118,
+      "to_MSE": 531.8234437839918,
+      "absolute_change": -14.448022175419965,
+      "percentage_change": -2.644842917073298
+    },
+    "last_20_epochs": {
+      "from_epoch": 80,
+      "to_epoch": 100,
+      "from_MSE": 554.1337371478054,
+      "to_MSE": 531.8234437839918,
+      "absolute_change": -22.31029336381357,
+      "percentage_change": -4.026156840521455
+    }
+  },
+  "initial_classification": "TRAINING_TRUNCATED",
+  "continuation_run": true,
+  "additional_epochs": 100,
+  "best_epoch": 200,
+  "best_validation_RMSE": 21.221130116039102,
+  "continued_test": {
+    "MAE": 5.242741437019256,
+    "RMSE": 18.29280020640285,
+    "R2": 0.9610066924742178
+  },
+  "historical_baseline": {
+    "MAE": 3.3145281355210443,
+    "RMSE": 16.271804138733728,
+    "R2": 0.969146736451782
+  },
+  "historical_baseline_still_wins": true,
+  "decision": "D. CNN_VALID_BUT_HISTORICAL_BASELINE_SUPERIOR",
+  "original_prediction_diagnostics": {
+    "models": [
+      {
+        "model": "CNN",
+        "mean_prediction": 14.856739988883598,
+        "mean_observed": 18.1574970657277,
+        "total_prediction": 1620216.6362276897,
+        "total_observed": 1980184.0,
+        "prediction_observation_ratio": 0.8182151942585586,
+        "correlation": 0.9764151526262596,
+        "zero_prediction_share": 0.8150858274647887
+      },
+      {
+        "model": "HistoricalAverage",
+        "mean_prediction": 17.191063795940778,
+        "mean_observed": 18.1574970657277,
+        "total_prediction": 1874788.6533301175,
+        "total_observed": 1980184.0,
+        "prediction_observation_ratio": 0.9467749730985189,
+        "correlation": 0.9862791396872996,
+        "zero_prediction_share": 0.33165529636150237
+      }
+    ],
+    "positive_target_quantile_boundaries": [
+      1.0,
+      2.0,
+      5.0,
+      16.0,
+      53.0,
+      228.0,
+      724.3099999999977,
+      1764.0
+    ],
+    "mean_spatial_peak_observed": 700.0924682617188,
+    "mean_spatial_peak_CNN": 637.1068115234375,
+    "mean_spatial_peak_historical": 638.6043090820312
+  },
+  "continued_prediction_diagnostics": {
+    "models": [
+      {
+        "model": "CNN",
+        "mean_prediction": 17.016261367352683,
+        "mean_observed": 18.1574970657277,
+        "total_prediction": 1855725.3996780142,
+        "total_observed": 1980184.0,
+        "prediction_observation_ratio": 0.9371479618449671,
+        "correlation": 0.981014296813107,
+        "zero_prediction_share": 0.502805897887324
+      },
+      {
+        "model": "HistoricalAverage",
+        "mean_prediction": 17.191063795940778,
+        "mean_observed": 18.1574970657277,
+        "total_prediction": 1874788.6533301175,
+        "total_observed": 1980184.0,
+        "prediction_observation_ratio": 0.9467749730985189,
+        "correlation": 0.9862791396872996,
+        "zero_prediction_share": 0.33165529636150237
+      }
+    ],
+    "positive_target_quantile_boundaries": [
+      1.0,
+      2.0,
+      5.0,
+      16.0,
+      53.0,
+      228.0,
+      724.3099999999977,
+      1764.0
+    ],
+    "mean_spatial_peak_observed": 700.0924682617188,
+    "mean_spatial_peak_CNN": 644.406982421875,
+    "mean_spatial_peak_historical": 638.6043090820312
+  },
+  "grid_diagnostics": {
+    "improved_grids": 16,
+    "degraded_grids": 125,
+    "top10_degraded_intersect_manhattan": 6,
+    "positive_MAE_excess_share_manhattan_intersecting": 0.47717165477064427,
+    "positive_MAE_excess_share_top_quartile_demand_grids": 0.8140556608084466,
+    "geography_definition": "Positive polygon overlap with existing Manhattan taxi zones; not exclusive borough assignment."
+  },
+  "original_artifacts_unchanged": true,
+  "continued_test_evaluations": 1,
+  "model_path": "models/cnn/jan_mar_2026_3km_30min_continued/best.keras",
+  "canonical_model_not_replaced": true,
+  "protected_files_verified": 215,
+  "relu_diagnostics": {
+    "original": {
+      "sample": "TRAIN first/middle/last",
+      "sample_indices": [
+        0,
+        1416,
+        2831
+      ],
+      "output_bias": 0.13520675897598267,
+      "preactivation_min": -580.0589599609375,
+      "preactivation_max": 1210.1531982421875,
+      "nonpositive_preactivation_share": 0.7934272300469484,
+      "zero_activation_share_positive_targets": 0.7964601769911505,
+      "optimizer_iterations": 4500
+    },
+    "continued": {
+      "sample": "TRAIN first/middle/last",
+      "sample_indices": [
+        0,
+        1416,
+        2831
+      ],
+      "output_bias": 0.1522987335920334,
+      "preactivation_min": -488.13677978515625,
+      "preactivation_max": 1318.5128173828125,
+      "nonpositive_preactivation_share": 0.36384976525821594,
+      "zero_activation_share_positive_targets": 0.37610619469026546,
+      "optimizer_iterations": 9000
+    }
+  },
+  "continued_positive_target_zero_share": 0.43966712898751736
+}

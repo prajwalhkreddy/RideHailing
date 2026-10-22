@@ -1,0 +1,35 @@
+{
+  "FINAL_HIERARCHICAL_RUNNER_READY": "NO",
+  "assigned": 2,
+  "blocker": "Approved charging_wait_preference_minutes (H_i_max) per-driver source/value is absent from persisted driver profiles.",
+  "compatibility_rejections": {
+    "legacy_grid": "REJECTED",
+    "legacy_raster": "REJECTED",
+    "missing_operational": "REJECTED",
+    "pricing12": "REJECTED",
+    "routing155": "REJECTED",
+    "routing5": "REJECTED",
+    "wrong_actions": "REJECTED",
+    "zero_time_charging": "REJECTED"
+  },
+  "completed": 2,
+  "default_driver_profile_columns": [
+    "vehicle_id",
+    "price_preference",
+    "wait_preference"
+  ],
+  "final_interface_fixture": "PASS",
+  "fixture_H_max_minutes": 10,
+  "fixture_H_max_status": "TEST_ONLY_NOT_PRODUCTION_APPROVAL",
+  "fixture_requests": 4,
+  "fixture_slots": 2,
+  "fixture_vehicles": 3,
+  "focused_tests": {
+    "failed": 0,
+    "passed": 70
+  },
+  "optimizer_updates": 0,
+  "protected_artifacts_unchanged": true,
+  "real_four_slot_episode_run": false,
+  "replay_transitions": 4
+}

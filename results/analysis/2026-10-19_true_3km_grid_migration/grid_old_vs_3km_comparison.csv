@@ -1,0 +1,11 @@
+metric,old_active_grid,new_3km_candidate
+cell_width_metres,914.401828803657,3000.0
+cell_height_metres,914.401828803657,2999.9999999999927
+cell_area_km2,0.8361307045194726,9.0
+generated_grid_count,2652.0,256.0
+valid_grid_count,1213.0,142.0
+raster_rows,51.0,16.0
+raster_columns,52.0,16.0
+unused_raster_cells,1439.0,114.0
+cardinal_neighbor_links,4544.0,496.0
+cell_area_relative_to_old,1.0,10.763867361111124

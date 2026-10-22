@@ -1,0 +1,22 @@
+{
+  "classification": [
+    "KEEP_PROVENANCE",
+    "SUPERSEDED_FOR_FINAL_169_INPUT_9_ACTION_POLICY"
+  ],
+  "legacy_code": "src/routing/legacy_learning155.py",
+  "canonical_code": "src/routing/learning.py",
+  "old_shape": [
+    155,
+    64,
+    32,
+    9
+  ],
+  "final_shape": [
+    169,
+    64,
+    32,
+    9
+  ],
+  "checkpoint_policy": "load_final_policy rejects old input/output shapes; no reshape or weight reuse",
+  "artifact_policy": "Existing saved checkpoints retained in place; none trained or overwritten"
+}

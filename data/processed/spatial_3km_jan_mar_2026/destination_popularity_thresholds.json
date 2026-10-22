@@ -1,0 +1,28 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "q20": 0.0,
+  "q40": 0.3333333333333333,
+  "q60": 1.8333333333333333,
+  "q80": 6.0,
+  "reference_start": "2026-01-01T00:00:00",
+  "reference_end_exclusive": "2026-01-25T18:30:00",
+  "window_slots": 6,
+  "slot_minutes": 30,
+  "methodology_version": "destination_dropoff_trailing_6slot_global_quintiles_v1",
+  "encoding": {
+    "Very Low": 0.0,
+    "Low": 0.25,
+    "Medium": 0.5,
+    "High": 0.75,
+    "Very High": 1.0
+  },
+  "duplicates_present": false,
+  "runtime_available_from": "2026-01-25 18:30:00",
+  "status": "EXISTING_REFERENCE_PERIOD_NOT_FINAL_CNN_SPLIT"
+}

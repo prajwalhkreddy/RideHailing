@@ -1,0 +1,10 @@
+{
+  "reward": "gross successfully assigned dispatch fare in USD, summed during current30min slot",
+  "timing": "assignment time, not trip completion time",
+  "rejected": 0,
+  "accepted_unmatched": 0,
+  "failed": 0,
+  "costs_subtracted": false,
+  "J_disp": "assigned dispatch count by origin from previous completed slot, not F_hat",
+  "incoming": "active passenger commitments known strictly before t with t < expected dropoff <= t+30min; exclude reposition travel and unknown/future assignments"
+}

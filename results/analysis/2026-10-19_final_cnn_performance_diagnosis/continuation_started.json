@@ -1,0 +1,8 @@
+{
+  "original_checkpoint_sha256": "ddfdeb485a4cc4d8859e5b342331a6b4187f4e072be70788841a81d46c29757c",
+  "start_epoch": 100,
+  "maximum_additional_epochs": 100,
+  "seed": 42,
+  "patience": 10,
+  "optimizer_restored": true
+}

@@ -42,6 +42,8 @@ def main() -> int:
     args = parser.parse_args()
     try:
         config = load_config(ROOT / "config/config.yaml")
+        if config["grid"].get("grid_version") == "true_3km_v1":
+            raise ValueError("Legacy January pipeline is superseded. Use the Jan–Mar 3km source foundation; corrected training-only preprocessing is the next task.")
         processed = ROOT / config["data"]["processed_dir"]
         artifact = processed / "destination_popularity_2026_01.parquet"
         metadata = processed / "destination_popularity_2026_01_metadata.json"

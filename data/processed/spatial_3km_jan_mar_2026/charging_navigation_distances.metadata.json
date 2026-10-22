@@ -1,0 +1,17 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "rows": 2130,
+  "notes": "Metric geometric navigation inputs to preserved provisional station locations; runtime charging transition remains deferred to task D.",
+  "sources": [
+    "data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet",
+    "data/processed/spatial_3km_jan_mar_2026/grid_lookup.parquet"
+  ],
+  "sha256": "dce7fa3f9ebda3571b9c8c5e3168175f5625e0641dc7df28fc786711efbf6850",
+  "source_version": "Existing local 2026 Jan\u2013Mar sources; source hashes in source_reconciliation.json and artifact_index.json"
+}

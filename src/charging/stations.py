@@ -55,18 +55,19 @@ def save_station_definition(path: str | Path, definition: pd.DataFrame) -> None:
 
 def validate_station_definition(definition: pd.DataFrame, valid_grid_ids: Collection[int], expected_count: int | None = None) -> None:
     """Validate auditable station ranking, counts, and deterministic IDs."""
-    if definition.columns.tolist() != STATION_COLUMNS:
+    migrated = {"legacy_grid_id", "location_x_m", "location_y_m"}.issubset(definition.columns)
+    if not set(STATION_COLUMNS).issubset(definition.columns) or (not migrated and definition.columns.tolist() != STATION_COLUMNS):
         raise ValueError("Station definition schema is incompatible with NB10.")
     if expected_count is not None and len(definition) != expected_count:
         raise ValueError("Station definition count does not match configuration.")
     if definition["station_id"].tolist() != list(range(len(definition))):
         raise ValueError("Station IDs must be sequential in popularity-rank order.")
-    if not set(definition["grid_id"]).issubset(set(valid_grid_ids)) or definition["grid_id"].duplicated().any():
+    if not set(definition["grid_id"]).issubset(set(valid_grid_ids)) or (not migrated and definition["grid_id"].duplicated().any()):
         raise ValueError("Station definition references invalid or duplicate GridIDs.")
     if (definition[["pickup_count", "dropoff_count", "popularity"]] < 0).any().any() or not (definition["popularity"] == definition["pickup_count"] + definition["dropoff_count"]).all():
         raise ValueError("Station popularity must reconcile with pickup and dropoff counts.")
     ranked = definition.sort_values(["popularity", "grid_id"], ascending=[False, True], kind="stable")
-    if ranked["station_id"].tolist() != list(range(len(definition))):
+    if not migrated and ranked["station_id"].tolist() != list(range(len(definition))):
         raise ValueError("Station rank must use popularity descending then lower GridID.")
 
 

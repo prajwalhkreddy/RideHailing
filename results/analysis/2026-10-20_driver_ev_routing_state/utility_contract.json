@@ -1,0 +1,32 @@
+{
+  "source": "notebooks/plan/ImplementationPlan/Complete_Hierarchical_RL_Implementation_Roadmap_CNN_Updated.docx",
+  "source_locations": {
+    "U1": "paragraph 159",
+    "U2": "paragraph 160",
+    "reposition": "paragraph 161",
+    "U3": "paragraph 174",
+    "charging destination": "paragraph 175",
+    "policy state": "paragraph 188"
+  },
+  "equations": {
+    "U1": "0.5*erfc((P_min-mu)/(sqrt(2)*max(sigma,explicit_floor)))",
+    "U2": "1-exp(-F_hat_per_minute*W_max_minutes)",
+    "U3": "1-exp(-H_max_minutes/max(H_hat_minutes,explicit_floor_minutes))",
+    "C_rep": "explicit normalized utility cost_per_km * graph path metres/1000; coefficient unresolved"
+  },
+  "tie": "lowest action index; charging then lowest station_id",
+  "EV_threshold": "energy <= minimum triggers charging",
+  "navigation": "Dijkstra over saved eight-neighbour metric edges; choose final station by U3-cost of full path, emit one valid next hop only; reject energy-infeasible paths",
+  "activation": "new interface only; legacy simulator and network not switched",
+  "test_configuration_only": {
+    "sigma_floor": 0.01,
+    "wait_floor_minutes": 0.01,
+    "cost_per_km": 0.01
+  },
+  "production_training_ready": false,
+  "validation": {
+    "tests": 22,
+    "passed": 22,
+    "failed": 0
+  }
+}

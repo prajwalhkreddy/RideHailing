@@ -14,7 +14,7 @@ from src.charging.energy import EnergyParameters, energy_consumed_kwh
 from src.fleet.state import VehicleState
 from src.routing.baseline import (
     ACTION_ORDER, CandidateUtilityInput, RoutingAction, RoutingParameters,
-    RoutingState, valid_action_mask,
+    RoutingState, valid_action_mask, movement_distance_m,
 )
 from src.routing.learning import LocalRoutingLearner, RoutingLearningParameters
 from src.simulation.statistics import EWMAState, OperationalStatistics
@@ -71,7 +71,7 @@ def production_profile_utility_inputs(
         current_energy = vehicle_energy[vehicle_id]
         by_action: dict[RoutingAction, CandidateUtilityInput] = {}
         for action in ACTION_ORDER:
-            projected = current_energy if action is RoutingAction.STAY else current_energy - movement_energy
+            projected = current_energy if action is RoutingAction.STAY else current_energy - energy_consumed_kwh(movement_distance_m(action) / 1000, energy)
             by_action[action] = CandidateUtilityInput(
                 float(row.price_preference),
                 float(row.wait_preference),
@@ -118,7 +118,7 @@ class RuntimeProductionUtilityInputs(Mapping[int, Mapping[RoutingAction, Candida
             action: CandidateUtilityInput(
                 price, wait,
                 normalized_dod_degradation_penalty(
-                    current if action is RoutingAction.STAY else current - self._move_energy_kwh,
+                    current if action is RoutingAction.STAY else current - energy_consumed_kwh(movement_distance_m(action) / 1000, self._energy),
                     self._energy,
                 ),
             )

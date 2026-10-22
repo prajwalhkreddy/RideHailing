@@ -1,0 +1,66 @@
+{
+  "implementation_status": "INTERFACE_VALIDATED_CONFIG_DECISION_REQUIRED",
+  "grid_count": 142,
+  "crs": "EPSG:32118",
+  "cell_metres": 3000,
+  "slot_minutes": 30,
+  "key": [
+    "timestamp",
+    "Grid_ID"
+  ],
+  "state": [
+    "mu",
+    "sigma",
+    "F_hat",
+    "H_hat"
+  ],
+  "equations": {
+    "mu": "alpha * previous-slot mean assigned fare + (1-alpha)*prior mu [provisional existing implementation]",
+    "sigma": "beta * previous-slot population SD of assigned fare + (1-beta)*prior sigma [provisional existing implementation]",
+    "F_hat": "delta*(previous-slot successful dispatch count/30)+(1-delta)*prior F_hat",
+    "H_hat": "kappa*previous-slot observed charging wait+(1-kappa)*prior H_hat"
+  },
+  "units": {
+    "mu": "USD",
+    "sigma": "USD",
+    "F_hat": "successful dispatches/minute",
+    "H_hat": "minutes"
+  },
+  "successful_event": "RequestStatus.ASSIGNED after fleet.assign_busy in src/dispatch/dispatch.py; requires assigned_vehicle_id",
+  "charging_observation": "queue-length-weighted elapsed queue wait over all stations in grid at completed-slot boundary; empty station queues zero; nonstation/missing carry prior; explicit engineering aggregation, not completed-wait estimator",
+  "timing": "complete_slot(start,end=start+30min) publishes state at end only; caller guarantees event batch belongs to completed slot; no same-slot consumption",
+  "initialization": "caller-supplied 142 finite nonnegative priors with prior_as_of strictly before first decision; F/H priors unresolved",
+  "empty": "carry mu/sigma/H; F decays with zero successful dispatch count",
+  "sigma_safeguard": "separate sigma_for_denominator=max(sigma, configured positive floor); estimated sigma unchanged; utility consumers not modified",
+  "cnn": {
+    "checkpoint": "models/cnn/jan_mar_2026_3km_30min_continued/best.keras",
+    "epoch": 200,
+    "forecast": "results/analysis/2026-10-19_operational_grid_state/dqn_ready_forecasts.parquet",
+    "rows": 109056,
+    "timestamps": 768,
+    "semantics": "forecast_timestamp labels next 30-minute demand slot; availability of forecast weather remains existing limitation",
+    "checkpoint_sha256": "cce7f32457e85df02b730e7fde0d7fb00360a12703e3b27393ffeca6f5472c19",
+    "forecast_sha256": "bd45c194f1badf4ab692c6dcdf6b03d633d394d836e05916c255170576f552c6",
+    "test_metrics": {
+      "MAE": 5.242741437019256,
+      "RMSE": 18.29280020640285,
+      "R2": 0.9610066924742178
+    },
+    "baseline_metrics": {
+      "MAE": 3.3145281355210443,
+      "RMSE": 16.271804138733728,
+      "R2": 0.969146736451782
+    },
+    "regeneration": "republished verified saved epoch-200 predictions; no inference or training rerun"
+  },
+  "tests": {
+    "passed": 36,
+    "failed": 0,
+    "suite": "operational_grid_state, config, statistics, dispatch, charging_stations",
+    "additional_checks": [
+      "hand fixture matches all three grid-0 states",
+      "unresolved configuration fails closed"
+    ]
+  },
+  "production_ready": false
+}

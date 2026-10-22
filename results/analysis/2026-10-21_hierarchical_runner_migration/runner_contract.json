@@ -1,0 +1,67 @@
+{
+  "F_hat_0": 0,
+  "H_hat_0": 0,
+  "charging": "timed shortest-path multi-hop selected-station arrival; FCFS queue; existing power and release settings",
+  "driver_H_max": "explicit charging_wait_preference_minutes required; persisted profiles lack this field",
+  "entrypoint": "src.simulation.production.ProductionExperiment",
+  "event_order": [
+    "published causal t sources",
+    "13D OD pricing state and DQN action",
+    "actual within-slot arrival offset",
+    "behavioural acceptance",
+    "FCFS dispatch and assignment reward",
+    "timed movement and trip completion; ongoing charging/queue events",
+    "utility routing/charging navigation decisions",
+    "completed-slot operational observations",
+    "existing FedAvg aggregation of explicit updates, if supplied",
+    "publish t+1 operational state",
+    "construct t+1 pricing state",
+    "store OD transition",
+    "optional DQN warm-up/training check"
+  ],
+  "federation": "existing sample-weighted aggregate_policy_updates at slot boundary; empty updates are no-op during this no-routing-training fixture",
+  "grid_count": 142,
+  "grid_version": "true_3km_v1",
+  "implementation": "src.simulation.final_production.ProductionExperiment",
+  "incoming": "passenger commitments known before t, arrivals in (t,t+30min]",
+  "initial_dispatch": "explicit empty pre-episode assignment history",
+  "main_slot_minutes": 30,
+  "mini_slot_minutes": 2,
+  "normalization": "identity",
+  "operational_coefficients": {
+    "alpha": 0.3,
+    "beta": 0.3,
+    "delta": 0.3,
+    "kappa": 0.3
+  },
+  "passenger_acceptance": "behavioural_E_threshold",
+  "previous_dispatch": "assignments in completed t-1",
+  "pricing_actions": [
+    0.85,
+    0.9,
+    0.95,
+    1.0,
+    1.05,
+    1.1,
+    1.15
+  ],
+  "pricing_architecture": [
+    13,
+    64,
+    64,
+    7
+  ],
+  "raster": [
+    16,
+    16
+  ],
+  "request_generation": "existing rounded nonnegative J_hat counts and intact empirical January trip sampling; unsupported origins reported",
+  "reward": "gross offered fare at accepted successful assignment",
+  "routing_architecture": [
+    169,
+    64,
+    32,
+    9
+  ],
+  "routing_status": "PROVISIONAL_ROUTING_BASELINE"
+}

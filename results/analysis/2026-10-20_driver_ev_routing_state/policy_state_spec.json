@@ -1,0 +1,1194 @@
+{
+  "status": "STATE_DIMENSION_DECISION_REQUIRED",
+  "roadmap_dimension": 169,
+  "legacy_network_dimension": 155,
+  "legacy_composition": "2 vehicle fields + 9*17 legacy candidate fields",
+  "roadmap_composition": "9*3 candidate mu/sigma/F_hat + 142 global H_hat",
+  "network": "155 -> 64 -> 32 -> 9 preserved, not compatible with faithful state",
+  "features": [
+    {
+      "index": 0,
+      "feature": "mu",
+      "association": "STAY candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 1,
+      "feature": "sigma",
+      "association": "STAY candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 2,
+      "feature": "F_hat",
+      "association": "STAY candidate Grid_ID",
+      "unit": "dispatches/minute",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 3,
+      "feature": "mu",
+      "association": "N candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 4,
+      "feature": "sigma",
+      "association": "N candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 5,
+      "feature": "F_hat",
+      "association": "N candidate Grid_ID",
+      "unit": "dispatches/minute",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 6,
+      "feature": "mu",
+      "association": "NE candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 7,
+      "feature": "sigma",
+      "association": "NE candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 8,
+      "feature": "F_hat",
+      "association": "NE candidate Grid_ID",
+      "unit": "dispatches/minute",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 9,
+      "feature": "mu",
+      "association": "E candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 10,
+      "feature": "sigma",
+      "association": "E candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 11,
+      "feature": "F_hat",
+      "association": "E candidate Grid_ID",
+      "unit": "dispatches/minute",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 12,
+      "feature": "mu",
+      "association": "SE candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 13,
+      "feature": "sigma",
+      "association": "SE candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 14,
+      "feature": "F_hat",
+      "association": "SE candidate Grid_ID",
+      "unit": "dispatches/minute",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 15,
+      "feature": "mu",
+      "association": "S candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 16,
+      "feature": "sigma",
+      "association": "S candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 17,
+      "feature": "F_hat",
+      "association": "S candidate Grid_ID",
+      "unit": "dispatches/minute",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 18,
+      "feature": "mu",
+      "association": "SW candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 19,
+      "feature": "sigma",
+      "association": "SW candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 20,
+      "feature": "F_hat",
+      "association": "SW candidate Grid_ID",
+      "unit": "dispatches/minute",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 21,
+      "feature": "mu",
+      "association": "W candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 22,
+      "feature": "sigma",
+      "association": "W candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 23,
+      "feature": "F_hat",
+      "association": "W candidate Grid_ID",
+      "unit": "dispatches/minute",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 24,
+      "feature": "mu",
+      "association": "NW candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 25,
+      "feature": "sigma",
+      "association": "NW candidate Grid_ID",
+      "unit": "USD",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 26,
+      "feature": "F_hat",
+      "association": "NW candidate Grid_ID",
+      "unit": "dispatches/minute",
+      "normalization": "none; invalid candidate zero with separate mask"
+    },
+    {
+      "index": 27,
+      "feature": "H_hat",
+      "association": "Grid_ID 0",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 28,
+      "feature": "H_hat",
+      "association": "Grid_ID 1",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 29,
+      "feature": "H_hat",
+      "association": "Grid_ID 2",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 30,
+      "feature": "H_hat",
+      "association": "Grid_ID 3",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 31,
+      "feature": "H_hat",
+      "association": "Grid_ID 4",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 32,
+      "feature": "H_hat",
+      "association": "Grid_ID 5",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 33,
+      "feature": "H_hat",
+      "association": "Grid_ID 6",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 34,
+      "feature": "H_hat",
+      "association": "Grid_ID 7",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 35,
+      "feature": "H_hat",
+      "association": "Grid_ID 8",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 36,
+      "feature": "H_hat",
+      "association": "Grid_ID 9",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 37,
+      "feature": "H_hat",
+      "association": "Grid_ID 10",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 38,
+      "feature": "H_hat",
+      "association": "Grid_ID 11",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 39,
+      "feature": "H_hat",
+      "association": "Grid_ID 12",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 40,
+      "feature": "H_hat",
+      "association": "Grid_ID 13",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 41,
+      "feature": "H_hat",
+      "association": "Grid_ID 14",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 42,
+      "feature": "H_hat",
+      "association": "Grid_ID 15",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 43,
+      "feature": "H_hat",
+      "association": "Grid_ID 16",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 44,
+      "feature": "H_hat",
+      "association": "Grid_ID 17",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 45,
+      "feature": "H_hat",
+      "association": "Grid_ID 18",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 46,
+      "feature": "H_hat",
+      "association": "Grid_ID 19",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 47,
+      "feature": "H_hat",
+      "association": "Grid_ID 20",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 48,
+      "feature": "H_hat",
+      "association": "Grid_ID 21",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 49,
+      "feature": "H_hat",
+      "association": "Grid_ID 22",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 50,
+      "feature": "H_hat",
+      "association": "Grid_ID 23",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 51,
+      "feature": "H_hat",
+      "association": "Grid_ID 24",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 52,
+      "feature": "H_hat",
+      "association": "Grid_ID 25",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 53,
+      "feature": "H_hat",
+      "association": "Grid_ID 26",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 54,
+      "feature": "H_hat",
+      "association": "Grid_ID 27",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 55,
+      "feature": "H_hat",
+      "association": "Grid_ID 28",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 56,
+      "feature": "H_hat",
+      "association": "Grid_ID 29",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 57,
+      "feature": "H_hat",
+      "association": "Grid_ID 30",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 58,
+      "feature": "H_hat",
+      "association": "Grid_ID 31",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 59,
+      "feature": "H_hat",
+      "association": "Grid_ID 32",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 60,
+      "feature": "H_hat",
+      "association": "Grid_ID 33",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 61,
+      "feature": "H_hat",
+      "association": "Grid_ID 34",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 62,
+      "feature": "H_hat",
+      "association": "Grid_ID 35",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 63,
+      "feature": "H_hat",
+      "association": "Grid_ID 36",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 64,
+      "feature": "H_hat",
+      "association": "Grid_ID 37",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 65,
+      "feature": "H_hat",
+      "association": "Grid_ID 38",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 66,
+      "feature": "H_hat",
+      "association": "Grid_ID 39",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 67,
+      "feature": "H_hat",
+      "association": "Grid_ID 40",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 68,
+      "feature": "H_hat",
+      "association": "Grid_ID 41",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 69,
+      "feature": "H_hat",
+      "association": "Grid_ID 42",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 70,
+      "feature": "H_hat",
+      "association": "Grid_ID 43",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 71,
+      "feature": "H_hat",
+      "association": "Grid_ID 44",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 72,
+      "feature": "H_hat",
+      "association": "Grid_ID 45",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 73,
+      "feature": "H_hat",
+      "association": "Grid_ID 46",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 74,
+      "feature": "H_hat",
+      "association": "Grid_ID 47",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 75,
+      "feature": "H_hat",
+      "association": "Grid_ID 48",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 76,
+      "feature": "H_hat",
+      "association": "Grid_ID 49",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 77,
+      "feature": "H_hat",
+      "association": "Grid_ID 50",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 78,
+      "feature": "H_hat",
+      "association": "Grid_ID 51",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 79,
+      "feature": "H_hat",
+      "association": "Grid_ID 52",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 80,
+      "feature": "H_hat",
+      "association": "Grid_ID 53",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 81,
+      "feature": "H_hat",
+      "association": "Grid_ID 54",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 82,
+      "feature": "H_hat",
+      "association": "Grid_ID 55",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 83,
+      "feature": "H_hat",
+      "association": "Grid_ID 56",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 84,
+      "feature": "H_hat",
+      "association": "Grid_ID 57",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 85,
+      "feature": "H_hat",
+      "association": "Grid_ID 58",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 86,
+      "feature": "H_hat",
+      "association": "Grid_ID 59",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 87,
+      "feature": "H_hat",
+      "association": "Grid_ID 60",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 88,
+      "feature": "H_hat",
+      "association": "Grid_ID 61",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 89,
+      "feature": "H_hat",
+      "association": "Grid_ID 62",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 90,
+      "feature": "H_hat",
+      "association": "Grid_ID 63",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 91,
+      "feature": "H_hat",
+      "association": "Grid_ID 64",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 92,
+      "feature": "H_hat",
+      "association": "Grid_ID 65",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 93,
+      "feature": "H_hat",
+      "association": "Grid_ID 66",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 94,
+      "feature": "H_hat",
+      "association": "Grid_ID 67",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 95,
+      "feature": "H_hat",
+      "association": "Grid_ID 68",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 96,
+      "feature": "H_hat",
+      "association": "Grid_ID 69",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 97,
+      "feature": "H_hat",
+      "association": "Grid_ID 70",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 98,
+      "feature": "H_hat",
+      "association": "Grid_ID 71",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 99,
+      "feature": "H_hat",
+      "association": "Grid_ID 72",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 100,
+      "feature": "H_hat",
+      "association": "Grid_ID 73",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 101,
+      "feature": "H_hat",
+      "association": "Grid_ID 74",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 102,
+      "feature": "H_hat",
+      "association": "Grid_ID 75",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 103,
+      "feature": "H_hat",
+      "association": "Grid_ID 76",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 104,
+      "feature": "H_hat",
+      "association": "Grid_ID 77",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 105,
+      "feature": "H_hat",
+      "association": "Grid_ID 78",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 106,
+      "feature": "H_hat",
+      "association": "Grid_ID 79",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 107,
+      "feature": "H_hat",
+      "association": "Grid_ID 80",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 108,
+      "feature": "H_hat",
+      "association": "Grid_ID 81",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 109,
+      "feature": "H_hat",
+      "association": "Grid_ID 82",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 110,
+      "feature": "H_hat",
+      "association": "Grid_ID 83",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 111,
+      "feature": "H_hat",
+      "association": "Grid_ID 84",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 112,
+      "feature": "H_hat",
+      "association": "Grid_ID 85",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 113,
+      "feature": "H_hat",
+      "association": "Grid_ID 86",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 114,
+      "feature": "H_hat",
+      "association": "Grid_ID 87",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 115,
+      "feature": "H_hat",
+      "association": "Grid_ID 88",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 116,
+      "feature": "H_hat",
+      "association": "Grid_ID 89",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 117,
+      "feature": "H_hat",
+      "association": "Grid_ID 90",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 118,
+      "feature": "H_hat",
+      "association": "Grid_ID 91",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 119,
+      "feature": "H_hat",
+      "association": "Grid_ID 92",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 120,
+      "feature": "H_hat",
+      "association": "Grid_ID 93",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 121,
+      "feature": "H_hat",
+      "association": "Grid_ID 94",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 122,
+      "feature": "H_hat",
+      "association": "Grid_ID 95",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 123,
+      "feature": "H_hat",
+      "association": "Grid_ID 96",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 124,
+      "feature": "H_hat",
+      "association": "Grid_ID 97",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 125,
+      "feature": "H_hat",
+      "association": "Grid_ID 98",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 126,
+      "feature": "H_hat",
+      "association": "Grid_ID 99",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 127,
+      "feature": "H_hat",
+      "association": "Grid_ID 100",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 128,
+      "feature": "H_hat",
+      "association": "Grid_ID 101",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 129,
+      "feature": "H_hat",
+      "association": "Grid_ID 102",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 130,
+      "feature": "H_hat",
+      "association": "Grid_ID 103",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 131,
+      "feature": "H_hat",
+      "association": "Grid_ID 104",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 132,
+      "feature": "H_hat",
+      "association": "Grid_ID 105",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 133,
+      "feature": "H_hat",
+      "association": "Grid_ID 106",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 134,
+      "feature": "H_hat",
+      "association": "Grid_ID 107",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 135,
+      "feature": "H_hat",
+      "association": "Grid_ID 108",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 136,
+      "feature": "H_hat",
+      "association": "Grid_ID 109",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 137,
+      "feature": "H_hat",
+      "association": "Grid_ID 110",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 138,
+      "feature": "H_hat",
+      "association": "Grid_ID 111",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 139,
+      "feature": "H_hat",
+      "association": "Grid_ID 112",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 140,
+      "feature": "H_hat",
+      "association": "Grid_ID 113",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 141,
+      "feature": "H_hat",
+      "association": "Grid_ID 114",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 142,
+      "feature": "H_hat",
+      "association": "Grid_ID 115",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 143,
+      "feature": "H_hat",
+      "association": "Grid_ID 116",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 144,
+      "feature": "H_hat",
+      "association": "Grid_ID 117",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 145,
+      "feature": "H_hat",
+      "association": "Grid_ID 118",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 146,
+      "feature": "H_hat",
+      "association": "Grid_ID 119",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 147,
+      "feature": "H_hat",
+      "association": "Grid_ID 120",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 148,
+      "feature": "H_hat",
+      "association": "Grid_ID 121",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 149,
+      "feature": "H_hat",
+      "association": "Grid_ID 122",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 150,
+      "feature": "H_hat",
+      "association": "Grid_ID 123",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 151,
+      "feature": "H_hat",
+      "association": "Grid_ID 124",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 152,
+      "feature": "H_hat",
+      "association": "Grid_ID 125",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 153,
+      "feature": "H_hat",
+      "association": "Grid_ID 126",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 154,
+      "feature": "H_hat",
+      "association": "Grid_ID 127",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 155,
+      "feature": "H_hat",
+      "association": "Grid_ID 128",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 156,
+      "feature": "H_hat",
+      "association": "Grid_ID 129",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 157,
+      "feature": "H_hat",
+      "association": "Grid_ID 130",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 158,
+      "feature": "H_hat",
+      "association": "Grid_ID 131",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 159,
+      "feature": "H_hat",
+      "association": "Grid_ID 132",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 160,
+      "feature": "H_hat",
+      "association": "Grid_ID 133",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 161,
+      "feature": "H_hat",
+      "association": "Grid_ID 134",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 162,
+      "feature": "H_hat",
+      "association": "Grid_ID 135",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 163,
+      "feature": "H_hat",
+      "association": "Grid_ID 136",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 164,
+      "feature": "H_hat",
+      "association": "Grid_ID 137",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 165,
+      "feature": "H_hat",
+      "association": "Grid_ID 138",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 166,
+      "feature": "H_hat",
+      "association": "Grid_ID 139",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 167,
+      "feature": "H_hat",
+      "association": "Grid_ID 140",
+      "unit": "minutes",
+      "normalization": "none"
+    },
+    {
+      "index": 168,
+      "feature": "H_hat",
+      "association": "Grid_ID 141",
+      "unit": "minutes",
+      "normalization": "none"
+    }
+  ],
+  "production_training_ready": false
+}

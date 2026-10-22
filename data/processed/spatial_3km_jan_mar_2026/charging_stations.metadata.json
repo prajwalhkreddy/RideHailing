@@ -1,0 +1,17 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "rows": 15,
+  "notes": "Provisional synthetic stations remapped from preserved old-cell centroids. 15 station identities retained, co-location allowed; power/capacity config unchanged. Historical popularity counts retained, not reranked.",
+  "sources": [
+    "data/processed/charging_stations_2026_01.parquet",
+    "data/processed/legacy_914m_provenance/grid_lookup.parquet"
+  ],
+  "sha256": "c0f8a0758962b9fef19d6611246e84b40ee61399bc9f56dd73168371bff13f77",
+  "source_version": "Existing local 2026 Jan\u2013Mar sources; source hashes in source_reconciliation.json and artifact_index.json"
+}

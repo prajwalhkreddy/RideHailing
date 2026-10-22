@@ -1,0 +1,5 @@
+trip,vehicle_id,scheduled_arrival,publication_time,current_grid,expected_destination,status,pending,included_in_I,idle_wait_minutes
+A,0,2026-03-01 00:59:59,2026-03-01 01:00:00,1,1,IDLE,False,0,0.016666666666666666
+B,1,2026-03-01 01:00:00,2026-03-01 01:00:00,2,2,IDLE,False,0,0.0
+C,2,2026-03-01 01:02:00,2026-03-01 01:00:00,0,3,BUSY,True,1,0.0
+D,3,2026-03-01 01:30:00,2026-03-01 01:00:00,0,4,BUSY,True,1,0.0

@@ -1,0 +1,10 @@
+{
+  "data/processed/legacy_914m_provenance/neighbour_map.parquet": "4ac1726158a7a79ccd1e726058ce78c478f5d1bbde0f2c7b3b46998298f41a52",
+  "data/processed/legacy_914m_provenance/zone_grid_mapping.parquet": "132e1e100c48392c8705723da65b1dab33abf545ad5799cf27d72f612325f19f",
+  "data/processed/legacy_914m_provenance/grid_mask.npy": "25861e03241f4ebd6824c726d3bb84d7ec07a95a3da8073da7c10b605b60036e",
+  "data/processed/legacy_914m_provenance/zone_to_grids.pkl": "9a0c9b455f3aedef2cf280aa1504b2e7d3f90da73f60135dd4a5a08cf56164ed",
+  "data/processed/legacy_914m_provenance/config.yaml": "8703c6d4b54b209264da2d4af47664a825a3341b0014350072f3f96aa2970319",
+  "data/processed/legacy_914m_provenance/cleaned_trips.parquet": "648dfe389ed924ce597f88745af840f03d592737d5dd35015d018c255bc2b65e",
+  "data/processed/legacy_914m_provenance/grid_lookup.parquet": "fec538a1c4049fd439f94c1cc6c86df3673ef1d328b64dfe2b4ceda0edc75217",
+  "data/processed/legacy_914m_provenance/grid_metadata.json": "b73d459072ced7f5bd2d740adbc575c8d55c01811cd53c5e2fd02e0778fbdb02"
+}

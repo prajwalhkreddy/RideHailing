@@ -1,0 +1,3 @@
+J_hat,J_disp_previous,I_incoming,p_STAY,p_N,p_NE,p_E,p_SE,p_S,p_SW,p_W,p_NW,destination_popularity,origin,destination,timestamp
+12.0,2.0,1.0,0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.25,0,0,2026-03-16
+12.0,2.0,1.0,0.2,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.1,0.75,0,1,2026-03-16

@@ -1,0 +1,30 @@
+{
+  "original": {
+    "sample": "TRAIN first/middle/last",
+    "sample_indices": [
+      0,
+      1416,
+      2831
+    ],
+    "output_bias": 0.13520675897598267,
+    "preactivation_min": -580.0589599609375,
+    "preactivation_max": 1210.1531982421875,
+    "nonpositive_preactivation_share": 0.7934272300469484,
+    "zero_activation_share_positive_targets": 0.7964601769911505,
+    "optimizer_iterations": 4500
+  },
+  "continued": {
+    "sample": "TRAIN first/middle/last",
+    "sample_indices": [
+      0,
+      1416,
+      2831
+    ],
+    "output_bias": 0.1522987335920334,
+    "preactivation_min": -488.13677978515625,
+    "preactivation_max": 1318.5128173828125,
+    "nonpositive_preactivation_share": 0.36384976525821594,
+    "zero_activation_share_positive_targets": 0.37610619469026546,
+    "optimizer_iterations": 9000
+  }
+}

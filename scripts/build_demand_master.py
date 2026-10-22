@@ -65,6 +65,8 @@ def main() -> int:
     """Execute NB3 or validate a prior complete NB3 output."""
     args = parse_args()
     config = load_config(ROOT / "config/config.yaml")
+    if config["grid"].get("grid_version") == "true_3km_v1":
+        raise ValueError("Legacy January pipeline is superseded. Use the Jan–Mar 3km source foundation; corrected training-only preprocessing is the next task.")
     data = config["data"]
     month = data["month"]
     interval = config["time"]["interval_minutes"]

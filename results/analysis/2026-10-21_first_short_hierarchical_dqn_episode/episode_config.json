@@ -1,0 +1,26 @@
+{
+  "start": "2026-03-16 00:00:00",
+  "end": "2026-03-16 02:00:00",
+  "slots": 4,
+  "automatic_extension": false,
+  "seed": 42,
+  "pricing_dqn": {
+    "gamma": 0.99,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "replay_capacity": 100000,
+    "minimum_replay_size": 1000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 50000,
+    "soft_target_tau": 0.005,
+    "seed": 42
+  },
+  "H_i_max_minutes": 10.0,
+  "routing_checkpoint": "models/routing_policy/jan_mar_2026_3km_169x64x32x9/best.keras",
+  "routing_status": "PROVISIONAL_ROUTING_BASELINE",
+  "routing_training": false,
+  "request_generation": "existing forecast counts and intact January empirical trip sampler",
+  "passenger_acceptance": "behavioural_E_threshold",
+  "private": false
+}

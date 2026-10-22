@@ -1,0 +1,18 @@
+{
+  "status": "INCOMPLETE",
+  "planned_train_start": "2026-03-01 00:00",
+  "planned_train_end": "2026-03-12 23:30",
+  "planned_validation_start": "2026-03-13 00:00",
+  "planned_validation_end": "2026-03-15 23:30",
+  "committed_train_experiences": 4570,
+  "committed_validation_experiences": 0,
+  "active_participants": 4570,
+  "zero_experience_participants": 430,
+  "participant_semantics": "one driver_id is one client",
+  "experiences_per_active_participant": {
+    "min": 1,
+    "median": 1.0,
+    "mean": 1.0,
+    "max": 1
+  }
+}

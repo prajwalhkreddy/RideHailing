@@ -43,6 +43,11 @@ def main() -> int:
     config = load_config(ROOT / "config/config.yaml")
     data = config["data"]
     grid_config = config["grid"]
+    if grid_config.get("grid_version") == "true_3km_v1":
+        if args.force:
+            raise ValueError("Use activate_true_3km_foundation.py; legacy rebuild is disabled for the active metric grid.")
+        print_report("ACTIVE METRIC GRID VALIDATION", validate_grid_artifacts(ROOT / data["processed_dir"]))
+        return 0
     processed_dir = ROOT / data["processed_dir"]
     paths = artifact_paths(processed_dir)
 

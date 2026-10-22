@@ -19,7 +19,7 @@ _FORBIDDEN_LOCAL_DATA_KEYS = {
     "observations", "states", "actions", "action_masks", "utility_vectors",
     "trajectories", "requests", "rewards", "replay",
 }
-_EXPECTED_WEIGHT_SHAPES = ((87, 64), (64,), (64, 32), (32,), (32, 5), (5,))
+_EXPECTED_WEIGHT_SHAPES = ((STATE_DIMENSION, 64), (64,), (64, 32), (32,), (32, len(ACTION_ORDER)), (len(ACTION_ORDER),))
 
 
 @dataclass(frozen=True)

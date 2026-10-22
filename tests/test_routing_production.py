@@ -88,7 +88,7 @@ class RoutingProductionTests(unittest.TestCase):
         feature = lambda grid: GridRoutingFeatures(grid, 1, 1, 1, 0, 0, 1, 0, 1, 0, None, None, None, None, False, 0)
         current = feature(0)
         state = RoutingState(0, 0, 40, current, {RoutingAction.STAY: current, RoutingAction.NORTH: feature(1), RoutingAction.EAST: None, RoutingAction.SOUTH: feature(2), RoutingAction.WEST: None})
-        np.testing.assert_allclose(uniform_valid_action_probabilities(state), [1/3, 1/3, 0, 1/3, 0])
+        np.testing.assert_allclose(uniform_valid_action_probabilities(state), [1/3, 1/3, 0, 0, 0, 1/3, 0, 0, 0])
 
     def test_all_policy_models_share_one_exact_initialization(self) -> None:
         locals_, global_ = initialize_common_policy_learners(range(3), RoutingLearningParameters(), seed=42)

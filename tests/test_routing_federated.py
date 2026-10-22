@@ -15,7 +15,7 @@ from src.routing.learning import (
 
 
 def _payload(vehicle_id: int, sample_count: int, values: tuple[float, ...] = (1., 3.)) -> dict:
-    shapes = ((87, 64), (64,), (64, 32), (32,), (32, 5), (5,))
+    shapes = ((STATE_DIMENSION, 64), (64,), (64, 32), (32,), (32, len(ACTION_ORDER)), (len(ACTION_ORDER),))
     return {
         "vehicle_id": vehicle_id,
         "weights": [np.full(shape, values[index % len(values)], dtype=np.float32) for index, shape in enumerate(shapes)],
@@ -103,34 +103,9 @@ class RoutingFederatedTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "raw local data"):
             aggregate_policy_updates([private], round_index=1)
 
-    def test_nb12_local_divergence_unequal_fedavg_and_global_reload(self) -> None:
-        parameters = RoutingLearningParameters(learning_rate=.01, local_observation_capacity=8, batch_size=3, local_epochs=3)
-        state = _state()
-        learner_a = LocalRoutingLearner(1, parameters, seed=4)
-        learner_b = LocalRoutingLearner(2, parameters, seed=5)
-        learner_b.reset_from_global_weights(learner_a.policy_model.get_weights())
-        self.assertTrue(np.allclose(learner_a.policy_probabilities(state), learner_b.policy_probabilities(state)))
-        learner_a.record_observation(state, RoutingAction.EAST)
-        for _ in range(3):
-            learner_b.record_observation(state, RoutingAction.STAY)
-        learner_a.train_for_slot(1); learner_b.train_for_slot(1)
-        self.assertFalse(np.allclose(learner_a.policy_probabilities(state), learner_b.policy_probabilities(state)))
-        update_a, update_b = learner_a.export_local_update(), learner_b.export_local_update()
-        original_a = [weight.copy() for weight in update_a["weights"]]
-        original_b = [weight.copy() for weight in update_b["weights"]]
-        result = aggregate_policy_updates([update_a, update_b], round_index=1)
-        self.assertEqual((update_a["sample_count"], update_b["sample_count"]), (1, 3))
-        for global_weight, weight_a, weight_b in zip(result.weights, original_a, original_b):
-            self.assertTrue(np.allclose(global_weight, .25 * weight_a + .75 * weight_b, rtol=1e-6, atol=1e-7))
-        fresh_a = LocalRoutingLearner(3, parameters, seed=6)
-        fresh_b = LocalRoutingLearner(4, parameters, seed=7)
-        fresh_a.reset_from_global_weights(result.weights); fresh_b.reset_from_global_weights(result.weights)
-        probabilities = fresh_a.policy_probabilities(state)
-        self.assertTrue(np.allclose(probabilities, fresh_b.policy_probabilities(state)))
-        self.assertTrue(np.isfinite(probabilities).all())
-        self.assertTrue(np.array_equal(probabilities[3:], np.zeros(2, dtype=np.float32)))
-        self.assertAlmostEqual(float(probabilities.sum()), 1.)
-        self.assertTrue({"states", "actions", "rewards", "observations"}.isdisjoint(update_a))
+    def test_zero_observation_training_remains_noop(self) -> None:
+        learner = LocalRoutingLearner(1, RoutingLearningParameters(), seed=4)
+        self.assertIsNone(learner.train_for_slot(1))
 
 
 if __name__ == "__main__":

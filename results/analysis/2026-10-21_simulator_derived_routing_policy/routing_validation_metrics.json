@@ -1,0 +1,9 @@
+{
+  "status": "NOT_RUN",
+  "reason": "Full generation prerequisite failed; no complete chronological train/validation data.",
+  "accuracy": null,
+  "cross_entropy": null,
+  "majority_label_accuracy": null,
+  "ROUTING_EFFECTIVENESS_CONCERN": "NOT_ASSESSED",
+  "partial_experience_checks": "PASS: finite 169D states, nine masks, valid labels, unique IDs, permitted dates"
+}

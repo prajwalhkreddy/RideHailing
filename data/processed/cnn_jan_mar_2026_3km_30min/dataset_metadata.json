@@ -1,0 +1,42 @@
+{
+  "dataset_version": "jan_mar_2026_3km_30min_v1",
+  "grid_version": "true_3km_v1",
+  "valid_grids": 142,
+  "raster": [
+    16,
+    16
+  ],
+  "period": [
+    "2026-01-01 00:00:00",
+    "2026-04-01 00:00:00"
+  ],
+  "forecast_minutes": 30,
+  "forecast_status": "DOCUMENTED_ADAPTATION",
+  "forecast_timestamp": "start of target interval [t,t+30min); issued for next main slot",
+  "target_unit": "requests/grid/30min",
+  "sources": {
+    "demand": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+    "demand_sha256": "c343a50fd0d14b583a30886a7b42ab56a82fa2075314228507508a0033a3353f",
+    "grid_sha256": "4e4020fd1c9faf8a3899bc718758052cc24b83e3c05caccb8e20ab98ec24fc2b"
+  },
+  "split_definition": {
+    "train": {
+      "start_inclusive": "2026-01-01 00:00:00",
+      "end_exclusive": "2026-03-01 00:00:00",
+      "slots": 2832
+    },
+    "validation": {
+      "start_inclusive": "2026-03-01 00:00:00",
+      "end_exclusive": "2026-03-16 00:00:00",
+      "slots": 720
+    },
+    "test": {
+      "start_inclusive": "2026-03-16 00:00:00",
+      "end_exclusive": "2026-04-01 00:00:00",
+      "slots": 768
+    }
+  },
+  "source_slots": 4320,
+  "source_requests": 11006194,
+  "dense_rows": 613440
+}

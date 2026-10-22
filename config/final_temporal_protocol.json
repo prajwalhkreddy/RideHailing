@@ -1,0 +1,19 @@
+{
+  "cnn_train_start": "2026-01-01 00:00:00",
+  "cnn_train_end": "2026-02-28 23:30:00",
+  "rl_train_start": "2026-03-01 00:00:00",
+  "rl_train_end": "2026-03-15 23:30:00",
+  "integration_exclusion_start": "2026-03-16 00:00:00",
+  "integration_exclusion_end": "2026-03-16 23:30:00",
+  "final_eval_start": "2026-03-17 00:00:00",
+  "final_eval_end": "2026-03-31 23:30:00",
+  "training_cutoff": "2026-03-15 23:30:00",
+  "slot_minutes": 30,
+  "timestamp_convention": "Timezone-naive existing project timestamps; no timezone conversion; inclusive slot-start boundaries",
+  "status": "FROZEN_PROJECT_PROTOCOL",
+  "march16_reason": "Integration, debugging and one DQN optimizer update; excluded from final-model training and final evaluation",
+  "validation_reuse": "March 1–15 was CNN validation and is intentionally hierarchical RL development/training, not final hierarchical evaluation",
+  "rl_forecast_path": "data/processed/cnn_jan_mar_2026_3km_30min/j_hat_epoch200_3km_142grids_mar01_15_2026_horizon30min.parquet",
+  "quarantined_checkpoint": "models/pricing_dqn/first_short_hierarchical_20260316_0000_0200_seed42",
+  "checkpoint_classification": ["SHORT_HIERARCHICAL_INTEGRATION_CHECKPOINT", "NOT_FINAL_TRAINING_CHECKPOINT", "DO_NOT_CONTINUE_FOR_FINAL_EXPERIMENTS"]
+}

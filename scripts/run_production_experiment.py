@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import pandas as pd
 from pathlib import Path
 import sys
 
@@ -20,12 +21,13 @@ def main() -> int:
     parser.add_argument("--slots", type=int, required=True)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--output", type=Path)
+    parser.add_argument("--driver-profiles", type=Path, help="Explicit approved profiles including charging_wait_preference_minutes")
     args = parser.parse_args()
-    experiment, runtime = run_production_preflight(ROOT, args.slots, seed=args.seed)
+    experiment, runtime = run_production_preflight(ROOT, args.slots, seed=args.seed, driver_profiles=pd.read_parquet(args.driver_profiles) if args.driver_profiles else None)
     payload = {
         "runtime_seconds": runtime,
-        "reproducibility": experiment.reproducibility_state(),
-        "slots": [report.__dict__ for report in experiment.reports],
+        "reproducibility": {"seed": args.seed, "grid_version": "true_3km_v1"},
+        "slots": experiment.reports,
     }
     if args.output is not None:
         payload["artifacts"] = [str(path) for path in write_preflight_artifacts(experiment, args.output, runtime)]

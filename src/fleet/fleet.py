@@ -118,15 +118,21 @@ class Fleet:
         vehicle.validate(self.valid_grid_ids)
 
     def advance_mini_slot(self) -> None:
-        """Advance BUSY travel and persistent driver-idle waits one mini-slot."""
+        """Advance one configured mini-slot (legacy-compatible entry point)."""
+        self.advance_time(float(self.mini_slot_minutes))
+
+    def advance_time(self, duration_minutes: float) -> None:
+        """Advance elapsed time; the orchestrator splits at exact arrival events."""
+        if not np.isfinite(duration_minutes) or duration_minutes <= 0:
+            raise ValueError("Elapsed fleet time must be positive finite minutes.")
         for vehicle in self.vehicles:
             if vehicle.trip_status is VehicleStatus.IDLE:
-                vehicle.advance_idle_wait(self.mini_slot_minutes)
+                vehicle.advance_idle_wait(duration_minutes)
                 vehicle.validate(self.valid_grid_ids)
                 continue
             if vehicle.trip_status is not VehicleStatus.BUSY:
                 continue
-            vehicle.remaining_travel_time = max(0, vehicle.remaining_travel_time - self.mini_slot_minutes)
+            vehicle.remaining_travel_time = max(0, vehicle.remaining_travel_time - duration_minutes)
             if vehicle.remaining_travel_time == 0:
                 # BUSY validation guarantees destination is a valid GridID.
                 vehicle.current_grid = vehicle.destination  # type: ignore[assignment]

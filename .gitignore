@@ -38,3 +38,5 @@ outputs/metrics/*
 !outputs/metrics/.gitkeep
 outputs/logs/*
 !outputs/logs/.gitkeep
+
+/data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet

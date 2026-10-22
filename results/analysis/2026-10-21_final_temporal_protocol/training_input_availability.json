@@ -1,0 +1,147 @@
+{
+  "status": "AVAILABLE",
+  "items": {
+    "A_requests": {
+      "status": "AVAILABLE",
+      "source": "data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet",
+      "verification": {
+        "January_rows": 3699644,
+        "origin_grids": 137,
+        "mapping": "valid 142-grid domain",
+        "semantics": "existing forecast counts with January intact empirical trip sampling; unsupported origins remain explicitly reported by generator"
+      }
+    },
+    "D_popularity": {
+      "status": "AVAILABLE",
+      "source": "data/processed/spatial_3km_jan_mar_2026/destination_popularity.parquet",
+      "verification": {
+        "rows": 102240,
+        "available_from": "2026-01-25 18:30:00"
+      }
+    },
+    "E_weather_calendar": {
+      "status": "AVAILABLE",
+      "source": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+      "verification": {
+        "rows": 102240,
+        "calendar": "derived from timezone-naive slot timestamps",
+        "weather": "retrospective observed-weather contract, not an ex-ante meteorological forecast"
+      }
+    },
+    "C_P_base": {
+      "status": "AVAILABLE",
+      "source": [
+        "data/processed/customer_price_sensitivity_2026_01.parquet",
+        "data/processed/customer_price_sensitivity_fallback_2026_01.parquet"
+      ],
+      "verification": {
+        "weather_period_pairs": 258,
+        "resolved_levels": {
+          "exact": 180,
+          "period": 78
+        },
+        "source": "existing TLC fare_amount P_base lookup with frozen hierarchical fallback"
+      }
+    },
+    "F_initial_supply": {
+      "status": "AVAILABLE",
+      "source": "data/processed/spatial_3km_jan_mar_2026/initial_supply_seed42.parquet",
+      "verification": {
+        "rows": 142,
+        "reference": {
+          "grid_version": "true_3km_v1",
+          "valid_grid_count": 142,
+          "raster_rows": 16,
+          "raster_columns": 16,
+          "creation_script": "scripts/activate_true_3km_foundation.py",
+          "dataset_start": "2026-01-01 00:00:00",
+          "dataset_end_exclusive": "2026-04-01 00:00:00",
+          "fleet_size": 5000,
+          "seed": 42,
+          "supply_ref_p99": 50.59,
+          "status": "STATIC_INITIALIZATION_REFERENCE_ONLY",
+          "demand_scaler": "Await new CNN training; do not use old pricing_context_scaler.json as migrated calibration."
+        },
+        "runtime": "existing initialize_ev_fleet seed42 over active domain; not a fitted March quantity"
+      }
+    },
+    "G_priors": {
+      "status": "AVAILABLE",
+      "source": "data/processed/spatial_3km_jan_mar_2026/fare_bootstrap_legacy_cutoff.parquet",
+      "verification": {
+        "rows": 142,
+        "cutoff": "2026-01-25 18:30:00"
+      }
+    },
+    "H_profiles": {
+      "status": "AVAILABLE",
+      "source": "data/processed/driver_preferences_seed42.parquet",
+      "verification": {
+        "rows": 5000,
+        "H_i_max_minutes": 10.0
+      }
+    },
+    "I_stations": {
+      "status": "AVAILABLE",
+      "source": "data/processed/spatial_3km_jan_mar_2026/charging_stations.parquet",
+      "verification": {
+        "rows": 15
+      }
+    },
+    "J_topology": {
+      "status": "AVAILABLE",
+      "source": [
+        "data/processed/spatial_3km_jan_mar_2026/action_masks.parquet",
+        "data/processed/spatial_3km_jan_mar_2026/neighbour_map.parquet",
+        "data/processed/spatial_3km_jan_mar_2026/centroid_distances.parquet",
+        "data/processed/spatial_3km_jan_mar_2026/neighbour_travel.parquet"
+      ],
+      "verification": {
+        "mask_rows": 1278,
+        "grids": 142,
+        "actions": 9,
+        "columns": [
+          "GridID",
+          "ActionIndex",
+          "ExternalRelativeIndex",
+          "Direction",
+          "DestinationGridID",
+          "ValidAction",
+          "DistanceMeters"
+        ]
+      }
+    },
+    "B_J_hat": {
+      "status": "AVAILABLE",
+      "source": "data/processed/cnn_jan_mar_2026_3km_30min/j_hat_epoch200_3km_142grids_mar01_15_2026_horizon30min.parquet",
+      "verification": {
+        "status": "PASS",
+        "rows": 102240,
+        "timestamps": 720,
+        "grids": 142,
+        "first": "2026-03-01 00:00:00",
+        "last": "2026-03-15 23:30:00",
+        "checkpoint": "models/cnn/jan_mar_2026_3km_30min_continued/best.keras",
+        "checkpoint_sha256": "cce7f32457e85df02b730e7fde0d7fb00360a12703e3b27393ffeca6f5472c19",
+        "epoch": 200,
+        "forecast_path": "data/processed/cnn_jan_mar_2026_3km_30min/j_hat_epoch200_3km_142grids_mar01_15_2026_horizon30min.parquet",
+        "forecast_sha256": "ef2066438ab56c2965df4d520d21cb3c1ccfec08e6aefda2804e04ea612b949b",
+        "source_tensors": "X_validation.npy; forecast_timestamp_validation.npy",
+        "input_shape": [
+          720,
+          7,
+          16,
+          16
+        ],
+        "no_refit": true,
+        "no_prediction_clipping": true,
+        "nonnegative": true,
+        "finite": true,
+        "no_duplicates": true,
+        "grid_mapping_matches": true,
+        "minimum": 0.0,
+        "maximum": 1453.7891845703125
+      }
+    }
+  }
+}

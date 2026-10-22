@@ -1,0 +1,62 @@
+{
+  "grid_version": "true_3km_v1",
+  "valid_grid_count": 142,
+  "raster_rows": 16,
+  "raster_columns": 16,
+  "creation_script": "scripts/activate_true_3km_foundation.py",
+  "dataset_start": "2026-01-01 00:00:00",
+  "dataset_end_exclusive": "2026-04-01 00:00:00",
+  "status": "ACTIVE_NEW",
+  "metric_crs": "EPSG:32118",
+  "grid_construction_crs": "EPSG:32118",
+  "grid_cell_size_m": 3000,
+  "grid_size_meters": 3000,
+  "valid_cells": 142,
+  "grid_rows": 16,
+  "grid_columns": 16,
+  "generated_cells": 256,
+  "unused_cells": 114,
+  "neighbor_links": 958,
+  "neighbour_topology": "eight_way",
+  "geometry_tolerance_m": 1e-06,
+  "source_candidate": "data/processed/grid_3km_candidate",
+  "sources": [
+    {
+      "path": "data/processed/legacy_914m_provenance/cleaned_trips.parquet",
+      "sha256": "648dfe389ed924ce597f88745af840f03d592737d5dd35015d018c255bc2b65e"
+    },
+    {
+      "path": "data/raw/yellow_taxi/yellow_tripdata_2026-02.parquet",
+      "sha256": "5352ca800f29c40a221ed5b0c6392c451fde7fcd236a73651bd5aea74713a26c"
+    },
+    {
+      "path": "data/raw/yellow_taxi/yellow_tripdata_2026-03.parquet",
+      "sha256": "d7af794a7ac06cbbb5afb4d1df9e86d84f2e878584de708ff2ffca4bd7d234d9"
+    }
+  ],
+  "action_order": [
+    "STAY",
+    "NORTH",
+    "NORTHEAST",
+    "EAST",
+    "SOUTHEAST",
+    "SOUTH",
+    "SOUTHWEST",
+    "WEST",
+    "NORTHWEST"
+  ],
+  "topology": {
+    "directed_links": 958,
+    "mean_neighbors": 6.746478873239437,
+    "min_neighbors": 3,
+    "max_neighbors": 8,
+    "boundary_grids": 67,
+    "isolated_grids": [],
+    "connected_component_sizes": [
+      142
+    ]
+  },
+  "cnn_status": "PREPROCESSING_AND_RETRAINING_REQUIRED",
+  "historical_demand": "Deferred: fit with training data only",
+  "popularity_status": "REGENERATED_EXISTING_REFERENCE_CUTOFF_RUNTIME_AVAILABLE_FROM_2026_01_25_1830"
+}

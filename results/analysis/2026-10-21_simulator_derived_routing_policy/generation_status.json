@@ -1,0 +1,8 @@
+{
+  "status": "PAUSED_AT_REQUESTED_BOUNDARY",
+  "completed_slots": 6,
+  "timestamp": "2026-03-01 03:00:00",
+  "experiences": 27009,
+  "pricing_replay": 0,
+  "pricing_optimizer_updates": 0
+}

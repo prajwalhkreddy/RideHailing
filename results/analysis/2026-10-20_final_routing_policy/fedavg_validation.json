@@ -1,0 +1,17 @@
+{
+  "rounds": 5,
+  "participants": 3,
+  "zero_sample_excluded": [
+    3
+  ],
+  "sample_count": 2272,
+  "architecture": [
+    169,
+    64,
+    32,
+    9
+  ],
+  "aggregated_model_reloaded": true,
+  "probabilities_valid": true,
+  "last_aggregated_checkpoint_reloaded": true
+}

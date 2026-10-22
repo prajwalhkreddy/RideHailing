@@ -51,6 +51,8 @@ def main() -> int:
     """Execute or validate the standalone legacy NB4 tensor-generation stage."""
     args = parse_args()
     config = load_config(ROOT / "config/config.yaml")
+    if config["grid"].get("grid_version") == "true_3km_v1":
+        raise ValueError("Legacy January pipeline is superseded. Use the Jan–Mar 3km source foundation; corrected training-only preprocessing is the next task.")
     processed_dir = ROOT / config["data"]["processed_dir"]
     demand_path = ROOT / config["data"]["demand_master_path"]
     dataset_dir = ROOT / config["data"]["cnn_dataset_dir"]

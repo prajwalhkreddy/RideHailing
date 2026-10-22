@@ -6,6 +6,8 @@ components.  It contains no validation fixtures and no substitute inputs.
 
 from __future__ import annotations
 
+from src.routing.baseline import movement_distance_m
+
 from collections import Counter
 from dataclasses import asdict, dataclass
 from datetime import datetime, timedelta
@@ -173,12 +175,15 @@ def _weight_distance(before: Iterable[np.ndarray], after: Iterable[np.ndarray]) 
     return float(np.sqrt(sum(np.square(a.astype(np.float64) - b.astype(np.float64)).sum() for a, b in zip(before, after))))
 
 
-class ProductionExperiment:
+class LegacyProductionExperiment:
     """One causally persistent authoritative production experiment."""
 
     def __init__(self, root: str | Path, *, seed: int = 42, fleet_size: int = FLEET_SIZE, time_pricing_policy=None) -> None:
         self.time_pricing_policy = time_pricing_policy
         self.root = Path(root).resolve()
+        active_meta = self.root / "data/processed/grid_metadata.json"
+        if active_meta.exists() and json.loads(active_meta.read_text()).get("grid_version") == "true_3km_v1":
+            raise RuntimeError("Legacy January/5-action production runner is superseded and requires legacy artifacts. Use ProductionExperiment for the existing final 142-grid, 169-input/9-action models.")
         self.seed = int(seed)
         self.fleet_size = int(fleet_size)
         if self.fleet_size != FLEET_SIZE:
@@ -354,14 +359,14 @@ class ProductionExperiment:
         self.initial_probabilities = self._uniform_valid_grid_probabilities()
 
     def _uniform_valid_grid_probabilities(self) -> dict[int, np.ndarray]:
-        direction_index = {"north": 1, "east": 2, "south": 3, "west": 4}
+        direction_index = {action.value.lower(): index for index, action in enumerate(ACTION_ORDER)}
         result = {}
         for grid_id in self.grid_ids:
-            mask = np.zeros(5, dtype=bool)
+            mask = np.zeros(len(ACTION_ORDER), dtype=bool)
             mask[0] = True
             for direction in self.directional.loc[self.directional.GridID == grid_id, "Direction"]:
                 mask[direction_index[str(direction).lower()]] = True
-            probabilities = np.zeros(5, dtype=float)
+            probabilities = np.zeros(len(ACTION_ORDER), dtype=float)
             probabilities[mask] = 1. / mask.sum()
             result[grid_id] = probabilities
         return result
@@ -506,7 +511,7 @@ class ProductionExperiment:
         move_energy = self.routing.reposition_distance_km * self.energy.consumption_rate_kwh_per_km
         degradation_values = np.asarray([
             normalized_dod_degradation_penalty(
-                audit.transition.energy_before_kwh if action is RoutingAction.STAY else audit.transition.energy_before_kwh - move_energy,
+                audit.transition.energy_before_kwh if action is RoutingAction.STAY else audit.transition.energy_before_kwh - movement_distance_m(action) / 1000 * self.energy.consumption_rate_kwh_per_km,
                 self.energy,
             )
             for audit in result.routing_audit
@@ -629,7 +634,7 @@ class _LiveProductionUtilityInputs(Mapping[int, Mapping[RoutingAction, Any]]):
             action: CandidateUtilityInput(
                 price, wait,
                 normalized_dod_degradation_penalty(
-                    current_energy if action is RoutingAction.STAY else current_energy - self.movement_energy,
+                    current_energy if action is RoutingAction.STAY else current_energy - movement_distance_m(action) / 1000 * self.energy.consumption_rate_kwh_per_km,
                     self.energy,
                 ),
             )
@@ -637,9 +642,9 @@ class _LiveProductionUtilityInputs(Mapping[int, Mapping[RoutingAction, Any]]):
         }
 
 
-def run_production_preflight(root: str | Path, slot_count: int, *, seed: int = 42) -> tuple[ProductionExperiment, float]:
+def run_legacy_production_preflight(root: str | Path, slot_count: int, *, seed: int = 42) -> tuple[LegacyProductionExperiment, float]:
     started = time.perf_counter()
-    experiment = ProductionExperiment(root, seed=seed)
+    experiment = LegacyProductionExperiment(root, seed=seed)
     experiment.run(slot_count)
     return experiment, time.perf_counter() - started
 
@@ -657,7 +662,7 @@ def _distribution(values: Iterable[float]) -> dict[str, float | None]:
     }
 
 
-def write_preflight_artifacts(experiment: ProductionExperiment, output_dir: str | Path, runtime_seconds: float) -> tuple[Path, Path, Path]:
+def write_legacy_preflight_artifacts(experiment: LegacyProductionExperiment, output_dir: str | Path, runtime_seconds: float) -> tuple[Path, Path, Path]:
     output = Path(output_dir)
     output.mkdir(parents=True, exist_ok=True)
     reports = [asdict(report) for report in experiment.reports]
@@ -700,3 +705,7 @@ def write_preflight_artifacts(experiment: ProductionExperiment, output_dir: str 
     pd.DataFrame(experiment.routing_grid_diagnostics).to_csv(output / "routing_grid_representative.csv", index=False)
     reproducibility_path.write_text(json.dumps(experiment.reproducibility_state(), indent=2, sort_keys=True) + "\n", encoding="utf-8")
     return summary_path, slot_path, reproducibility_path
+
+
+# The public entry point uses only final spatial/state contracts.
+from src.simulation.final_production import ProductionExperiment, run_production_preflight, write_preflight_artifacts

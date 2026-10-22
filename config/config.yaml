@@ -1,102 +1,147 @@
-# First-milestone settings. The 3 km square grid is the legacy NB1 default;
-# it is parameterized here without introducing alternative grid methodologies.
+# Active true-metre spatial foundation and final Jan–Mar CNN.
 data:
-  month: "2026-01"
-  yellow_taxi_path: "data/raw/yellow_taxi/yellow_tripdata_2026-01.parquet"
-  taxi_zones_path: "data/raw/taxi_zones/taxi_zones.shp"
-  processed_dir: "data/processed"
-  weather_path: "data/processed/weather/nyc_weather_processed_2026_01.parquet"
-  demand_master_path: "data/processed/demand_master_2026_01.parquet"
-  cnn_dataset_dir: "data/processed/cnn"
-
+  month: 2026-01
+  yellow_taxi_path: data/raw/yellow_taxi/yellow_tripdata_2026-01.parquet
+  taxi_zones_path: data/raw/taxi_zones/taxi_zones.shp
+  processed_dir: data/processed
+  weather_path: data/processed/spatial_3km_jan_mar_2026/weather_jan_mar_2026.parquet
+  demand_master_path: data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet
+  cnn_dataset_dir: data/processed/cnn_jan_mar_2026_3km_30min
+  spatial_foundation_dir: data/processed/spatial_3km_jan_mar_2026
+  trips_path: data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet
+  destination_popularity_path: data/processed/spatial_3km_jan_mar_2026/destination_popularity.parquet
+  charging_stations_path: data/processed/spatial_3km_jan_mar_2026/charging_stations.parquet
+  fare_bootstrap_path: data/processed/spatial_3km_jan_mar_2026/fare_bootstrap_legacy_cutoff.parquet
+  priority_grids_path: data/processed/spatial_3km_jan_mar_2026/priority_grids_legacy_cutoff.parquet
+  initial_supply_path: data/processed/spatial_3km_jan_mar_2026/initial_supply_seed42.parquet
+  movement_distance_path: data/processed/spatial_3km_jan_mar_2026/neighbour_travel.parquet
+  charging_navigation_distances_path: data/processed/spatial_3km_jan_mar_2026/charging_navigation_distances.parquet
 grid:
-  size_meters: 3000
-  geometry: "square"
-  metric_crs: "EPSG:2263"
-
+  geometry: square
+  grid_cell_size_m: 3000
+  grid_construction_crs: EPSG:32118
+  neighbour_topology: eight_way
+  valid_grid_count: 142
+  raster_rows: 16
+  raster_columns: 16
+  grid_version: true_3km_v1
 random_seed: 42
-
 time:
   interval_minutes: 30
-
-# Fleet-state milestone settings. Uniform placement is a provisional baseline.
 simulation:
   fleet_size: 5000
   main_slot_minutes: 30
   mini_slot_minutes: 2
-  initialization_method: "uniform_valid_grid"
-
-# NB10 energy provenance: Ding et al. Table I supplies capacity, 60-kWh
-# reference initial energy, 7.5-kWh reference minimum, consumption and power.
-# Supervisor baseline supplies truncated SOC and <=20% trigger; release is provisional.
+  initialization_method: uniform_valid_grid
 energy:
   battery_capacity_kwh: 75.0
   initial_energy_kwh: 60.0
   minimum_energy_kwh: 7.5
   consumption_rate_kwh_per_km: 0.15
   charging_power_kw: 30.0
-  charging_efficiency: 0.90
+  charging_efficiency: 0.9
   charging_release_energy_kwh: 75.0
-  mean_initial_soc: 0.50
+  mean_initial_soc: 0.5
   initial_soc_std: 0.05
-  initial_soc_min: 0.50
-  initial_soc_max: 0.70
-  charging_trigger_soc: 0.20
-
+  initial_soc_min: 0.5
+  initial_soc_max: 0.7
+  charging_trigger_soc: 0.2
 charging:
   number_of_charging_stations: 15
   station_max_power_kw: 3000.0
-
-# Requests/dispatch milestone engineering baselines.  Empirical OD sampling
-# is research-data-based; arrival/search/contention/duration remain provisional.
 dispatch:
-  dispatch_model: "legacy_fcfs_lowest_id"
-  arrival_method: "uniform_seeded_mini_slot"
-  search_method: "same_grid_then_direct_neighbours"
-  contention_method: "fcfs_mini_slot_then_request_id"
+  dispatch_model: legacy_fcfs_lowest_id
+  arrival_method: uniform_seeded_mini_slot
+  search_method: same_grid_then_direct_neighbours
+  contention_method: fcfs_mini_slot_then_request_id
   default_trip_duration_minutes: 2
-
-# NB9 provisional engineering settings; final alpha/initialization await
-# supervisor approval. Statistics update once at end of each main slot.
 statistics:
-  ewma_alpha: 0.30
-  ewma_initialization: "first_observation"
-
+  ewma_alpha: 0.3
+  ewma_initialization: first_observation
 routing:
   speed_kmph: 15.0
   reposition_distance_km: 3.0
   max_reposition_minutes: 30.0
-
-# NB12 provisional engineering settings for local supervised policy learning.
 routing_learning:
-  hidden_units: [64, 32]
+  hidden_units:
+  - 64
+  - 32
   learning_rate: 0.001
   local_observation_capacity: 1000
   batch_size: 32
   local_epochs: 1
-
-# Standalone pricing baseline. Alpha 1.0 is a provisional tuning value because
-# the LinUCB paper defines alpha through an unspecified confidence parameter.
 pricing:
-  method: "linucb"
-  decision_mode: "legacy_grid"
-  sensitivity_fallback: "error"
-  linucb_reward_scaling: "none"
-  customer_response_model: "eq31"
-  reward_model: "legacy_normalized_accepted_revenue"
-  supply_model: "legacy_all_statuses"
-  factors: [0.85, 0.90, 0.95, 1.00, 1.05, 1.10, 1.15]
+  method: linucb
+  decision_mode: legacy_grid
+  sensitivity_fallback: error
+  linucb_reward_scaling: none
+  customer_response_model: eq31
+  reward_model: legacy_normalized_accepted_revenue
+  supply_model: legacy_all_statuses
+  factors:
+  - 0.85
+  - 0.9
+  - 0.95
+  - 1.0
+  - 1.05
+  - 1.1
+  - 1.15
   linucb_alpha: 1.0
   acceptance_seed: 42
-
-# Legacy weather-utility parameters. The timezone remains intentionally unset
-# to reproduce the historical notebook; its alignment with naive taxi times is
-# recorded as an unresolved research assumption in weather provenance.
 weather:
-  provider: "meteostat"
+  provider: meteostat
   latitude: 40.7128
-  longitude: -74.0060
+  longitude: -74.006
   altitude_m: 10
-  start: "2026-01-01 00:00:00"
-  end: "2026-01-31 23:59:59"
-  output: "data/processed/weather/nyc_weather_processed_2026_01.parquet"
+  start: '2026-01-01 00:00:00'
+  end: '2026-01-31 23:59:59'
+  output: data/processed/weather/nyc_weather_processed_2026_01.parquet
+cnn:
+  forecast_minutes: 30
+  forecast_status: DOCUMENTED_ADAPTATION
+  dataset_start: '2026-01-01 00:00:00'
+  dataset_end_exclusive: '2026-04-01 00:00:00'
+  raster_rows: 16
+  raster_columns: 16
+  valid_grid_count: 142
+  preprocessing_status: TRAINED_VALIDATED
+  historical_average_fit: TRAINING_ONLY
+  scaler_fit: TRAINING_ONLY
+  split: TRAIN_JAN_FEB_VALIDATION_MAR01_15_TEST_MAR16_31
+  model_path: models/cnn/jan_mar_2026_3km_30min_continued/best.keras
+  forecast_path: results/analysis/2026-10-19_operational_grid_state/dqn_ready_forecasts.parquet
+  feature_channels:
+  - DayOfWeek
+  - Hour
+  - PeriodWithinHour
+  - WeatherType
+  - Temperature
+  - WindSpeed
+  - HistoricalAverageDemandDistribution
+  training_start: '2026-01-01 00:00:00'
+  training_end_exclusive: '2026-03-01 00:00:00'
+  validation_end_exclusive: '2026-03-16 00:00:00'
+
+# Canonical operational producer is opt-in until these decisions are supplied.
+operational_state:
+  status: PROJECT_IMPLEMENTATION_DECISION
+  alpha: 0.3  # existing provisional mean-price EWMA
+  beta: 0.3   # existing provisional price-SD EWMA, not manuscript confirmation
+  delta: 0.3
+  kappa: 0.3
+  zeta: null  # unresolved; not applied by the current producer
+  sigma_floor: 0.000001
+  F_hat_0: 0.0
+  H_hat_0: 0.0
+
+final_routing:
+  configuration_path: results/analysis/2026-10-20_final_routing_configuration/routing_configuration.json
+  policy_input_dim: 169
+  policy_output_dim: 9
+  status: PROJECT_IMPLEMENTATION_DECISION
+
+pricing_dqn_contract:
+  passenger_acceptance_model: behavioural_E_threshold
+  specification_dir: results/analysis/2026-10-20_pricing_contract_and_dqn_state
+  state_dimension: 13
+  action_count: 7

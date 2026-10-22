@@ -1,0 +1,5 @@
+request_id,accepted,assigned,fare_usd,reward
+1,True,True,20,20
+2,True,False,90,0
+3,False,False,80,0
+4,True,True,30,30

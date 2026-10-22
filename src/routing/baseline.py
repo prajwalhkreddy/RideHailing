@@ -17,12 +17,25 @@ from src.simulation.statistics import GridSlotStatistics
 class RoutingAction(str, Enum):
     STAY = "STAY"
     NORTH = "NORTH"
+    NORTHEAST = "NORTHEAST"
     EAST = "EAST"
+    SOUTHEAST = "SOUTHEAST"
     SOUTH = "SOUTH"
+    SOUTHWEST = "SOUTHWEST"
     WEST = "WEST"
+    NORTHWEST = "NORTHWEST"
 
 
-ACTION_ORDER = (RoutingAction.STAY, RoutingAction.NORTH, RoutingAction.EAST, RoutingAction.SOUTH, RoutingAction.WEST)
+ACTION_ORDER = tuple(RoutingAction)
+# Internal 0..8 maps losslessly to manuscript 1..9 by adding one.
+def movement_distance_m(action: RoutingAction | str) -> float:
+    action = RoutingAction(action)
+    if action is RoutingAction.STAY:
+        return 0.0
+    return 3000.0 * (math.sqrt(2) if action in {
+        RoutingAction.NORTHEAST, RoutingAction.SOUTHEAST,
+        RoutingAction.SOUTHWEST, RoutingAction.NORTHWEST} else 1.0)
+
 
 
 @dataclass(frozen=True)
@@ -31,13 +44,15 @@ class RoutingParameters:
     reposition_distance_km: float
     max_reposition_minutes: float
 
-    def duration_minutes(self) -> float:
+    def duration_minutes(self, action: RoutingAction = RoutingAction.NORTH) -> float:
         if self.speed_kmph <= 0 or self.reposition_distance_km < 0 or self.max_reposition_minutes <= 0:
             raise ValueError("Routing speed/distance/feasibility settings must be positive.")
-        return self.reposition_distance_km / self.speed_kmph * 60.0
+        return movement_distance_m(action) / 1000 / self.speed_kmph * 60.0
 
     def validate(self) -> None:
-        if self.duration_minutes() > self.max_reposition_minutes:
+        if not math.isclose(self.reposition_distance_km, 3.0):
+            raise ValueError("Metric-grid cardinal distance must be 3 km.")
+        if self.duration_minutes(RoutingAction.NORTHEAST) > self.max_reposition_minutes:
             raise ValueError("Repositioning movement exceeds the configured feasibility threshold.")
 
 
@@ -156,7 +171,7 @@ def build_routing_state(vehicle: VehicleState, features: Mapping[int, GridRoutin
     if vehicle.current_grid not in features:
         raise ValueError("Current grid lacks routing features.")
     actions: dict[RoutingAction, GridRoutingFeatures | None] = {RoutingAction.STAY: features[vehicle.current_grid]}
-    directions = {"north": RoutingAction.NORTH, "east": RoutingAction.EAST, "south": RoutingAction.SOUTH, "west": RoutingAction.WEST}
+    directions = {action.value.lower(): action for action in ACTION_ORDER[1:]}
     rows = neighbour_map[neighbour_map["GridID"] == vehicle.current_grid]
     for direction, action in directions.items():
         match = rows[rows["Direction"] == direction]
@@ -166,7 +181,7 @@ def build_routing_state(vehicle: VehicleState, features: Mapping[int, GridRoutin
 
 def valid_action_mask(state: RoutingState) -> dict[RoutingAction, bool]:
     """Mask invalid boundary actions while keeping STAY valid everywhere."""
-    return {action: state.action_features[action] is not None for action in ACTION_ORDER}
+    return {action: state.action_features.get(action) is not None for action in ACTION_ORDER}
 
 
 def _finite(value: float, name: str) -> float:
@@ -310,8 +325,8 @@ def execute_reposition(vehicle: VehicleState, state: RoutingState, action: Routi
     if destination is None:
         raise ValueError("Cannot execute a masked routing action.")
     before_energy, before_status, origin = vehicle.energy_level, vehicle.trip_status, vehicle.current_grid
-    distance = 0.0 if action is RoutingAction.STAY else parameters.reposition_distance_km
-    duration = 0.0 if action is RoutingAction.STAY else parameters.duration_minutes()
+    distance = movement_distance_m(action) / 1000
+    duration = parameters.duration_minutes(action)
     if action is not RoutingAction.STAY:
         consumed = energy_consumed_kwh(distance, energy)
         if consumed > vehicle.energy_level:
@@ -319,7 +334,7 @@ def execute_reposition(vehicle: VehicleState, state: RoutingState, action: Routi
         vehicle.abandon_idle_wait()
         vehicle.energy_level -= consumed
         # Reuse the fleet's timed travel state: the vehicle remains unavailable
-        # at its origin until the frozen 12-minute movement completes.
+        # at its origin until the distance-dependent movement completes.
         vehicle.trip_status = VehicleStatus.BUSY
         vehicle.destination = destination.grid_id
         vehicle.remaining_travel_time = duration

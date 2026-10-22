@@ -1,0 +1,30 @@
+{
+  "final_path": "ProductionExperiment.route_idle -> timed next-hop -> advance_until -> TimedChargingInfrastructure.admit_arrived",
+  "legacy_entrypoint": "src.simulation.production.LegacyProductionExperiment",
+  "legacy_guard": "retained in explicit legacy class; public final class independently validates contracts",
+  "protected_sha256": {
+    "config/config.yaml": "2250d4fe4c49bb48536aea44bbb978aae579ee2e8ddcfdd1315e9376aff8f85f",
+    "data/processed/customer_price_sensitivity_2026_01.parquet": "2f9554665ced24d0cecfe136b9f7d3dd29d99ec2b4248c930909bbe6cf1b0088",
+    "data/processed/customer_price_sensitivity_fallback_2026_01.parquet": "8d511bb09421154b2185935db204af8497c42dd729db39333cb323fc0649e826",
+    "data/processed/grid_lookup.parquet": "4e4020fd1c9faf8a3899bc718758052cc24b83e3c05caccb8e20ab98ec24fc2b",
+    "data/processed/grid_metadata.json": "096a31950aa694c901e37ba479477bf27e01fdd0250caa5c6f194c28ae1e444e",
+    "models/routing_policy/jan_mar_2026_3km_169x64x32x9/best.keras": "e6ce90bce272afe40be2fb7bd2e52d43215f27bab16dc7354253cec261d0b6aa",
+    "results/analysis/2026-10-19_operational_grid_state/dqn_ready_forecasts.parquet": "bd45c194f1badf4ab692c6dcdf6b03d633d394d836e05916c255170576f552c6"
+  },
+  "replaced": [
+    "1213-grid domain",
+    "51x52 CNN tensor access",
+    "155-input/five-action policy assumptions",
+    "legacy context scaler",
+    "legacy fare-count/wait state",
+    "legacy model-path errors",
+    "zero-time ChargingInfrastructure.present_vehicle"
+  ],
+  "retained_semantics": [
+    "existing FCFS matching algorithm (legacy_fcfs_lowest_id names matching, not spatial/state adapter)",
+    "behavioural E customer model",
+    "January intact-trip generation",
+    "energy and station capacity settings"
+  ],
+  "zero_time_old_path": "LegacyProductionExperiment -> run_main_slot -> ChargingInfrastructure.present_vehicle"
+}

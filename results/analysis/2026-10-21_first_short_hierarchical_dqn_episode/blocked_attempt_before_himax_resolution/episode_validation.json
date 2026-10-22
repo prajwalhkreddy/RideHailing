@@ -1,0 +1,27 @@
+{
+  "SHORT_HIERARCHICAL_EPISODE_READY": false,
+  "status": "BLOCKED_BEFORE_EPISODE",
+  "completed_slots": 0,
+  "requests_processed": 0,
+  "transitions_collected": 0,
+  "optimizer_updates": 0,
+  "fedavg_rounds": 0,
+  "checkpoint_written": false,
+  "episode_metrics_available": false,
+  "startup_check": "RuntimeError reproduced",
+  "error": "Legacy January/5-action production runner is superseded. New 16x16 CNN and 9-action routing models must be trained before running the migrated environment.",
+  "blocker": "Production runner and main-slot orchestration remain legacy; completed final interfaces are not wired into the full hierarchical loop.",
+  "evidence": [
+    "src/simulation/production.py:185-186 active true_3km_v1 guard",
+    "src/simulation/production.py:244-245 requires 1213 grids behind guard",
+    "src/simulation/main_slot.py:207-222 legacy state/utility/learner path",
+    "src/simulation/main_slot.py:95-96 invokes present_vehicle",
+    "src/charging/stations.py:present_vehicle zero-time station transfer"
+  ],
+  "tests": {
+    "startup_guard_reproduced": true,
+    "unit_suite_run_this_attempt": false,
+    "reason": "Stopped on genuine integration blocker as instructed."
+  },
+  "protected_artifacts": "No models, data, code or existing results changed during this attempt."
+}

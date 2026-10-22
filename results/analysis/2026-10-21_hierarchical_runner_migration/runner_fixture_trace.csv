@@ -1,0 +1,3 @@
+timestamp,requests,accepted,rejected,assigned,unmatched,reward,completed,transitions,replay_size,routing_actions,charging_decisions,fleet_size,unsupported_forecast_demand,federated_updates,training,terminal
+2026-03-16 00:00:00,2,2,0,2,0,42.550213666235734,0,2,2,"[0, 0, 0, 0, 0, 1, 0, 0, 0]",1,3,0,0,,False
+2026-03-16 00:30:00,2,2,0,0,2,0.0,2,2,4,"[2, 0, 0, 0, 0, 0, 0, 0, 0]",0,3,0,0,,True

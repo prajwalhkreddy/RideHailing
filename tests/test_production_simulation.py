@@ -1,4 +1,4 @@
-"""Focused contracts for the authoritative production assembler."""
+"""Focused contracts for the explicit legacy production assembler."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ import pandas as pd
 
 from src.dispatch.generation import build_empirical_od_distribution, generate_requests
 from src.routing.production import sha256_file
-from src.simulation.production import EXPECTED_GRID_COUNT, EXPECTED_HASHES, PRODUCTION_END_EXCLUSIVE, PRODUCTION_SLOT_COUNT, PRODUCTION_START, ProductionExperiment
+from src.simulation.production import EXPECTED_GRID_COUNT, EXPECTED_HASHES, PRODUCTION_END_EXCLUSIVE, PRODUCTION_SLOT_COUNT, PRODUCTION_START, LegacyProductionExperiment
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -18,7 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 class ProductionSimulationTests(unittest.TestCase):
     def test_frozen_artifacts_and_first_eight_predictions_exist(self) -> None:
-        experiment = ProductionExperiment.__new__(ProductionExperiment)
+        experiment = LegacyProductionExperiment.__new__(LegacyProductionExperiment)
         experiment.root = ROOT
         paths = experiment._paths()
         for name, expected in EXPECTED_HASHES.items():

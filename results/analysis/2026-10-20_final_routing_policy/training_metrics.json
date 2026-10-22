@@ -1,0 +1,24 @@
+{
+  "accuracy": 0.29225352112676056,
+  "cross_entropy": 1.8291688955811016,
+  "invalid_action_count": 0,
+  "valid_action_prediction_rate": 1.0,
+  "training_samples": 2272,
+  "validation_samples": 1136,
+  "total_samples": 3408,
+  "best_round": 5,
+  "seed": 42,
+  "experience_source": "controlled synthetic routing-only fixture, NOT empirical fleet outcomes",
+  "validation_design": "chronologically later fixture slots; best checkpoint selected on this validation set, no independent test claim",
+  "severe_prediction_dominance": false,
+  "majority_label_accuracy": 0.3362676056338028,
+  "routing_policy_ready": true,
+  "tests_passed": 35,
+  "tests_failed": 0,
+  "stay_prediction_share": 0.6144366197183099,
+  "stay_label_share": 0.3362676056338028,
+  "zero_prediction_actions": [
+    4
+  ],
+  "quality_assessment": "Below majority-label baseline; STAY overprediction and no SE predictions. Integration-ready only; empirical effectiveness not established."
+}

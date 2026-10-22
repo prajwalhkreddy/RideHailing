@@ -1,0 +1,41 @@
+{
+  "seed": 42,
+  "start": "2026-03-16 00:00:00",
+  "end": "2026-03-16 02:00:00",
+  "slots_per_run": 4,
+  "origins": [
+    0,
+    1,
+    2
+  ],
+  "destination_mapping": {
+    "0": 1,
+    "1": 2,
+    "2": 0
+  },
+  "vehicles_per_run": 3,
+  "requests_per_run": 36,
+  "modes": [
+    "checkpoint_greedy_explore_false",
+    "forced_action_3"
+  ],
+  "routing_status": "PROVISIONAL_ROUTING_BASELINE",
+  "dispatch_model": "legacy_fcfs_lowest_id",
+  "replay": "fresh isolated buffers; production minimum1000 unchanged; optimizer skipped",
+  "requests": "controlled synthetic requests, not historical trip observations; IDs refer only to this fixture",
+  "request_pattern": "two distance=D_base and one distance=0.5*D_base per origin per slot, all at mini-slot0; 40-minute durations",
+  "warm_start": "explicitly completed empty pre-start slot; initialized idle fleet, no prior simulated dispatches",
+  "reward_attribution": "each OD transition receives revenue attributable to its own priced requests; sum equals slot reward, no repeated whole-slot credit",
+  "protected_checkpoint_hashes": {
+    "models/pricing_dqn/standalone_13x64x64x7_fixture/replay.npz": "601f4a13f47fec0b5e088be1af8523f2dd3ebae17505dd2c25a76b9ee98e799d",
+    "models/pricing_dqn/standalone_13x64x64x7_fixture/checkpoint.json": "d77f32a3a07a711cec2edc694c209c012d20984dd267171f2e8659bf3d790942",
+    "models/pricing_dqn/standalone_13x64x64x7_fixture/target.keras": "f3eb8246bd077a8468a0af55b074a5e7900a2528ba33036b6ff3287269a0c712",
+    "models/pricing_dqn/standalone_13x64x64x7_fixture/online.keras": "520659d2a9eff0ae8f6b39af217411356c8c742f36ddf0791c14a81776b497dd",
+    "models/routing_policy/jan_mar_2026_3km_169x64x32x9/state_specification.json": "f39a4ca1c24383072e231fa5b30148fb77998defd182c73f4d95f51d31280c8a",
+    "models/routing_policy/jan_mar_2026_3km_169x64x32x9/best.keras": "e6ce90bce272afe40be2fb7bd2e52d43215f27bab16dc7354253cec261d0b6aa",
+    "models/routing_policy/jan_mar_2026_3km_169x64x32x9/last.keras": "e6ce90bce272afe40be2fb7bd2e52d43215f27bab16dc7354253cec261d0b6aa",
+    "models/routing_policy/jan_mar_2026_3km_169x64x32x9/action_specification.json": "e417836937794882f3cce8bf8260fb2a081cdededfe1ffddb3d74e9eb4f2bde1",
+    "models/routing_policy/jan_mar_2026_3km_169x64x32x9/training_history.csv": "6a9a3515fb79ea5d2a6614446aa09ae866c9c8238616186b966e205cc0303f9d",
+    "models/routing_policy/jan_mar_2026_3km_169x64x32x9/training_configuration.json": "1a12cd3357945dac271743f3d72cf445067e896e93df25933482a239fff9cca2"
+  }
+}

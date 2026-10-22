@@ -1,0 +1,41 @@
+{
+  "original_checkpoint_preserved": "data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint_before_boundary_fix.pkl",
+  "original_checkpoint_sha256": "f3644ad4b02775ba3339bc95aa09b9678f1d6eb7e4292d4b83a9ef3a2e991e3e",
+  "latest_checkpoint_sha256": "bb25c7c3dc4e21bdcbf3127fd574b9a996e05fe9a212d8a65bda5f32b088ef13",
+  "original_slot_unchanged": true,
+  "slots": [
+    {
+      "slot": 0,
+      "experiences": 4570,
+      "sha256": "3962ccc2c5f9648aec59ffee445710dbe22e1c93625318d42337eacfa00fd5f8"
+    },
+    {
+      "slot": 1,
+      "experiences": 4507,
+      "sha256": "be6c88045c1664a7cb9c5fc8226ea5da5446f0894104a92c4e5cae5ac0c909a5"
+    },
+    {
+      "slot": 2,
+      "experiences": 4510,
+      "sha256": "006d081a49a64108d23e06e7786f0530181bb2dfd7ca6d85600d00b30afe99b0"
+    },
+    {
+      "slot": 3,
+      "experiences": 4539,
+      "sha256": "474957e288bda4915481c30fb4f974e6f408e0d6e29e5a0185ccdadc09fd2b67"
+    },
+    {
+      "slot": 4,
+      "experiences": 4455,
+      "sha256": "021a01e555e9ad6a490f1debc5f71938b1570b8026113c51f2b819b39df2aa90"
+    },
+    {
+      "slot": 5,
+      "experiences": 4428,
+      "sha256": "e25a73dcce324e22b5f70966bc729395dec0371a535014710b925d10a2d10fbc"
+    }
+  ],
+  "duplicate_experience_ids": 0,
+  "experience_ids_contiguous": true,
+  "first_slot_not_regenerated": true
+}

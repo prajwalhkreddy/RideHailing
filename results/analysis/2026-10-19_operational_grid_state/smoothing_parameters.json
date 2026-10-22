@@ -1,0 +1,42 @@
+{
+  "status": "CONFIG_DECISION_REQUIRED",
+  "alpha": {
+    "value": 0.3,
+    "source": "config/config.yaml statistics.ewma_alpha",
+    "use": "provisional mean-price EWMA"
+  },
+  "beta": {
+    "value": 0.3,
+    "source": "existing statistics.py uses same ewma_alpha for population price SD",
+    "use": "provisional SD EWMA, not established manuscript beta"
+  },
+  "delta": {
+    "value": null,
+    "source": "roadmap supplies equation only",
+    "use": "dispatch-frequency EWMA"
+  },
+  "kappa": {
+    "value": null,
+    "source": "roadmap supplies equation only",
+    "use": "charging-wait EWMA"
+  },
+  "zeta": {
+    "value": null,
+    "source": "roadmap mentions dispatch smoothing without value",
+    "use": "not applied; unresolved manuscript relation"
+  },
+  "F_hat_0": null,
+  "H_hat_0": null,
+  "sigma_floor": null,
+  "fixture_only": {
+    "alpha": 0.3,
+    "beta": 0.3,
+    "delta": 0.5,
+    "kappa": 0.25,
+    "sigma_floor": 0.01,
+    "mu_0": 10,
+    "sigma_0": 2,
+    "F_hat_0": 1,
+    "H_hat_0": 4
+  }
+}
