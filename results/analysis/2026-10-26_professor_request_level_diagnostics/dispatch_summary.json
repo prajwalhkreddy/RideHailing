@@ -1,0 +1,16 @@
+{
+  "status": [
+    "ACTIVE_IMPLEMENTATION_DIAGNOSTIC",
+    "NOT_SOURCE_VALIDATED_ACCEPTANCE_ANALYSIS"
+  ],
+  "accepted": 1801,
+  "assigned": 1801,
+  "unmatched": 0,
+  "identity_pass": true,
+  "unmatched_breakdown": {},
+  "zero_idle_candidates": 0,
+  "idle_candidates_existed": 0,
+  "unresolved_from_diagnostics": 0,
+  "idle_candidate_definition": "At actual request arrival, before acceptance/dispatch: IDLE vehicles in origin or direct-neighbor grids. Does not apply energy/reserve or any nonexistent price gate.",
+  "revenue": 33721.10975948257
+}

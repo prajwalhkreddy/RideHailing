@@ -1,0 +1,6 @@
+distance_bucket,generated,accepted,rejected,acceptance_percentage
+0–1 miles,660,158,502,23.939393939393938
+>1–3 miles,1078,554,524,51.391465677179966
+>3–5 miles,316,305,11,96.51898734177215
+>5–10 miles,415,415,0,100.0
+>10 miles,369,369,0,100.0

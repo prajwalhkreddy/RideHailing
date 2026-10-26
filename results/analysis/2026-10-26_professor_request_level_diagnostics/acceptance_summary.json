@@ -1,0 +1,32 @@
+{
+  "status": [
+    "ACTIVE_IMPLEMENTATION_DIAGNOSTIC",
+    "NOT_SOURCE_VALIDATED_ACCEPTANCE_ANALYSIS"
+  ],
+  "fixture": "Existing March16 greedy adequacy fixture; same final pricing checkpoint, fresh seed42 fleet/operational state, 4slots00:00\u201302:00, exact request signatures matched",
+  "generated": 2838,
+  "accepted": 1801,
+  "rejected": 1037,
+  "acceptance_percentage": 63.46018322762509,
+  "formula_decision_inconsistencies": 0,
+  "independent_formula_recomputation": "PASS",
+  "by_acceptance": {
+    "accepted": {
+      "elasticity_mean": 7.14129688709948,
+      "elasticity_median": 6.383421304182088,
+      "P_disp_mean": 18.723547895326245,
+      "P_max_mean": 39.22435318230441
+    },
+    "rejected": {
+      "elasticity_mean": 3.0576960008560063,
+      "elasticity_median": 2.602910810319323,
+      "P_disp_mean": 18.526423053275394,
+      "P_max_mean": 1.9850432425148332
+    }
+  },
+  "optimizer_updates_before": 718,
+  "optimizer_updates_after": 718,
+  "model_optimizer_rng_unchanged": true,
+  "protected_evaluation_accessed": false,
+  "simulations_run": 1
+}

@@ -1,0 +1,21 @@
+{
+  "status": [
+    "ACTIVE_IMPLEMENTATION_DIAGNOSTIC",
+    "NOT_SOURCE_VALIDATED_ACCEPTANCE_ANALYSIS"
+  ],
+  "assigned_checked": 1801,
+  "assigned_missing_P_i_min": 0,
+  "satisfying": 884,
+  "violating": 917,
+  "violation_percentage": 50.91615769017213,
+  "driver_field": "Persisted driver profile price_preference, used as P_i_min by existing routing utility; no dispatch gate added.",
+  "equality_passes": true,
+  "interpretation": "Counterfactual check of actual selected assignments only; not a rerun estimating replacement drivers or corrected-policy outcomes.",
+  "example_request_ids": [
+    235,
+    818,
+    854,
+    688,
+    988
+  ]
+}

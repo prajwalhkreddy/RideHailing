@@ -1,0 +1,96 @@
+{
+  "classification": "E. SOURCE_EQUATION_NOT_AVAILABLE",
+  "scope_of_unavailability": "No original paper/manuscript equation establishing the active epsilon/P_max contract was identified in the bounded source search. Explicit but internally inconsistent project-note equations ARE available.",
+  "PROFESSOR_CLARIFICATION_REQUIRED": true,
+  "DISPATCH_PRICE_GATE_IMPLEMENTATION_REQUIRED": true,
+  "active_calibration": {
+    "implementation": "src/pricing/historical_sensitivity.py:217-219",
+    "metadata": "data/processed/customer_price_sensitivity_2026_01_metadata.json",
+    "formula": "E_i=abs(((P_i-P_base)/P_base)/((L_i-L_base)/L_base))",
+    "orientation": "price fractional change / distance fractional change, then absolute value",
+    "runtime_sampling": "positive-truncated Normal fitted from these magnitude statistics"
+  },
+  "active_acceptance": {
+    "implementation": "src/pricing/customer_sensitivity.py:83-105,225-241",
+    "P_disp": "factor*P_base",
+    "P_max": "P_base*[1+((L-L_base)/L_base)/E]",
+    "condition": "P_disp <= P_max",
+    "orientation": "distance fractional change / price fractional change",
+    "P_base_multiplier_present": true
+  },
+  "source_equation_verified": false,
+  "source_orientation": "UNRESOLVED: notes disagree; retrieved papers do not provide the active threshold contract",
+  "variables": {
+    "P": "historical price in USD",
+    "P_base": "resolved weather/half-hour reference fare in USD",
+    "P_disp": "offered fare in USD",
+    "P_max": "maximum acceptable fare in USD",
+    "L": "actual trip distance in miles",
+    "L_base": "resolved reference distance in miles; D_base in code",
+    "E": "sampled dimensionless passenger sensitivity; orientation unresolved",
+    "factor": "dimensionless pricing factor"
+  },
+  "options": [
+    {
+      "definition": "E=relative_price/relative_distance",
+      "rearrangement": "P_max=P_base*[1+E*(L-L_base)/L_base]"
+    },
+    {
+      "definition": "E=relative_distance/relative_price",
+      "rearrangement": "P_max=P_base*[1+((L-L_base)/L_base)/E]"
+    }
+  ],
+  "dimensional_check": "Both options yield USD with the P_base multiplier; units alone cannot choose the orientation. Without the multiplier, adding a dimensionless deviation to USD is inconsistent.",
+  "absolute_value_caution": "The options assume the stated signed relationship. Absolute calibration and positive truncation are additional behavioural assumptions, not an algebraic rearrangement; clarify these along with orientation.",
+  "evidence": [
+    {
+      "path": "notebooks/plan/supervisor/Final_Next_Implementation_Process.docx",
+      "location": "Stage B paragraphs46\u201349; Stage E paragraphs62\u201368 (1-based document XML paragraph order)",
+      "definition": "DeltaP=(P-P_base)/P_base; DeltaD=(D-D_base)/D_base; epsilon=DeltaP/DeltaD",
+      "acceptance": "P_max=P_base+P_base*DeltaD/epsilon; accept iff P_disp<=P_max",
+      "finding": "Explicit project-note equations exist, but the claimed rearrangement contradicts the stated definition. No original paper equation/citation identified here.",
+      "sampling": "Stage D paragraphs54\u201357 specifies ordinary Normal without mandatory truncation, unlike active positive-truncated sampling"
+    },
+    {
+      "path": "notebooks/plan/Price_Distance_Sensitivity_Implementation_Guide.docx",
+      "location": "paragraph134",
+      "definition": "epsilon=(DeltaP/P_base)/(DeltaL/L_base)",
+      "finding": "Project methodology supports price-over-distance orientation; not an independently verified source willingness-to-pay equation."
+    },
+    {
+      "path": "notebooks/plan/ImplementationPlan/Complete_Hierarchical_RL_Implementation_Roadmap_CNN_Updated.docx",
+      "location": "paragraph529",
+      "acceptance": "P_disp <= P_base + (1/epsilon)*((L-L_base)/L_base)",
+      "finding": "Claims manuscript convention without identifying exact source equation; displayed expression omits P_base in additive term and is dimensionally inconsistent if epsilon dimensionless."
+    },
+    {
+      "path": "notebooks/plan/papers/Joint_Optimization_of_Pricing_Dispatching_and_Repositioning_in_Ride-Hailing_With_Multiple_Models_Interplayed_Reinforcement_Learning.pdf",
+      "location": "PDF page9, experimental settings",
+      "equation": "F(x_i,c_i)=f0+zeta*(1-c_i), f0=0.5",
+      "variables": "c_i pricing factor; f0 base conversion rate; zeta passenger price sensitivity; F conversion rate",
+      "finding": "Conversion-probability model; does not define distance/price fractional-change epsilon or P_max."
+    },
+    {
+      "path": "notebooks/plan/papers/MARL-Based_Pricing_Strategy_via_Mutual_Attention_for_MoD_Systems_with_Ridesharing_and_Repositioning.pdf",
+      "location": "PDF page7, equation31",
+      "equation": "xi_o(a_t)=1/[1+exp(0.67*lambda1_t(p_o)*|V_t(p_o)|/|O_t(p_o)|-1.67)]",
+      "variables": "lambda1 ordinary-order pricing factor; p_o origin; vehicle/order count ratio at origin; xi conversion probability",
+      "finding": "Price/supply-demand conversion model; not the active E-based distance-threshold equation."
+    },
+    {
+      "path": "notebooks/plan/supervisor/customer sensitivity.pdf",
+      "location": "PDF pages1,7\u20138",
+      "finding": "Discusses obtaining the customer-preference paper; does not establish the exact E-based threshold equation."
+    }
+  ],
+  "clarification_required": "Provide original equation/citation or explicitly approve a self-contained project contract covering epsilon orientation, sign/absolute-value treatment, sampling support and corresponding P_max. Do not choose multiplication/division solely to match existing code.",
+  "minimum_upstream_corrections": [
+    "Resolve and freeze consistent calibration/sampling/acceptance contract with source or explicit professor approval.",
+    "Implement the required hard P_disp >= P_i_min gate, equality eligible, before FCFS selection; routing U1 alone is insufficient.",
+    "Combine both upstream corrections and validate equation/units, acceptance boundaries and driver-price boundaries before any single clean regeneration."
+  ],
+  "no_code_changes": true,
+  "no_regeneration": true,
+  "no_retraining": true,
+  "protected_evaluation_accessed": false
+}

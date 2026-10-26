@@ -6,15 +6,15 @@ Final clean routing generation, central routing training and five-round plain Fe
 
 ### Current Resume Point
 
-Professor-alignment checks are complete; **READY_FOR_CORRECTED_PRICING_RETRAIN = NO**. Resolve the acceptance-source/calibration equation, missing hard driver-price eligibility and failed routing-probability adequacy gate. **ROUTING_PROBABILITIES_INFORMATIVE = NO** versus the masked training-action prior. The proposed one-update-per-five-transition cadence remains conditional and unimplemented; corrected pricing retrain **NOT YET RUN**. March17–31 remains untouched by RL training/development tasks and protected for final evaluation. Privacy/DP remains future work.
+Professor request-level March16 diagnostic: [ACTIVE_IMPLEMENTATION_DIAGNOSTIC / NOT_SOURCE_VALIDATED](results/analysis/2026-10-26_professor_request_level_diagnostics/README.md).
 
-- [Professor-alignment gate](results/analysis/2026-10-26_professor_alignment_pricing_gate/README.md).
-- [Completed routing training](results/analysis/2026-10-25_final_simulator_routing_training/README.md).
-- [Completed pricing launch/run record](results/analysis/2026-10-25_final_nonprivate_pricing_training/README.md); its initial launch status is historical, not current liveness.
-- [Pricing adequacy diagnosis](results/analysis/2026-10-26_pricing_training_adequacy/README.md).
-- Preserved completed pricing checkpoint: `models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/checkpoint_0720_a79095b4`.
+**READY_FOR_CORRECTED_PRICING_RETRAIN = NO.** Acceptance source-equation investigation is complete with **E: SOURCE_EQUATION_NOT_AVAILABLE / PROFESSOR_CLARIFICATION_REQUIRED = YES**. Explicit project notes exist but conflict: Stage B of `Final_Next_Implementation_Process.docx` defines price-over-distance epsilon, while Stage E divides distance deviation by epsilon for P_max. Active calibration additionally takes an absolute value. The original acceptance equation/convention remains unverified; no multiplication/division choice is made.
 
-Do not resume the completed run as corrected training, reuse the March16 integration checkpoint, or enter protected evaluation before resolving the gate. Current status here supersedes historical milestones below.
+The final FCFS hard-price gate `P_disp >= P_i_min` is missing and requires implementation. Resolve acceptance and bundle both upstream corrections before any clean regeneration or retraining. Existing routing probabilities fail held-out adequacy (**NO**); do not tune routing against data that may need upstream correction. Current routing/pricing artifacts remain provenance and become non-final for any changed contract. The proposed pricing cadence is still conditional and unimplemented.
+
+[Acceptance source investigation and dependency impact](results/analysis/2026-10-26_acceptance_source_resolution/README.md); [professor gate](results/analysis/2026-10-26_professor_alignment_pricing_gate/README.md). The new source investigation supplements the earlier gate with explicit contradictory methodology-note equations; it does not approve a replacement.
+
+Corrected retraining **NOT YET RUN**. No regeneration is authorized before acceptance resolves. March17–31 remains untouched by RL development and protected for final evaluation. Privacy/DP remains future work. Completed runs and historical evidence are retained in the sections below.
 
 ## 1. Project overview
 

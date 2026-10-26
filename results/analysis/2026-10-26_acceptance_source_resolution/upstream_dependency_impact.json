@@ -1,0 +1,61 @@
+{
+  "trigger": "Either passenger acceptance or dispatch eligibility changes",
+  "artifacts": [
+    {
+      "artifact": "March1\u201315 routing experiences",
+      "path": "data/processed/routing_experiences_mar01_mar15_2026_reachability/",
+      "status_if_contract_changes": "NON_FINAL_FOR_CORRECTED_CONTRACT_PROVENANCE_ONLY",
+      "reason": "Acceptance/eligibility affect assignments, fleet, operational states and utility labels.",
+      "exists": true
+    },
+    {
+      "artifact": "Central routing model",
+      "path": "models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/central.keras",
+      "status_if_contract_changes": "NON_FINAL_FOR_CORRECTED_CONTRACT_PROVENANCE_ONLY",
+      "reason": "Training examples and held-out states/labels would change.",
+      "exists": true
+    },
+    {
+      "artifact": "FedAvg routing model",
+      "path": "models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras",
+      "status_if_contract_changes": "NON_FINAL_FOR_CORRECTED_CONTRACT_PROVENANCE_ONLY",
+      "reason": "Participant experiences/global model would need regenerated-data training.",
+      "exists": true
+    },
+    {
+      "artifact": "Routing probability adequacy",
+      "path": "results/analysis/2026-10-26_professor_alignment_pricing_gate/routing_probability_adequacy.json",
+      "status_if_contract_changes": "NON_FINAL_FOR_CORRECTED_CONTRACT_PROVENANCE_ONLY",
+      "reason": "Re-evaluate trained model and training-label prior on corrected held-out data.",
+      "exists": true
+    },
+    {
+      "artifact": "March1\u201315 pricing training",
+      "path": "models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/checkpoint_0720_a79095b4/",
+      "status_if_contract_changes": "NON_FINAL_FOR_CORRECTED_CONTRACT_PROVENANCE_ONLY",
+      "reason": "Acceptance, reward, dispatch and routing-state trajectories would change.",
+      "exists": true
+    },
+    {
+      "artifact": "March16 pricing adequacy",
+      "path": "results/analysis/2026-10-26_pricing_training_adequacy/",
+      "status_if_contract_changes": "NON_FINAL_FOR_CORRECTED_CONTRACT_PROVENANCE_ONLY",
+      "reason": "Development comparison belongs to old upstream contracts and checkpoint.",
+      "exists": true
+    }
+  ],
+  "preserve_all": true,
+  "delete_or_overwrite": false,
+  "existing_findings_remain_valid_for_old_contract": true,
+  "routing_probability_status": "NO",
+  "FedAvg": {
+    "CE": 0.53856,
+    "Brier": 0.245881
+  },
+  "training_prior": {
+    "CE": 0.352059,
+    "Brier": 0.117621
+  },
+  "routing_tuning_permitted": false,
+  "regeneration_gate": "Resolve acceptance first, bundle acceptance and hard dispatch-price correction, validate upstream once, then authorize regenerated downstream artifacts. Nothing launched."
+}
