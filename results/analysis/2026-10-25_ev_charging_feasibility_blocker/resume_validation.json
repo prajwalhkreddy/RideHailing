@@ -1,0 +1,16 @@
+{
+  "EV_CHARGING_FEASIBILITY_BLOCKER_RESOLVED": "NO",
+  "PROJECT_CONFIG_DECISION_REQUIRED": "YES",
+  "preserved_slots": 680,
+  "timestamp": "2026-03-15 04:00:00",
+  "experiences": 3077890,
+  "diagnostic_attempted_slots": 1,
+  "new_committed_slots": 0,
+  "checkpoint_unchanged": true,
+  "committed_partitions_touched": false,
+  "new_experiences_persisted": 0,
+  "duplicate_experiences_created": 0,
+  "fleet": 5000,
+  "training": false,
+  "bounded_resume": "NOT RUN: methodology decision required"
+}

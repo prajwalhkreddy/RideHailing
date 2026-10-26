@@ -1,0 +1,74 @@
+{
+  "status": "FROZEN_PROJECT_CONFIGURATION",
+  "start": "2026-03-01 00:00",
+  "last_slot": "2026-03-15 23:30",
+  "completion_boundary": "2026-03-16 00:00",
+  "slots": 720,
+  "grid_count": 142,
+  "raster": [
+    16,
+    16
+  ],
+  "pricing_architecture": [
+    13,
+    64,
+    64,
+    7
+  ],
+  "routing_architecture": [
+    169,
+    64,
+    32,
+    9
+  ],
+  "routing_checkpoint": "/Users/prajwalhk/Keerthi/Implementation/models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras",
+  "routing_training": false,
+  "pricing": {
+    "gamma": 0.99,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "replay_capacity": 100000,
+    "minimum_replay_size": 1000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 50000,
+    "soft_target_tau": 0.005,
+    "seed": 42
+  },
+  "optimizer": "Adam",
+  "loss": "Huber",
+  "algorithm": "standard DQN, not Double DQN",
+  "features": [
+    "J_hat",
+    "J_disp_previous",
+    "I_incoming",
+    "p_STAY",
+    "p_N",
+    "p_NE",
+    "p_E",
+    "p_SE",
+    "p_S",
+    "p_SW",
+    "p_W",
+    "p_NW",
+    "destination_popularity"
+  ],
+  "normalization": "identity",
+  "actions": [
+    0.85,
+    0.9,
+    0.95,
+    1.0,
+    1.05,
+    1.1,
+    1.15
+  ],
+  "acceptance": "behavioural_E_threshold",
+  "reward": "gross accepted and successfully assigned fare at assignment time",
+  "transition": "one transition per observed origin/destination pair per main 30-minute slot; one action reused within that OD/slot; summed successful assignment fares",
+  "training_cadence": "one train_step per main slot; no update before replay >=1000",
+  "terminal_transition": "done=True at slot719; reuses current state as ignored terminal next-state, without loading March16 data",
+  "model_selection": "final chronological slot720 checkpoint, not later evaluation performance",
+  "routing_effectiveness_concern": true,
+  "checkpoint_every_slots": 8
+}

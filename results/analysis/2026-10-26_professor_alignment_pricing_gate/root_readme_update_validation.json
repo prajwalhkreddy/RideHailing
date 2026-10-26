@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "modified_or_added_links": [
+    {
+      "link": "data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl",
+      "exists": true
+    },
+    {
+      "link": "models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/checkpoint_0720_a79095b4/",
+      "exists": true
+    },
+    {
+      "link": "models/routing_policy/jan_mar_2026_3km_169x64x32x9/best.keras",
+      "exists": true
+    },
+    {
+      "link": "models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-20_final_routing_policy/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-21_final_temporal_protocol/training_input_availability.json",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-21_first_short_hierarchical_dqn_episode/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-21_hierarchical_runner_migration/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-21_passenger_arrival_boundary_fix/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-21_simulator_derived_routing_policy/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-25_ev_station_reachability_contract/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-25_final_nonprivate_pricing_training/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-25_final_simulator_routing_training/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-26_pricing_training_adequacy/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-26_professor_alignment_pricing_gate/README.md",
+      "exists": true
+    },
+    {
+      "link": "results/analysis/2026-10-26_professor_alignment_pricing_gate/routing_probability_adequacy.json",
+      "exists": true
+    }
+  ],
+  "explicit_current_paths": [
+    {
+      "path": "models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/checkpoint_0720_a79095b4",
+      "exists": true
+    },
+    {
+      "path": "models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras",
+      "exists": true
+    },
+    {
+      "path": "data/processed/routing_experiences_mar01_mar15_2026_reachability",
+      "exists": true
+    }
+  ],
+  "numbered_structure_preserved": true,
+  "scope": "Only relevant active status, status table, routing/acceptance/run summaries, professor gate, execution guidance, artifact status and roadmap changed; legacy historical section retained.",
+  "external_links_crawled": false,
+  "training_executed": false,
+  "protected_evaluation_accessed": false
+}

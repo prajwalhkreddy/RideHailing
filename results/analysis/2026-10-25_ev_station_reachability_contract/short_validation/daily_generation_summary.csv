@@ -1,0 +1,2 @@
+day,slots_completed,requests,accepted,rejected,assignments,accepted_unmatched,routing_decisions,charging_decisions,experiences,REPOSITION,EV_CHARGING_NEXT_HOP,fleet_count
+2026-03-01,2,6797,1009,5788,957,52,9077,0,9077,9077,0,5000

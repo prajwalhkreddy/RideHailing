@@ -1,0 +1,11 @@
+{
+  "train_start": "2026-03-01 00:00",
+  "train_end": "2026-03-12 23:30",
+  "train_slots": 576,
+  "train_experiences": 2618033,
+  "validation_start": "2026-03-13 00:00",
+  "validation_end": "2026-03-15 23:30",
+  "validation_slots": 144,
+  "validation_experiences": 639807,
+  "random_split": false
+}

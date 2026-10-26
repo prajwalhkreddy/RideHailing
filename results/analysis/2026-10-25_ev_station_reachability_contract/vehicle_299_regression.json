@@ -1,0 +1,10 @@
+{
+  "vehicle_id": 299,
+  "observed_remaining_kwh": 1.7248694329320955,
+  "destination": 104,
+  "station_reserve_kwh": 3.1819805153394634,
+  "eligible": false,
+  "result": "PASS",
+  "historical_checkpoint_changed": false,
+  "limitation": "Historical exact trip energy unavailable; unit regression uses an explicitly synthetic movement-energy decomposition yielding the documented observed residual."
+}

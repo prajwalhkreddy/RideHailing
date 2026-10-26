@@ -1,0 +1,18 @@
+{
+  "name": "EV_POST_MOVEMENT_STATION_REACHABILITY",
+  "classification": "PROJECT_PHYSICAL_FEASIBILITY_CONSTRAINT",
+  "manuscript_derived": false,
+  "rule": "E_current - E_movement >= min_station_route_energy(destination)",
+  "units": "kWh",
+  "distance_model": "existing shortest path over metric nine-action topology",
+  "consumption_kwh_per_km": 0.15,
+  "safety_margin": 0,
+  "equality_allowed": true,
+  "station_grid_reserve": 0,
+  "charging_trigger_kwh": 15,
+  "H_i_max_minutes": 10,
+  "U3": "1-exp(-H_i_max/H_hat)",
+  "charging_navigation": "UNCHANGED_TIMED_MULTIHOP",
+  "reposition": "infeasible candidates excluded before utility argmax; canonical nine-action topology/state masks unchanged",
+  "passenger": "final FCFS eligibility; no passenger acceptance change"
+}

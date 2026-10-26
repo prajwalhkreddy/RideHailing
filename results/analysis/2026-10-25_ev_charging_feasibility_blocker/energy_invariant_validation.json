@@ -1,0 +1,16 @@
+{
+  "existing_passenger_rule": "IDLE, energy>15, energy>=passenger trip consumption; no station-reserve condition",
+  "existing_reposition_rule": "next-edge consumption<=available energy; no post-hop station reserve",
+  "existing_charging_rule": "full shortest-path consumption<=available energy; each subsequent hop also checked",
+  "all_station_candidates": 15,
+  "reachable_candidates": 0,
+  "unit_conversion_check": "PASS: metres/1000 *0.15 kWh/km",
+  "fail_closed_reproduction": "PASS: impossible state raises unchanged exception",
+  "checkpoint_hash_check": "PASS",
+  "no_teleportation": true,
+  "negative_energy_observed": false,
+  "fleet_in_checkpoint": 5000,
+  "new_reserve_rule_adopted": false,
+  "decision_required": "Decide post-passenger and discretionary-reposition charging-reachability/reserve criteria, reserve margin/trigger interaction, and treatment of already-stranded committed EVs. A prospective rule alone cannot repair vehicle299 in the preserved checkpoint.",
+  "focused_regression_suite": "NOT RUN: no implementation correction authorized; stop-on-methodology gate reached"
+}

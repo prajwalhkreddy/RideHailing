@@ -1,0 +1,19 @@
+{
+  "UNATTENDED_ROUTING_GENERATION_READY": "YES",
+  "initial_slots": 287,
+  "final_slots": 295,
+  "validation_slots": 8,
+  "timestamp": "2026-03-07 03:30:00",
+  "experiences": 1338429,
+  "new_experiences": 36541,
+  "original_partitions_unchanged": true,
+  "duplicate_experiences": 0,
+  "fleet": 5000,
+  "state_mask_label_checks": "PASS",
+  "operational_state": "FINITE",
+  "safe_SIGTERM": "PASS at slot288",
+  "detached_resume": "PASS slots288 through294; no supervising session",
+  "focused_tests_passed": 5,
+  "full_job_launched": false,
+  "checkpoint_frequency_slots": 8
+}

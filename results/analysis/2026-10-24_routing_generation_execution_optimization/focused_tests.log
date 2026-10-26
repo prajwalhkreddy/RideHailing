@@ -1,0 +1,14 @@
+{"event": "RESUME", "timestamp": "2026-03-01 23:30:00", "slots_completed": 0, "experiences": 0, "checkpoint_path": "/var/folders/ks/zx55ck690yzct8xpxz06zwl40000gn/T/tmpoeu9l564/data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl"}
+{"status": "RUNNING", "completed_slots": 1, "timestamp": "2026-03-02 00:00:00", "experiences": 1, "fleet_count": 5000, "checkpoint_path": "data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl", "checkpoint_every_slots": 8, "pricing_replay": 0, "pricing_optimizer_updates": 0, "requests": 1, "assignments": 1}
+{"status": "PAUSED_AT_REQUESTED_BOUNDARY", "completed_slots": 3, "timestamp": "2026-03-02 01:00:00", "experiences": 3, "fleet_count": 5000, "checkpoint_path": "data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl", "checkpoint_every_slots": 8, "pricing_replay": 0, "pricing_optimizer_updates": 0, "requests": 3, "assignments": 3}
+.{"event": "RESUME", "timestamp": "2026-03-01 00:00:00", "slots_completed": 0, "experiences": 0, "checkpoint_path": "/var/folders/ks/zx55ck690yzct8xpxz06zwl40000gn/T/tmptjlccwxm/data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl"}
+{"status": "BLOCKED", "completed_slots": 0, "timestamp": "2026-03-01 00:00:00", "experiences": 0, "last_valid_checkpoint": "/var/folders/ks/zx55ck690yzct8xpxz06zwl40000gn/T/tmptjlccwxm/data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl", "error": "ValueError: Uncommitted partition differs on replay: slot_0000.parquet"}
+.{"event": "RESUME", "timestamp": "2026-03-01 00:00:00", "slots_completed": 0, "experiences": 0, "checkpoint_path": "/var/folders/ks/zx55ck690yzct8xpxz06zwl40000gn/T/tmp928xmcur/data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl"}
+{"status": "RUNNING", "completed_slots": 8, "timestamp": "2026-03-01 04:00:00", "experiences": 8, "fleet_count": 5000, "checkpoint_path": "data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl", "checkpoint_every_slots": 8, "pricing_replay": 0, "pricing_optimizer_updates": 0, "requests": 8, "assignments": 8}
+{"status": "RUNNING", "completed_slots": 16, "timestamp": "2026-03-01 08:00:00", "experiences": 16, "fleet_count": 5000, "checkpoint_path": "data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl", "checkpoint_every_slots": 8, "pricing_replay": 0, "pricing_optimizer_updates": 0, "requests": 16, "assignments": 16}
+{"status": "PAUSED_AT_REQUESTED_BOUNDARY", "completed_slots": 17, "timestamp": "2026-03-01 08:30:00", "experiences": 17, "fleet_count": 5000, "checkpoint_path": "data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl", "checkpoint_every_slots": 8, "pricing_replay": 0, "pricing_optimizer_updates": 0, "requests": 17, "assignments": 17}
+...
+----------------------------------------------------------------------
+Ran 5 tests in 0.182s
+
+OK

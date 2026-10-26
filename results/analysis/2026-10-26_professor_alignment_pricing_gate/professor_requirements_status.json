@@ -1,0 +1,77 @@
+{
+  "requirements": [
+    {
+      "requirement": "Passenger elasticity sampling",
+      "status": "VERIFIED",
+      "evidence": "Active legacy positive truncated Normal, weather/half-hour calibration; not the two analytical scenario distributions. Source alignment remains open."
+    },
+    {
+      "requirement": "Acceptance equation",
+      "status": "VERIFICATION_REQUIRED",
+      "evidence": "Active equation tested; exact professor/paper equation not established."
+    },
+    {
+      "requirement": "P_base multiplier",
+      "status": "VERIFICATION_REQUIRED",
+      "evidence": "Multiplier is present and dimensionally correct in active code; source/calibration orientation unresolved."
+    },
+    {
+      "requirement": "Passenger rejection vs dispatch failure",
+      "status": "VERIFIED",
+      "evidence": "Completed-run accounting identities pass; categories remain distinct."
+    },
+    {
+      "requirement": "P_disp >= P_i_min",
+      "status": "IMPLEMENTATION_REQUIRED",
+      "evidence": "Absent from active FCFS eligibility, independent of U1."
+    },
+    {
+      "requirement": "13D DQN state / incoming supply",
+      "status": "VERIFIED",
+      "evidence": "Exact ordered13 features; commitments strictly before t, arrivals in(t,t+30min]."
+    },
+    {
+      "requirement": "Routing utilities / EWMA",
+      "status": "VERIFICATION_REQUIRED",
+      "evidence": "Existing frozen formulas/reports preserved; no new numerical revalidation in this narrow gate."
+    },
+    {
+      "requirement": "FL aggregation",
+      "status": "VERIFIED",
+      "evidence": "Existing final training report verifies five driver-client sample-weighted rounds, zero-client exclusion and reload; no new FL executed."
+    },
+    {
+      "requirement": "Routing convergence/probabilities",
+      "status": "KNOWN_LIMITATION",
+      "evidence": "FedAvg worse than masked training-action prior on held-out CE/Brier; informative=NO."
+    },
+    {
+      "requirement": "Pricing convergence",
+      "status": "KNOWN_LIMITATION",
+      "evidence": "718 updates; schedule mismatch; two-hour development advantage is not convergence."
+    },
+    {
+      "requirement": "Non-private baseline before DP",
+      "status": "VERIFICATION_REQUIRED",
+      "evidence": "Completed run retained but NOT_FINAL_NONPRIVATE_BASELINE; resolve prerequisites before corrected retrain."
+    },
+    {
+      "requirement": "DP mechanism",
+      "status": "FUTURE_PHASE",
+      "evidence": "Specify clipping, noise, epsilon_DP, delta_DP, accounting and privacy\u2013utility trade-off after validated non-private baseline."
+    },
+    {
+      "requirement": "Consistent evaluation periods/metrics",
+      "status": "VERIFIED",
+      "evidence": "Jan\u2013Feb CNN train; Mar1\u201315 RL; Mar16 development; Mar17\u201331 protected. Development results not final evaluation."
+    }
+  ],
+  "gate_check_complete": true,
+  "READY_FOR_CORRECTED_PRICING_RETRAIN": false,
+  "blockers": [
+    "Acceptance source equation and relationship between calibration E and acceptance E remain unverified.",
+    "Active FCFS dispatch lacks hard P_disp >= P_i_min eligibility.",
+    "FedAvg probabilities fail held-out adequacy against the masked training-label prior."
+  ],
+  "training_and_protected_evaluation_executed": false
+}

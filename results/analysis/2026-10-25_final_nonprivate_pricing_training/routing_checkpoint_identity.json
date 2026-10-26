@@ -1,0 +1,7 @@
+{
+  "path": "/Users/prajwalhk/Keerthi/Implementation/models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras",
+  "sha256": "e82601fd5bfdf29ba85b54d2dfc3fa2b00a70779bda00a765575f0f89f482e0a",
+  "status": "SIMULATOR_DERIVED_ROUTING_BASELINE",
+  "ROUTING_EFFECTIVENESS_CONCERN": "YES",
+  "inference_only": true
+}

@@ -1,0 +1,68 @@
+{
+  "error": "No energy-feasible destination; no teleport fallback.",
+  "clock": "2026-03-15 04:30:00",
+  "slot_start": "2026-03-15 04:00:00",
+  "vehicle_id": 299,
+  "vehicle": {
+    "vehicle_id": 299,
+    "current_grid": 104,
+    "trip_status": "IDLE",
+    "destination": null,
+    "remaining_travel_time": 0,
+    "current_action": "idle",
+    "energy_level": 1.7248694329320955,
+    "idle_wait_minutes": 3.716666666677127,
+    "idle_wait_grid": 104
+  },
+  "energy_parameters": {
+    "battery_capacity_kwh": 75.0,
+    "initial_energy_kwh": 60.0,
+    "minimum_energy_kwh": 7.5,
+    "consumption_rate_kwh_per_km": 0.15,
+    "charging_power_kw": 30.0,
+    "charging_efficiency": 0.9,
+    "charging_release_energy_kwh": 75.0,
+    "mean_initial_soc": 0.5,
+    "initial_soc_std": 0.05,
+    "initial_soc_min": 0.5,
+    "initial_soc_max": 0.7,
+    "charging_trigger_soc": 0.2
+  },
+  "decide_inputs": {
+    "grid": 104,
+    "energy_kwh": 1.7248694329320955,
+    "minimum_energy_kwh": 15.0,
+    "p_min": 24.878820824959423,
+    "w_max_minutes": 2.7767681621499865,
+    "h_max_minutes": 10.0,
+    "energy_per_km": 0.15
+  },
+  "initial": {
+    "grid": 74,
+    "energy": 1.7248694329320955,
+    "status": "VehicleStatus.BUSY",
+    "destination": 104
+  },
+  "trace": [],
+  "checkpoint_sha256": "f57b74fabd43bc2bcaf16e06ce6dd213bc7be491a1fd7d0895ef3eb8b5bf41f2",
+  "primary_root_cause": "E",
+  "classification": "Passenger assignment permitted without post-trip charging-reachability reserve",
+  "implementation_defect_proven": false,
+  "PROJECT_CONFIG_DECISION_REQUIRED": true,
+  "nearest_station": {
+    "station_id": "0",
+    "grid": "37",
+    "path": "104>89>74>62>48>37",
+    "distance_metres": "21213.203435596424",
+    "required_kwh": "3.1819805153394634",
+    "available_kwh": "1.7248694329320955",
+    "residual_kwh": "-1.4571110824073679",
+    "feasible": "False",
+    "reason": "insufficient route energy"
+  },
+  "charging_trigger_kwh": 15,
+  "configured_reference_minimum_kwh": 7.5,
+  "minimum_distinction": "Active trigger is battery75 * SOC0.2=15; reference minimum7.5 is not the threshold passed to decide.",
+  "checkpoint_unchanged": true,
+  "prior_action_provenance_limit": "Checkpoint stores commitment timestamps/destination, aggregate ledger and post-deduction energy; it does not persist request distance or pre-assignment energy. No earlier slot was replayed."
+}

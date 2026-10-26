@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "features": [
+    "J_hat",
+    "J_disp_previous",
+    "I_incoming",
+    "p_STAY",
+    "p_N",
+    "p_NE",
+    "p_E",
+    "p_SE",
+    "p_S",
+    "p_SW",
+    "p_W",
+    "p_NW",
+    "destination_popularity"
+  ],
+  "professor_mapping": [
+    "predicted demand",
+    "previous successful dispatch",
+    "known incoming passenger supply",
+    "nine routing probabilities",
+    "destination popularity"
+  ],
+  "incoming_causal": true,
+  "incoming_rule": "commitment made strictly before t; dropoff in(t,t+30min]; no future assignments or generic reposition/charging supply",
+  "future_commitment_rejected": true,
+  "normalized_masked_nine_probabilities": true
+}

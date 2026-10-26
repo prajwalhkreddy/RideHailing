@@ -47,14 +47,15 @@ def validate_driver_profiles(profiles, vehicle_ids):
     return profiles
 
 class ProductionExperiment:
-    def __init__(self,root=ROOT,*,seed=42,fleet_size=5000,start='2026-03-16 00:00',fleet=None,driver_profiles=None,dqn_checkpoint=None):
+    def __init__(self,root=ROOT,*,seed=42,fleet_size=5000,start='2026-03-16 00:00',fleet=None,driver_profiles=None,dqn_checkpoint=None,routing_checkpoint=None,frozen_routing=False):
         self.root=Path(root).resolve()
+        self.frozen_routing=bool(frozen_routing)
         if self.root!=ROOT:raise ValueError('Final configured interfaces require the active project root.')
         self.config=yaml.safe_load((self.root/'config/config.yaml').read_text());self.timestamp=pd.Timestamp(start);self.clock=self.timestamp
         if self.timestamp.tz is not None or self.timestamp!=self.timestamp.floor('30min'):raise ValueError('Aligned timezone-naive start required.')
         meta=json.loads((self.root/'data/processed/grid_metadata.json').read_text());validate_final_contract(meta)
         base=self.root/'data/processed/spatial_3km_jan_mar_2026';self.base=base
-        required=[self.root/'data/processed/grid_lookup.parquet',base/'neighbour_map.parquet',base/'charging_stations.parquet',self.root/'models/routing_policy/jan_mar_2026_3km_169x64x32x9/best.keras',self.root/'results/analysis/2026-10-19_operational_grid_state/dqn_ready_forecasts.parquet']
+        required=[self.root/'data/processed/grid_lookup.parquet',base/'neighbour_map.parquet',base/'charging_stations.parquet',Path(routing_checkpoint) if routing_checkpoint is not None else self.root/'models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras',self.root/'results/analysis/2026-10-19_operational_grid_state/dqn_ready_forecasts.parquet']
         for path in required:
             if not path.is_file():raise FileNotFoundError(f'Missing final production component: {path}')
         self.grid=gpd.read_parquet(required[0]);self.neighbours=pd.read_parquet(required[1]);station_defs=pd.read_parquet(required[2])
@@ -71,6 +72,8 @@ class ProductionExperiment:
         validate_fleet(self.fleet.vehicles,range(142),self.fleet_size)
         profiles=driver_profiles if driver_profiles is not None else pd.read_parquet(self.root/'data/processed/driver_preferences_seed42.parquet')
         profiles=validate_driver_profiles(profiles,[v.vehicle_id for v in self.fleet.vehicles])
+        self.reserve_assignment_rejections=0
+        self.reserve_rejected_request_ids=set()
         self.profiles=profiles.set_index('vehicle_id')
         centroids={int(r.GridID):(float(r.CentroidX),float(r.CentroidY)) for r in self.grid.itertuples()}
         self.charging=TimedChargingInfrastructure(stations_from_definition(station_defs,self.config['charging']['station_max_power_kw'],self.energy.charging_power_kw),centroids,random_seed=seed)
@@ -171,10 +174,18 @@ class ProductionExperiment:
             for vid in arrivals:
                 v=self.fleet.vehicle(vid)
                 if v.trip_status is not VehicleStatus.IDLE or v.current_grid!=prior_dest[vid]:raise ValueError('Arrival location/status mismatch.')
+                if vid not in self.missions and v.energy_level < self.station_reserve(v.current_grid):raise ValueError('Post-movement station reachability violated.')
                 if vid in self.passengers:self.passengers.pop(vid);completed+=1
                 if vid in self.missions:self._continue_charging(v)
             validate_fleet(self.fleet.vehicles,range(142),self.fleet_size)
         return completed
+
+    def station_reserve(self, grid):
+        return self.routing.minimum_station_energy(grid,self.energy.consumption_rate_kwh_per_km)
+
+    def record_reserve_rejection(self, request, vehicle):
+        self.reserve_assignment_rejections+=1
+        self.reserve_rejected_request_ids.add(request.request_id)
 
     def route_idle(self):
         counts=np.zeros(9,int);charging=0
@@ -185,8 +196,9 @@ class ProductionExperiment:
             decision=self.routing.decide(self.operational,self.timestamp,grid=g,energy_kwh=v.energy_level,minimum_energy_kwh=self.energy.battery_capacity_kwh*self.energy.charging_trigger_soc,p_min=profile.price_preference,w_max_minutes=profile.wait_preference,h_max_minutes=profile.charging_wait_preference_minutes,energy_per_km=self.energy.consumption_rate_kwh_per_km)
             label=self.routing.label(decision,g);counts[label]+=1
             observation=LocalPolicyObservation(s.values,label,s.mask,slot_id=self.slot_index)
-            self.routing_experiences.append(observation)
-            self.routing_experiences_by_vehicle.setdefault(v.vehicle_id,[]).append(observation)
+            if not getattr(self,'frozen_routing',False):
+                self.routing_experiences.append(observation)
+                self.routing_experiences_by_vehicle.setdefault(v.vehicle_id,[]).append(observation)
             if decision.branch=='CHARGING':
                 charging+=1;self.missions[v.vehicle_id]=decision.station_id;self._continue_charging(v)
             else:
@@ -196,12 +208,13 @@ class ProductionExperiment:
 
     def run_slot(self,requests=None,*,terminal=False,train_dqn=False,routing_updates=(),routing_data_generation=False):
         t=self.timestamp;end=t+pd.Timedelta(minutes=30)
+        if getattr(self,'frozen_routing',False) and routing_updates:raise ValueError('Frozen inference-only routing rejects updates.')
         if routing_data_generation:
             assert_training_update_allowed(t)
             if train_dqn or routing_updates:raise ValueError('Routing generation freezes pricing and routing weights.')
         if train_dqn or routing_updates:assert_training_update_allowed(t)
         if self.clock!=t:raise ValueError('Slot/clock mismatch.')
-        if not (routing_data_generation and terminal):
+        if not terminal:
             artifact_snapshots(end)  # No out-of-period terminal source for routing-only generation.
         requests=self.requests_for_slot() if requests is None else list(requests)
         if len({r.request_id for r in requests})!=len(requests):raise ValueError('Duplicate request IDs.')
@@ -223,7 +236,7 @@ class ProductionExperiment:
                 r.validate(range(142),15)
                 if response.accepted:
                     accepted+=1
-                    dispatch_requests([r],self.fleet,self.lookup,2,15,energy_parameters=self.energy,dispatch_model=DISPATCH_MODEL_LEGACY,slot_start_time=t.to_pydatetime())
+                    dispatch_requests([r],self.fleet,self.lookup,2,15,energy_parameters=self.energy,dispatch_model=DISPATCH_MODEL_LEGACY,slot_start_time=t.to_pydatetime(),station_reserve=self.station_reserve,reserve_observer=self.record_reserve_rejection)
                     if r.status is RequestStatus.ASSIGNED:
                         if r.assigned_vehicle_id in self.passengers or r.assigned_vehicle_id in self.missions:raise ValueError('Conflicting assignment.')
                         commitment=passenger_commitment(r,t)
@@ -237,16 +250,16 @@ class ProductionExperiment:
         if not np.isclose(reward,sum(od_rewards.values()),rtol=1e-12):raise ValueError('Reward reconciliation failed.')
         routing_counts,charging_decisions=self.route_idle()
         self.operational.complete_slot(slot_start=t,completed_at=end,requests=requests,charging_waits=charging_grid_observations(self.charging))
-        federation=aggregate_policy_updates(routing_updates,round_index=self.slot_index)
-        if federation.updated:self.policy.set_weights(federation.weights)
+        federation=None if getattr(self,'frozen_routing',False) else aggregate_policy_updates(routing_updates,round_index=self.slot_index)
+        if federation is not None and federation.updated:self.policy.set_weights(federation.weights)
         self.timestamp=end;self.slot_index+=1
-        if not (routing_data_generation and terminal):self.current_states=self._state_sources()
+        if not terminal:self.current_states=self._state_sources()
         replay_before=len(self.dqn.replay)
         if not routing_data_generation and training_update_allowed(t):
-            for key,action in selected.items():self.dqn.store(states[key],action.action_index,od_rewards[key],self.current_states.build(*key,end),terminal)
+            for key,action in selected.items():self.dqn.store(states[key],action.action_index,od_rewards[key],states[key] if terminal else self.current_states.build(*key,end),terminal)
         training=self.dqn.train_step() if train_dqn else None
         validate_fleet(self.fleet.vehicles,range(142),self.fleet_size)
-        report=dict(timestamp=str(t),requests=len(requests),accepted=accepted,rejected=len(requests)-accepted,assigned=assigned,unmatched=accepted-assigned,reward=reward,completed=completed,transitions=len(self.dqn.replay)-replay_before,replay_size=len(self.dqn.replay),routing_actions=routing_counts.tolist(),charging_decisions=charging_decisions,fleet_size=self.fleet_size,unsupported_forecast_demand=sum(self.unsupported_demand.values()),federated_updates=federation.metadata.participating_updates,training=training,terminal=terminal)
+        report=dict(timestamp=str(t),requests=len(requests),accepted=accepted,rejected=len(requests)-accepted,assigned=assigned,unmatched=accepted-assigned,reward=reward,completed=completed,transitions=len(selected) if not routing_data_generation and training_update_allowed(t) else 0,replay_size=len(self.dqn.replay),routing_actions=routing_counts.tolist(),charging_decisions=charging_decisions,fleet_size=self.fleet_size,unsupported_forecast_demand=sum(self.unsupported_demand.values()),pricing_action_counts=np.bincount([a.action_index for a in selected.values()],minlength=7).tolist(),federated_updates=0 if federation is None else federation.metadata.participating_updates,training=training,terminal=terminal)
         self.reports.append(report);return report
 
     def run(self,slot_count,*,train_dqn=False):

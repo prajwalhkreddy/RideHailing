@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "requests": 1705916,
+  "accepted": 536483,
+  "rejected": 1169433,
+  "assignments": 395492,
+  "unmatched": 140991,
+  "revenue": 7490773.984343884,
+  "replay_transitions": 288181,
+  "optimizer_updates": 718,
+  "epsilon": 0.986358,
+  "distinction": "Rejected: passenger says no. Unmatched: accepted but not successfully dispatched. Reward recognizes accepted and assigned fares only."
+}

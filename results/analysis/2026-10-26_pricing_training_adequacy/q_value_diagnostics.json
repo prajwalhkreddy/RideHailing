@@ -1,0 +1,38 @@
+{
+  "sample_N": 10000,
+  "sampling": "10000 evenly spaced stored current states in final chronological 100000-transition replay; preserves frequency, no deduplication; not a uniform sample of all training history",
+  "replay_start_slot": 508,
+  "replay_start_timestamp": "2026-03-11 14:00:00",
+  "finite_Q": true,
+  "raw_Q_min": 3.8690850734710693,
+  "raw_Q_mean": 81.00032043457031,
+  "raw_Q_max": 566.6965942382812,
+  "absolute_Q_min": 3.8690850734710693,
+  "absolute_Q_mean": 81.00032043457031,
+  "absolute_Q_max": 566.6965942382812,
+  "mean_action_Q_spread": 17.71118927001953,
+  "mean_top1_top2_gap": 2.4194536209106445,
+  "greedy_action_counts": [
+    4295,
+    5705,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "greedy_action_percentages": [
+    42.95,
+    57.05,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "never_selected_count": 5,
+  "largest_greedy_share": 0.5705,
+  "near_tie_fraction": 0.1952,
+  "near_tie_definition": "top1-top2 <= 0.01*max(1,abs(top1),abs(top2)); descriptive threshold only",
+  "checkpoint_reload_predictions_exact": true
+}

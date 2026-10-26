@@ -1,0 +1,19 @@
+{
+  "EV_STATION_REACHABILITY_CONTRACT_READY": "YES",
+  "focused_tests_passed": 28,
+  "focused_tests_failed": 0,
+  "clean_slots": 2,
+  "through": "2026-03-01 01:00:00",
+  "experiences": 9077,
+  "reserve_candidate_assignment_rejections": 0,
+  "requests_with_reserve_rejection": 0,
+  "reposition_actions_rejected": 0,
+  "stranded_events": 0,
+  "negative_energy": 0,
+  "fleet": 5000,
+  "duplicate_experiences": 0,
+  "state_mask_labels": "PASS",
+  "old_checkpoint_unchanged": true,
+  "old_partitions_not_written": true,
+  "full_generation_launched": false
+}

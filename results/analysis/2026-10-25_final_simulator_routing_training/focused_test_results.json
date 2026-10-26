@@ -1,0 +1,11 @@
+{
+  "passed": 11,
+  "failed": 0,
+  "framework": "unittest",
+  "tests": [
+    "tests/test_final_reachability_routing_training.py",
+    "tests/test_routing_federated.py"
+  ],
+  "central_checkpoint_sha256": "bf4057014383137b1bd165cab5c62ac459ab6332f4365b2c24153ce28e2e3d91",
+  "selected_checkpoint_sha256": "e82601fd5bfdf29ba85b54d2dfc3fa2b00a70779bda00a765575f0f89f482e0a"
+}

@@ -1,0 +1,8 @@
+{
+  "run_id": "FINAL_REACHABILITY_ROUTING_GENERATION",
+  "data_path": "data/processed/routing_experiences_mar01_mar15_2026_reachability",
+  "start": "2026-03-01 00:00:00",
+  "target_slots": 720,
+  "old_checkpoint_preserved": true,
+  "initial_namespace_empty": true
+}

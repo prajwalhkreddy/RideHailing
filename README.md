@@ -1,22 +1,20 @@
 # Ride-Hailing Platform Simulation
 
-## Active project status — 21 October 2026
+## Active project status — 26 October 2026
 
-The active foundation is **true 3,000 m × 3,000 m, EPSG:32118, 142 valid grids, 16×16 raster and nine routing actions**. Jan–Mar data, the epoch-200 CNN, final operational/routing/pricing interfaces, persisted driver calibration and a four-slot hierarchical integration episode are complete. **Final simulator-derived routing training and final learned pricing performance are not complete.** Current work is paused routing-experience collection, not a running training job.
+Final clean routing generation, central routing training and five-round plain FedAvg are complete. March1–15 pricing training also completed, but is **COMPLETED_PRICING_TRAINING_RUN / TRAINING_SCHEDULE_MISMATCH / NOT_FINAL_NONPRIVATE_BASELINE**. It is not an active unattended run or a validated final baseline.
 
 ### Current Resume Point
 
-| Item | Verified state |
-| --- | --- |
-| Task | Complete March 1–15 simulator-derived routing experiences |
-| Committed | **6 / 720 slots**, March 1 00:00–03:00 |
-| Experiences | **27,009**, unique and valid; **22,439** appended after the boundary fix |
-| Remaining | **714 slots** |
-| Latest resume checkpoint | [generation_checkpoint.pkl](data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl) |
-| Collection state | [PAUSED_AT_REQUESTED_BOUNDARY](results/analysis/2026-10-21_simulator_derived_routing_policy/generation_status.json) |
-| Integrity evidence | [Checkpoint/slot hashes](results/analysis/2026-10-21_passenger_arrival_boundary_fix/checkpoint_integrity.json) |
+Professor-alignment checks are complete; **READY_FOR_CORRECTED_PRICING_RETRAIN = NO**. Resolve the acceptance-source/calibration equation, missing hard driver-price eligibility and failed routing-probability adequacy gate. **ROUTING_PROBABILITIES_INFORMATIVE = NO** versus the masked training-action prior. The proposed one-update-per-five-transition cadence remains conditional and unimplemented; corrected pricing retrain **NOT YET RUN**. March17–31 remains untouched by RL training/development tasks and protected for final evaluation. Privacy/DP remains future work.
 
-Resume this checkpoint; **do not regenerate committed slots**. The preserved `generation_checkpoint_before_boundary_fix.pkl` is historical 00:30 evidence, not the current resume point. Do not train routing/FedAvg until all 720 slots are committed and validated. Section 10 contains the verified resume command. Nothing was simulated or trained for this README update.
+- [Professor-alignment gate](results/analysis/2026-10-26_professor_alignment_pricing_gate/README.md).
+- [Completed routing training](results/analysis/2026-10-25_final_simulator_routing_training/README.md).
+- [Completed pricing launch/run record](results/analysis/2026-10-25_final_nonprivate_pricing_training/README.md); its initial launch status is historical, not current liveness.
+- [Pricing adequacy diagnosis](results/analysis/2026-10-26_pricing_training_adequacy/README.md).
+- Preserved completed pricing checkpoint: `models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/checkpoint_0720_a79095b4`.
+
+Do not resume the completed run as corrected training, reuse the March16 integration checkpoint, or enter protected evaluation before resolving the gate. Current status here supersedes historical milestones below.
 
 ## 1. Project overview
 
@@ -36,13 +34,13 @@ NB1–NB13 implementation history remains useful provenance. Legacy January-only
 | Fleet, empirical requests, FCFS dispatch | IMPLEMENTED / INTEGRATION VALIDATED | 5,000 vehicles; intact January empirical trip sampling driven by forecasts |
 | Operational grid state | FROZEN / VALIDATED | Causal mu, sigma, F_hat, H_hat |
 | Driver/EV utilities and timed charging | IMPLEMENTED / VALIDATED | Nine actions, multihop charging, no teleportation |
-| Routing architecture and plain FedAvg | IMPLEMENTED | 169→64→32→9; current checkpoint synthetic/provisional |
+| Routing architecture and plain FedAvg | IMPLEMENTED | 169→64→32→9; selected real-data FedAvg; probability adequacy fails |
 | Pricing contract and DQN | IMPLEMENTED / VALIDATED | Identity-normalized 13D state; seven actions |
 | Final hierarchical runner | STARTUP / SHORT EPISODE VALIDATED | Public final interfaces; legacy runner isolated |
 | March-16 four-slot episode | COMPLETE, INTEGRATION ONLY | One optimizer update; checkpoint quarantined |
 | Passenger-arrival boundary correction | COMPLETE / VALIDATED | Absolute-time completion selection; 9 focused tests |
-| Simulator-derived routing collection | IN PROGRESS, PAUSED | 6/720 slots; 27,009 experiences |
-| Final routing/FedAvg and pricing training | PENDING | No final learned-performance claim |
+| Simulator-derived routing collection | COMPLETE | 720/720 slots; 3,257,840 clean reachability experiences |
+| Routing/FedAvg and pricing training | COMPLETED RUNS / LIMITATIONS | Routing probability gate fails; pricing schedule mismatch; no final baseline |
 | Protected hierarchical evaluation | PENDING | March 17–31, no updates |
 | Privacy, security, robustness and final ablations | PENDING | Not implied by plain single-process FedAvg |
 
@@ -74,8 +72,8 @@ models/demand/          Legacy NB5 provenance
 models/cnn/             Final 3-km CNN checkpoints
 models/routing/         Frozen NB12/NB13 common initialization and metadata
 models/pricing/         Legacy pricing artifacts
-models/pricing_dqn/     Fixture/integration pricing checkpoints
-models/routing_policy/ Final-interface provisional routing checkpoint
+models/pricing_dqn/     Preserved fixtures and completed schedule-mismatched pricing run
+models/routing_policy/ Selected simulator-derived FedAvg and legacy checkpoints
 outputs/figures/        NB5 figures
 outputs/metrics/        Reserved metrics outputs
 outputs/logs/           Reserved execution logs
@@ -198,9 +196,13 @@ Movement cost is STAY 0, cardinal ≈0.176777, diagonal 0.25; full charging-path
 
 State is **169D = 9×[mu,sigma,F_hat] + H_hat for all 142 grids**. Canonical action indices 0..8 are STAY/N/NE/E/SE/S/SW/W/NW. The **169→64→32→9** network masks invalid actions before normalization. Plain FedAvg is sample-count weighted; zero-sample clients are excluded. No privacy guarantee follows from weights-only aggregation.
 
-The current checkpoint is **PROVISIONAL_ROUTING_BASELINE**, trained on **3,408 controlled synthetic experiences**, split 2,272/1,136. Five fixed FedAvg rounds with Adam 0.001, batch 32, one local epoch, seed 42 produced best round 5 validation accuracy **29.2254%**, cross-entropy **1.829169**, below majority accuracy **33.6268%**. Predicted STAY **61.44%**; SE never predicted. Invalid actions **0**. This proves structural validity, not a successful final policy. Synthetic clients used grid-modulo grouping; the new simulator collector retains driver IDs for one-driver-per-client training.
+Selected: `models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras`, **SIMULATOR_DERIVED_ROUTING_BASELINE**. Train March1–12:2,618,033 experiences; validation March13–15:639,807. Central accuracy92.1855%, CE0.407089; final FedAvg accuracy85.3673%, CE0.538560; majority baseline93.8993%. Five rounds,5,000 driver clients, sample weighting and reload were verified. The global model is selected by the federated architecture, not superior accuracy. **ROUTING_EFFECTIVENESS_CONCERN = YES**.
 
-[Synthetic routing evidence and limitations](results/analysis/2026-10-20_final_routing_policy/README.md).
+The new held-out probability gate also fails: FedAvg CE/Brier0.538560/0.245881 versus masked March1–12 empirical-prior0.352059/0.117621. **ROUTING_PROBABILITIES_INFORMATIVE = NO**. No routing model was replaced or retrained.
+
+The former synthetic checkpoint (3,408 controlled examples) is **SUPERSEDED_FOR_FINAL_NON_PRIVATE_TRAINING / PROVENANCE_ONLY**; its validation is not comparable across datasets.
+
+[Final routing/FedAvg evidence](results/analysis/2026-10-25_final_simulator_routing_training/README.md); [probability gate](results/analysis/2026-10-26_professor_alignment_pricing_gate/routing_probability_adequacy.json); [historical synthetic evidence](results/analysis/2026-10-20_final_routing_policy/README.md).
 
 ### 6.5 Passenger acceptance, pricing contract and DQN
 
@@ -214,6 +216,8 @@ state = [J_hat(g,t), J_disp(g,t-1), I(g,t),
          p_STAY,p_N,p_NE,p_E,p_SE,p_S,p_SW,p_W,p_NW,
          destination_popularity(g',t)]
 ```
+
+**Professor-alignment caveat:** active positive-truncated-Normal parameters vary across243 weather/half-hour groups; they are not the analytical Clear/Rain scenario means/SDs. Global fallback parent mu/SD are1.1686292254531307/4.714371140724867. Bounds are(0,infinity), seeded persistent RNG. The P_base multiplier above is present; exact source approval is unresolved. Legacy calibration defines abs(relative_price/relative_distance), whereas the active inverse-E acceptance corresponds to the opposite ratio. The active FCFS path also lacks a hard `P_disp >= P_i_min` check; U1 is not that check. These are blockers, not silently corrected equations/rules.
 
 The **13D state uses identity normalization**. J_disp is previous completed-slot successful assignments, not F_hat. I counts already-known passenger commitments arriving in **(t,t+30min]**, excluding reposition/charging and unknown future assignments. Routing p is the full nine-action vector; popularity is the regenerated lagged ordinal feature, not a probability distribution.
 
@@ -245,9 +249,41 @@ The checkpoint is **SHORT_HIERARCHICAL_INTEGRATION_CHECKPOINT / NOT_FINAL_TRAINI
 
 During March1 collection, vehicles 918/4561 scheduled at 01:00 retained tiny positive floating-minute countdowns at the same publication timestamp. `ProductionExperiment.advance_until` now selects due passenger completions by unchanged absolute timestamps, including coincident movement events. Arrivals <=t complete and commitments clear before publication; future arrivals remain pending. I(g,t),30/2-minute timing, utilities and pricing are unchanged. Nine focused regressions pass, including t−1second/t/t+2min/t+30min, fail-closed checks, fleet conservation and append-once resume.
 
-Collection uses factor **1.00**, P_disp=runtime P_base, without pricing replay/training. Initial slot:3,494 requests,494 assignments,4,570 reposition experiences,0 charging experiences,4,570 active/430 zero-experience drivers; labels **[3505,74,113,289,114,296,15,148,16]**. After correction, six slots contain 27,009 experiences, no duplicate IDs, finite 169D states,9-element masks and valid labels; 5,000 unique vehicles. Full collection/training remains pending.
+Collection uses factor **1.00**, P_disp=runtime P_base, without pricing replay/training. Initial slot:3,494 requests,494 assignments,4,570 reposition experiences,0 charging experiences,4,570 active/430 zero-experience drivers; labels **[3505,74,113,289,114,296,15,148,16]**. After correction, six slots contain 27,009 experiences, no duplicate IDs, finite 169D states,9-element masks and valid labels; 5,000 unique vehicles. This six-slot milestone is historical; complete clean generation and subsequent training are recorded below.
 
-[Runner migration (historical blocker)](results/analysis/2026-10-21_hierarchical_runner_migration/README.md); [Successful four-slot episode](results/analysis/2026-10-21_first_short_hierarchical_dqn_episode/README.md); [Arrival correction](results/analysis/2026-10-21_passenger_arrival_boundary_fix/README.md); [Current collection and preserved blocked-attempt history](results/analysis/2026-10-21_simulator_derived_routing_policy/README.md).
+[Runner migration (historical blocker)](results/analysis/2026-10-21_hierarchical_runner_migration/README.md); [Successful four-slot episode](results/analysis/2026-10-21_first_short_hierarchical_dqn_episode/README.md); [Arrival correction](results/analysis/2026-10-21_passenger_arrival_boundary_fix/README.md); [Historical collection and preserved blocked-attempt history](results/analysis/2026-10-21_simulator_derived_routing_policy/README.md).
+
+### 6.6A Completed generation and pricing runs
+
+Old pre-reachability generation:680/720 slots,3,077,890 experiences; **SUPERSEDED_PRE_REACHABILITY_RESERVE_GENERATION / PROVENANCE_ONLY / DO_NOT_USE_FOR_FINAL_ROUTING_TRAINING** because it lacked post-movement station reachability.
+
+Final clean March1–15 generation:720/720 slots,3,257,840 experiences,5,000 conserved vehicles,1,705,916 requests,301,920 assignments. Reserve candidate exclusions57, distinct affected requests3, reposition exclusions0. Rule: `E_current-E_movement >= minimum_station_route_energy(destination)`, equality allowed, no margin; **PROJECT_PHYSICAL_FEASIBILITY_CONSTRAINT**. [Constraint evidence](results/analysis/2026-10-25_ev_station_reachability_contract/README.md); completed counts are verified in the final routing-training report linked above.
+
+Completed pricing run:1,705,916 requests =536,483 accepted +1,169,433 rejected;536,483 accepted =395,492 assigned +140,991 unmatched. Revenue **$7,490,773.984343884**;288,181 transitions;100,000 replay capacity;718 optimizer updates;epsilon0.986358. Checkpoint `models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/checkpoint_0720_a79095b4` is **COMPLETED_PRICING_TRAINING_RUN / TRAINING_SCHEDULE_MISMATCH / NOT_FINAL_NONPRIVATE_BASELINE**, retained unchanged.
+
+One optimizer update per slot after warm-up yielded718 updates against a50,000-update decay horizon (~70 equivalent passes, not authorized). The March16 00:00–02:00 development-only greedy check produced2,838 requests,1,801 accepted/assigned,$33,721.11 revenue; action counts[196,908,0,0,0,0,0]. Saved-state greedy counts were[4295,5705,0,0,0,0,0]. Fixed1.00 revenue was$19,996.38. The68.64% difference is limited to this two-hour matched development window, **not convergence or general superiority**. Optimizer count stayed718.
+
+The conditional cadence proposal excludes the first1000 transitions, then updates once per5 newly committed transitions with deterministic remainder: floor((288181−1000)/5)=57,436, remainder1. This would reachepsilon0.05 at50,000 updates at that volume. Prerequisites fail, so **no PROJECT_TRAINING_CADENCE is frozen or implemented**. Actual new-run volume may differ; all other DQN settings remain frozen.
+
+### Professor Discussion Requirements / Verification Status
+
+| Requirement | Status | Evidence / next action |
+|---|---|---|
+| Passenger elasticity sampling | VERIFIED | Active legacy positive truncated Normal, weather/half-hour calibration; not the two analytical scenario distributions. Source alignment remains open. |
+| Acceptance equation | VERIFICATION_REQUIRED | Active equation tested; exact professor/paper equation not established. |
+| P_base multiplier | VERIFICATION_REQUIRED | Multiplier is present and dimensionally correct in active code; source/calibration orientation unresolved. |
+| Passenger rejection vs dispatch failure | VERIFIED | Completed-run accounting identities pass; categories remain distinct. |
+| P_disp >= P_i_min | IMPLEMENTATION_REQUIRED | Absent from active FCFS eligibility, independent of U1. |
+| 13D DQN state / incoming supply | VERIFIED | Exact ordered13 features; commitments strictly before t, arrivals in(t,t+30min]. |
+| Routing utilities / EWMA | VERIFICATION_REQUIRED | Existing frozen formulas/reports preserved; no new numerical revalidation in this narrow gate. |
+| FL aggregation | VERIFIED | Existing final training report verifies five driver-client sample-weighted rounds, zero-client exclusion and reload; no new FL executed. |
+| Routing convergence/probabilities | KNOWN_LIMITATION | FedAvg worse than masked training-action prior on held-out CE/Brier; informative=NO. |
+| Pricing convergence | KNOWN_LIMITATION | 718 updates; schedule mismatch; two-hour development advantage is not convergence. |
+| Non-private baseline before DP | VERIFICATION_REQUIRED | Completed run retained but NOT_FINAL_NONPRIVATE_BASELINE; resolve prerequisites before corrected retrain. |
+| DP mechanism | FUTURE_PHASE | Specify clipping, noise, epsilon_DP, delta_DP, accounting and privacy–utility trade-off after validated non-private baseline. |
+| Consistent evaluation periods/metrics | VERIFIED | Jan–Feb CNN train; Mar1–15 RL; Mar16 development; Mar17–31 protected. Development results not final evaluation. |
+
+[Full professor gate and exact blockers](results/analysis/2026-10-26_professor_alignment_pricing_gate/README.md). Corrected retraining has not run; no protected evaluation or DP mechanism was executed.
 
 ### 6.7 Historical NB1–NB13 implementation reference
 
@@ -646,7 +682,7 @@ The repository URL is installation-specific; `<repository-url>` above is a place
 
 Existing artifacts should be reused. Raw rebuilding is not needed to resume collection. Fresh reconstruction requires the January, February and March Yellow Taxi Parquets under `data/raw/yellow_taxi/`, the complete Taxi Zone shapefile/sidecars under `data/raw/taxi_zones/`, and existing monthly weather artifacts. Network access is needed only to fetch absent weather.
 
-Current execution requires the142-grid foundation, Jan empirical request source, saved forecasts/popularity, historical fare/base lookups, behavioural-E calibration, explicit driver profiles, station/navigation artifacts and saved provisional routing model. Exact availability paths are recorded in [training input availability](results/analysis/2026-10-21_final_temporal_protocol/training_input_availability.json). Missing required inputs fail closed. Record-029's global P_base is not a replacement for runtime fare lookup.
+Current execution requires the142-grid foundation, Jan empirical request source, saved forecasts/popularity, historical fare/base lookups, behavioural-E calibration, explicit driver profiles, station/navigation artifacts and selected simulator-derived global routing model. Exact availability paths are recorded in [training input availability](results/analysis/2026-10-21_final_temporal_protocol/training_input_availability.json). Missing required inputs fail closed. Record-029's global P_base is not a replacement for runtime fare lookup.
 
 ## 10. Running Locally — reproducible workflow
 
@@ -677,27 +713,13 @@ No stable standalone inference CLI currently exists for this workflow; it is inv
 python -B scripts/run_production_experiment.py --slots 4 --seed 42 --output results/local_hierarchical_dev
 ```
 
-This existing CLI runs1–8 slots from its fixed March16 00:00 development start, defaults to **no DQN training**, and writes `runner_trace.csv`/`runner_metadata.json`. It loads the active fleet/profiles, forecasts, operational priors and provisional routing checkpoint. It is not the final March17–31 evaluation launcher, nor a reproduction of the historical one-update episode. `--driver-profiles` accepts an explicit compatible Parquet. No start-date/training switch is exposed by this CLI.
+This existing CLI runs1–8 slots from its fixed March16 00:00 development start, defaults to **no DQN training**, and writes `runner_trace.csv`/`runner_metadata.json`. It loads the active fleet/profiles, forecasts, operational priors and selected simulator-derived routing checkpoint. It is not the final March17–31 evaluation launcher, nor a reproduction of the historical one-update episode. `--driver-profiles` accepts an explicit compatible Parquet. No start-date/training switch is exposed by this CLI.
 
-### Resume current simulator-derived routing collection
+### Completed runs and current blocked resume point
 
-```bash
-python -B scripts/generate_simulator_routing_experiences.py --stop-after-slot 720
-```
+Routing generation and routing/FedAvg training are complete; do not rerun their historical launch commands. The pricing CLI `scripts/train_final_nonprivate_pricing.py` exists and completed720 slots. Its checkpoint/resume machinery remains available, but it must not be used to imply a corrected schedule or restart a completed experiment.
 
-This resumes the existing `data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl`; the stop argument is an **absolute committed slot target**, not extra slots. Without a checkpoint it starts anew, so verify the current file before invoking. It appends slot Parquets and atomically replaces its checkpoint, updating generation/daily summaries under the simulator-derived routing report. Keep the six saved slot files and latest checkpoint together. This is the next long-running task; it was not launched for this documentation update.
-
-### Later simulator-derived routing/FedAvg training — blocked until collection completes
-
-```bash
-python -B scripts/train_simulator_routing_policy.py
-```
-
-The implemented trainer requires COMPLETE status and all 720 slot files. It uses March1–12 training/March13–15 validation, one driver per client,169→64→32→9, five plain sample-weighted FedAvg rounds, Adam 0.001, batch 32, one local epoch, seed 42. Outputs are planned under `models/routing_policy/mar01_mar15_2026_3km_simulator_169x64x32x9_seed42/` and the existing simulator-derived routing report. This path is an output target, not an existing final model claim. Quality must be reviewed before replacing the synthetic checkpoint.
-
-### Later pricing training and protected evaluation
-
-No stable standalone CLI currently exists for the full March1–15 pricing-training or March17–31 final-evaluation workflow. The verified API is `ProductionExperiment.run_slot(..., train_dqn=..., terminal=...)`; `run(slot_count, train_dqn=False)` is limited to1–8 slots. `src/simulation/temporal_protocol.py` enforces update permissions and quarantined checkpoint rejection. A final long-period orchestration task is still required; do not invent a long-run CLI or bypass guards. Evaluation must disable updates and use approved frozen models. Fresh pricing training starts seed 42 and requires a usable simulator-derived routing model.
+Corrected pricing retraining is blocked by the [professor gate](results/analysis/2026-10-26_professor_alignment_pricing_gate/README.md). No retraining/evaluation command is prescribed until acceptance-source alignment, hard driver-price eligibility and routing probability adequacy are resolved. March17–31 remains protected. Prior launch logs/PID files are historical records, not evidence of an active process.
 
 ### Broad tests / legacy workflows
 
@@ -708,10 +730,12 @@ No stable standalone CLI currently exists for the full March1–15 pricing-train
 | Artifact | Status / use |
 | --- | --- |
 | [Epoch-200 CNN](models/cnn/jan_mar_2026_3km_30min_continued/best.keras) | FINAL FORECAST CHECKPOINT; historical-average baseline superior |
-| [Provisional routing model](models/routing_policy/jan_mar_2026_3km_169x64x32x9/best.keras) | STRUCTURALLY VALID / synthetic / TO BE SUPERSEDED |
+| [Legacy synthetic routing model](models/routing_policy/jan_mar_2026_3km_169x64x32x9/best.keras) | SUPERSEDED_FOR_FINAL_NON_PRIVATE_TRAINING / PROVENANCE_ONLY |
+| [Selected global routing model](models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras) | SIMULATOR_DERIVED_ROUTING_BASELINE; probability adequacy limitation |
+| [Completed pricing checkpoint](models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/checkpoint_0720_a79095b4/) | TRAINING_SCHEDULE_MISMATCH / NOT_FINAL_NONPRIVATE_BASELINE |
 | [Standalone pricing fixture](models/pricing_dqn/standalone_13x64x64x7_fixture/) | IMPLEMENTATION FIXTURE ONLY |
 | [March16 pricing checkpoint](models/pricing_dqn/first_short_hierarchical_20260316_0000_0200_seed42/) | INTEGRATION ONLY; do not continue for final experiments |
-| [Routing generation checkpoint](data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl) | CURRENT RESUME POINT, March1 03:00 |
+| [Routing generation checkpoint](data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl) | SUPERSEDED_PRE_REACHABILITY_RESERVE_GENERATION / PROVENANCE_ONLY |
 | [RL-period forecasts](data/processed/cnn_jan_mar_2026_3km_30min/j_hat_epoch200_3km_142grids_mar01_15_2026_horizon30min.parquet) | 102,240 rows, March1–15 |
 | [Original test-period forecasts](results/analysis/2026-10-19_operational_grid_state/dqn_ready_forecasts.parquet) | 109,056 rows, March16–31; protocol determines allowed use |
 | [Driver profiles](data/processed/driver_preferences_seed42.parquet) | Explicit H_i_max 10,5,000 profiles |
@@ -753,14 +777,14 @@ The canonical temporal JSON, dated module reports and per-artifact metadata gove
 - CNN underperforms the TRAIN historical-average baseline; final evaluation must report that baseline.
 - Historically observed weather is not an issuance-time weather forecast. Naive taxi/weather alignment remains an inherited assumption.
 - Zone-to-grid sampling approximates unavailable trip coordinates; projected neighbours and charging paths do not certify road connectivity.
-- Current routing policy is synthetic/provisional, below majority accuracy and partially collapsed. Simulator-derived experiences are incomplete.
+- Selected simulator-derived FedAvg is below majority accuracy and worse than the masked training prior on CE/Brier. Complete clean experiences do not establish routing probability adequacy.
 - March16 is contaminated for final evaluation and excluded. March17–31 is a prospective hierarchical holdout, not historically unseen by CNN reporting.
 - H_i_max, operational coefficients and normalized movement-cost coefficient are project calibrations. Planned sensitivities are not results.
 - Four-slot real-flow integration did not trigger charging; focused tests, not that episode, validate timed queue/navigation behavior.
 - Runtime requests sample intact January empirical trips with forecast-driven counts; unsupported origins are explicitly reported. This is not replay of every actual March request.
 - Plain FedAvg implementation does not establish differential privacy, secure aggregation or attack resistance. Those experiments remain pending.
 - No final learned pricing-DQN performance or causal real-world optimal-pricing claim is supported.
-- Dependency lock portability and long-period pricing/evaluation launchers remain implementation/documentation gaps, not fabricated commands.
+- Dependency lock portability remains unresolved. The resumable long-period pricing launcher exists and completed720 slots; corrected cadence is unimplemented and final evaluation remains a separate future task.
 
 ## 15. Methodology provenance
 
@@ -775,9 +799,9 @@ Current final/frozen reports supersede earlier blocked/provisional statuses only
 
 ## 16. Pending work and roadmap
 
-1. **Finish routing experience generation:** resume March1 03:00; complete 714 remaining slots. Preserve per-slot atomic checkpoints and daily summaries; validate all720 slots, participant/action/charging coverage and no duplicates.
-2. **Final simulator-derived routing policy:** train March1–12, validate March13–15;169→64→32→9 followed by plain FedAvg. Report loss/accuracy, majority baseline, collapse and invalid actions. Replace synthetic checkpoint only if usable.
-3. **Final non-private pricing DQN training:** reproducible seed 42 reset, March1–15, approved simulator-derived routing model. Never continue the March16 integration checkpoint. Complete the long-period orchestration interface first.
+1. **Resolve professor-alignment blockers:** establish acceptance source/calibration semantics; approve/implement hard driver-price eligibility; resolve held-out routing-probability adequacy. No automatic model substitution.
+2. **Approve corrected pricing cadence only after gates pass:** one update per5 eligible new transitions, exactly-once counters/remainder, all other settings unchanged. Not yet frozen or implemented.
+3. **Corrected non-private pricing training:** only after approval, reset seed42 and run one March1–15 pass; use March16 inference-only development checks before freezing a final baseline. Completed prior run remains provenance.
 4. **Final non-private evaluation:** March17–31 only, frozen inference/logging and no updates. Compare appropriate frozen fixed-price/LinUCB baselines without treating legacy-domain results as like-for-like.
 5. **Privacy:** implement/finalize differential privacy, accounting and secure aggregation; plain FedAvg alone is insufficient.
 6. **Robustness/adversarial evaluation:** poisoning, Sybil, strategic/malicious updates and robust aggregation.

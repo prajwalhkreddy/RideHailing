@@ -1,0 +1,16 @@
+{
+  "status": "PREPARED_NOT_LAUNCHED",
+  "data_path": "data/processed/routing_experiences_mar01_mar15_2026_reachability",
+  "checkpoint_path": "data/processed/routing_experiences_mar01_mar15_2026_reachability/generation_checkpoint.pkl",
+  "report_path": "results/analysis/2026-10-25_routing_generation_reachability",
+  "start": "2026-03-01 00:00:00",
+  "last_slot": "2026-03-15 23:30:00",
+  "slots": 720,
+  "pricing_factor": 1.0,
+  "profiles": 5000,
+  "checkpoint_every_slots": 8,
+  "requires_reachability_contract": true,
+  "short_validation_path": "data/processed/routing_experiences_reachability_short_validation",
+  "command": "python -B scripts/generate_simulator_routing_experiences.py --checkpoint-every-slots 8 --stop-after-slot 720 --background",
+  "resume_command": "python -B scripts/generate_simulator_routing_experiences.py --resume --checkpoint-every-slots 8 --stop-after-slot 720 --background"
+}

@@ -1,0 +1,3 @@
+slot,timestamp,requests,accepted,rejected,assignments,accepted_unmatched,routing_decisions,charging_decisions,experiences,fleet_count,REPOSITION,EV_CHARGING_NEXT_HOP
+0,2026-03-01 00:00:00,3494,494,3000,494,0,4570,0,4570,5000,4570,0
+1,2026-03-01 00:30:00,3303,515,2788,463,52,4507,0,4507,5000,4507,0

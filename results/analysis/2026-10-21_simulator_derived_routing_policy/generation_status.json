@@ -1,8 +1,8 @@
 {
-  "status": "PAUSED_AT_REQUESTED_BOUNDARY",
-  "completed_slots": 6,
-  "timestamp": "2026-03-01 03:00:00",
-  "experiences": 27009,
-  "pricing_replay": 0,
-  "pricing_optimizer_updates": 0
+  "status": "BLOCKED",
+  "completed_slots": 680,
+  "timestamp": "2026-03-15 04:00:00",
+  "experiences": 3077890,
+  "last_valid_checkpoint": "/Users/prajwalhk/Keerthi/Implementation/data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl",
+  "error": "ValueError: No energy-feasible destination; no teleport fallback."
 }

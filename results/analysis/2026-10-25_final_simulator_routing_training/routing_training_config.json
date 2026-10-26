@@ -1,0 +1,37 @@
+{
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "seed": 42,
+  "central_epochs": 1,
+  "central_epoch_rationale": "existing one-epoch supervised default; one chronological pass, no search",
+  "local_epochs": 1,
+  "fedavg_rounds": 5,
+  "local_optimizer": "fresh Adam state per driver each round",
+  "sample_weighted": true,
+  "client": "driver_id",
+  "normalization": "unchanged",
+  "rebalance": false,
+  "training_order": "chronological; no shuffle",
+  "selection": "final fifth global FedAvg aggregate; central model reported separately",
+  "material_support_threshold": 0.01,
+  "catastrophic_collapse_rule": "largest prediction share>90% while corresponding true share<90%",
+  "cache": "disk-mapped arrays; one source partition in memory during validation",
+  "input_dimension": 169,
+  "hidden_units": [
+    64,
+    32
+  ],
+  "output_dimension": 9,
+  "action_order": [
+    "STAY",
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW"
+  ]
+}

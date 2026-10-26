@@ -1,0 +1,39 @@
+{
+  "checkpoint": "models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/checkpoint_0720_a79095b4",
+  "slots": 720,
+  "completion": "2026-03-16 00:00:00",
+  "optimizer_updates": 718,
+  "epsilon": 0.986358,
+  "replay_transitions": 288181,
+  "replay_capacity": 100000,
+  "replay_size": 100000,
+  "first_three_slots": [
+    {
+      "timestamp": "2026-03-01 00:00:00",
+      "transitions": 473,
+      "replay_size": 473
+    },
+    {
+      "timestamp": "2026-03-01 00:30:00",
+      "transitions": 448,
+      "replay_size": 921
+    },
+    {
+      "timestamp": "2026-03-01 01:00:00",
+      "transitions": 408,
+      "replay_size": 1329
+    }
+  ],
+  "rule": "Exactly one train_step per completed main slot; returns without update when replay_size <1000. First two slots have 473 and921 transitions; slot3 crosses1000. Slots3..720 each update once.",
+  "online_target_optimizer_finite": true,
+  "optimizer_iterations": 718,
+  "deterministic_reload": true,
+  "checkpoint_payload_hashes_valid": true,
+  "source_hashes": {
+    "simulator.pkl": "b626b6fc3ef3a58eab8747149b438673a82c43117db7a8d84898cfedd7f963cb",
+    "dqn/replay.npz": "bca161b0786a43803bd8f99fd307c1fa146b1a3789474dde0ae1ec78ad67eb5c",
+    "dqn/checkpoint.json": "92ce4a2c7b5830574b86064fecafd8d15e06c89ff8a2aaa2c0213dfb78d1c9dc",
+    "dqn/target.keras": "993d4da0b98470a7b5f18a07a80a131482fc0b0d1b88947c7b07b74e42cc70b6",
+    "dqn/online.keras": "8fcba3c5a8dee68cd83f8d0d472bc3b0c17221b11192e5e993fda44b38e9b0af"
+  }
+}

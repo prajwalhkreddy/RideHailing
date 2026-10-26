@@ -1,0 +1,16 @@
+{
+  "FINAL_CLEAN_ROUTING_GENERATION_LAUNCHED": "YES",
+  "pid": 98974,
+  "writer_lock_held": true,
+  "clean_start": {
+    "event": "RESUME",
+    "timestamp": "2026-03-01 00:00:00",
+    "slots_completed": 0,
+    "experiences": 0,
+    "checkpoint_path": "/Users/prajwalhk/Keerthi/Implementation/data/processed/routing_experiences_mar01_mar15_2026_reachability/generation_checkpoint.pkl"
+  },
+  "run_id": "FINAL_REACHABILITY_ROUTING_GENERATION",
+  "checkpoint_contract": "EV_POST_MOVEMENT_STATION_REACHABILITY",
+  "old_dataset_preserved": true,
+  "monitoring": "single initial health check; no further polling"
+}

@@ -1,0 +1,21 @@
+{
+  "checkpoint_timestamp": "2026-03-15 04:00:00",
+  "vehicle_id": 299,
+  "driver_id": 299,
+  "previous_action": "PASSENGER_TRIP",
+  "previous_grid": 74,
+  "destination": 104,
+  "assigned_at": "2026-03-15 03:55:05",
+  "scheduled_arrival": "2026-03-15 04:26:17",
+  "duration_minutes": 31.2,
+  "checkpoint_energy_kwh": 1.7248694329320955,
+  "arrival_energy_kwh": 1.7248694329320955,
+  "energy_deducted_at": "assignment before checkpoint",
+  "previous_trip_distance_km": null,
+  "previous_trip_energy_consumed_kwh": null,
+  "previous_energy_kwh": null,
+  "missing_provenance": "Checkpoint stores commitment timestamps/destination, aggregate ledger and post-deduction energy; it does not persist request distance or pre-assignment energy. No earlier slot was replayed.",
+  "inferred_pre_assignment_energy": ">15 kWh under existing dispatch eligibility",
+  "inferred_consumed_energy_lower_bound_kwh": 13.275130567067905,
+  "trace_after_checkpoint": "Passenger arrival at 04:26:17; idle at grid104 until routing at04:30; no intervening energy-consuming action recorded."
+}

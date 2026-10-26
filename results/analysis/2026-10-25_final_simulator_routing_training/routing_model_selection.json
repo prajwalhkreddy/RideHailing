@@ -1,0 +1,14 @@
+{
+  "FINAL_SIMULATOR_ROUTING_MODEL_READY": "YES",
+  "status": "SIMULATOR_DERIVED_ROUTING_BASELINE",
+  "checkpoint": "models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras",
+  "rationale": "Final valid global fifth-round aggregate required by hierarchical/federated design; central accuracy does not override it.",
+  "ROUTING_EFFECTIVENESS_CONCERN": "YES",
+  "old_synthetic_status": [
+    "SUPERSEDED_FOR_FINAL_NON_PRIVATE_TRAINING",
+    "PROVENANCE_ONLY"
+  ],
+  "runtime_activation": "Selection recorded; pricing training not launched; legacy hard-coded runtime loading not changed in this training task.",
+  "checkpoint_sha256": "e82601fd5bfdf29ba85b54d2dfc3fa2b00a70779bda00a765575f0f89f482e0a",
+  "focused_tests": "11 passed, 0 failed"
+}

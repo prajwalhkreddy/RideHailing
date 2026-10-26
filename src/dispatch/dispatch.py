@@ -48,15 +48,23 @@ def build_neighbour_lookup(neighbour_map, valid_grid_ids: Collection[int]) -> di
     return lookup
 
 
-def find_eligible_vehicle(request: RequestState, fleet: Fleet, neighbour_lookup: Mapping[int, Iterable[int]], energy_parameters: EnergyParameters | None = None):
+def find_eligible_vehicle(request: RequestState, fleet: Fleet, neighbour_lookup: Mapping[int, Iterable[int]], energy_parameters: EnergyParameters | None = None, station_reserve=None, reserve_observer=None):
     """Find lowest-ID idle supply: same grid, then direct neighbours only."""
     required_energy = None if energy_parameters is None or request.trip_distance_km is None else energy_consumed_kwh(request.trip_distance_km, energy_parameters)
     eligible = lambda vehicle: vehicle.trip_status is VehicleStatus.IDLE and (energy_parameters is None or (not requires_charging(vehicle, energy_parameters) and (required_energy is None or vehicle.energy_level >= required_energy)))
-    same_grid = [vehicle for vehicle in fleet.vehicles if eligible(vehicle) and vehicle.current_grid == request.origin_grid]
+    base_eligible=eligible
+    def eligible(vehicle):
+        if not base_eligible(vehicle):return False
+        if station_reserve is None:return True
+        if required_energy is None:raise ValueError('Passenger distance required for station reserve.')
+        allowed=vehicle.energy_level-required_energy >= station_reserve(request.destination_grid)
+        if not allowed and reserve_observer is not None:reserve_observer(request,vehicle)
+        return allowed
+    same_grid = [vehicle for vehicle in fleet.vehicles if vehicle.current_grid == request.origin_grid and eligible(vehicle)]
     if same_grid:
         return min(same_grid, key=lambda vehicle: vehicle.vehicle_id)
     neighbours = set(neighbour_lookup.get(request.origin_grid, ()))
-    neighbouring = [vehicle for vehicle in fleet.vehicles if eligible(vehicle) and vehicle.current_grid in neighbours]
+    neighbouring = [vehicle for vehicle in fleet.vehicles if vehicle.current_grid in neighbours and eligible(vehicle)]
     return min(neighbouring, key=lambda vehicle: vehicle.vehicle_id) if neighbouring else None
 
 
@@ -92,6 +100,8 @@ def dispatch_requests(
     contention_inputs: DriverContentionInputs | None = None,
     contention_observer: Callable[[ContentionEvaluation], None] | None = None,
     slot_start_time: datetime | None = None,
+    station_reserve=None,
+    reserve_observer=None,
 ) -> dict[str, int]:
     """Immediately process PENDING requests in FCFS mini-slot/request-ID order.
 
@@ -104,6 +114,7 @@ def dispatch_requests(
         raise ValueError(f"dispatch_model must be one of {DISPATCH_MODELS}.")
     if dispatch_model == DISPATCH_MODEL_CONTENTION and contention_inputs is None:
         raise ValueError("driver_contention dispatch requires explicit current NB11 contention inputs.")
+    if station_reserve is not None and dispatch_model != DISPATCH_MODEL_LEGACY:raise ValueError('Station reserve requires final FCFS dispatch path.')
     ordered = sorted(requests, key=lambda request: (request.request_time, request.request_id))
     vehicles_by_grid: dict[int, list] = defaultdict(list)
     if dispatch_model == DISPATCH_MODEL_CONTENTION:
@@ -117,7 +128,7 @@ def dispatch_requests(
             raise ValueError("Dispatch accepts only PENDING requests.")
         selected_evaluation = None
         if dispatch_model == DISPATCH_MODEL_LEGACY:
-            vehicle = find_eligible_vehicle(request, fleet, neighbour_lookup, energy_parameters)
+            vehicle = find_eligible_vehicle(request, fleet, neighbour_lookup, energy_parameters, station_reserve, reserve_observer)
         else:
             assert contention_inputs is not None
             candidates = eligible_local_vehicles(

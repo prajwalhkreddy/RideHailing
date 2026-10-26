@@ -1,0 +1,117 @@
+{
+  "validation_N": 639807,
+  "train_N": 2618033,
+  "train_period": "March1\u201312",
+  "validation_period": "March13\u201315",
+  "training_action_prior": [
+    0.9374033864355414,
+    0.0106667868586836,
+    0.0028502314523919294,
+    0.009473906555035784,
+    0.00482079484865164,
+    0.012133536895829808,
+    0.005742861148045116,
+    0.01073783256360787,
+    0.00617066324221276
+  ],
+  "true_validation_distribution": [
+    0.938992539937825,
+    0.005164057286025317,
+    0.00869637249983198,
+    0.005300035792043538,
+    0.0026429845250208264,
+    0.0189838498172105,
+    0.00542507349872696,
+    0.007392854407657309,
+    0.0074022322356585655
+  ],
+  "baseline": "Training-label empirical prior, invalid actions zeroed and renormalized separately for each validation mask. No smoothing needed: all training labels supported.",
+  "Brier_definition": "mean sum_k(p_k-y_k)^2, no divide by class count",
+  "fedavg": {
+    "cross_entropy": 0.538559741855583,
+    "multiclass_Brier_sum_over_classes": 0.2458809862428875,
+    "mean_probability": [
+      0.8829220154414318,
+      0.0046720874276599215,
+      0.0015827869553946632,
+      0.00814597873973847,
+      0.00575089088694894,
+      0.009097167019162048,
+      0.0056413095752280784,
+      0.08120886255167821,
+      0.000978901402755965
+    ],
+    "calibration_bins": [
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "N": 14,
+        "mean_confidence": 0.468557366002147,
+        "accuracy": 0.35714285714285715
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "N": 18,
+        "mean_confidence": 0.5708984317396104,
+        "accuracy": 0.0
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "N": 1075,
+        "mean_confidence": 0.6750190077870931,
+        "accuracy": 0.7032558139534884
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "N": 2319,
+        "mean_confidence": 0.771371153464161,
+        "accuracy": 0.3514445881845623
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "N": 82489,
+        "mean_confidence": 0.8644764677978297,
+        "accuracy": 0.2876383517802374
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "N": 553892,
+        "mean_confidence": 0.959994725125356,
+        "accuracy": 0.9404053497793794
+      }
+    ],
+    "top_label_ECE": 0.09291739210061231
+  },
+  "training_prior": {
+    "cross_entropy": 0.3520592919240443,
+    "multiclass_Brier_sum_over_classes": 0.11762113534739826,
+    "mean_probability": [
+      0.9419478752567496,
+      0.009406468685443137,
+      0.0024741956089933325,
+      0.008635839745329318,
+      0.004411377610722064,
+      0.012185909873460457,
+      0.005584940522542315,
+      0.010206380635554207,
+      0.005147012061215137
+    ],
+    "calibration_bins": [
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "N": 639807,
+        "mean_confidence": 0.9419478752567404,
+        "accuracy": 0.938992539937825
+      }
+    ],
+    "top_label_ECE": 0.002955335318915342
+  },
+  "ROUTING_PROBABILITIES_INFORMATIVE": "NO",
+  "interpretation": "Directional joint CE/Brier comparison; top-label10-bin calibration descriptive, not post-hoc calibration or tuning."
+}

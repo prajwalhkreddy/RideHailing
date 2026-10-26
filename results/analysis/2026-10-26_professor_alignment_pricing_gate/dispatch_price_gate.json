@@ -1,0 +1,28 @@
+{
+  "P_disp_ge_P_i_min_gate": false,
+  "PROFESSOR_ALIGNMENT_BLOCKER": true,
+  "active_path": "final_production.run_slot -> dispatch_requests(DISPATCH_MODEL_LEGACY) -> find_eligible_vehicle",
+  "finding": "Final FCFS path checks idle/location/energy/station reserve but never receives driver price_preference; U1 use is not a hard dispatch gate.",
+  "cases": [
+    {
+      "P_disp": 9.0,
+      "external_driver_P_i_min": 10.0,
+      "driver_returned": true,
+      "expected_price_eligible": false
+    },
+    {
+      "P_disp": 10.0,
+      "external_driver_P_i_min": 10.0,
+      "driver_returned": true,
+      "expected_price_eligible": true
+    },
+    {
+      "P_disp": 11.0,
+      "external_driver_P_i_min": 10.0,
+      "driver_returned": true,
+      "expected_price_eligible": true
+    }
+  ],
+  "test_scope": "Isolated price boundary probe; no simulator or training run",
+  "implementation_changed": false
+}

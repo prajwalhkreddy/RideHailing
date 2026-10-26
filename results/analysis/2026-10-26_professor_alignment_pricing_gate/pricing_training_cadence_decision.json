@@ -1,0 +1,25 @@
+{
+  "status": "PROPOSAL_ONLY_PREREQUISITES_NOT_PASSED",
+  "frozen_as_project_decision": false,
+  "implemented": false,
+  "retrained": false,
+  "existing_updates": 718,
+  "existing_epsilon": 0.986358,
+  "proposed": "After first1000 transitions, one update per five newly committed transitions; carry remainder",
+  "illustrative_eligible": 287181,
+  "illustrative_updates": 57436,
+  "remainder": 1,
+  "semantics": "Counter excludes first1000 transitions exactly, including partial warm-up slot; total inserted transitions, not capped replay length. This is proposed semantics, not implemented.",
+  "epsilon_schedule_retained": true,
+  "other_settings_unchanged": true,
+  "checkpoint_required": [
+    "cumulative committed transitions",
+    "eligible-transition counter/remainder",
+    "optimizer state/updates",
+    "epsilon position",
+    "replay",
+    "RNG"
+  ],
+  "volume_caution": "Corrected policy may generate different transition volume;57436 is conditional on historical288181, not a guaranteed new-run result.",
+  "READY_FOR_CORRECTED_PRICING_RETRAIN": false
+}

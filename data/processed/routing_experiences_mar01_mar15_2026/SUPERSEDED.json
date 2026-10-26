@@ -1,0 +1,11 @@
+{
+  "classification": [
+    "SUPERSEDED_PRE_REACHABILITY_RESERVE_GENERATION",
+    "PROVENANCE_ONLY",
+    "DO_NOT_USE_FOR_FINAL_ROUTING_TRAINING"
+  ],
+  "committed_slots": 680,
+  "committed_experiences": 3077890,
+  "checkpoint_sha256": "f57b74fabd43bc2bcaf16e06ce6dd213bc7be491a1fd7d0895ef3eb8b5bf41f2",
+  "do_not_resume": true
+}

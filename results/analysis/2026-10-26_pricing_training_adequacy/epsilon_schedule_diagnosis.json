@@ -1,0 +1,31 @@
+{
+  "formula": "epsilon(u)=1-0.95*min(u/50000,1)",
+  "epsilon_718": 0.986358,
+  "thresholds": {
+    "0.9": {
+      "continuous_updates": 5263.157894736842,
+      "first_integer_update": 5264
+    },
+    "0.5": {
+      "continuous_updates": 26315.78947368421,
+      "first_integer_update": 26316
+    },
+    "0.1": {
+      "continuous_updates": 47368.42105263158,
+      "first_integer_update": 47369
+    },
+    "0.05": {
+      "continuous_updates": 50000.0,
+      "first_integer_update": 50000
+    }
+  },
+  "decay_fraction_completed": 0.01436,
+  "epsilon_reduction": 0.013642,
+  "passes_at_718_updates_each": 69.63788300835654,
+  "passes_if_replay_carried_and_only_initial_two_warmup_slots": 69.44722222222222,
+  "whole_passes_in_either_case": 70,
+  "classification": "TRAINING_SCHEDULE_MISMATCH",
+  "PROJECT_CONFIG_DECISION_REQUIRED": true,
+  "decision": "Agree whether to change optimizer cadence, express epsilon decay relative to the available training horizon, or explicitly permit multiple chronological training episodes. No option selected or executed.",
+  "interpretation": "Only 1.436% of the planned decay occurs; training remains nearly random. This alone does not establish that greedy Q predictions are useless."
+}

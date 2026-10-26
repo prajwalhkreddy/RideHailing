@@ -1,0 +1,46 @@
+{
+  "runtime": {
+    "distribution": "Normal(mu,sigma) conditioned on E>0; zero variance returns positive mu",
+    "lower_bound": 0,
+    "lower_inclusive": false,
+    "upper_bound": "infinity",
+    "conditioning": "actual WeatherCode x half-hour period0..47; exact->period->weather->global fallback",
+    "rng": "explicit persistent numpy Generator, seed42; scipy truncnorm.rvs(random_state=rng); per-request draw",
+    "units": "E dimensionless; fare USD; distance and D_base miles",
+    "parameter_source": "data/processed/customer_price_sensitivity_2026_01.parquet",
+    "fallback_source": "data/processed/customer_price_sensitivity_fallback_2026_01.parquet",
+    "parameter_sha256": "2f9554665ced24d0cecfe136b9f7d3dd29d99ec2b4248c930909bbe6cf1b0088",
+    "exact_groups": 243,
+    "parent_normal_mean_range": [
+      0.8771867576610018,
+      2.1425974738413394
+    ],
+    "parent_normal_sd_range": [
+      0.6443884498585853,
+      16.276108873930255
+    ],
+    "global_fallback": [
+      {
+        "fallback_level": "global",
+        "WeatherCode": null,
+        "Period": null,
+        "sample_count": 2808531,
+        "P_base": 20.029889244714884,
+        "D_base": 3.464695605205254,
+        "epsilon_mean": 1.1686292254531307,
+        "epsilon_std_population": 4.714371140724867
+      }
+    ],
+    "parameter_interpretation": "mu/sigma are parent Normal parameters, not moments of the truncated output",
+    "professor_scenario_values_active": false
+  },
+  "active_equation": "P_disp=factor*P_base; P_max=P_base+P_base*((L-D_base)/D_base)/E; accept iff P_disp<=P_max",
+  "P_base_multiplier_present": true,
+  "units_consistent": true,
+  "source_equation_verified": false,
+  "ACCEPTANCE_SOURCE_EQUATION_REQUIRED": true,
+  "source_evidence": "notebooks/plan/supervisor/customer sensitivity.pdf pp1,7,8 explicitly leaves acceptance equation/paper pending; corrected final process specifies price/sensitivity acceptance without the equation",
+  "calibration_caution": "Persisted legacy metadata calibrates abs(relative_price/relative_distance), whereas the active inverse-E rearrangement corresponds to E=relative_distance/relative_price. A source-approved relationship between calibration E and acceptance must be established; no equation changed.",
+  "source_status": "Active code verified; source alignment unresolved",
+  "additional_source_check": "Final_Module_Wise_Algorithm_Input_Output_Document.pdf pp3,16 delegates maximum price to the paper equation without stating it; supervisor/Record-019.pdf did not establish this equation."
+}

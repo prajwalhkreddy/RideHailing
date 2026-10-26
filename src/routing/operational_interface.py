@@ -103,6 +103,20 @@ class OperationalRouting:
                     best[target]=candidate;heapq.heappush(q,(*candidate,target))
         return best
 
+    def minimum_station_energy(self, grid, energy_per_km):
+        """Minimum modeled station-route energy, kWh; zero at a station."""
+        consumption=nonnegative(energy_per_km,'energy_per_km')
+        if not hasattr(self,'_station_distance_cache'):self._station_distance_cache={}
+        if grid not in self._station_distance_cache:
+            paths=self.paths(grid)
+            distances=[paths[int(g)][0] for g in self.stations.grid_id if int(g) in paths]
+            if not distances:raise ValueError('No reachable charging station in topology.')
+            self._station_distance_cache[grid]=min(distances)
+        return self._station_distance_cache[grid]/1000*consumption
+
+    def preserves_station_reachability(self, energy, movement_energy, destination, energy_per_km):
+        return nonnegative(energy,'energy')-nonnegative(movement_energy,'movement_energy') >= self.minimum_station_energy(destination,energy_per_km)
+
     def decide(self, producer, timestamp, *, grid, energy_kwh, minimum_energy_kwh,
                p_min, w_max_minutes, h_max_minutes, energy_per_km, idle=True):
         if not idle:raise ValueError('Only idle vehicles may route.')
@@ -112,6 +126,9 @@ class OperationalRouting:
         if energy>minimum:
             for a,(target,d) in sorted(self.candidates(grid).items()):
                 if d/1000*consumption>energy:continue
+                if not self.preserves_station_reachability(energy,d/1000*consumption,target,consumption):
+                    self.reserve_reposition_rejections=getattr(self,'reserve_reposition_rejections',0)+1
+                    continue
                 r=state.loc[target]
                 score=u1(p_min,r.mu,r.sigma,sigma_floor=self.config.sigma_floor)+u2(r.F_hat,w_max_minutes)-self.config.cost(d)
                 options.append(LocalDecision(a,target,target,'REPOSITION',score,d))

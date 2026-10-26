@@ -1,0 +1,47 @@
+{
+  "status": "PASS",
+  "N": 48,
+  "accepted": 30,
+  "rejected": 18,
+  "sampling": "Controlled request-level fare/distance cases using actual March16 00:00\u201302:00 weather/periods; not a historical request replay",
+  "deterministic_rng": true,
+  "all_threshold_checks_pass": true,
+  "resolved_parameter_groups": [
+    {
+      "weather_code": 3.0,
+      "period": 0,
+      "fallback": "exact",
+      "mu": 1.230043794391919,
+      "sigma": 5.259255731760655,
+      "P_base": 20.756201788407672,
+      "L_base": 3.96795464339582
+    },
+    {
+      "weather_code": 3.0,
+      "period": 1,
+      "fallback": "exact",
+      "mu": 1.1195664660197175,
+      "sigma": 4.404080097657495,
+      "P_base": 19.845807247694506,
+      "L_base": 3.7190511754773343
+    },
+    {
+      "weather_code": 3.0,
+      "period": 2,
+      "fallback": "exact",
+      "mu": 1.7764349434776023,
+      "sigma": 10.5037799045946,
+      "P_base": 21.921929149595282,
+      "L_base": 3.5227235934845607
+    },
+    {
+      "weather_code": 3.0,
+      "period": 3,
+      "fallback": "exact",
+      "mu": 1.709966919080355,
+      "sigma": 7.375085109231935,
+      "P_base": 22.03918815774257,
+      "L_base": 3.4591991442118655
+    }
+  ]
+}

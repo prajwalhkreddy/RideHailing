@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "commit": "CURRENT.json atomically selects an immutable directory after all payloads are saved and fsynced",
+  "simulator_fields": [
+    "fleet",
+    "charging",
+    "operational",
+    "ledger",
+    "passengers",
+    "missions",
+    "timestamp",
+    "clock",
+    "slot_index",
+    "request_id",
+    "reports",
+    "unsupported_demand",
+    "reserve_assignment_rejections",
+    "reserve_rejected_request_ids",
+    "charging_events"
+  ],
+  "rng": [
+    "request_rng",
+    "customer_rng",
+    "charging RNG within charging object",
+    "pricing action RNG",
+    "replay RNG",
+    "Python global RNG",
+    "NumPy global RNG"
+  ],
+  "tensorflow": "No stochastic TensorFlow operations after seeded network initialization; deterministic ops enabled; optimizer/target/online variables persisted",
+  "dqn": [
+    "online.keras including Adam state",
+    "target.keras",
+    "replay.npz",
+    "checkpoint.json including optimizer step count and schedule"
+  ],
+  "identity": "routing path and SHA256 must exactly match selection record; checkpoint payload hashes checked",
+  "resume": "committed slot_index determines next slot; no replay/update/slot duplication; uncommitted interrupted slot work is discarded",
+  "static_data": "Immutable January empirical request source is reloaded lazily; request RNG is restored, never reseeded on resume",
+  "signals": "SIGINT/SIGTERM set a stop flag; current main slot completes then commits and exits; failures retain last valid commit",
+  "cadence": "every8 slots, day boundary, safe stop and completion",
+  "writer_lock": "nonblocking flock acquired before background spawn, inherited by child; only lock-owning child publishes process.json",
+  "pid": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/process.json",
+  "checkpoint": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42/CURRENT.json",
+  "status": "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-10-25_final_nonprivate_pricing_training/training_status.json"
+}

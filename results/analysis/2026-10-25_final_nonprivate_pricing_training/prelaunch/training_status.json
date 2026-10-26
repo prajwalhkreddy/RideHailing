@@ -1,0 +1,33 @@
+{
+  "status": "PAUSED",
+  "pid": 6218,
+  "timestamp": "2026-03-01 02:00:00",
+  "slots_completed": 4,
+  "target_slots": 720,
+  "requests": 12298,
+  "accepted": 2431,
+  "rejected": 9867,
+  "assignments": 2274,
+  "unmatched": 157,
+  "revenue": 47170.554393668506,
+  "replay_transitions": 1731,
+  "replay_size": 1731,
+  "optimizer_updates": 2,
+  "epsilon": 0.999962,
+  "mean_recent_loss": 54.41468048095703,
+  "fleet_count": 5000,
+  "charging_events": 0,
+  "reserve_assignment_rejections": 0,
+  "reserve_rejected_requests": 0,
+  "reserve_reposition_rejections": 0,
+  "checkpoint_path": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/mar01_mar15_2026_nonprivate_seed42_prelaunch/checkpoint_0004_826e935c",
+  "pricing_action_counts": [
+    247,
+    259,
+    257,
+    242,
+    212,
+    264,
+    250
+  ]
+}
