@@ -1,0 +1,35 @@
+{
+  "correct": true,
+  "equation": "y=r+0.99*(1-done)*max_a Q_target(next_state,a)",
+  "algorithm": "standard DQN",
+  "reward": "Unnormalized USD successful-assignment fare sum per OD/slot",
+  "online": "Chosen-action Q receives Huber delta1 gradients",
+  "target": "No gradients; max over seven actions; soft tau0.005 after every Adam step",
+  "protocol_discrepancy": null,
+  "trajectory": [
+    {
+      "episode": 1,
+      "mean_abs_Q": 261.96551513671875,
+      "q_max": 591.0501708984375,
+      "mean_loss": 20.080820472041765
+    },
+    {
+      "episode": 10,
+      "mean_abs_Q": 2415.098876953125,
+      "q_max": 6879.4970703125,
+      "mean_loss": 259.8330129683018
+    },
+    {
+      "episode": 20,
+      "mean_abs_Q": 5279.10595703125,
+      "q_max": 19156.783203125,
+      "mean_loss": 435.9864346385002
+    },
+    {
+      "episode": 25,
+      "mean_abs_Q": 10454.3291015625,
+      "q_max": 37174.421875,
+      "mean_loss": 778.9683342725039
+    }
+  ]
+}

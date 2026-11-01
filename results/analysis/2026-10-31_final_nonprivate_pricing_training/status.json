@@ -1,0 +1,13 @@
+{
+  "status": "STOPPED_SAFE",
+  "pid": 42615,
+  "episode": 26,
+  "slots_completed": 11,
+  "replay_size": 100000,
+  "optimizer_updates": 3280,
+  "epsilon": 0.93768,
+  "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42",
+  "checkpoint": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0026/checkpoint_0011_a7895561",
+  "resume": true
+}

@@ -1,0 +1,8 @@
+{
+  "capacity": 100000,
+  "warmup": 1000,
+  "batch": 64,
+  "replacement": "FIFO deque ring",
+  "persists_across_episodes": true,
+  "checkpoint": "complete replay contents andsampling RNG alongsideonline,target,Adam,counters andactionRNG"
+}

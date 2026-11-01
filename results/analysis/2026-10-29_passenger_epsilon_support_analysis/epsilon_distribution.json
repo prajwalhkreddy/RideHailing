@@ -1,0 +1,43 @@
+{
+  "N": 2812236,
+  "source_valid_N": 2812236,
+  "undefined_exact_Delta_P_zero": 0,
+  "epsilon_zero": 0,
+  "min_positive": 4.0782867887295956e-06,
+  "mean": 3.9673995685142085,
+  "max": 468668.1627126722,
+  "P0.01": 0.0007537086657582322,
+  "P0.05": 0.003953015017582529,
+  "P0.1": 0.008090362306854898,
+  "P0.5": 0.040509460818666805,
+  "P1": 0.08160350490003833,
+  "P2.5": 0.20492835319762448,
+  "P5": 0.40277148273406294,
+  "P10": 0.7630537265776796,
+  "P25": 1.1255217273175695,
+  "median": 1.3155416793316084,
+  "P75": 1.8163098327985603,
+  "P90": 3.0640036817102816,
+  "P95": 5.469235407566955,
+  "P99": 26.237185214589516,
+  "P99.5": 51.69002485508568,
+  "P99.9": 271.7464237037853,
+  "near_zero_counts": {
+    "0.001": 377,
+    "0.005": 1773,
+    "0.01": 3498,
+    "0.025": 8722,
+    "0.05": 17331,
+    "0.1": 34391
+  },
+  "period": [
+    "2026-01-01 00:00:00",
+    "2026-01-25 18:30:00"
+  ],
+  "population": "Complete source-valid population of active runtime historical prior; no old distance-denominator exclusion applied to the new formula.",
+  "legacy_retained_N": 2807460,
+  "legacy_excluded_distance_resolution": 4776,
+  "legacy_epsilon_zero": 0,
+  "legacy_delta_P_zero_retained": 0,
+  "new_zero_on_legacy_subset": 0
+}

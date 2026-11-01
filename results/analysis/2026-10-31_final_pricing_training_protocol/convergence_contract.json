@@ -1,0 +1,30 @@
+{
+  "initial_budget": 500,
+  "monitor_interval": 25,
+  "fixed_development": {
+    "start": "2026-03-16 00:00",
+    "slots": 4,
+    "seed": 424242,
+    "greedy": true,
+    "replay_insert": false,
+    "optimizer_updates": 0
+  },
+  "metrics": [
+    "rolling25revenue",
+    "rolling25assignments",
+    "acceptance",
+    "fulfillment",
+    "actioncounts",
+    "mean/medianabsQ",
+    "Qspread",
+    "epsilon",
+    "replay",
+    "updates",
+    "loss"
+  ],
+  "candidate": "episode500",
+  "classification": "NO for numericalfailure; YES only documented agreement oftraining/development/Q/action stability; INCONCLUSIVE ifchanging or insufficient evidence; qualitative review withoutinvented revenuenumericthreshold",
+  "auto_continue": false,
+  "checkpoint_selection": "episode500, no protectedtestselection",
+  "limitation": "Qmonitor fromlast512replaystates; distributionofstates varies; usealongside fixeddevelopmentperformance, notstandaloneconvergenceproof"
+}

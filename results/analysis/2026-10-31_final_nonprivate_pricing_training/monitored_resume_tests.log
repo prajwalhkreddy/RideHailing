@@ -1,0 +1,6 @@
+.{"status": "EPISODE_INITIALIZED", "pid": 42603, "episode": 1, "slots_completed": 16, "replay_size": 7662, "optimizer_updates": 120, "epsilon": 0.99772, "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a", "namespace": "/var/folders/ks/zx55ck690yzct8xpxz06zwl40000gn/T/tmpu83t1iuf/models", "checkpoint": null, "resume": true}
+..
+----------------------------------------------------------------------
+Ran 3 tests in 1.270s
+
+OK

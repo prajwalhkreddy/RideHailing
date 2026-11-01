@@ -1,0 +1,97 @@
+{
+  "rounds": 5,
+  "sample_weighting": "PASS all tensors",
+  "zero_sample_excluded": 0,
+  "checkpoint_reload": "PASS",
+  "final_metrics": {
+    "N": 646657,
+    "accuracy": 0.8871070753119505,
+    "cross_entropy": 0.44174628873430083,
+    "majority_label_accuracy": 0.9505781271988086,
+    "valid_action_prediction_rate": 1.0,
+    "invalid_action_count": 0,
+    "action_support": [
+      614698,
+      3223,
+      3682,
+      2610,
+      1419,
+      9329,
+      3380,
+      4388,
+      3928
+    ],
+    "predicted_counts": [
+      605411,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      41246,
+      0
+    ],
+    "precision": [
+      0.9473944147033998,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0022062745478349417,
+      0.0
+    ],
+    "recall": [
+      0.9330809600812107,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0207383773928897,
+      0.0
+    ],
+    "F1": [
+      0.9401832131391539,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0039882543717403695,
+      0.0
+    ],
+    "STAY_prediction_share": 0.9362165723095861,
+    "prediction_entropy": 0.23725327821218672,
+    "zero_prediction_actions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "ROUTING_EFFECTIVENESS_CONCERN": true,
+    "majority_action_from_training": 0,
+    "STAY_true_share": 0.9505781271988086,
+    "largest_predicted_class_share": 0.9362165723095861,
+    "material_supported_zero_prediction_actions": [
+      5
+    ],
+    "catastrophic_collapse": false,
+    "supported_zero_prediction_actions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ]
+  }
+}

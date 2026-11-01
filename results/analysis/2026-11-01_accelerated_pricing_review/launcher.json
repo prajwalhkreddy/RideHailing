@@ -1,0 +1,9 @@
+{
+  "pid": 38841,
+  "command": [
+    "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python",
+    "-B",
+    "scripts/run_accelerated_pricing_review.py"
+  ],
+  "detached": true
+}

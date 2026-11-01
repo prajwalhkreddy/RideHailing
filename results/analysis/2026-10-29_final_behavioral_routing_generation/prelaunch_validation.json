@@ -1,0 +1,33 @@
+{
+  "status": "PASS",
+  "slots": 2,
+  "experiences": 9182,
+  "requests": 6797,
+  "accepted": 1009,
+  "assigned": 841,
+  "unmatched": 168,
+  "epsilon_min": 0.005730948687963,
+  "epsilon_slot_medians": [
+    1.247981865908674,
+    1.2510778149896622
+  ],
+  "price_ineligible_candidate_count": 58178,
+  "requests_with_any_price_ineligible_candidate": 991,
+  "price_gate_caused_unmatched": 168,
+  "driver_price_assignment_violations": 0,
+  "fleet": 5000,
+  "pricing_replay": 0,
+  "pricing_optimizer_updates": 0,
+  "checkpoint_reload": true,
+  "passenger_next_32_draws_identical_after_restore": true,
+  "states_masks_labels_finite_valid": true,
+  "experience_ids_unique_contiguous": true,
+  "grid_slot_rows": 284,
+  "validation_dataset_not_reused": true,
+  "focused_tests_passed": 32,
+  "focused_tests_failed": 0,
+  "old_checkpoint_sha256": {
+    "data/processed/routing_experiences_mar01_mar15_2026/generation_checkpoint.pkl": "f57b74fabd43bc2bcaf16e06ce6dd213bc7be491a1fd7d0895ef3eb8b5bf41f2",
+    "data/processed/routing_experiences_mar01_mar15_2026_reachability/generation_checkpoint.pkl": "3b36356ef800baad5401b1c856568ea7ba63666d15e11a6345d7819fd3750a5d"
+  }
+}

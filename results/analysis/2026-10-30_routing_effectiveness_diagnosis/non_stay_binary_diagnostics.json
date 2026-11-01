@@ -1,0 +1,23 @@
+{
+  "central": {
+    "non_STAY_accuracy": 0.021652742576426045,
+    "non_STAY_CE": 4.426852586603108,
+    "binary_AUROC": 0.8479666079673146,
+    "binary_Brier": 0.046147596761587334,
+    "binary_accuracy": 0.9439733892929327
+  },
+  "fedavg": {
+    "non_STAY_accuracy": 0.0028473982289808817,
+    "non_STAY_CE": 5.9489048487426714,
+    "binary_AUROC": 0.5538231130295515,
+    "binary_Brier": 0.09122538476165178,
+    "binary_accuracy": 0.887043672302318
+  },
+  "prior": {
+    "non_STAY_accuracy": 0.0,
+    "non_STAY_CE": 5.085822607808585,
+    "binary_AUROC": 0.5692725383451407,
+    "binary_Brier": 0.04688074021336289,
+    "binary_accuracy": 0.9505781271988086
+  }
+}

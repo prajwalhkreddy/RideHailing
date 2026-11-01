@@ -1,0 +1,32 @@
+{
+  "sample_N": 4096,
+  "seed": 42,
+  "mean_abs_online_Q": 6733.4521484375,
+  "mean_abs_target_Q": 6812.06396484375,
+  "mean_abs_difference": 96.02085876464844,
+  "max_abs_difference": 1171.77734375,
+  "selected_online": {
+    "N": 4096,
+    "min": 978.7536010742188,
+    "P1": 1015.0329864501953,
+    "P5": 1303.9501037597656,
+    "median": 1832.7020874023438,
+    "mean": 6758.58462561667,
+    "P95": 24908.66015625,
+    "P99": 35823.43789062501,
+    "max": 42369.3203125
+  },
+  "selected_target": {
+    "N": 4096,
+    "min": 983.134765625,
+    "P1": 1023.3824829101562,
+    "P5": 1313.9880981445312,
+    "median": 1850.5372924804688,
+    "mean": 6860.296376734972,
+    "P95": 25347.38623046875,
+    "P99": 36330.70820312501,
+    "max": 43541.09765625
+  },
+  "selected_mean_abs_difference": 110.15638732910156,
+  "interpretation": "Closely tracking in relative terms: mean gap about1.4% of mean online magnitude. Both networks can track the same inflated scale."
+}

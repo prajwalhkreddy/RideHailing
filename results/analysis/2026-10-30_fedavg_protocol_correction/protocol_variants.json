@@ -1,0 +1,27 @@
+{
+  "seed": 42,
+  "initialization_weights_sha256": "9e7bc3688a3d9c17eba7abf86a64f78606d6be9694b19d906e367ec108f5b4b0",
+  "initialization_checkpoint": "models/routing_policy/mar01_mar12_2026_final_behavioral_fedavg_protocols_seed42/initial.keras",
+  "initialization": "Previous initialcheckpoint not persisted; reconstructed using same modelbuilder seed42; shared bit-identical B/C/D. Control A uses that documented original seed42 initialization.",
+  "train_N": 2656632,
+  "validation_N": 646657,
+  "architecture": [
+    169,
+    64,
+    32,
+    9
+  ],
+  "loss": "unchanged masked mean multiclass crossentropy",
+  "lr": 0.001,
+  "batch_size": 32,
+  "rounds": 5,
+  "weighting": "full client TRAIN count, not minibatch size",
+  "batch_rule": "round-dependent seed42/client offsets sampled without replacement; rotate chronological client sequence; take first32 for B, up to160 for C/D; final partialbatch allowed; no duplicate within round; C and D identical batches",
+  "variants": {
+    "A": "existing Adam/full localepoch/fresh perclient; reuse",
+    "B": "Adam freshperclient, exactly1batch",
+    "C": "Adam freshperclient, at most5batches",
+    "D": "SGD momentum0, at most5batches"
+  },
+  "production_changed": false
+}

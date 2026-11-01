@@ -40,3 +40,6 @@ outputs/logs/*
 !outputs/logs/.gitkeep
 
 /data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet
+
+/results/analysis/2026-10-30_routing_effectiveness_diagnosis/central_probabilities.npy
+/results/analysis/2026-10-30_routing_effectiveness_diagnosis/fedavg5_probabilities.npy

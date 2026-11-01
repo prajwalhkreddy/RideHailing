@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "checkpoint_slot": 16,
+  "replayed_update_slot": 16,
+  "next_model_slot": 17,
+  "global_weights_bit_exact": true,
+  "optimizer_and_buffers_restored": true,
+  "validation_updates": 0,
+  "checkpoint_policy": "globalmodel every16slots/day; full resumable state latestcheckpoint only; no stochastic operations afterseededinit"
+}

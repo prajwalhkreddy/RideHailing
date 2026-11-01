@@ -1,0 +1,73 @@
+{
+  "sample_N": 4096,
+  "reward": {
+    "N": 4096,
+    "min": 0.0,
+    "P1": 0.0,
+    "P5": 0.0,
+    "median": 19.217363357543945,
+    "mean": 26.501981290988624,
+    "P95": 86.67047882080078,
+    "P99": 232.16618957519555,
+    "max": 793.0805053710938
+  },
+  "unmasked_bootstrap": {
+    "N": 4096,
+    "min": 979.544677734375,
+    "P1": 1014.9638061523438,
+    "P5": 1293.1089477539062,
+    "median": 1829.3277587890625,
+    "mean": 6879.96851220727,
+    "P95": 25502.35595703125,
+    "P99": 36691.868554687506,
+    "max": 43205.97265625
+  },
+  "masked_bootstrap": {
+    "N": 4096,
+    "min": 0.0,
+    "P1": 0.0,
+    "P5": 0.0,
+    "median": 1759.7374877929688,
+    "mean": 6470.693648770452,
+    "P95": 24876.09765625,
+    "P99": 36406.541992187515,
+    "max": 43205.97265625
+  },
+  "target": {
+    "N": 4096,
+    "min": 0.0,
+    "P1": 0.0,
+    "P5": 39.561256408691406,
+    "median": 1783.5016479492188,
+    "mean": 6497.195627932902,
+    "P95": 24923.34765625,
+    "P99": 36430.92363281253,
+    "max": 43376.0625
+  },
+  "bootstrap_fraction": {
+    "N": 4009,
+    "min": 0.0,
+    "P1": 0.0,
+    "P5": 0.961232602596283,
+    "median": 0.9952008724212646,
+    "mean": 0.9546068811779398,
+    "P95": 1.0,
+    "P99": 1.0,
+    "max": 1.0
+  },
+  "standard_minus_double": {
+    "N": 4096,
+    "min": 0.0,
+    "P1": 0.0,
+    "P5": 0.0,
+    "median": 6.47259521484375,
+    "mean": 89.70430900156498,
+    "P95": 520.41259765625,
+    "P99": 740.81484375,
+    "max": 1049.1484375
+  },
+  "masked_discounted_standard_minus_double_mean": 82.83783721923828,
+  "warning": "Difference diagnoses action-selection disagreement, not true overestimation bias against known returns.",
+  "max_operator_disagreement": "LOW relative to Q scale; not an identified estimate of true overestimation bias",
+  "interpretation": "Masked bootstrap dominates targets. Small online-vs-target argmax disagreement cannot explain the much larger terminal overprediction."
+}

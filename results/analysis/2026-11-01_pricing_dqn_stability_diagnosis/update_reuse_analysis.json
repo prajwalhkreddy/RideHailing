@@ -1,0 +1,12 @@
+{
+  "updates": 51072,
+  "batch": 64,
+  "total_sampled_examples": 3268608,
+  "final_capacity": 100000,
+  "sampled_per_final_capacity": 32.68608,
+  "total_insertions": 177396,
+  "global_samples_per_inserted_transition": 18.425488737062842,
+  "warning": "Unequal exposure from replay growth/FIFO: exact per-transition reuse unavailable without sample-index history",
+  "final_same400slots_updates": 3192,
+  "review_to_final_ratio": 16
+}

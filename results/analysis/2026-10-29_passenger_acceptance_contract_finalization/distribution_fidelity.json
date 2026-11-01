@@ -1,0 +1,42 @@
+{
+  "historical": {
+    "N": 2812236,
+    "mean": 3.9673995685142094,
+    "median": 1.3155416793316084,
+    "SD_population": 307.7879831635643,
+    "min": 4.0782867887295956e-06,
+    "max": 468668.1627126722,
+    "P0.1": 0.008090362306854898,
+    "P0.5": 0.040509460818666805,
+    "P1": 0.08160350490003833,
+    "P5": 0.40277148273406294,
+    "P25": 1.1255217273175695,
+    "P75": 1.8163098327985603,
+    "P95": 5.469235407566955,
+    "P99": 26.237185214589516
+  },
+  "sampled": {
+    "N": 1000000,
+    "mean": 3.641255704609152,
+    "median": 1.3146019160638571,
+    "SD_population": 87.62754957380835,
+    "min": 9.177019604532641e-06,
+    "max": 41906.47637418639,
+    "P0.1": 0.008013199806792637,
+    "P0.5": 0.040752297621593304,
+    "P1": 0.08234388475132827,
+    "P5": 0.403123371670423,
+    "P25": 1.1250715277343026,
+    "P75": 1.8162347748912586,
+    "P95": 5.441518840442382,
+    "P99": 25.993126173190618
+  },
+  "seed": 42,
+  "weighting": "Exact contexts weighted by their historical sampling-pool counts; multinomial diagnostic context allocation; one million runtime sampler draws.",
+  "support_membership": "PASS all draws in resolved pool",
+  "below_support": 0,
+  "interpretation": "Finite bootstrap mean/SD may vary substantially because rare empirical extremes are retained; no lower-SD pass criterion.",
+  "mean_difference": -0.32614386390505734,
+  "iid_reference_standard_error_mean": 0.3077879831635643,
+  "rare_tail_note": "Historical max468668.16 was not drawn in this million-draw realization (sample max41906.48), accounting for much of SD difference. Conditional context sampling preserves row probabilities; moments are not required to match exactly."
+}

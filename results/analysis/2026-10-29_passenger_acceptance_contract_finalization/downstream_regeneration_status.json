@@ -1,0 +1,12 @@
+{
+  "performed": false,
+  "status": "PRE_CORRECTION_PROVENANCE",
+  "artifacts": [
+    "routing experiences",
+    "central routing checkpoint",
+    "FedAvg routing checkpoint",
+    "pricing checkpoint"
+  ],
+  "next_step": "Only after combined validation: separately authorize a new clean March1\u201315 routing-experience generation; never overwrite old provenance.",
+  "March17_31_untouched": true
+}

@@ -1,0 +1,36 @@
+{
+  "status": [
+    "ACTIVE_IMPLEMENTATION_DIAGNOSTIC",
+    "NOT_SOURCE_VALIDATED_ACCEPTANCE_ANALYSIS"
+  ],
+  "classification": "SOURCE_CONTRACT_UNRESOLVED",
+  "P_max": {
+    "count": 2838,
+    "mean": 25.6171775630085,
+    "sample_SD": 167.77411131538014,
+    "min": -3195.134395353513,
+    "P10": 11.030261041598456,
+    "P25": 17.163006542036996,
+    "median": 19.770190593614135,
+    "P75": 23.62544907037517,
+    "P90": 33.50697693016354,
+    "P95": 50.82720582314687,
+    "max": 6748.186631027035
+  },
+  "sampled_E": {
+    "count": 2838,
+    "mean": 5.6491566055510365,
+    "sample_SD": 4.748093964591165,
+    "min": 0.00355041799834388,
+    "P10": 0.8855415904547372,
+    "P25": 2.170352731995588,
+    "median": 4.564240574774571,
+    "P75": 7.755565351987118,
+    "P90": 11.582673238217305,
+    "P95": 14.697836941916458,
+    "max": 40.07499687775485
+  },
+  "formula": "P_base + P_base*((L-L_base)/L_base)/E",
+  "calibration": "abs(relative_price_change/relative_distance_change)",
+  "source_conflict": "Price-over-distance calibration versus inverse-E acceptance; sign and sampling support unresolved."
+}

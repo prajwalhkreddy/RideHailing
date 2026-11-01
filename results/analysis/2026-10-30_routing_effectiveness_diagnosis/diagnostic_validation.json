@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "checks": [
+    "source cache counts and temporal boundary",
+    "finite normalized probabilities and exact zero invalid actions",
+    "central and all five saved CE reproduced",
+    "client/action/type count conservation",
+    "selected checkpoint hash unchanged",
+    "100 unique saved client updates; no optimization",
+    "all16 requested report artifacts present"
+  ],
+  "no_training": true,
+  "no_model_changes": true,
+  "March17_31_access": false
+}

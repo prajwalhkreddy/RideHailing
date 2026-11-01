@@ -1,0 +1,216 @@
+{
+  "global": {
+    "CE": 0.2932592191357729,
+    "Brier": 0.09593494534270659,
+    "accuracy": 0.9505781271988086,
+    "ECE": 0.006220436211210378,
+    "mean_probability": [
+      0.9567985634065336,
+      0.007439503603980385,
+      0.0021869200393308703,
+      0.006429591552040178,
+      0.0025552973999763825,
+      0.009785651276408206,
+      0.004560401989596487,
+      0.0072713253093060915,
+      0.002972745419491221
+    ],
+    "calibration": [
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "N": 646657,
+        "confidence": 0.956798563410019,
+        "accuracy": 0.9505781271988086
+      }
+    ]
+  },
+  "grid": {
+    "CE": "Infinity",
+    "Brier": 0.08645549506455852,
+    "accuracy": 0.950550291731165,
+    "ECE": 0.007637980047294913,
+    "mean_probability": [
+      0.950247078676025,
+      0.007846549921240413,
+      0.0018421316762584753,
+      0.005687601056256061,
+      0.0025089667575140546,
+      0.01530246741610014,
+      0.007003049129479965,
+      0.005802187995187953,
+      0.0037599673667652006
+    ],
+    "calibration": [
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "N": 89,
+        "confidence": 0.3919209060462179,
+        "accuracy": 0.24719101123595505
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "N": 2609,
+        "confidence": 0.43897392240831945,
+        "accuracy": 0.6397087006515907
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "N": 2582,
+        "confidence": 0.5579031408229128,
+        "accuracy": 0.5569326103795508
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "N": 7630,
+        "confidence": 0.6514053152326095,
+        "accuracy": 0.6034076015727392
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "N": 42395,
+        "confidence": 0.7712740278127854,
+        "accuracy": 0.8059676848684987
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "N": 30692,
+        "confidence": 0.8599843028261108,
+        "accuracy": 0.7947022025283461
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "N": 560660,
+        "confidence": 0.9791073930516235,
+        "accuracy": 0.9781097278207826
+      }
+    ],
+    "unseen_fallback_N": 0,
+    "no_mask_mass_fallback_N": 0,
+    "zero_true_probability_N": 161,
+    "CE_explanation": "Unsmoothed train conditional prior assigns zero probability to observed held-out class; no clipping/smoothing added."
+  },
+  "half_hour": {
+    "CE": 0.29590254704347113,
+    "Brier": 0.09636485398796191,
+    "accuracy": 0.9505781271988086,
+    "ECE": 0.00987778135298597,
+    "mean_probability": [
+      0.956565620437605,
+      0.007529624740234438,
+      0.002193067267880543,
+      0.006503128651370635,
+      0.0025656030745794863,
+      0.009758552642607854,
+      0.004573796579668563,
+      0.0073320029139625886,
+      0.0029786036924938893
+    ],
+    "calibration": [
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "N": 12523,
+        "confidence": 0.8584332012570176,
+        "accuracy": 0.9588756687694642
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "N": 634134,
+        "confidence": 0.9585035582948075,
+        "accuracy": 0.9504142657545566
+      }
+    ],
+    "unseen_fallback_N": 0,
+    "no_mask_mass_fallback_N": 0,
+    "zero_true_probability_N": 0
+  },
+  "grid_x_6hour": {
+    "CE": "Infinity",
+    "Brier": 0.08454794020342113,
+    "accuracy": 0.9500832744407004,
+    "ECE": 0.005088983682064331,
+    "mean_probability": [
+      0.9512275779279489,
+      0.007237808652878423,
+      0.0020397554946984388,
+      0.006342720607355682,
+      0.0030125276625348175,
+      0.014082609559263957,
+      0.006114582887681549,
+      0.005764583715424638,
+      0.0041778334934643455
+    ],
+    "calibration": [
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "N": 1,
+        "confidence": 0.25,
+        "accuracy": 0.0
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "N": 1227,
+        "confidence": 0.3624264406817906,
+        "accuracy": 0.3145884270578647
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "N": 1786,
+        "confidence": 0.4508710065856634,
+        "accuracy": 0.3561030235162374
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "N": 4382,
+        "confidence": 0.5484710274354958,
+        "accuracy": 0.5837517115472387
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "N": 6940,
+        "confidence": 0.652524820294434,
+        "accuracy": 0.5929394812680115
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "N": 22363,
+        "confidence": 0.759245234742677,
+        "accuracy": 0.7355900371148772
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "N": 55971,
+        "confidence": 0.8447476304533102,
+        "accuracy": 0.8511907952332458
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "N": 553987,
+        "confidence": 0.9823260659353826,
+        "accuracy": 0.9794291201779103
+      }
+    ],
+    "unseen_fallback_N": 228,
+    "no_mask_mass_fallback_N": 0,
+    "zero_true_probability_N": 1258,
+    "CE_explanation": "Unsmoothed train conditional prior assigns zero probability to observed held-out class; no clipping/smoothing added."
+  },
+  "definition": "unsmoothed train-only empirical frequencies; fallback global for unseen group or zero remaining masked mass; zero true-class probabilities produce infinite CE, never silently clipped. Coarse time=00\u201305,06\u201311,12\u201317,18\u201323."
+}

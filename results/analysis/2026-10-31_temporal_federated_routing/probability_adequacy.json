@@ -1,0 +1,13 @@
+{
+  "TEMPORAL_FEDAVG_PROBABILITIES_INFORMATIVE": "YES",
+  "PUBLIC_ROUTING_STATE_CONTRACT_VALIDATED": "YES",
+  "ROUTING_MODEL_CONTRACT_REVIEW_REQUIRED": "NO",
+  "pricing_blocked": true,
+  "temporal_CE": 0.2916579659117931,
+  "temporal_Brier": 0.09305395390636356,
+  "prior_CE": 0.2932592191357729,
+  "prior_Brier": 0.09593494534270659,
+  "CE_gap_closed_vs_prior": 1.0107837889734048,
+  "Brier_gap_closed_vs_prior": 1.0350792375718212,
+  "inconclusive_rule": "Descriptive substantial improvement means >=50%of BOTH oldoffline-to-prior loss gaps closed if notbeatingboth; this reporting convention does not tune training."
+}

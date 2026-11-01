@@ -1,0 +1,14 @@
+{
+  "final": {
+    "mean_reward_magnitude": 28.424062728881836,
+    "mean_bootstrap_magnitude": 65.81478881835938,
+    "mean_target_magnitude": 94.23884582519531,
+    "mean_bootstrap_fraction": 0.6731213927268982
+  },
+  "accelerated_episode25": {
+    "reward_mean": 26.501981290988624,
+    "bootstrap_mean": 6470.693648770452,
+    "target_mean": 6497.195627932902,
+    "mean_bootstrap_fraction": 0.9546068811779398
+  }
+}

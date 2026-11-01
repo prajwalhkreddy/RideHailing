@@ -1,0 +1,9 @@
+{
+  "recommended_category": "FEDAVG_PROTOCOL_CORRECTION",
+  "implemented": false,
+  "pricing_training_blocked": true,
+  "ROUTING_STATE_CONTRACT_REVIEW_REQUIRED": "YES",
+  "reason": "Best evidenced explanation of central\u2013FedAvg gap is optimization protocol, not mask dominance or destructive client cancellation. Recommend a separately authorized protocol correction design/review; do not prescribe optimizer, rate, rounds or epochs here. Hidden-state limitation must be acknowledged in that design; central adequacy is inconclusive, so no claim that protocol correction alone guarantees success.",
+  "March17_31_untouched": true,
+  "no_training_or_state_change": true
+}

@@ -1,0 +1,29 @@
+{
+  "all": {
+    "N": 100000,
+    "min": 0.0,
+    "P1": 0.0,
+    "P5": 0.0,
+    "median": 19.42639521582734,
+    "mean": 26.38989119839384,
+    "P95": 87.98655253805761,
+    "P99": 229.04076512593628,
+    "max": 970.0089014549399
+  },
+  "positive_reward_proxy_for_assigned": {
+    "N": 69565,
+    "min": 15.419813065033535,
+    "P1": 15.91182946145723,
+    "P5": 16.709984941027802,
+    "median": 21.39202323067587,
+    "mean": 37.93558714640098,
+    "P95": 111.1958378746594,
+    "P99": 271.04326009917105,
+    "max": 970.0089014549399
+  },
+  "zero_N": 30435,
+  "fraction_zero": 0.30435,
+  "fraction_positive": 0.69565,
+  "units": "USD sum of successful assignment fares for one OD within one slot",
+  "limitation": "Replay has no assignment count; positive reward is a proxy, not a persisted assignment label."
+}

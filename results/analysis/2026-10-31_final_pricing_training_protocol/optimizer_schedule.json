@@ -1,0 +1,8 @@
+{
+  "classification": "PROJECT TRAINING SCHEDULE",
+  "updates_per_completed_slot": 8,
+  "order": "insert allslot transitions then8 independent replayminibatches ifwarm",
+  "per_request_updates": false,
+  "max_opportunities": 64000,
+  "after_every_update": "incrementcounter;epsilonrecomputed;softtargettau.005"
+}

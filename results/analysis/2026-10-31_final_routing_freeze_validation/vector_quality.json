@@ -1,0 +1,19 @@
+{
+  "mean_entropy": 0.1876755586409125,
+  "P05": 0.0007495493399462668,
+  "median": 0.12808499734818954,
+  "P95": 0.5921284528198552,
+  "action_SD": [
+    0.06457395441611458,
+    0.006581469105408959,
+    0.00519165641162044,
+    0.0123484220094032,
+    0.0016420849260973737,
+    0.029423766269708124,
+    0.010534976852578117,
+    0.027923838518305415,
+    0.003109269304023054
+  ],
+  "ROUTING_VECTOR_NONDEGENERATE": "YES",
+  "criterion": "Descriptive substantialvariation: at leastone action SD>0.01; assess alongsideentropy andfull probabilityquantiles. Not a training parameter."
+}

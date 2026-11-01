@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "unit_tests_passed": 4,
+  "completed_variant_rounds": 20,
+  "new_training_rounds": 15,
+  "reused_control_rounds": 5,
+  "clients_each_round": 5000,
+  "full_sample_weights": 2656632,
+  "invalid_action_violations": 0,
+  "checkpoint_reload": "exact logits matched every newround",
+  "control_final_metrics_reproduced": true,
+  "original_selected_checkpoint_hash_unchanged": true,
+  "training_dates": "March1\u201312 only",
+  "validation_dates": "March13\u201315 only",
+  "March17_31_access": false
+}

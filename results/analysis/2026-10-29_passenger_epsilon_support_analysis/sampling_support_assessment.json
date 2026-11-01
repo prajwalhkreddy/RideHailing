@@ -1,0 +1,72 @@
+{
+  "PASSENGER_ELASTICITY_CORE_CONTRACT_FROZEN": "YES",
+  "EPSILON_SUPPORT_DECISION_REQUIRED": "YES",
+  "decision_type": "EXPLICIT_PROJECT_DECISION_2026_10_29",
+  "frozen": {
+    "Delta_D": "(D-D_base)/D_base",
+    "Delta_P": "(P-P_base)/P_base",
+    "epsilon": "abs(Delta_D/Delta_P)",
+    "P_max": "P_base*(1+Delta_D/epsilon)",
+    "offer": "pricing_factor*P_base",
+    "acceptance": "P_dispatch <= P_max"
+  },
+  "runtime_changed": false,
+  "current_sampler_aligned": false,
+  "current_sampler": {
+    "parent_parameters": "Saved old-formula epsilon_mean and epsilon_std_population, not new absolute distance/price moments.",
+    "exact_contexts": 243,
+    "mean_range": [
+      0.8771867576610018,
+      2.1425974738413394
+    ],
+    "sigma_range": [
+      0.6443884498585853,
+      16.276108873930255
+    ],
+    "global_fallback": [
+      {
+        "epsilon_mean": 1.1686292254531307,
+        "epsilon_std_population": 4.714371140724867
+      }
+    ],
+    "method": "scipy.stats.truncnorm Normal(mu,sigma) conditioned on E>0; zero-sigma returns positive mu; numerical <=0 draw replaced by nextafter(0,1)",
+    "support": "Arbitrarily small positive values possible mathematically; no empirical lower floor or finite upper cap.",
+    "fallback": "Exact WeatherCode\u00d7Period \u2192 Period \u2192 WeatherCode \u2192 global; default generic error mode overridden by final runtime hierarchical mode.",
+    "rng": "Explicit persistent numpy Generator; final runtime default_rng(seed), seed42 baseline; passed to SciPy random_state. No RNG draws in this analysis."
+  },
+  "zero_semantics": {
+    "old": "Delta_P zero not excluded: gives old epsilon0 if retained by distance rule. Old preprocessing excludes abs(D-D_base)<0.01 (tolerance-aware), not near-zero old epsilon. Runtime rejects supplied zero epsilon; sampler strictly positive.",
+    "new": "Exact Delta_P0 is undefined in calibration; exact Delta_D0 with nonzero Delta_P gives epsilon0, undefined for runtime P_max. Separately counted, not clipped. Near-zero retained for diagnostic."
+  },
+  "comparison": {
+    "positive_truncated_normal": "Conditional Normal, renormalizes positive mass; fitted parent moments are not output moments.",
+    "folded_normal": "abs(Normal) folds both tails; density f(x)+f(-x), not conditional Normal; absolute draw alone does not reproduce empirical ratio distribution.",
+    "empirical_bootstrap": "Most faithful to the observed frozen-formula distribution and duplicate frequencies, conditional on explicit zero/support handling. Recommendation only; not implemented."
+  },
+  "methodology_evidence": "Final_Next_Implementation_Process.docx XML paragraphs56\u201357: Normal(epsilon_mean,sigma); ordinary Normal without mandatory truncation, bounds may be a later modelling choice. Paragraph96 repeats Normal sampling. This does not specify positive support or an empirical percentile floor; folding/bootstrap would require an explicit distribution-family decision.",
+  "remaining_decision": "Choose runtime sampling family and handling/support of zero and small positive epsilon; decide whether to retain, replace or retire old distance-resolution exclusion. No percentile chosen.",
+  "no_training_regeneration": true,
+  "March17_31_untouched": true,
+  "input_sha256": {
+    "data/processed/customer_price_sensitivity_2026_01_metadata.json": "701e6eacd2d6a9798743f739ea60ce78271882a5a988dd5c433b085833350aa9",
+    "src/pricing/customer_sensitivity.py": "e383e83ecfc217d138a10ff764833dee5d1406995430239361144082cc66577f",
+    "src/pricing/historical_sensitivity.py": "2ed1d081576004cf76348f92e6cbff77ac10460972b97def98f683343fdfd5ec",
+    "src/pricing/dqn_contract.py": "1435a766e2d347215a88a5e8220241d1a4099795e66c9311dbf6579344e675fc",
+    "data/processed/cleaned_trips.parquet": "648dfe389ed924ce597f88745af840f03d592737d5dd35015d018c255bc2b65e",
+    "data/processed/demand_master_2026_01.parquet": "7619b750ecda90de35bf7263fb889e535ae4219ccbae1915257d789037cdde61",
+    "data/processed/customer_price_sensitivity_2026_01.parquet": "2f9554665ced24d0cecfe136b9f7d3dd29d99ec2b4248c930909bbe6cf1b0088",
+    "data/processed/customer_price_sensitivity_fallback_2026_01.parquet": "8d511bb09421154b2185935db204af8497c42dd729db39333cb323fc0649e826",
+    "notebooks/plan/supervisor/Final_Next_Implementation_Process.docx": "4a57d6ae5921d1e53cfcf6aa793c82503bf1ddfab9430d5e5a4d9739a5f73021"
+  },
+  "validation": {
+    "source_valid_N_matches_metadata": true,
+    "context_bases_reproduce_persisted_values": true,
+    "old_formula_group_means_reproduce_persisted_values": true,
+    "old_retained_N_matches_metadata": true,
+    "new_epsilon_all_finite_nonnegative": true,
+    "context_rows": 243,
+    "input_hashes_unchanged": true,
+    "runtime_draws": 0,
+    "simulator_runs": 0
+  }
+}

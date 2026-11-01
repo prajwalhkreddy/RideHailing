@@ -1,0 +1,235 @@
+# Current-State Hierarchical RL Implementation Review
+
+## 1. Review Scope
+
+**PRICING_REVIEW_CUTOFF = EPISODE_25**. Reporting/consolidation only, from saved artifacts. No training, simulation, checkpoint mutation or protected-data access occurred. The run is intentionally paused for review; saved status confirms STOPPED_SAFE. Later partial episode26 remains untouched and excluded from every aggregate below. Pricing findings are **PRELIMINARY / INTERIM — NOT FINAL CONVERGENCE**.
+
+The supplied task's framework is followed: A CNN, B passenger sensitivity/P_max, C driver acceptance/repositioning, D pricing DQN, E federated learning, F privacy pending. A separately identified meeting-discussion file was not supplied in this request or located by the narrow filename check; exact document alignment is **NOT AVAILABLE FROM CURRENT SAVED ARTIFACTS**. No additional roadmap requirements are inferred.
+
+## 2. Architecture Implemented
+
+True3km demand aggregation → CNN demand forecast → public13D pricing state → seven-factor DQN → empirical passenger P_max gate → independent driver price/availability/energy eligibility → FCFS assignment → timed fleet/charging movement → causal operational statistics → U1/U2/U3 movement decisions. Frozen public169D temporal-FedAvg routing probabilities feed pricing; they are not a replacement for utility-selected movements. Privacy is downstream, not implemented.
+
+## 3. Changes Made Since Earlier Implementation
+
+Verified corrections include true3km metre-based cells,142 valid grids and16×16 raster; chronological Jan–Mar CNN with TRAIN-only fitting; empirical rather than synthetic Normal passenger sampling; exact inclusive passenger and driver price gates; separate rejection reasons; causal operational μ/σ/F_hat/H_hat; EV post-movement station reachability and timed/no-teleportation navigation; public169→64→32→9 routing; temporal federated updates;13→64→64→7 pricing with seven factors; standard replay/Adam/Huber/soft-target semantics; deterministic resume; fixed March16 development; protected hierarchical final evaluation. These are verified implementation/project decisions, not blanket claims of external approval.
+
+U1=1−Φ((P_min−μ)/σ), U2=1−exp(−F_hat W_max), U3=1−exp(−H_max/H_hat); configured denominator safeguards apply. Repositioning maximizes U1+U2−cost; charging navigation maximizes U3−path cost. Current saved α/β/δ/κ are0.3 and normalized-distance cost coefficient0.25. H_max baseline10minutes is project calibration, with future5/10/20 sensitivity planned, not executed.
+
+## 4. CNN Demand Prediction Results
+
+| model | MAE | RMSE | R2 |
+|---|---|---|---|
+| CNN | 6.072322141353772 | 20.48501848867863 | 0.9511007257716422 |
+| HistoricalAverage | 3.3145281355210443 | 16.271804138733728 | 0.969146736451782 |
+| Seasonal | 28.088483443646933 | 92.15524822560909 | 0.0103768654763042 |
+| CNN_continued | 5.242741437019256 | 18.29280020640285 | 0.9610066924742178 |
+
+
+**CNN_VALID_BUT_HISTORICAL_BASELINE_SUPERIOR**. Selected continuation is epoch200, not a convergence guarantee. Historical-average baseline is better on MAE/RMSE/R². Previously saved prediction-total/observed-total ratios are0.937148 for continued CNN and0.946775 for historical baseline; these are aggregate level ratios, not MAPE. Relative error/MAPE for this final comparison: **NOT AVAILABLE FROM CURRENT SAVED ARTIFACTS**.
+
+These are already published original CNN aggregate test metrics, whose original split included dates later reserved for hierarchical evaluation. This task reads only saved aggregate reports, not protected observations or predictions. Do not reinterpret them as a new untouched hierarchical test result. Retrospective observed weather also limits live forecasting claims.
+
+## 5. Passenger Sensitivity and Acceptance
+
+Current runtime convention: ΔD=(D−D_base)/D_base; ΔP=(P−P_base)/P_base; epsilon=abs(ΔD/ΔP). Empirical sampling selects historical rows with replacement and preserves duplicate frequencies. P_dispatch=factor×P_base; **P_max=P_base(1+ΔD/epsilon)**; passenger accepts iff **P_dispatch≤P_max**. Signed ΔD may produce negative P_max; no clamp. Driver independently requires **P_dispatch≥P_min**, equality eligible.
+
+The final runtime prior has2,812,236 valid January observations before January25 18:30,243 exact contexts, with exact→period→weather→global fallback. Undefined exact-zero ΔP, nonfinite and nonpositive epsilon are excluded by contract; the saved population has zero such exclusions. Positive near-zero epsilon is retained with no artificial floor, clipping or Normal sampler. Exact-context support is[4.0782867887295956e−06,468668.1627126722]. This differs from superseded signed offline sensitivity descriptions.
+
+Seven-factor acceptance on the saved2,838-request contract fixture, holding passenger realizations fixed:
+
+| factor | accepted | rejected | acceptance_percentage |
+|---|---|---|---|
+| 0.85 | 1256 | 1582 | 44.25651867512333 |
+| 0.9 | 1148 | 1690 | 40.45102184637068 |
+| 0.95 | 1062 | 1776 | 37.420718816067655 |
+| 1.0 | 953 | 1885 | 33.5799859055673 |
+| 1.05 | 879 | 1959 | 30.972515856236782 |
+| 1.1 | 834 | 2004 | 29.38689217758985 |
+| 1.15 | 801 | 2037 | 28.224101479915433 |
+
+
+P_max mean21.465555, median16.014187, sample SD119.033635; min-4556.420594, max1434.830916. These are model-derived thresholds, not causal willingness-to-pay estimates or optimal-price evidence.
+
+## 6. Passenger / Driver / Supply Outcome Separation
+
+Across completed training episodes1–25, saved slot reports give:
+
+|Outcome|Count|
+|---|---:|
+|Generated requests|1118214|
+|Passenger rejected price|814420|
+|Passenger accepted|303794|
+|Accepted, no price-eligible driver under saved search semantics|56496|
+|Accepted, unmatched for another recorded operational reason|47|
+|Successfully assigned|247251|
+
+Generated=accepted+rejected; accepted=assigned+unmatched hold for all400 saved slots. Candidate driver-price rejections total29520112; they are not unique requests or passenger rejections. The saved count of requests experiencing any blocked candidate is296897, including requests later assigned elsewhere.
+
+For exact episode10/25 development **accepted/rejected/unmatched raw counts: NOT PERSISTED IN MONITORING ARTIFACT**. The separate development summaries persist acceptance and fulfillment rates but not those raw counts. No accepted=assigned inference is used. The earlier contract-validation fixture explicitly had1,197 accepted/assigned and zero unmatched; it is a different evaluation and cannot fill the missing current counts.
+
+## 7. Federated Routing and Repositioning
+
+**FINAL_ROUTING_MODEL_FROZEN=YES; ROUTING_READY_FOR_PRICING=YES; MODEST / UNCERTAIN BUT POSITIVE.** Temporal routing CE0.291657966/Brier0.093053954 versus empirical-prior0.293259219/0.095934945: changes−0.001601253/−0.002880991. ECE0.015838035. CE block interval includes zero; Brier interval is negative. Non-STAY top1 accuracy0.6195%; subgroup probability signal remains inconclusive. Invalid predictions:0. These current freeze results supersede earlier readiness-NO reports.
+
+Temporal FedAvg uses persistent local Adam, latest32 observations, current-slot contributors and equal eligible-client aggregation; slot aggregation becomes available next slot. Frozen inference hash: `db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a`.
+
+Frozen validation mean action probabilities (not physical movement frequencies):
+
+| action | mean |
+|---|---|
+| 0 | 0.9599890706787404 |
+| 1 | 0.003504179725161 |
+| 2 | 0.0010269251991276 |
+| 3 | 0.0092201129407962 |
+| 4 | 0.0008219474950535 |
+| 5 | 0.0077541425756702 |
+| 6 | 0.003477160385441 |
+| 7 | 0.0135182413821794 |
+| 8 | 0.0006882196178304 |
+
+
+## 8. Pricing DQN — Current 25-Episode Result
+
+Authoritative protocol remains500episodes×16slots with8 optimizer steps per warm slot; replay100,000, warmup1,000, batch64, Adam0.001, gamma0.99, Huber, tau0.005; epsilon1→0.05 over50,000 updates. Review cutoff has400 simulated training slots and3,192 updates; no final policy selected. Seven factors are0.85–1.15 in0.05 increments. Reward is gross successfully assigned fare per observed OD/slot, not requested or accepted fare. Signed/absolute sensitivity is not a pricing state feature.
+
+## 9. Eight Core Review Metrics
+
+### 9.1 Total Revenue
+
+Training episodes1–25 total **4791417.80**; individual episode revenue range **12544.84–356489.38**. Different source windows/environment trajectories make this unsuitable as a like-for-like policy improvement estimate. Fixed March16 development revenue: **23981.01→20595.95**, change **-3385.05 (-14.1156%)**. The fixed fixture is the comparable development evaluation.
+
+### 9.2 Passenger Acceptance Rate
+
+Training accepted/requested=27.1678%. Saved fixed-development acceptance rates are **44.8203%→31.2544%**. Raw development counts remain unavailable as noted above. Acceptance is distinct from assignment success.
+
+### 9.3 Successful Assignment Rate
+
+Fixed requests2,838; assignments1,272→887. Assignment/request rates **44.8203%→31.2544%**, change **-13.5659 percentage points**. Development summaries separately persist fulfillment_rate1.0 at both checkpoints; this is reported as saved, not recalculated from invented accepted counts. Training assignments/accepted=81.3877% uses explicit saved counts.
+
+### 9.4 Pricing Factor Distribution
+
+| factor | episode10_count | episode10_pct | episode25_count | episode25_pct |
+|---|---|---|---|---|
+| 0.85 | 904 | 78.40416305290546 | 0 | 0.0 |
+| 0.9 | 0 | 0.0 | 183 | 15.871639202081527 |
+| 0.95 | 0 | 0.0 | 0 | 0.0 |
+| 1.0 | 5 | 0.4336513443191674 | 0 | 0.0 |
+| 1.05 | 0 | 0.0 | 22 | 1.9080659150043364 |
+| 1.1 | 146 | 12.662619254119688 | 0 | 0.0 |
+| 1.15 | 98 | 8.49956634865568 | 948 | 82.22029488291413 |
+
+
+Counts are OD pricing decisions, not requests; each evaluation has1,153 contexts. Dominant factor changes **0.85→1.15**. This large shift does not establish either factor as optimal or demonstrate convergence.
+
+### 9.5 Dispatch Vehicle Utilization
+
+Fleet5,000. Unique assigned vehicles, percent dispatched, assignments/active vehicle, per-vehicle median/P10/P90 and idle/non-dispatched count: **INSUFFICIENT SAVED DETAIL FOR CURRENT 25-EPISODE RUN**. Saved slot summaries and current fleet snapshots do not establish a complete historical assignment-to-vehicle table. Do not equate5,000 conserved vehicles with5,000 dispatched vehicles. The best directly verified operational artifact is the separate final passenger/driver contract fixture, which establishes conservation and movement checks, not these utilization statistics.
+
+### 9.6 Repositioning Behavior
+
+Current authoritative pricing run,400 slots, aggregated saved navigation action counts:
+
+| action | count | percentage |
+|---|---|---|
+| STAY | 1563013 | 88.87931676654844 |
+| N | 30592 | 1.739586336468251 |
+| NE | 19542 | 1.111238107585727 |
+| E | 34449 | 1.958911143599463 |
+| SE | 16309 | 0.9273964945561161 |
+| S | 37227 | 2.116879594263323 |
+| SW | 17369 | 0.9876724332543491 |
+| W | 24992 | 1.4211474150436232 |
+| NW | 15086 | 0.8578517086807018 |
+
+
+Charging decisions are separately recorded: **1481**; saved charging-event records total **2730** (event records, not necessarily unique sessions). Directional counts combine ordinary navigation and charging next hops. A direction-by-charging split is **NOT AVAILABLE FROM CURRENT SAVED ARTIFACTS**; do not label this table ordinary repositioning only. This is current pricing-run behavior, distinct from routing-training labels and frozen validation probabilities above.
+
+### 9.7 Training Stability and Routing Action Distribution
+
+| metric | episode10 | episode25 |
+|---|---|---|
+| mean_abs_Q | 141.6536407470703 | 328.287353515625 |
+| median_abs_Q | 99.5578842163086 | 255.68789672851562 |
+| q_max | 586.09765625 | 1122.203857421875 |
+| mean_Q_spread | 12.686588287353516 | 16.038427352905273 |
+| mean_loss | 29.07678496837616 | 41.90878874063492 |
+| terminal_mean_reward | 26.500238348368427 | 26.030598385893935 |
+| terminal_selected_Q_mean | 147.0145263671875 | 338.09869384765625 |
+| terminal_absolute_TD_error | 122.38717965261547 | 312.07167619518503 |
+| bootstrap_fraction | 0.806625485420227 | 0.8936363458633423 |
+| replay_size | 67413.0 | 100000.0 |
+| optimizer_updates | 1272.0 | 3192.0 |
+| epsilon | 0.975832 | 0.939352 |
+
+Routing-model readiness and weak rare-action classification are separate from pricing-DQN stability. Routing mean probabilities are reported in section7; current navigation counts in9.6. Invalid model actions are zero in frozen validation, not a newly reconstructed full-run action audit.
+
+### 9.8 Operational State Validity
+
+| check | status | evidence_scope |
+|---|---|---|
+| fleet count invariant | PASS | All400 saved slot reports:5000 |
+| valid grid IDs | NOT AVAILABLE | Contract fixture validated; no independent full25-run audit persisted |
+| valid state dimensionality | PASS | Final protocol13D pricing/169D routing and checkpoint/resume validation |
+| finite states | PASS | Saved stability/cadence replay checks; checkpoint-scoped, not exhaustive all25 trajectories |
+| finite rewards | PASS | Saved replay checks and finite aggregate slot rewards |
+| valid actions | PASS | Saved replay checks and seven-action monitoring counts |
+| no driver-price assignment violation | NOT AVAILABLE | Separate final-contract fixture reports0; no per-assignment full25 audit saved |
+| no invalid routing action | PASS | Frozen routing validation:0 invalid predictions; scope is routing validation |
+| energy nonnegative / finite | NOT AVAILABLE | Separate contract fixture PASS; exhaustive25-run persisted audit unavailable |
+| reachability contract | PASS | Frozen interface and separate validated fixture; not a new full-run verification |
+| replay integrity | PASS | Saved authoritative checkpoint analysis PASS |
+| checkpoint/resume integrity | PASS | Saved monitored_resume_validation.json and tests |
+| routing hash unchanged | PASS | Monitoring/resume evidence identifies frozen hash |
+| March17–31 protected | PASS | No protected data accessed for this consolidation; saved execution boundaries retained |
+| accepted/unmatched accounting | PASS | All400 saved slot identities reconcile |
+| reserve rejection accounting | PASS | Saved completed-episode reserve counters aggregated |
+| charging-state validity | NOT AVAILABLE | Events/decisions saved; full25 charging-state audit not independently persisted |
+
+PASS is limited to the stated evidence scope. NOT AVAILABLE indicates a reporting gap, not a demonstrated failure.
+
+## 10. Training Stability
+
+DQN mechanics validated; learning behavior observed; saved numerical values finite; no proven structural Bellman/replay bug. **Policy has NOT demonstrated convergence.** Terminal Q calibration worsens from episode10 to25; bootstrap dominance rises; fixed development revenue/assignments deteriorate; greedy action distribution changes substantially. Training was intentionally paused for current-state review. No optimal factor or final performance claim is justified.
+
+Diagnostic investigations: the separate **ACCELERATED_REVIEW_PHASE_DIAGNOSTIC** used128 updates/slot and showed severe inflation/oscillation. Earlier cadence attribution favored monitored8-update continuation based on episode5 evidence, but does not establish episode25 or future convergence. The authoritative8-update monitoring table is the headline, not accelerated results.
+
+## 11. Operational State Validity
+
+Operational μ/σ use prior completed successful dispatch fares; F_hat tracks dispatch rate; H_hat tracks charging queue observations. Empty observations use frozen carry/decay rules. Saved all-slot accounting and fleet counts reconcile; reserve counters across completed episodes are 1 assignment candidate rejections and 0 reposition rejections. Zero counts do not prove every possible edge case. Contract fixtures validate price equality, finite energy, reachability, timed charging and no teleportation; exhaustive current-run audit gaps remain explicit.
+
+## 12. What Is Complete
+
+Spatial/data contract; CNN bounded implementation/evaluation; empirical passenger acceptance and independent driver gate; operational/EV interfaces; temporal routing freeze; pricing-DQN mechanics and exact resume; preliminary25-episode authoritative review; saved stability and cadence diagnostics. These completion statements do not imply final pricing convergence.
+
+## 13. What Is Pending
+
+**Reporting gaps:** named meeting-document alignment; raw development accepted/rejected/unmatched counts; current-run vehicle utilization; charging-specific directional split; exhaustive per-assignment/per-movement operational audit. Reporting gaps are not automatically implementation defects.
+
+**Model-development gaps:** pricing stability/convergence and decision on25→50/100/500 continuation; full non-private baseline; privacy and secure aggregation; later robustness/attacks; final baselines/ablations; multiple seeds/confidence intervals; protected final evaluation. Privacy is **PENDING**, downstream of a reproducible non-private baseline. Later work includes private-unit definition, gradient clipping, Gaussian noise/DP-SGD where applicable, accounting, secure aggregation and before/after utility comparison. No privacy budget, delta, clipping constant or noise multiplier is invented.
+
+## 14. What Can Be Presented Now
+
+Corrected CNN comparison, passenger epsilon/P_max and seven-factor acceptance curve, rejection separation, driver/EV architecture, final temporal FedAvg results, preliminary authoritative pricing through episode25, fixed revenue/assignment/action changes, stability diagnostics and scoped operational invariants. All pricing results are **PRELIMINARY / INTERIM**, **NOT FINAL CONVERGENCE**.
+
+## 15. Limitations / Items Not Yet Claimed
+
+No final pricing convergence; no optimal pricing factor; no protected hierarchical test result; no DP result; no robustness result; no multi-seed statistical conclusion; no new March17–31 result. Existing CNN aggregate evaluation is historical and is not a new protected hierarchical evaluation. Source-report historical statuses can be superseded; the temporal freeze governs current routing readiness.
+
+## 16. Next Recommended Work
+
+Current-state academic review and an explicit decision on further authoritative pricing training before privacy. Review calibration, bootstrap and fixed-development changes together. Resolve reporting gaps separately; do not silently alter methodology or restart/resume training from this report. Later continuation and protected evaluation require separate authorization.
+
+## 17. Authoritative Artifact Index
+
+See `source_index.csv` for section, artifact, status and scope notes, including each completed episode checkpoint used for aggregation. `core_results.csv` covers exactly eight metrics; seven have quantitative evidence, while dispatch utilization remains explicitly unavailable. `pricing_review.csv` preserves episode10/25 values. `operational_validity.csv` records scoped PASS/NOT AVAILABLE findings. All input artifacts remain unchanged except the requested append-only run README and root current-status update.
+
+## 18. Current Status
+
+CURRENT_STATE_REVIEW_READY = YES  
+PRICING_REVIEW_CUTOFF = EPISODE_25  
+PRICING_POLICY_CONVERGED = NO  
+FINAL_ROUTING_MODEL_FROZEN = YES  
+PASSENGER_ACCEPTANCE_CONTRACT_READY = YES  
+PRIVACY_IMPLEMENTED = NO  
+PROTECTED_FINAL_EVALUATION_UNTOUCHED = YES

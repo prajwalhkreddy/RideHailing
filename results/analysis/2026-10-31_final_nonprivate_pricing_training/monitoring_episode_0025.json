@@ -1,0 +1,43 @@
+{
+  "episode": 25,
+  "mean_abs_Q": 328.287353515625,
+  "median_abs_Q": 255.68789672851562,
+  "q_max": 1122.203857421875,
+  "mean_Q_spread": 16.038427352905273,
+  "mean_loss": 41.90878874063492,
+  "terminal_N": 5684,
+  "terminal_mean_reward": 26.030598385893935,
+  "terminal_selected_Q_mean": 338.09869384765625,
+  "terminal_absolute_TD_error": 312.07167619518503,
+  "bootstrap_fraction": 0.8936363458633423,
+  "development_revenue": 20595.954943252887,
+  "development_assignments": 887,
+  "development_action_distribution": [
+    0,
+    183,
+    0,
+    0,
+    22,
+    0,
+    948
+  ],
+  "replay_size": 100000,
+  "optimizer_updates": 3192,
+  "epsilon": 0.939352,
+  "mean_reward_16slot_reference": 407.3269866630143,
+  "flags": {
+    "TERMINAL_CALIBRATION_CONCERN": {
+      "status": "ABOVE_PRESERVED_REFERENCE_REVIEW",
+      "Q_to_reward_ratio": 12.988510246113782
+    },
+    "Q_SCALE_CONCERN": {
+      "status": "ABOVE_PRESERVED_REFERENCE_REVIEW",
+      "Q_to_mean_reward_horizon_ratio": 0.8059553240139732
+    },
+    "BOOTSTRAP_DOMINANCE_CONCERN": {
+      "status": "BELOW_ACCELERATED_REFERENCE",
+      "distance_to_accelerated_reference": 0.06097053496821314
+    }
+  },
+  "flag_policy": "Reference comparisons only; an increase requests descriptive review, not dramatic-inflation proof, a convergence criterion or an automatic stop."
+}

@@ -1,0 +1,84 @@
+{
+  "executed": false,
+  "steps": [
+    {
+      "order": 1,
+      "action": "Resolve authoritative passenger epsilon/P_max contract"
+    },
+    {
+      "order": 2,
+      "action": "Freeze orientation, sign/absolute treatment, sampling support and exact P_max equation"
+    },
+    {
+      "order": 3,
+      "action": "Implement corrected passenger contract if required"
+    },
+    {
+      "order": 4,
+      "action": "Implement hard P_dispatch >= P_min driver eligibility"
+    },
+    {
+      "order": 5,
+      "action": "Validate passenger and driver decisions with focused fixtures"
+    },
+    {
+      "order": 6,
+      "action": "Regenerate March1\u201315 routing experiences ONCE under corrected contracts"
+    },
+    {
+      "order": 7,
+      "action": "Retrain central routing and FedAvg"
+    },
+    {
+      "order": 8,
+      "action": "Re-evaluate routing probability adequacy against empirical-prior baseline"
+    },
+    {
+      "order": 9,
+      "action": "Define/freeze DQN multi-episode protocol"
+    },
+    {
+      "order": 10,
+      "action": "Freeze optimizer cadence and epsilon compatibility"
+    },
+    {
+      "order": 11,
+      "action": "Retrain pricing from deterministic seed42"
+    },
+    {
+      "order": 12,
+      "action": "Use March16 only for development/convergence diagnostics"
+    },
+    {
+      "order": 13,
+      "action": "Freeze final non-private baseline"
+    },
+    {
+      "order": 14,
+      "action": "Only then access March17\u201331 for final evaluation"
+    },
+    {
+      "order": 15,
+      "action": "Implement/evaluate DP afterward"
+    }
+  ],
+  "open_methodology_decisions": [
+    "passenger elasticity orientation",
+    "signed vs absolute treatment",
+    "sampling support",
+    "exact P_max equation",
+    "multi-episode DQN protocol",
+    "optimizer-update cadence",
+    "convergence/stopping rule"
+  ],
+  "diagnostic_order": [
+    "demand predictor",
+    "passenger sensitivity/P_max",
+    "passenger versus driver decisions",
+    "supply/repositioning",
+    "pricing action/reward",
+    "replay/optimizer/convergence",
+    "non-private baseline",
+    "privacy"
+  ]
+}

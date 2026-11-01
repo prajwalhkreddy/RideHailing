@@ -1,0 +1,7 @@
+{
+  "passed": 30,
+  "failed": 0,
+  "command": "python -B -m unittest tests.test_empirical_passenger tests.test_driver_price_gate tests.test_dispatch -q",
+  "before_march16": true,
+  "coverage": "Formula/sign, zero/nonfinite exclusion, exact positive values, pool membership/replacement, seeded RNG, exact/context fallback, signed-distance P_max, equality, finite P_max, driver gate and unmatched accounting, pickle RNG continuation."
+}

@@ -1,0 +1,22 @@
+{
+  "name": "REVIEW_PHASE_PRICING_RUN",
+  "episodes": 100,
+  "slots_per_episode": 16,
+  "launched": false,
+  "protocol": "results/analysis/2026-10-31_final_pricing_training_protocol/",
+  "semantics": "Identical frozen learner, replay, reset, reward and 8-update cadence; separate namespace required.",
+  "windows": "First 100 entries from persisted 500-window sequence; no regeneration.",
+  "development": "Frozen March16 greedy fixture every25episodes; zero replay insertion or updates.",
+  "purpose": [
+    "demonstrate learning operation",
+    "review reward/action/Q evolution",
+    "assess plausible development progress"
+  ],
+  "limitations": [
+    "not final convergence evidence",
+    "not final thesis evaluation",
+    "does not replace frozen500episode protocol"
+  ],
+  "initialization": "Fresh seed42 learner in a separate review namespace; existing stopped run remains preserved.",
+  "next_action": "Not launched; requires separate authorization"
+}

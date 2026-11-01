@@ -1,0 +1,21 @@
+{
+  "DRIVER_PRICE_ELIGIBILITY_FIX_READY": "YES",
+  "condition": "P_dispatch >= P_i_min",
+  "equality_allowed": true,
+  "production_profile_field": "price_preference",
+  "production_wiring": "self.profiles.price_preference passed to dispatch_requests",
+  "march16_regression_cases": 5,
+  "regression": "Exact saved offered fares/minima and grids; isolated vehicles, synthetic one-mile/10-minute trips; each blocks original candidate and selects later equality-eligible candidate. Not a replay of actual fleet outcomes.",
+  "passenger_acceptance_changed": false,
+  "fleet_energy_invariants_pass": true,
+  "missing_minimum_fails_closed": true,
+  "counters": [
+    "price_ineligible_candidate_count",
+    "requests_with_any_price_ineligible_candidate",
+    "accepted_requests_unmatched_due_to_no_price_eligible_driver"
+  ],
+  "reason": "DRIVER_PRICE_INELIGIBLE",
+  "reason_representation": "Observer event and slot counters, not passenger rejection or request-status change",
+  "no_training_or_regeneration": true,
+  "March17_31_untouched": true
+}

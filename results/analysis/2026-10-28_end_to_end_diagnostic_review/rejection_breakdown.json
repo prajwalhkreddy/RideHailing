@@ -1,0 +1,15 @@
+{
+  "generated": 2838,
+  "accepted": 1801,
+  "PASSENGER_REJECTION": 1037,
+  "assigned": 1801,
+  "unmatched": 0,
+  "DRIVER_PRICE_INELIGIBILITY": {
+    "counterfactual": 917,
+    "enforced": false,
+    "classification": "KNOWN_IMPLEMENTATION_DEFECT"
+  },
+  "SUPPLY_FAILURE": 0,
+  "OTHER_DISPATCH_FAILURE": 0,
+  "interpretation": "No accepted-unmatched cases; counterfactual driver violations overlap actual assignments, not passenger rejection."
+}

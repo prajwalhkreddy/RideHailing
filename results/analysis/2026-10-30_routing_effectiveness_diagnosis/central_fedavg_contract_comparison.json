@@ -1,0 +1,28 @@
+{
+  "IMPLEMENTATION_MISMATCH": "NO",
+  "scope": "Central versus completed offline plain-FedAvg trainer; operational online learner schedule is not used by this offline training script.",
+  "same": {
+    "features": "same validated float32 X169, no new normalization",
+    "masks": "same boolean M9 and -1e9 invalid logits in identical compiled_step",
+    "labels": "same int32 Y0..8",
+    "architecture": "169->64ReLU->32ReLU->9logits",
+    "initialization": "build_routing_policy_model seed42 deterministic common weights; reconstruction only, no update",
+    "loss": "identical mean masked sparse categorical crossentropy fromlogits",
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "dtype": "float32 training, float64 analytical probability summation"
+  },
+  "intentional_differences": {
+    "central": "one chronological epoch; continuous Adam state; ceil(2656632/32)=83020 optimizersteps",
+    "fedavg": "five rounds; eachclient receives common global weights; Adam variables explicitly reset to fresh initial state for everyclient/round; one chronological localepoch; ceil(client_N/32) steps; final partialbatch used",
+    "order": "central chronological allclients; clientexamples stable chronological withinclient; no shuffling",
+    "small_clients": "positivecount participates including finalpartialbatch; zeros excluded; no local subsampling",
+    "aggregation": "samplecount-weighted final weights; all tensors previously independently verified; weighting is by observations not optimizersteps"
+  },
+  "sources": [
+    "scripts/train_final_behavioral_routing.py:compiled_step/main",
+    "src/routing/learning.py:build_routing_policy_model",
+    "src/routing/federated.py:aggregate_policy_updates"
+  ],
+  "limitation": "No rerun training. No accidental inconsistency found; intentional optimizer reset/local ordering can cause statistical optimization drift."
+}

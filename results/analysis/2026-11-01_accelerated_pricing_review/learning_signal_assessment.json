@@ -1,0 +1,9 @@
+{
+  "REVIEW_DQN_LEARNING_SIGNAL": "INCONCLUSIVE",
+  "numerical_mechanics": "PASS",
+  "structural_invariants": "PASS",
+  "reason": "Descriptive action/Q/development trajectories require the separate review evaluation; no undocumented convergence threshold is imposed.",
+  "final_convergence": false,
+  "development_revenue_change": 2979.468715569983,
+  "last_development_revenue_change": 2541.3068451304316
+}

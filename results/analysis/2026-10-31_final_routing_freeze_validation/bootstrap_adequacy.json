@@ -1,0 +1,35 @@
+{
+  "block_slots": 8,
+  "replicates": 2000,
+  "seed": 42,
+  "method": "noncircular movingblocks sampled from137overlappingstarts;18blocks perreplicate; unweighted mean of144slotmeans",
+  "metrics": {
+    "CE": {
+      "mean": -0.00236682836870143,
+      "median": -0.014815501671330101,
+      "SD": 0.08566313288162256,
+      "SE": 0.007138594406801879,
+      "fraction_slots_model_wins": 0.7777777777777778,
+      "bootstrap_95": [
+        -0.019174269736145676,
+        0.022761744228895677
+      ]
+    },
+    "Brier": {
+      "mean": -0.0029240116671354266,
+      "median": -0.0024328193180508956,
+      "SD": 0.0037091912767042933,
+      "SE": 0.0003090992730586911,
+      "fraction_slots_model_wins": 0.75,
+      "bootstrap_95": [
+        -0.004221723597752896,
+        -0.0018775499991105483
+      ]
+    }
+  },
+  "aggregate_observation_weighted_difference": {
+    "CE": -0.001601253223979939,
+    "Brier": -0.0028809914363429837
+  },
+  "qualification": "MODEST / UNCERTAIN BUT POSITIVE"
+}

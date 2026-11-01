@@ -1,0 +1,26 @@
+{
+  "old": {
+    "initialization": 2.8151895840419456,
+    "pricing_action_inference": 0.6169843047391623,
+    "routing_inference": 0.04639099910855293,
+    "replay_insertion": 0.4618861142080277,
+    "optimizer_updates": 1.8864013340789825,
+    "slots_total": 845.8271836257773,
+    "checkpoint_serialization": 0.18118070799391717,
+    "reporting_csv": 0.0036485419841483235,
+    "seconds_episode": 848.8329254169948,
+    "simulator_request_dispatch_other": 842.8155208736425
+  },
+  "optimized": {
+    "initialization": 2.632859249948524,
+    "pricing_action_inference": 0.4628090028418228,
+    "routing_inference": 0.02792274614330381,
+    "replay_insertion": 0.37264215282630175,
+    "optimizer_updates": 0.4216287095332518,
+    "slots_total": 772.8793311680201,
+    "checkpoint_serialization": 0.16194054088555276,
+    "reporting_csv": 0.0012390830088406801,
+    "seconds_episode": 775.6794539160328,
+    "simulator_request_dispatch_other": 771.5943285566755
+  }
+}

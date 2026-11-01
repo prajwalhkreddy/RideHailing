@@ -1,0 +1,6 @@
+rule,lower_bound,boundary,affected_N,affected_percentage_of_defined,maximum_inverse_epsilon,status
+strict_positive,0.0,exclusive,0,0.0,UNBOUNDED,CANDIDATE_NOT_SELECTED
+minimum_observed_positive,4.0782867887295956e-06,inclusive,0,0.0,245201.0002738195,CANDIDATE_NOT_SELECTED
+empirical_P0.5,0.040509460818666805,inclusive,14062,0.5000291582925472,24.685591459148696,CANDIDATE_NOT_SELECTED
+empirical_P1,0.08160350490003833,inclusive,28122,0.9999871987983939,12.25437560831447,CANDIDATE_NOT_SELECTED
+historical_abs_distance_difference_ge_0.01_mile,,"context-dependent distance exclusion, not scalar epsilon support",4776,0.16982927464124634,NO_UNIFORM_BOUND_IMPLIED,OLD_REVERSED_FORMULA_RULE_NOT_ADOPTED

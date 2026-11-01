@@ -1,0 +1,175 @@
+{
+  "requirements": [
+    {
+      "Requirement": "CNN actual-vs-predicted",
+      "Evidence": "cnn_diagnostics.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Retain historical baseline comparison"
+    },
+    {
+      "Requirement": "CNN MAE/RMSE/R\u00b2",
+      "Evidence": "cnn_diagnostics.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Retain historical baseline comparison"
+    },
+    {
+      "Requirement": "CNN relative error",
+      "Evidence": "cnn_diagnostics.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Retain historical baseline comparison"
+    },
+    {
+      "Requirement": "CNN concentrated errors",
+      "Evidence": "cnn_error_by_grid.csv; cnn_error_by_time.csv; demand-band evidence",
+      "Status": "PARTIALLY_COMPLETE",
+      "Next_Action": "Final spatial/time summaries unavailable without protected forecast access"
+    },
+    {
+      "Requirement": "P_max distribution",
+      "Evidence": "passenger_pmax_summary.json; passenger_acceptance_by_factor.csv; rejection_breakdown.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Interpret only as active implementation diagnostics"
+    },
+    {
+      "Requirement": "acceptance at seven factors",
+      "Evidence": "passenger_pmax_summary.json; passenger_acceptance_by_factor.csv; rejection_breakdown.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Interpret only as active implementation diagnostics"
+    },
+    {
+      "Requirement": "passenger decision consistency",
+      "Evidence": "passenger_pmax_summary.json; passenger_acceptance_by_factor.csv; rejection_breakdown.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Interpret only as active implementation diagnostics"
+    },
+    {
+      "Requirement": "passenger vs driver rejection",
+      "Evidence": "passenger_pmax_summary.json; passenger_acceptance_by_factor.csv; rejection_breakdown.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Interpret only as active implementation diagnostics"
+    },
+    {
+      "Requirement": "epsilon/P_max source equation",
+      "Evidence": "Conflicting project equations",
+      "Status": "SOURCE_UNRESOLVED",
+      "Next_Action": "Resolve authoritative contract"
+    },
+    {
+      "Requirement": "P_min hard eligibility",
+      "Evidence": "917/1801 assigned rides violate counterfactual gate",
+      "Status": "KNOWN_DEFECT",
+      "Next_Action": "Bundle gate and acceptance corrections"
+    },
+    {
+      "Requirement": "P_min distribution",
+      "Evidence": "driver_preference_diagnostics.json",
+      "Status": "VERIFIED",
+      "Next_Action": "No preference changes"
+    },
+    {
+      "Requirement": "W_pref distribution",
+      "Evidence": "driver_preference_diagnostics.json",
+      "Status": "VERIFIED",
+      "Next_Action": "No preference changes"
+    },
+    {
+      "Requirement": "grid supply analysis",
+      "Evidence": "GRID_SLOT_IDLE_SUPPLY_NOT_RETAINED",
+      "Status": "PARTIALLY_COMPLETE",
+      "Next_Action": "Retain grid request/assignment flows; no new simulation"
+    },
+    {
+      "Requirement": "EV/non-EV fleet count",
+      "Evidence": "fleet_configuration.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Preserve pre-correction evidence; verified execution is not effectiveness"
+    },
+    {
+      "Requirement": "routing centralized model",
+      "Evidence": "routing_learning_summary.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Preserve pre-correction evidence; verified execution is not effectiveness"
+    },
+    {
+      "Requirement": "FedAvg aggregation",
+      "Evidence": "routing_learning_summary.json",
+      "Status": "VERIFIED",
+      "Next_Action": "Preserve pre-correction evidence; verified execution is not effectiveness"
+    },
+    {
+      "Requirement": "pricing-factor frequencies",
+      "Evidence": "pricing_action_distribution.csv",
+      "Status": "VERIFIED",
+      "Next_Action": "Preserve pre-correction evidence; verified execution is not effectiveness"
+    },
+    {
+      "Requirement": "reward accounting",
+      "Evidence": "saved training and March16 assignment-fare totals",
+      "Status": "VERIFIED",
+      "Next_Action": "Preserve pre-correction evidence; verified execution is not effectiveness"
+    },
+    {
+      "Requirement": "replay buffer",
+      "Evidence": "288181 transitions;100000 retained",
+      "Status": "VERIFIED",
+      "Next_Action": "Preserve pre-correction evidence; verified execution is not effectiveness"
+    },
+    {
+      "Requirement": "optimizer updates",
+      "Evidence": "718",
+      "Status": "VERIFIED",
+      "Next_Action": "Preserve pre-correction evidence; verified execution is not effectiveness"
+    },
+    {
+      "Requirement": "epsilon schedule",
+      "Evidence": "0.986358 final",
+      "Status": "VERIFIED",
+      "Next_Action": "Preserve pre-correction evidence; verified execution is not effectiveness"
+    },
+    {
+      "Requirement": "routing probability adequacy",
+      "Evidence": "routing_learning_summary.json; pricing_training_summary.json",
+      "Status": "KNOWN_LIMITATION",
+      "Next_Action": "Resolve upstream contracts before new training"
+    },
+    {
+      "Requirement": "DQN convergence",
+      "Evidence": "routing_learning_summary.json; pricing_training_summary.json",
+      "Status": "KNOWN_LIMITATION",
+      "Next_Action": "Resolve upstream contracts before new training"
+    },
+    {
+      "Requirement": "multi-episode training protocol",
+      "Evidence": "500 episodes suggested only",
+      "Status": "SOURCE_UNRESOLVED",
+      "Next_Action": "Freeze protocol and cadence before implementation"
+    },
+    {
+      "Requirement": "privacy",
+      "Evidence": "FedAvg alone is not DP",
+      "Status": "FUTURE_PHASE",
+      "Next_Action": "Establish non-private baseline first"
+    }
+  ],
+  "END_TO_END_DIAGNOSTIC_REVIEW_READY": "YES",
+  "new_simulations": 0,
+  "new_training_runs": 0,
+  "protected_period_data_opened": false,
+  "input_hashes": {
+    "results/analysis/2026-10-26_professor_request_level_diagnostics/request_level_diagnostics.parquet": "cc13b7f80e1ba72a9499f62bfb7791499fe77e426c9ac963d9f289f0f8dccc2a",
+    "results/analysis/2026-10-26_professor_request_level_diagnostics/driver_price_gate_counterfactual.json": "ac4f61e8506de16315ad70163aa2a2409b56393cd947d3ee022bfff6873f7528",
+    "data/processed/driver_preferences_seed42.parquet": "e1c41d5bacf542a58605dbd84a94effb845b33125495d591aa5c2a1a0627ecb1",
+    "config/config.yaml": "2250d4fe4c49bb48536aea44bbb978aae579ee2e8ddcfdd1315e9376aff8f85f",
+    "results/analysis/2026-10-19_final_cnn_performance_diagnosis/baseline_comparison.csv": "84ada889e3d4810883966d25bc2672813698ebe917bf364719e09a67c10fa118",
+    "results/analysis/2026-10-19_final_cnn_performance_diagnosis/continued_prediction_summary.csv": "10ed8d3d8f4f02567752394993c497358bedccad4d6ef4521c2f297bfa7ec110",
+    "results/analysis/2026-10-19_final_cnn_performance_diagnosis/continued_demand_quantile_errors.csv": "ea8817f0d43a1f73e3d73cccd101548e046342a40ed954166f6aec90163a32db",
+    "results/analysis/2026-10-25_final_simulator_routing_training/routing_validation_metrics.json": "62bfa9df910aaad11e622c4543d71cf87643a5fe0998a09be7f767acc9962365",
+    "results/analysis/2026-10-26_professor_alignment_pricing_gate/routing_probability_adequacy.json": "6d4934a3fd44b2f01e06d7c8fe8a83e5605d1f5e8df3af0dc5a654fe585975a4",
+    "results/analysis/2026-10-25_final_simulator_routing_training/fedavg_validation.json": "0a0e09009e1a626e286b8e254bc3a1c25b0f9569d9fb6e726250ac6db3eda074",
+    "results/analysis/2026-10-25_final_simulator_routing_training/routing_training_config.json": "7ec7cb79861ef67230dac579b1fad8e6f278f131f6db7841d91d40d81f9a7d53",
+    "results/analysis/2026-10-25_final_nonprivate_pricing_training/training_status.json": "cb3d05b3943f9ba3c0544325bcf6de320036eefb6bf3530d9b18c5040e272045",
+    "results/analysis/2026-10-26_pricing_training_adequacy/training_cadence.json": "e94e22d9b17e903b3d3ca251ffb4ecf8a1da561665c93416fb0dd252458b9e45",
+    "results/analysis/2026-10-26_pricing_training_adequacy/march16_greedy_diagnostic.json": "665d51f038fc8d7699af1c7f6998e46b79bbdd1709af630b361dc309348894f8",
+    "results/analysis/2026-10-26_pricing_training_adequacy/march16_fixed100_comparator.json": "6e5c21db5f019a53099f3923acacf1cf152b7306ef66f33a789e8dfc9d47beac"
+  }
+}

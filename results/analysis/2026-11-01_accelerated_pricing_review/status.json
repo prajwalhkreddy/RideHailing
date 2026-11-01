@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE",
+  "pid": 38841,
+  "episode": 25,
+  "slots_completed": 16,
+  "replay_size": 100000,
+  "optimizer_updates": 51072,
+  "epsilon": 0.050000000000000044,
+  "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/accelerated_review_phase_seed42",
+  "checkpoint": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/accelerated_review_phase_seed42/episode_0025/checkpoint_0016_a5d3a7f9",
+  "review_phase": true,
+  "updates_per_slot": 128,
+  "resume": false,
+  "protected_dates_blocked": true
+}

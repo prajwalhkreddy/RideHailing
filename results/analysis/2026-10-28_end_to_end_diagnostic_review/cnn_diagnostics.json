@@ -1,0 +1,55 @@
+{
+  "classification": "MODEL_EFFECTIVENESS_LIMITATION",
+  "status": "CNN_VALID_BUT_HISTORICAL_BASELINE_SUPERIOR",
+  "epoch": 200,
+  "metrics": {
+    "MAE": 5.242741437019256,
+    "RMSE": 18.29280020640285,
+    "R2": 0.9610066924742178
+  },
+  "historical_baseline": {
+    "MAE": 3.3145281355210443,
+    "RMSE": 16.271804138733728,
+    "R2": 0.969146736451782
+  },
+  "mean_actual": 18.1574970657277,
+  "mean_prediction": 17.016261367352683,
+  "relative_RMSE_percentage": 100.74516405088967,
+  "mean_bias": -1.1412356983750165,
+  "direction": "Aggregate underprediction; zero-demand cells overpredicted.",
+  "highest_error_demand_bands": [
+    {
+      "demand_band": "(724.31,1764]",
+      "model": "CNN",
+      "N": 505,
+      "observed_mean": 1001.4019801980198,
+      "predicted_mean": 911.9165730391398,
+      "bias": -89.48540715887995,
+      "MAE": 141.22042465965347,
+      "RMSE": 180.72310573977563
+    },
+    {
+      "demand_band": "(228,724.31]",
+      "model": "CNN",
+      "N": 2014,
+      "observed_mean": 423.019364448858,
+      "predicted_mean": 411.34933600856624,
+      "bias": -11.670028440291738,
+      "MAE": 62.416690947637775,
+      "RMSE": 83.72462957412868
+    },
+    {
+      "demand_band": "(53,228]",
+      "model": "CNN",
+      "N": 2470,
+      "observed_mean": 99.1919028340081,
+      "predicted_mean": 97.92424045497108,
+      "bias": -1.2676623790370307,
+      "MAE": 22.322387571952603,
+      "RMSE": 29.776103317475897
+    }
+  ],
+  "highest_error_grids": "NOT YET AVAILABLE",
+  "highest_error_times": "NOT YET AVAILABLE",
+  "availability": "Existing grid-error table is epoch100, not final epoch200. No final spatial/time aggregate identified in bounded report inventory. Protected-period forecasts were not opened; only previously published aggregate diagnostics reused."
+}

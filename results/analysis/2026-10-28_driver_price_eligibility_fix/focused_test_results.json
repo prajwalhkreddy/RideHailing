@@ -1,0 +1,8 @@
+{
+  "command": "python -B -m unittest tests.test_driver_price_gate tests.test_dispatch -q",
+  "tests": 20,
+  "passed": 20,
+  "failed": 0,
+  "scope": "12 price-gate tests plus 8 existing dispatch tests; no simulator periods or model execution",
+  "fixture_development": "Initial test requests lacked required audit fields; corrected fixture construction before final passing run."
+}

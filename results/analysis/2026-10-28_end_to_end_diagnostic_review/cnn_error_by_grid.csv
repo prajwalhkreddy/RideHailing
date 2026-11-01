@@ -1,0 +1,2 @@
+grid_id,MAE,RMSE,status,reason
+,,,NOT YET AVAILABLE,Final epoch200 aggregates not retained in inspected summaries; no protected-period forecast access.

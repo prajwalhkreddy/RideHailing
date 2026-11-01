@@ -1,0 +1,416 @@
+{
+  "classification": "MODEL_EFFECTIVENESS_LIMITATION",
+  "artifact_status": "PRE_CORRECTION_PROVENANCE",
+  "total_N": 3257840,
+  "train_N": 2618033,
+  "validation_N": 639807,
+  "train_period": "March1\u201312",
+  "validation_period": "March13\u201315",
+  "network": [
+    169,
+    64,
+    32,
+    9
+  ],
+  "metrics": {
+    "central": {
+      "N": 639807,
+      "accuracy": 0.9218545592655285,
+      "cross_entropy": 0.4070892715786635,
+      "majority_label_accuracy": 0.938992539937825,
+      "valid_action_prediction_rate": 1.0,
+      "invalid_action_count": 0,
+      "action_support": [
+        600774,
+        3304,
+        5564,
+        3391,
+        1691,
+        12146,
+        3471,
+        4730,
+        4736
+      ],
+      "predicted_counts": [
+        620531,
+        30,
+        0,
+        0,
+        0,
+        11834,
+        5098,
+        801,
+        1513
+      ],
+      "precision": [
+        0.9448278973975515,
+        0.5666666666666667,
+        0.0,
+        0.0,
+        0.0,
+        0.1172046645259422,
+        0.11102393095331503,
+        0.9088639200998752,
+        0.5393258426966292
+      ],
+      "recall": [
+        0.9758994230775633,
+        0.005145278450363196,
+        0.0,
+        0.0,
+        0.0,
+        0.11419397332455129,
+        0.1630653990204552,
+        0.15391120507399578,
+        0.17229729729729729
+      ],
+      "F1": [
+        0.9601123388506556,
+        0.010197960407918417,
+        0.0,
+        0.0,
+        0.0,
+        0.11567973311092576,
+        0.13210409616057883,
+        0.26324353643102516,
+        0.2611617858857417
+      ],
+      "STAY_prediction_share": 0.9698721645746295,
+      "prediction_entropy": 0.16511090942048215,
+      "zero_prediction_actions": [
+        2,
+        3,
+        4
+      ],
+      "ROUTING_EFFECTIVENESS_CONCERN": true,
+      "STAY_true_share": 0.938992539937825,
+      "largest_predicted_class_share": 0.9698721645746295,
+      "material_supported_zero_prediction_actions": []
+    },
+    "final_fedavg": {
+      "N": 639807,
+      "accuracy": 0.8536730607823922,
+      "cross_entropy": 0.538559741855583,
+      "majority_label_accuracy": 0.938992539937825,
+      "valid_action_prediction_rate": 1.0,
+      "invalid_action_count": 0,
+      "action_support": [
+        600774,
+        3304,
+        5564,
+        3391,
+        1691,
+        12146,
+        3471,
+        4730,
+        4736
+      ],
+      "predicted_counts": [
+        585036,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        54765,
+        0
+      ],
+      "precision": [
+        0.933470760773696,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.001259928786633799,
+        0.0
+      ],
+      "recall": [
+        0.9090173675958014,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0002469948954388276,
+        0.0,
+        0.014587737843551798,
+        0.0
+      ],
+      "F1": [
+        0.9210817921926784,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0004937458854509546,
+        0.0,
+        0.0023195226489620972,
+        0.0
+      ],
+      "STAY_prediction_share": 0.9143944970905289,
+      "prediction_entropy": 0.2923457857929433,
+      "zero_prediction_actions": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "ROUTING_EFFECTIVENESS_CONCERN": true,
+      "STAY_true_share": 0.938992539937825,
+      "largest_predicted_class_share": 0.9143944970905289,
+      "material_supported_zero_prediction_actions": []
+    },
+    "synthetic_provenance": {
+      "accuracy": 0.2923,
+      "cross_entropy": 1.82917,
+      "majority": 0.3363,
+      "STAY_prediction_share": 0.6144,
+      "comparison": "different dataset; no direct superiority inference"
+    }
+  },
+  "probability_adequacy": {
+    "validation_N": 639807,
+    "train_N": 2618033,
+    "train_period": "March1\u201312",
+    "validation_period": "March13\u201315",
+    "training_action_prior": [
+      0.9374033864355414,
+      0.0106667868586836,
+      0.0028502314523919294,
+      0.009473906555035784,
+      0.00482079484865164,
+      0.012133536895829808,
+      0.005742861148045116,
+      0.01073783256360787,
+      0.00617066324221276
+    ],
+    "true_validation_distribution": [
+      0.938992539937825,
+      0.005164057286025317,
+      0.00869637249983198,
+      0.005300035792043538,
+      0.0026429845250208264,
+      0.0189838498172105,
+      0.00542507349872696,
+      0.007392854407657309,
+      0.0074022322356585655
+    ],
+    "baseline": "Training-label empirical prior, invalid actions zeroed and renormalized separately for each validation mask. No smoothing needed: all training labels supported.",
+    "Brier_definition": "mean sum_k(p_k-y_k)^2, no divide by class count",
+    "fedavg": {
+      "cross_entropy": 0.538559741855583,
+      "multiclass_Brier_sum_over_classes": 0.2458809862428875,
+      "mean_probability": [
+        0.8829220154414318,
+        0.0046720874276599215,
+        0.0015827869553946632,
+        0.00814597873973847,
+        0.00575089088694894,
+        0.009097167019162048,
+        0.0056413095752280784,
+        0.08120886255167821,
+        0.000978901402755965
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.4,
+          "upper": 0.5,
+          "N": 14,
+          "mean_confidence": 0.468557366002147,
+          "accuracy": 0.35714285714285715
+        },
+        {
+          "lower": 0.5,
+          "upper": 0.6,
+          "N": 18,
+          "mean_confidence": 0.5708984317396104,
+          "accuracy": 0.0
+        },
+        {
+          "lower": 0.6,
+          "upper": 0.7,
+          "N": 1075,
+          "mean_confidence": 0.6750190077870931,
+          "accuracy": 0.7032558139534884
+        },
+        {
+          "lower": 0.7,
+          "upper": 0.8,
+          "N": 2319,
+          "mean_confidence": 0.771371153464161,
+          "accuracy": 0.3514445881845623
+        },
+        {
+          "lower": 0.8,
+          "upper": 0.9,
+          "N": 82489,
+          "mean_confidence": 0.8644764677978297,
+          "accuracy": 0.2876383517802374
+        },
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "N": 553892,
+          "mean_confidence": 0.959994725125356,
+          "accuracy": 0.9404053497793794
+        }
+      ],
+      "top_label_ECE": 0.09291739210061231
+    },
+    "training_prior": {
+      "cross_entropy": 0.3520592919240443,
+      "multiclass_Brier_sum_over_classes": 0.11762113534739826,
+      "mean_probability": [
+        0.9419478752567496,
+        0.009406468685443137,
+        0.0024741956089933325,
+        0.008635839745329318,
+        0.004411377610722064,
+        0.012185909873460457,
+        0.005584940522542315,
+        0.010206380635554207,
+        0.005147012061215137
+      ],
+      "calibration_bins": [
+        {
+          "lower": 0.9,
+          "upper": 1.0,
+          "N": 639807,
+          "mean_confidence": 0.9419478752567404,
+          "accuracy": 0.938992539937825
+        }
+      ],
+      "top_label_ECE": 0.002955335318915342
+    },
+    "ROUTING_PROBABILITIES_INFORMATIVE": "NO",
+    "interpretation": "Directional joint CE/Brier comparison; top-label10-bin calibration descriptive, not post-hoc calibration or tuning."
+  },
+  "aggregation": {
+    "rounds": 5,
+    "sample_weighting": "PASS all tensors",
+    "zero_sample_excluded": 0,
+    "checkpoint_reload": "PASS",
+    "final_metrics": {
+      "N": 639807,
+      "accuracy": 0.8536730607823922,
+      "cross_entropy": 0.538559741855583,
+      "majority_label_accuracy": 0.938992539937825,
+      "valid_action_prediction_rate": 1.0,
+      "invalid_action_count": 0,
+      "action_support": [
+        600774,
+        3304,
+        5564,
+        3391,
+        1691,
+        12146,
+        3471,
+        4730,
+        4736
+      ],
+      "predicted_counts": [
+        585036,
+        0,
+        0,
+        0,
+        0,
+        6,
+        0,
+        54765,
+        0
+      ],
+      "precision": [
+        0.933470760773696,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.5,
+        0.0,
+        0.001259928786633799,
+        0.0
+      ],
+      "recall": [
+        0.9090173675958014,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0002469948954388276,
+        0.0,
+        0.014587737843551798,
+        0.0
+      ],
+      "F1": [
+        0.9210817921926784,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0004937458854509546,
+        0.0,
+        0.0023195226489620972,
+        0.0
+      ],
+      "STAY_prediction_share": 0.9143944970905289,
+      "prediction_entropy": 0.2923457857929433,
+      "zero_prediction_actions": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "ROUTING_EFFECTIVENESS_CONCERN": true
+    },
+    "input_dimension": 169,
+    "output_dimension": 9,
+    "probabilities_finite": true,
+    "invalid_action_violations": 0,
+    "active_participants_each_round": 5000,
+    "training_examples_each_round": 2618033
+  },
+  "configuration": {
+    "optimizer": "Adam",
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "seed": 42,
+    "central_epochs": 1,
+    "central_epoch_rationale": "existing one-epoch supervised default; one chronological pass, no search",
+    "local_epochs": 1,
+    "fedavg_rounds": 5,
+    "local_optimizer": "fresh Adam state per driver each round",
+    "sample_weighted": true,
+    "client": "driver_id",
+    "normalization": "unchanged",
+    "rebalance": false,
+    "training_order": "chronological; no shuffle",
+    "selection": "final fifth global FedAvg aggregate; central model reported separately",
+    "material_support_threshold": 0.01,
+    "catastrophic_collapse_rule": "largest prediction share>90% while corresponding true share<90%",
+    "cache": "disk-mapped arrays; one source partition in memory during validation",
+    "input_dimension": 169,
+    "hidden_units": [
+      64,
+      32
+    ],
+    "output_dimension": 9,
+    "action_order": [
+      "STAY",
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ]
+  },
+  "zero_sample_note": "Exclusion validation reported; zero zero-sample clients in this run."
+}

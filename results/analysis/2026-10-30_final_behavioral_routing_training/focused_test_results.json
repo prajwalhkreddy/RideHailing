@@ -1,0 +1,8 @@
+{
+  "tests_run": 6,
+  "passed": 6,
+  "failed": 0,
+  "new_training_tests": 4,
+  "existing_sample_weighting_and_zero_client_tests": 2,
+  "status": "PASS"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "pid": 36160,
+  "writer_lock_held": true,
+  "initial_state": {
+    "status": "EPISODE_INITIALIZED",
+    "pid": 36160,
+    "episode": 1,
+    "slots_completed": 0,
+    "replay_size": 0,
+    "optimizer_updates": 0,
+    "epsilon": 1.0,
+    "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+    "namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42",
+    "checkpoint": null,
+    "resume": false
+  },
+  "FINAL_NONPRIVATE_PRICING_TRAINING_LAUNCHED": "YES"
+}

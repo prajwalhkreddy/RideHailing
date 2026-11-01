@@ -1,0 +1,204 @@
+{
+  "classification": "ACCELERATED_REVIEW_PHASE_DIAGNOSTIC",
+  "schedule_classification": "REVIEW_DIAGNOSTIC_ACCELERATION",
+  "episodes": 25,
+  "slots_per_episode": 16,
+  "total_slots": 400,
+  "updates_per_slot": 128,
+  "starts": [
+    {
+      "episode": 1,
+      "start": "2026-03-02 07:00:00",
+      "start_slot": 62,
+      "environment_seed": 2684470948
+    },
+    {
+      "episode": 2,
+      "start": "2026-03-12 08:30:00",
+      "start_slot": 545,
+      "environment_seed": 4091952314
+    },
+    {
+      "episode": 3,
+      "start": "2026-03-10 14:30:00",
+      "start_slot": 461,
+      "environment_seed": 233227757
+    },
+    {
+      "episode": 4,
+      "start": "2026-03-07 10:30:00",
+      "start_slot": 309,
+      "environment_seed": 3276785861
+    },
+    {
+      "episode": 5,
+      "start": "2026-03-07 08:30:00",
+      "start_slot": 305,
+      "environment_seed": 3644269654
+    },
+    {
+      "episode": 6,
+      "start": "2026-03-13 14:30:00",
+      "start_slot": 605,
+      "environment_seed": 1206282609
+    },
+    {
+      "episode": 7,
+      "start": "2026-03-02 06:00:00",
+      "start_slot": 60,
+      "environment_seed": 3543069911
+    },
+    {
+      "episode": 8,
+      "start": "2026-03-11 05:30:00",
+      "start_slot": 491,
+      "environment_seed": 3479688010
+    },
+    {
+      "episode": 9,
+      "start": "2026-03-03 23:00:00",
+      "start_slot": 142,
+      "environment_seed": 877132087
+    },
+    {
+      "episode": 10,
+      "start": "2026-03-02 09:00:00",
+      "start_slot": 66,
+      "environment_seed": 1244265337
+    },
+    {
+      "episode": 11,
+      "start": "2026-03-08 17:30:00",
+      "start_slot": 371,
+      "environment_seed": 2740186692
+    },
+    {
+      "episode": 12,
+      "start": "2026-03-15 07:30:00",
+      "start_slot": 687,
+      "environment_seed": 3884972972
+    },
+    {
+      "episode": 13,
+      "start": "2026-03-11 19:00:00",
+      "start_slot": 518,
+      "environment_seed": 829139639
+    },
+    {
+      "episode": 14,
+      "start": "2026-03-12 04:00:00",
+      "start_slot": 536,
+      "environment_seed": 2545567356
+    },
+    {
+      "episode": 15,
+      "start": "2026-03-11 12:30:00",
+      "start_slot": 505,
+      "environment_seed": 2718398101
+    },
+    {
+      "episode": 16,
+      "start": "2026-03-12 13:00:00",
+      "start_slot": 554,
+      "environment_seed": 176092387
+    },
+    {
+      "episode": 17,
+      "start": "2026-03-08 12:30:00",
+      "start_slot": 361,
+      "environment_seed": 3528048386
+    },
+    {
+      "episode": 18,
+      "start": "2026-03-02 21:00:00",
+      "start_slot": 90,
+      "environment_seed": 569531098
+    },
+    {
+      "episode": 19,
+      "start": "2026-03-13 08:00:00",
+      "start_slot": 592,
+      "environment_seed": 1337295874
+    },
+    {
+      "episode": 20,
+      "start": "2026-03-07 14:30:00",
+      "start_slot": 317,
+      "environment_seed": 612016888
+    },
+    {
+      "episode": 21,
+      "start": "2026-03-08 08:00:00",
+      "start_slot": 352,
+      "environment_seed": 232150720
+    },
+    {
+      "episode": 22,
+      "start": "2026-03-06 10:30:00",
+      "start_slot": 261,
+      "environment_seed": 2324106676
+    },
+    {
+      "episode": 23,
+      "start": "2026-03-03 16:00:00",
+      "start_slot": 128,
+      "environment_seed": 1658700540
+    },
+    {
+      "episode": 24,
+      "start": "2026-03-14 14:30:00",
+      "start_slot": 653,
+      "environment_seed": 609942288
+    },
+    {
+      "episode": 25,
+      "start": "2026-03-12 11:30:00",
+      "start_slot": 551,
+      "environment_seed": 3405943863
+    }
+  ],
+  "initialization": "FRESH_SEED42_NOT_FINAL_CHECKPOINT",
+  "architecture": [
+    13,
+    64,
+    64,
+    7
+  ],
+  "actions": [
+    0.85,
+    0.9,
+    0.95,
+    1,
+    1.05,
+    1.1,
+    1.15
+  ],
+  "gamma": 0.99,
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "loss": "Huber",
+  "replay_capacity": 100000,
+  "warmup": 1000,
+  "target_tau": 0.005,
+  "seed": 42,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.05,
+  "epsilon_decay_updates": 50000,
+  "development_episodes": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "development_start": "2026-03-16 00:00",
+  "development_slots": 4,
+  "development_seed": 424242,
+  "compiled_updates": false,
+  "protected_dates": "March17\u201331: no training/evaluation windows; guarded before simulator access",
+  "final_protocol": "UNCHANGED:500x16x8",
+  "model_namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/accelerated_review_phase_seed42",
+  "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a"
+}

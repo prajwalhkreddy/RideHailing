@@ -1,0 +1,3259 @@
+{
+  "status": "GRID_SLOT_IDLE_SUPPLY_NOT_RETAINED",
+  "classification": "PARTIALLY_COMPLETE",
+  "imbalance": "NOT YET AVAILABLE",
+  "largest_deficit_excess": "NOT YET AVAILABLE",
+  "grid_slot_requests_assignments": [
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 0,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 1,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 8,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 14,
+      "requests": 3,
+      "assignments": 2,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 17,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 20,
+      "requests": 7,
+      "assignments": 5,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 21,
+      "requests": 15,
+      "assignments": 12,
+      "passenger_rejections": 3,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 24,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 27,
+      "requests": 62,
+      "assignments": 23,
+      "passenger_rejections": 39,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 28,
+      "requests": 42,
+      "assignments": 21,
+      "passenger_rejections": 21,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 30,
+      "requests": 16,
+      "assignments": 16,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 31,
+      "requests": 38,
+      "assignments": 36,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 34,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 35,
+      "requests": 32,
+      "assignments": 15,
+      "passenger_rejections": 17,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 36,
+      "requests": 236,
+      "assignments": 99,
+      "passenger_rejections": 137,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 37,
+      "requests": 62,
+      "assignments": 21,
+      "passenger_rejections": 41,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 40,
+      "requests": 32,
+      "assignments": 32,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 44,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 45,
+      "requests": 16,
+      "assignments": 12,
+      "passenger_rejections": 4,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 46,
+      "requests": 210,
+      "assignments": 83,
+      "passenger_rejections": 127,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 47,
+      "requests": 12,
+      "assignments": 10,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 54,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 55,
+      "requests": 5,
+      "assignments": 1,
+      "passenger_rejections": 4,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 58,
+      "requests": 10,
+      "assignments": 5,
+      "passenger_rejections": 5,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 59,
+      "requests": 21,
+      "assignments": 15,
+      "passenger_rejections": 6,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 60,
+      "requests": 13,
+      "assignments": 10,
+      "passenger_rejections": 3,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 67,
+      "requests": 3,
+      "assignments": 0,
+      "passenger_rejections": 3,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 70,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 71,
+      "requests": 8,
+      "assignments": 6,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 72,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 74,
+      "requests": 12,
+      "assignments": 10,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 75,
+      "requests": 14,
+      "assignments": 14,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 76,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 78,
+      "requests": 6,
+      "assignments": 5,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 80,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 81,
+      "requests": 6,
+      "assignments": 5,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 82,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 84,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 89,
+      "requests": 12,
+      "assignments": 11,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 90,
+      "requests": 15,
+      "assignments": 15,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 91,
+      "requests": 11,
+      "assignments": 10,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 92,
+      "requests": 6,
+      "assignments": 6,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 98,
+      "requests": 1,
+      "assignments": 0,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 99,
+      "requests": 1,
+      "assignments": 0,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 104,
+      "requests": 13,
+      "assignments": 12,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 105,
+      "requests": 14,
+      "assignments": 14,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 106,
+      "requests": 5,
+      "assignments": 5,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 119,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 121,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 136,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "grid": 139,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 0,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 9,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 10,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 14,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 17,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 20,
+      "requests": 9,
+      "assignments": 6,
+      "passenger_rejections": 3,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 21,
+      "requests": 11,
+      "assignments": 6,
+      "passenger_rejections": 5,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 24,
+      "requests": 8,
+      "assignments": 7,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 27,
+      "requests": 51,
+      "assignments": 26,
+      "passenger_rejections": 25,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 28,
+      "requests": 23,
+      "assignments": 10,
+      "passenger_rejections": 13,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 30,
+      "requests": 9,
+      "assignments": 6,
+      "passenger_rejections": 3,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 31,
+      "requests": 19,
+      "assignments": 19,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 35,
+      "requests": 28,
+      "assignments": 15,
+      "passenger_rejections": 13,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 36,
+      "requests": 185,
+      "assignments": 92,
+      "passenger_rejections": 93,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 37,
+      "requests": 36,
+      "assignments": 8,
+      "passenger_rejections": 28,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 40,
+      "requests": 17,
+      "assignments": 17,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 44,
+      "requests": 3,
+      "assignments": 2,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 45,
+      "requests": 14,
+      "assignments": 7,
+      "passenger_rejections": 7,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 46,
+      "requests": 167,
+      "assignments": 86,
+      "passenger_rejections": 81,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 47,
+      "requests": 14,
+      "assignments": 8,
+      "passenger_rejections": 6,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 50,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 54,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 55,
+      "requests": 2,
+      "assignments": 0,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 58,
+      "requests": 3,
+      "assignments": 2,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 59,
+      "requests": 19,
+      "assignments": 10,
+      "passenger_rejections": 9,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 60,
+      "requests": 11,
+      "assignments": 6,
+      "passenger_rejections": 5,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 63,
+      "requests": 3,
+      "assignments": 0,
+      "passenger_rejections": 3,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 64,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 67,
+      "requests": 3,
+      "assignments": 0,
+      "passenger_rejections": 3,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 70,
+      "requests": 2,
+      "assignments": 0,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 71,
+      "requests": 6,
+      "assignments": 5,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 72,
+      "requests": 6,
+      "assignments": 6,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 74,
+      "requests": 10,
+      "assignments": 10,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 75,
+      "requests": 9,
+      "assignments": 9,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 76,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 78,
+      "requests": 7,
+      "assignments": 7,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 80,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 81,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 82,
+      "requests": 6,
+      "assignments": 5,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 83,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 84,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 85,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 86,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 87,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 89,
+      "requests": 9,
+      "assignments": 8,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 90,
+      "requests": 10,
+      "assignments": 10,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 91,
+      "requests": 7,
+      "assignments": 6,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 92,
+      "requests": 6,
+      "assignments": 4,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 97,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 98,
+      "requests": 5,
+      "assignments": 3,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 99,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 100,
+      "requests": 2,
+      "assignments": 0,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 104,
+      "requests": 6,
+      "assignments": 5,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 105,
+      "requests": 7,
+      "assignments": 6,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 106,
+      "requests": 7,
+      "assignments": 5,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 111,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 112,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 121,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 135,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 136,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "grid": 139,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 0,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 1,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 8,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 10,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 20,
+      "requests": 7,
+      "assignments": 2,
+      "passenger_rejections": 5,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 21,
+      "requests": 7,
+      "assignments": 7,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 24,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 27,
+      "requests": 34,
+      "assignments": 27,
+      "passenger_rejections": 7,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 28,
+      "requests": 11,
+      "assignments": 5,
+      "passenger_rejections": 6,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 30,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 31,
+      "requests": 7,
+      "assignments": 7,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 34,
+      "requests": 2,
+      "assignments": 0,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 35,
+      "requests": 21,
+      "assignments": 14,
+      "passenger_rejections": 7,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 36,
+      "requests": 123,
+      "assignments": 80,
+      "passenger_rejections": 43,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 37,
+      "requests": 24,
+      "assignments": 19,
+      "passenger_rejections": 5,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 40,
+      "requests": 6,
+      "assignments": 6,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 44,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 45,
+      "requests": 11,
+      "assignments": 6,
+      "passenger_rejections": 5,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 46,
+      "requests": 124,
+      "assignments": 90,
+      "passenger_rejections": 34,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 47,
+      "requests": 7,
+      "assignments": 6,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 54,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 55,
+      "requests": 6,
+      "assignments": 2,
+      "passenger_rejections": 4,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 58,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 59,
+      "requests": 13,
+      "assignments": 13,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 60,
+      "requests": 6,
+      "assignments": 5,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 67,
+      "requests": 4,
+      "assignments": 1,
+      "passenger_rejections": 3,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 71,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 72,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 74,
+      "requests": 5,
+      "assignments": 5,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 75,
+      "requests": 5,
+      "assignments": 5,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 78,
+      "requests": 7,
+      "assignments": 7,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 80,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 81,
+      "requests": 8,
+      "assignments": 7,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 82,
+      "requests": 5,
+      "assignments": 5,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 83,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 84,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 89,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 90,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 91,
+      "requests": 4,
+      "assignments": 3,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 92,
+      "requests": 6,
+      "assignments": 4,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 98,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 99,
+      "requests": 1,
+      "assignments": 0,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 104,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 105,
+      "requests": 5,
+      "assignments": 5,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 106,
+      "requests": 5,
+      "assignments": 5,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 119,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 121,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 136,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "grid": 139,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 0,
+      "requests": 3,
+      "assignments": 2,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 1,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 4,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 9,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 10,
+      "requests": 3,
+      "assignments": 2,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 17,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 20,
+      "requests": 5,
+      "assignments": 4,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 21,
+      "requests": 8,
+      "assignments": 4,
+      "passenger_rejections": 4,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 24,
+      "requests": 6,
+      "assignments": 6,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 25,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 27,
+      "requests": 32,
+      "assignments": 18,
+      "passenger_rejections": 14,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 28,
+      "requests": 14,
+      "assignments": 9,
+      "passenger_rejections": 5,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 30,
+      "requests": 5,
+      "assignments": 4,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 31,
+      "requests": 10,
+      "assignments": 10,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 32,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 35,
+      "requests": 17,
+      "assignments": 10,
+      "passenger_rejections": 7,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 36,
+      "requests": 105,
+      "assignments": 59,
+      "passenger_rejections": 46,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 37,
+      "requests": 21,
+      "assignments": 13,
+      "passenger_rejections": 8,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 39,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 40,
+      "requests": 8,
+      "assignments": 8,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 41,
+      "requests": 1,
+      "assignments": 0,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 44,
+      "requests": 3,
+      "assignments": 2,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 45,
+      "requests": 9,
+      "assignments": 8,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 46,
+      "requests": 111,
+      "assignments": 76,
+      "passenger_rejections": 35,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 47,
+      "requests": 9,
+      "assignments": 7,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 50,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 54,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 55,
+      "requests": 2,
+      "assignments": 1,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 58,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 59,
+      "requests": 14,
+      "assignments": 11,
+      "passenger_rejections": 3,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 60,
+      "requests": 8,
+      "assignments": 7,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 63,
+      "requests": 3,
+      "assignments": 1,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 64,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 67,
+      "requests": 3,
+      "assignments": 1,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 71,
+      "requests": 5,
+      "assignments": 4,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 72,
+      "requests": 5,
+      "assignments": 3,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 74,
+      "requests": 6,
+      "assignments": 4,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 75,
+      "requests": 6,
+      "assignments": 6,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 78,
+      "requests": 7,
+      "assignments": 6,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 80,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 81,
+      "requests": 4,
+      "assignments": 3,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 82,
+      "requests": 7,
+      "assignments": 7,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 83,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 84,
+      "requests": 5,
+      "assignments": 5,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 85,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 86,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 87,
+      "requests": 1,
+      "assignments": 1,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 88,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 89,
+      "requests": 6,
+      "assignments": 6,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 90,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 91,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 92,
+      "requests": 6,
+      "assignments": 4,
+      "passenger_rejections": 2,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 97,
+      "requests": 4,
+      "assignments": 4,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 98,
+      "requests": 5,
+      "assignments": 4,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 99,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 100,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 105,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 106,
+      "requests": 7,
+      "assignments": 6,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 111,
+      "requests": 1,
+      "assignments": 0,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 121,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 135,
+      "requests": 2,
+      "assignments": 2,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 136,
+      "requests": 3,
+      "assignments": 2,
+      "passenger_rejections": 1,
+      "accepted_unmatched": 0
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "grid": 139,
+      "requests": 3,
+      "assignments": 3,
+      "passenger_rejections": 0,
+      "accepted_unmatched": 0
+    }
+  ],
+  "assigned_destination_flows": [
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 1,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 3,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 7,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 9,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 10,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 12,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 14,
+      "assigned_trip_destinations": 14
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 15,
+      "assigned_trip_destinations": 5
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 16,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 17,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 20,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 21,
+      "assigned_trip_destinations": 19
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 22,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 23,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 27,
+      "assigned_trip_destinations": 45
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 28,
+      "assigned_trip_destinations": 64
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 29,
+      "assigned_trip_destinations": 5
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 30,
+      "assigned_trip_destinations": 6
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 31,
+      "assigned_trip_destinations": 5
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 35,
+      "assigned_trip_destinations": 9
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 36,
+      "assigned_trip_destinations": 90
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 37,
+      "assigned_trip_destinations": 42
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 38,
+      "assigned_trip_destinations": 11
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 39,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 40,
+      "assigned_trip_destinations": 6
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 41,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 45,
+      "assigned_trip_destinations": 10
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 46,
+      "assigned_trip_destinations": 61
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 47,
+      "assigned_trip_destinations": 12
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 48,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 49,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 50,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 51,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 52,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 53,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 55,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 56,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 58,
+      "assigned_trip_destinations": 10
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 59,
+      "assigned_trip_destinations": 14
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 60,
+      "assigned_trip_destinations": 8
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 61,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 62,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 63,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 64,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 65,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 66,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 68,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 70,
+      "assigned_trip_destinations": 5
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 71,
+      "assigned_trip_destinations": 8
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 72,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 73,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 74,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 75,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 76,
+      "assigned_trip_destinations": 5
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 77,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 78,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 82,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 83,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 85,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 86,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 87,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 88,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 89,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 90,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 96,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 97,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 98,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 99,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 104,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 107,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 108,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 109,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 110,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 111,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 113,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 114,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 118,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 124,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 125,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 127,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:00:00",
+      "destination_grid": 128,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 3,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 4,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 8,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 9,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 10,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 11,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 14,
+      "assigned_trip_destinations": 7
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 15,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 20,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 21,
+      "assigned_trip_destinations": 19
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 22,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 23,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 24,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 25,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 26,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 27,
+      "assigned_trip_destinations": 30
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 28,
+      "assigned_trip_destinations": 59
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 29,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 30,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 31,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 35,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 36,
+      "assigned_trip_destinations": 59
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 37,
+      "assigned_trip_destinations": 51
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 38,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 39,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 41,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 42,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 45,
+      "assigned_trip_destinations": 8
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 46,
+      "assigned_trip_destinations": 56
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 47,
+      "assigned_trip_destinations": 8
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 48,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 49,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 50,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 51,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 52,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 55,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 56,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 58,
+      "assigned_trip_destinations": 10
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 59,
+      "assigned_trip_destinations": 15
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 60,
+      "assigned_trip_destinations": 11
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 61,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 63,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 64,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 65,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 70,
+      "assigned_trip_destinations": 9
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 71,
+      "assigned_trip_destinations": 5
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 72,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 73,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 74,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 75,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 76,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 82,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 83,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 84,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 85,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 87,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 89,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 90,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 91,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 95,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 97,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 98,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 101,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 104,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 108,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 110,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 111,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 112,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 113,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 114,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 118,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 121,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 124,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 125,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 00:30:00",
+      "destination_grid": 128,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 8,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 9,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 10,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 14,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 15,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 16,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 20,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 21,
+      "assigned_trip_destinations": 8
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 27,
+      "assigned_trip_destinations": 23
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 28,
+      "assigned_trip_destinations": 36
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 29,
+      "assigned_trip_destinations": 6
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 30,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 31,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 35,
+      "assigned_trip_destinations": 6
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 36,
+      "assigned_trip_destinations": 81
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 37,
+      "assigned_trip_destinations": 37
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 38,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 39,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 41,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 44,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 45,
+      "assigned_trip_destinations": 5
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 46,
+      "assigned_trip_destinations": 53
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 47,
+      "assigned_trip_destinations": 7
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 48,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 49,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 50,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 51,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 52,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 55,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 58,
+      "assigned_trip_destinations": 17
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 59,
+      "assigned_trip_destinations": 11
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 60,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 61,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 66,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 68,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 70,
+      "assigned_trip_destinations": 7
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 71,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 72,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 74,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 76,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 78,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 80,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 82,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 83,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 84,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 86,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 87,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 88,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 93,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 94,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 95,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 96,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 97,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 98,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 99,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 100,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 104,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 108,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 109,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 110,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 111,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 112,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 113,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 125,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:00:00",
+      "destination_grid": 128,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 4,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 9,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 10,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 11,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 14,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 15,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 16,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 17,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 20,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 21,
+      "assigned_trip_destinations": 14
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 22,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 25,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 27,
+      "assigned_trip_destinations": 26
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 28,
+      "assigned_trip_destinations": 42
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 29,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 30,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 35,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 36,
+      "assigned_trip_destinations": 73
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 37,
+      "assigned_trip_destinations": 32
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 40,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 41,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 45,
+      "assigned_trip_destinations": 7
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 46,
+      "assigned_trip_destinations": 49
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 47,
+      "assigned_trip_destinations": 10
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 48,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 49,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 50,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 51,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 55,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 56,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 58,
+      "assigned_trip_destinations": 7
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 59,
+      "assigned_trip_destinations": 7
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 60,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 61,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 62,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 65,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 66,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 68,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 70,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 71,
+      "assigned_trip_destinations": 7
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 73,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 75,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 76,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 77,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 78,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 82,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 83,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 84,
+      "assigned_trip_destinations": 4
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 85,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 86,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 87,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 88,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 89,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 95,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 97,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 98,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 99,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 100,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 109,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 110,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 111,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 112,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 113,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 118,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 119,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 124,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 125,
+      "assigned_trip_destinations": 1
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 128,
+      "assigned_trip_destinations": 3
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 132,
+      "assigned_trip_destinations": 2
+    },
+    {
+      "slot": "2026-03-16 01:30:00",
+      "destination_grid": 133,
+      "assigned_trip_destinations": 1
+    }
+  ],
+  "entering_leaving_repositioning": "NOT YET AVAILABLE",
+  "qualification": "Request-time local idle counts overlap neighboring grids and occur at different times; they cannot reconstruct grid-slot supply. Destination counts are planned assigned-trip flows, not measured arrivals."
+}

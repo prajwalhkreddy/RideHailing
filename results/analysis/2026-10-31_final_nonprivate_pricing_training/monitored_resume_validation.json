@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checkpoint": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0005/checkpoint_0002_c73ba1cf",
+  "episode": 5,
+  "slot": 2,
+  "replay": 30039,
+  "updates": 520,
+  "epsilon": 0.99012,
+  "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "checks": [
+    "payload hashes",
+    "exact online/target reload",
+    "exact Adam variables",
+    "exact replay contents/RNG",
+    "cursor index4 -> episode5",
+    "two prior slot reports",
+    "completed episode rows1..4 unique",
+    "monitor mutation-free",
+    "exclusive writer lock"
+  ],
+  "episode_metrics_sha256": "a6e62a73bbb42f347b6549120a7382c7d0f3597c07ffb04b44d5e15cd342483c",
+  "monitoring_episodes": [
+    10,
+    25,
+    50,
+    100
+  ],
+  "accelerated_checkpoint_used": false
+}

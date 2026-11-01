@@ -1,0 +1,44 @@
+section,artifact,status,notes
+CNN,results/analysis/2026-10-19_final_cnn_performance_diagnosis/baseline_comparison.csv,CURRENT,Saved aggregate evaluation only; no held-out data opened
+Passenger,results/analysis/2026-10-29_passenger_acceptance_contract_finalization/README.md,CURRENT,"Current empirical runtime, not signed offline ratio"
+Driver/EV,results/analysis/2026-10-29_passenger_acceptance_contract_finalization/march16_combined_validation.json,CURRENT,Separate development contract fixture
+Driver/EV,results/analysis/2026-10-28_driver_price_eligibility_fix/driver_price_gate_validation.json,CURRENT,Gate evidence; historical downstream blockers superseded
+Driver/EV,results/analysis/2026-10-20_final_routing_configuration/routing_configuration.json,CURRENT,Current numeric fields; old README unresolved status superseded
+Routing,results/analysis/2026-10-31_final_routing_freeze_validation/README.md,CURRENT,Authoritative temporal freeze
+Routing,results/analysis/2026-10-31_final_routing_freeze_validation/routing_probability_distribution.csv,CURRENT,"Mean probabilities, not movement frequencies"
+Pricing protocol,results/analysis/2026-10-31_final_pricing_training_protocol/pricing_training_contract.json,CURRENT,500x16x8
+Pricing10,results/analysis/2026-10-31_final_nonprivate_pricing_training/monitoring_episode_0010.json,CURRENT,Saved read-only probe
+Pricing25,results/analysis/2026-10-31_final_nonprivate_pricing_training/monitoring_episode_0025.json,CURRENT,Analysis cutoff
+Development10,models/pricing_dqn/final_nonprivate_multiepisode_seed42/development_episode_0010.json,CURRENT,Rates persisted; raw accepted/rejected counts not persisted
+Development25,models/pricing_dqn/final_nonprivate_multiepisode_seed42/development_episode_0025.json,CURRENT,Rates persisted; raw accepted/rejected counts not persisted
+Accelerated diagnostic,results/analysis/2026-11-01_accelerated_pricing_review/README.md,CURRENT,Diagnostic only
+Stability,results/analysis/2026-11-01_pricing_dqn_stability_diagnosis/README.md,CURRENT,Accelerated evidence; not authoritative25 headline
+Cadence,results/analysis/2026-11-01_pricing_update_cadence_attribution/README.md,CURRENT,Earlier episode5 comparison; not proof of later convergence
+Root,README.md,CURRENT,Current status updated; later historical sections may contain superseded descriptions
+Meeting framework,User-supplied review task,DOCUMENT NOT IDENTIFIED,A–F framework supplied in task; no separately named meeting document could be verified. No claim of document-by-document alignment.
+Routing history,results/analysis/2026-10-30_final_behavioral_routing_training/README.md,SUPERSEDED_FOR_CURRENT_ROUTING_READINESS,Current freeze overrides earlier probability-readiness NO
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0001/checkpoint_0016_81d7c677/simulator.pkl,CURRENT,Completed episode1; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0002/checkpoint_0016_647e14b6/simulator.pkl,CURRENT,Completed episode2; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0003/checkpoint_0016_0bb568af/simulator.pkl,CURRENT,Completed episode3; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0004/checkpoint_0016_fec1047b/simulator.pkl,CURRENT,Completed episode4; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0005/checkpoint_0016_ee1dbd49/simulator.pkl,CURRENT,Completed episode5; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0006/checkpoint_0016_daf819c6/simulator.pkl,CURRENT,Completed episode6; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0007/checkpoint_0016_63b2be14/simulator.pkl,CURRENT,Completed episode7; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0008/checkpoint_0016_5eeb6b56/simulator.pkl,CURRENT,Completed episode8; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0009/checkpoint_0016_ee96f916/simulator.pkl,CURRENT,Completed episode9; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0010/checkpoint_0016_e9452764/simulator.pkl,CURRENT,Completed episode10; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0011/checkpoint_0016_19efb72f/simulator.pkl,CURRENT,Completed episode11; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0012/checkpoint_0016_1b8ef7e6/simulator.pkl,CURRENT,Completed episode12; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0013/checkpoint_0016_7acfa9c7/simulator.pkl,CURRENT,Completed episode13; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0014/checkpoint_0016_77114bcb/simulator.pkl,CURRENT,Completed episode14; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0015/checkpoint_0016_4144fdf5/simulator.pkl,CURRENT,Completed episode15; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0016/checkpoint_0016_053bac2f/simulator.pkl,CURRENT,Completed episode16; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0017/checkpoint_0016_0fd0a6a5/simulator.pkl,CURRENT,Completed episode17; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0018/checkpoint_0016_8adc04b2/simulator.pkl,CURRENT,Completed episode18; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0019/checkpoint_0016_29c1854f/simulator.pkl,CURRENT,Completed episode19; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0020/checkpoint_0016_73f5d05d/simulator.pkl,CURRENT,Completed episode20; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0021/checkpoint_0016_ecedfdbd/simulator.pkl,CURRENT,Completed episode21; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0022/checkpoint_0016_3c5634cc/simulator.pkl,CURRENT,Completed episode22; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0023/checkpoint_0016_b9e88f4e/simulator.pkl,CURRENT,Completed episode23; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0024/checkpoint_0016_ae9edfc5/simulator.pkl,CURRENT,Completed episode24; only saved slot reports/counters aggregated
+Pricing operational aggregation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0025/checkpoint_0016_fb2fce6a/simulator.pkl,CURRENT,Completed episode25; only saved slot reports/counters aggregated

@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "checks": {
+    "capacity": true,
+    "shapes": true,
+    "actions": true,
+    "finite": true,
+    "done_boolean": true,
+    "nonnegative_states": true,
+    "routing_probabilities": true,
+    "terminal_copy": true,
+    "payload_hashes": true
+  },
+  "N": 100000,
+  "done_count": 5684,
+  "metadata_fields": [
+    "version",
+    "state_dim",
+    "action_dim",
+    "actions",
+    "features",
+    "config",
+    "training_steps",
+    "rng_state",
+    "replay_rng_state"
+  ],
+  "chronology": "FIFO insertion order only; no episode/slot/OD IDs or timestamps in replay",
+  "optimizer_updates": 51072
+}

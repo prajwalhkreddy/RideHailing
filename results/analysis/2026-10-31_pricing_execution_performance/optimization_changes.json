@@ -1,0 +1,9 @@
+{
+  "status": "STOPPED_AT_USER_DIRECTION",
+  "compiled_update_small_fixture": "Exact weights after eight updates",
+  "end_to_end_equivalence_accepted": false,
+  "activated_in_final_training": false,
+  "final_protocol_changed": false,
+  "recommendation": "SEPARATE_ACCELERATED_REVIEW_PHASE_PROTOCOL",
+  "further_benchmarks_authorized": false
+}

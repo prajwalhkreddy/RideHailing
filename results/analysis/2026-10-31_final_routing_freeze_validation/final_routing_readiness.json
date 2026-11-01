@@ -1,0 +1,17 @@
+{
+  "FINAL_ROUTING_MODEL_FROZEN": "YES",
+  "ROUTING_READY_FOR_PRICING": "YES",
+  "metrics": {
+    "CE": 0.2916579659117931,
+    "Brier": 0.09305395390636356,
+    "ECE": 0.015838034523733273
+  },
+  "checkpoint": "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras",
+  "sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "qualification": "MODEST / UNCERTAIN BUT POSITIVE",
+  "nonstay_signal": "INCONCLUSIVE",
+  "limitations": "WeaknonSTAYtop1; nonSTAY subgroup loss qualification retained. No evidence of invalid/constantvector; subgroup weakness doesnot byitself negate aggregatevector adequacy underrequested gate.",
+  "next_action": "FINAL_PRICING_DQN_TRAINING_PROTOCOL_FREEZE",
+  "next_action_executed": false,
+  "March17_31_untouched": true
+}

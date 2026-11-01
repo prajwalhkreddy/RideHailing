@@ -1,0 +1,46 @@
+{
+  "namespace": "data/processed/routing_experiences_mar01_mar15_2026_final_behavioral",
+  "start": "2026-03-01 00:00",
+  "last_slot": "2026-03-15 23:30",
+  "completion_boundary": "2026-03-16 00:00",
+  "slots": 720,
+  "seed": 42,
+  "pricing_factor": 1.0,
+  "pricing_replay": 0,
+  "pricing_optimizer_updates": 0,
+  "checkpoint_every_slots": 8,
+  "extra_checkpoints": [
+    "day boundary",
+    "completion",
+    "safe SIGINT/SIGTERM"
+  ],
+  "fleet": 5000,
+  "grid": 142,
+  "raster": [
+    16,
+    16
+  ],
+  "routing_state": 169,
+  "mask": 9,
+  "actions": [
+    "STAY",
+    "N",
+    "NE",
+    "E",
+    "SE",
+    "S",
+    "SW",
+    "W",
+    "NW"
+  ],
+  "labels": [
+    "REPOSITION",
+    "EV_CHARGING_NEXT_HOP"
+  ],
+  "passenger": "EMPIRICAL_WITH_REPLACEMENT",
+  "epsilon": "abs(Delta_D/Delta_P)",
+  "P_max": "P_base*(1+Delta_D/epsilon)",
+  "driver_gate": "P_dispatch >= driver.price_preference",
+  "EV_contract": "Unchanged; H_i_max10min; post-movement E_after >= minimum station-route energy(destination), equality allowed, no added margin",
+  "no_training": true
+}

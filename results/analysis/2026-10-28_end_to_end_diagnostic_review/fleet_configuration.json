@@ -1,0 +1,37 @@
+{
+  "total_fleet": 5000,
+  "EV_count": 5000,
+  "non_EV_count": 0,
+  "EV_percentage": 100,
+  "source": "ProductionExperiment defaults to 5000 and initialize_ev_fleet for every vehicle; all profiles validated as EV-capable.",
+  "energy": {
+    "battery_capacity_kwh": 75.0,
+    "initial_energy_kwh": 60.0,
+    "minimum_energy_kwh": 7.5,
+    "consumption_rate_kwh_per_km": 0.15,
+    "charging_power_kw": 30.0,
+    "charging_efficiency": 0.9,
+    "charging_release_energy_kwh": 75.0,
+    "mean_initial_soc": 0.5,
+    "initial_soc_std": 0.05,
+    "initial_soc_min": 0.5,
+    "initial_soc_max": 0.7,
+    "charging_trigger_soc": 0.2
+  },
+  "E_min_configured_kwh": 7.5,
+  "operational_charging_trigger_kwh": 15.0,
+  "H_i_max_minutes": {
+    "count": 5000,
+    "mean": 10.0,
+    "sample_SD": 0.0,
+    "min": 10.0,
+    "P10": 10.0,
+    "P25": 10.0,
+    "median": 10.0,
+    "P75": 10.0,
+    "P90": 10.0,
+    "P95": 10.0,
+    "max": 10.0
+  },
+  "station_rule": "E_current - E_movement >= minimum station-route energy(destination); equality allowed, no arbitrary additional margin."
+}

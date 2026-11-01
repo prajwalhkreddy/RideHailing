@@ -1,0 +1,19 @@
+{
+  "interpretation": "TEMPORAL_ACCUMULATED_LOCAL_HISTORY",
+  "buffer_capacity": 1000,
+  "batch": "latest32 from bounded localhistory includingcurrent slot",
+  "participation": "only clients contributing current-slot observations",
+  "weighting": "equal eligible client; payload sample_count=1 per main_slot.py and roadmapparagraph204",
+  "optimizer": "persistent client-local Adam moments and iteration acrossslots; modelweights reset fromglobal eachslot",
+  "learning_rate": 0.001,
+  "batch_size": 32,
+  "local_epochs": 1,
+  "initialization_hash": "9e7bc3688a3d9c17eba7abf86a64f78606d6be9694b19d906e367ec108f5b4b0",
+  "source": [
+    "src/routing/learning.py:LocalObservationBuffer.latest/train_for_slot/reset_from_global_weights",
+    "src/simulation/main_slot.py:235\u2013259",
+    "Complete_Hierarchical_RL_Implementation_Roadmap_CNN_Updated.docx paragraphs187\u2013215"
+  ],
+  "privacy_boundary": "Single-process offline emulation of private clientstores; aggregator receives onlyweights/unitcounts. No distributedprivacy guarantee; no privatefeatures added.",
+  "execution": "Independent client models computed in batched tensoroperations; focused numerical equivalence test against KerasAdam required."
+}

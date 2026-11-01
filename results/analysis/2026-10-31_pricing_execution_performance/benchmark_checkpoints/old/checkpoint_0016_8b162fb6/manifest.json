@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "slots": 16,
+  "timestamp": "2026-03-13 22:30:00",
+  "routing": {
+    "path": "/Users/prajwalhk/Keerthi/Implementation/models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras",
+    "sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+    "inference_only": true
+  },
+  "reachability": "EV_POST_MOVEMENT_STATION_REACHABILITY",
+  "config": {
+    "gamma": 0.99,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "replay_capacity": 100000,
+    "minimum_replay_size": 1000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 50000,
+    "soft_target_tau": 0.005,
+    "seed": 42
+  },
+  "optimizer_steps": 648,
+  "replay_size": 39166,
+  "epsilon": 0.987688,
+  "initialization": "FRESH_SEED_42",
+  "files": {
+    "simulator.pkl": "97a28e2bdfd6401cc13ad2dc258e51339bda6ffe641beb43f085353e5850508f",
+    "dqn/replay.npz": "ca1c28eb9600fdb936ef9038a2c8dac1aad5584855c6f9616e3d98fbfabdd827",
+    "dqn/checkpoint.json": "2af73cde93ac1804aea0f9567c49f524d5b990bb54c2958495ba4e86f49b5ef4",
+    "dqn/target.keras": "ef3c61f928e34b1f0639a3c13a837d9e45081c1f88e9de51b6a2c195583da071",
+    "dqn/online.keras": "2a20004dda3040d6cb3eb415982dbe1ffdc037d3090074a53d22cadd9481ae34"
+  }
+}

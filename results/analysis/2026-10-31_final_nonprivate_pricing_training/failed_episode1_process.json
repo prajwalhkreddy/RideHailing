@@ -1,0 +1,11 @@
+{
+  "pid": 36160,
+  "namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42",
+  "resume": false,
+  "log": "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-10-31_final_nonprivate_pricing_training/training.log",
+  "routing": {
+    "path": "/Users/prajwalhk/Keerthi/Implementation/models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras",
+    "sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+    "inference_only": true
+  }
+}

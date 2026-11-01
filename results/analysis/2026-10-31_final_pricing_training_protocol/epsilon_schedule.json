@@ -1,0 +1,13 @@
+{
+  "start": 1.0,
+  "end": 0.05,
+  "decay_optimizer_updates": 50000,
+  "formula": "1-.95*min(optimizer_updates/50000,1)",
+  "boundaries": {
+    "0": 1,
+    "25000": 0.525,
+    "50000": 0.05,
+    "64000": 0.05
+  },
+  "evaluation": "greedy; no counterdecay orreplayinsertion"
+}

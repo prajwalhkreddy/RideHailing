@@ -1,0 +1,34 @@
+{
+  "CLASS_IMBALANCE": {
+    "severity": "HIGH",
+    "evidence": "STAY95.218614% overall; central MOVE accuracy2.1653%, FedAvg0.2847%;59.62% clients >95%STAY."
+  },
+  "MASK_DOMINANCE": {
+    "severity": "LOW",
+    "evidence": "No observations have only1 or2 actions; all have4\u20139; masking lowers priorCE only0.297645 to0.293259."
+  },
+  "CLIENT_NON_IID": {
+    "severity": "MODERATE",
+    "evidence": "Client trainJS median0.005730/P90 .014324/max .133373 nats;STAY52.69\u2013100%;temporalJS median.011969. Strong majority shared, minority exposure heterogeneous."
+  },
+  "FEDAVG_OPTIMIZATION_DRIFT": {
+    "severity": "HIGH",
+    "evidence": "Protocol-dependent optimization gap: centralCE.269110 versusFedAvg.441746;Brier.093790 versus.178063. RoundBrier improves.223113 to.178063. Sampled round1 paircosmedian.630624, zero negativepairs, cancellationratio.780425; destructive gradient conflict NOT demonstrated. Local5\u201318 fresh-Adamsteps thenweightaveraging differs fromcentral83020continuoussteps. No controlled ablation identifies a single causal mechanism."
+  },
+  "PUBLIC_STATE_LABEL_NONIDENTIFIABILITY": {
+    "severity": "HIGH",
+    "evidence": "P_min,W_max,energy,branch absent. Exact repeatedREPOSITION groups33.4938% conflict, covering39.4620% repeatedobservations; conditionalentropy.071294 nats. Hidden inputs prevent deterministic label reconstruction but do not imply no useful probabilistic signal."
+  },
+  "DECISION_TYPE_MIXTURE": {
+    "severity": "MODERATE",
+    "evidence": "Validationcharging4702/646657=.7271%;FedAvgCE5.162645 vsREPOSITION.407168. Charging contributes8.50% ofFedAvgCE, but REPOSITIONalone also underperformsprior.263084."
+  },
+  "IMPLEMENTATION_MISMATCH": {
+    "value": "NO",
+    "evidence": "Same cachedfeatures/masks/labels, deterministicseed42 architecture, compiledloss,Adam.001,batch32,float32. Fresh localoptimizer andweightaveraging intentional, not accidental discrepancy."
+  },
+  "primary_problem": "FEDERATED_OPTIMIZATION / HETEROGENEITY, with independent state-label information limitation",
+  "CENTRAL_PROBABILITIES_INFORMATIVE": "INCONCLUSIVE",
+  "ROUTING_STATE_CONTRACT_REVIEW_REQUIRED": "YES",
+  "caution": "Central aggregateCE andBrier beatprior and binaryAUROC.848 demonstrates useful held-out ranking signal in publicstate, but pairedslotBrier interval crosseszero; formal combined adequacy remainsINCONCLUSIVE. Root-cause severity is descriptive judgment, not causal identification or fitted threshold."
+}

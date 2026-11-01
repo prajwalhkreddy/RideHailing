@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checkpoint": "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras",
+  "sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "full_validation_reload_logits_bit_identical": true,
+  "full_validation_probabilities_bit_identical": true,
+  "repeated_metrics_identical": true,
+  "original_metrics_reproduced": true,
+  "inference_RNG_independent": true,
+  "training": "existing576slot chronology evidence reused",
+  "validation_updates": 0,
+  "input_dim": 169,
+  "output_dim": 9,
+  "invalid_probabilities_exact_zero": true,
+  "invalid_predictions": 0,
+  "finite": true
+}

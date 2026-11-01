@@ -1,0 +1,22 @@
+{
+  "PASSENGER_ELASTICITY_CONTRACT": "FROZEN",
+  "PASSENGER_RUNTIME_SAMPLER": "EMPIRICAL_BOOTSTRAP",
+  "PASSENGER_ACCEPTANCE_CONTRACT": "FROZEN",
+  "DRIVER_PRICE_ELIGIBILITY": "FROZEN",
+  "decision": "EXPLICIT_PROJECT_DECISION_2026_10_29",
+  "epsilon": "abs(((D-D_base)/D_base)/((P-P_base)/P_base))",
+  "P_max": "P_base*(1+((D-D_base)/D_base)/epsilon)",
+  "offer": "pricing_factor*P_base",
+  "acceptance": "P_dispatch <= P_max",
+  "driver_gate": "P_dispatch >= driver.price_preference",
+  "sampler": "EMPIRICAL_WITH_REPLACEMENT",
+  "source_N": 2812236,
+  "source_period": "2026-01-01 inclusive to2026-01-25 18:30 exclusive",
+  "exclude": "Exact Delta_P0, nonfinite epsilon, epsilon<=0, separately counted per context",
+  "near_zero": "Retain every finite positive observation unchanged; no artificial floor",
+  "fallback": "exact weather/half-hour -> half-hour -> weather -> global",
+  "fallback_bases": "Recompute means within each broader historical population, preserving existing reference semantics",
+  "old_distance_resolution_filter": "Not applied; full source-valid population retained",
+  "artifact": "data/processed/passenger_empirical_absolute_epsilon_2026_01.parquet",
+  "PASSENGER_ACCEPTANCE_CONTRACT_READY": "YES"
+}

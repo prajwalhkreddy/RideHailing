@@ -1,0 +1,14 @@
+{
+  "hashes": {
+    "data/processed/passenger_empirical_absolute_epsilon_2026_01.parquet": "56f4db74dee36eee07a9c1a0e8840f663faff57e43a559c1b20afd68a0eb7751",
+    "data/processed/passenger_empirical_absolute_epsilon_2026_01.json": "7f664b1ffe19fdc1e0d412e3e2fa439ad14d95a02a4b42a0567ea05b67a4db12",
+    "src/pricing/empirical_sensitivity.py": "463769c3f86ed9a6a5a438db57b0117bfdefa175739a4b1a50e9bd820a049c1c",
+    "src/pricing/customer_sensitivity.py": "e383e83ecfc217d138a10ff764833dee5d1406995430239361144082cc66577f",
+    "src/dispatch/dispatch.py": "34178812543967eee87b96fa64f637e3d77292c9ad7c2c496b8cd9bcfe70cd62",
+    "src/simulation/final_production.py": "7c8d91cbebd80af6525c7034980ef6fbd9127fda4959779b36890336aabc2863",
+    "data/processed/driver_preferences_seed42.parquet": "e1c41d5bacf542a58605dbd84a94effb845b33125495d591aa5c2a1a0627ecb1"
+  },
+  "passenger": "FROZEN_EMPIRICAL_WITH_REPLACEMENT",
+  "driver_gate": "FROZEN",
+  "checkpoint_rejects_contract_mismatch": true
+}

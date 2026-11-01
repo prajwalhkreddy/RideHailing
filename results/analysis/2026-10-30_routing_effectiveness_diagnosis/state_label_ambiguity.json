@@ -1,0 +1,55 @@
+{
+  "exact_float32": {
+    "all": {
+      "repeated_groups": 56275,
+      "observations": 3291587,
+      "conflicting_group_percentage": 40.75699689027099,
+      "conflicting_observation_percentage": 45.541952863466776,
+      "conditional_entropy_weighted": 0.08124970955515638,
+      "multiple_client_group_percentage": 100.0
+    },
+    "REPOSITION": {
+      "repeated_groups": 54422,
+      "observations": 3273002,
+      "conflicting_group_percentage": 33.49380765131748,
+      "conflicting_observation_percentage": 39.46196794257993,
+      "conditional_entropy_weighted": 0.07129404883722662,
+      "multiple_client_group_percentage": 100.0
+    },
+    "EV_CHARGING_NEXT_HOP": {
+      "repeated_groups": 3775,
+      "observations": 10044,
+      "conflicting_group_percentage": 0.0,
+      "conflicting_observation_percentage": 0.0,
+      "conditional_entropy_weighted": 0.0,
+      "multiple_client_group_percentage": 100.0
+    }
+  },
+  "rounded_4_decimals": {
+    "all": {
+      "repeated_groups": 52702,
+      "observations": 3291916,
+      "conflicting_group_percentage": 43.448066487040336,
+      "conflicting_observation_percentage": 49.15587153499664,
+      "conditional_entropy_weighted": 0.08132314078542427,
+      "multiple_client_group_percentage": 99.88804978938181
+    },
+    "REPOSITION": {
+      "repeated_groups": 50849,
+      "observations": 3273330,
+      "conflicting_group_percentage": 35.81584691931011,
+      "conflicting_observation_percentage": 39.93721989533594,
+      "conditional_entropy_weighted": 0.07131501738047719,
+      "multiple_client_group_percentage": 99.88397018623768
+    },
+    "EV_CHARGING_NEXT_HOP": {
+      "repeated_groups": 3783,
+      "observations": 10072,
+      "conflicting_group_percentage": 0.0,
+      "conflicting_observation_percentage": 0.0,
+      "conditional_entropy_weighted": 0.0,
+      "multiple_client_group_percentage": 100.0
+    }
+  },
+  "caveat": "64-bit hashes: negligible nonzero collision risk; exact test uses float32 cached representation plus mask. Rounded test uses absolute 0.0001 feature units and is not mathematical equivalence. No mask mixing."
+}

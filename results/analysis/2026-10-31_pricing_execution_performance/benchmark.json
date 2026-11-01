@@ -1,0 +1,8 @@
+{
+  "old_seconds": 848.8329254169948,
+  "optimized_seconds": 775.6794539160328,
+  "speedup": 1.0943088941335823,
+  "estimated_100_hours": 21.54665149766758,
+  "estimated_500_hours": 107.73325748833788,
+  "ready": true
+}

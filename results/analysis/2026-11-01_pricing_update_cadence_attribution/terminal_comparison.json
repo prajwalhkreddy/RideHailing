@@ -1,0 +1,24 @@
+{
+  "final": {
+    "N": 1907,
+    "mean_reward": 26.50354172196378,
+    "median_reward": 18.99776512375682,
+    "mean_Q": 93.63825988769531,
+    "median_Q": 42.663299560546875,
+    "MAE": 73.48090713105854,
+    "P95_absolute_error": 281.08112016881273,
+    "mean_signed_Q_minus_reward": 67.13471943296315
+  },
+  "accelerated_episode25": {
+    "N": 5684,
+    "mean_Q": 7475.138671875,
+    "mean_G": 24.6765329532847,
+    "MAE": 7450.461707079729,
+    "mean_signed_Q_minus_G": 7450.461707079729,
+    "correlation": 0.29214083092461696,
+    "median_Q_over_positive_G": 101.73731955329838
+  },
+  "accelerated_missing_metrics": "Earlier report did not persist terminal median/P95; comparison uses saved mean/MAE without unnecessary recomputation.",
+  "final_cadence_overprediction": "MODERATE",
+  "interpretation": "Mean terminal Q is3.53 times mean reward; imperfect calibration, but MAE73.48 versus7450.46 in review episode25. Descriptive classification, no formal cutoff."
+}

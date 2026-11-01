@@ -1,0 +1,18 @@
+check,status,evidence_scope
+fleet count invariant,PASS,All400 saved slot reports:5000
+valid grid IDs,NOT AVAILABLE,Contract fixture validated; no independent full25-run audit persisted
+valid state dimensionality,PASS,Final protocol13D pricing/169D routing and checkpoint/resume validation
+finite states,PASS,"Saved stability/cadence replay checks; checkpoint-scoped, not exhaustive all25 trajectories"
+finite rewards,PASS,Saved replay checks and finite aggregate slot rewards
+valid actions,PASS,Saved replay checks and seven-action monitoring counts
+no driver-price assignment violation,NOT AVAILABLE,Separate final-contract fixture reports0; no per-assignment full25 audit saved
+no invalid routing action,PASS,Frozen routing validation:0 invalid predictions; scope is routing validation
+energy nonnegative / finite,NOT AVAILABLE,Separate contract fixture PASS; exhaustive25-run persisted audit unavailable
+reachability contract,PASS,Frozen interface and separate validated fixture; not a new full-run verification
+replay integrity,PASS,Saved authoritative checkpoint analysis PASS
+checkpoint/resume integrity,PASS,Saved monitored_resume_validation.json and tests
+routing hash unchanged,PASS,Monitoring/resume evidence identifies frozen hash
+March17–31 protected,PASS,No protected data accessed for this consolidation; saved execution boundaries retained
+accepted/unmatched accounting,PASS,All400 saved slot identities reconcile
+reserve rejection accounting,PASS,Saved completed-episode reserve counters aggregated
+charging-state validity,NOT AVAILABLE,Events/decisions saved; full25 charging-state audit not independently persisted

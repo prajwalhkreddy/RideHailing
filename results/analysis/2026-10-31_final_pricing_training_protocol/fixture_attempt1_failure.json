@@ -1,0 +1,9 @@
+{
+  "status": "INTERRUPTED",
+  "episode": 1,
+  "completed_simulator_slots_before_checkpoint_failure": 8,
+  "checkpoint_committed": false,
+  "error": "Missing episode namespace parent at checkpoint creation",
+  "fix": "Create episode namespace before atomic checkpoint; focused regression added",
+  "remaining_fixture_attempts": 1
+}

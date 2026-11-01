@@ -1,0 +1,11 @@
+{
+  "pid": 36651,
+  "command": [
+    "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python",
+    "-B",
+    "scripts/run_multiepisode_pricing.py",
+    "--launch",
+    "--resume"
+  ],
+  "checkpoint": "episode_0001/checkpoint_0016_1944f2bd"
+}

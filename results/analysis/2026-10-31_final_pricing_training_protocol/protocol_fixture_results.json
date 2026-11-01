@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "reset_preserves_learner_and_replay": true,
+  "interrupted_attempts": 1,
+  "episodes": [
+    {
+      "episode": 2,
+      "start": "2026-03-12 08:30:00",
+      "slots": 16,
+      "replay_start": 0,
+      "replay_end": 6073,
+      "updates": 112,
+      "transitions": 6073,
+      "charging_events": 58,
+      "reset_reproducible": true,
+      "mid_episode_reload": true,
+      "fleet_energy_valid": true,
+      "routing_immutable": true,
+      "passenger_model": "EmpiricalCustomerSensitivityModel"
+    }
+  ],
+  "summaries": [
+    {
+      "episode": 2,
+      "revenue": 160439.8936669632,
+      "assignments": 8252,
+      "requests": 43973,
+      "acceptance_rate": 0.2423760034566666,
+      "fulfillment_rate": 0.7742540814411709,
+      "action_counts": [
+        874,
+        874,
+        904,
+        870,
+        840,
+        858,
+        853
+      ],
+      "mean_abs_Q": 65.73175048828125,
+      "median_abs_Q": 38.4989013671875,
+      "mean_Q_spread": 15.586874961853027,
+      "epsilon": 0.997872,
+      "replay_size": 6073,
+      "optimizer_updates": 112,
+      "mean_loss": 26.795642410005843
+    }
+  ],
+  "final_replay": 6073,
+  "final_optimizer_updates": 112,
+  "epsilon": 0.997872,
+  "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "long_training_launched": false,
+  "focused_tests_passed": 14,
+  "transitions_per_slot": 379.5625,
+  "updates_per_full_warm_episode": 128,
+  "projected_updates_episode500": 63992,
+  "projection": "64,000 minus8 for firstplannedwindow warmup: firstattempt observed497 transitions then1005 cumulatively; remaining slots assumedwarm",
+  "FINAL_PRICING_DQN_PROTOCOL_FROZEN": "YES",
+  "March17_31_untouched": true
+}

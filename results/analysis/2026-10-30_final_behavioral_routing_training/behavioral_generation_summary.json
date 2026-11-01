@@ -1,0 +1,227 @@
+{
+  "requests": 1705916,
+  "accepted": 421985,
+  "rejected": 1283931,
+  "assignments": 262478,
+  "accepted_unmatched": 159507,
+  "price_ineligible_candidate_count": 210821707,
+  "requests_with_any_price_ineligible_candidate": 408424,
+  "accepted_requests_unmatched_due_to_no_price_eligible_driver": 158456,
+  "P_max_above_2base": 148234,
+  "P_max_above_5base": 27277,
+  "driver_price_assignment_violations": 0,
+  "epsilon_min": 1.1166503391926148e-05,
+  "P_max_min": -1503930.2016186535,
+  "P_max_max": 4111297.755527564,
+  "grid_slot_supply": "AVAILABLE: exact slot-start idle in grid; not request-time neighbor availability",
+  "grid_slot_rows": 102240,
+  "highest_deficits": [
+    {
+      "timestamp": "2026-03-01 00:30:00",
+      "grid": 46,
+      "requests": 1306,
+      "idle_at_slot_start": 1,
+      "assignments": 61,
+      "accepted_unserved": 78,
+      "demand_minus_slot_start_idle": 1305
+    },
+    {
+      "timestamp": "2026-03-01 00:00:00",
+      "grid": 46,
+      "requests": 1268,
+      "idle_at_slot_start": 40,
+      "assignments": 95,
+      "accepted_unserved": 20,
+      "demand_minus_slot_start_idle": 1228
+    },
+    {
+      "timestamp": "2026-03-01 01:00:00",
+      "grid": 46,
+      "requests": 1206,
+      "idle_at_slot_start": 1,
+      "assignments": 77,
+      "accepted_unserved": 88,
+      "demand_minus_slot_start_idle": 1205
+    },
+    {
+      "timestamp": "2026-03-01 01:30:00",
+      "grid": 46,
+      "requests": 1122,
+      "idle_at_slot_start": 13,
+      "assignments": 61,
+      "accepted_unserved": 75,
+      "demand_minus_slot_start_idle": 1109
+    },
+    {
+      "timestamp": "2026-03-01 02:00:00",
+      "grid": 46,
+      "requests": 1046,
+      "idle_at_slot_start": 14,
+      "assignments": 59,
+      "accepted_unserved": 72,
+      "demand_minus_slot_start_idle": 1032
+    },
+    {
+      "timestamp": "2026-03-08 00:30:00",
+      "grid": 46,
+      "requests": 1306,
+      "idle_at_slot_start": 336,
+      "assignments": 32,
+      "accepted_unserved": 105,
+      "demand_minus_slot_start_idle": 970
+    },
+    {
+      "timestamp": "2026-03-04 18:00:00",
+      "grid": 36,
+      "requests": 1410,
+      "idle_at_slot_start": 448,
+      "assignments": 77,
+      "accepted_unserved": 219,
+      "demand_minus_slot_start_idle": 962
+    },
+    {
+      "timestamp": "2026-03-05 21:30:00",
+      "grid": 36,
+      "requests": 1454,
+      "idle_at_slot_start": 500,
+      "assignments": 58,
+      "accepted_unserved": 181,
+      "demand_minus_slot_start_idle": 954
+    },
+    {
+      "timestamp": "2026-03-07 00:30:00",
+      "grid": 46,
+      "requests": 1302,
+      "idle_at_slot_start": 354,
+      "assignments": 109,
+      "accepted_unserved": 137,
+      "demand_minus_slot_start_idle": 948
+    },
+    {
+      "timestamp": "2026-03-07 00:00:00",
+      "grid": 46,
+      "requests": 1292,
+      "idle_at_slot_start": 351,
+      "assignments": 126,
+      "accepted_unserved": 106,
+      "demand_minus_slot_start_idle": 941
+    }
+  ],
+  "highest_excess": [
+    {
+      "timestamp": "2026-03-13 05:00:00",
+      "grid": 31,
+      "requests": 0,
+      "idle_at_slot_start": 2130,
+      "assignments": 0,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2130
+    },
+    {
+      "timestamp": "2026-03-13 05:30:00",
+      "grid": 31,
+      "requests": 2,
+      "idle_at_slot_start": 2132,
+      "assignments": 2,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2130
+    },
+    {
+      "timestamp": "2026-03-13 04:30:00",
+      "grid": 31,
+      "requests": 1,
+      "idle_at_slot_start": 2124,
+      "assignments": 1,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2123
+    },
+    {
+      "timestamp": "2026-03-13 06:00:00",
+      "grid": 31,
+      "requests": 0,
+      "idle_at_slot_start": 2122,
+      "assignments": 0,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2122
+    },
+    {
+      "timestamp": "2026-03-13 04:00:00",
+      "grid": 31,
+      "requests": 1,
+      "idle_at_slot_start": 2121,
+      "assignments": 1,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2120
+    },
+    {
+      "timestamp": "2026-03-13 06:30:00",
+      "grid": 31,
+      "requests": 0,
+      "idle_at_slot_start": 2118,
+      "assignments": 0,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2118
+    },
+    {
+      "timestamp": "2026-03-13 03:30:00",
+      "grid": 31,
+      "requests": 2,
+      "idle_at_slot_start": 2119,
+      "assignments": 2,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2117
+    },
+    {
+      "timestamp": "2026-03-13 03:00:00",
+      "grid": 31,
+      "requests": 2,
+      "idle_at_slot_start": 2110,
+      "assignments": 2,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2108
+    },
+    {
+      "timestamp": "2026-03-13 07:00:00",
+      "grid": 31,
+      "requests": 0,
+      "idle_at_slot_start": 2108,
+      "assignments": 0,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2108
+    },
+    {
+      "timestamp": "2026-03-13 02:00:00",
+      "grid": 31,
+      "requests": 1,
+      "idle_at_slot_start": 2105,
+      "assignments": 1,
+      "accepted_unserved": 0,
+      "demand_minus_slot_start_idle": -2104
+    }
+  ],
+  "reserve_exclusions": {
+    "status": "COMPLETE",
+    "completed_slots": 720,
+    "timestamp": "2026-03-16 00:00:00",
+    "experiences": 3303289,
+    "fleet_count": 5000,
+    "checkpoint_path": "data/processed/routing_experiences_mar01_mar15_2026_final_behavioral/generation_checkpoint.pkl",
+    "checkpoint_every_slots": 8,
+    "pricing_replay": 0,
+    "pricing_optimizer_updates": 0,
+    "reserve_assignment_rejections": 118,
+    "reserve_rejected_requests": 12,
+    "reserve_reposition_rejections": 0,
+    "passenger_sampler": "EMPIRICAL_WITH_REPLACEMENT",
+    "driver_price_gate": true,
+    "neutral_pricing_factor": 1.0,
+    "namespace": "/Users/prajwalhk/Keerthi/Implementation/data/processed/routing_experiences_mar01_mar15_2026_final_behavioral"
+  },
+  "no_simulator_rerun": true,
+  "previous_provenance_decision_types": {
+    "REPOSITION": 3234802,
+    "EV_CHARGING_NEXT_HOP": 23038
+  },
+  "previous_provenance_total": 3257840,
+  "comparison_note": "Different upstream contracts and generated population; descriptive only."
+}

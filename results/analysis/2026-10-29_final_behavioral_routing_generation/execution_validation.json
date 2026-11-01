@@ -1,0 +1,22 @@
+{
+  "FINAL_BEHAVIORAL_ROUTING_GENERATION_LAUNCHED": "YES",
+  "pid": 20665,
+  "process_exists": true,
+  "writer_lock_held": true,
+  "second_background_launch_rejected": true,
+  "active_pid_preserved": true,
+  "namespace": "data/processed/routing_experiences_mar01_mar15_2026_final_behavioral",
+  "log": "data/processed/routing_experiences_mar01_mar15_2026_final_behavioral/generation.log",
+  "clean_start_timestamp": "2026-03-01 00:00:00",
+  "initial_experiences": 0,
+  "initial_slots": 0,
+  "initial_checkpoint_created": true,
+  "empirical_sampler_loaded": true,
+  "driver_price_gate_loaded": true,
+  "neutral_pricing": 1.0,
+  "old_checkpoints_unchanged": true,
+  "pricing_learning": false,
+  "March17_31_untouched": true,
+  "monitoring_stopped_after_initial_health": true,
+  "launch_command": "PYTHONDONTWRITEBYTECODE=1 MPLCONFIGDIR=/tmp/final_cnn_matplotlib /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B scripts/generate_final_behavioral_routing.py --background"
+}

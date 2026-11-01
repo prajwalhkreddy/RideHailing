@@ -1,0 +1,6 @@
+{
+  "episode": 25,
+  "slot": 8,
+  "optimizer_update": 50000,
+  "epsilon": 0.05
+}

@@ -1,0 +1,57 @@
+{
+  "metrics": {
+    "variant": "C",
+    "round": 4,
+    "accuracy": 0.878527565618249,
+    "CE": 0.7483560859523931,
+    "Brier": 0.23000300525980724,
+    "ECE": 0.10991755910013822,
+    "STAY_predicted_share": 0.9275334528196556,
+    "non_STAY_accuracy": 0.003348039675834663,
+    "non_STAY_CE": 7.033396258340028,
+    "true_counts": [
+      614698,
+      3223,
+      3682,
+      2610,
+      1419,
+      9329,
+      3380,
+      4388,
+      3928
+    ],
+    "predicted_counts": [
+      599796,
+      0,
+      0,
+      0,
+      0,
+      5523,
+      0,
+      41246,
+      92
+    ],
+    "invalid_action_violations": 0,
+    "L2_from_initial": 0.2519990603234388,
+    "validation_N": 646657
+  },
+  "local_steps": {
+    "variant": "C",
+    "round": 4,
+    "clients": 5000,
+    "total_weight": 2656632,
+    "mean": 5.0,
+    "P10": 5.0,
+    "median": 5.0,
+    "P90": 5.0,
+    "total_optimizer_steps": 25000
+  },
+  "update": {
+    "variant": "C",
+    "round": 4,
+    "mean_local_update_L2": 0.11666905765069352,
+    "global_update_L2": 0.03917533478101876,
+    "weighted_mean_client_global_cosine": 0.3448007370691031
+  },
+  "checkpoint": "models/routing_policy/mar01_mar12_2026_final_behavioral_fedavg_protocols_seed42/C_round_4.keras"
+}

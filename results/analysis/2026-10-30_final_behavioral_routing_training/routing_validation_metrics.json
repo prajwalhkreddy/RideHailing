@@ -1,0 +1,187 @@
+{
+  "central": {
+    "N": 646657,
+    "accuracy": 0.950776068302052,
+    "cross_entropy": 0.2691096401054138,
+    "majority_label_accuracy": 0.9505781271988086,
+    "valid_action_prediction_rate": 1.0,
+    "invalid_action_count": 0,
+    "action_support": [
+      614698,
+      3223,
+      3682,
+      2610,
+      1419,
+      9329,
+      3380,
+      4388,
+      3928
+    ],
+    "predicted_counts": [
+      644787,
+      0,
+      8,
+      0,
+      0,
+      0,
+      1451,
+      411,
+      0
+    ],
+    "precision": [
+      0.9524602698255393,
+      0.0,
+      0.875,
+      0.0,
+      0.0,
+      0.0,
+      0.19503790489317713,
+      0.9781021897810219,
+      0.0
+    ],
+    "recall": [
+      0.9990824762729015,
+      0.0,
+      0.0019011406844106464,
+      0.0,
+      0.0,
+      0.0,
+      0.08372781065088758,
+      0.09161349134001823,
+      0.0
+    ],
+    "F1": [
+      0.9752144725820475,
+      0.0,
+      0.003794037940379404,
+      0.0,
+      0.0,
+      0.0,
+      0.11716000827985924,
+      0.16753490310481348,
+      0.0
+    ],
+    "STAY_prediction_share": 0.997108204194805,
+    "prediction_entropy": 0.021392364981483152,
+    "zero_prediction_actions": [
+      1,
+      3,
+      4,
+      5,
+      8
+    ],
+    "ROUTING_EFFECTIVENESS_CONCERN": true,
+    "majority_action_from_training": 0,
+    "STAY_true_share": 0.9505781271988086,
+    "largest_predicted_class_share": 0.997108204194805,
+    "material_supported_zero_prediction_actions": [
+      5
+    ],
+    "catastrophic_collapse": false,
+    "supported_zero_prediction_actions": [
+      1,
+      3,
+      4,
+      5,
+      8
+    ]
+  },
+  "final_fedavg": {
+    "N": 646657,
+    "accuracy": 0.8871070753119505,
+    "cross_entropy": 0.44174628873430083,
+    "majority_label_accuracy": 0.9505781271988086,
+    "valid_action_prediction_rate": 1.0,
+    "invalid_action_count": 0,
+    "action_support": [
+      614698,
+      3223,
+      3682,
+      2610,
+      1419,
+      9329,
+      3380,
+      4388,
+      3928
+    ],
+    "predicted_counts": [
+      605411,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      41246,
+      0
+    ],
+    "precision": [
+      0.9473944147033998,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0022062745478349417,
+      0.0
+    ],
+    "recall": [
+      0.9330809600812107,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0207383773928897,
+      0.0
+    ],
+    "F1": [
+      0.9401832131391539,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0039882543717403695,
+      0.0
+    ],
+    "STAY_prediction_share": 0.9362165723095861,
+    "prediction_entropy": 0.23725327821218672,
+    "zero_prediction_actions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ],
+    "ROUTING_EFFECTIVENESS_CONCERN": true,
+    "majority_action_from_training": 0,
+    "STAY_true_share": 0.9505781271988086,
+    "largest_predicted_class_share": 0.9362165723095861,
+    "material_supported_zero_prediction_actions": [
+      5
+    ],
+    "catastrophic_collapse": false,
+    "supported_zero_prediction_actions": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      8
+    ]
+  },
+  "synthetic_provenance": {
+    "accuracy": 0.2923,
+    "cross_entropy": 1.82917,
+    "majority": 0.3363,
+    "STAY_prediction_share": 0.6144,
+    "comparison": "different dataset; no direct superiority inference"
+  }
+}

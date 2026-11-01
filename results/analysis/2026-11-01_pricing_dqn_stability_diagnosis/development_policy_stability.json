@@ -1,0 +1,51 @@
+{
+  "changes": [
+    {
+      "from_episode": 0,
+      "to_episode": 5,
+      "action_distribution_TV": 0.782307025151778,
+      "dominant_before": 5,
+      "dominant_after": 6,
+      "revenue_change": 2168.542829406826,
+      "assignment_change": 139
+    },
+    {
+      "from_episode": 5,
+      "to_episode": 10,
+      "action_distribution_TV": 0.9340849956634865,
+      "dominant_before": 6,
+      "dominant_after": 3,
+      "revenue_change": -1685.1067363985167,
+      "assignment_change": -29
+    },
+    {
+      "from_episode": 10,
+      "to_episode": 15,
+      "action_distribution_TV": 0.9592367736339983,
+      "dominant_before": 3,
+      "dominant_after": 2,
+      "revenue_change": 948.6087767607278,
+      "assignment_change": 78
+    },
+    {
+      "from_episode": 15,
+      "to_episode": 20,
+      "action_distribution_TV": 0.9245446660884649,
+      "dominant_before": 2,
+      "dominant_after": 6,
+      "revenue_change": -993.8829993294894,
+      "assignment_change": -203
+    },
+    {
+      "from_episode": 20,
+      "to_episode": 25,
+      "action_distribution_TV": 0.9592367736339983,
+      "dominant_before": 6,
+      "dominant_after": 0,
+      "revenue_change": 2541.3068451304316,
+      "assignment_change": 433
+    }
+  ],
+  "classification": "HIGH",
+  "note": "Descriptive classification from large distribution shifts/dominant switches; not a significance test or convergence threshold."
+}

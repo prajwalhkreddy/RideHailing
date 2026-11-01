@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "unit_tests": 3,
+  "chronological_slots": 576,
+  "source_examples": 2656632,
+  "validation_examples": 646657,
+  "zero_invalid_predictions": true,
+  "slot_scope_checked_every_batch": true,
+  "only_current_contributors": true,
+  "equal_aggregation_weight_checked": true,
+  "latest32_local_buffer": true,
+  "next_slot_semantics": true,
+  "checkpoint_replay_bit_exact": true,
+  "validation_updates": 0,
+  "old_checkpoint_unchanged": true,
+  "March17_31_access": false
+}

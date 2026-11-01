@@ -1,0 +1,11 @@
+{
+  "FINAL_BEHAVIORAL_ROUTING_MODEL_READY": "YES",
+  "ROUTING_READY_FOR_PRICING": "NO",
+  "ROUTING_PROBABILITIES_INFORMATIVE": "NO",
+  "ROUTING_EFFECTIVENESS_CONCERN": "YES",
+  "checkpoint": "models/routing_policy/mar01_mar12_2026_final_behavioral_169x64x32x9_seed42/fedavg_round_5.keras",
+  "checkpoint_sha256": "08d9614d2948c6d07e2a99023f560662ee01e56f09be11798d8db9d3c89caa88",
+  "rationale": "Final fifth-round global model required structurally; selection does not imply probability adequacy.",
+  "runtime_activation": "Not changed; pricing training not authorized.",
+  "status": "SIMULATOR_DERIVED_ROUTING_BASELINE"
+}

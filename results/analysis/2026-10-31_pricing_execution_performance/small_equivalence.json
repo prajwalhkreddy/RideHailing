@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "max_absolute_parameter_difference": 0.0,
+  "tolerance": "rtol=1e-5, atol=1e-5",
+  "same_replay_rng": true
+}

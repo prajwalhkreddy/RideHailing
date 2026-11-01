@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "episodes": 500,
+  "slots": 8000,
+  "initial_replay": 0,
+  "initial_updates": 0,
+  "initial_epsilon": 1.0,
+  "deterministic_initialization": true,
+  "target_matches_online": true,
+  "second_writer_rejected": true,
+  "persisted_sequence_sha256": "154f2483f5bad3b3d67e47cbb8f0162845700b840e37f8fa759ca29d00d0fac0",
+  "protected_period_accessed": false
+}

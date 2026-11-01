@@ -1,0 +1,42 @@
+{
+  "finite_horizon_factor16": 14.854222890512435,
+  "uniform_remaining_horizon_factor": 8.089495864954301,
+  "mean_reward_16": 392.00132591731443,
+  "P95_reward_16": 1306.9718627680904,
+  "maximum_observed_reward_16": 14408.728427992788,
+  "mean_reward_infinite_reference": 2638.989119839384,
+  "warning": "Stationary marginal reward scenarios, not proven bounds for particular high-demand OD states. Infinite horizon is not the implemented episode horizon.",
+  "sample_all_action_Q": {
+    "N": 28672,
+    "min": 969.4287719726562,
+    "P1": 1014.5139990234375,
+    "P5": 1303.3249084472657,
+    "median": 1821.1309204101562,
+    "mean": 6733.451707152383,
+    "P95": 24663.77421874997,
+    "P99": 35458.76230468751,
+    "max": 42473.67578125
+  },
+  "sample_selected_action_Q": {
+    "N": 4096,
+    "min": 978.7536010742188,
+    "P1": 1015.0329864501953,
+    "P5": 1303.9501037597656,
+    "median": 1832.7020874023438,
+    "mean": 6758.58462561667,
+    "P95": 24908.66015625,
+    "P99": 35823.43789062501,
+    "max": 42369.3203125
+  },
+  "terminal_one_step_return_comparison": {
+    "N": 5684,
+    "mean_Q": 7475.138671875,
+    "mean_G": 24.6765329532847,
+    "MAE": 7450.461707079729,
+    "mean_signed_Q_minus_G": 7450.461707079729,
+    "correlation": 0.29214083092461696,
+    "median_Q_over_positive_G": 101.73731955329838
+  },
+  "multistep_return_reconstruction": "Unavailable: no OD/episode/slot identifiers, and adjacent replay rows are different contexts, not trajectory links.",
+  "interpretation": "Material inflation relative to empirical finite-horizon reference and, decisively, observed terminal one-step returns. Marginal reward scenarios are not universal bounds."
+}

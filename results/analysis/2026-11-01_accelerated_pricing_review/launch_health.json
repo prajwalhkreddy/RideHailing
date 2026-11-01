@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "initial_status": {
+    "status": "EPISODE_INITIALIZED",
+    "pid": 38841,
+    "episode": 1,
+    "slots_completed": 0,
+    "replay_size": 0,
+    "optimizer_updates": 0,
+    "epsilon": 1.0,
+    "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+    "namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/accelerated_review_phase_seed42",
+    "checkpoint": null,
+    "review_phase": true,
+    "updates_per_slot": 128,
+    "resume": false,
+    "protected_dates_blocked": true
+  },
+  "writer_lock_held": true,
+  "final_checkpoint_protocol_unchanged": true,
+  "tests_passed": 15,
+  "process_exists": true,
+  "ACCELERATED_PRICING_REVIEW_LAUNCHED": "YES"
+}

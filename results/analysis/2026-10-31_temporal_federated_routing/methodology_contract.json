@@ -1,0 +1,18 @@
+{
+  "PUBLIC_ROUTING_STATE_CONTRACT_VALIDATED": "YES",
+  "state_dimension": 169,
+  "mask_dimension": 9,
+  "global_target": "mean routingresponse frompublicgridstatistics",
+  "private_utility_decision_unchanged": true,
+  "document": "notebooks/plan/ImplementationPlan/Complete_Hierarchical_RL_Implementation_Roadmap_CNN_Updated.docx",
+  "paragraphs": {
+    "187": "meanresponse without centrally collectingpreferences",
+    "188": "public candidate triples andglobal H_hat",
+    "199": "actual decisions utility-governed",
+    "201": "localexperiences and parameteruploads",
+    "204": "equaleligibleclient aggregation"
+  },
+  "old_offline_experiment": "diagnostic baseline; not sequential temporalcontract",
+  "train_slots": 576,
+  "validation_slots": 144
+}

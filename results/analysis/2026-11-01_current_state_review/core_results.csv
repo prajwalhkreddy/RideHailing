@@ -1,0 +1,9 @@
+metric,status,evidence
+Total Revenue,POPULATED,fixed development 23981.007204242018 -> 20595.954943252887; change-3385.0522609891304
+Passenger Acceptance Rate,POPULATED,saved fixture rates 0.44820295983086683 -> 0.31254404510218464; raw counts not persisted
+Successful Assignment Rate,POPULATED,44.82029598308668% -> 31.254404510218464%
+Pricing Factor Distribution,POPULATED,Seven action counts/percentages in README
+Dispatch Vehicle Utilization,INSUFFICIENT SAVED DETAIL FOR CURRENT 25-EPISODE RUN,No complete assignment-to-vehicle history in saved slot summaries
+Repositioning Behavior,POPULATED_WITH_SCOPE_LIMIT,Current400-slot combined navigation counts; charging directional split unavailable
+Training Stability and Routing Action Distribution,POPULATED,Saved monitoring10/25 and temporal routing probability vector
+Operational State Validity,POPULATED_WITH_SCOPE_LIMIT,Scoped PASS/NOT AVAILABLE table

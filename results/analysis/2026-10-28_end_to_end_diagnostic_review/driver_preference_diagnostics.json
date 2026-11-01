@@ -1,0 +1,78 @@
+{
+  "profile_N": 5000,
+  "P_min": {
+    "count": 5000,
+    "mean": 20.090871089589328,
+    "sample_SD": 9.405899485535585,
+    "min": 3.9509607656671197,
+    "P10": 7.240015606374589,
+    "P25": 11.901685029456068,
+    "median": 19.97255157945795,
+    "P75": 28.34019107797101,
+    "P90": 33.18851109874254,
+    "P95": 34.86657258214376,
+    "max": 36.5261137856646
+  },
+  "W_pref_minutes": {
+    "count": 5000,
+    "mean": 14.958924958913977,
+    "sample_SD": 8.638062116478174,
+    "min": 0.00943258932260882,
+    "P10": 3.060007287507971,
+    "P25": 7.45837836905859,
+    "median": 15.148304314939942,
+    "P75": 22.269512061216997,
+    "P90": 26.920674398009446,
+    "P95": 28.555272335707702,
+    "max": 29.999310612530827
+  },
+  "assigned_ride_weighted_P_min": {
+    "count": 1801,
+    "mean": 19.52843627970412,
+    "sample_SD": 9.608583156029134,
+    "min": 3.9688489086071224,
+    "P10": 6.688504612804689,
+    "P25": 10.913397230756209,
+    "median": 19.092051488380392,
+    "P75": 27.592171694781335,
+    "P90": 32.83557271997474,
+    "P95": 34.59715848826761,
+    "max": 36.5138791000112
+  },
+  "assigned_ride_weighted_price_minus_min": {
+    "count": 1801,
+    "mean": -0.804888384377875,
+    "sample_SD": 9.659401752526437,
+    "min": -19.124228996637306,
+    "P10": -14.243790288812093,
+    "P25": -9.002464453406105,
+    "median": -0.4114698788134845,
+    "P75": 7.811167403112769,
+    "P90": 12.284811615039436,
+    "P95": 13.594603244569926,
+    "max": 15.66121160028429
+  },
+  "P_pref": "No separate P_pref identified in the active profile contract; price_preference supplies P_min to routing price utility.",
+  "instantaneous_U1_U2": "NOT RETAINED IN EXISTING DIAGNOSTICS",
+  "counterfactual": {
+    "status": [
+      "ACTIVE_IMPLEMENTATION_DIAGNOSTIC",
+      "NOT_SOURCE_VALIDATED_ACCEPTANCE_ANALYSIS"
+    ],
+    "assigned_checked": 1801,
+    "assigned_missing_P_i_min": 0,
+    "satisfying": 884,
+    "violating": 917,
+    "violation_percentage": 50.91615769017213,
+    "driver_field": "Persisted driver profile price_preference, used as P_i_min by existing routing utility; no dispatch gate added.",
+    "equality_passes": true,
+    "interpretation": "Counterfactual check of actual selected assignments only; not a rerun estimating replacement drivers or corrected-policy outcomes.",
+    "example_request_ids": [
+      235,
+      818,
+      854,
+      688,
+      988
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "final": {
+    "updates": 520,
+    "batch": 64,
+    "sampled_examples": 33280,
+    "replay_size": 30039,
+    "sampled_per_current_replay": 1.1078930723392924
+  },
+  "accelerated": {
+    "updates": 51072,
+    "sampled_examples": 3268608,
+    "replay_capacity": 100000,
+    "sampled_per_capacity": 32.68608
+  },
+  "caveat": "Exposure ratios, not equal per-row reuse. Final replay has not reached capacity; accelerated FIFO has evicted observations."
+}

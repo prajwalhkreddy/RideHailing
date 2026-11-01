@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "initial_episode2": {
+    "status": "EPISODE_INITIALIZED",
+    "pid": 36651,
+    "episode": 2,
+    "slots_completed": 0,
+    "replay_size": 7662,
+    "optimizer_updates": 120,
+    "epsilon": 0.99772,
+    "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+    "namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42",
+    "checkpoint": null,
+    "resume": true
+  },
+  "episode1_metrics_rows": 1,
+  "checkpoint_integrity": "PASS",
+  "duplication_test": "PASS",
+  "writer_lock_held": true,
+  "process_exists": true
+}

@@ -1,0 +1,13 @@
+{
+  "status": "CHECKPOINTED",
+  "pid": 36160,
+  "episode": 1,
+  "slots_completed": 16,
+  "replay_size": 7662,
+  "optimizer_updates": 120,
+  "epsilon": 0.99772,
+  "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42",
+  "checkpoint": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0001/checkpoint_0016_1944f2bd",
+  "resume": false
+}

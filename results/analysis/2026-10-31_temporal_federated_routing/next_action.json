@@ -1,0 +1,9 @@
+{
+  "recommended_category": "FINAL_ROUTING_FREEZE_VALIDATION",
+  "executed": false,
+  "pricing_training_started": false,
+  "ROUTING_MODEL_CONTRACT_REVIEW_REQUIRED": "NO",
+  "PUBLIC_ROUTING_STATE_CONTRACT_VALIDATED": "YES",
+  "privacy_boundary": "Private preferences/energy/utilitylabels are notadded topublicstate. Repeatedstateconflicts are compatiblewith meanresponselearning; they alone do notmandateprivatefeatures.",
+  "March17_31_untouched": true
+}

@@ -1,0 +1,21 @@
+input,decision_type,classification,evidence,source
+P_i_min / price preference,REPOSITION,C,Driver-specific p_min enters U1; not in features,operational_interface.py:decide/u1
+waiting preference W_max_minutes,REPOSITION,C,Driver-specific w_max enters U2; not in features,operational_interface.py:decide/u2
+mu and sigma,REPOSITION,A,Candidate-specific first27 feature values; U1 public inputs,final_state.py:STATE_FEATURE_ORDER
+F_hat,REPOSITION,A,Candidate-specific first27 values; U2 public input,final_state.py:STATE_FEATURE_ORDER
+H_hat all142 grids,EV_CHARGING_NEXT_HOP,A,Features27:169; U3 public input,final_state.py:STATE_FEATURE_ORDER
+U1 complete value,REPOSITION,C,Not derivable without P_min despite represented mu/sigma,operational_interface.py:u1
+U2 complete value,REPOSITION,C,Not derivable without W_max despite represented F_hat,operational_interface.py:u2
+U3 complete value / H_i_max,EV_CHARGING_NEXT_HOP,C,"H_i_max profile input absent; baseline10 constant known externally, not encoded",operational_interface.py:u3
+battery / energy_kwh,both,C,Vehicle-specific energy controls branch and feasibility; absent,operational_interface.py:decide
+E_min / minimum_energy_kwh,both,D,Externally configured trigger compared against privateenergy; absent,operational_interface.py:decide
+current position / Grid_ID,both,D,"Implicit candidate-relative layout; no explicitgridID, not uniquely recoverable from repeated public values",operational_interface.py:encode
+topological candidate mask,both,B,Separate9D mask plus placeholders; NOT a169D feature; topology mask does not encode energy feasibility,operational_interface.py:encode/candidates
+energy candidate feasibility,both,C,Energy consumption and station reserve check depend on vehicleenergy absent from state,operational_interface.py:preserves_station_reachability/decide
+charging requirement / decision type,both,C,Branch energy>minimum; neither branchindicator norenergyencoded,operational_interface.py:decide
+station locations and reachability,EV_CHARGING_NEXT_HOP,D,"External stationmap, shortestpaths andenergy; H_hat alone insufficient",operational_interface.py:paths/decide
+energy_per_km,both,D,External frozen consumption parameter used for feasibility,operational_interface.py:decide
+movementdistance and cost,both,D,"External topologydistance, actionlengths and cost_per_km; fixedmodel constants, not features",operational_interface.py:cost/candidates/paths
+sigma_floor and wait_floor_minutes,both,D,External fixed numerical safeguards,operational_interface.py:u1/u3
+tie-breaking action and station ID,both,D,Deterministic score/action/station ordering; stationIDexternal,operational_interface.py:decide
+idle eligibility,both,C,"Vehicle idle flag is a precondition, not encoded",operational_interface.py:decide

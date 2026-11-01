@@ -1,0 +1,21 @@
+{
+  "type": "reproducible cold environment initialization atselected historicaltime; nothistoricalfleet reconstruction",
+  "fleet": "existingconfigured initialpositions andSOC initializer, episodeenvironmentseed; idle/status initializationunchanged",
+  "charging": "emptyqueues/occupancy, resettimedcharging state andRNG",
+  "grid": "existing historicalpretraining farepriors;F_hat0/H_hat0 frozeninitialvalues;newEWMA atstart; no futurehistory",
+  "requests": "selectedwindow forecasts/weather and existingempiricalflow;episode-specific seed42derivedseed;newrequestID andODstate",
+  "ledger": "emptycommitments/passengers/missions; previousJ_disp0",
+  "rng": "SeedSequence42 spawn500; one environmentseed perepisode; repeatedwindow usesdifferent seed",
+  "routing": "reloadfixedcheckpoint;immutableinference;nostatefullearning",
+  "persist": [
+    "online",
+    "target",
+    "Adam",
+    "replay",
+    "replayRNG",
+    "actionRNG",
+    "optimizer_count",
+    "epsilon"
+  ],
+  "resume": "atomic existingpayloadcheckpoint every8slots; generalstart-aware restore; explicitresume only"
+}

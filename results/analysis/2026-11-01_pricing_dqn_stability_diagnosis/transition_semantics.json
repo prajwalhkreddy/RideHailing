@@ -1,0 +1,17 @@
+{
+  "step": "One 30-minute slot for a particular observed OD pricing context",
+  "next_state": "Same OD key in next slot after full simulator evolution; may have no request/transition next slot",
+  "within_slot_chaining": false,
+  "terminal": "All observed OD transitions in slot16 have done=True; placeholder next_state=current_state is masked",
+  "episode25_terminal_transitions": 359,
+  "terminal_count_each_episode": "Not recoverable for all episodes from episode25 replay alone without identifiers; count equals observed OD contexts in each final slot",
+  "cross_episode_bootstrap_count": null,
+  "code_implied_cross_episode_bootstrap_count": 0,
+  "reason": "Code constructs next_state before reset and masks final slot; saved replay lacks identifiers needed for an independent exhaustive cross-episode count.",
+  "horizon_min": 1,
+  "horizon_typical": 8.5,
+  "horizon_max": 16,
+  "typical_caveat": "8.5 assumes uniform decision slots, not measured transition-weighted horizon",
+  "bootstrap_edges_max": 15,
+  "state_limitations": "13D input has no remaining episode time and no explicit OD identifier. Finite-horizon value is aliased across terminal/nonterminal contexts; shared fleet effects also limit Markov sufficiency. This is a representation risk, not evidence of accidental chaining."
+}

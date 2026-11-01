@@ -1,0 +1,20 @@
+{
+  "status": "COMPLETE",
+  "completed_slots": 720,
+  "timestamp": "2026-03-16 00:00:00",
+  "experiences": 3303289,
+  "fleet_count": 5000,
+  "checkpoint_path": "data/processed/routing_experiences_mar01_mar15_2026_final_behavioral/generation_checkpoint.pkl",
+  "checkpoint_every_slots": 8,
+  "pricing_replay": 0,
+  "pricing_optimizer_updates": 0,
+  "reserve_assignment_rejections": 118,
+  "reserve_rejected_requests": 12,
+  "reserve_reposition_rejections": 0,
+  "checkpoint_sha256": "9ef1e9b291d09ad4a8e5e92a3ffb4f0d3720e09c0590544e4cfa3bf3bd8ecc1a",
+  "committed_partition_range": [
+    0,
+    719
+  ],
+  "commit_authority": "atomic generation_checkpoint.pkl; reconcile manifest from checkpoint on resume"
+}

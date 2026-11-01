@@ -1,0 +1,2 @@
+day,slots_completed,requests,accepted,rejected,assignments,accepted_unmatched,routing_decisions,charging_decisions,experiences,REPOSITION,EV_CHARGING_NEXT_HOP,fleet_count,P_max_above_2base,P_max_above_5base,price_ineligible_candidate_count,requests_with_any_price_ineligible_candidate,accepted_requests_unmatched_due_to_no_price_eligible_driver,driver_price_assignment_violations,epsilon_min,P_max_min,P_max_max
+2026-03-01,2,6797,1009,5788,841,168,9182,0,9182,9182,0,5000,223,23,58178,991,168,0,0.005730948687963062,-2457.923679700061,1914.2198230194588

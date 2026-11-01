@@ -1,0 +1,332 @@
+{
+  "train": {
+    "cardinalities": [
+      {
+        "cardinality": 1,
+        "N": 0,
+        "percentage": 0.0,
+        "true_STAY_share": null,
+        "central_CE": null,
+        "fedavg_CE": null,
+        "prior_CE": null
+      },
+      {
+        "cardinality": 2,
+        "N": 0,
+        "percentage": 0.0,
+        "true_STAY_share": null,
+        "central_CE": null,
+        "fedavg_CE": null,
+        "prior_CE": null
+      },
+      {
+        "cardinality": 3,
+        "N": 0,
+        "percentage": 0.0,
+        "true_STAY_share": null,
+        "central_CE": null,
+        "fedavg_CE": null,
+        "prior_CE": null
+      },
+      {
+        "cardinality": 4,
+        "N": 179179,
+        "percentage": 6.744592401205737,
+        "true_STAY_share": 0.9944245698435643,
+        "central_CE": 0.06189714533283899,
+        "fedavg_CE": 0.29851002617913536,
+        "prior_CE": 0.0502596200555062
+      },
+      {
+        "cardinality": 5,
+        "N": 108321,
+        "percentage": 4.077380683512056,
+        "true_STAY_share": 0.9585029680302065,
+        "central_CE": 0.3304118355270893,
+        "fedavg_CE": 1.4411498375168417,
+        "prior_CE": 0.22286375932251676
+      },
+      {
+        "cardinality": 6,
+        "N": 135949,
+        "percentage": 5.117344065719301,
+        "true_STAY_share": 0.9666639695768267,
+        "central_CE": 0.29461430069382044,
+        "fedavg_CE": 0.32523304241445183,
+        "prior_CE": 0.19760449332594504
+      },
+      {
+        "cardinality": 7,
+        "N": 141341,
+        "percentage": 5.32030781832034,
+        "true_STAY_share": 0.9258106281970554,
+        "central_CE": 0.5452152421635318,
+        "fedavg_CE": 0.42650124245696325,
+        "prior_CE": 0.4024436138917945
+      },
+      {
+        "cardinality": 8,
+        "N": 546113,
+        "percentage": 20.556591955528656,
+        "true_STAY_share": 0.9748458652330195,
+        "central_CE": 0.2629322773927216,
+        "fedavg_CE": 0.19504891394489526,
+        "prior_CE": 0.16930306305774542
+      },
+      {
+        "cardinality": 9,
+        "N": 1545729,
+        "percentage": 58.18378307571391,
+        "true_STAY_share": 0.9406525982238801,
+        "central_CE": 0.5251195661148962,
+        "fedavg_CE": 0.3660365280608975,
+        "prior_CE": 0.34561863527977893
+      }
+    ],
+    "only_STAY": 0.0,
+    "STAY_one_move": 0.0,
+    "at_least_three": 1.0,
+    "action_validity": [
+      1.0,
+      0.911839878462655,
+      0.849650610246357,
+      0.8821300804928948,
+      0.8875738152668492,
+      0.9647399413994863,
+      0.9136880832572972,
+      0.920259938147248,
+      0.704300407433171
+    ],
+    "distinct_patterns": 30,
+    "top_patterns": [
+      {
+        "bitmask": 511,
+        "N": 1545729
+      },
+      {
+        "bitmask": 255,
+        "N": 438180
+      },
+      {
+        "bitmask": 225,
+        "N": 107593
+      },
+      {
+        "bitmask": 63,
+        "N": 78613
+      },
+      {
+        "bitmask": 507,
+        "N": 62695
+      },
+      {
+        "bitmask": 57,
+        "N": 62374
+      },
+      {
+        "bitmask": 499,
+        "N": 57991
+      },
+      {
+        "bitmask": 391,
+        "N": 51764
+      },
+      {
+        "bitmask": 127,
+        "N": 51194
+      },
+      {
+        "bitmask": 495,
+        "N": 43413
+      },
+      {
+        "bitmask": 483,
+        "N": 41371
+      },
+      {
+        "bitmask": 481,
+        "N": 20224
+      },
+      {
+        "bitmask": 451,
+        "N": 16316
+      },
+      {
+        "bitmask": 241,
+        "N": 10684
+      },
+      {
+        "bitmask": 15,
+        "N": 7925
+      }
+    ]
+  },
+  "validation": {
+    "cardinalities": [
+      {
+        "cardinality": 1,
+        "N": 0,
+        "percentage": 0.0,
+        "true_STAY_share": null,
+        "central_CE": null,
+        "fedavg_CE": null,
+        "prior_CE": null
+      },
+      {
+        "cardinality": 2,
+        "N": 0,
+        "percentage": 0.0,
+        "true_STAY_share": null,
+        "central_CE": null,
+        "fedavg_CE": null,
+        "prior_CE": null
+      },
+      {
+        "cardinality": 3,
+        "N": 0,
+        "percentage": 0.0,
+        "true_STAY_share": null,
+        "central_CE": null,
+        "fedavg_CE": null,
+        "prior_CE": null
+      },
+      {
+        "cardinality": 4,
+        "N": 58981,
+        "percentage": 9.120909539369402,
+        "true_STAY_share": 0.9956257099743986,
+        "central_CE": 0.0425641384183373,
+        "fedavg_CE": 0.8136015844736695,
+        "prior_CE": 0.04365103481961044
+      },
+      {
+        "cardinality": 5,
+        "N": 16153,
+        "percentage": 2.497923938038249,
+        "true_STAY_share": 0.9458304958831177,
+        "central_CE": 0.24664042298075292,
+        "fedavg_CE": 2.199207054920707,
+        "prior_CE": 0.2765703827571384
+      },
+      {
+        "cardinality": 6,
+        "N": 8602,
+        "percentage": 1.3302260703897122,
+        "true_STAY_share": 0.9553592187863288,
+        "central_CE": 0.3752258453359632,
+        "fedavg_CE": 0.5321464044727462,
+        "prior_CE": 0.2505386166764328
+      },
+      {
+        "cardinality": 7,
+        "N": 26427,
+        "percentage": 4.0867105745395165,
+        "true_STAY_share": 0.9159950051084118,
+        "central_CE": 0.5214514246978684,
+        "fedavg_CE": 0.4477699497889385,
+        "prior_CE": 0.4447904901257721
+      },
+      {
+        "cardinality": 8,
+        "N": 108810,
+        "percentage": 16.82654019054924,
+        "true_STAY_share": 0.9718316331219558,
+        "central_CE": 0.1895868409862436,
+        "fedavg_CE": 0.17155340802238575,
+        "prior_CE": 0.18385434484146104
+      },
+      {
+        "cardinality": 9,
+        "N": 427684,
+        "percentage": 66.13768968711388,
+        "true_STAY_share": 0.9411785336837478,
+        "central_CE": 0.3037058684715861,
+        "fedavg_CE": 0.39063896956823474,
+        "prior_CE": 0.3476428883612814
+      }
+    ],
+    "only_STAY": 0.0,
+    "STAY_one_move": 0.0,
+    "at_least_three": 1.0,
+    "action_validity": [
+      1.0,
+      0.8989526132091665,
+      0.8764661945977543,
+      0.9086099740666227,
+      0.926543747303439,
+      0.9795811380685587,
+      0.927664898083528,
+      0.9248535158515256,
+      0.7114590888214308
+    ],
+    "distinct_patterns": 30,
+    "top_patterns": [
+      {
+        "bitmask": 511,
+        "N": 427684
+      },
+      {
+        "bitmask": 255,
+        "N": 102702
+      },
+      {
+        "bitmask": 225,
+        "N": 32782
+      },
+      {
+        "bitmask": 57,
+        "N": 25472
+      },
+      {
+        "bitmask": 127,
+        "N": 13349
+      },
+      {
+        "bitmask": 499,
+        "N": 10993
+      },
+      {
+        "bitmask": 391,
+        "N": 10529
+      },
+      {
+        "bitmask": 63,
+        "N": 5855
+      },
+      {
+        "bitmask": 507,
+        "N": 5170
+      },
+      {
+        "bitmask": 61,
+        "N": 2975
+      },
+      {
+        "bitmask": 451,
+        "N": 1403
+      },
+      {
+        "bitmask": 497,
+        "N": 1067
+      },
+      {
+        "bitmask": 483,
+        "N": 959
+      },
+      {
+        "bitmask": 241,
+        "N": 809
+      },
+      {
+        "bitmask": 253,
+        "N": 727
+      }
+    ]
+  },
+  "prior_mask_gain": {
+    "unmasked_CE": 0.29764465575754595,
+    "masked_CE": 0.2932592191357729,
+    "unmasked_Brier": 0.09606376036810553,
+    "masked_Brier": 0.09593494534270659
+  }
+}

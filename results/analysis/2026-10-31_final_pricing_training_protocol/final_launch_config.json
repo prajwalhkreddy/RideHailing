@@ -1,0 +1,13 @@
+{
+  "entrypoint": "PYTHONPATH=. python -B scripts/run_multiepisode_pricing.py --launch",
+  "resume": "same command with --resume",
+  "namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42",
+  "episodes": 500,
+  "slots_per_episode": 16,
+  "training_launched": false,
+  "fixture_namespace": "models/pricing_dqn/final_multiepisode_protocol_fixture_seed42",
+  "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "decision": "launch only inseparatelyauthorizedtask",
+  "FINAL_PRICING_DQN_PROTOCOL_FROZEN": "YES",
+  "next_action": "LAUNCH_FINAL_NONPRIVATE_PRICING_DQN"
+}

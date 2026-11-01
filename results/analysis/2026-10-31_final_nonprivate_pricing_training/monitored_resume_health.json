@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "live_status": {
+    "status": "SLOT_COMPLETED",
+    "pid": 42615,
+    "episode": 5,
+    "slots_completed": 3,
+    "replay_size": 30334,
+    "optimizer_updates": 528,
+    "epsilon": 0.989968,
+    "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+    "namespace": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42",
+    "checkpoint": null,
+    "resume": true
+  },
+  "completed_episode_metrics_unchanged": true,
+  "writer_lock_held": true
+}

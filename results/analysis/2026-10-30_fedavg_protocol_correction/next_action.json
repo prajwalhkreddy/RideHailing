@@ -1,0 +1,7 @@
+{
+  "recommended_category": "ROUTING_STATE_CONTRACT_CORRECTION",
+  "executed": false,
+  "pricing_blocked": true,
+  "March17_31_untouched": true,
+  "reason": "Prescribed protocol grid exhausted; no additional optimizer/rate/round/state experiment authorized. Hidden inputs and exactstate conflicts remain documented."
+}

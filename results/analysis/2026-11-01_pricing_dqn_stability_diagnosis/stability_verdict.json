@@ -1,0 +1,18 @@
+{
+  "PRICING_DQN_STABILITY": "UNRESOLVED_RISK",
+  "FINAL_PRICING_RUN_RECOMMENDATION": "DO_NOT_RESUME_YET",
+  "structural_implementation_bug_found": false,
+  "findings": [
+    "Bellman masking, same-OD next-state construction and per-update soft target update match protocol",
+    "No code path chains adjacent replay rows or resets into a nonterminal next state",
+    "Replay lacks trajectory identifiers: exhaustive cross-episode count is not independently identifiable",
+    "Terminal Q mean7475 versus known one-step return24.68 demonstrates severe value miscalibration",
+    "No remaining-time feature; next-slot OD may be unobserved: value aliasing/support risks remain",
+    "16x review update cadence plausibly magnifies bootstrapped approximation error, but causal attribution versus final cadence is not identified"
+  ],
+  "bug_fix": null,
+  "potential_future_work": "Separate decision on value-state/horizon adequacy and traceable trajectory diagnostics before any resumption; no algorithm/hyperparameter change is proposed or implemented.",
+  "March17_31_untouched": true,
+  "read_only": true,
+  "training_resumed": false
+}

@@ -1,0 +1,11 @@
+{
+  "same_reports": true,
+  "same_fleet": true,
+  "same_action_rng": true,
+  "same_replay_rng": true,
+  "same_updates": true,
+  "same_epsilon": true,
+  "online_close": true,
+  "target_close": true,
+  "pass": true
+}
