@@ -1,25 +1,24 @@
 # Ride-Hailing Platform Simulation
 
-## Active project status — 30 October 2026
+## Active project status — 1 November 2026
 
-Final behavioral routing generation and the fixed central/plain-FedAvg training run are complete. Routing probability adequacy is **NO**; pricing readiness is **NO**. Earlier pricing training remains pre-correction provenance, not a final baseline.
+Final CNN implementation/evaluation is complete; the historical baseline remains superior. Passenger acceptance and driver/EV contracts are frozen. Final temporal routing is frozen and ready for pricing, with modest/uncertain positive aggregate signal and weak rare-action performance. Pricing DQN is implemented; authoritative8-update results are reviewed through episode25, **not converged**. Privacy has not started. Historical sections below retain earlier statuses as provenance; this current summary and linked review take precedence.
 
 ### Current Resume Point
 
-Accelerated review and stability diagnosis are complete. Cadence attribution concluded **ACCELERATED_CADENCE_DOMINANT** and supports monitored continuation. The authoritative **8-update** run resumed from **episode5/slot2**, replay30,039, updates520, epsilon0.99012, under PID **42615**. Observational gates: episodes **10/25/50/100**. Log/status: `results/analysis/2026-10-31_final_nonprivate_pricing_training/training.log` and `status.json` in that folder. The500×16×8 protocol remains unchanged; accelerated checkpoints are not used. March17–31 untouched. No completion or convergence is claimed; launch monitoring stops after initial continuation verification.
+Training is paused for current-state academic review. [Current-state review package](results/analysis/2026-11-01_current_state_review/README.md) consolidates saved evidence through episode25. Later partial episode26 is preserved and excluded. No training was resumed by this reporting task. March17–31 untouched.
 
 ### Routing Model Status
 
-Frozen temporal FedAvg checkpoint: `models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras`. SHA256:`db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a`. Validation CE/Brier/ECE:0.291658/0.093054/0.015838 versus prior CE/Brier0.293259/0.095935. Improvement is **MODEST / UNCERTAIN BUT POSITIVE**: CE moving-block interval overlaps zero; Brier interval is negative. The vector is nondegenerate, but non-STAY top-1 accuracy is0.6195% and subgroup probabilistic evidence is mixed. Runtime checkpoint activation is unchanged.
+FINAL_ROUTING_MODEL_FROZEN=YES; ROUTING_READY_FOR_PRICING=YES. Qualification: MODEST / UNCERTAIN BUT POSITIVE. The current temporal freeze supersedes earlier readiness-NO descriptions.
 
 ### Pricing Model Status
 
-The final non-private learner/checkpoints remain paused and unchanged. The isolated accelerated review starts fresh with seed42, retains the trusted DQN update path, and deliberately uses 128 sequential updates per warm slot for diagnostic purposes only. Final training still specifies eight. Frozen routing remains inference-only; March16 is mutation-free greedy development; March17–31 untouched. Review namespace: `models/pricing_dqn/accelerated_review_phase_seed42/`. Initial launch health passed; no learning or convergence outcome is claimed yet.
+Methodology-faithful500×16×8 protocol unchanged. Preliminary25-episode findings show worsening terminal calibration, increasing bootstrap dominance and deteriorating fixed development revenue/assignments between episodes10 and25. No final policy or convergence is claimed. Accelerated128-update results remain diagnostic only.
 
-### Open Methodology Decisions
+### Open Methodology Decisions / Next Step
 
-Episode 500 is an evaluation checkpoint, not guaranteed convergence. Review training/development/Q/action stability without a fabricated revenue threshold; continuation requires a separate task. March16 is fixed greedy development only, with no replay insertion or updates. March17–31 remains untouched. Routing method and the private/public boundary remain frozen. Historical sections below are preserved.
-
+Current-state academic review and a decision on pricing-training continuation before privacy. Reporting gaps are documented separately from implementation defects. Full non-private baseline, privacy, later robustness and protected evaluation remain pending.
 
 ## 1. Project overview
 
