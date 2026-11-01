@@ -1,0 +1,15 @@
+EVALUATING 8
+DP_EPS8 completed slot 1
+DP_EPS8 completed slot 2
+DP_EPS8 completed slot 3
+DP_EPS8 completed slot 4
+EVALUATING 4
+DP_EPS4 completed slot 1
+DP_EPS4 completed slot 2
+DP_EPS4 completed slot 3
+DP_EPS4 completed slot 4
+Traceback (most recent call last):
+  File "/tmp/complete_dp_comparison.py", line 18, in <module>
+    if json.loads((md/'status.json').read_text())['status']!='COMPLETE':raise RuntimeError(f'DP eps{e} trainer exited before completion')
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: DP eps2 trainer exited before completion

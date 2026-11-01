@@ -1,0 +1,48 @@
+2026-11-01 19:25:48.906375: W external/local_tsl/tsl/platform/profile_utils/cpu_utils.cc:145] Failed to get CPU frequency: 0 Hz
+2 16
+2 32
+2 48
+2 64
+2 80
+2 96
+2 112
+2 128
+2 144
+2 160
+2 176
+2 192
+2 208
+2 224
+2 240
+2 256
+2 272
+2 288
+2 304
+2 320
+2 336
+2 352
+2 368
+2 384
+2 400
+2 416
+2 432
+2 448
+2 464
+2 480
+2 496
+2 512
+2 528
+2 544
+2 560
+2 576
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/train_dp_temporal_routing.py", line 129, in <module>
+    if __name__=='__main__': main()
+                             ^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/train_dp_temporal_routing.py", line 118, in main
+    result,actions=metrics(reloaded,X[TRAIN:],M[TRAIN:],Y[TRAIN:],f'DP_EPS{args.target}')
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/train_dp_temporal_routing.py", line 65, in metrics
+    assert (true>0).all() and M[np.arange(len(Y)),Y].all()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

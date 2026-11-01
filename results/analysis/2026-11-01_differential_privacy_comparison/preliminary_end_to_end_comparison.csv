@@ -1,0 +1,5 @@
+model,requests,accepted,rejected,successful_assignments,accepted_unmatched,assignment_rate,revenue,pricing_action_counts,routing_action_counts,driver_price_violations,operational_invariant_failures,replay_insertions,optimizer_updates,learner_unchanged,slots
+DP_EPS2,2838,876,1962,876,0,0.3086680761099366,20436.86924116867,"[0, 150, 0, 0, 0, 0, 1003]","[14915, 618, 421, 769, 318, 792, 397, 427, 406]",0,0,0,0,True,4
+DP_EPS4,2838,876,1962,876,0,0.3086680761099366,20682.962103636157,"[0, 112, 0, 0, 20, 0, 1021]","[14913, 611, 419, 760, 319, 800, 416, 421, 403]",0,0,0,0,True,4
+DP_EPS8,2838,868,1970,868,0,0.3058491895701198,20625.13259783099,"[0, 84, 0, 0, 0, 0, 1069]","[14923, 612, 422, 765, 321, 788, 411, 419, 406]",0,0,0,0,True,4
+NON_PRIVATE,2838,887,1951,887,0,0.31254404510218464,20595.954943252887,"[0, 183, 0, 0, 22, 0, 948]","[14937, 611, 399, 764, 315, 796, 415, 410, 410]",0,0,0,0,True,4

@@ -1,0 +1,42 @@
+{
+  "DRIVER_LEVEL_DP_IMPLEMENTED": "YES",
+  "RDP_ACCOUNTING_COMPLETE": "YES",
+  "PRIVACY_BEFORE_AFTER_COMPARISON_COMPLETE": "YES",
+  "DP_ROUTING_MODELS_VALID": "YES",
+  "CURRENT_STATE_REVIEW_UPDATED": "YES",
+  "PROTECTED_FINAL_EVALUATION_UNTOUCHED": "YES",
+  "PRICING_POLICY_CONVERGED": "NO",
+  "FINAL_HIERARCHICAL_RESULTS_COMPLETE": "NO",
+  "SECURE_AGGREGATION_IMPLEMENTED": "NO",
+  "guarantee_scope": "Conditional noisy-model transcript only; trusted diagnostics, public historical non-private outputs and resume secrets excluded. Not a repository-wide DP guarantee.",
+  "joint_three_run_epsilon": 9.533672128118631,
+  "joint_delta": 1e-05,
+  "results": [
+    {
+      "model": "DP_EPS8",
+      "UTILITY_IMPACT": "SEVERE",
+      "PRIVACY_UTILITY_TRADEOFF": "UNFAVORABLE",
+      "predicted_action_total_variation": 0.05708745130726189,
+      "CE_relative_change": 1.8461474274442513,
+      "Brier_relative_change": 0.9816675206957501
+    },
+    {
+      "model": "DP_EPS4",
+      "UTILITY_IMPACT": "SEVERE",
+      "PRIVACY_UTILITY_TRADEOFF": "UNFAVORABLE",
+      "predicted_action_total_variation": 0.08251051175507268,
+      "CE_relative_change": 6.002446927532037,
+      "Brier_relative_change": 1.6671930440740783
+    },
+    {
+      "model": "DP_EPS2",
+      "UTILITY_IMPACT": "SEVERE",
+      "PRIVACY_UTILITY_TRADEOFF": "UNFAVORABLE",
+      "predicted_action_total_variation": 0.23692931492274882,
+      "CE_relative_change": 65.93593307075459,
+      "Brier_relative_change": 4.919299845740493
+    }
+  ],
+  "preliminary_service_comparison_complete": true,
+  "focused_tests": 9
+}

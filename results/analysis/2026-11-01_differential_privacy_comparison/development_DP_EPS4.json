@@ -1,0 +1,32 @@
+{
+  "metrics": {
+    "model": "DP_EPS4",
+    "requests": 2838,
+    "accepted": 876,
+    "rejected": 1962,
+    "successful_assignments": 876,
+    "accepted_unmatched": 0,
+    "assignment_rate": 0.3086680761099366,
+    "revenue": 20682.962103636157,
+    "pricing_action_counts": "[0, 112, 0, 0, 20, 0, 1021]",
+    "routing_action_counts": "[14913, 611, 419, 760, 319, 800, 416, 421, 403]",
+    "driver_price_violations": 0,
+    "operational_invariant_failures": 0,
+    "replay_insertions": 0,
+    "optimizer_updates": 0,
+    "learner_unchanged": true,
+    "slots": 4
+  },
+  "initial_fleet_hash": "6189c7bba6e3b3a6d88c53534aad113c90029ed2141c753dad38083799d6c40b",
+  "pricing_checkpoint": "models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0025/checkpoint_0016_fb2fce6a/dqn",
+  "pricing_sha256": {
+    "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0025/checkpoint_0016_fb2fce6a/dqn/replay.npz": "559375b379c72e804e9e5b9a63ce6c8d0b2b6b2c2cb8cdb75ea1253cbb0a5786",
+    "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0025/checkpoint_0016_fb2fce6a/dqn/checkpoint.json": "98144dbe76b16c01c86c4489e473e7df24b0f563e3dfa8dc00dfbb84329ac695",
+    "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0025/checkpoint_0016_fb2fce6a/dqn/target.keras": "ef1dd5795ab643ba7bbb58466de0a27a7b5bf037d3abeaca7fb8bc778b6d843f",
+    "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0025/checkpoint_0016_fb2fce6a/dqn/online.keras": "5c4b65529394f86d26f34feb6e2bd24c2c02b10218af4e25415f2a1fa2de8430"
+  },
+  "routing_sha256": "1fe07406349cf8aa811d08f9aa5811cfd1ac190937ffa8b25d1e3218005a8d6e",
+  "fixture": "March16 00:00\u201302:00, seed424242, greedy",
+  "classification": "PRELIMINARY_END_TO_END_PRIVACY_UTILITY",
+  "pricing_converged": false
+}

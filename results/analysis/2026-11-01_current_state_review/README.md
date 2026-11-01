@@ -4,11 +4,11 @@
 
 **PRICING_REVIEW_CUTOFF = EPISODE_25**. Reporting/consolidation only, from saved artifacts. No training, simulation, checkpoint mutation or protected-data access occurred. The run is intentionally paused for review; saved status confirms STOPPED_SAFE. Later partial episode26 remains untouched and excluded from every aggregate below. Pricing findings are **PRELIMINARY / INTERIM — NOT FINAL CONVERGENCE**.
 
-The supplied task's framework is followed: A CNN, B passenger sensitivity/P_max, C driver acceptance/repositioning, D pricing DQN, E federated learning, F privacy pending. A separately identified meeting-discussion file was not supplied in this request or located by the narrow filename check; exact document alignment is **NOT AVAILABLE FROM CURRENT SAVED ARTIFACTS**. No additional roadmap requirements are inferred.
+The supplied task's framework is followed: A CNN, B passenger sensitivity/P_max, C driver acceptance/repositioning, D pricing DQN, E federated learning, F conditional model-only routing privacy implemented; secure aggregation pending. A separately identified meeting-discussion file was not supplied in this request or located by the narrow filename check; exact document alignment is **NOT AVAILABLE FROM CURRENT SAVED ARTIFACTS**. No additional roadmap requirements are inferred.
 
 ## 2. Architecture Implemented
 
-True3km demand aggregation → CNN demand forecast → public13D pricing state → seven-factor DQN → empirical passenger P_max gate → independent driver price/availability/energy eligibility → FCFS assignment → timed fleet/charging movement → causal operational statistics → U1/U2/U3 movement decisions. Frozen public169D temporal-FedAvg routing probabilities feed pricing; they are not a replacement for utility-selected movements. Privacy is downstream, not implemented.
+True3km demand aggregation → CNN demand forecast → public13D pricing state → seven-factor DQN → empirical passenger P_max gate → independent driver price/availability/energy eligibility → FCFS assignment → timed fleet/charging movement → causal operational statistics → U1/U2/U3 movement decisions. Frozen public169D temporal-FedAvg routing probabilities feed pricing; they are not a replacement for utility-selected movements. Conditional central driver-level DP routing variants are now evaluated; the appended privacy comparison defines their release boundary.
 
 ## 3. Changes Made Since Earlier Implementation
 
@@ -206,7 +206,7 @@ Spatial/data contract; CNN bounded implementation/evaluation; empirical passenge
 
 **Reporting gaps:** named meeting-document alignment; raw development accepted/rejected/unmatched counts; current-run vehicle utilization; charging-specific directional split; exhaustive per-assignment/per-movement operational audit. Reporting gaps are not automatically implementation defects.
 
-**Model-development gaps:** pricing stability/convergence and decision on25→50/100/500 continuation; full non-private baseline; privacy and secure aggregation; later robustness/attacks; final baselines/ablations; multiple seeds/confidence intervals; protected final evaluation. Privacy is **PENDING**, downstream of a reproducible non-private baseline. Later work includes private-unit definition, gradient clipping, Gaussian noise/DP-SGD where applicable, accounting, secure aggregation and before/after utility comparison. No privacy budget, delta, clipping constant or noise multiplier is invented.
+**Model-development gaps:** pricing stability/convergence and decision on25→50/100/500 continuation; full non-private baseline; secure aggregation and privacy hardening; later robustness/attacks; final baselines/ablations; multiple seeds/confidence intervals; protected final evaluation. Conditional driver-level routing DP, update clipping, Gaussian aggregation noise, conservative RDP accounting and before/after routing comparison are complete. Secure aggregation, production-grade privacy hardening and release accounting for raw diagnostics remain pending; see the appended comparison.
 
 ## 14. What Can Be Presented Now
 
@@ -218,7 +218,7 @@ No final pricing convergence; no optimal pricing factor; no protected hierarchic
 
 ## 16. Next Recommended Work
 
-Current-state academic review and an explicit decision on further authoritative pricing training before privacy. Review calibration, bootstrap and fixed-development changes together. Resolve reporting gaps separately; do not silently alter methodology or restart/resume training from this report. Later continuation and protected evaluation require separate authorization.
+Current-state academic review and an explicit decision on further authoritative pricing training; conditional routing-DP results are available for review. Review calibration, bootstrap and fixed-development changes together. Resolve reporting gaps separately; do not silently alter methodology or restart/resume training from this report. Later continuation and protected evaluation require separate authorization.
 
 ## 17. Authoritative Artifact Index
 
@@ -231,5 +231,18 @@ PRICING_REVIEW_CUTOFF = EPISODE_25
 PRICING_POLICY_CONVERGED = NO  
 FINAL_ROUTING_MODEL_FROZEN = YES  
 PASSENGER_ACCEPTANCE_CONTRACT_READY = YES  
-PRIVACY_IMPLEMENTED = NO  
+PRIVACY_IMPLEMENTED = YES (conditional model-only routing mechanism; raw diagnostics excluded)  
 PROTECTED_FINAL_EVALUATION_UNTOUCHED = YES
+
+## Differential Privacy — temporal routing comparison
+
+Conditional central driver-level DP is implemented at the trusted aggregation boundary: replacement adjacency with fixed public participation, C=1, no subsampling amplification, 576-round Gaussian RDP accounting. Individual epsilon targets8/4/2 at delta1e-5 are achieved; three-model joint release has epsilon9.533672. Raw research diagnostics are not DP-protected releases.
+
+| model | epsilon | CE | Brier | accuracy | non_STAY_CE |
+| --- | --- | --- | --- | --- | --- |
+| NON_PRIVATE | not applicable | 0.291658 | 0.093054 | 0.949363 | 5.140560 |
+| DP_EPS8 | 8.000000 | 0.830102 | 0.184402 | 0.900448 | 10.395219 |
+| DP_EPS4 | 4.000000 | 2.042319 | 0.248193 | 0.875446 | 29.416439 |
+| DP_EPS2 | 2.000000 | 19.522398 | 0.550814 | 0.723496 | 211.529834 |
+
+The bounded same-episode25-checkpoint development comparison is complete; it remains preliminary because pricing is not converged. Secure aggregation, pricing convergence and robustness/attack evaluation remain pending. Protected final evaluation is untouched. See [privacy comparison](../2026-11-01_differential_privacy_comparison/README.md) for exact budgets, limitations, clipping and service metrics.

@@ -2,11 +2,11 @@
 
 ## Active project status — 1 November 2026
 
-Final CNN implementation/evaluation is complete; the historical baseline remains superior. Passenger acceptance and driver/EV contracts are frozen. Final temporal routing is frozen and ready for pricing, with modest/uncertain positive aggregate signal and weak rare-action performance. Pricing DQN is implemented; authoritative8-update results are reviewed through episode25, **not converged**. Privacy has not started. Historical sections below retain earlier statuses as provenance; this current summary and linked review take precedence.
+Final CNN implementation/evaluation is complete; the historical baseline remains superior. Passenger acceptance and driver/EV contracts are frozen. Final temporal routing is frozen and ready for pricing, with modest/uncertain positive aggregate signal and weak rare-action performance. Pricing DQN is implemented; authoritative8-update results are reviewed through episode25, **not converged**. Conditional model-only DP routing variants and conservative RDP accounting are complete; trusted raw diagnostics are not DP releases. Historical sections below retain earlier statuses as provenance; this current summary and linked review take precedence.
 
 ### Current Resume Point
 
-Training is paused for current-state academic review. [Current-state review package](results/analysis/2026-11-01_current_state_review/README.md) consolidates saved evidence through episode25. Later partial episode26 is preserved and excluded. No training was resumed by this reporting task. March17–31 untouched.
+Authoritative pricing training is paused for current-state academic review. [Current-state review package](results/analysis/2026-11-01_current_state_review/README.md) consolidates saved evidence through episode25. Later partial episode26 is preserved and excluded. No pricing training was resumed by the DP routing comparison. March17–31 untouched.
 
 ### Routing Model Status
 
@@ -18,7 +18,7 @@ Methodology-faithful500×16×8 protocol unchanged. Preliminary25-episode finding
 
 ### Open Methodology Decisions / Next Step
 
-Current-state academic review and a decision on pricing-training continuation before privacy. Reporting gaps are documented separately from implementation defects. Full non-private baseline, privacy, later robustness and protected evaluation remain pending.
+Non-private temporal routing remains frozen. [DP routing comparison](results/analysis/2026-11-01_differential_privacy_comparison/README.md) completes three isolated privacy variants, RDP accounting and before/after held-out comparison. Pricing DQN remains preliminary/non-converged and paused. Secure aggregation, robustness/attack evaluation and production privacy hardening remain pending. March17–31 untouched.
 
 ## 1. Project overview
 

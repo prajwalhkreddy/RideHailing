@@ -1,0 +1,6 @@
+..2026-11-01 22:15:31.809566: W external/local_tsl/tsl/platform/profile_utils/cpu_utils.cc:145] Failed to get CPU frequency: 0 Hz
+.......
+----------------------------------------------------------------------
+Ran 9 tests in 0.880s
+
+OK

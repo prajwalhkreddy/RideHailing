@@ -1,0 +1,39 @@
+{
+  "status": "COMPLETED_MODEL_ONLY_RESEARCH_COMPARISON",
+  "private_unit": "DRIVER",
+  "mechanism": "CENTRAL_DRIVER_LEVEL_DP_FOR_FEDERATED_AGGREGATION",
+  "adjacency": "Replace all local records of one driver across the training horizon, conditional on identical public participation schedule, client roster, public covariates and other drivers records. A per-round clipped mean has replacement sensitivity 2C/n_t. Membership/participation is not protected.",
+  "C": 1.0,
+  "delta": 1e-05,
+  "rounds": 576,
+  "training_seed": 42,
+  "noise_seed": "Independent OS-entropy secret per run; never seed42. Persisted only inside access-restricted trusted resume state; same state resumes deterministically.",
+  "noise_multipliers": {
+    "8": 16.56848352358847,
+    "4": 31.105963011102276,
+    "2": 59.983001132945326
+  },
+  "accounting": "Gaussian RDP alpha/(2*sigma^2), additive576-round composition, epsilon=min_alpha(RDP+log(1/delta)/(alpha-1)); sigma measured relative to 2C/n_t. NO_SUBSAMPLING_AMPLIFICATION.",
+  "joint_three_run_epsilon": 9.533672128118631,
+  "joint_delta": 1e-05,
+  "release_boundary": "Noisy global model transcript only. Existing non-private baseline, unnoised validation metrics, clipping norm aggregates, training logs, client optimizer/buffer state and noise RNG are NOT DP releases. Entire repository/report is NOT protected by model-only accounting. Trusted research diagnostics are not publishable as a DP-protected data release.",
+  "trusted_state": "Model namespaces mode0700, resume mode0600. Never distribute trusted_resume.pkl. Permission bits are not cryptographic protection or secure aggregation.",
+  "floating_point_limitation": "Ideal Gaussian RDP accountant with NumPy float64 normal sampling and float32 model postprocessing; no hardened finite-precision DP sampler audit. Research mechanism, not a certified production privacy system.",
+  "SECURE_AGGREGATION_IMPLEMENTED": "NO",
+  "pricing_training_resumed": false,
+  "protected_final_evaluation_untouched": true,
+  "source": "https://arxiv.org/abs/1702.07476",
+  "nonprivate_checkpoint_unchanged": true,
+  "input_cache": "models/routing_policy/mar01_mar12_2026_final_behavioral_169x64x32x9_seed42/validated_cache/{X,M,Y,IDS}.npy",
+  "training_slice": [
+    0,
+    2656632
+  ],
+  "validation_slice": [
+    2656632,
+    3303289
+  ],
+  "slot_metadata": "results/analysis/2026-10-30_routing_effectiveness_diagnosis/metadata.npz",
+  "initialization_weights_sha256": "9e7bc3688a3d9c17eba7abf86a64f78606d6be9694b19d906e367ec108f5b4b0",
+  "nonprivate_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a"
+}

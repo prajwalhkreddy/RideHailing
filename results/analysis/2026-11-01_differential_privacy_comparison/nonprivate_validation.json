@@ -1,0 +1,93 @@
+{
+  "metrics": {
+    "model": "NON_PRIVATE",
+    "N": 646657,
+    "accuracy": 0.9493626451117053,
+    "CE": 0.2916579659117931,
+    "Brier": 0.09305395390636356,
+    "ECE": 0.015838034523733273,
+    "STAY_accuracy": 0.9983992139229345,
+    "non_STAY_accuracy": 0.006195437904815545,
+    "non_STAY_CE": 5.140560449386505,
+    "non_STAY_Brier": 1.7565992538800705,
+    "mean_true_action_probability": 0.9175204561885335,
+    "mean_entropy": 0.1876755586409125,
+    "STAY_predicted_share": 0.9978860508739563,
+    "invalid_action_count": 0
+  },
+  "actions": [
+    {
+      "model": "NON_PRIVATE",
+      "action": 0,
+      "name": "STAY",
+      "count": 645290,
+      "percentage": 99.78860508739564,
+      "mean_probability": 0.9599890706787404
+    },
+    {
+      "model": "NON_PRIVATE",
+      "action": 1,
+      "name": "N",
+      "count": 0,
+      "percentage": 0.0,
+      "mean_probability": 0.0035041797251610233
+    },
+    {
+      "model": "NON_PRIVATE",
+      "action": 2,
+      "name": "NE",
+      "count": 0,
+      "percentage": 0.0,
+      "mean_probability": 0.0010269251991276965
+    },
+    {
+      "model": "NON_PRIVATE",
+      "action": 3,
+      "name": "E",
+      "count": 0,
+      "percentage": 0.0,
+      "mean_probability": 0.00922011294079622
+    },
+    {
+      "model": "NON_PRIVATE",
+      "action": 4,
+      "name": "SE",
+      "count": 0,
+      "percentage": 0.0,
+      "mean_probability": 0.0008219474950535163
+    },
+    {
+      "model": "NON_PRIVATE",
+      "action": 5,
+      "name": "S",
+      "count": 823,
+      "percentage": 0.12726994372596293,
+      "mean_probability": 0.0077541425756702574
+    },
+    {
+      "model": "NON_PRIVATE",
+      "action": 6,
+      "name": "SW",
+      "count": 0,
+      "percentage": 0.0,
+      "mean_probability": 0.003477160385441028
+    },
+    {
+      "model": "NON_PRIVATE",
+      "action": 7,
+      "name": "W",
+      "count": 544,
+      "percentage": 0.08412496887840076,
+      "mean_probability": 0.013518241382179457
+    },
+    {
+      "model": "NON_PRIVATE",
+      "action": 8,
+      "name": "NW",
+      "count": 0,
+      "percentage": 0.0,
+      "mean_probability": 0.0006882196178304157
+    }
+  ],
+  "sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a"
+}

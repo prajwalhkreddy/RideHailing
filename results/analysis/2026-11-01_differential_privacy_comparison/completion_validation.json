@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "focused_tests": 9,
+  "routing_models": 4,
+  "validation_rows_per_model": 646657,
+  "development_models": 4,
+  "development_slots_per_model": 4,
+  "same_initial_fleet": true,
+  "same_pricing_checkpoint": true,
+  "pricing_checkpoint_hashes_unchanged": true,
+  "nonprivate_routing_hash_unchanged": true,
+  "all_DP_hashes_verified": true,
+  "secret_resume_permissions_verified": true,
+  "protected_final_evaluation_untouched": true,
+  "report_required_files_present": true,
+  "neutral_terminology": true
+}

@@ -1,0 +1,19 @@
+{
+  "log_space_CE": true,
+  "probability_clipping": false,
+  "training_updates_for_recovery": 0,
+  "rounds_before_recovery": 576,
+  "existing_models_verified": [
+    {
+      "model": "DP_EPS8",
+      "CE_difference": 0.0,
+      "model_sha256_unchanged": true
+    },
+    {
+      "model": "DP_EPS4",
+      "CE_difference": 0.0,
+      "model_sha256_unchanged": true
+    }
+  ],
+  "reason": "eps2 probability underflow in log(softmax) evaluation; log-softmax avoids underflow. Finite logits/weights required."
+}

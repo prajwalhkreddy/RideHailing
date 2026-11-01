@@ -1,0 +1,13 @@
+EVALUATING 8
+EVALUATING 4
+EVALUATING 2
+DP_EPS2 completed slot 1
+DP_EPS2 completed slot 2
+DP_EPS2 completed slot 3
+DP_EPS2 completed slot 4
+      model        CE    Brier  accuracy  non_STAY_accuracy  non_STAY_CE  epsilon  noise_multiplier  clipping_fraction
+NON_PRIVATE  0.291658 0.093054  0.949363           0.006195     5.140560      NaN          0.000000                NaN
+    DP_EPS8  0.830102 0.184402  0.900448           0.005695    10.395219      8.0         16.568484                0.0
+    DP_EPS4  2.042319 0.248193  0.875446           0.051128    29.416439      4.0         31.105963                0.0
+    DP_EPS2 19.522398 0.550814  0.723496           0.052943   211.529834      2.0         59.983001                0.0
+COMPARISON_COMPLETE
