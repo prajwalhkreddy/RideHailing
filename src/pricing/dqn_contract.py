@@ -33,16 +33,15 @@ def threshold_acceptance(p_base,d_base,distance_miles,E,pricing_factor):
     return fare<=limit,fare,limit
 
 def behavioural_model(rng,decision_timestamp):
-    """Preserve verified legacy E sampler; never ingest Record-029 epsilon."""
-    if timestamp(decision_timestamp)<pd.Timestamp('2026-01-25 18:30'):
+    """Load the frozen empirical absolute-distance/price passenger population."""
+    from src.pricing.empirical_sensitivity import EmpiricalCustomerSensitivityModel
+    p=ROOT/'data/processed/passenger_empirical_absolute_epsilon_2026_01.parquet'
+    meta=json.loads(p.with_suffix('.json').read_text())
+    if timestamp(decision_timestamp)<pd.Timestamp(meta['training_cutoff_exclusive']):
         raise ValueError('Behavioural prior not available before training cutoff.')
-    paths=[]
-    for stem in ('customer_price_sensitivity_2026_01','customer_price_sensitivity_fallback_2026_01'):
-        p=ROOT/'data/processed'/f'{stem}.parquet'
-        meta=json.loads((ROOT/'data/processed'/f'{stem}_metadata.json').read_text())
-        if hashlib.sha256(p.read_bytes()).hexdigest()!=meta['output_sha256']:raise ValueError('Behavioural source fingerprint mismatch.')
-        paths.append(p)
-    return HistoricalCustomerSensitivityModel.from_parquet(paths[0],rng,paths[1],'hierarchical')
+    if hashlib.sha256(p.read_bytes()).hexdigest()!=meta['sha256']:
+        raise ValueError('Empirical passenger source fingerprint mismatch.')
+    return EmpiricalCustomerSensitivityModel.from_parquet(p,rng)
 
 @dataclass(frozen=True)
 class DispatchOutcome:

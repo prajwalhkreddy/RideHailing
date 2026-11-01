@@ -206,7 +206,7 @@ class ProductionExperiment:
                 if decision.action_index:v.current_action='repositioning'
         return counts,charging
 
-    def run_slot(self,requests=None,*,terminal=False,train_dqn=False,routing_updates=(),routing_data_generation=False):
+    def run_slot(self,requests=None,*,terminal=False,train_dqn=False,routing_updates=(),routing_data_generation=False,explore_pricing=True):
         t=self.timestamp;end=t+pd.Timedelta(minutes=30)
         if getattr(self,'frozen_routing',False) and routing_updates:raise ValueError('Frozen inference-only routing rejects updates.')
         if routing_data_generation:
@@ -220,6 +220,7 @@ class ProductionExperiment:
         if len({r.request_id for r in requests})!=len(requests):raise ValueError('Duplicate request IDs.')
         weather=pd.read_parquet(self.base/'demand_master_jan_mar_2026.parquet',columns=['GridID','WeatherCode'],filters=[('TimeSlot','==',t)]).set_index('GridID')
         if len(weather)!=142 or weather.index.duplicated().any():raise ValueError('Weather unavailable.')
+        price_rejections=[];price_unmatched=0
         selected={};states={};od_rewards={};accepted=0;assigned=0;completed=0;assignment_times={}
         for request in requests:request.validate(range(142),15)
         for mini in range(15):
@@ -228,7 +229,7 @@ class ProductionExperiment:
                 completed+=self.advance_until(t+pd.Timedelta(seconds=offset))
                 key=(r.origin_grid,r.destination_grid)
                 if key not in selected:
-                    states[key]=self.current_states.build(*key,t);selected[key]=self.dqn.select_action(states[key]) if not routing_data_generation else PricingAction(3,1.0,0.0,False);od_rewards[key]=0.
+                    states[key]=self.current_states.build(*key,t);selected[key]=self.dqn.select_action(states[key],explore=explore_pricing) if not routing_data_generation else PricingAction(3,1.0,0.0,False);od_rewards[key]=0.
                 action=selected[key];resolved=self.customer.resolve_parameters(float(weather.loc[r.origin_grid,'WeatherCode']),t.hour*2+t.minute//30)
                 response=self.customer.evaluate_resolved(resolved,r.trip_distance_miles,action.pricing_factor)
                 r.base_fare=response.p_base;r.pricing_factor=action.pricing_factor;r.offered_fare=response.p_dispatch;r.customer_accepted=response.accepted;r.customer_model='historical_sensitivity'
@@ -236,7 +237,9 @@ class ProductionExperiment:
                 r.validate(range(142),15)
                 if response.accepted:
                     accepted+=1
-                    dispatch_requests([r],self.fleet,self.lookup,2,15,energy_parameters=self.energy,dispatch_model=DISPATCH_MODEL_LEGACY,slot_start_time=t.to_pydatetime(),station_reserve=self.station_reserve,reserve_observer=self.record_reserve_rejection)
+                    price_count_before=len(price_rejections)
+                    dispatch_requests([r],self.fleet,self.lookup,2,15,energy_parameters=self.energy,dispatch_model=DISPATCH_MODEL_LEGACY,slot_start_time=t.to_pydatetime(),station_reserve=self.station_reserve,reserve_observer=self.record_reserve_rejection,driver_minimum_prices=self.profiles.price_preference,price_observer=lambda request,vehicle:price_rejections.append(request.request_id))
+                    if r.status is not RequestStatus.ASSIGNED and len(price_rejections)>price_count_before:price_unmatched+=1
                     if r.status is RequestStatus.ASSIGNED:
                         if r.assigned_vehicle_id in self.passengers or r.assigned_vehicle_id in self.missions:raise ValueError('Conflicting assignment.')
                         commitment=passenger_commitment(r,t)
@@ -259,7 +262,7 @@ class ProductionExperiment:
             for key,action in selected.items():self.dqn.store(states[key],action.action_index,od_rewards[key],states[key] if terminal else self.current_states.build(*key,end),terminal)
         training=self.dqn.train_step() if train_dqn else None
         validate_fleet(self.fleet.vehicles,range(142),self.fleet_size)
-        report=dict(timestamp=str(t),requests=len(requests),accepted=accepted,rejected=len(requests)-accepted,assigned=assigned,unmatched=accepted-assigned,reward=reward,completed=completed,transitions=len(selected) if not routing_data_generation and training_update_allowed(t) else 0,replay_size=len(self.dqn.replay),routing_actions=routing_counts.tolist(),charging_decisions=charging_decisions,fleet_size=self.fleet_size,unsupported_forecast_demand=sum(self.unsupported_demand.values()),pricing_action_counts=np.bincount([a.action_index for a in selected.values()],minlength=7).tolist(),federated_updates=0 if federation is None else federation.metadata.participating_updates,training=training,terminal=terminal)
+        report=dict(price_ineligible_candidate_count=len(price_rejections),requests_with_any_price_ineligible_candidate=len(set(price_rejections)),accepted_requests_unmatched_due_to_no_price_eligible_driver=price_unmatched,timestamp=str(t),requests=len(requests),accepted=accepted,rejected=len(requests)-accepted,assigned=assigned,unmatched=accepted-assigned,reward=reward,completed=completed,transitions=len(selected) if not routing_data_generation and training_update_allowed(t) else 0,replay_size=len(self.dqn.replay),routing_actions=routing_counts.tolist(),charging_decisions=charging_decisions,fleet_size=self.fleet_size,unsupported_forecast_demand=sum(self.unsupported_demand.values()),pricing_action_counts=np.bincount([a.action_index for a in selected.values()],minlength=7).tolist(),federated_updates=0 if federation is None else federation.metadata.participating_updates,training=training,terminal=terminal)
         self.reports.append(report);return report
 
     def run(self,slot_count,*,train_dqn=False):

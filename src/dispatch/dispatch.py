@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import math
 from collections import defaultdict
 from dataclasses import dataclass
 from datetime import datetime, timedelta
@@ -48,18 +49,27 @@ def build_neighbour_lookup(neighbour_map, valid_grid_ids: Collection[int]) -> di
     return lookup
 
 
-def find_eligible_vehicle(request: RequestState, fleet: Fleet, neighbour_lookup: Mapping[int, Iterable[int]], energy_parameters: EnergyParameters | None = None, station_reserve=None, reserve_observer=None):
+def find_eligible_vehicle(request: RequestState, fleet: Fleet, neighbour_lookup: Mapping[int, Iterable[int]], energy_parameters: EnergyParameters | None = None, station_reserve=None, reserve_observer=None, driver_minimum_prices=None, price_observer=None):
     """Find lowest-ID idle supply: same grid, then direct neighbours only."""
     required_energy = None if energy_parameters is None or request.trip_distance_km is None else energy_consumed_kwh(request.trip_distance_km, energy_parameters)
     eligible = lambda vehicle: vehicle.trip_status is VehicleStatus.IDLE and (energy_parameters is None or (not requires_charging(vehicle, energy_parameters) and (required_energy is None or vehicle.energy_level >= required_energy)))
     base_eligible=eligible
     def eligible(vehicle):
         if not base_eligible(vehicle):return False
-        if station_reserve is None:return True
-        if required_energy is None:raise ValueError('Passenger distance required for station reserve.')
-        allowed=vehicle.energy_level-required_energy >= station_reserve(request.destination_grid)
-        if not allowed and reserve_observer is not None:reserve_observer(request,vehicle)
-        return allowed
+        if station_reserve is not None:
+            if required_energy is None:raise ValueError('Passenger distance required for station reserve.')
+            allowed=vehicle.energy_level-required_energy >= station_reserve(request.destination_grid)
+            if not allowed:
+                if reserve_observer is not None:reserve_observer(request,vehicle)
+                return False
+        if driver_minimum_prices is not None:
+            minimum = float(driver_minimum_prices[vehicle.vehicle_id])
+            if not math.isfinite(minimum) or minimum < 0 or request.offered_fare is None or not math.isfinite(request.offered_fare):
+                raise ValueError('Finite offered fare and nonnegative driver minimum required.')
+            if request.offered_fare < minimum:
+                if price_observer is not None:price_observer(request,vehicle)
+                return False
+        return True
     same_grid = [vehicle for vehicle in fleet.vehicles if vehicle.current_grid == request.origin_grid and eligible(vehicle)]
     if same_grid:
         return min(same_grid, key=lambda vehicle: vehicle.vehicle_id)
@@ -102,6 +112,8 @@ def dispatch_requests(
     slot_start_time: datetime | None = None,
     station_reserve=None,
     reserve_observer=None,
+    driver_minimum_prices: Mapping[int, float] | None = None,
+    price_observer=None,
 ) -> dict[str, int]:
     """Immediately process PENDING requests in FCFS mini-slot/request-ID order.
 
@@ -128,7 +140,7 @@ def dispatch_requests(
             raise ValueError("Dispatch accepts only PENDING requests.")
         selected_evaluation = None
         if dispatch_model == DISPATCH_MODEL_LEGACY:
-            vehicle = find_eligible_vehicle(request, fleet, neighbour_lookup, energy_parameters, station_reserve, reserve_observer)
+            vehicle = find_eligible_vehicle(request, fleet, neighbour_lookup, energy_parameters, station_reserve, reserve_observer, driver_minimum_prices, price_observer)
         else:
             assert contention_inputs is not None
             candidates = eligible_local_vehicles(

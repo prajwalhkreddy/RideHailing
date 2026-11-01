@@ -119,6 +119,30 @@ class PricingDQN:
         self.online.optimizer.apply_gradients(zip(gradients,self.online.trainable_variables))
         soft_update(self.online,self.target,self.config.soft_target_tau);self.training_steps+=1
         return dict(loss=float(loss),mean_q=float(tf.reduce_mean(q)),mean_target=float(np.mean(targets)),epsilon=self.epsilon,replay_size=len(self.replay))
+    def enable_compiled_updates(self):
+        """Opt-in execution optimization; replay and Bellman targets stay unchanged."""
+        @tf.function(reduce_retracing=True)
+        def update(states,actions,targets):
+            with tf.GradientTape() as tape:
+                q=tf.gather(self.online(states,training=True),actions,axis=1,batch_dims=1)
+                diff=targets-q;absolute=tf.abs(diff)
+                loss=tf.reduce_mean(tf.where(absolute<=1,.5*diff**2,absolute-.5))
+            gradients=tape.gradient(loss,self.online.trainable_variables)
+            tf.debugging.assert_all_finite(loss,'Nonfinite loss')
+            for g in gradients:tf.debugging.assert_all_finite(g,'Nonfinite gradient')
+            self.online.optimizer.apply_gradients(zip(gradients,self.online.trainable_variables))
+            soft_update(self.online,self.target,self.config.soft_target_tau)
+            return loss,tf.reduce_mean(q)
+        self._compiled_update=update
+
+    def compiled_train_step(self):
+        if len(self.replay)<self.config.minimum_replay_size:return None
+        states,actions,rewards,next_states,dones=self.replay.sample(self.config.batch_size)
+        targets=bellman_targets(rewards,dones,self.target(next_states,training=False).numpy(),self.config.gamma)
+        loss,q=self._compiled_update(states,actions,targets)
+        self.training_steps+=1
+        return dict(loss=float(loss),mean_q=float(q),mean_target=float(np.mean(targets)),epsilon=self.epsilon,replay_size=len(self.replay))
+
     def save(self,path):
         path=Path(path);path.mkdir(parents=True,exist_ok=True)
         self.online.save(path/'online.keras');self.target.save(path/'target.keras')

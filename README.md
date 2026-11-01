@@ -1,20 +1,25 @@
 # Ride-Hailing Platform Simulation
 
-## Active project status — 26 October 2026
+## Active project status — 30 October 2026
 
-Final clean routing generation, central routing training and five-round plain FedAvg are complete. March1–15 pricing training also completed, but is **COMPLETED_PRICING_TRAINING_RUN / TRAINING_SCHEDULE_MISMATCH / NOT_FINAL_NONPRIVATE_BASELINE**. It is not an active unattended run or a validated final baseline.
+Final behavioral routing generation and the fixed central/plain-FedAvg training run are complete. Routing probability adequacy is **NO**; pricing readiness is **NO**. Earlier pricing training remains pre-correction provenance, not a final baseline.
 
 ### Current Resume Point
 
-Professor request-level March16 diagnostic: [ACTIVE_IMPLEMENTATION_DIAGNOSTIC / NOT_SOURCE_VALIDATED](results/analysis/2026-10-26_professor_request_level_diagnostics/README.md).
+Accelerated review and stability diagnosis are complete. Cadence attribution concluded **ACCELERATED_CADENCE_DOMINANT** and supports monitored continuation. The authoritative **8-update** run resumed from **episode5/slot2**, replay30,039, updates520, epsilon0.99012, under PID **42615**. Observational gates: episodes **10/25/50/100**. Log/status: `results/analysis/2026-10-31_final_nonprivate_pricing_training/training.log` and `status.json` in that folder. The500×16×8 protocol remains unchanged; accelerated checkpoints are not used. March17–31 untouched. No completion or convergence is claimed; launch monitoring stops after initial continuation verification.
 
-**READY_FOR_CORRECTED_PRICING_RETRAIN = NO.** Acceptance source-equation investigation is complete with **E: SOURCE_EQUATION_NOT_AVAILABLE / PROFESSOR_CLARIFICATION_REQUIRED = YES**. Explicit project notes exist but conflict: Stage B of `Final_Next_Implementation_Process.docx` defines price-over-distance epsilon, while Stage E divides distance deviation by epsilon for P_max. Active calibration additionally takes an absolute value. The original acceptance equation/convention remains unverified; no multiplication/division choice is made.
+### Routing Model Status
 
-The final FCFS hard-price gate `P_disp >= P_i_min` is missing and requires implementation. Resolve acceptance and bundle both upstream corrections before any clean regeneration or retraining. Existing routing probabilities fail held-out adequacy (**NO**); do not tune routing against data that may need upstream correction. Current routing/pricing artifacts remain provenance and become non-final for any changed contract. The proposed pricing cadence is still conditional and unimplemented.
+Frozen temporal FedAvg checkpoint: `models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras`. SHA256:`db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a`. Validation CE/Brier/ECE:0.291658/0.093054/0.015838 versus prior CE/Brier0.293259/0.095935. Improvement is **MODEST / UNCERTAIN BUT POSITIVE**: CE moving-block interval overlaps zero; Brier interval is negative. The vector is nondegenerate, but non-STAY top-1 accuracy is0.6195% and subgroup probabilistic evidence is mixed. Runtime checkpoint activation is unchanged.
 
-[Acceptance source investigation and dependency impact](results/analysis/2026-10-26_acceptance_source_resolution/README.md); [professor gate](results/analysis/2026-10-26_professor_alignment_pricing_gate/README.md). The new source investigation supplements the earlier gate with explicit contradictory methodology-note equations; it does not approve a replacement.
+### Pricing Model Status
 
-Corrected retraining **NOT YET RUN**. No regeneration is authorized before acceptance resolves. March17–31 remains untouched by RL development and protected for final evaluation. Privacy/DP remains future work. Completed runs and historical evidence are retained in the sections below.
+The final non-private learner/checkpoints remain paused and unchanged. The isolated accelerated review starts fresh with seed42, retains the trusted DQN update path, and deliberately uses 128 sequential updates per warm slot for diagnostic purposes only. Final training still specifies eight. Frozen routing remains inference-only; March16 is mutation-free greedy development; March17–31 untouched. Review namespace: `models/pricing_dqn/accelerated_review_phase_seed42/`. Initial launch health passed; no learning or convergence outcome is claimed yet.
+
+### Open Methodology Decisions
+
+Episode 500 is an evaluation checkpoint, not guaranteed convergence. Review training/development/Q/action stability without a fabricated revenue threshold; continuation requires a separate task. March16 is fixed greedy development only, with no replay insertion or updates. March17–31 remains untouched. Routing method and the private/public boundary remain frozen. Historical sections below are preserved.
+
 
 ## 1. Project overview
 
