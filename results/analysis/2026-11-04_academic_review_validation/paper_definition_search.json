@@ -1,0 +1,32 @@
+{
+  "scope": "Consolidated roadmap and existing plan/papers directory only; no external search; no unambiguous paper identified",
+  "documents": [
+    {
+      "document": "notebooks/plan/papers/A_Reinforcement_Learning_and_Prediction-Based_Lookahead_Policy_for_Vehicle_Repositioning_in_Online_Ride-Hailing_Systems (1).pdf",
+      "pages": 11,
+      "differential_privacy_hits": []
+    },
+    {
+      "document": "notebooks/plan/papers/Joint_Optimization_of_Pricing_Dispatching_and_Repositioning_in_Ride-Hailing_With_Multiple_Models_Interplayed_Reinforcement_Learning.pdf",
+      "pages": 14,
+      "differential_privacy_hits": []
+    },
+    {
+      "document": "notebooks/plan/papers/MARL-Based_Pricing_Strategy_via_Mutual_Attention_for_MoD_Systems_with_Ridesharing_and_Repositioning.pdf",
+      "pages": 10,
+      "differential_privacy_hits": []
+    },
+    {
+      "document": "notebooks/plan/papers/Pricing_Based_Charging_Navigation_Scheme_for_Highway_Transportation_to_Enhance_Renewable_Generation_Integration.pdf",
+      "pages": 10,
+      "differential_privacy_hits": []
+    },
+    {
+      "document": "notebooks/plan/papers/Scheduling_of_Electric_Vehicles_Power_in_V2G_and_G2V_Modes_Using_an_Improved_ChargeDischarge_Opportunity-Based_Approach.pdf",
+      "pages": 12,
+      "differential_privacy_hits": []
+    }
+  ],
+  "PAPER_SPECIFIC_DP_REGIMES_COMPLETE": "NO",
+  "PAPER_ALPHA_VALUES": "NOT YET IDENTIFIED"
+}

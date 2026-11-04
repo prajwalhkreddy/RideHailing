@@ -1,0 +1,4 @@
+Matplotlib is building the font cache; this may take a moment.
+RESTORE {'episode': 25, 'start': '2026-03-12 11:30:00', 'start_slot': 551, 'environment_seed': 3405943863}
+REPLAY_SLOT 2026-03-12 15:30:00 REQUESTS 2996
+COMPLETE 2996 {'price_ineligible_candidate_count': 70250, 'requests_with_any_price_ineligible_candidate': 704, 'accepted_requests_unmatched_due_to_no_price_eligible_driver': 147, 'timestamp': '2026-03-12 15:30:00', 'requests': 2996, 'accepted': 719, 'rejected': 2277, 'assigned': 572, 'unmatched': 147, 'reward': 11178.87577597339, 'completed': 562, 'transitions': 359, 'replay_size': 100000, 'routing_actions': [4174, 68, 12, 101, 10, 49, 32, 33, 9], 'charging_decisions': 0, 'fleet_size': 5000, 'unsupported_forecast_demand': 2, 'pricing_action_counts': [67, 47, 50, 49, 50, 46, 50], 'federated_updates': 0, 'training': None, 'terminal': False}

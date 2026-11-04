@@ -1,0 +1,86 @@
+{
+  "N": 2996,
+  "accepted": 719,
+  "rejected": 2277,
+  "acceptance_percentage": 23.998664886515353,
+  "rejection_percentage": 76.00133511348464,
+  "PASSENGER_DECISION_MISMATCH_COUNT": 0,
+  "exact_equality_count": 0,
+  "missing_numeric_count": 0,
+  "nonfinite_numeric_count": 0,
+  "approximate_reporting_tolerance_USD": 1e-09,
+  "comparison_rule": "P_offer <= P_max, equality accepted; no tolerance in actual decision",
+  "price_gap_USD": {
+    "min": -1260.0563480828318,
+    "P5": -26.807958385178917,
+    "median": 5.798058608991022,
+    "P95": 21.608808738778887,
+    "max": 1871.3388998504076,
+    "mean": 5.426914532745303
+  },
+  "offer_vs_pmax": {
+    "below": 719,
+    "approximately_equal": 0,
+    "above": 2277
+  },
+  "pmax_vs_runtime_pbase": [
+    {
+      "category": "BELOW",
+      "N": 2365,
+      "percentage": 78.93858477970628,
+      "acceptance_percentage": 5.5813953488372094,
+      "mean_trip_distance_km": 2.3015728699534885,
+      "median_trip_distance_km": 2.1404275200000002,
+      "pricing_factor_counts": {
+        "0.85": 427,
+        "0.9": 512,
+        "0.95": 377,
+        "1.0": 55,
+        "1.05": 528,
+        "1.1": 261,
+        "1.15": 205
+      }
+    },
+    {
+      "category": "APPROX_EQUAL",
+      "N": 0,
+      "percentage": 0.0,
+      "acceptance_percentage": null,
+      "mean_trip_distance_km": null,
+      "median_trip_distance_km": null,
+      "pricing_factor_counts": {}
+    },
+    {
+      "category": "ABOVE",
+      "N": 631,
+      "percentage": 21.061415220293725,
+      "acceptance_percentage": 93.026941362916,
+      "mean_trip_distance_km": 11.609669890839937,
+      "median_trip_distance_km": 8.72264448,
+      "pricing_factor_counts": {
+        "0.85": 156,
+        "0.9": 117,
+        "0.95": 67,
+        "1.0": 63,
+        "1.05": 67,
+        "1.1": 59,
+        "1.15": 102
+      }
+    }
+  ],
+  "runtime_P_base_USD": [
+    20.321533859249936
+  ],
+  "runtime_L_base_km": [
+    5.289170703620971
+  ],
+  "negative_Pmax_count": 165,
+  "pmax_km_vs_recorded_max_abs_difference_USD": 1.1368683772161603e-13,
+  "pmax_km_vs_recorded_mean_abs_difference_USD": 1.1751466140491644e-15,
+  "pmax_native_vs_km_max_abs_difference_USD": 1.1368683772161603e-13,
+  "pmax_allclose_mismatch_count": 0,
+  "request_sample_N": 300,
+  "sample_method": "Sorted outcome \u00d7 pricing factor \u00d7 Pmax/base stratum coverage then deterministic evenly spaced rows; no synthetic rows",
+  "eligibility_definition": "At each actual request decision time: origin or direct-neighbour IDLE drivers; charging-trigger, trip-energy and post-trip station-reserve feasible; price eligible iff offered fare >= persisted price_preference. Rejected passengers receive observational eligibility counts without dispatch.",
+  "outcomes_exhaustive": true
+}

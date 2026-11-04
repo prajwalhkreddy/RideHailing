@@ -1,0 +1,122 @@
+{
+  "N": 10620409,
+  "source": "data/processed/price_distance_sensitivity_record029/cleaned_price_distance_jan_mar_2026.parquet",
+  "source_unit": "miles; retained only as source provenance",
+  "reporting_unit": "km",
+  "bin_rule": "(lower,upper]; last (15,infinity)",
+  "distance_distribution_km": {
+    "min": 0.01609344,
+    "P1": 0.2414016,
+    "P5": 0.804672,
+    "P25": 1.7380915200000002,
+    "median": 3.04166016,
+    "P75": 6.1637875200000005,
+    "P95": 20.30992128,
+    "P99": 31.47876864,
+    "max": 160.82174592,
+    "mean": 5.582927053779988
+  },
+  "short_trip_counts": {
+    "1": 901393,
+    "2": 3305206,
+    "3": 5251303,
+    "3.17": 5499054
+  },
+  "short_fare_distribution_USD": {
+    "min": 0.01,
+    "P1": 4.4,
+    "P5": 5.1,
+    "P25": 7.9,
+    "median": 10.0,
+    "P75": 12.8,
+    "P95": 22.33,
+    "P99": 40.35,
+    "max": 1000.03,
+    "mean": 11.56604296305126
+  },
+  "short_unique_fares": 8719,
+  "short_top_exact_fares": [
+    {
+      "fare_USD": 8.6,
+      "N": 368907,
+      "percentage_short": 7.025056447894932,
+      "unique_trip_distances": 185,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.9933798400000002
+    },
+    {
+      "fare_USD": 7.9,
+      "N": 367309,
+      "percentage_short": 6.994625905227712,
+      "unique_trip_distances": 169,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.8968192000000004
+    },
+    {
+      "fare_USD": 9.3,
+      "N": 361882,
+      "percentage_short": 6.8912801260944185,
+      "unique_trip_distances": 186,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.9933798400000002
+    },
+    {
+      "fare_USD": 7.2,
+      "N": 350446,
+      "percentage_short": 6.673505604228132,
+      "unique_trip_distances": 161,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.9933798400000002
+    },
+    {
+      "fare_USD": 10.0,
+      "N": 347816,
+      "percentage_short": 6.623422796208865,
+      "unique_trip_distances": 186,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.9933798400000002
+    },
+    {
+      "fare_USD": 10.7,
+      "N": 315140,
+      "percentage_short": 6.001177231631845,
+      "unique_trip_distances": 186,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.9933798400000002
+    },
+    {
+      "fare_USD": 6.5,
+      "N": 311934,
+      "percentage_short": 5.9401257173695745,
+      "unique_trip_distances": 145,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.8968192000000004
+    },
+    {
+      "fare_USD": 11.4,
+      "N": 277467,
+      "percentage_short": 5.2837743318182175,
+      "unique_trip_distances": 186,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.9933798400000002
+    },
+    {
+      "fare_USD": 5.8,
+      "N": 248986,
+      "percentage_short": 4.741413702465845,
+      "unique_trip_distances": 122,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.92900608
+    },
+    {
+      "fare_USD": 12.1,
+      "N": 232124,
+      "percentage_short": 4.420312444359047,
+      "unique_trip_distances": 186,
+      "minimum_trip_distance_km": 0.01609344,
+      "maximum_trip_distance_km": 2.9933798400000002
+    }
+  ],
+  "global_mean_fare_USD": 21.34586956773507,
+  "interpretation": "Repeated exact fares do not establish a minimum-fare tariff. Inspect changing bin means/medians, wide within-bin ranges and shared fare values. No inferred cleaning or pricing rule."
+}

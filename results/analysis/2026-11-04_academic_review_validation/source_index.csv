@@ -1,0 +1,33 @@
+review_item,source_artifact,authoritative_or_supporting,status,notes
+Latest consolidated roadmap,notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx,authoritative,VERIFIED,Primary requirements; ambiguous paper settings explicitly unresolved
+Historical Record-029 reference,data/processed/price_distance_sensitivity_record029/frozen_reference_values.json,authoritative,VERIFIED,Global price-conditioned reference; original units retained only as provenance
+Historical Record-029 denominator rule,data/processed/price_distance_sensitivity_record029/authoritative_epsilon_methodology.json,authoritative,VERIFIED,
+Historical cleaned Jan–Mar population,data/processed/price_distance_sensitivity_record029/cleaned_price_distance_jan_mar_2026.parquet,authoritative,VERIFIED,"10,620,409 rows; descriptive analysis only; all distances converted before binning"
+Historical unit-invariance sample,data/processed/price_distance_sensitivity_record029/authoritative_epsilon_jan_mar_2026.parquet,supporting,VERIFIED,"First 10,000 rows only; 9,992 VALID"
+Active passenger acceptance freeze,results/analysis/2026-10-29_passenger_acceptance_contract_finalization/README.md,authoritative,VERIFIED,
+Runtime empirical sampler,src/pricing/empirical_sensitivity.py,authoritative,VERIFIED,
+Runtime passenger P_max,src/pricing/customer_sensitivity.py,authoritative,VERIFIED,
+Runtime orchestration,src/simulation/final_production.py,authoritative,VERIFIED,
+Driver price eligibility,src/dispatch/dispatch.py,authoritative,VERIFIED,
+Driver profile generation,src/routing/production.py,authoritative,VERIFIED,
+Persisted driver preferences,data/processed/driver_preferences_seed42.parquet,authoritative,VERIFIED,
+Driver calibration metadata,data/processed/driver_preferences_seed42_metadata.json,authoritative,VERIFIED,
+True 3km migration metadata,data/processed/grid_metadata.json,authoritative,VERIFIED,Geometry fields verified; historical CNN readiness note is stale and not used
+Actual active grid geometry,data/processed/grid_lookup.parquet,authoritative,VERIFIED,
+Frozen routing,results/analysis/2026-10-31_final_routing_freeze_validation/README.md,authoritative,VERIFIED,
+Frozen pricing protocol,results/analysis/2026-10-31_final_pricing_training_protocol/pricing_training_contract.json,authoritative,VERIFIED,
+Pricing start schedule,results/analysis/2026-10-31_final_pricing_training_protocol/episode_protocol.json,authoritative,VERIFIED,
+Authoritative completed pricing metrics,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_metrics.csv,authoritative,VERIFIED,Only complete episodes1–25
+Pricing episode10 monitor,results/analysis/2026-10-31_final_nonprivate_pricing_training/monitoring_episode_0010.json,authoritative,VERIFIED,
+Pricing episode25 monitor,results/analysis/2026-10-31_final_nonprivate_pricing_training/monitoring_episode_0025.json,authoritative,VERIFIED,
+Exact request fixture checkpoint,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0025/checkpoint_0008_98717f4d/manifest.json,authoritative,VERIFIED,Episode25 after slot8; replay only slot9; stored payload hashes verified before/after
+Original slot-report reconciliation,models/pricing_dqn/final_nonprivate_multiepisode_seed42/episode_0025/checkpoint_0016_fb2fce6a/simulator.pkl,authoritative,VERIFIED,Saved reports only; slot9 matched exactly before post-slot optimization
+Final saved CNN predictions,models/cnn/jan_mar_2026_3km_30min_continued/test_predictions.parquet,authoritative,VERIFIED,"Existing defined March16–31 CNN evaluation; permitted, not hierarchical evaluation"
+Final saved CNN evaluation,results/analysis/2026-10-19_final_cnn_performance_diagnosis/summary.json,authoritative,VERIFIED,
+Current DP diagnostic,results/analysis/2026-11-01_differential_privacy_comparison/routing_before_after.csv,authoritative,VERIFIED,
+DP release/accounting boundary,results/analysis/2026-11-01_differential_privacy_comparison/README.md,authoritative,VERIFIED,
+Existing paper definition search,notebooks/plan/papers/A_Reinforcement_Learning_and_Prediction-Based_Lookahead_Policy_for_Vehicle_Repositioning_in_Online_Ride-Hailing_Systems (1).pdf,supporting,NO_UNAMBIGUOUS_DP_REGIME_DEFINITION,Text searched for differential privacy; no applicable LOW/HIGH/alpha definitions identified
+Existing paper definition search,notebooks/plan/papers/Joint_Optimization_of_Pricing_Dispatching_and_Repositioning_in_Ride-Hailing_With_Multiple_Models_Interplayed_Reinforcement_Learning.pdf,supporting,NO_UNAMBIGUOUS_DP_REGIME_DEFINITION,Text searched for differential privacy; no applicable LOW/HIGH/alpha definitions identified
+Existing paper definition search,notebooks/plan/papers/MARL-Based_Pricing_Strategy_via_Mutual_Attention_for_MoD_Systems_with_Ridesharing_and_Repositioning.pdf,supporting,NO_UNAMBIGUOUS_DP_REGIME_DEFINITION,Text searched for differential privacy; no applicable LOW/HIGH/alpha definitions identified
+Existing paper definition search,notebooks/plan/papers/Pricing_Based_Charging_Navigation_Scheme_for_Highway_Transportation_to_Enhance_Renewable_Generation_Integration.pdf,supporting,NO_UNAMBIGUOUS_DP_REGIME_DEFINITION,Text searched for differential privacy; no applicable LOW/HIGH/alpha definitions identified
+Existing paper definition search,notebooks/plan/papers/Scheduling_of_Electric_Vehicles_Power_in_V2G_and_G2V_Modes_Using_an_Improved_ChargeDischarge_Opportunity-Based_Approach.pdf,supporting,NO_UNAMBIGUOUS_DP_REGIME_DEFINITION,Text searched for differential privacy; no applicable LOW/HIGH/alpha definitions identified

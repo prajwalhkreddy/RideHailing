@@ -246,3 +246,14 @@ Conditional central driver-level DP is implemented at the trusted aggregation bo
 | DP_EPS2 | 2.000000 | 19.522398 | 0.550814 | 0.723496 | 211.529834 |
 
 The bounded same-episode25-checkpoint development comparison is complete; it remains preliminary because pricing is not converged. Secure aggregation, pricing convergence and robustness/attack evaluation remain pending. Protected final evaluation is untouched. See [privacy comparison](../2026-11-01_differential_privacy_comparison/README.md) for exact budgets, limitations, clipping and service metrics.
+
+
+## Academic Review Validation — 2026-11-04
+
+The consolidated roadmap is now available. [The validation package](../2026-11-04_academic_review_validation/README.md) adds verified evidence without rewriting the historical review above. Episode25 slot9 (March12 15:30–16:00) was reconstructed once from the saved slot8 simulator/learner/RNG checkpoint, with no optimizer update or persisted learner change. All comparable original slot metrics match: 2,996 requests,719 accepted,2,277 rejected,572 assignments and147 accepted-unmatched due to the driver price gate. Independent acceptance mismatches:0. Runtime P_max below/equal/above contextual base:2,365/0/631.
+
+All10,620,409 cleaned historical Jan–Mar trips were descriptively binned **after km conversion**. Fares are not constant below3km; the3–3.17km bin has247,751 trips, median$14.20 and mean$16.266758. No universal fare-floor rule is inferred. Driver preferences explicitly require offered fare≥persisted minimum;2,065 of5,000 profiles fall below0.85×the selected runtime context base. That factor is not an implemented preference floor.
+
+Saved final CNN predictions give MAE5.242741437, MSE334.626539391, RMSE18.292800206, R²0.961006692, NRMSE100.745164% and aggregate-volume error6.285204% over109,056 grid-slot observations. The historical section's narrower availability statement is superseded for these newly calculated metrics; no MAPE is claimed. Historical descriptive analysis and already-defined CNN evaluation were explicitly permitted. March17–31 hierarchical training/evaluation, policy selection and service/revenue evaluation remain untouched.
+
+Authoritative pricing remains25complete episodes/3,192updates: early trend only, not convergence. Mean/median offered price per historical episode remains NOT PERSISTED. Existing DP diagnostics are unchanged; the exact referenced-paper LOW/HIGH regimes and alpha values remain unidentified. Historical signed global-reference epsilon and current positive contextual epsilon are distinct conventions, not a miles/km bug. No methodology, frozen model, driver profile or production source changed.

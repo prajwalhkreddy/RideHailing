@@ -1,0 +1,152 @@
+{
+  "complete_episodes": 25,
+  "slots": 400,
+  "totals": {
+    "requests": 1118214.0,
+    "accepted": 303794.0,
+    "rejected": 814420.0,
+    "assignments": 247251.0,
+    "unmatched": 56543.0,
+    "revenue": 4791417.797715075
+  },
+  "episode25": {
+    "episode": 25,
+    "revenue": 167519.53836605503,
+    "assignments": 8688,
+    "requests": 51654,
+    "acceptance_rate": 0.2485577109226778,
+    "fulfillment_rate": 0.6766882155931148,
+    "action_counts": "[839, 801, 951, 759, 905, 798, 879]",
+    "mean_abs_Q": 374.8899841308594,
+    "median_abs_Q": 262.1220703125,
+    "mean_Q_spread": 24.994136810302734,
+    "epsilon": 0.939352,
+    "replay_size": 100000,
+    "optimizer_updates": 3192,
+    "mean_loss": 41.90878874063492,
+    "source_start": "2026-03-12 11:30:00",
+    "slots_completed": 16,
+    "accepted": 12839,
+    "rejected": 38815,
+    "unmatched": 4151,
+    "replay_insertions": 5932,
+    "fleet_count": 5000,
+    "charging_events": 60,
+    "reserve_assignment_rejections": 0,
+    "reserve_rejected_requests": 0,
+    "reserve_reposition_rejections": 0,
+    "price_ineligible_candidate_count": 1351204,
+    "rolling25_revenue": 191656.711908603,
+    "rolling25_assignments": 9890.04,
+    "assignment_rate": 0.1681960738761761,
+    "accepted_assignment_rate": 0.6766882155931148,
+    "rejection_rate": 0.7514422890773221,
+    "mean_offered_price_USD": "NOT PERSISTED",
+    "median_offered_price_USD": "NOT PERSISTED",
+    "action_0.85_count": 839,
+    "action_0.85_percentage": 14.143627781523938,
+    "action_0.90_count": 801,
+    "action_0.90_percentage": 13.503034389750505,
+    "action_0.95_count": 951,
+    "action_0.95_percentage": 16.031692515171947,
+    "action_1.00_count": 759,
+    "action_1.00_percentage": 12.795010114632502,
+    "action_1.05_count": 905,
+    "action_1.05_percentage": 15.256237356709374,
+    "action_1.10_count": 798,
+    "action_1.10_percentage": 13.452461227242077,
+    "action_1.15_count": 879,
+    "action_1.15_percentage": 14.817936614969657,
+    "action_count_unit": "OD-context pricing decisions; not request count"
+  },
+  "monitoring": {
+    "10": {
+      "episode": 10,
+      "mean_abs_Q": 141.6536407470703,
+      "median_abs_Q": 99.5578842163086,
+      "q_max": 586.09765625,
+      "mean_Q_spread": 12.686588287353516,
+      "mean_loss": 29.07678496837616,
+      "terminal_N": 4431,
+      "terminal_mean_reward": 26.500238348368427,
+      "terminal_selected_Q_mean": 147.0145263671875,
+      "terminal_absolute_TD_error": 122.38717965261547,
+      "bootstrap_fraction": 0.806625485420227,
+      "development_revenue": 23981.007204242018,
+      "development_assignments": 1272,
+      "development_action_distribution": [
+        904,
+        0,
+        0,
+        5,
+        0,
+        146,
+        98
+      ],
+      "replay_size": 67413,
+      "optimizer_updates": 1272,
+      "epsilon": 0.975832,
+      "mean_reward_16slot_reference": 404.5882488552141,
+      "flags": {
+        "TERMINAL_CALIBRATION_CONCERN": {
+          "status": "ABOVE_PRESERVED_REFERENCE_REVIEW",
+          "Q_to_reward_ratio": 5.547668078851031
+        },
+        "Q_SCALE_CONCERN": {
+          "status": "ABOVE_PRESERVED_REFERENCE_REVIEW",
+          "Q_to_mean_reward_horizon_ratio": 0.35011803023909
+        },
+        "BOOTSTRAP_DOMINANCE_CONCERN": {
+          "status": "BELOW_ACCELERATED_REFERENCE",
+          "distance_to_accelerated_reference": 0.14798139541132838
+        }
+      },
+      "flag_policy": "Reference comparisons only; an increase requests descriptive review, not dramatic-inflation proof, a convergence criterion or an automatic stop."
+    },
+    "25": {
+      "episode": 25,
+      "mean_abs_Q": 328.287353515625,
+      "median_abs_Q": 255.68789672851562,
+      "q_max": 1122.203857421875,
+      "mean_Q_spread": 16.038427352905273,
+      "mean_loss": 41.90878874063492,
+      "terminal_N": 5684,
+      "terminal_mean_reward": 26.030598385893935,
+      "terminal_selected_Q_mean": 338.09869384765625,
+      "terminal_absolute_TD_error": 312.07167619518503,
+      "bootstrap_fraction": 0.8936363458633423,
+      "development_revenue": 20595.954943252887,
+      "development_assignments": 887,
+      "development_action_distribution": [
+        0,
+        183,
+        0,
+        0,
+        22,
+        0,
+        948
+      ],
+      "replay_size": 100000,
+      "optimizer_updates": 3192,
+      "epsilon": 0.939352,
+      "mean_reward_16slot_reference": 407.3269866630143,
+      "flags": {
+        "TERMINAL_CALIBRATION_CONCERN": {
+          "status": "ABOVE_PRESERVED_REFERENCE_REVIEW",
+          "Q_to_reward_ratio": 12.988510246113782
+        },
+        "Q_SCALE_CONCERN": {
+          "status": "ABOVE_PRESERVED_REFERENCE_REVIEW",
+          "Q_to_mean_reward_horizon_ratio": 0.8059553240139732
+        },
+        "BOOTSTRAP_DOMINANCE_CONCERN": {
+          "status": "BELOW_ACCELERATED_REFERENCE",
+          "distance_to_accelerated_reference": 0.06097053496821314
+        }
+      },
+      "flag_policy": "Reference comparisons only; an increase requests descriptive review, not dramatic-inflation proof, a convergence criterion or an automatic stop."
+    }
+  },
+  "pricing_policy_converged": false,
+  "partial_episode26_excluded": true
+}

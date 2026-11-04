@@ -1,0 +1,23 @@
+{
+  "classification": "NO_ISSUE_UNIT_INVARIANT",
+  "historical_sample_N": 9992,
+  "relative_deviation_max_abs_difference": 1.7763568394002505e-15,
+  "relative_deviation_mean_abs_difference": 6.210004488220577e-17,
+  "relative_deviation_mismatch_count_gt_1e_12": 0,
+  "epsilon_max_abs_difference": 4.149569576838985e-12,
+  "epsilon_mean_abs_difference": 3.1896177566542188e-15,
+  "epsilon_absolute_mismatch_count_gt_1e_12": 3,
+  "epsilon_allclose_mismatch_count_atol_rtol_1e_12": 0,
+  "historical_formula_matches_stored_epsilon": true,
+  "source_resolution_miles_RAW": 0.01,
+  "resolution_km": 0.01609344,
+  "half_resolution_km": 0.00804672,
+  "grid_crs": "EPSG:32118",
+  "grid_native_units": "metres",
+  "valid_grids": 142,
+  "cell_width_km": 3.0,
+  "cell_height_km": 3.0,
+  "cardinal_movement_km": 3.0,
+  "diagonal_movement_km": 4.242640687119286,
+  "stay_movement_km": 0.0
+}
