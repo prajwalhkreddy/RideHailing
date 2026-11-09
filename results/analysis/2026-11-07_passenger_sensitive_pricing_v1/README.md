@@ -379,6 +379,10 @@ Read this canonical narrative first, then [active implementation specification](
 
 [Documentation consistency check](documentation_consistency_check.json) records literal source-to-document numerical comparisons. Numerical evidence remains unchanged.
 
+### Professor-review request-level March16 acceptance export
+
+The Episode25 fixed-development request export reconciles with the authoritative aggregate and persisted action order. See the [detailed request CSV](staged_training_002/professor_review/episode25_march16_request_level_acceptance.csv), [summary CSV](staged_training_002/professor_review/episode25_march16_request_level_acceptance_summary.csv), and [data dictionary](staged_training_002/professor_review/episode25_march16_request_level_acceptance_DATA_DICTIONARY.md).
+
 ## Original Formulation Coverage Checklist
 
 | Original requirement | Status |

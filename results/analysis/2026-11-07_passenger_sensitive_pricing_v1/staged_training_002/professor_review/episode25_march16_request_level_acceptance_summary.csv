@@ -1,0 +1,12 @@
+metric,N,percentage
+requests,2838,100.0
+offer_generated,2838,100.0
+passenger_accepted,2838,100.0
+passenger_rejected,0,0.0
+assigned,2786,98.16772374911909
+accepted_unmatched,52,1.8322762508809023
+no_price_eligible_driver,52,1.8322762508809023
+other_unmatched,0,0.0
+no_feasible_action,0,0.0
+forced_request,1559,54.93305144467935
+choice_request,1279,45.06694855532064

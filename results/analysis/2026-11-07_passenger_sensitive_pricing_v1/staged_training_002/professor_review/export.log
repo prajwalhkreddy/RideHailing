@@ -1,0 +1,4 @@
+/Users/prajwalhk/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/ks/zx55ck690yzct8xpxz06zwl40000gn/T/matplotlib-pn5y91za because there was an issue with the default path ({configdir}); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib is building the font cache; this may take a moment.
+{"status": "PASS", "rows": 2838, "columns": 79, "total_assigned_revenue": 56419.26785448056, "learner_fingerprint_before": "d8600b8f701b1de895f8d270f0093f08e8f4362f1edfdbedf9f33f10df4d2df4", "learner_fingerprint_after": "d8600b8f701b1de895f8d270f0093f08e8f4362f1edfdbedf9f33f10df4d2df4"}
