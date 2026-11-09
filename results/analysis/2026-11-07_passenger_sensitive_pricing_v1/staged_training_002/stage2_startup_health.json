@@ -1,0 +1,14 @@
+{
+  "pid": 64749,
+  "process_alive": true,
+  "startup_health": "PASS",
+  "stage": "STAGE2",
+  "event": "EPISODE_INITIALIZED",
+  "episode": 2,
+  "initial_restored_replay": 37111,
+  "initial_restored_updates": 128,
+  "initial_restored_epsilon": 0.997568,
+  "protected_period_guard": "PASS",
+  "fatal": null,
+  "checks_performed": 1
+}

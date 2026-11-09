@@ -1,0 +1,12 @@
+{
+  "pid": 63989,
+  "process_alive": true,
+  "status": "RUNNING",
+  "event": "EPISODE_INITIALIZED",
+  "episode": 1,
+  "slot": 0,
+  "bootstrap_failure": null,
+  "startup_health": "PASS",
+  "checks_performed": 1,
+  "no_polling": true
+}

@@ -1,0 +1,102 @@
+{
+  "stage": "STAGE3",
+  "episode": 11,
+  "replay_size": 100000,
+  "optimizer_updates": 1280,
+  "exploration_epsilon": 0.97568,
+  "EXACT_STOCHASTIC_CONTINUATION": "YES",
+  "protected_period_guard": "PASS",
+  "checkpoint_source": "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_010",
+  "episodes": [
+    {
+      "episode": 11,
+      "start": "2026-03-08 17:30:00",
+      "start_slot": 371,
+      "environment_seed": 2740186692
+    },
+    {
+      "episode": 12,
+      "start": "2026-03-15 07:30:00",
+      "start_slot": 687,
+      "environment_seed": 3884972972
+    },
+    {
+      "episode": 13,
+      "start": "2026-03-11 19:00:00",
+      "start_slot": 518,
+      "environment_seed": 829139639
+    },
+    {
+      "episode": 14,
+      "start": "2026-03-12 04:00:00",
+      "start_slot": 536,
+      "environment_seed": 2545567356
+    },
+    {
+      "episode": 15,
+      "start": "2026-03-11 12:30:00",
+      "start_slot": 505,
+      "environment_seed": 2718398101
+    },
+    {
+      "episode": 16,
+      "start": "2026-03-12 13:00:00",
+      "start_slot": 554,
+      "environment_seed": 176092387
+    },
+    {
+      "episode": 17,
+      "start": "2026-03-08 12:30:00",
+      "start_slot": 361,
+      "environment_seed": 3528048386
+    },
+    {
+      "episode": 18,
+      "start": "2026-03-02 21:00:00",
+      "start_slot": 90,
+      "environment_seed": 569531098
+    },
+    {
+      "episode": 19,
+      "start": "2026-03-13 08:00:00",
+      "start_slot": 592,
+      "environment_seed": 1337295874
+    },
+    {
+      "episode": 20,
+      "start": "2026-03-07 14:30:00",
+      "start_slot": 317,
+      "environment_seed": 612016888
+    },
+    {
+      "episode": 21,
+      "start": "2026-03-08 08:00:00",
+      "start_slot": 352,
+      "environment_seed": 232150720
+    },
+    {
+      "episode": 22,
+      "start": "2026-03-06 10:30:00",
+      "start_slot": 261,
+      "environment_seed": 2324106676
+    },
+    {
+      "episode": 23,
+      "start": "2026-03-03 16:00:00",
+      "start_slot": 128,
+      "environment_seed": 1658700540
+    },
+    {
+      "episode": 24,
+      "start": "2026-03-14 14:30:00",
+      "start_slot": 653,
+      "environment_seed": 609942288
+    },
+    {
+      "episode": 25,
+      "start": "2026-03-12 11:30:00",
+      "start_slot": 551,
+      "environment_seed": 3405943863
+    }
+  ]
+}

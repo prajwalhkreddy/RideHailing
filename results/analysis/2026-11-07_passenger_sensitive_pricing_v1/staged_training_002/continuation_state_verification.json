@@ -1,0 +1,334 @@
+{
+  "result": "PASS",
+  "components": [
+    {
+      "component": "online_weights",
+      "present": "YES",
+      "loaded_value": "234261483ff8b997fb089faba96283b49f5f6a7a3325c5e75f3127d497b86e9b",
+      "expected_value": "234261483ff8b997fb089faba96283b49f5f6a7a3325c5e75f3127d497b86e9b",
+      "verification_result": "PASS"
+    },
+    {
+      "component": "target_weights",
+      "present": "YES",
+      "loaded_value": "09521960b2b441caa28fa3a4ecfbbbe3736fa3fb406b263f018ab78f1e52fb9e",
+      "expected_value": "09521960b2b441caa28fa3a4ecfbbbe3736fa3fb406b263f018ab78f1e52fb9e",
+      "verification_result": "PASS"
+    },
+    {
+      "component": "Adam_state",
+      "present": "YES",
+      "loaded_value": "f854a27141acf19b55c05dfd493922381350c29f0e26d4d96cef7f793062fc59",
+      "expected_value": "f854a27141acf19b55c05dfd493922381350c29f0e26d4d96cef7f793062fc59",
+      "verification_result": "PASS"
+    },
+    {
+      "component": "replay",
+      "present": "YES",
+      "loaded_value": 37111,
+      "expected_value": 37111,
+      "verification_result": "PASS"
+    },
+    {
+      "component": "replay_insertion_state",
+      "present": "YES",
+      "loaded_value": {
+        "type": "deque chronological insertion order",
+        "capacity": 100000,
+        "next_insert": "append; evict oldest only when full"
+      },
+      "expected_value": {
+        "capacity": 100000
+      },
+      "verification_result": "PASS"
+    },
+    {
+      "component": "optimizer_updates",
+      "present": "YES",
+      "loaded_value": 128,
+      "expected_value": 128,
+      "verification_result": "PASS"
+    },
+    {
+      "component": "exploration_schedule",
+      "present": "YES",
+      "loaded_value": 0.997568,
+      "expected_value": 0.997568,
+      "verification_result": "PASS"
+    },
+    {
+      "component": "training_action_selection_RNG",
+      "present": "YES",
+      "loaded_value": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 277421745576107774797788730239289165753,
+          "inc": 332724090758049132448979897138935081983
+        },
+        "has_uint32": 1,
+        "uinteger": 480569089
+      },
+      "expected_value": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 277421745576107774797788730239289165753,
+          "inc": 332724090758049132448979897138935081983
+        },
+        "has_uint32": 1,
+        "uinteger": 480569089
+      },
+      "verification_result": "PASS"
+    },
+    {
+      "component": "replay_sampling_RNG",
+      "present": "YES",
+      "loaded_value": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 100256193227613644794305236893164436108,
+          "inc": 25065611243303971628957076795638243391
+        },
+        "has_uint32": 0,
+        "uinteger": 882325041
+      },
+      "expected_value": {
+        "bit_generator": "PCG64",
+        "state": {
+          "state": 100256193227613644794305236893164436108,
+          "inc": 25065611243303971628957076795638243391
+        },
+        "has_uint32": 0,
+        "uinteger": 882325041
+      },
+      "verification_result": "PASS"
+    },
+    {
+      "component": "episode_counter",
+      "present": "YES",
+      "loaded_value": 1,
+      "expected_value": 1,
+      "verification_result": "PASS"
+    },
+    {
+      "component": "slot_counters",
+      "present": "YES",
+      "loaded_value": {
+        "completed": 16,
+        "last": 16
+      },
+      "expected_value": {
+        "completed": 16,
+        "last": 16
+      },
+      "verification_result": "PASS"
+    },
+    {
+      "component": "scheduler",
+      "present": "YES",
+      "loaded_value": [
+        {
+          "episode": 2,
+          "start": "2026-03-12 08:30:00",
+          "start_slot": 545,
+          "environment_seed": 4091952314
+        },
+        {
+          "episode": 3,
+          "start": "2026-03-10 14:30:00",
+          "start_slot": 461,
+          "environment_seed": 233227757
+        },
+        {
+          "episode": 4,
+          "start": "2026-03-07 10:30:00",
+          "start_slot": 309,
+          "environment_seed": 3276785861
+        },
+        {
+          "episode": 5,
+          "start": "2026-03-07 08:30:00",
+          "start_slot": 305,
+          "environment_seed": 3644269654
+        },
+        {
+          "episode": 6,
+          "start": "2026-03-13 14:30:00",
+          "start_slot": 605,
+          "environment_seed": 1206282609
+        },
+        {
+          "episode": 7,
+          "start": "2026-03-02 06:00:00",
+          "start_slot": 60,
+          "environment_seed": 3543069911
+        },
+        {
+          "episode": 8,
+          "start": "2026-03-11 05:30:00",
+          "start_slot": 491,
+          "environment_seed": 3479688010
+        },
+        {
+          "episode": 9,
+          "start": "2026-03-03 23:00:00",
+          "start_slot": 142,
+          "environment_seed": 877132087
+        },
+        {
+          "episode": 10,
+          "start": "2026-03-02 09:00:00",
+          "start_slot": 66,
+          "environment_seed": 1244265337
+        }
+      ],
+      "expected_value": [
+        {
+          "episode": 2,
+          "start": "2026-03-12 08:30:00",
+          "start_slot": 545,
+          "environment_seed": 4091952314
+        },
+        {
+          "episode": 3,
+          "start": "2026-03-10 14:30:00",
+          "start_slot": 461,
+          "environment_seed": 233227757
+        },
+        {
+          "episode": 4,
+          "start": "2026-03-07 10:30:00",
+          "start_slot": 309,
+          "environment_seed": 3276785861
+        },
+        {
+          "episode": 5,
+          "start": "2026-03-07 08:30:00",
+          "start_slot": 305,
+          "environment_seed": 3644269654
+        },
+        {
+          "episode": 6,
+          "start": "2026-03-13 14:30:00",
+          "start_slot": 605,
+          "environment_seed": 1206282609
+        },
+        {
+          "episode": 7,
+          "start": "2026-03-02 06:00:00",
+          "start_slot": 60,
+          "environment_seed": 3543069911
+        },
+        {
+          "episode": 8,
+          "start": "2026-03-11 05:30:00",
+          "start_slot": 491,
+          "environment_seed": 3479688010
+        },
+        {
+          "episode": 9,
+          "start": "2026-03-03 23:00:00",
+          "start_slot": 142,
+          "environment_seed": 877132087
+        },
+        {
+          "episode": 10,
+          "start": "2026-03-02 09:00:00",
+          "start_slot": 66,
+          "environment_seed": 1244265337
+        }
+      ],
+      "verification_result": "PASS"
+    },
+    {
+      "component": "target_soft_update_state",
+      "present": "YES",
+      "loaded_value": {
+        "tau": 0.005,
+        "updates": 128,
+        "separate_counter": "none; update after each optimizer step"
+      },
+      "expected_value": {
+        "tau": 0.005,
+        "updates": 128
+      },
+      "verification_result": "PASS"
+    },
+    {
+      "component": "discount_semantics",
+      "present": "YES",
+      "loaded_value": "PER_REQUEST_TRANSITION",
+      "expected_value": "PER_REQUEST_TRANSITION",
+      "verification_result": "PASS"
+    }
+  ],
+  "checkpoint_hashes": {
+    "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_001/replay.npz": "b13761360706de63ee4f3219d449013b5d72b9be2460baa1ba75cd91401c335f",
+    "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_001/checkpoint.json": "927cc7111678ccb99b54f965d4476ffce3d5607332a9487a024ed6d9b93b001a",
+    "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_001/target.keras": "3d65d7cf5c940af78dab62708d76cce7c05441394010fcdb2177841ae3d001cb",
+    "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_001/online.keras": "44242faba56a6ce176b6f0dd6ca3e36bc77bf4be86320c2f00e18971518ef9e2"
+  },
+  "EXACT_STOCHASTIC_CONTINUATION": "YES",
+  "rng_scope": "Learner/action and replay PCG64 states restored exactly. Dense network has no stochastic training layers. Episode environment/provider seeds are the persisted per-episode schedule, not a restarted run sequence. No mid-episode environment continuation is needed at the completed boundary.",
+  "episode1_complete": true,
+  "next_episode": 2,
+  "next_slot": 1,
+  "cumulative_completed_slots": 16,
+  "expected_first_warm_slot_updates": 136,
+  "episodes_2_to_10": [
+    {
+      "episode": 2,
+      "start": "2026-03-12 08:30:00",
+      "start_slot": 545,
+      "environment_seed": 4091952314
+    },
+    {
+      "episode": 3,
+      "start": "2026-03-10 14:30:00",
+      "start_slot": 461,
+      "environment_seed": 233227757
+    },
+    {
+      "episode": 4,
+      "start": "2026-03-07 10:30:00",
+      "start_slot": 309,
+      "environment_seed": 3276785861
+    },
+    {
+      "episode": 5,
+      "start": "2026-03-07 08:30:00",
+      "start_slot": 305,
+      "environment_seed": 3644269654
+    },
+    {
+      "episode": 6,
+      "start": "2026-03-13 14:30:00",
+      "start_slot": 605,
+      "environment_seed": 1206282609
+    },
+    {
+      "episode": 7,
+      "start": "2026-03-02 06:00:00",
+      "start_slot": 60,
+      "environment_seed": 3543069911
+    },
+    {
+      "episode": 8,
+      "start": "2026-03-11 05:30:00",
+      "start_slot": 491,
+      "environment_seed": 3479688010
+    },
+    {
+      "episode": 9,
+      "start": "2026-03-03 23:00:00",
+      "start_slot": 142,
+      "environment_seed": 877132087
+    },
+    {
+      "episode": 10,
+      "start": "2026-03-02 09:00:00",
+      "start_slot": 66,
+      "environment_seed": 1244265337
+    }
+  ],
+  "protected_period_guard": "PASS"
+}

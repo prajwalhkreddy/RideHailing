@@ -1,0 +1,2 @@
+stage,episode,requests,choice_rate,forced_rate,assignments,assignment_rate,revenue,mean_offer,replay_size,optimizer_updates,exploration_epsilon,mean_abs_Q,max_abs_Q,mean_abs_TD,mean_loss,MC_return_mean,Q_MC_MAE,dev_revenue,dev_assignments,dev_assignment_rate,stage_status
+EP1,1,37111,0.3415968311282369,0.6584031688717631,33528,0.9034518067419364,642372.9931301137,19.089169811273326,37111,128,0.997568,4.106484889984131,39.09884262084961,21.194538116455078,24.616630628705025,315478.6214429028,315481.2774003212,54360.45873467252,2767,0.9749823819591261,PASS

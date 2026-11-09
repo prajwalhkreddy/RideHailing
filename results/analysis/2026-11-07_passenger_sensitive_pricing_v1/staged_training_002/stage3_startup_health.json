@@ -1,0 +1,15 @@
+{
+  "pid": 71922,
+  "process_alive": true,
+  "startup_health": "PASS",
+  "stage": "STAGE3",
+  "event": "EPISODE_INITIALIZED",
+  "episode": 11,
+  "initial_restored_replay": 100000,
+  "initial_restored_updates": 1280,
+  "initial_restored_epsilon": 0.97568,
+  "checkpoint_source": "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_010",
+  "protected_period_guard": "PASS",
+  "fatal": null,
+  "checks_performed": 1
+}

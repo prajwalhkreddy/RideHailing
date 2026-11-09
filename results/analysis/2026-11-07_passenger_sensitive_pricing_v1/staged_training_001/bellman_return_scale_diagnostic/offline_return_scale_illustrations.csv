@@ -1,0 +1,6 @@
+alternative,N,mean,median,SD,min,max,definition
+A_current_request_chain,37111,315510.19221091573,322877.32185048907,176195.10787254543,19.21128261096156,590408.983477764,"Full request-event assigned-revenue chain, elapsed-time discount"
+B_immediate_request_reward,37111,17.30950373555317,18.14398913257481,5.929682593098981,0.0,24.547750002895327,Contextual immediate assigned revenue; no future term
+C_slot_aggregated_total_revenue,16,343361.8621614239,347167.42448070925,175109.27297584066,46340.81553807306,593368.7830144207,"16 slot-total rewards,0.99 per slot; represents total-revenue objective, not one request reward per slot"
+C_illustrative_next_slot_mean_chain,37111,141.0164330722463,146.08951158825337,74.38647839354289,0.0,263.8801170623457,Illustration only: current request reward plus0.99 times future slot-mean-reward chain. Requires a new reward/value definition; not implied by merely changing next-state linkage
+D_slot_normalized_request_chain,37111,132.36213436913874,139.82382252393435,74.79068790207896,0.007141740747569353,254.43408908087898,"Divide each request reward by all actionable requests in its slot, preserve current gamma chain; changes objective to slot-average revenue intensity"

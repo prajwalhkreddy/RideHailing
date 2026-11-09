@@ -1,0 +1,12 @@
+{
+  "pid": 63989,
+  "status": "INITIALIZING",
+  "started_at": "2026-11-07T17:07:02.724622+00:00",
+  "INITIALIZATION_SOURCE": "FRESH",
+  "STAGED_TRAINING_001_CHECKPOINT_LOADED": "NO",
+  "OLD_PRE_REFORMULATION_EP25_LOADED": "NO",
+  "discount_semantics": "PER_REQUEST_TRANSITION",
+  "gamma": 0.99,
+  "stage": 1,
+  "stage_end": 1
+}

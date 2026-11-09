@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "fixture": "First200 chronological generated requests in each of two March12 slots; diagnostic capped demand, not performance evaluation",
+  "epsilon_floor": 0.017809913104763053,
+  "epsilon_floor_status": "T0_SUPPORT_LOWER_BOUND_NO_ADDITIONAL_FLOOR",
+  "requests_seen": 400,
+  "offers_generated": 400,
+  "no_feasible_pricing_action": 0,
+  "offered_passenger_accepted": 400,
+  "offered_passenger_rejected": 0,
+  "assigned": 390,
+  "accepted_unmatched": 10,
+  "transitions_added": 400,
+  "optimizer_updates": 0,
+  "reward": 7377.132522609239,
+  "weights_unchanged": true,
+  "fleet_size": 5000,
+  "old_checkpoint_loaded": false,
+  "protected_final_period_untouched": true,
+  "fresh_checkpoint_untrained": true
+}

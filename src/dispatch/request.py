@@ -73,8 +73,17 @@ class RequestState:
     selected_best_alternative_utility: float | None = None
     selected_utility_margin: float | None = None
 
+    v1_epsilon_c: float | None = None
+    v1_epsilon_min: float | None = None
+    v1_pc_usd: float | None = None
+    v1_raw_pc_usd: float | None = None
+    v1_pricing_outcome: str | None = None
+
     def validate(self, valid_grid_ids: Collection[int], mini_slots_per_main_slot: int) -> None:
         """Validate canonical spatial references and request lifecycle state."""
+        if self.v1_pricing_outcome == "NO_FEASIBLE_PRICING_ACTION":
+            if any(v is not None for v in (self.offered_fare, self.pricing_factor, self.customer_accepted, self.assigned_vehicle_id)) or self.status is not RequestStatus.UNSERVED:
+                raise ValueError("No-offer request cannot carry an offer, response or assignment.")
         grids = set(valid_grid_ids)
         if not isinstance(self.request_id, int) or self.request_id < 0:
             raise ValueError("request_id must be a non-negative integer.")
@@ -164,6 +173,19 @@ class RequestState:
                 probability = float(self.acceptance_probability)
                 if not math.isfinite(probability) or not 0 <= probability <= 1:
                     raise ValueError("Eq.31 acceptance probability must be finite and in [0, 1].")
+            elif self.customer_model == "passenger_sensitive_v1":
+                from src.pricing.passenger_sensitive_v1 import P_BASE_USD, ACTIONS, maximum_price, effective_threshold
+                values = (self.v1_epsilon_c, self.v1_epsilon_min, self.v1_pc_usd, self.v1_raw_pc_usd, self.trip_distance_km)
+                if any(value is None for value in values) or not all(math.isfinite(float(v)) for v in values):
+                    raise ValueError("Complete finite V1 audit required.")
+                if self.v1_epsilon_min <= 0 or self.v1_epsilon_c < self.v1_epsilon_min or self.base_fare != P_BASE_USD:
+                    raise ValueError("V1 positive epsilon/global price violation.")
+                if factor not in ACTIONS or offered != factor * P_BASE_USD or offered > self.v1_pc_usd or self.customer_accepted is not True:
+                    raise ValueError("V1 offer must be feasible and accepted.")
+                if not math.isclose(self.v1_raw_pc_usd, maximum_price(self.trip_distance_km, self.v1_epsilon_c), rel_tol=1e-12, abs_tol=1e-12):
+                    raise ValueError("V1 raw preference formula mismatch.")
+                if self.v1_pc_usd != effective_threshold(self.v1_raw_pc_usd):
+                    raise ValueError("V1 effective threshold mismatch.")
             elif self.customer_model == "historical_sensitivity":
                 if self.acceptance_probability is not None or any(value is None for value in historical_values):
                     raise ValueError("Historical-sensitivity requests require the complete deterministic audit.")

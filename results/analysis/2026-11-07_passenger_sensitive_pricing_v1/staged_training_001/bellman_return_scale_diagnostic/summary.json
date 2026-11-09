@@ -1,0 +1,92 @@
+{
+  "N_transitions": 37111,
+  "density": {
+    "requests_per_episode": 37111,
+    "slot_count": 16,
+    "requests_per_slot_min": 1549,
+    "requests_per_slot_mean": 2319.4375,
+    "requests_per_slot_median": 2381.5,
+    "requests_per_slot_max": 2690,
+    "actionable_equals_requests_every_slot": true,
+    "unique_request_timestamps": 20735,
+    "requests_in_shared_timestamp_groups": 26844,
+    "extra_requests_beyond_first_at_timestamp": 16376,
+    "mean_requests_per_unique_timestamp": 1.7897757414998794,
+    "median_requests_per_unique_timestamp": 2.0
+  },
+  "delta_t_median": 0.016666666666666666,
+  "delta_t_P95": 0.03333333333333333,
+  "thresholds": [
+    {
+      "condition": "delta_t_exactly_zero",
+      "N": 16376,
+      "percentage": 44.1270782247851
+    },
+    {
+      "condition": "delta_t_lt_1_second",
+      "N": 16376,
+      "percentage": 44.1270782247851
+    },
+    {
+      "condition": "delta_t_lt_10_seconds",
+      "N": 37111,
+      "percentage": 100.0
+    },
+    {
+      "condition": "delta_t_lt_1_minute",
+      "N": 37111,
+      "percentage": 100.0
+    },
+    {
+      "condition": "delta_t_ge_30_minutes",
+      "N": 0,
+      "percentage": 0.0
+    },
+    {
+      "condition": "gamma_exactly_1",
+      "N": 16376,
+      "percentage": 44.1270782247851
+    },
+    {
+      "condition": "gamma_ge_0.9999",
+      "N": 37111,
+      "percentage": 100.0
+    },
+    {
+      "condition": "gamma_ge_0.999",
+      "N": 37111,
+      "percentage": 100.0
+    }
+  ],
+  "mean_immediate_reward": 17.30950373555317,
+  "median_immediate_reward": 18.14398913257481,
+  "adjacent_fare_increment": 1.0672934783867534,
+  "mean_MC": 315510.19221091573,
+  "median_MC": 322877.32185048907,
+  "SD_MC": 176195.10787254543,
+  "median_MC_to_median_reward": 17795.277515395515,
+  "median_MC_to_fare_increment": 302519.7177617238,
+  "correlation_remaining_requests": 0.9983242960084174,
+  "correlation_remaining_minutes": 0.9982738169336781,
+  "MC_saved_probe_max_difference": 0.0,
+  "MC_direct_sum_max_difference": 2.915039658546448e-07,
+  "unique_states": 2424,
+  "repeated_exact_state_groups": 1407,
+  "max_exact_state_horizon_gap_minutes": 29.983333333344433,
+  "max_exact_state_action_horizon_gap_minutes": 29.966666666679828,
+  "state_explicit_time_fields": {
+    "absolute_simulation_time": false,
+    "episode_progress": false,
+    "remaining_episode_duration": false,
+    "request_index": false,
+    "time_to_terminal": false
+  },
+  "EPISODE_BOUNDARY_SEMANTICS": "ARTIFICIAL_TRAINING_SEGMENTATION",
+  "HORIZON_ALIASING_RISK": "HIGH",
+  "CURRENT_Q_OBJECTIVE": "Expected total elapsed-time-discounted future successfully assigned gross fares over the global chronological actionable-request chain, ending at the artificial8-hour episode boundary",
+  "CURRENT_BELLMAN_FORMULATION": "METHODOLOGY_REVIEW_REQUIRED",
+  "STAGE1_REVIEW": "REVIEW_REQUIRED",
+  "stage2_launched": false,
+  "protected_period_untouched": true,
+  "checkpoint_unchanged": true
+}

@@ -1,0 +1,13 @@
+{
+  "Q_SCALE_TREND": "UNCLEAR",
+  "NUMERICALLY_STABLE": "YES",
+  "POLICY_STABLE": "UNCLEAR",
+  "LEARNING_SIGNAL": "UNCLEAR",
+  "CONVERGED": "NO",
+  "optimizer_updates": 3200,
+  "exploration_epsilon": 0.9392,
+  "protected_period_untouched": true,
+  "policy_movement_available": false,
+  "review_basis": "Descriptive Episode10\u219225 changes in Q/MC relative gap, MAE, TD and loss jointly; no convergence or causal performance claim.",
+  "later_training_authorized": false
+}

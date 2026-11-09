@@ -1,0 +1,207 @@
+{
+  "INITIALIZATION_SOURCE": "FRESH",
+  "OLD_EP25_CHECKPOINT_LOADED": "NO",
+  "online_hash": "561a41a4fb98bb217f7588be4956bab520134dff3acbd5a735f29872e007133d",
+  "target_hash": "561a41a4fb98bb217f7588be4956bab520134dff3acbd5a735f29872e007133d",
+  "checkpoint_hash": "9f324037b6fc33034560324d1991e438c2244a4cfd46885baeab7b96fa7ce48e",
+  "seed": 42,
+  "config": {
+    "gamma": 0.99,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "replay_capacity": 100000,
+    "minimum_replay_size": 1000,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 50000,
+    "soft_target_tau": 0.005,
+    "seed": 42
+  },
+  "episodes": [
+    {
+      "episode": 1,
+      "start": "2026-03-02 07:00:00",
+      "start_slot": 62,
+      "environment_seed": 2684470948
+    },
+    {
+      "episode": 2,
+      "start": "2026-03-12 08:30:00",
+      "start_slot": 545,
+      "environment_seed": 4091952314
+    },
+    {
+      "episode": 3,
+      "start": "2026-03-10 14:30:00",
+      "start_slot": 461,
+      "environment_seed": 233227757
+    },
+    {
+      "episode": 4,
+      "start": "2026-03-07 10:30:00",
+      "start_slot": 309,
+      "environment_seed": 3276785861
+    },
+    {
+      "episode": 5,
+      "start": "2026-03-07 08:30:00",
+      "start_slot": 305,
+      "environment_seed": 3644269654
+    },
+    {
+      "episode": 6,
+      "start": "2026-03-13 14:30:00",
+      "start_slot": 605,
+      "environment_seed": 1206282609
+    },
+    {
+      "episode": 7,
+      "start": "2026-03-02 06:00:00",
+      "start_slot": 60,
+      "environment_seed": 3543069911
+    },
+    {
+      "episode": 8,
+      "start": "2026-03-11 05:30:00",
+      "start_slot": 491,
+      "environment_seed": 3479688010
+    },
+    {
+      "episode": 9,
+      "start": "2026-03-03 23:00:00",
+      "start_slot": 142,
+      "environment_seed": 877132087
+    },
+    {
+      "episode": 10,
+      "start": "2026-03-02 09:00:00",
+      "start_slot": 66,
+      "environment_seed": 1244265337
+    },
+    {
+      "episode": 11,
+      "start": "2026-03-08 17:30:00",
+      "start_slot": 371,
+      "environment_seed": 2740186692
+    },
+    {
+      "episode": 12,
+      "start": "2026-03-15 07:30:00",
+      "start_slot": 687,
+      "environment_seed": 3884972972
+    },
+    {
+      "episode": 13,
+      "start": "2026-03-11 19:00:00",
+      "start_slot": 518,
+      "environment_seed": 829139639
+    },
+    {
+      "episode": 14,
+      "start": "2026-03-12 04:00:00",
+      "start_slot": 536,
+      "environment_seed": 2545567356
+    },
+    {
+      "episode": 15,
+      "start": "2026-03-11 12:30:00",
+      "start_slot": 505,
+      "environment_seed": 2718398101
+    },
+    {
+      "episode": 16,
+      "start": "2026-03-12 13:00:00",
+      "start_slot": 554,
+      "environment_seed": 176092387
+    },
+    {
+      "episode": 17,
+      "start": "2026-03-08 12:30:00",
+      "start_slot": 361,
+      "environment_seed": 3528048386
+    },
+    {
+      "episode": 18,
+      "start": "2026-03-02 21:00:00",
+      "start_slot": 90,
+      "environment_seed": 569531098
+    },
+    {
+      "episode": 19,
+      "start": "2026-03-13 08:00:00",
+      "start_slot": 592,
+      "environment_seed": 1337295874
+    },
+    {
+      "episode": 20,
+      "start": "2026-03-07 14:30:00",
+      "start_slot": 317,
+      "environment_seed": 612016888
+    },
+    {
+      "episode": 21,
+      "start": "2026-03-08 08:00:00",
+      "start_slot": 352,
+      "environment_seed": 232150720
+    },
+    {
+      "episode": 22,
+      "start": "2026-03-06 10:30:00",
+      "start_slot": 261,
+      "environment_seed": 2324106676
+    },
+    {
+      "episode": 23,
+      "start": "2026-03-03 16:00:00",
+      "start_slot": 128,
+      "environment_seed": 1658700540
+    },
+    {
+      "episode": 24,
+      "start": "2026-03-14 14:30:00",
+      "start_slot": 653,
+      "environment_seed": 609942288
+    },
+    {
+      "episode": 25,
+      "start": "2026-03-12 11:30:00",
+      "start_slot": 551,
+      "environment_seed": 3405943863
+    }
+  ],
+  "slots_per_episode": 16,
+  "stop_after": 25,
+  "protocol_source": "results/analysis/2026-10-31_final_pricing_training_protocol/episode_protocol.json",
+  "protocol_sha256": "154f2483f5bad3b3d67e47cbb8f0162845700b840e37f8fa759ca29d00d0fac0",
+  "routing": "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras",
+  "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a",
+  "development": {
+    "start": "2026-03-16",
+    "slots": 4,
+    "environment_seed": 424242,
+    "epsilon_seed": 424242
+  },
+  "epsilon_seed_rule": "Use authoritative per-episode environment_seed with independent NumPy Generator; fixed424242 for development",
+  "execution": "SEPARATE_DETACHED_STAGES",
+  "stage": 1,
+  "stage_start": 1,
+  "stage_end": 1,
+  "support": [
+    0.017809913104763053,
+    27.324599740032788
+  ],
+  "sampling": "TRUNCATED_EMPIRICAL_RESAMPLING",
+  "additional_floor": false,
+  "state_dim": 13,
+  "actions": [
+    0.85,
+    0.9,
+    0.95,
+    1.0,
+    1.05,
+    1.1,
+    1.15
+  ],
+  "updates_per_warm_slot": 8,
+  "review_rule": "Terminate after stage; separate invocation with saved PASS review required for next detached worker"
+}

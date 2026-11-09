@@ -1,0 +1,19 @@
+{
+  "status": "RESOLVED_BY_EXPLICIT_USER_AUTHORIZATION",
+  "issue": "Inherited simulation support was selected from full Jan\u2013Mar, whereas V1 forbids March17\u201331 influence on epsilon calibration/selection.",
+  "evidence": {
+    "source": "data/processed/price_distance_sensitivity_record029/frozen_epsilon_support.json",
+    "quantile_rule": "Empirical P0.5 and P99.5 of all authoritative VALID epsilon; inclusive bounds",
+    "calibration_N": 10611392,
+    "lower_signed_bound": -12.890744316473482,
+    "upper_signed_bound": 15.442447741158892,
+    "population_document": "results/analysis/2026-10-09_price_distance_sensitivity_record029_full_jan_mar/README.md"
+  },
+  "not_a_new_floor": "These are historical signed support endpoints, not the proposed positive epsilon_min candidates.",
+  "decision_requested": "Authorize recomputing the existing inclusive P0.5\u2013P99.5 signed support rule from Jan1\u2013Mar15 VALID observations only, before taking absolute values and evaluating the specified positive-floor candidates.",
+  "decision_status": "APPROVED_AND_EXECUTED",
+  "no_protected_rows_read": true,
+  "historical_support_not_modified": true,
+  "global_references": "Explicitly frozen by user; not proposed for recalculation.",
+  "resolution": "Corrected support order by explicit user approval: Jan1\u2013Mar15 VALID, absolute values, exclude nonfinite/zero, then inclusive positive P0.5\u2013P99.5. Historical signed support unchanged."
+}

@@ -1,0 +1,24 @@
+{
+  "gamma": 0.99,
+  "thresholds": {
+    "0.5": {
+      "request_steps": 69,
+      "approximate_elapsed_minutes": 0.8924577618495864
+    },
+    "0.1": {
+      "request_steps": 230,
+      "approximate_elapsed_minutes": 2.974859206165288
+    },
+    "0.05": {
+      "request_steps": 299,
+      "approximate_elapsed_minutes": 3.8673169680148742
+    },
+    "0.01": {
+      "request_steps": 459,
+      "approximate_elapsed_minutes": 5.936784241868987
+    }
+  },
+  "request_intensity_per_minute": 77.31458333333333,
+  "TERMINAL_ALIASING_EXPOSURE_PERCENT": 1.2368300503893723,
+  "definition": "Last 459 requests have fewer than 459 future request steps until the artificial terminal; includes terminal request."
+}

@@ -1,0 +1,27 @@
+{
+  "stage": 3,
+  "episode": 25,
+  "status": "COMPLETED",
+  "technical_gate_result": "PASS",
+  "review_required": true,
+  "checkpoint_path": "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_025",
+  "continuation_state_metadata": "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_025/continuation_metadata.json",
+  "metrics_path": "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+  "development_evaluation_path": "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+  "hard_invariant_violations": {
+    "empty_feasible_mask": 0,
+    "masked_action_violations": 0,
+    "passenger_threshold_violations": 0,
+    "nonfinite_Q": 0,
+    "nonfinite_loss": 0,
+    "nonfinite_target": 0,
+    "invalid_gamma": 0,
+    "invalid_next_mask": 0,
+    "optimizer_cadence_violations": 0,
+    "protected_date_access": 0,
+    "development_mutation": 0,
+    "old_checkpoint_loaded": 0
+  },
+  "protected_period_untouched": true,
+  "completed_at": "2026-11-08T06:34:47.387424+00:00"
+}

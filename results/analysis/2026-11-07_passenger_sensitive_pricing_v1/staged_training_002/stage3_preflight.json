@@ -1,0 +1,14 @@
+{
+  "STAGE2_REVIEW": "PASS",
+  "continuation_verification": "PASS",
+  "tests_passed": 7,
+  "tests_failed": 0,
+  "episode10_unchanged": true,
+  "stage3_episodes": [
+    11,
+    25
+  ],
+  "protected_guard": "PASS",
+  "future_stages_authorized": false,
+  "policy_movement_limitation": "Exact Episode10 request action records absent; no rerun authorized or performed."
+}

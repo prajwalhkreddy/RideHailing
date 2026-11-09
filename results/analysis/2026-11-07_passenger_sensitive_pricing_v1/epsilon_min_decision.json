@@ -1,0 +1,17 @@
+{
+  "EPSILON_MIN_RECOMMENDATION": "APPROVED_SUPPORT_LOWER_BOUND_NO_ADDITIONAL_FLOOR",
+  "EPSILON_MIN_FROZEN": true,
+  "reason": "Positive T0 support already removes near-zero observations; bounded T0\u2013T3 comparison establishes no need for an additional floor. Retain T0 per approved task rule.",
+  "candidates": {
+    "NO_FLOOR": 0.0,
+    "P0.5": 0.031952766114812126,
+    "P1": 0.048871560743261266,
+    "P2.5": 0.09847756517464339,
+    "P5": 0.17257087403306529
+  },
+  "new_upper_cap": false,
+  "fixture_candidate": "T0 support lower bound; revised effective-threshold fixture",
+  "calibration_pairing": "Each eligible completed-trip distance paired with its own absolute historical epsilon for descriptive candidate comparison; no acceptance-response fit.",
+  "epsilon_min": 0.017809913104763053,
+  "historical_candidates_status": "Historical additional-floor diagnostics, not active runtime method"
+}

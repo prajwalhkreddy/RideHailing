@@ -1,0 +1,15 @@
+{
+  "stage": 1,
+  "pid": 63016,
+  "startup_health": "PASS",
+  "detached": true,
+  "status_path": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_001/training_status.json",
+  "log_path": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_001/training.log",
+  "completion_marker": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_001/stage_ep01_complete.json",
+  "checkpoint_path": "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_001/episode_001",
+  "initial_episode": 1,
+  "initial_slot": 0,
+  "old_historical_checkpoint_loaded": false,
+  "protected_period_guard": "PASS",
+  "handoff": "Prior attached worker safe-stop requested; detached supervisor coordinates lock release before fresh Stage1"
+}

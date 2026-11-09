@@ -1,0 +1,16 @@
+{
+  "source_sha256_unchanged": {
+    "src/simulation/final_production.py": "b2cd5371a632e745e1e65dcf9018fa3992942ff2e493caf3ec68b1d422fbaa78",
+    "src/rl/pricing_dqn.py": "37ad0f29996e02ff6110514fe70657f8c08fea3ea503fb3ea1bf4dc3dbbc402d",
+    "src/pricing/empirical_sensitivity.py": "463769c3f86ed9a6a5a438db57b0117bfdefa175739a4b1a50e9bd820a049c1c",
+    "results/analysis/2026-10-31_final_pricing_training_protocol/pricing_training_contract.json": "622add872fe87ef3befbd2ceb7485931f9e6b604752a796f956cd279411ffa3a"
+  },
+  "source_files_unchanged": true,
+  "required_readme_sections": 23,
+  "three_status_readmes_updated": true,
+  "specification_constants_consistent": true,
+  "model_namespace_not_created": true,
+  "data_model_checkpoints_opened": false,
+  "source_code_changes": false,
+  "calibration_or_simulation_executed": false
+}

@@ -1,0 +1,11 @@
+{
+  "pid": 63989,
+  "launched_at": "2026-11-07T17:07:02.698271+00:00",
+  "stage": 1,
+  "episode_end": 1,
+  "INITIALIZATION_SOURCE": "FRESH",
+  "checkpoint_target": "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_001",
+  "status_path": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/training_status.json",
+  "log_path": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/training.log",
+  "completion_marker": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_ep01_complete.json"
+}

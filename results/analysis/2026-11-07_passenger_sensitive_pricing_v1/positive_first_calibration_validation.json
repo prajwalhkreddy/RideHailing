@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "positive_first_quantiles_verified": true,
+  "inclusive_support_and_source_order_verified": true,
+  "source_distance_pairing_verified": true,
+  "additional_floor_quantiles_verified": true,
+  "Pc_and_feasible_counts_verified": true,
+  "group_population_totals_verified": true,
+  "historical_Record029_unchanged": true,
+  "calibration_latest_timestamp": "2026-03-15 23:59:56",
+  "March16_excluded": true,
+  "March17_31_excluded": true,
+  "simulation_rerun": false,
+  "long_training_started": false,
+  "N": 8598805,
+  "support": [
+    0.017809913104763053,
+    27.324599740032788
+  ],
+  "prior_fixture": "Preserved historical mechanics evidence; superseded calibration"
+}

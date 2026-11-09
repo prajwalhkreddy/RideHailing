@@ -1,0 +1,1 @@
+Superseded V1 provisional calibration: signed quantiles were applied before absolute values. Retained for provenance only. Not valid current V1 calibration. Historical Record-029 artifacts are unchanged. Existing request fixtures used this provisional population and are mechanics evidence only.

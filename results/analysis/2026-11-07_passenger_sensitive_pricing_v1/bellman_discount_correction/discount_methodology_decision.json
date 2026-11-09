@@ -1,0 +1,19 @@
+{
+  "REQUEST_STEP_GAMMA_099_ASSESSMENT": "SUPPORTED",
+  "GAMMA_VALUE_CHANGED": "NO",
+  "GAMMA_APPLICATION_SEMANTICS_CHANGED": "YES",
+  "REQUEST_LEVEL_GAMMA": 0.99,
+  "old_namespace_status": "SUPERSEDED_TIME_AWARE_DISCOUNT_DIAGNOSTIC",
+  "rationale": "Return scale falls to approximately 100 request rewards; horizon correlations materially diminish. Residual artificial terminal exposure is limited, not eliminated. No causal policy-performance claim.",
+  "source_replay_sha256": "4fb7304889b222a56ef5f8a8a808e442dd998258d4c2d9e63d4670ee8272144c",
+  "code_changed_at_offline_gate": false,
+  "training_launched_at_offline_gate": false,
+  "implemented": true,
+  "tests_passed": 37,
+  "tests_failed": 0,
+  "historical_files_verified_unchanged": 100,
+  "training_launch_pending": false,
+  "training_launched": true,
+  "pid": 63989,
+  "startup_health": "PASS"
+}

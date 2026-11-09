@@ -1,0 +1,16 @@
+{
+  "assessment": "SUPPORTED",
+  "focused_tests": {
+    "learner_and_saved_fixture": 30,
+    "training_adapters": 7,
+    "failed": 0
+  },
+  "historical_files_verified_unchanged": 100,
+  "INITIALIZATION_SOURCE": "FRESH",
+  "STAGED_TRAINING_001_CHECKPOINT_LOADED": "NO",
+  "OLD_PRE_REFORMULATION_EP25_LOADED": "NO",
+  "PROTECTED_FINAL_HIERARCHICAL_EVALUATION_UNTOUCHED": "YES",
+  "active_discount": ".99 per request transition",
+  "protected_period_guard": "PASS",
+  "stage2_enabled": false
+}

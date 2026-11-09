@@ -1,0 +1,45 @@
+{
+  "EPSILON_RESPONSE_LABELS_AVAILABLE": false,
+  "EPSILON_ESTIMATION_STATUS": "CALIBRATION_ASSUMPTION",
+  "label": "POSITIVE_BEHAVIOURAL_CALIBRATION_PROXY",
+  "sources": [
+    {
+      "path": "data/processed/price_distance_sensitivity_record029/authoritative_epsilon_jan_mar_2026.parquet",
+      "fields": [
+        "source_row_index",
+        "pickup_timestamp",
+        "hour",
+        "fare",
+        "trip_distance",
+        "weather_code",
+        "month",
+        "is_basic_valid",
+        "is_distance_001",
+        "is_distance_le_005",
+        "is_distance_le_010",
+        "is_distance_le_025",
+        "is_distance_le_050",
+        "source_quality_review",
+        "numerical_stability_review_any_candidate",
+        "analysis_status",
+        "relative_price_deviation",
+        "relative_distance_deviation",
+        "epsilon",
+        "epsilon_status"
+      ],
+      "suitability": "Completed TLC trip-derived sensitivity, no observed offers/rejections; calibration proxy only"
+    },
+    {
+      "path": "results/analysis/2026-11-04_academic_review_validation/request_level_pricing_full.csv",
+      "suitability": "Simulator-generated decisions, not real response labels"
+    },
+    {
+      "path": "data/processed/price_distance_sensitivity_record029/frozen_epsilon_support.json",
+      "suitability": "Historical full-period support; NOT used for V1 support values"
+    }
+  ],
+  "scope": "Targeted authoritative and review artifacts only; no real response-labelled source identified in these artifacts.",
+  "support_decision": "User explicitly approved positive-first P0.5\u2013P99.5 Jan1\u2013Mar15 calibration; NO_FLOOR means no additional floor",
+  "proxy_used": true,
+  "protected_rows_accessed": false
+}

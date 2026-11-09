@@ -1,0 +1,15 @@
+{
+  "EPSILON_MIN_RECOMMENDATION": "RESEARCH_DECISION_REQUIRED",
+  "EPSILON_MIN_FROZEN": false,
+  "reason": "NO_FLOOR and every permitted empirical floor produce finite P_c, without NaN/Inf/overflow. Floors progressively reduce extreme magnitudes but no specified numerical/plausibility boundary distinguishes them. No floor is selected using no-offer, assignment or revenue rates.",
+  "candidates": {
+    "NO_FLOOR": 0.0,
+    "P0.5": 0.017658441740057023,
+    "P1": 0.031827000537020575,
+    "P2.5": 0.08184031235415555,
+    "P5": 0.1586095093028747
+  },
+  "new_upper_cap": false,
+  "fixture_candidate": "P0.5, explicitly diagnostic only; not a frozen training setting",
+  "calibration_pairing": "Each eligible completed-trip distance paired with its own absolute historical epsilon for descriptive candidate comparison; no acceptance-response fit."
+}

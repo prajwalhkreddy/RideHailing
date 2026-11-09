@@ -1,0 +1,52 @@
+{
+  "data/processed/price_distance_sensitivity_record029/final_passenger_sensitivity_methodology.json": {
+    "size": 4511,
+    "mtime_ns": 1791629585069174137,
+    "sha256": "4de811b719fd022d7eccf06234a3211108f08c358adb3a2b9fbe1cbb0991666a"
+  },
+  "data/processed/price_distance_sensitivity_record029/cleaned_price_distance_jan_mar_2026.parquet": {
+    "size": 134596286,
+    "mtime_ns": 1791557144933367792
+  },
+  "data/processed/price_distance_sensitivity_record029/.DS_Store": {
+    "size": 6148,
+    "mtime_ns": 1791558874614071185,
+    "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3"
+  },
+  "data/processed/price_distance_sensitivity_record029/frozen_epsilon_support.json": {
+    "size": 1142,
+    "mtime_ns": 1791608416353652909,
+    "sha256": "cbff08702b6b13aaf92093e79890f7cbb9e9e7e6753265793d67da9aca2e18ef"
+  },
+  "data/processed/price_distance_sensitivity_record029/final_passenger_sensitivity_empirical.parquet": {
+    "size": 21035695,
+    "mtime_ns": 1791608886764958435
+  },
+  "data/processed/price_distance_sensitivity_record029/authoritative_epsilon_methodology.json": {
+    "size": 1908,
+    "mtime_ns": 1791607021714874911,
+    "sha256": "0d83b9a63f4a9b7ee75bb95133db183f9deb34fd9ee73addb15de08dfa55ddd7"
+  },
+  "data/processed/price_distance_sensitivity_record029/record029_analysis_population_jan_mar_2026.parquet": {
+    "size": 612885481,
+    "mtime_ns": 1791603477822181399
+  },
+  "data/processed/price_distance_sensitivity_record029/frozen_reference_values.json": {
+    "size": 1314,
+    "mtime_ns": 1791605386425648650,
+    "sha256": "e1ec428df491cb4356bf73bb4d2992f05e6c18ccccbb441e91f41ce83284b979"
+  },
+  "data/processed/price_distance_sensitivity_record029/authoritative_epsilon_jan_mar_2026.parquet": {
+    "size": 247546907,
+    "mtime_ns": 1791607015118059478
+  },
+  "data/processed/price_distance_sensitivity_record029/full_jan_mar_sensitivity_by_lbase.parquet": {
+    "size": 490100944,
+    "mtime_ns": 1791557160102094511
+  },
+  "data/processed/price_distance_sensitivity_record029/cleaning_summary.json": {
+    "size": 808,
+    "mtime_ns": 1791557143936147898,
+    "sha256": "1a8d0e64ed88b86df986f70f3194df1cc248e1563963719080273ce469f35f8a"
+  }
+}

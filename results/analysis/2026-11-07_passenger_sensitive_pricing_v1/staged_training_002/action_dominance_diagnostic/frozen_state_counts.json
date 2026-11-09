@@ -1,0 +1,9 @@
+{
+  "choice_requests": 1279,
+  "all_arms_same_assigned_driver": 588,
+  "any_pair_same_assigned_driver": 1254,
+  "any_assignment_change": 689,
+  "all_unmatched": 2,
+  "pairs_checked": 23179,
+  "monotonicity_violations": 0
+}

@@ -1,0 +1,13 @@
+{
+  "masked_action_violations": 0,
+  "passenger_threshold_violations": 0,
+  "nonfinite_Q": 0,
+  "nonfinite_loss": 0,
+  "nonfinite_target": 0,
+  "invalid_gamma": 0,
+  "invalid_next_mask": 0,
+  "optimizer_cadence_violations": 0,
+  "protected_date_access": 0,
+  "development_mutation": 0,
+  "old_checkpoint_loaded": 0
+}

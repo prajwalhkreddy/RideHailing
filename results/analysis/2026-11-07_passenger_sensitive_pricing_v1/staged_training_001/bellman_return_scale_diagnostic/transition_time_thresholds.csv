@@ -1,0 +1,9 @@
+condition,N,percentage
+delta_t_exactly_zero,16376,44.1270782247851
+delta_t_lt_1_second,16376,44.1270782247851
+delta_t_lt_10_seconds,37111,100.0
+delta_t_lt_1_minute,37111,100.0
+delta_t_ge_30_minutes,0,0.0
+gamma_exactly_1,16376,44.1270782247851
+gamma_ge_0.9999,37111,100.0
+gamma_ge_0.999,37111,100.0

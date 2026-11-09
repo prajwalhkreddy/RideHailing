@@ -1,0 +1,22 @@
+{
+  "status": "STOPPED_SAFE",
+  "pid": 60838,
+  "stage": "STAGE2",
+  "episode": 4,
+  "slot": 14,
+  "requests_seen": 45178,
+  "transitions": 45177,
+  "replay_size": 100000,
+  "optimizer_updates": 496,
+  "exploration_epsilon": 0.990576,
+  "revenue": 362431.5193905797,
+  "assignments": 18729,
+  "choice_request_rate": null,
+  "mean_abs_Q": null,
+  "max_abs_Q": null,
+  "mean_loss": null,
+  "mean_abs_TD": null,
+  "last_checkpoint": "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_001/stopped_ep004_slot14",
+  "invariant_status": "PASS",
+  "protected_period_untouched": true
+}

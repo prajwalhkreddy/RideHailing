@@ -1,0 +1,10 @@
+{
+  "focused_adapter_tests_passed": 7,
+  "tests_failed": 0,
+  "STATUS_TD_SERIALIZATION_FIXED": "YES",
+  "checkpoint_unchanged": true,
+  "STAGE1_REVIEW": "PASS",
+  "STAGE2_LAUNCH_GATE": "PASS",
+  "stop_after_episode": 10,
+  "expected_first_warm_slot_updates": 136
+}

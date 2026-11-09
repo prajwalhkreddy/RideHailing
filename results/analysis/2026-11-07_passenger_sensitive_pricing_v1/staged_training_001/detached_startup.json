@@ -1,0 +1,11 @@
+{
+  "pid": 63016,
+  "stage": 1,
+  "status": "INITIALIZING",
+  "phase": "WAITING_FOR_SUPERSEDED_WORKER_SAFE_STOP",
+  "started_at": "2026-11-07T16:29:02.113015+00:00",
+  "prior_pid": 60838,
+  "checkpoint": "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_001/episode_001",
+  "completion_marker": "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_001/stage_ep01_complete.json",
+  "old_historical_checkpoint_loaded": false
+}

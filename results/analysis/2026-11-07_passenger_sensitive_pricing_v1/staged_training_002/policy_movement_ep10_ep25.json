@@ -1,0 +1,9 @@
+{
+  "available": false,
+  "reason": "Episode10 per-request greedy actions/IDs were not persisted. Aggregate frequencies cannot identify request-level changes; no rerun performed.",
+  "same_action_pct": null,
+  "changed_action_pct": null,
+  "mean_absolute_factor_change": null,
+  "upward_factor_changes_pct": null,
+  "downward_factor_changes_pct": null
+}

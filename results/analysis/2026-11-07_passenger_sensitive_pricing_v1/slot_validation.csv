@@ -1,0 +1,3 @@
+timestamp,requests_seen,offers_generated,no_feasible_pricing_action,offered_passenger_accepted,offered_passenger_rejected,assigned,accepted_unmatched,accepted_no_price_eligible_driver,transitions_added,optimizer_updates,slot_request_count,slot_actionable_request_count,slot_no_offer_count,slot_transitions_added,slot_optimizer_updates,reward,completed,fleet_size,routing_actions,charging_decisions,pending_transition
+2026-03-12 15:30:00,200,54,146,54,0,54,0,0,53,0,200,54,146,53,0,1125.9946196980245,38,5000,"[3829, 75, 116, 312, 147, 320, 21, 147, 17]",0,True
+2026-03-12 16:00:00,200,69,131,69,0,69,0,0,70,0,200,69,131,70,0,1446.1826632140508,64,5000,"[4176, 107, 120, 151, 25, 129, 45, 110, 116]",0,False

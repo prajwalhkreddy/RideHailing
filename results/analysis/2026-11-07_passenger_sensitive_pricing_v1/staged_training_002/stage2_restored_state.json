@@ -1,0 +1,66 @@
+{
+  "stage": "STAGE2",
+  "episode": 2,
+  "replay_size": 37111,
+  "optimizer_updates": 128,
+  "exploration_epsilon": 0.997568,
+  "EXACT_STOCHASTIC_CONTINUATION": "YES",
+  "protected_period_guard": "PASS",
+  "checkpoint_source": "models/pricing_dqn/passenger_sensitive_v1_seed42/staged_training_002/episode_001",
+  "episodes": [
+    {
+      "episode": 2,
+      "start": "2026-03-12 08:30:00",
+      "start_slot": 545,
+      "environment_seed": 4091952314
+    },
+    {
+      "episode": 3,
+      "start": "2026-03-10 14:30:00",
+      "start_slot": 461,
+      "environment_seed": 233227757
+    },
+    {
+      "episode": 4,
+      "start": "2026-03-07 10:30:00",
+      "start_slot": 309,
+      "environment_seed": 3276785861
+    },
+    {
+      "episode": 5,
+      "start": "2026-03-07 08:30:00",
+      "start_slot": 305,
+      "environment_seed": 3644269654
+    },
+    {
+      "episode": 6,
+      "start": "2026-03-13 14:30:00",
+      "start_slot": 605,
+      "environment_seed": 1206282609
+    },
+    {
+      "episode": 7,
+      "start": "2026-03-02 06:00:00",
+      "start_slot": 60,
+      "environment_seed": 3543069911
+    },
+    {
+      "episode": 8,
+      "start": "2026-03-11 05:30:00",
+      "start_slot": 491,
+      "environment_seed": 3479688010
+    },
+    {
+      "episode": 9,
+      "start": "2026-03-03 23:00:00",
+      "start_slot": 142,
+      "environment_seed": 877132087
+    },
+    {
+      "episode": 10,
+      "start": "2026-03-02 09:00:00",
+      "start_slot": 66,
+      "environment_seed": 1244265337
+    }
+  ]
+}
