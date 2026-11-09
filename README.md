@@ -2,21 +2,16 @@
 
 ## Passenger-Sensitive Pricing V1
 
-The implemented and validated V1 methodology is frozen. The authoritative fresh sequence is **staged_training_002**, completed through Episode25, with technical invariants PASS. Numerical stability and a learning signal are observed; policy stability is **NO**, convergence **NO**, action-dominance risk **HIGH**, and DQN incremental dynamic value **UNRESOLVED**. Further training is **AWAITING_ACADEMIC_REVIEW**, not authorized. No Episode100 run is approved. A possible continuation with the highest-feasible baseline as a permanent comparator is **PROPOSED_NOT_AUTHORIZED**. March17–31 remains untouched.
-
-`PROTECTED_FINAL_HIERARCHICAL_EVALUATION_UNTOUCHED = YES`
-
-Academic-review feedback is reconciled: sensitivity distribution/truncation/sampling, absolute values, minimum-protected threshold and dataset justification are documented. Equation numbering remains unverified; the scaled formulation is an explicit project interpretation. Jan1–Mar15 VALID finite/nonzero historical epsilon is transformed with abs() **before** inclusive positive P0.5–P99.5 support **[0.017809913104763053, 27.324599740032788]**, N=8,598,805 (99.001979%). Sampling is **TRUNCATED_EMPIRICAL_RESAMPLING**, with replacement and duplicate frequencies preserved; no extra floor, no d_min, no causal willingness-to-pay claim.
-
-`P_raw_c = P_base + (P_base / epsilon_c) * ((L_gg_prime - L_base) / L_base)`, with P_base=21.34586956773507 USD and L_base=4.856998243316242 km. `P_accept_c = max(0.85 * P_base, P_raw_c)`. Actions [0.85,0.90,0.95,1.00,1.05,1.10,1.15] are masked before selection and bootstrap; factor justification MODERATE, Jan1–Mar15 fare coverage14.379973%. Assigned reward=P_offer; unmatched0. The unchanged13D request-level DQN uses gamma0.99 **per request transition**, eight updates/warm slot. The former time-aware rule is SUPERSEDED; gamma value was not tuned.
-
-Fresh staged_training_002 completed Episodes1/10/25 with128/1280/3200 updates and epsilon0.997568/0.97568/0.9392; no historical pricing checkpoint resumed. March16 greedy development assignments/revenue were2767/$54,330.57;2792/$56,855.79;2786/$56,419.27. Highest-feasible achieved2794/$58,017.01: high action-dominance risk, no demonstrated DQN superiority, no universal long-term dominance claim. Q remains under-calibrated; Episode25 did not improve on Episode10 development. Policy stability NO; convergence NO. Current review interpretation supersedes earlier automated UNCLEAR labels without modifying numerical JSON/CSV artifacts.
-
-[V1 hub](results/analysis/2026-11-07_passenger_sensitive_pricing_v1/README.md) · [Methodology](results/analysis/2026-11-07_passenger_sensitive_pricing_v1/METHODOLOGY.md) · [Academic review summary](results/analysis/2026-11-07_passenger_sensitive_pricing_v1/ACADEMIC_REVIEW_SUMMARY.md) · [Feedback reconciliation](results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/README.md) · [Bellman correction](results/analysis/2026-11-07_passenger_sensitive_pricing_v1/bellman_discount_correction/README.md) · [Authoritative staged training](results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/README.md) · [Action dominance](results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/README.md)
-
----
-
-Historical pricing sections below are retained as development provenance; they do not authorize further V1 runs or override the current section. Other subsystem records remain unchanged.
+Canonical documentation: [Passenger-Sensitive Pricing V1](results/analysis/2026-11-07_passenger_sensitive_pricing_v1/README.md).
+Methodology, sensitivity sampling and request-level architecture are frozen.
+Bellman semantics are corrected and frozen.
+Authoritative staged training completed through Episode25.
+Technical invariants PASS; numerically stable with learning signal.
+Policy stability NO; convergence NO.
+Action-dominance risk HIGH; DQN incremental dynamic value UNRESOLVED.
+Further training AWAITING_ACADEMIC_REVIEW; no continuation authorized.
+March16 is development-only; March17–31 remains protected and untouched.
+Earlier pricing descriptions below are historical, not current run instructions.
 
 ## Prior project status — 1 November 2026
 
@@ -833,48 +828,3 @@ Current final/frozen reports supersede earlier blocked/provisional statuses only
 **ROOT_README_CURRENT = YES** for the documented state, with the explicit unresolved implementation/setup limitations above. This is not a claim that the research programme is complete.
 
 <!-- V1_STAGED_001_STATUS -->
-<details>
-<summary>Superseded V1 implementation chronology and provisional review labels</summary>
-
-These dated statements are historical; the current V1 section above supersedes their pricing status and provisional scientific labels.
-
-## Passenger-Sensitive Pricing V1 Detached Stage1
-
-Historical staged_training_001 execution decision (superseded time-aware discount): three separate detached stages. Stage1 initializes fresh and stops after Episode1 plus fixed March16 development evaluation. The prior attached partial attempt is preserved and not resumed. Each subsequent stage requires a later saved-artifact review. No automatic chaining, no Codex polling. Convergence=NO; March17–31 untouched. Current metrics are in the status file; see [staged report](results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_001/README.md).
-
-
-## Active V1 request-step discount correction
-
-**ACTIVE: gamma=0.99 per actionable request transition**, including same-timestamp requests. Terminal target is reward only; elapsed time remains diagnostic metadata. Gamma value unchanged; application semantics changed. Next state remains the next chronological actionable request; all masks, 13D state, rewards, cadence (8/warm slot), and other frozen parameters remain unchanged.
-
-The old 0.99^(delta_t_minutes/30) rule is SUPERSEDED: near-unity discounts accumulated episode revenue and high horizon aliasing. `staged_training_001 = SUPERSEDED_TIME_AWARE_DISCOUNT_DIAGNOSTIC`; its artifacts/checkpoint remain unchanged. Offline comparison supports the correction: mean/median MC 1725.825875/1799.281877 versus 315510.192211/322877.321850; horizon correlation is materially reduced, not eliminated. Residual terminal exposure is 1.236830%.
-
-Fresh staged_training_002 Episode1 only is authorized after focused tests; no old checkpoint resume, no automatic Stage2. March1–15 training, March16 fixed development, March17–31 protected. Execution status is recorded in `results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/training_status.json`; methodology evidence is in `results/analysis/2026-11-07_passenger_sensitive_pricing_v1/bellman_discount_correction/README.md`.
-
-## Corrected V1 Episode25 completed review
-
-| episode | revenue | assignments | assignment_rate | mean_offer | choice_request_rate | forced_request_rate | mean_abs_Q | max_abs_Q |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| 1 | 54330.57451727768 | 2767 | 0.974982381959126 | 19.61631258848888 | 0.4506694855532064 | 0.5493305144467935 | 3.10725998878479 | 33.48653793334961 |
-| 10 | 56855.79088714074 | 2792 | 0.9837914023960536 | 20.32821764648258 | 0.4506694855532064 | 0.5493305144467935 | 58.99930191040039 | 104.06543731689452 |
-| 25 | 56419.26785448056 | 2786 | 0.981677237491191 | 20.220284866955804 | 0.4506694855532064 | 0.5493305144467935 | 147.33767700195312 | 199.55938720703125 |
-
-```json
-{
-  "Q_SCALE_TREND": "UNCLEAR",
-  "NUMERICALLY_STABLE": "YES",
-  "POLICY_STABLE": "UNCLEAR",
-  "LEARNING_SIGNAL": "UNCLEAR",
-  "CONVERGED": "NO",
-  "optimizer_updates": 3200,
-  "exploration_epsilon": 0.9392,
-  "protected_period_untouched": true,
-  "policy_movement_available": false,
-  "review_basis": "Descriptive Episode10\u219225 changes in Q/MC relative gap, MAE, TD and loss jointly; no convergence or causal performance claim.",
-  "later_training_authorized": false
-}
-```
-
-Full choice/all-action and feasible-count distributions are in development_ep01_ep10_ep25_comparison.csv, ep25_development_action_by_feasible_count.csv and ep25_development_choice_policy.csv under the staged_training_002 report. MC calibration is retained per episode, including 15, 20, 25 and Episode25 development. No equality of Q and MC is required. Exact Episode10→25 per-request policy movement is unavailable because Episode10 did not retain those request records; aggregate policy movement is descriptive only. No Episodes26+ launched; March17–31 untouched.
-
-</details>

@@ -1,0 +1,2834 @@
+{
+  "checks": [
+    {
+      "claim": "stage_summary.csv: row 0, episode",
+      "canonical_value": "1",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "1",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, requests",
+      "canonical_value": "37111",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "37111",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, assignments",
+      "canonical_value": "33528",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "33528",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, assignment_rate",
+      "canonical_value": "0.9034518067419364",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.9034518067419364",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, revenue",
+      "canonical_value": "642375.1277170705",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "642375.1277170705",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, choice_rate",
+      "canonical_value": "0.3415968311282369",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.3415968311282369",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, forced_rate",
+      "canonical_value": "0.6584031688717631",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.6584031688717631",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, replay_size",
+      "canonical_value": "37111",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "37111",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, optimizer_updates",
+      "canonical_value": "128",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "128",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, exploration_epsilon",
+      "canonical_value": "0.997568",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.997568",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, mean_abs_Q",
+      "canonical_value": "4.12795352935791",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "4.12795352935791",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, max_abs_Q",
+      "canonical_value": "39.37099838256836",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "39.37099838256836",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, mean_abs_TD",
+      "canonical_value": "20.916427612304688",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "20.916427612304688",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, mean_loss",
+      "canonical_value": "24.33213622868061",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "24.33213622868061",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, MC_return_mean",
+      "canonical_value": "1723.7844172339624",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "1723.7844172339624",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, MC_return_median",
+      "canonical_value": "1797.625860512767",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "1797.625860512767",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 0, Q_MC_MAE",
+      "canonical_value": "1725.6982792303747",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "1725.6982792303747",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, episode",
+      "canonical_value": "10",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "10",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, requests",
+      "canonical_value": "39488",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "39488",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, assignments",
+      "canonical_value": "31657",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "31657",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, assignment_rate",
+      "canonical_value": "0.8016865883306321",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.8016865883306321",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, revenue",
+      "canonical_value": "606587.7100932841",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "606587.7100932841",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, choice_rate",
+      "canonical_value": "0.3226803079416531",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.3226803079416531",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, forced_rate",
+      "canonical_value": "0.6773196920583469",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.6773196920583469",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, replay_size",
+      "canonical_value": "100000",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "100000",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, optimizer_updates",
+      "canonical_value": "1280",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "1280",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, exploration_epsilon",
+      "canonical_value": "0.97568",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.97568",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, mean_abs_Q",
+      "canonical_value": "55.03794479370117",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "55.03794479370117",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, max_abs_Q",
+      "canonical_value": "130.9333953857422",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "130.9333953857422",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, mean_abs_TD",
+      "canonical_value": "11.20116901397705",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "11.20116901397705",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, mean_loss",
+      "canonical_value": "8.368096370249987",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "8.368096370249987",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, MC_return_mean",
+      "canonical_value": "1528.8378225371955",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "1528.8378225371955",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, MC_return_median",
+      "canonical_value": "1561.104081800609",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "1561.104081800609",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 1, Q_MC_MAE",
+      "canonical_value": "1479.3690870844543",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "1479.3690870844543",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, episode",
+      "canonical_value": "25",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "25",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, requests",
+      "canonical_value": "51654",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "51654",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, assignments",
+      "canonical_value": "22536",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "22536",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, assignment_rate",
+      "canonical_value": "0.4362876059937275",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.4362876059937275",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, revenue",
+      "canonical_value": "435187.8485187203",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "435187.8485187203",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, choice_rate",
+      "canonical_value": "0.286463778216595",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.286463778216595",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, forced_rate",
+      "canonical_value": "0.7135362217834049",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.7135362217834049",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, replay_size",
+      "canonical_value": "100000",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "100000",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, optimizer_updates",
+      "canonical_value": "3200",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "3200",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, exploration_epsilon",
+      "canonical_value": "0.9392",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "0.9392",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, mean_abs_Q",
+      "canonical_value": "138.2930450439453",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "138.2930450439453",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, max_abs_Q",
+      "canonical_value": "196.00808715820312",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "196.00808715820312",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, mean_abs_TD",
+      "canonical_value": "12.567835807800293",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "12.567835807800293",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, mean_loss",
+      "canonical_value": "13.262940563261509",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "13.262940563261509",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, MC_return_mean",
+      "canonical_value": "838.0126914780998",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "838.0126914780998",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, MC_return_median",
+      "canonical_value": "841.8086214690959",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "841.8086214690959",
+      "match": true
+    },
+    {
+      "claim": "stage_summary.csv: row 2, Q_MC_MAE",
+      "canonical_value": "722.3233429145478",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv",
+      "source_value": "722.3233429145478",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, episode",
+      "canonical_value": "1",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "1",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, requests_seen",
+      "canonical_value": "2838",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "2838",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, assignments",
+      "canonical_value": "2767",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "2767",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, assignment_rate",
+      "canonical_value": "0.974982381959126",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "0.974982381959126",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, revenue",
+      "canonical_value": "54330.57451727768",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "54330.57451727768",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, mean_offer",
+      "canonical_value": "19.61631258848888",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "19.61631258848888",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, choice_request_rate",
+      "canonical_value": "0.4506694855532064",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "0.4506694855532064",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, forced_request_rate",
+      "canonical_value": "0.5493305144467935",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "0.5493305144467935",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, mean_abs_Q",
+      "canonical_value": "3.10725998878479",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "3.10725998878479",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 0, max_abs_Q",
+      "canonical_value": "33.48653793334961",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "33.48653793334961",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, episode",
+      "canonical_value": "10",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "10",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, requests_seen",
+      "canonical_value": "2838",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "2838",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, assignments",
+      "canonical_value": "2792",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "2792",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, assignment_rate",
+      "canonical_value": "0.9837914023960536",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "0.9837914023960536",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, revenue",
+      "canonical_value": "56855.79088714074",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "56855.79088714074",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, mean_offer",
+      "canonical_value": "20.32821764648258",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "20.32821764648258",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, choice_request_rate",
+      "canonical_value": "0.4506694855532064",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "0.4506694855532064",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, forced_request_rate",
+      "canonical_value": "0.5493305144467935",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "0.5493305144467935",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, mean_abs_Q",
+      "canonical_value": "58.99930191040039",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "58.99930191040039",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 1, max_abs_Q",
+      "canonical_value": "104.06543731689452",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "104.06543731689452",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, episode",
+      "canonical_value": "25",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "25",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, requests_seen",
+      "canonical_value": "2838",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "2838",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, assignments",
+      "canonical_value": "2786",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "2786",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, assignment_rate",
+      "canonical_value": "0.981677237491191",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "0.981677237491191",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, revenue",
+      "canonical_value": "56419.26785448056",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "56419.26785448056",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, mean_offer",
+      "canonical_value": "20.220284866955804",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "20.220284866955804",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, choice_request_rate",
+      "canonical_value": "0.45066948555320646",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "0.45066948555320646",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, forced_request_rate",
+      "canonical_value": "0.5493305144467935",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "0.5493305144467935",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, mean_abs_Q",
+      "canonical_value": "147.33767700195312",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "147.33767700195312",
+      "match": true
+    },
+    {
+      "claim": "development_evaluation.csv: row 2, max_abs_Q",
+      "canonical_value": "199.55938720703125",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv",
+      "source_value": "199.55938720703125",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 0, episode",
+      "canonical_value": "1",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 0, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 0, mean_G",
+      "canonical_value": "1723.7844172339624",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1723.7844172339624",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 0, median_G",
+      "canonical_value": "1797.625860512767",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1797.625860512767",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 0, mean_selected_Q",
+      "canonical_value": "-1.9138621091842651",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "-1.9138621091842651",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 0, median_selected_Q",
+      "canonical_value": "-1.9691829681396484",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "-1.9691829681396484",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 0, MAE_Q_G",
+      "canonical_value": "1725.6982792303747",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1725.6982792303747",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 0, correlation",
+      "canonical_value": "-0.1769950055292727",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "-0.1769950055292727",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 1, episode",
+      "canonical_value": "1",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 1, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 1, mean_G",
+      "canonical_value": "1844.543321878771",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1844.543321878771",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 1, median_G",
+      "canonical_value": "1923.1035561987323",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1923.1035561987323",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 1, mean_selected_Q",
+      "canonical_value": "2.950186967849731",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "2.950186967849731",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 1, median_selected_Q",
+      "canonical_value": "1.41369891166687",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1.41369891166687",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 1, MAE_Q_G",
+      "canonical_value": "1841.5931349245127",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1841.5931349245127",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 1, correlation",
+      "canonical_value": "0.0541167532018389",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.0541167532018389",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 2, episode",
+      "canonical_value": "2",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "2",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 2, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 2, mean_G",
+      "canonical_value": "951.5163951391892",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "951.5163951391892",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 2, median_G",
+      "canonical_value": "946.0823375788256",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "946.0823375788256",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 2, mean_selected_Q",
+      "canonical_value": "-5.52747917175293",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "-5.52747917175293",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 2, median_selected_Q",
+      "canonical_value": "-5.965036392211914",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "-5.965036392211914",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 2, MAE_Q_G",
+      "canonical_value": "957.0438741847552",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "957.0438741847552",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 2, correlation",
+      "canonical_value": "-0.0452926587138035",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "-0.0452926587138035",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 3, episode",
+      "canonical_value": "3",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "3",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 3, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 3, mean_G",
+      "canonical_value": "1113.5402675551782",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1113.5402675551782",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 3, median_G",
+      "canonical_value": "1087.268488877642",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1087.268488877642",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 3, mean_selected_Q",
+      "canonical_value": "1.687744379043579",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1.687744379043579",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 3, median_selected_Q",
+      "canonical_value": "-0.016710240393877",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "-0.016710240393877",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 3, MAE_Q_G",
+      "canonical_value": "1111.8525233162477",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1111.8525233162477",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 3, correlation",
+      "canonical_value": "0.2570051960233475",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.2570051960233475",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 4, episode",
+      "canonical_value": "4",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "4",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 4, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 4, mean_G",
+      "canonical_value": "791.87360233267",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "791.87360233267",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 4, median_G",
+      "canonical_value": "785.1545887623122",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "785.1545887623122",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 4, mean_selected_Q",
+      "canonical_value": "3.572866439819336",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "3.572866439819336",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 4, median_selected_Q",
+      "canonical_value": "1.4406996965408323",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1.4406996965408323",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 4, MAE_Q_G",
+      "canonical_value": "788.307896683741",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "788.307896683741",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 4, correlation",
+      "canonical_value": "-0.0334617347610846",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "-0.0334617347610846",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 5, episode",
+      "canonical_value": "5",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "5",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 5, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 5, mean_G",
+      "canonical_value": "870.2043713476216",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "870.2043713476216",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 5, median_G",
+      "canonical_value": "830.6409957646157",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "830.6409957646157",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 5, mean_selected_Q",
+      "canonical_value": "11.249441146850586",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "11.249441146850586",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 5, median_selected_Q",
+      "canonical_value": "10.989211082458496",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "10.989211082458496",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 5, MAE_Q_G",
+      "canonical_value": "858.9549310883215",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "858.9549310883215",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 5, correlation",
+      "canonical_value": "-0.0770081364101783",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "-0.0770081364101783",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 6, episode",
+      "canonical_value": "6",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "6",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 6, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 6, mean_G",
+      "canonical_value": "969.1404768615328",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "969.1404768615328",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 6, median_G",
+      "canonical_value": "962.309128104318",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "962.309128104318",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 6, mean_selected_Q",
+      "canonical_value": "12.123449325561523",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "12.123449325561523",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 6, median_selected_Q",
+      "canonical_value": "11.244009971618652",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "11.244009971618652",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 6, MAE_Q_G",
+      "canonical_value": "957.0170271961696",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "957.0170271961696",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 6, correlation",
+      "canonical_value": "0.1493381381941144",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.1493381381941144",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 7, episode",
+      "canonical_value": "7",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "7",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 7, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 7, mean_G",
+      "canonical_value": "1771.863825103815",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1771.863825103815",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 7, median_G",
+      "canonical_value": "1822.9247172207115",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1822.9247172207115",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 7, mean_selected_Q",
+      "canonical_value": "29.626771926879883",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "29.626771926879883",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 7, median_selected_Q",
+      "canonical_value": "28.290069580078125",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "28.290069580078125",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 7, MAE_Q_G",
+      "canonical_value": "1742.304147872948",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1742.304147872948",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 7, correlation",
+      "canonical_value": "0.2351187526104314",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.2351187526104314",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 8, episode",
+      "canonical_value": "8",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "8",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 8, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 8, mean_G",
+      "canonical_value": "1379.9318383828972",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1379.9318383828972",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 8, median_G",
+      "canonical_value": "1384.8568938768112",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1384.8568938768112",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 8, mean_selected_Q",
+      "canonical_value": "29.0412540435791",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "29.0412540435791",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 8, median_selected_Q",
+      "canonical_value": "28.459117889404297",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "28.459117889404297",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 8, MAE_Q_G",
+      "canonical_value": "1350.908765019391",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1350.908765019391",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 8, correlation",
+      "canonical_value": "0.3206197661572436",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.3206197661572436",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 9, episode",
+      "canonical_value": "9",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "9",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 9, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 9, mean_G",
+      "canonical_value": "1720.810579904896",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1720.810579904896",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 9, median_G",
+      "canonical_value": "1842.5318093948",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1842.5318093948",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 9, mean_selected_Q",
+      "canonical_value": "44.959739685058594",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "44.959739685058594",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 9, median_selected_Q",
+      "canonical_value": "35.72077941894531",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "35.72077941894531",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 9, MAE_Q_G",
+      "canonical_value": "1675.8751365387684",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1675.8751365387684",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 9, correlation",
+      "canonical_value": "0.3181479844070212",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.3181479844070212",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 10, episode",
+      "canonical_value": "10",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "10",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 10, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 10, mean_G",
+      "canonical_value": "1528.8378225371955",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1528.8378225371955",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 10, median_G",
+      "canonical_value": "1561.104081800609",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1561.104081800609",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 10, mean_selected_Q",
+      "canonical_value": "49.738243103027344",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "49.738243103027344",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 10, median_selected_Q",
+      "canonical_value": "48.15941619873047",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "48.15941619873047",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 10, MAE_Q_G",
+      "canonical_value": "1479.3690870844543",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1479.3690870844543",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 10, correlation",
+      "canonical_value": "0.1208448865635501",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.1208448865635501",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 11, episode",
+      "canonical_value": "10",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "10",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 11, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 11, mean_G",
+      "canonical_value": "1931.4234052606323",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1931.4234052606323",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 11, median_G",
+      "canonical_value": "2000.306301985868",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "2000.306301985868",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 11, mean_selected_Q",
+      "canonical_value": "58.38206100463867",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "58.38206100463867",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 11, median_selected_Q",
+      "canonical_value": "54.22560119628906",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "54.22560119628906",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 11, MAE_Q_G",
+      "canonical_value": "1873.1609932059869",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1873.1609932059869",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 11, correlation",
+      "canonical_value": "0.1160127392087612",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.1160127392087612",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 12, episode",
+      "canonical_value": "11",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "11",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 12, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 12, mean_G",
+      "canonical_value": "1541.3446465189377",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1541.3446465189377",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 12, median_G",
+      "canonical_value": "1716.2522111741382",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1716.2522111741382",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 12, mean_selected_Q",
+      "canonical_value": "55.07241439819336",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "55.07241439819336",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 12, median_selected_Q",
+      "canonical_value": "53.81820297241211",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "53.81820297241211",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 12, MAE_Q_G",
+      "canonical_value": "1486.5437158380494",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1486.5437158380494",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 12, correlation",
+      "canonical_value": "0.46903787693883897",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.46903787693883897",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 13, episode",
+      "canonical_value": "12",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "12",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 13, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 13, mean_G",
+      "canonical_value": "1275.1961654025968",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1275.1961654025968",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 13, median_G",
+      "canonical_value": "1242.9300768565945",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1242.9300768565945",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 13, mean_selected_Q",
+      "canonical_value": "53.987117767333984",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "53.987117767333984",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 13, median_selected_Q",
+      "canonical_value": "53.945186614990234",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "53.945186614990234",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 13, MAE_Q_G",
+      "canonical_value": "1221.3662387346803",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1221.3662387346803",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 13, correlation",
+      "canonical_value": "0.31138270180943123",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.31138270180943123",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 14, episode",
+      "canonical_value": "13",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "13",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 14, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 14, mean_G",
+      "canonical_value": "1110.2607460890072",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1110.2607460890072",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 14, median_G",
+      "canonical_value": "902.332777770352",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "902.332777770352",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 14, mean_selected_Q",
+      "canonical_value": "59.028709411621094",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "59.028709411621094",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 14, median_selected_Q",
+      "canonical_value": "55.070533752441406",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "55.070533752441406",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 14, MAE_Q_G",
+      "canonical_value": "1051.4388943170093",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1051.4388943170093",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 14, correlation",
+      "canonical_value": "0.734539089952802",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.734539089952802",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 15, episode",
+      "canonical_value": "14",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "14",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 15, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 15, mean_G",
+      "canonical_value": "1158.2622527964613",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1158.2622527964613",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 15, median_G",
+      "canonical_value": "1097.277958130962",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1097.277958130962",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 15, mean_selected_Q",
+      "canonical_value": "57.813621520996094",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "57.813621520996094",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 15, median_selected_Q",
+      "canonical_value": "54.9453239440918",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "54.9453239440918",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 15, MAE_Q_G",
+      "canonical_value": "1100.6111269647506",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1100.6111269647506",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 15, correlation",
+      "canonical_value": "0.4123747132058548",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.4123747132058548",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 16, episode",
+      "canonical_value": "15",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "15",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 16, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 16, mean_G",
+      "canonical_value": "1251.7881246988654",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1251.7881246988654",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 16, median_G",
+      "canonical_value": "1277.2853835618798",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1277.2853835618798",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 16, mean_selected_Q",
+      "canonical_value": "70.49057006835938",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "70.49057006835938",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 16, median_selected_Q",
+      "canonical_value": "70.31169891357422",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "70.31169891357422",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 16, MAE_Q_G",
+      "canonical_value": "1181.5041516661531",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1181.5041516661531",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 16, correlation",
+      "canonical_value": "0.4088148976269405",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.4088148976269405",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 17, episode",
+      "canonical_value": "16",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "16",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 17, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 17, mean_G",
+      "canonical_value": "699.0748891011415",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "699.0748891011415",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 17, median_G",
+      "canonical_value": "675.9519961456857",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "675.9519961456857",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 17, mean_selected_Q",
+      "canonical_value": "64.71783447265625",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "64.71783447265625",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 17, median_selected_Q",
+      "canonical_value": "64.82748413085938",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "64.82748413085938",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 17, MAE_Q_G",
+      "canonical_value": "634.6126702651917",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "634.6126702651917",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 17, correlation",
+      "canonical_value": "0.23419805646758143",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.23419805646758143",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 18, episode",
+      "canonical_value": "17",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "17",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 18, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 18, mean_G",
+      "canonical_value": "1379.391493519863",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1379.391493519863",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 18, median_G",
+      "canonical_value": "1425.0656233263635",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1425.0656233263635",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 18, mean_selected_Q",
+      "canonical_value": "87.4944076538086",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "87.4944076538086",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 18, median_selected_Q",
+      "canonical_value": "86.62220764160156",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "86.62220764160156",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 18, MAE_Q_G",
+      "canonical_value": "1292.2560581018179",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1292.2560581018179",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 18, correlation",
+      "canonical_value": "0.6596076838395831",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.6596076838395831",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 19, episode",
+      "canonical_value": "18",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "18",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 19, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 19, mean_G",
+      "canonical_value": "1579.8103288364684",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1579.8103288364684",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 19, median_G",
+      "canonical_value": "1760.0937468715792",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1760.0937468715792",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 19, mean_selected_Q",
+      "canonical_value": "96.92030334472656",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "96.92030334472656",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 19, median_selected_Q",
+      "canonical_value": "97.47256469726562",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "97.47256469726562",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 19, MAE_Q_G",
+      "canonical_value": "1483.164842766444",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1483.164842766444",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 19, correlation",
+      "canonical_value": "0.6160908338925936",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.6160908338925936",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 20, episode",
+      "canonical_value": "19",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "19",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 20, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 20, mean_G",
+      "canonical_value": "1419.266237742304",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1419.266237742304",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 20, median_G",
+      "canonical_value": "1486.2584925757465",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1486.2584925757465",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 20, mean_selected_Q",
+      "canonical_value": "104.46434020996094",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "104.46434020996094",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 20, median_selected_Q",
+      "canonical_value": "104.95255279541016",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "104.95255279541016",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 20, MAE_Q_G",
+      "canonical_value": "1315.1600907738684",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1315.1600907738684",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 20, correlation",
+      "canonical_value": "0.5235160820639642",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.5235160820639642",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 21, episode",
+      "canonical_value": "20",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "20",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 21, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 21, mean_G",
+      "canonical_value": "829.5700879242715",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "829.5700879242715",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 21, median_G",
+      "canonical_value": "819.4831465816578",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "819.4831465816578",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 21, mean_selected_Q",
+      "canonical_value": "98.03633880615234",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "98.03633880615234",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 21, median_selected_Q",
+      "canonical_value": "97.78824615478516",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "97.78824615478516",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 21, MAE_Q_G",
+      "canonical_value": "731.883880138069",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "731.883880138069",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 21, correlation",
+      "canonical_value": "0.2820693128901575",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.2820693128901575",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 22, episode",
+      "canonical_value": "21",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "21",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 22, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 22, mean_G",
+      "canonical_value": "1280.6568175407428",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1280.6568175407428",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 22, median_G",
+      "canonical_value": "1266.4058353286591",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1266.4058353286591",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 22, mean_selected_Q",
+      "canonical_value": "115.1433334350586",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "115.1433334350586",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 22, median_selected_Q",
+      "canonical_value": "114.31388854980469",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "114.31388854980469",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 22, MAE_Q_G",
+      "canonical_value": "1165.9205358345412",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1165.9205358345412",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 22, correlation",
+      "canonical_value": "0.2144216866651364",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.2144216866651364",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 23, episode",
+      "canonical_value": "22",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "22",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 23, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 23, mean_G",
+      "canonical_value": "1053.0823199294114",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1053.0823199294114",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 23, median_G",
+      "canonical_value": "1056.6835005775984",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1056.6835005775984",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 23, mean_selected_Q",
+      "canonical_value": "112.59097290039062",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "112.59097290039062",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 23, median_selected_Q",
+      "canonical_value": "111.98492431640625",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "111.98492431640625",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 23, MAE_Q_G",
+      "canonical_value": "940.9198412887358",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "940.9198412887358",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 23, correlation",
+      "canonical_value": "0.440300557728774",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.440300557728774",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 24, episode",
+      "canonical_value": "23",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "23",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 24, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 24, mean_G",
+      "canonical_value": "557.4249920761574",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "557.4249920761574",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 24, median_G",
+      "canonical_value": "511.7847580453305",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "511.7847580453305",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 24, mean_selected_Q",
+      "canonical_value": "93.43147277832031",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "93.43147277832031",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 24, median_selected_Q",
+      "canonical_value": "89.21627044677734",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "89.21627044677734",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 24, MAE_Q_G",
+      "canonical_value": "464.5118199210041",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "464.5118199210041",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 24, correlation",
+      "canonical_value": "0.4625686019291065",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.4625686019291065",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 25, episode",
+      "canonical_value": "24",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "24",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 25, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 25, mean_G",
+      "canonical_value": "1337.0202909930067",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1337.0202909930067",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 25, median_G",
+      "canonical_value": "1335.8419215435433",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1335.8419215435433",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 25, mean_selected_Q",
+      "canonical_value": "152.3071746826172",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "152.3071746826172",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 25, median_selected_Q",
+      "canonical_value": "151.23330688476562",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "151.23330688476562",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 25, MAE_Q_G",
+      "canonical_value": "1185.2169098274908",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1185.2169098274908",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 25, correlation",
+      "canonical_value": "0.6462482769963303",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.6462482769963303",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 26, episode",
+      "canonical_value": "25",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "25",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 26, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 26, mean_G",
+      "canonical_value": "838.0126914780998",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "838.0126914780998",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 26, median_G",
+      "canonical_value": "841.8086214690959",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "841.8086214690959",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 26, mean_selected_Q",
+      "canonical_value": "116.19981384277344",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "116.19981384277344",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 26, median_selected_Q",
+      "canonical_value": "114.1672592163086",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "114.1672592163086",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 26, MAE_Q_G",
+      "canonical_value": "722.3233429145478",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "722.3233429145478",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 26, correlation",
+      "canonical_value": "0.3573547288750529",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.3573547288750529",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 27, episode",
+      "canonical_value": "25",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "25",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 27, N",
+      "canonical_value": "512",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "512",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 27, mean_G",
+      "canonical_value": "1916.4838858749636",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1916.4838858749636",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 27, median_G",
+      "canonical_value": "1991.2820598378285",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1991.2820598378285",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 27, mean_selected_Q",
+      "canonical_value": "147.06478881835938",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "147.06478881835938",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 27, median_selected_Q",
+      "canonical_value": "153.3709716796875",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "153.3709716796875",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 27, MAE_Q_G",
+      "canonical_value": "1770.0806637186874",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "1770.0806637186874",
+      "match": true
+    },
+    {
+      "claim": "mc_return_calibration.csv: row 27, correlation",
+      "canonical_value": "0.0023902998397779336",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv",
+      "source_value": "0.0023902998397779336",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 0, assignments",
+      "canonical_value": "2786",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "2786",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 0, revenue",
+      "canonical_value": "56419.26785448056",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "56419.26785448056",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 0, mean_offered_fare",
+      "canonical_value": "20.220284866955804",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "20.220284866955804",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 0, mean_assigned_fare",
+      "canonical_value": "20.2509934868918",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "20.2509934868918",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 0, driver_unmatched",
+      "canonical_value": "52",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "52",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 0, passenger_feasibility_violations",
+      "canonical_value": "0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "0",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 1, assignments",
+      "canonical_value": "2794",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "2794",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 1, revenue",
+      "canonical_value": "58017.00619162552",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "58017.00619162552",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 1, mean_offered_fare",
+      "canonical_value": "20.724974031154186",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "20.724974031154186",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 1, mean_assigned_fare",
+      "canonical_value": "20.764855473022735",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "20.764855473022735",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 1, driver_unmatched",
+      "canonical_value": "44",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "44",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 1, passenger_feasibility_violations",
+      "canonical_value": "0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "0",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 2, assignments",
+      "canonical_value": "2688",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "2688",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 2, revenue",
+      "canonical_value": "48771.04278836108",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "48771.04278836108",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 2, mean_offered_fare",
+      "canonical_value": "18.143989132574806",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "18.143989132574806",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 2, mean_assigned_fare",
+      "canonical_value": "18.143989132574806",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "18.143989132574806",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 2, driver_unmatched",
+      "canonical_value": "150",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "150",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 2, passenger_feasibility_violations",
+      "canonical_value": "0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "0",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 3, assignments",
+      "canonical_value": "2747",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "2747",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 3, revenue",
+      "canonical_value": "53672.054441113054",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "53672.054441113054",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 3, mean_offered_fare",
+      "canonical_value": "19.515901257012747",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "19.515901257012747",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 3, mean_assigned_fare",
+      "canonical_value": "19.538425351697505",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "19.538425351697505",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 3, driver_unmatched",
+      "canonical_value": "91",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "91",
+      "match": true
+    },
+    {
+      "claim": "baseline_comparison.csv: row 3, passenger_feasibility_violations",
+      "canonical_value": "0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv",
+      "source_value": "0",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 0, N",
+      "canonical_value": "8685488",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "8685488",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 0, mean",
+      "canonical_value": "0.640620734577789",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "0.640620734577789",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 0, SD",
+      "canonical_value": "7.106334709447966",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "7.106334709447966",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 0, median",
+      "canonical_value": "0.762119875337521",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "0.762119875337521",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 1, N",
+      "canonical_value": "8685488",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "8685488",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 1, mean",
+      "canonical_value": "1.4146378807714861",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "1.4146378807714861",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 1, SD",
+      "canonical_value": "6.993510391395895",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "6.993510391395895",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 1, median",
+      "canonical_value": "0.8201258184287152",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "0.8201258184287152",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 2, N",
+      "canonical_value": "8598805",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "8598805",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 2, mean",
+      "canonical_value": "1.0952985082713345",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "1.0952985082713345",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 2, SD",
+      "canonical_value": "1.8173002121616255",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "1.8173002121616255",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_distribution_summary.csv: row 2, median",
+      "canonical_value": "0.8201228772641369",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv",
+      "source_value": "0.8201228772641369",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 0, lower",
+      "canonical_value": "0.017809913104763053",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.017809913104763053",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 0, upper",
+      "canonical_value": "27.324599740032788",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "27.324599740032788",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 0, retained_N",
+      "canonical_value": "8598805",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "8598805",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 0, retained_pct",
+      "canonical_value": "99.00197893313536",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "99.00197893313536",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 0, epsilon_mean",
+      "canonical_value": "1.0952985082713345",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "1.0952985082713345",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 0, epsilon_SD",
+      "canonical_value": "1.8173002121616255",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "1.8173002121616255",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 0, epsilon_median",
+      "canonical_value": "0.8201228772641369",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.8201228772641369",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 0, no_offer_pct",
+      "canonical_value": "0.0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.0",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 1, lower",
+      "canonical_value": "0.017809913104763053",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.017809913104763053",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 1, upper",
+      "canonical_value": "14.266571518308252",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "14.266571518308252",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 1, retained_N",
+      "canonical_value": "8555302",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "8555302",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 1, retained_pct",
+      "canonical_value": "98.50110897626017",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "98.50110897626017",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 1, epsilon_mean",
+      "canonical_value": "1.0019966552151045",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "1.0019966552151045",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 1, epsilon_SD",
+      "canonical_value": "1.2364511117325305",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "1.2364511117325305",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 1, epsilon_median",
+      "canonical_value": "0.8180437415878093",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.8180437415878093",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 1, no_offer_pct",
+      "canonical_value": "0.0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.0",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 2, lower",
+      "canonical_value": "0.03214336441012345",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.03214336441012345",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 2, upper",
+      "canonical_value": "27.324599740032788",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "27.324599740032788",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 2, retained_N",
+      "canonical_value": "8555281",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "8555281",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 2, retained_pct",
+      "canonical_value": "98.5008671936453",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "98.5008671936453",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 2, epsilon_mean",
+      "canonical_value": "1.1007459868683243",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "1.1007459868683243",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 2, epsilon_SD",
+      "canonical_value": "1.8203073174930835",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "1.8203073174930835",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 2, epsilon_median",
+      "canonical_value": "0.8221144799085167",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.8221144799085167",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 2, no_offer_pct",
+      "canonical_value": "0.0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.0",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 3, lower",
+      "canonical_value": "0.03214336441012345",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.03214336441012345",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 3, upper",
+      "canonical_value": "14.266571518308252",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "14.266571518308252",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 3, retained_N",
+      "canonical_value": "8511778",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "8511778",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 3, retained_pct",
+      "canonical_value": "97.99999723677011",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "97.99999723677011",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 3, epsilon_mean",
+      "canonical_value": "1.0069948871105217",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "1.0069948871105217",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 3, epsilon_SD",
+      "canonical_value": "1.237625957545162",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "1.237625957545162",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 3, epsilon_median",
+      "canonical_value": "0.8201258184287152",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.8201258184287152",
+      "match": true
+    },
+    {
+      "claim": "sensitivity_truncation_comparison.csv: row 3, no_offer_pct",
+      "canonical_value": "0.0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv",
+      "source_value": "0.0",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 0, N",
+      "canonical_value": "1229215",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "1229215",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 0, percentage",
+      "canonical_value": "14.2951840401079",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "14.2951840401079",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 1, N",
+      "canonical_value": "1229215",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "1229215",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 1, percentage",
+      "canonical_value": "14.2951840401079",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "14.2951840401079",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 2, N",
+      "canonical_value": "4080228",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "4080228",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 2, percentage",
+      "canonical_value": "47.451105124491136",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "47.451105124491136",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 3, N",
+      "canonical_value": "0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "0",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 3, percentage",
+      "canonical_value": "0.0",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "0.0",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 4, N",
+      "canonical_value": "958180",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "958180",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 4, percentage",
+      "canonical_value": "11.143176290193813",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "11.143176290193813",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 5, N",
+      "canonical_value": "2331182",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "2331182",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 5, percentage",
+      "canonical_value": "27.110534545207155",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "27.110534545207155",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 6, N",
+      "canonical_value": "5309443",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "5309443",
+      "match": true
+    },
+    {
+      "claim": "raw_vs_effective_preference_summary.csv: row 6, percentage",
+      "canonical_value": "61.746289164599034",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv",
+      "source_value": "61.746289164599034",
+      "match": true
+    },
+    {
+      "claim": "P_base_USD",
+      "canonical_value": "21.34586956773507",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/pricing_v1_spec.json",
+      "source_value": 21.34586956773507,
+      "match": true
+    },
+    {
+      "claim": "L_base_km",
+      "canonical_value": "4.856998243316242",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/pricing_v1_spec.json",
+      "source_value": 4.856998243316242,
+      "match": true
+    },
+    {
+      "claim": "alpha_min",
+      "canonical_value": "0.85",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/pricing_v1_spec.json",
+      "source_value": 0.85,
+      "match": true
+    },
+    {
+      "claim": "alpha_max",
+      "canonical_value": "1.15",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/pricing_v1_spec.json",
+      "source_value": 1.15,
+      "match": true
+    },
+    {
+      "claim": "positive_support_lower",
+      "canonical_value": "0.017809913104763053",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/restricted_calibration_support.json",
+      "source_value": 0.017809913104763053,
+      "match": true
+    },
+    {
+      "claim": "positive_support_upper",
+      "canonical_value": "27.324599740032788",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/restricted_calibration_support.json",
+      "source_value": 27.324599740032788,
+      "match": true
+    },
+    {
+      "claim": "N_positive_supported",
+      "canonical_value": "8,598,805",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/restricted_calibration_support.json",
+      "source_value": 8598805,
+      "match": true
+    },
+    {
+      "claim": "tests_passed",
+      "canonical_value": "57",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/review_feedback_validation.json",
+      "source_value": 57,
+      "match": true
+    },
+    {
+      "claim": "tests_passed",
+      "canonical_value": "37",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/bellman_discount_correction/discount_methodology_decision.json",
+      "source_value": 37,
+      "match": true
+    },
+    {
+      "claim": "N_choice",
+      "canonical_value": "1,279",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/action_dominance_decision.json",
+      "source_value": 1279,
+      "match": true
+    },
+    {
+      "claim": "highest_feasible_pct",
+      "canonical_value": "12.35",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/action_dominance_decision.json",
+      "source_value": 12.35340109460516,
+      "match": true
+    },
+    {
+      "claim": "one_below_highest_pct",
+      "canonical_value": "78.58",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/action_dominance_decision.json",
+      "source_value": 78.57701329163409,
+      "match": true
+    },
+    {
+      "claim": "same_assigned_driver_all_arms_pct",
+      "canonical_value": "45.97",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/action_dominance_decision.json",
+      "source_value": 45.973416731821736,
+      "match": true
+    },
+    {
+      "claim": "assignment_changing_choice_pct",
+      "canonical_value": "53.87",
+      "source_file": "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/action_dominance_decision.json",
+      "source_value": 53.87021110242377,
+      "match": true
+    }
+  ],
+  "all_match": true,
+  "source_sha256": {
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/stage_summary.csv": "247bc7876d4d31dce114bc35a23528277ad3fa377da43c1bb1773f2d3ed6767d",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/development_evaluation.csv": "db581be4985aed6665f2909c048a6a0bfa33775717aee16c080100e006b1727c",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/mc_return_calibration.csv": "9068dacf21b46db31d42a080944f6bcb5c7f5dd50d2806b6c97f126f7c2367a3",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/baseline_comparison.csv": "ccddaaf5c76f3f73a774b03f51a1ad116d0ef4c49d9a78903760916d6bc56bc5",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_distribution_summary.csv": "e931ca2bb6995675e5258dd1157fa41a971e3c2dc75e506635e7fb31f48ba6f0",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/sensitivity_truncation_comparison.csv": "75f605d063fac5c0746223fa7855a8bcc9d08da7bde197df456059855d7f5dc2",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/raw_vs_effective_preference_summary.csv": "695a15980fe7a22d9f45b5e2ac946bdae0d8ed0039db7713db13a74dfbf0aaff",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/pricing_v1_spec.json": "a1f5ba36f388475cd0911d23b148f2b6ca1f11a26cd1e6a68daf93105b7b6ff3",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/restricted_calibration_support.json": "e3ea9eeca5981aaae0516b91ced3ca5e2fa5e140e6f84134a20561b67ec3b1b8",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/review_feedback_reconciliation/review_feedback_validation.json": "636e0411c7ddd3a0320259809182458a80d9a706e0a3339b6468ae2111f270cb",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/bellman_discount_correction/discount_methodology_decision.json": "dfc7aab1e980993a90fd7b3bc0c9ef5e66a642044a381525a101a563a4233700",
+    "results/analysis/2026-11-07_passenger_sensitive_pricing_v1/staged_training_002/action_dominance_diagnostic/action_dominance_decision.json": "5cacf5c33beea19d290d67b0aa3cf6f7618e42754cd266567be0a1fd33832cf8"
+  },
+  "scope": "Literal persisted CSV values copied into canonical tables; no analysis recomputed.",
+  "source_evidence_unchanged": true,
+  "corrections": [
+    "Rounded tables replaced with literal authoritative CSV values.",
+    "Fare coverage explicitly identified as Jan1\u2013Mar15, not March16.",
+    "Four-group raw-threshold no-offer outputs distinguished from final effective-threshold outcomes.",
+    "Provisional automated review labels remain preserved; current review interpretation explicitly distinguished."
+  ]
+}
