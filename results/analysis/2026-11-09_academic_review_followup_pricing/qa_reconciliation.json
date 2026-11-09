@@ -1,0 +1,275 @@
+{
+  "overall": "PASS_WITH_QUALIFICATION",
+  "sections": [
+    {
+      "section": 1,
+      "title": "Source population",
+      "status": "PASS",
+      "findings": "N=8,692,819; cached timestamps 2026-01-01 00:00:00 through 2026-03-15 23:59:56. Source data/processed/price_distance_sensitivity_record029/authoritative_epsilon_jan_mar_2026.parquet, predicate pickup_timestamp >= Jan1 and < Mar16. TLC fare_amount renamed fare (USD); trip_distance in miles \u00d71.609344 gives km. Existing contract: finite positive fare, valid timestamps, 0<distance<=100 miles. Same cleaned population as previous factor study. Provenance: Record-029 README, cleaning_summary.json, analyze.py and restricted cache."
+    },
+    {
+      "section": 2,
+      "title": "Minimum recorded fare",
+      "status": "PASS_WITH_QUALIFICATION",
+      "findings": "Exact $0.01: 283; <=$0.50:310; <=$1:345; <=$2:1,012; <=$3:20,963; <=$5:110,999. Positive values comply with existing cleaning, but compliance does not establish operational legitimacy. Adjustment, anomaly or legitimate-fare explanations cannot be distinguished without component/source evidence. RAW_MINIMUM_OPERATIONALLY_REPRESENTATIVE=NO: 283 sparse records spanning varied distances do not establish a representative floor."
+    },
+    {
+      "section": 3,
+      "title": "Flat-fare conclusion",
+      "status": "PASS_WITH_QUALIFICATION",
+      "findings": "Exact-minimum band fare==0.01: distance P90/P95/P99=18.095463936/21.8468448/28.63022976 km. Fare-P5 band fare<=5.8, N=450,709: 1.17482112/1.31966208/15.11174016 km. NOT_SUPPORTED means this treatment provides no stable cutoff (B), not proof that no NYC flat-fare mechanism exists. Existing summary explicitly states this limitation."
+    },
+    {
+      "section": 4,
+      "title": "Distribution sanity",
+      "status": "PASS",
+      "findings": "Fare min/max/median=0.01/2555.20/15.60 USD; distance=0.01609344/160.82174592/3.02556672 km. Bounded examples below comply with finite positive fare and <=100-mile cleaning. They are retained, not certified error-free."
+    },
+    {
+      "section": 5,
+      "title": "Action coverage",
+      "status": "PASS",
+      "findings": "Inclusive observed_fare/21.34586956773507 in [0.85,1.15]: below 4,981,183 (57.30227444054685%); inside 1,250,025 (14.379972710808772%); above 2,461,611 (28.31775284864438%). Counts sum 8,692,819; percentages sum 100% within floating-point precision. Denominator includes unresolved epsilon rows, not only supported rows; not March16."
+    },
+    {
+      "section": 6,
+      "title": "Distance coverage",
+      "status": "PASS_WITH_QUALIFICATION",
+      "findings": "Inside-range percentages: 0\u20135 km 12.121778%; 5\u201310 36.892720%; 10\u201315 3.129452%; 15\u201320 0.200125%; 20\u201330 0.124831%; 30+ 0.527341%. WEAK is supported as broad fare-level representation, not a proof that the action set cannot serve a deliberately narrow adjustment experiment."
+    },
+    {
+      "section": 7,
+      "title": "Counterfactual reconciliation",
+      "status": "PASS",
+      "findings": "All seven factors have denominator 2,838; long table has 19,866 unique request/action pairs. Exact counts/rates below reconcile to original masks; no dispatch simulation."
+    },
+    {
+      "section": 8,
+      "title": "Minimum-action acceptance",
+      "status": "PASS",
+      "findings": "P_accept_c=max(0.85*P_base,P_raw_c) implies 0.85*P_base<=P_accept_c. Runtime feasible_mask uses exact candidate-price <= threshold, without tolerance. ACTION_085_ACCEPTANCE_100_PERCENT=STRUCTURAL_BY_CONSTRUCTION; not independent empirical evidence of universal acceptance."
+    },
+    {
+      "section": 9,
+      "title": "Acceptance discontinuity",
+      "status": "PASS_WITH_QUALIFICATION",
+      "findings": "At 0.90 the 1,559 rejected requests comprise 551 RAW_NONPOSITIVE +960 RAW_POSITIVE_BELOW_PLATFORM_MIN +48 RAW_WITHIN_PLATFORM_RANGE. The first 1,511 are protected to the minimum; another 48 have thresholds below the next arm. The remaining 238 within-range and 1,041 above-max requests accept. This motivates reviewing mask-versus-outcome semantics but does not identify the preferable design."
+    },
+    {
+      "section": 10,
+      "title": "Sensitivity reconciliation",
+      "status": "PASS",
+      "findings": "Signed VALID finite nonzero N=8,685,488; negative=11.734355052934276%; supported N=8,598,805; bounds [0.017809913104763053,27.324599740032788]. analyze.py applies dates then VALID/finite/nonzero, abs, positive quantiles/support. No historical signed-support filtering precedes abs. Persisted prior reconciliation matches."
+    },
+    {
+      "section": 11,
+      "title": "T0 interpretation",
+      "status": "PASS",
+      "findings": "YES denotes numerical reproduction only. Summary section 6 explicitly disclaims independently established causal/behavioural validity and does not claim optimality."
+    },
+    {
+      "section": 12,
+      "title": "P_base",
+      "status": "PASS_WITH_QUALIFICATION",
+      "findings": "Frozen 21.34586956773507 USD is full cleaned Jan\u2013Mar mean fare. Restricted mean=21.352107453289896, median=15.60, P25/P75=10/26.66. Within \u00b10.25 km of L_base: mean fare22.4277488275, median20.50. MODERATE is defensible as qualitative global-reference support, not validated universal conditional pricing."
+    },
+    {
+      "section": 13,
+      "title": "L_base",
+      "status": "PASS_WITH_QUALIFICATION",
+      "findings": "Frozen4.856998243316242 km comes from3.01799878914405 miles, mean distance within \u00b1$1 of historical P_base (479,000 trips). Restricted overall mean5.5486679697, median3.02556672, P25/P75=1.73809152/6.1155072 km. MODERATE is a provenance/context assessment, not behavioural validation. L_base==L_flat remains NOT_ESTABLISHED."
+    },
+    {
+      "section": 14,
+      "title": "Extreme-value influence",
+      "status": "PASS_WITH_QUALIFICATION",
+      "findings": "EXTREME_VALUE_SENSITIVITY=MODERATE overall, stronger for SD and observed-minimum interpretation. Above-P99 fares contribute27.595970% of squared deviations; distances25.785991%. Single-largest removal would shift means only from21.35210745 to21.35181597 USD and5.54866797 to5.54865011 km. No removal performed. Means exceed medians; quantiles expose skew. Extreme magnitudes do not change binary coverage membership once outside bounds; deleting records would change denominator and is not proposed. Sparse low-fare records undermine raw-minimum interpretation. These bounded verification reductions were needed because this influence was not quantified in saved outputs."
+    },
+    {
+      "section": 15,
+      "title": "Cross-artifact/chart consistency",
+      "status": "PASS_WITH_QUALIFICATION",
+      "findings": "Headline numbers in README, summary, master_results and supporting CSVs agree. Three master_results unit cells (signed_negative_pct, absolute_negative_pct,T0_negative_pct) say dimensionless instead of percent; numerical values are correct. Left unchanged under read-only scope; this QA supplies the explicit correction. Action-price chart has a full-range panel and labelled display zoom; CHART_INDEX.md records it, but analyze.py still describes the original single-panel generation. Chart numerical source is unchanged; exact presentation reproduction requires documenting the later layout step. No large plot regeneration done."
+    },
+    {
+      "section": 16,
+      "title": "Claim audit",
+      "status": "PASS",
+      "findings": "Targeted searches found causal/optimality/minimum-fare claims expressed as limitations, questions or negations. No unsupported positive assertion identified. Corrections to existing documents=0; unsupported claims corrected=0. Unit annotation and plot-provenance qualifications recorded here only."
+    },
+    {
+      "section": 17,
+      "title": "Methodology preservation",
+      "status": "PASS",
+      "findings": "NO_METHODOLOGY_CHANGE_YET=YES. Follow-up scripts only analyze historical/persisted development inputs and write their namespace plus the authorized canonical link. No model imports, checkpoint loads/writes, training or runtime change. Reference equations/support/actions/state/reward/gamma/mask remain as canonical specification."
+    },
+    {
+      "section": 18,
+      "title": "Protected temporal scope",
+      "status": "PASS_WITH_QUALIFICATION",
+      "findings": "PROTECTED_FINAL_HIERARCHICAL_EVALUATION_UNTOUCHED=YES for evaluation and analytical row selection. Cache contains Jan1\u2013Mar15 only; development export March16 only. However source filename is full-Jan\u2013Mar, and Parquet predicates can decode mixed-date row groups before filtering. A strict claim of zero file/byte access involving March17\u201331 is NOT ESTABLISHED by the saved evidence. No protected-date rows are used in analyses. This QA reads the restricted cache, metadata and saved outputs only; it does not reopen protected records."
+    }
+  ],
+  "flags": {
+    "FOLLOWUP_ANALYSIS_NUMERICALLY_RECONCILED": "YES",
+    "FOLLOWUP_ANALYSIS_ACADEMICALLY_PRESENTABLE": "WITH_QUALIFICATIONS",
+    "FARE_MINIMUM_INTERPRETATION": "RECORDED_MINIMUM_NOT_REPRESENTATIVE_OPERATIONAL_FLOOR",
+    "FLAT_FARE_EVIDENCE": "NO_STABLE_CUTOFF_ESTABLISHED_NOT_PROOF_OF_ABSENCE",
+    "ACTION_RANGE_COVERAGE_RESULT": "RECONCILED_WEAK_BROAD_FARE_COVERAGE",
+    "ACTION_085_ACCEPTANCE_INTERPRETATION": "STRUCTURAL_BY_CONSTRUCTION",
+    "T0_NUMERICAL_CONSISTENCY": "YES_NOT_OPTIMALITY_PROOF",
+    "NEW_METHODOLOGY_DECISION_REQUIRED_NOW": "NO",
+    "NO_METHODOLOGY_CHANGE_YET": "YES",
+    "PROTECTED_FINAL_HIERARCHICAL_EVALUATION_UNTOUCHED": "YES",
+    "PROTECTED_PERIOD_BYTE_LEVEL_NONACCESS": "NOT_ESTABLISHED",
+    "EXTREME_VALUE_SENSITIVITY": "MODERATE"
+  },
+  "bounded_verification": {
+    "N": 8692819,
+    "date_min": "2026-01-01 00:00:00",
+    "date_max": "2026-03-15 23:59:56",
+    "low_fare_counts": {
+      "0.01": 283,
+      "0.5": 310,
+      "1": 345,
+      "2": 1012,
+      "3": 20963,
+      "5": 110999
+    },
+    "extremes": {
+      "fare": [
+        {
+          "source_row_index": 2070496,
+          "pickup_timestamp": "2026-01-25 00:43:10",
+          "fare": 2555.2,
+          "trip_distance": 48.65
+        },
+        {
+          "source_row_index": 5427931,
+          "pickup_timestamp": "2026-02-22 19:31:11",
+          "fare": 2084.1,
+          "trip_distance": 41.62
+        },
+        {
+          "source_row_index": 3570050,
+          "pickup_timestamp": "2026-02-01 03:47:35",
+          "fare": 1284.7,
+          "trip_distance": 17.67
+        }
+      ],
+      "trip_distance": [
+        {
+          "source_row_index": 986907,
+          "pickup_timestamp": "2026-01-13 10:00:11",
+          "fare": 601.5,
+          "trip_distance": 99.93
+        },
+        {
+          "source_row_index": 6224416,
+          "pickup_timestamp": "2026-02-09 08:20:12",
+          "fare": 297.42,
+          "trip_distance": 99.58
+        },
+        {
+          "source_row_index": 3230525,
+          "pickup_timestamp": "2026-01-23 21:00:47",
+          "fare": 283.64,
+          "trip_distance": 99.5
+        }
+      ]
+    },
+    "moments": {
+      "fare": {
+        "mean": 21.352107453289896,
+        "SD": 17.480452931686603,
+        "median": 15.6,
+        "P99": 78.6,
+        "above_P99_N": 86697,
+        "above_P99_sum_share_pct": 4.846829788378817,
+        "above_P99_squared_deviation_share_pct": 27.595970314256316,
+        "mean_excluding_single_max": 21.351815965777728
+      },
+      "trip_distance": {
+        "mean": 5.54866796973441,
+        "SD": 6.798634167545703,
+        "median": 3.02556672,
+        "P99": 31.382208000000002,
+        "above_P99_N": 86600,
+        "above_P99_sum_share_pct": 6.91219018648727,
+        "above_P99_squared_deviation_share_pct": 25.785990505399578,
+        "mean_excluding_single_max": 5.54865010750861
+      }
+    }
+  },
+  "acceptance": [
+    {
+      "factor": 0.85,
+      "N": 2838,
+      "offer_price": 18.14398913257481,
+      "accepted_N": 2838,
+      "rejected_N": 0,
+      "acceptance_pct": 100.0,
+      "rejection_pct": 0.0
+    },
+    {
+      "factor": 0.9,
+      "N": 2838,
+      "offer_price": 19.21128261096156,
+      "accepted_N": 1279,
+      "rejected_N": 1559,
+      "acceptance_pct": 45.06694855532064,
+      "rejection_pct": 54.93305144467935
+    },
+    {
+      "factor": 0.95,
+      "N": 2838,
+      "offer_price": 20.278576089348313,
+      "accepted_N": 1220,
+      "rejected_N": 1618,
+      "acceptance_pct": 42.98801973220578,
+      "rejection_pct": 57.01198026779423
+    },
+    {
+      "factor": 1.0,
+      "N": 2838,
+      "offer_price": 21.34586956773507,
+      "accepted_N": 1149,
+      "rejected_N": 1689,
+      "acceptance_pct": 40.48625792811839,
+      "rejection_pct": 59.5137420718816
+    },
+    {
+      "factor": 1.05,
+      "N": 2838,
+      "offer_price": 22.413163046121824,
+      "accepted_N": 1103,
+      "rejected_N": 1735,
+      "acceptance_pct": 38.86539816772375,
+      "rejection_pct": 61.134601832276246
+    },
+    {
+      "factor": 1.1,
+      "N": 2838,
+      "offer_price": 23.480456524508575,
+      "accepted_N": 1071,
+      "rejected_N": 1767,
+      "acceptance_pct": 37.73784355179704,
+      "rejection_pct": 62.26215644820295
+    },
+    {
+      "factor": 1.15,
+      "N": 2838,
+      "offer_price": 24.547750002895327,
+      "accepted_N": 1041,
+      "rejected_N": 1797,
+      "acceptance_pct": 36.680761099365746,
+      "rejection_pct": 63.31923890063425
+    }
+  ],
+  "existing_files_modified": false,
+  "documentation_inconsistencies_corrected": 0,
+  "documentation_issues_identified": 2,
+  "percentage_unit_cells_affected": 3,
+  "unsupported_claims_corrected": 0,
+  "training_performed": false
+}

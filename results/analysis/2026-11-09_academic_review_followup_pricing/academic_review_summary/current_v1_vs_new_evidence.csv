@@ -1,0 +1,10 @@
+current_V1_decision,new_empirical_evidence,consistent,potential_implication,academic_decision_required
+positive epsilon magnitude,11.734355% signed negatives; abs construction preserved,Numerically yes; behavioural meaning unresolved,"Transformation is a proxy, not a causal elasticity",YES
+T0 truncation,"8,598,805 supported; exact bounds reproduced",YES,No alternative support adopted,YES: scientific suitability
+empirical resampling,Supported empirical skew/tails preserved; no distribution fitted,YES,No response-data validation claimed,YES
+P_accept lower protection,Minimum arm accepts every request; pre-mask higher offers may fail,YES,Zero selected-offer rejection is structural,YES
+global P_base,Restricted mean 21.352107 versus frozen 21.345870; distance medians differ,Numerically compatible as global reference,Not a universal conditional fare level,YES
+global L_base,Price-conditioned reference; no flat-region equivalence,Provenance consistent,Do not equate reference with L_flat,YES
+seven action factors,14.379973% full fare coverage; weak long-distance coverage,"Narrow range, not broad empirical coverage",Review whether relative global adjustments suffice,YES
+hard pre-selection mask,Observed acceptance 100%; offline highest factor 36.680761%,YES,Mask and demand-curve evidence must be separated,YES
+gamma=.99/request,No new discount evidence in this analysis,UNCHANGED,No gamma recommendation from this task,NO new decision from this evidence

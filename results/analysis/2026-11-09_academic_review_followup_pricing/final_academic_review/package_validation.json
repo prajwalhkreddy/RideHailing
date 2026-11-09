@@ -1,0 +1,27 @@
+{
+  "numerical_QA": "PASS",
+  "source_QA": "../QA_RECONCILIATION.md",
+  "source_tables_sha256": {
+    "fare_distance/minimum_fare_distance_analysis.csv": "b9162641177b8bd8584449671f86bbd4d24c740a6d5cf5fbbda6084a903d3adb",
+    "sensitivity_distribution/epsilon_distribution_statistics.csv": "979dd438195929a29a8715c20ddc3445cbdbb9b599a7c7701e3067ebdc6260cd",
+    "acceptable_price/same_distance_passenger_examples.csv": "a787dbe464c24dfdd0485c5ca61e698fe1b835dabfd099650503bc29def7a648",
+    "counterfactual_acceptance/march16_acceptance_curve.csv": "2a6814a6b42055cfb89f5370d967a55f7ba9a7adb0c96a18d314981ba37a1664",
+    "action_space_validation/action_range_coverage_by_distance.csv": "825ad53c46af6d8325dc7de443231de9801ee0cb4055f3ae488e7b9c650adc85",
+    "reference_value_review/fare_near_Lbase.csv": "8bd18118b0c4acb25ddfbabb8f730b4cb899f696fb6adbc4c390f2d569bdbfd1"
+  },
+  "sections": 15,
+  "figures": 8,
+  "decision_matrix_topics": 12,
+  "meeting_decisions": 10,
+  "methodology_changed": false,
+  "training_performed": false,
+  "protected_analytical_rows_used": false,
+  "style": "standard_business_brief; memo_masthead; table text 9pt and status-code 8.5pt named compact overrides",
+  "render_status": "NOT_COMPLETED: LibreOffice/soffice unavailable; renderer Python pdf2image dependency also absent",
+  "notes": "Direct OOXML built with explicit geometry; source numerical outputs unchanged.",
+  "structural_QA": "PASS",
+  "table_count": 10,
+  "source_outputs_unchanged": true,
+  "visual_QA": "NOT_COMPLETED",
+  "PDF_created": false
+}

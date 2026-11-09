@@ -43,3 +43,6 @@ outputs/logs/*
 
 /results/analysis/2026-10-30_routing_effectiveness_diagnosis/central_probabilities.npy
 /results/analysis/2026-10-30_routing_effectiveness_diagnosis/fedavg5_probabilities.npy
+
+q
+/results/analysis/2026-11-09_academic_review_followup_pricing/jan01_mar15_analysis_cache.parquet

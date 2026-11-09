@@ -1,0 +1,3 @@
+reference,frozen_value,unit,restricted_mean,restricted_median,restricted_P25,restricted_P75,provenance
+P_base,21.34586956773507,USD,21.352107453289896,15.6,10.0,26.66,Full cleaned Jan–Mar global mean fare; fixed reference exception preserved
+L_base,4.856998243316242,km,5.54866796973441,3.02556672,1.7380915200000002,6.1155072,Full cleaned Jan–Mar mean distance conditioned on fare within ±1 USD of P_base; converted miles to km

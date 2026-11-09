@@ -383,6 +383,14 @@ Read this canonical narrative first, then [active implementation specification](
 
 The Episode25 fixed-development request export reconciles with the authoritative aggregate and persisted action order. See the [detailed request CSV](staged_training_002/professor_review/episode25_march16_request_level_acceptance.csv), [summary CSV](staged_training_002/professor_review/episode25_march16_request_level_acceptance_summary.csv), and [data dictionary](staged_training_002/professor_review/episode25_march16_request_level_acceptance_DATA_DICTIONARY.md).
 
+### Post-Episode25 Academic Review Follow-up Analysis
+
+See the [analysis-only academic review follow-up](../2026-11-09_academic_review_followup_pricing/README.md) for fare-distance, sensitivity, counterfactual acceptance and action-coverage evidence.
+
+`NO_METHODOLOGY_CHANGE_YET`
+
+`FURTHER_TRAINING_REMAINS_PAUSED`
+
 ## Original Formulation Coverage Checklist
 
 | Original requirement | Status |

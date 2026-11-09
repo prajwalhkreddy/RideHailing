@@ -1,0 +1,13 @@
+decision_id,modelling_question,current_v1_choice,new_evidence,evidence_strength,keep_current_option,alternative_option,academic_decision_required,implementation_blocked_until_decision
+MIN_FARE,Min fare,"Project platform minimum, not observed minimum",Recorded $0.01 not representative,QUALIFIED_DESCRIPTIVE,"Project platform minimum, not observed minimum",Define independently justified lower constraint,YES,YES
+L_FLAT,L flat,Not used,No stable cutoff,QUALIFIED_DESCRIPTIVE,Not used,Introduce only with separately justified rule,YES,YES
+EPSILON_SIGN,Epsilon sign,Historical signed distribution retained,11.734355% negative,QUALIFIED_DESCRIPTIVE,Historical signed distribution retained,Review use of sign in behavioural interpretation,YES,YES
+EPSILON_ABS_MAGNITUDE,Epsilon abs magnitude,Absolute positive proxy,Numerically consistent; meaning open,QUALIFIED_DESCRIPTIVE,Absolute positive proxy,Alternative proxy after academic decision,YES,YES
+T0_SUPPORT,T0 support,Positive empirical P0.5–P99.5,"8,598,805 retained; exact support",QUALIFIED_DESCRIPTIVE,Positive empirical P0.5–P99.5,Different justified support after review,YES,YES
+SAMPLING,Sampling,Truncated empirical resampling,Implemented without parametric fit,QUALIFIED_DESCRIPTIVE,Truncated empirical resampling,Alternative sampling model with validation,YES,YES
+P_ACCEPT,P accept,"max(platform minimum, raw preference)",Minimum arm structurally feasible,QUALIFIED_DESCRIPTIVE,"max(platform minimum, raw preference)",Different effective threshold after review,YES,YES
+ACTION_RANGE,Action range,Seven global factors 0.85–1.15,14.379972710808772% observed-fare coverage,QUALIFIED_DESCRIPTIVE,Seven global factors 0.85–1.15,Alternative action reference/range,YES,YES
+DISTANCE_RELATIVE_ACTIONS,Distance relative actions,Not used,Distance-conditioned coverage differs,QUALIFIED_DESCRIPTIVE,Not used,Distance-relative or fare-reference-relative actions,YES,YES
+ACCEPTANCE_MASK,Acceptance mask,Hard pre-selection mask,Higher pre-mask offers often rejected by model,QUALIFIED_DESCRIPTIVE,Hard pre-selection mask,Explicit post-action acceptance outcome,YES,YES
+REWARD_IF_REJECTED,Reward if rejected,No new rejection penalty; assigned-fare reward unchanged,Counterfactuals do not identify appropriate penalty,QUALIFIED_DESCRIPTIVE,No new rejection penalty; assigned-fare reward unchanged,Specify rejection reward only after acceptance decision,YES,YES
+FURTHER_TRAINING,Further training,Paused,Modelling choices unresolved,QUALIFIED_DESCRIPTIVE,Paused,Explicitly authorize bounded continuation after review,YES,YES
