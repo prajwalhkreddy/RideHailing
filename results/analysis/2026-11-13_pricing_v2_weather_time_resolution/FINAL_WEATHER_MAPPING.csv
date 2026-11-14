@@ -1,0 +1,15 @@
+raw_code,description,mean_SD_group,median_IQR_group,trim1pct_mean_SD_group,total_N,positive_N,dates,candidate_group_name,descriptive_alias,status,final_mapping_approved
+1,Clear,1,1,1,2109308,1798309,56,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+2,Fair,1,1,1,497136,425053,50,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+3,Cloudy,1,1,1,3358512,2893822,73,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+5,Fog,1,1,1,426746,368567,17,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+7,Light Rain,1,1,1,52151,44996,7,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+8,Rain,1,1,1,121186,104368,9,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+9,Heavy Rain,1,1,1,101832,86813,8,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+12,Sleet,1,1,1,119587,101317,10,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+13,Heavy Sleet,2,1,1,18501,15394,4,WEATHER_GROUP_2,Heavy Sleet,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+14,Light Snowfall,3,1,1,62047,52369,12,WEATHER_GROUP_3,Light Snowfall,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+15,Snowfall,1,1,1,83209,71647,11,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+16,Heavy Snowfall,1,2,2,12829,9444,4,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+17,Rain Shower,1,3,3,596,510,1,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False
+21,Snow Shower,1,1,1,3515,3044,1,WEATHER_GROUP_1,Mixed non-precipitation and precipitation scenarios,PRIMARY_K3_CANDIDATE_ONLY_NOT_FROZEN,False

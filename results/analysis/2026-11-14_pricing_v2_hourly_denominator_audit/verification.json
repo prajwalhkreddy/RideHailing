@@ -1,0 +1,99 @@
+{
+  "summary": {
+    "POSITIVE_VALID": {
+      "scenarios": 211,
+      "N": 5975653,
+      "SD_lt4": 4,
+      "SD_ge4": 207,
+      "pct_SD_lt4": 1.8957345971563981,
+      "min_SD": 3.71680876342305,
+      "median_SD": 17.45814067301157,
+      "P90_SD": 40.41113972305241,
+      "max_SD": 376.97167988023983,
+      "top1pct_contributes_gt50pct": 211,
+      "near_zero_contributes_gt50pct": 111,
+      "median_between_hour_variance_pct": 0.01825957808949277,
+      "max_between_hour_variance_pct": 0.45332706030595626
+    },
+    "SIGNED_VALID": {
+      "scenarios": 211,
+      "N": 6967155,
+      "SD_lt4": 0,
+      "SD_ge4": 211,
+      "pct_SD_lt4": 0.0,
+      "min_SD": 5.398019331420174,
+      "median_SD": 23.698367802628503,
+      "P90_SD": 54.549974910132114,
+      "max_SD": 349.04591430338115,
+      "top1pct_contributes_gt50pct": 211,
+      "near_zero_contributes_gt50pct": 136,
+      "median_between_hour_variance_pct": 0.007947140096027006,
+      "max_between_hour_variance_pct": 0.48520723572109853
+    }
+  },
+  "min_nonzero_abs_delta_P": 0.00018781449047585653,
+  "nearest_rows": 408,
+  "nearest_fare_values": [
+    22.35
+  ],
+  "smallest_increment": 0.01,
+  "most_common_increments": [
+    {
+      "increment": 0.01,
+      "adjacent_levels_count": 11262
+    },
+    {
+      "increment": 0.02,
+      "adjacent_levels_count": 574
+    },
+    {
+      "increment": 0.03,
+      "adjacent_levels_count": 243
+    },
+    {
+      "increment": 0.04,
+      "adjacent_levels_count": 139
+    },
+    {
+      "increment": 0.05,
+      "adjacent_levels_count": 100
+    },
+    {
+      "increment": 0.06,
+      "adjacent_levels_count": 71
+    },
+    {
+      "increment": 0.1,
+      "adjacent_levels_count": 66
+    },
+    {
+      "increment": 0.7,
+      "adjacent_levels_count": 57
+    },
+    {
+      "increment": 0.08,
+      "adjacent_levels_count": 50
+    },
+    {
+      "increment": 0.07,
+      "adjacent_levels_count": 49
+    }
+  ],
+  "fare_not_cent_aligned": 0,
+  "source_N": 6967155,
+  "thresholds_diagnostic_only": true,
+  "no_clustering": true,
+  "no_production_changes": true,
+  "no_protected_period_access": true,
+  "formula": "epsilon=((L_km-4.616983790655043)/4.616983790655043)/((fare-22.354198442390455)/22.354198442390455)",
+  "reference_status": "CANDIDATES_FIXED_FOR_AUDIT_NOT_FINAL_APPROVAL",
+  "checks": {
+    "population_counts": true,
+    "threshold_retention_monotone": true,
+    "no_missing_hours_fabricated": true,
+    "all_hour_T_variance_decompositions_verified": true,
+    "all_thresholds_diagnostic_only": true
+  },
+  "hourly_primary_reporting": "SIGNED_VALID with POSITIVE_VALID continuity comparison",
+  "undefined_N": 0
+}

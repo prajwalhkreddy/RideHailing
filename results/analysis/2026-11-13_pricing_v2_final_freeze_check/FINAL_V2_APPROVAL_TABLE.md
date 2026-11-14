@@ -1,0 +1,56 @@
+# Final V2 freeze register — resolved representation, infeasible SD gate
+
+The latest user decision resolves historical representation conflict: scenario mean/SD from individual POSITIVE_VALID new-e, unscaled Euclidean average linkage. SIGNED_VALID is diagnostic only. Semantic groups and forced K3 remain superseded; October2 vectors are historical only.
+
+MAX_CLUSTER_SD=1.0 inclusive. All14 raw-code positive SDs exceed1 (11.403883–81.113196). K1–14 evaluated; all105 candidate clusters fail. Pooled variance proves no intact-code partition can satisfy this criterion. FINAL_WEATHER_CLUSTER_COUNT=NO_FEASIBLE_K; WEATHER_TAXONOMY_FROZEN=NO. The blocker is now numerical infeasibility, **not historical representation ambiguity**.
+
+[Full validation and candidate ledger](../2026-11-14_pricing_v2_weather_clustering_resolved/WEATHER_CLUSTER_VALIDATION.md). T1–T4 retained. Final weather/time counts, support coverage, fallback counts and final-K stability are not applicable without an accepted partition. GROUPED_DISTRIBUTION_REFIT_REQUIRED=YES; no fits performed.
+
+## Independent P_base check
+
+Only existing Jan1–Mar15 intermediate fare/distance arrays were read; distance is km. The mean weights each actual trip equally, not each bin equally.
+
+| population | N | mean fare USD |
+|---|---:|---:|
+| [1,75) km | 7,946,921 | 22.35419844239047 |
+| [1.5,75) km | 6,967,155 | 24.20370974379068 |
+
+Absolute difference: **1.8495113014002094 USD**; relative difference: **8.273664144865801%**. The broad mean agrees with persisted 22.354198442390455 within floating-point reduction precision. Inputs: `results/analysis/2026-11-13_pricing_recalibration_decision_analysis/intermediate/fare_array_range.npy` and `distance_array_range.npy`. This is an exact unrounded computation over the saved arrays, not a reconstruction from rounded bins.
+
+Recommendation: retain 22.354198442390455 only as the current reference candidate; seek explicit approval of broad reference versus narrower analytical population before freezing. Do not automatically substitute the narrower mean. Prior L_base candidate 4.616983790655043 km remains conditional.
+
+## Retained slot-pricing design and remaining approvals
+
+Retain proactive slot offers `P_offer = alpha * P_base`, passenger response after offer, no willingness preselection mask, rejection reward zero, hybrid request generation and fresh V2 learner/replay. Accepted-unmatched zero remains a proposal. Preserve one factor for each of 142 destinations per slot, using a shared destination-conditioned Q model rather than K^142 actions. Credit decomposition and slot reward aggregation still need approval. Any state dimension tied to 14 weather categories is superseded and must be finalized only after taxonomy resolution.
+
+Gamma 0.99 per half-hour remains proposed, not automatically inherited from request-level transitions. Bounds [6.60,94.70] USD remain empirical simulation proposals, not verified statutory NYC limits. Eleven equally spaced factors spanning approximately [0.2952465514,4.2363406697] remain an engineering recommendation conditional on bounds/reference approval. Drop-off EWMA lambda=0.3 remains the prior forward-validation CE recommendation; no new validation was run.
+
+## Approval register
+
+| item | status | evidence_or_required_decision |
+| --- | --- | --- |
+| weather_mapping_provenance | EVIDENCE_READY | Representation resolved by user: POSITIVE_VALID individual new-e scenario mean/SD; October17 unscaled average-linkage Euclidean. |
+| three_weather_taxonomy | BLOCKER | MAX_CLUSTER_SD=1.0; no feasible K1–14; all 14 intrinsic positive SDs>1; WEATHER_TAXONOMY_FROZEN=NO; semantic grouping superseded. |
+| time_grouping | EVIDENCE_READY | TIME_TAXONOMY=READY_TO_FREEZE; user freezes T1 00–04,T2 04–06,T3 06–16,T4 16–24. |
+| weather_time_group_counts | BLOCKER | No accepted weather partition; final K×4 counts/support/fallback NOT_APPLICABLE; T1–T4 retained. |
+| three_groups_under_new_e | BLOCKER | Fixed K3 superseded; all105 candidate clusters FAIL; all-code variance proof rules out any intact-code partition. |
+| minimum_group_support | ENGINEERING_READY | Retain approved5000-positive gate; cannot evaluate final group coverage without a feasible partition. |
+| fallback_hierarchy | ENGINEERING_READY | Retain cluster×time→cluster-only→time-only→global; exact final routes/counts NOT_APPLICABLE. |
+| distribution_fit_readiness | BLOCKER | GROUPED_DISTRIBUTION_REFIT_REQUIRED=YES after feasible taxonomy approval; no fits performed; semantic fits superseded. |
+| pbase_population_comparison | EVIDENCE_READY | Independent safe-array comparison completed. |
+| pbase_reference_selection | PROFESSOR_CONFIRMATION_REQUIRED | Retain 22.354198442390455 as candidate pending reference-population approval; narrower mean 24.20370974379068. |
+| lbase_reference_selection | PROFESSOR_CONFIRMATION_REQUIRED | Prior candidate 4.616983790655043 km remains a proposal. |
+| nyc_simulation_bounds | PROFESSOR_CONFIRMATION_REQUIRED | 6.60–94.70 USD empirical simulation bounds, not statutory NYC bounds. |
+| action_discretization | ENGINEERING_READY | Prior 11 equally spaced factors retained as engineering proposal, not frozen. |
+| dropoff_lambda | ENGINEERING_READY | 0.3 retained as forward-validation CE recommendation, not professor-approved. |
+| destination_representation | PROFESSOR_CONFIRMATION_REQUIRED | 142 destinations; shared destination-conditioned Q, one factor/destination/slot; no K^142 output. |
+| credit_assignment | PROFESSOR_CONFIRMATION_REQUIRED | Destination decomposition/shared credit approximation still needs agreement. |
+| accepted_unmatched_reward | PROFESSOR_CONFIRMATION_REQUIRED | Zero proposed; successful-assignment fare reward and rejection zero retained. |
+| slot_reward_aggregation | PROFESSOR_CONFIRMATION_REQUIRED | Total assigned fare proposed; final aggregation agreement outstanding. |
+| slot_gamma | PROFESSOR_CONFIRMATION_REQUIRED | 0.99 per 30-minute slot proposed, not inherited silently from request transitions. |
+| slot_offer_response_contract | EVIDENCE_READY | Proactive offer alpha×P_base; response after offer; no willingness preselection mask. |
+| generator_and_fresh_learning | EVIDENCE_READY | Hybrid generator retained; fresh V2 learner/replay required; no implementation/training authorized. |
+
+{'EVIDENCE_READY': 5, 'ENGINEERING_READY': 4, 'PROFESSOR_CONFIRMATION_REQUIRED': 8, 'BLOCKER': 4}
+
+Four blocker rows are consequences of one infeasible clustering contract, not four independent faults. Unrelated approval rows unchanged. No implementation/training authorization.

@@ -1,0 +1,5096 @@
+{
+  "version": 3,
+  "rows": [
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[1.723209835451056, 1.0508986050205624]",
+      "log_likelihood": -11670722.187564643,
+      "AIC": 23341448.375129286,
+      "BIC": 23341476.151719518,
+      "AIC_effective_N": 47.45483963485748,
+      "BIC_effective_N": 48.84339219187085,
+      "KS": 0.2530731387718479,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.4685841456791437,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.2531; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7706360.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 14.103863544215711,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.97290309039187,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[1.7824361564457574, 1.0114265958467457]",
+      "log_likelihood": -11022409.317328895,
+      "AIC": 22044822.63465779,
+      "BIC": 22044850.34977083,
+      "AIC_effective_N": 44.34552160555661,
+      "BIC_effective_N": 45.638419145713094,
+      "KS": 0.2549393302889115,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.4303003385942128,
+      "support_compatibility": "COMPATIBLE_BASELINE_ALLOWS_NEGATIVE",
+      "qualitative_fit": "Descriptive KS=0.2549; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7706360.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 14.103863544215711,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.97290309039187,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": "[6.085483845168806, 0.0, 0.2928996611930557]",
+      "log_likelihood": -7990711.798927002,
+      "AIC": 15981427.597854003,
+      "BIC": 15981455.312967043,
+      "AIC_effective_N": 33.24854505453182,
+      "BIC_effective_N": 34.5414425946883,
+      "KS": 0.2039309990135719,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.0368983279949293,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.2039; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7706360.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 14.103863544215711,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.97290309039187,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": "[0.3598195545727925, 0.0, 1.63816069027276]",
+      "log_likelihood": -6861434.726916866,
+      "AIC": 13722873.453833733,
+      "BIC": 13722901.168946773,
+      "AIC_effective_N": 29.115032027047395,
+      "BIC_effective_N": 30.407929567203876,
+      "KS": 0.18826956289499233,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.8903600048423467,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1883; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7706360.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 14.103863544215711,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.97290309039187,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": "[1.910216918038746, 0.0, 2.018889375481717]",
+      "log_likelihood": -9598594.454874799,
+      "AIC": 19197192.909749597,
+      "BIC": 19197220.624862637,
+      "AIC_effective_N": 39.13390664537337,
+      "BIC_effective_N": 40.42680418552985,
+      "KS": 0.28619131166992184,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.2455419231485163,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.2862; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7706360.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 14.103863544215711,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.97290309039187,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": "[0.0, 1.7824361564457574]",
+      "log_likelihood": -12160490.089206867,
+      "AIC": 24320982.178413734,
+      "BIC": 24320996.035970252,
+      "AIC_effective_N": 46.51125897283833,
+      "BIC_effective_N": 47.15770774291657,
+      "KS": 0.45895194215643353,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.5779810558041496,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.4590; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "C_PRICE_NEAR_PM1",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7706360.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 14.103863544215711,
+      "original_negative_mass": 240561.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.97290309039187,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    }
+  ],
+  "qq": [
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": -0.1741024930673792,
+      "fitted_quantile": -0.7215459001710145
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": -0.1741024930673792,
+      "fitted_quantile": -0.4350720297944264
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": -0.1741024930673792,
+      "fitted_quantile": -0.253313543686684
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": -0.11658371465677808
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": -0.005364546575259199
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.08930043376641739
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.1723031026357036
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.24662209276759794
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.3142122408717103
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.3764290829583177
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.4342531450860898
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.48841785475121635
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.539486969236644
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.5879037472118855
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.6340234322352996
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.6781354332342251
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.7204789019606288
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.7612539415525185
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.8006298436289999
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.8387512551335956
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.875742871900645
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.9117130638538229
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.9467567123184771
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.9809574574399601
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.0143894978693262
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.0471190463772515
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.079205518053204
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.110702508511653
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.1416586056303046
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.1721180681741084
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.202121397124656
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2317058198918271
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2609057033148752
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2897529080986683
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.318277094817471
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.3465059896660225
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.3744656166092
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4021805013768174
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.429673851794536
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4569677181796437
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4840831369194358
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5110402598581372
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.537858471721182
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5645564974844441
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5911525013360537
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.6176641786685275
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.4912161949211866,
+      "fitted_quantile": 1.644108842370255
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.4912161949211866,
+      "fitted_quantile": 1.6705035045511853
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6968649547325882
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.723209835451056
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.749554716169524
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.775916166350927
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.8023108285318574
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.828755492233585
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.8552671695660585
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.881863173417668
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.9085611991809301
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.5582591265390735,
+      "fitted_quantile": 1.9353794110439755
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9623365339826764
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9894519527224686
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.016745819107576
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.044239169525295
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.0719540542929122
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.0999136812360897
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.1281425760846417
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.156666762803444
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 1.623870005119924,
+      "fitted_quantile": 2.1855139675872373
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 1.7249399250504516,
+      "fitted_quantile": 2.214713851010285
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.7783973993038584,
+      "fitted_quantile": 2.2442982737774564
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.8278859821531583,
+      "fitted_quantile": 2.274301602728004
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.304761065271808
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.335717162390459
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.3672141528489083
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.3993006245248605
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.432030173032786
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 1.867652736873333,
+      "fitted_quantile": 2.465462213462152
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 1.906520000178176,
+      "fitted_quantile": 2.499662958583635
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 1.94255586941534,
+      "fitted_quantile": 2.5347066070482893
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 1.9649350892212976,
+      "fitted_quantile": 2.5706767990014674
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 1.9959717898821576,
+      "fitted_quantile": 2.607668415768517
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.0354074399370705,
+      "fitted_quantile": 2.6457898272731124
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.067823197398577,
+      "fitted_quantile": 2.6851657293495945
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.086785027624273,
+      "fitted_quantile": 2.725940768941484
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.104648328142362,
+      "fitted_quantile": 2.7682842376678876
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.1108755319731447,
+      "fitted_quantile": 2.8123962386668127
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 2.1202002725910196,
+      "fitted_quantile": 2.8585159236902267
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 2.1293881200876448,
+      "fitted_quantile": 2.9069327016654682
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 2.141986312874761,
+      "fitted_quantile": 2.9580018161508956
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 2.1473428717128864,
+      "fitted_quantile": 3.0121665258160233
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 2.1773880394837137,
+      "fitted_quantile": 3.0699905879437948
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 2.27704175648376,
+      "fitted_quantile": 3.1322074300304017
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.1997975781345143
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.2741165682664084
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.357119237135695
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.451784217477372
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.5630033855588916
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.699733214588796
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.881491700696538
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 4.167965571073127
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": -0.5704939545506842
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": -0.29478011295854945
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": -0.11984852013698055
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.011745703002862262
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.1187874518720562
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.2098967923502537
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.2897818606333298
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.36130941128071004
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.42636085685607283
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.48624081910491457
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.5418929952868206
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.5940232651814639
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.6431742112100705
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.6897724431378864
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.7341598614881497
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.7766150049179561
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.8173680425808539
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.856611561691943
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.894508495235623
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.931198057180766
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.966800259755611
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.0014194024829388
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.0351468029222628
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.0680629596745757
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.1002392844714126
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.1317395031155548
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.162620799051148
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.192934754828245
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2227281333519573
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2520435310171756
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2809199275786962
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.3093931521757594
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.3374962808207131
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.3652599775225418
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.392712788797071
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4198813994363702
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4467908559388172
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.473464762841803
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.499925456279369
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.526194158353481
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5522911153195724
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5782357221136594
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.6040466353661378
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.6297418767381981
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.6553389281666127
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 1.4912161949211866,
+      "fitted_quantile": 1.680854820400618
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7063062160522726
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7317094882525064
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7570807959040549
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7824361564457574
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.8077915169874599
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.8331628246390086
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.8585660968392423
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.8840174924908968
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.9095333847249023
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.9351304361533166
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.5582591265390735,
+      "fitted_quantile": 1.9608256775253772
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9866365907778558
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.0125811975719423
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.0386781545380335
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.0649468566121456
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.091407550049712
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.1180814569526976
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.144990913455145
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.172159524094444
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 1.623870005119924,
+      "fitted_quantile": 2.199612335368973
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 1.7249399250504516,
+      "fitted_quantile": 2.2273760320708016
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 1.7783973993038584,
+      "fitted_quantile": 2.2554791607157556
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.8278859821531583,
+      "fitted_quantile": 2.2839523853128187
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.312828781874339
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.3421441795395577
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.37193755806327
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.402251513840367
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.4331328097759597
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.464633028420102
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 1.867652736873333,
+      "fitted_quantile": 2.496809353216939
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 1.94255586941534,
+      "fitted_quantile": 2.5297255099692517
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 1.9649350892212976,
+      "fitted_quantile": 2.563452910408576
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 1.9902249643174024,
+      "fitted_quantile": 2.598072053135904
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 2.0277301771420424,
+      "fitted_quantile": 2.6336742557107486
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.067823197398577,
+      "fitted_quantile": 2.670363817655892
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.084075666441046,
+      "fitted_quantile": 2.7082607511995724
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.086785027624273,
+      "fitted_quantile": 2.747504270310661
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.104648328142362,
+      "fitted_quantile": 2.788257307973559
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.117082440457563,
+      "fitted_quantile": 2.830712451403365
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 2.1242338881221863,
+      "fitted_quantile": 2.8750998697536283
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 2.1336486833544748,
+      "fitted_quantile": 2.9216981016814443
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 2.14311502084922,
+      "fitted_quantile": 2.970849047710051
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 2.1589115794761025,
+      "fitted_quantile": 3.022979317604695
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 2.1904362229835934,
+      "fitted_quantile": 3.0786314937866
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 2.308515539502606,
+      "fitted_quantile": 3.1385114560354417
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.2035629016108045
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.275090452258185
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.3549755205412612
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.446084861019459
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.5531266098886536
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.6847208330284946
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.8596524258500637
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 4.135366267442199
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.01,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": 0.5361476990332283
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.02,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": 0.6264372639166915
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.03,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.6891663401677834
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.04,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.7392525700940062
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.05,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.7818781865973089
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.8195183765724094
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.8535669707614228
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.08,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.8848940640997665
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.9140828986797837
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.941545464616423
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.11,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.9675847499179989
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.12,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.9924308337973652
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.13,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.0162630586983248
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.14,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.0392242986173887
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.061430499375154
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.16,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.0829772655797805
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.17,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.1039445344848016
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.1243999714552044
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.19,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.1444014879253954
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.2,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.1639991427346077
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.183236601125801
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.22,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2021522705687018
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.23,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2207801965756686
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2391507776418482
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.25,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2572913420585177
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.26,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2752266179764629
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.27,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.292979120069965
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.28,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.3105694704006932
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.3280166669022657
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.3,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.345338309831632
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.31,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.3625507942445634
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.32,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.3796694748303056
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.33,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.3967088081317165
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.34,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.413682476173726
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4306034947471375
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4474843089905332
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.37,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4643368784393032
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.38,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4811727533372492
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.39,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4980031437103343
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.4,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5148389824669302
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5316909836016868
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5485696964310607
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.43,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5654855566703354
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.44,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5824489350688709
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.45,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5994701842480397
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.46,
+      "empirical_quantile": 1.4912161949211866,
+      "fitted_quantile": 1.616559684331637
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6337278879189236
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6509853649241617
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.49,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6683428477922904
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6858112775974217
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.51,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7034018515388734
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.52,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7211260723683983
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.53,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7389958003126957
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.54,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7570233080978204
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.55,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7752213397382328
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.56,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7936031738244032
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.5582591265390735,
+      "fitted_quantile": 1.8121826921316988
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.83097445448241
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.59,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8499937809263534
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8692568424680467
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.61,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8887807617664365
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.62,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9085837254741425
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.63,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9286851101773004
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.64,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9491056242569404
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.65,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.969867468434769
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.66,
+      "empirical_quantile": 1.623870005119924,
+      "fitted_quantile": 1.9909945183113313
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.67,
+      "empirical_quantile": 1.7249399250504516,
+      "fitted_quantile": 2.0125125328801183
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.68,
+      "empirical_quantile": 1.7783973993038584,
+      "fitted_quantile": 2.0344493938429955
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.8278859821531583,
+      "fitted_quantile": 2.0568353816074487
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.0797034951769713
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.1030898248359167
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.72,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.127033988692033
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.73,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.1515796469270434
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.74,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.176775111229072
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.75,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.2026740716339246
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.76,
+      "empirical_quantile": 1.867652736873333,
+      "fitted_quantile": 2.229336469297756
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.77,
+      "empirical_quantile": 1.94255586941534,
+      "fitted_quantile": 2.256829552148881
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.78,
+      "empirical_quantile": 1.9649350892212976,
+      "fitted_quantile": 2.2852291617687093
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.79,
+      "empirical_quantile": 1.9902249643174024,
+      "fitted_quantile": 2.3146213154705646
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8,
+      "empirical_quantile": 2.0277301771420424,
+      "fitted_quantile": 2.3451041692222048
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.81,
+      "empirical_quantile": 2.067823197398577,
+      "fitted_quantile": 2.376790477575537
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.084075666441046,
+      "fitted_quantile": 2.4098107104057087
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.086785027624273,
+      "fitted_quantile": 2.4443170497389417
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.104648328142362,
+      "fitted_quantile": 2.480488584038773
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.85,
+      "empirical_quantile": 2.117082440457563,
+      "fitted_quantile": 2.5185381597282634
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.86,
+      "empirical_quantile": 2.1242338881221863,
+      "fitted_quantile": 2.5587215703319894
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.87,
+      "empirical_quantile": 2.1336486833544748,
+      "fitted_quantile": 2.6013501143892013
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.88,
+      "empirical_quantile": 2.14311502084922,
+      "fitted_quantile": 2.6468081276759805
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.89,
+      "empirical_quantile": 2.1589115794761025,
+      "fitted_quantile": 2.6955780679089094
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9,
+      "empirical_quantile": 2.1904362229835934,
+      "fitted_quantile": 2.7482774418643285
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.91,
+      "empirical_quantile": 2.308515539502606,
+      "fitted_quantile": 2.8057150156670025
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.92,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 2.8689798639139994
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.93,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 2.9395894585839812
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.0197512629610657
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.1128619659008856
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.2245636288612802
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.97,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.365327715551416
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.98,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.5583728299297506
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.99,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.8765129061551398
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.01,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": 0.709289599670086
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.02,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": 0.7823876570820921
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.03,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.8326247352663537
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.04,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.8725310830866692
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.05,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.9063983249834843
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.9362583176914867
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.9632479841151852
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.08,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.9880735498424493
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.011206531063346
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.0329789048214306
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.11,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.053634146527532
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.12,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.0733567183985684
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.13,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.0922901288596112
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.14,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.1105485229895495
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.1282244136694901
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.16,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.1453940079395375
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.17,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.162120979006898
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.178459201691134
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.19,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 1.1944547776817445
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.2,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2101475626128597
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2255723363441962
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.22,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2407597129639483
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.23,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.255736857777937
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2705280590432029
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.25,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2851551889286366
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.26,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2996380789822686
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.27,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.313994828897753
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.28,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.328242062729901
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.342395143340019
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.3,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.3564683533756243
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.31,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.3704750492478897
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.32,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.384427793186319
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.33,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.3983384673998718
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.34,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.412218373569436
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4260783202756038
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4399287004828776
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.37,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.453779560823587
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.38,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4676406641276254
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.39,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4815215464094011
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.4,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.495431569337637
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5093799690665441
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.523375902190714
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.43,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5374284894949282
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.44,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.551546858099486
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.45,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5657401825482158
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.46,
+      "empirical_quantile": 1.4912161949211866,
+      "fitted_quantile": 1.5800177253475325
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.5943888774388604
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.608863199072169
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.49,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6234504615443957
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.63816069027276
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.51,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6530042096893014
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.52,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6679916904697305
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.53,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6831341996474958
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.54,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6984432542139116
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.55,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7139308788687146
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.56,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7296096686645177
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.5582591265390735,
+      "fitted_quantile": 1.745492857385858
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.761594392622186
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.59,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.777929018638391
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.7945123683215702
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.61,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8113610656954644
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.62,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8284928407527161
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.63,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8459266586707572
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.64,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8636828658634244
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.65,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8817833557951422
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.66,
+      "empirical_quantile": 1.623870005119924,
+      "fitted_quantile": 1.9002517580706009
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.67,
+      "empirical_quantile": 1.7249399250504516,
+      "fitted_quantile": 1.9191136550400896
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.68,
+      "empirical_quantile": 1.7783973993038584,
+      "fitted_quantile": 1.9383968310680724
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.8278859821531583,
+      "fitted_quantile": 1.9581315607516214
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 1.9783509438143216
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 1.9990912962318403
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.72,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.0203926094912648
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.73,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.042299092916555
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.74,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.064859817939774
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.75,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.0881294883865897
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.76,
+      "empirical_quantile": 1.867652736873333,
+      "fitted_quantile": 2.1121693677319042
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.77,
+      "empirical_quantile": 1.94255586941534,
+      "fitted_quantile": 2.1370484035194934
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.78,
+      "empirical_quantile": 1.9649350892212976,
+      "fitted_quantile": 2.162844601670992
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.79,
+      "empirical_quantile": 1.9902249643174024,
+      "fitted_quantile": 2.189646720616952
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8,
+      "empirical_quantile": 2.0277301771420424,
+      "fitted_quantile": 2.2175563791251722
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.81,
+      "empirical_quantile": 2.067823197398577,
+      "fitted_quantile": 2.246690705497724
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.084075666441046,
+      "fitted_quantile": 2.277185704268675
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.086785027624273,
+      "fitted_quantile": 2.3092005872299093
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.104648328142362,
+      "fitted_quantile": 2.3429234207209024
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.85,
+      "empirical_quantile": 2.117082440457563,
+      "fitted_quantile": 2.378578600711852
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.86,
+      "empirical_quantile": 2.1242338881221863,
+      "fitted_quantile": 2.4164369152739655
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.87,
+      "empirical_quantile": 2.1336486833544748,
+      "fitted_quantile": 2.4568293498694027
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.88,
+      "empirical_quantile": 2.14311502084922,
+      "fitted_quantile": 2.5001664415524134
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.89,
+      "empirical_quantile": 2.1589115794761025,
+      "fitted_quantile": 2.5469660944448167
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9,
+      "empirical_quantile": 2.1904362229835934,
+      "fitted_quantile": 2.597894724305943
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.91,
+      "empirical_quantile": 2.308515539502606,
+      "fitted_quantile": 2.6538302163980143
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.92,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 2.715962235385035
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.93,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 2.7859600968902973
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 2.866271408698137
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 2.96069660897026
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.075615871083374
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.97,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.223025131839808
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.98,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.4299754384716103
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.99,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.7834622817014973
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.01,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": 0.1816571699040255
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.02,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": 0.2618141731278
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.03,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.3245921880958653
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.04,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.3783681722751426
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.05,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.42641087120511056
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.4704043251790341
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.5113522676266833
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.08,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.5499104771927821
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.586535584067238
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.6215608589186825
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.11,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.6552385233130227
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.12,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.6877650598928592
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.13,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.719297194266834
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.14,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.7499624360377763
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.7798662854414881
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.16,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.8090973111165096
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.17,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.8377308209825584
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.8658315755524486
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.19,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.893455832684691
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.2,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.9206529150594772
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.9474664301939135
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.22,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.9739352330715275
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.23,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.0000941951326525
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.0259748255460466
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.25,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.0516057783744284
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.26,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.0770132705980058
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.27,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.1022214297847868
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.28,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.1272525857225526
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.1521275170427336
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.3,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.1768656614253867
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.31,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2014852961400544
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.32,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 1.2260036942845312
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.33,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.250437261016253
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.34,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 1.2748016532460738
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.2991118856216917
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.3233824251241462
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.37,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.3476272762033623
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.38,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.371860058063718
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.39,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.3960940754600213
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.4,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4203423841645937
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4446178521069726
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4689332170613112
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.43,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.4933011416567532
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.44,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5177342664083782
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.45,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.5422452614072026
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.46,
+      "empirical_quantile": 1.4912161949211866,
+      "fitted_quantile": 1.5668468772646102
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.5915519958774764
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6163736815638534
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.49,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.641325233114485
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.6664202373122035
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.51,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.691672624489376
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.52,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7170967267233679
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.53,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7427073393121943
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.54,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.768519786228323
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.55,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.7945499903195659
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.56,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.820814549114343
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.5582591265390735,
+      "fitted_quantile": 1.8473308171971146
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8741169962520536
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.59,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9011922340336005
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9285767337171789
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.61,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9562918753192695
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.62,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.9843603511624839
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.63,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.012806317709851
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.64,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.041655566518159
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.65,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 2.070935717581872
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.66,
+      "empirical_quantile": 1.623870005119924,
+      "fitted_quantile": 2.1006764389815036
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.67,
+      "empirical_quantile": 1.7249399250504516,
+      "fitted_quantile": 2.1309096975450936
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.68,
+      "empirical_quantile": 1.7783973993038584,
+      "fitted_quantile": 2.1616700462202676
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.8278859821531583,
+      "fitted_quantile": 2.192994955091757
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.2249251945376805
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.2575052809938363
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.72,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.290783998319042
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.73,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.324815011003109
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.74,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.3596575896755723
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.75,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.395377474895312
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.76,
+      "empirical_quantile": 1.867652736873333,
+      "fitted_quantile": 2.4320479125025782
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.77,
+      "empirical_quantile": 1.94255586941534,
+      "fitted_quantile": 2.469750903569092
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.78,
+      "empirical_quantile": 1.9649350892212976,
+      "fitted_quantile": 2.508578725158656
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.79,
+      "empirical_quantile": 1.9902249643174024,
+      "fitted_quantile": 2.548635796126227
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8,
+      "empirical_quantile": 2.0277301771420424,
+      "fitted_quantile": 2.590040987138038
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.81,
+      "empirical_quantile": 2.067823197398577,
+      "fitted_quantile": 2.6329305091558384
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.084075666441046,
+      "fitted_quantile": 2.677461564656782
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.086785027624273,
+      "fitted_quantile": 2.7238170184711428
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.104648328142362,
+      "fitted_quantile": 2.7722114524991883
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.85,
+      "empirical_quantile": 2.117082440457563,
+      "fitted_quantile": 2.822899130693963
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.86,
+      "empirical_quantile": 2.1242338881221863,
+      "fitted_quantile": 2.876184651204334
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.87,
+      "empirical_quantile": 2.1336486833544748,
+      "fitted_quantile": 2.932437459806005
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.88,
+      "empirical_quantile": 2.14311502084922,
+      "fitted_quantile": 2.9921120473568865
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.89,
+      "empirical_quantile": 2.1589115794761025,
+      "fitted_quantile": 3.0557767489760024
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9,
+      "empirical_quantile": 2.1904362229835934,
+      "fitted_quantile": 3.1241559833932704
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.91,
+      "empirical_quantile": 2.308515539502606,
+      "fitted_quantile": 3.1981942939667642
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.92,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.2791573640569993
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.93,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.3687992056932794
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.4696559261634135
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 3.5856029965988285
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.7230259815212117
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.97,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 3.893661071156379
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.98,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 4.123206663946752
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.99,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 4.49078371896753
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.01,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": 0.0179140820097041
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.02,
+      "empirical_quantile": 0.7602576257345588,
+      "fitted_quantile": 0.03601003598083794
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.03,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.05429159271742775
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.04,
+      "empirical_quantile": 1.0848367812001545,
+      "fitted_quantile": 0.07276259901113333
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.05,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.09142702249958631
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.2610894818237246,
+      "fitted_quantile": 0.11028895678179736
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.12935262680712972
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.08,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.14862239455558537
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.16810276502850716
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.18779839257027894
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.11,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.20771408754321438
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.12,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.2278548233795818
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.13,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.24822574403662764
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.14,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.2688321718825536
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.28967961604369297
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.16,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.3107737812456368
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.17,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.33212057718380483
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.3537261284619708
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.19,
+      "empirical_quantile": 1.2929341900071427,
+      "fitted_quantile": 0.37559678514055794
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.2,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.3977391339401567
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.4201600101497207
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.22,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.44286651029330604
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.23,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.46586600561408525
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.489166156439743
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.25,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.5127749274993022
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.26,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.5367006042680164
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.27,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.5609518104242569
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.28,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.5855375265104357
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.6104671098990114
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.3,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.6357503161746603
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.31,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.6613973220548878
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.32,
+      "empirical_quantile": 1.3444673086707983,
+      "fitted_quantile": 0.6874187499838498
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.33,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 0.71382569454813
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.34,
+      "empirical_quantile": 1.381366891011944,
+      "fitted_quantile": 0.7406297508788844
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 0.7678430452223296
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 0.7954782678803136
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.37,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 0.823548708744939
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.38,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 0.8520682956763097
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.39,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 0.8810516360008118
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.4,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 0.910514061439459
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 0.9404716768122388
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 0.9709414129058078
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.43,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.001941083939045
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.44,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.0334894501148166
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.45,
+      "empirical_quantile": 1.4108678679740705,
+      "fitted_quantile": 1.0656062858079074
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.46,
+      "empirical_quantile": 1.4912161949211866,
+      "fitted_quantile": 1.0983124540097378
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.131629987731692
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.1655821791624859
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.49,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.2001936774831519
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.2354905963684824
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.51,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.2715006323493203
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.52,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.3082531953796157
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.53,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.3457795531502796
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.54,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.3841129909240677
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.55,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.4232889889387614
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.56,
+      "empirical_quantile": 1.492520937194377,
+      "fitted_quantile": 1.4633454197480644
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.5582591265390735,
+      "fitted_quantile": 1.504322768251036
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.5462643776141194
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.59,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.589216724830453
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.633229730308639
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.61,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.6783571066617884
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.62,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.7246567528082253
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.63,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.7721912006364986
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.64,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.821028122878918
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.65,
+      "empirical_quantile": 1.6193290361457977,
+      "fitted_quantile": 1.8712409125431426
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.66,
+      "empirical_quantile": 1.623870005119924,
+      "fitted_quantile": 1.922909346352332
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.67,
+      "empirical_quantile": 1.7249399250504516,
+      "fitted_quantile": 1.9761203472473667
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.68,
+      "empirical_quantile": 1.7783973993038584,
+      "fitted_quantile": 2.030968864248796
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.8278859821531583,
+      "fitted_quantile": 2.0875588920447923
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.1460046578079415
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.2064320092742906
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.72,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.268980046483299
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.73,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.3338030503782203
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.74,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.401072775530968
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.75,
+      "empirical_quantile": 1.8407080379100111,
+      "fitted_quantile": 2.4709811927369647
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.76,
+      "empirical_quantile": 1.867652736873333,
+      "fitted_quantile": 2.5437437917480983
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.77,
+      "empirical_quantile": 1.94255586941534,
+      "fitted_quantile": 2.61960358729255
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.78,
+      "empirical_quantile": 1.9649350892212976,
+      "fitted_quantile": 2.6988360161165468
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.79,
+      "empirical_quantile": 1.9902249643174024,
+      "fitted_quantile": 2.781754973982602
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8,
+      "empirical_quantile": 2.0277301771420424,
+      "fitted_quantile": 2.8687203266771215
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.81,
+      "empirical_quantile": 2.067823197398577,
+      "fitted_quantile": 2.960147349176708
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.084075666441046,
+      "fitted_quantile": 3.056518719247401
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.086785027624273,
+      "fitted_quantile": 3.158399942720815
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.104648328142362,
+      "fitted_quantile": 3.2664594606172788
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.85,
+      "empirical_quantile": 2.117082440457563,
+      "fitted_quantile": 3.381495254176423
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.86,
+      "empirical_quantile": 2.1242338881221863,
+      "fitted_quantile": 3.5044706428517816
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.87,
+      "empirical_quantile": 2.1336486833544748,
+      "fitted_quantile": 3.6365633718994506
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.88,
+      "empirical_quantile": 2.14311502084922,
+      "fitted_quantile": 3.77923438811658
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.89,
+      "empirical_quantile": 2.1589115794761025,
+      "fitted_quantile": 3.9343266124850294
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9,
+      "empirical_quantile": 2.1904362229835934,
+      "fitted_quantile": 4.104210923045604
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.91,
+      "empirical_quantile": 2.308515539502606,
+      "fitted_quantile": 4.292009315615883
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.92,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 4.501950056985762
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.93,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 4.739961239220265
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 5.014724984485064
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.4713849903361464,
+      "fitted_quantile": 5.339701519414088
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 5.737440653354247
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.97,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 6.250215580853544
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.98,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 6.972931249722723
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_C_PRICE_NEAR_PM1_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.99,
+      "empirical_quantile": 6.392139290418002,
+      "fitted_quantile": 8.208421846091206
+    }
+  ],
+  "curves": []
+}

@@ -1,0 +1,15 @@
+raw_code,description,weather_group,source,meteorological_rationale,decision,mapping_frozen
+1,Clear,NON_PRECIPITATION,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Clear/fair/cloud/fog condition without a precipitation code,USER_DECISION,True
+2,Fair,NON_PRECIPITATION,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Clear/fair/cloud/fog condition without a precipitation code,USER_DECISION,True
+3,Cloudy,NON_PRECIPITATION,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Clear/fair/cloud/fog condition without a precipitation code,USER_DECISION,True
+5,Fog,NON_PRECIPITATION,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Clear/fair/cloud/fog condition without a precipitation code,USER_DECISION,True
+7,Light Rain,RAIN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Rain intensity or rain shower,USER_DECISION,True
+8,Rain,RAIN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Rain intensity or rain shower,USER_DECISION,True
+9,Heavy Rain,RAIN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Rain intensity or rain shower,USER_DECISION,True
+12,Sleet,SNOW_FROZEN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Sleet or snowfall/snow shower: frozen or mixed precipitation,USER_DECISION,True
+13,Heavy Sleet,SNOW_FROZEN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Sleet or snowfall/snow shower: frozen or mixed precipitation,USER_DECISION,True
+14,Light Snowfall,SNOW_FROZEN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Sleet or snowfall/snow shower: frozen or mixed precipitation,USER_DECISION,True
+15,Snowfall,SNOW_FROZEN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Sleet or snowfall/snow shower: frozen or mixed precipitation,USER_DECISION,True
+16,Heavy Snowfall,SNOW_FROZEN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Sleet or snowfall/snow shower: frozen or mixed precipitation,USER_DECISION,True
+17,Rain Shower,RAIN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Rain intensity or rain shower,USER_DECISION,True
+21,Snow Shower,SNOW_FROZEN,results/analysis/2026-10-17_passenger_sensitivity_weather_scenarios/recommended_weather_clustering_supported.csv,Sleet or snowfall/snow shower: frozen or mixed precipitation,USER_DECISION,True

@@ -1,0 +1,11 @@
+{
+  "scope": "Saved Episode25 March16 four-slot development illustration only; not calibration or general generator certification",
+  "N": 2838,
+  "in_array_range_N": 2511,
+  "below_1_N": 327,
+  "ge75_N": 0,
+  "conditional_halfkm_total_variation": 0.13146473616143067,
+  "conditional_KS_binned": 0.12032248403994039,
+  "conditional_JS_distance": 0.12869996394034988,
+  "no_new_simulation": true
+}

@@ -1,0 +1,215 @@
+{
+  "primary": {
+    "scenarios": 48,
+    "SD_lt4": 0,
+    "SD_ge4": 48,
+    "fraction_SD_lt4": 0.0,
+    "min_SD": 5.101840446436603,
+    "median_SD": 20.731690853986734,
+    "max_SD": 190.9617020385515
+  },
+  "signed": {
+    "scenarios": 48,
+    "SD_lt4": 0,
+    "SD_ge4": 48,
+    "fraction_SD_lt4": 0.0,
+    "min_SD": 8.601132818545448,
+    "median_SD": 30.26220745245555,
+    "max_SD": 175.56470334051485
+  },
+  "representatives": [
+    {
+      "role": "lowest_SD",
+      "scenario": "W9_T2",
+      "N": 992,
+      "SD": 5.101840446436603,
+      "mean": 2.8978788001409272,
+      "median": 2.1043756858843157,
+      "near_zero_N": 0,
+      "near_zero_pct": 0.0,
+      "near_zero_squared_deviation_pct": 0.0,
+      "top1pct_by_squared_deviation_share_pct": 78.5610542679506,
+      "fare_min": 6.5,
+      "fare_max": 226.3,
+      "distance_km_min": 1.51278336,
+      "distance_km_max": 61.47694080000001,
+      "max_abs_rL": 12.315390217403786,
+      "max_abs_rP": 9.123377967821268,
+      "max_e": 95.4486051982726,
+      "largest_deviation_rows": [
+        {
+          "fare": 22.2,
+          "distance_km": 1.57715712,
+          "r_P": -0.0068979633865130265,
+          "r_L": -0.6584009839514213,
+          "e": 95.4486051982726
+        },
+        {
+          "fare": 22.5,
+          "distance_km": 6.2764416,
+          "r_P": 0.006522334405561154,
+          "r_L": 0.35942465570352766,
+          "e": 55.10675064392137
+        },
+        {
+          "fare": 22.89,
+          "distance_km": 10.01011968,
+          "r_P": 0.023968721535257573,
+          "r_L": 1.1681080406348572,
+          "e": 48.73468277882867
+        },
+        {
+          "fare": 22.2,
+          "distance_km": 3.2830617600000003,
+          "r_P": -0.0068979633865130265,
+          "r_L": -0.2889163339396932,
+          "e": 41.88429508115186
+        },
+        {
+          "fare": 22.18,
+          "distance_km": 3.12212736,
+          "r_P": -0.007792649905984617,
+          "r_L": -0.32377337639362985,
+          "e": 41.54855925774076
+        }
+      ]
+    },
+    {
+      "role": "median_rank_SD",
+      "scenario": "W5_T3",
+      "N": 217390,
+      "SD": 20.54906816026654,
+      "mean": 2.6313671759814024,
+      "median": 1.177080090098648,
+      "near_zero_N": 21,
+      "near_zero_pct": 0.009660057960347761,
+      "near_zero_squared_deviation_pct": 81.42172196039667,
+      "top1pct_by_squared_deviation_share_pct": 98.75897085270802,
+      "fare_min": 0.01,
+      "fare_max": 323.6,
+      "distance_km_min": 1.51278336,
+      "distance_km_max": 74.94715008,
+      "max_abs_rL": 15.232924670798278,
+      "max_abs_rP": 13.47602788505065,
+      "max_e": 4259.124594818995,
+      "largest_deviation_rows": [
+        {
+          "fare": 22.36,
+          "distance_km": 9.720437760000001,
+          "r_P": 0.0002595287692598594,
+          "r_L": 1.1053653642177712,
+          "e": 4259.124594818995
+        },
+        {
+          "fare": 22.36,
+          "distance_km": 9.656064,
+          "r_P": 0.0002595287692598594,
+          "r_L": 1.0914225472361965,
+          "e": 4205.401005633343
+        },
+        {
+          "fare": 22.36,
+          "distance_km": 8.49733632,
+          "r_P": 0.0002595287692598594,
+          "r_L": 0.8404518415678529,
+          "e": 3238.3764002916005
+        },
+        {
+          "fare": 22.35,
+          "distance_km": 2.2048012800000003,
+          "r_P": -0.00018781449047585653,
+          "r_L": -0.5224585183810684,
+          "e": 2781.779601016622
+        },
+        {
+          "fare": 22.35,
+          "distance_km": 2.63932416,
+          "r_P": -0.00018781449047585653,
+          "r_L": -0.4283445037554396,
+          "e": 2280.6786775086616
+        }
+      ]
+    },
+    {
+      "role": "highest_SD",
+      "scenario": "W7_T1",
+      "N": 731,
+      "SD": 190.9617020385515,
+      "mean": 11.040303682118417,
+      "median": 2.3502770307816045,
+      "near_zero_N": 1,
+      "near_zero_pct": 0.13679890560875513,
+      "near_zero_squared_deviation_pct": 98.89864997159722,
+      "top1pct_by_squared_deviation_share_pct": 99.7844335458843,
+      "fare_min": 4.14,
+      "fare_max": 245.9,
+      "distance_km_min": 1.51278336,
+      "distance_km_max": 66.04747776,
+      "max_abs_rL": 13.305330223095586,
+      "max_abs_rP": 10.000170756903444,
+      "max_e": 5145.56381638226,
+      "largest_deviation_rows": [
+        {
+          "fare": 22.36,
+          "distance_km": 10.782604800000001,
+          "r_P": 0.0002595287692598594,
+          "r_L": 1.335421844413753,
+          "e": 5145.56381638226
+        },
+        {
+          "fare": 22.44,
+          "distance_km": 13.132247040000001,
+          "r_P": 0.0038382748471463817,
+          "r_L": 1.8443346642412273,
+          "e": 480.5113593187375
+        },
+        {
+          "fare": 22.6,
+          "distance_km": 8.5295232,
+          "r_P": 0.010995767002919267,
+          "r_L": 0.8474232500586402,
+          "e": 77.06813447699079
+        },
+        {
+          "fare": 22.6,
+          "distance_km": 8.09500032,
+          "r_P": 0.010995767002919267,
+          "r_L": 0.7533092354330114,
+          "e": 68.50902126545745
+        },
+        {
+          "fare": 22.6,
+          "distance_km": 7.7409446399999995,
+          "r_P": 0.010995767002919267,
+          "r_L": 0.6766237420343507,
+          "e": 61.53492901902285
+        }
+      ]
+    }
+  ],
+  "N": 6967155,
+  "positive_N": 5975653,
+  "formula": "e=((L-L_base)/L_base)/((P-P_base)/P_base)",
+  "P_base": 22.354198442390455,
+  "L_base_km": 4.616983790655043,
+  "threshold": "pooled_population_SD < 4.0",
+  "clustering_run": false,
+  "protected_rows_accessed": false,
+  "production_modified": false,
+  "pdf_path": "notebooks/plan/Price_Elasticity_Weather_Scenario_Analysis_Explained.pdf",
+  "pdf_sha256": "2a74c52c61b22f66bdbad23083f1c32fe66a7025fee97765ebb3d02885e4277a",
+  "source_contract": "results/analysis/2026-11-14_pricing_v2_weather_clustering_resolved/WEATHER_CLUSTER_VALIDATION.md",
+  "population_status": "PRIMARY_POSITIVE_PER_CURRENT_ARTIFACT;SIGNED_COMPANION",
+  "references_status": "CURRENT_CANDIDATES_NOT_FINAL_APPROVAL",
+  "checks": {
+    "48_supported_scenarios_each_population": true,
+    "population_count_reconciliation": true,
+    "strict_boundary_4_rejected": true,
+    "missing_combinations_not_fabricated": true
+  },
+  "stop_reason": "ALL_INDIVIDUAL_SCENARIOS_SD_GE4",
+  "pairwise_matrix_status": "NOT_COMPUTED_STOP_GATE",
+  "merge_status": "NOT_COMPUTED_STOP_GATE",
+  "final_group_count": null,
+  "full_professor_population_equivalence": "NOT_ESTABLISHED"
+}

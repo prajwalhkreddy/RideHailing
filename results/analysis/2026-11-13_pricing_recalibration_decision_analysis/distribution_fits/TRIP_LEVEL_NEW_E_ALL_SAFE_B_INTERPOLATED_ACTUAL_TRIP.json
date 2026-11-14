@@ -1,0 +1,5096 @@
+{
+  "version": 3,
+  "rows": [
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 8692819.0,
+      "N_distinct_support_points": 1293866,
+      "effective_N_Kish": 8692819.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[1.4071781765592117, 28.842414737201167]",
+      "log_likelihood": -41558503.64536859,
+      "AIC": 83117011.29073718,
+      "BIC": 83117039.24675286,
+      "AIC_effective_N": 83117011.29073712,
+      "BIC_effective_N": 83117039.2467528,
+      "KS": 0.40431190883884804,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -4.780785570868157,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.4043; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 8692819.0,
+      "N_distinct_support_points": 1293866,
+      "effective_N_Kish": 8692819.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 8692819.0,
+      "N_distinct_support_points": 1293866,
+      "effective_N_Kish": 8692819.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 8692819.0,
+      "N_distinct_support_points": 1293866,
+      "effective_N_Kish": 8692819.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 8692819.0,
+      "N_distinct_support_points": 1293866,
+      "effective_N_Kish": 8692819.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 8692819.0,
+      "N_distinct_support_points": 1293866,
+      "effective_N_Kish": 8692819.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7619074.0,
+      "N_distinct_support_points": 981546,
+      "effective_N_Kish": 7619074.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 87.64790800314604,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[2.5288391339045955, 21.952452383602246]",
+      "log_likelihood": -34345394.29110194,
+      "AIC": 68690792.58220388,
+      "BIC": 68690820.27453467,
+      "AIC_effective_N": 68690792.582204,
+      "BIC_effective_N": 68690820.27453479,
+      "KS": 0.45414673865629845,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -4.507817392389416,
+      "support_compatibility": "COMPATIBLE_BASELINE_ALLOWS_NEGATIVE",
+      "qualitative_fit": "Descriptive KS=0.4541; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7619074.0,
+      "N_distinct_support_points": 981546,
+      "effective_N_Kish": 7619074.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 87.64790800314604,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": "[0.9460106586069575, 0.0, 2.673161354892579]",
+      "log_likelihood": -14679987.434700793,
+      "AIC": 29359978.869401585,
+      "BIC": 29360006.56173238,
+      "AIC_effective_N": 29359978.869401567,
+      "BIC_effective_N": 29360006.561732363,
+      "KS": 0.20194428196214392,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.9267416794614127,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.2019; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7619074.0,
+      "N_distinct_support_points": 981546,
+      "effective_N_Kish": 7619074.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 87.64790800314604,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": "[0.8744076891981416, 0.0, 1.368279053264293]",
+      "log_likelihood": -12177442.312312545,
+      "AIC": 24354888.62462509,
+      "BIC": 24354916.316955887,
+      "AIC_effective_N": 24354888.624625146,
+      "BIC_effective_N": 24354916.316955943,
+      "KS": 0.12342517162205652,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.5982837694334735,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1234; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7619074.0,
+      "N_distinct_support_points": 981546,
+      "effective_N_Kish": 7619074.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 87.64790800314604,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": "[0.8393213976386209, 0.0, 2.1427997132327423]",
+      "log_likelihood": -14211103.808730064,
+      "AIC": 28422211.617460128,
+      "BIC": 28422239.309790924,
+      "AIC_effective_N": 28422211.617460202,
+      "BIC_effective_N": 28422239.309791,
+      "KS": 0.21324067489908718,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.865200916637652,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.2132; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7619074.0,
+      "N_distinct_support_points": 981546,
+      "effective_N_Kish": 7619074.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 87.64790800314604,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": "[0.0, 2.5288391339045955]",
+      "log_likelihood": -14687748.814905046,
+      "AIC": 29375499.62981009,
+      "BIC": 29375513.475975487,
+      "AIC_effective_N": 29375499.629810516,
+      "BIC_effective_N": 29375513.475975912,
+      "KS": 0.21067423228783377,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.9277603570860786,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.2107; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "TRIP_LEVEL_NEW_E_ALL_SAFE",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_TRIP",
+      "scope": "ALL_SAFE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7619074.0,
+      "N_distinct_support_points": 981546,
+      "effective_N_Kish": 7619074.0,
+      "original_negative_mass": 1073745.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 87.64790800314604,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    }
+  ],
+  "qq": [
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": -13.982294919939244,
+      "fitted_quantile": -65.69031202953293
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": -6.616544197784822,
+      "fitted_quantile": -57.82789966995892
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": -4.013584613927735,
+      "fitted_quantile": -52.83945110481619
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": -2.721105667008662,
+      "fitted_quantile": -49.08683556513718
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": -1.937874018764894,
+      "fitted_quantile": -46.03437231396474
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": -1.4037257610348448,
+      "fitted_quantile": -43.436246661252305
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": -1.0231632605016647,
+      "fitted_quantile": -41.15819872362497
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": -0.7301430821545544,
+      "fitted_quantile": -39.11847850133758
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": -0.5055622470303182,
+      "fitted_quantile": -37.26343456612413
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": -0.3318253161255867,
+      "fitted_quantile": -35.555863583987595
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": -0.1762950640056852,
+      "fitted_quantile": -33.96885454837634
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": -0.04068235484230431,
+      "fitted_quantile": -32.482278190944506
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 0.08161777590436095,
+      "fitted_quantile": -31.08066192348216
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 0.19002790219829285,
+      "fitted_quantile": -29.75184029984552
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 0.28451649886718405,
+      "fitted_quantile": -28.486063490703813
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 0.36887069706022796,
+      "fitted_quantile": -27.27538852965565
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 0.4440881939057179,
+      "fitted_quantile": -26.113251782509863
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 0.507700101062672,
+      "fitted_quantile": -24.9941613229578
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 0.5639764458482887,
+      "fitted_quantile": -23.913470861560647
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 0.615547078828788,
+      "fitted_quantile": -22.867210493785635
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 0.659024315390923,
+      "fitted_quantile": -21.851957882831826
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 0.6976895082736684,
+      "fitted_quantile": -20.86473876432325
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 0.7333441049720097,
+      "fitted_quantile": -19.902949074915043
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 0.7633776309069066,
+      "fitted_quantile": -18.96429327082268
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 0.7912541162136385,
+      "fitted_quantile": -18.04673493458739
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 0.8170689167557478,
+      "fitted_quantile": -17.148456825056115
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 0.8398242614013881,
+      "fitted_quantile": -16.267828266687083
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 0.8612379429746821,
+      "fitted_quantile": -15.403378302212657
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 0.8798745622827852,
+      "fitted_quantile": -14.553773414095257
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 0.8982608273149763,
+      "fitted_quantile": -13.717798899367034
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 0.9142208521485377,
+      "fitted_quantile": -12.894343189221294
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 0.9284454628946358,
+      "fitted_quantile": -12.082384559592368
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 0.9427810585586057,
+      "fitted_quantile": -11.280979796143285
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 0.9553381626332531,
+      "fitted_quantile": -10.489254466593673
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 0.9676545491066888,
+      "fitted_quantile": -9.706394522299643
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 0.9794321578048797,
+      "fitted_quantile": -8.931639004588362
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 0.9902888663917053,
+      "fitted_quantile": -8.164273673299553
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 1.0020929110983214,
+      "fitted_quantile": -7.403625408050674
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 1.0107113265075232,
+      "fitted_quantile": -6.64905725896884
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 1.0190884760684027,
+      "fitted_quantile": -5.899964044552002
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.0277777262629992,
+      "fitted_quantile": -5.155768411091569
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.0374397497817256,
+      "fitted_quantile": -4.415917281586521
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 1.046272928890629,
+      "fitted_quantile": -3.679878632977851
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 1.0550404676603675,
+      "fitted_quantile": -2.947138549348735
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 1.0613793152463544,
+      "fitted_quantile": -2.217198505870123
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 1.0679460584656861,
+      "fitted_quantile": -1.4895728440327463
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.0742957667980069,
+      "fitted_quantile": -0.763786403336018
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.083764310027854,
+      "fitted_quantile": -0.03937227828746748
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 1.0931701657922541,
+      "fitted_quantile": 0.6841303275526198
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 1.102430452640172,
+      "fitted_quantile": 1.4071781765592117
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 1.1104238429520759,
+      "fitted_quantile": 2.1302260255658036
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 1.1153966775655302,
+      "fitted_quantile": 2.853728631405895
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 1.1203304432388357,
+      "fitted_quantile": 3.5781427564544455
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 1.1301988532191618,
+      "fitted_quantile": 4.303929197151174
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 1.1408977136779106,
+      "fitted_quantile": 5.03155485898855
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 1.1526715282197928,
+      "fitted_quantile": 5.761494902467163
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.1638768639418127,
+      "fitted_quantile": 6.494234986096278
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.1740759104412513,
+      "fitted_quantile": 7.230273634704954
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 1.1871049790833625,
+      "fitted_quantile": 7.970124764209992
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 1.2025995249951353,
+      "fitted_quantile": 8.714320397670425
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 1.2181825685983627,
+      "fitted_quantile": 9.463413612087264
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 1.2361507162828256,
+      "fitted_quantile": 10.217981761169098
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 1.258115309549284,
+      "fitted_quantile": 10.978630026417976
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 1.2796871389429831,
+      "fitted_quantile": 11.74599535770679
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 1.3065244915322736,
+      "fitted_quantile": 12.52075087541807
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 1.3365320273001384,
+      "fitted_quantile": 13.303610819712102
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 1.3692099568709504,
+      "fitted_quantile": 14.095336149261712
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 1.407363072972705,
+      "fitted_quantile": 14.896740912710797
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.4507658559689778,
+      "fitted_quantile": 15.708699542339723
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.4991764494162934,
+      "fitted_quantile": 16.53215525248546
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.5544016233741311,
+      "fitted_quantile": 17.368129767213695
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 1.6139009230648675,
+      "fitted_quantile": 18.21773465533108
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 1.6850335803951184,
+      "fitted_quantile": 19.08218461980551
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 1.7597394251721503,
+      "fitted_quantile": 19.962813178174542
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 1.8420014320391314,
+      "fitted_quantile": 20.86109128770581
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 1.9345200497741375,
+      "fitted_quantile": 21.7786496239411
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 2.0320291667047288,
+      "fitted_quantile": 22.71730542803347
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 2.131600489718145,
+      "fitted_quantile": 23.67909511744167
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 2.2249003828543668,
+      "fitted_quantile": 24.666314235950253
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 2.3080861386989335,
+      "fitted_quantile": 25.68156684690406
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.38212843556375,
+      "fitted_quantile": 26.727827214679074
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.4559700721432494,
+      "fitted_quantile": 27.808517676076242
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.5320396890957126,
+      "fitted_quantile": 28.927608135628297
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.6179723452499157,
+      "fitted_quantile": 30.089744882774085
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.713581945524072,
+      "fitted_quantile": 31.30041984382224
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 2.8200938721935858,
+      "fitted_quantile": 32.566196652963946
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 2.9424890545408933,
+      "fitted_quantile": 33.89501827660059
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 3.0816221768560585,
+      "fitted_quantile": 35.29663454406293
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 3.233765007966554,
+      "fitted_quantile": 36.78321090149479
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 3.4114095523874313,
+      "fitted_quantile": 38.37021993710602
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 3.5990356359897113,
+      "fitted_quantile": 40.07779091924256
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 3.814617437392665,
+      "fitted_quantile": 41.932834854456004
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 4.090190929444835,
+      "fitted_quantile": 43.9725550767434
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 4.454841417249727,
+      "fitted_quantile": 46.250603014370746
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 5.000474918238626,
+      "fitted_quantile": 48.84872866708318
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 5.846716969307976,
+      "fitted_quantile": 51.901191918255634
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 7.255240527968955,
+      "fitted_quantile": 55.653807457934604
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 10.197202742827992,
+      "fitted_quantile": 60.64225602307734
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 19.620439149421774,
+      "fitted_quantile": 68.50466838265136
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": 0.10551819176475123,
+      "fitted_quantile": -48.540201798671276
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": 0.1995837310101029,
+      "fitted_quantile": -42.55598603461548
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": 0.28270493129236013,
+      "fitted_quantile": -38.7591929924192
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": 0.3563186088159149,
+      "fitted_quantile": -35.90301348389435
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": 0.42469645161406544,
+      "fitted_quantile": -33.579731789743064
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 0.4832206203356985,
+      "fitted_quantile": -31.60225416876493
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 0.5373397860710696,
+      "fitted_quantile": -29.868393140346058
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": 0.5842457944729572,
+      "fitted_quantile": -28.315927389346335
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": 0.6260618631844207,
+      "fitted_quantile": -26.904021901254907
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 0.6621816116966951,
+      "fitted_quantile": -25.604360585844155
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": 0.6976895082736684,
+      "fitted_quantile": -24.396461018348262
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": 0.7286239603690831,
+      "fitted_quantile": -23.265002470287804
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 0.7573792125147079,
+      "fitted_quantile": -22.198208491631654
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 0.7816488323009326,
+      "fitted_quantile": -21.18681975442029
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 0.8043223977792627,
+      "fitted_quantile": -20.2234154977333
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 0.8265464040680458,
+      "fitted_quantile": -19.301950194755392
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 0.8457461212686295,
+      "fitted_quantile": -18.417428151875015
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 0.8633647767741947,
+      "fitted_quantile": -17.565669370576664
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 0.8804363226490192,
+      "fitted_quantile": -16.743137480948327
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 0.895461084029334,
+      "fitted_quantile": -15.946810921133386
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 0.909687615495384,
+      "fitted_quantile": -15.17408489238847
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 0.9239141469614345,
+      "fitted_quantile": -14.422695631513276
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 0.9364483252378271,
+      "fitted_quantile": -13.690661141608357
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 0.9483862660860352,
+      "fitted_quantile": -12.976234245258656
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 0.9594804756265597,
+      "fitted_quantile": -12.277864990502662
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 0.969282754784774,
+      "fitted_quantile": -11.594170244192698
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 0.9794321578048797,
+      "fitted_quantile": -10.923908871440785
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 0.9895083299579424,
+      "fitted_quantile": -10.265961301653741
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 0.9978369333961489,
+      "fitted_quantile": -9.619312571954392
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 1.0074710167519234,
+      "fitted_quantile": -8.983038151255277
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 1.014737040594692,
+      "fitted_quantile": -8.356292005633007
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 1.0217172865990742,
+      "fitted_quantile": -7.738296483524598
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 1.0302902941305279,
+      "fitted_quantile": -7.128333688456795
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 1.0381676906439379,
+      "fitted_quantile": -6.525738075149411
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.046291258186522,
+      "fitted_quantile": -5.929890057334941
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.0538251468400017,
+      "fitted_quantile": -5.340210456425755
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 1.0607477382402308,
+      "fitted_quantile": -4.756155652088681
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 1.0659504354564806,
+      "fitted_quantile": -4.177213320952713
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 1.07086522977397,
+      "fitted_quantile": -3.6028986696368976
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 1.078228189896222,
+      "fitted_quantile": -3.0327510842076153
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.0867739406332655,
+      "fitted_quantile": -2.466331130938121
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.0946213551899922,
+      "fitted_quantile": -1.9032178535166757
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 1.1030375278233155,
+      "fitted_quantile": -1.3430063201448794
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 1.1102354398934082,
+      "fitted_quantile": -0.7853053806781936
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 1.1151886256290673,
+      "fitted_quantile": -0.22973559939074262
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 1.1169432969438846,
+      "fitted_quantile": 0.3240726666685396
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.1254722608486045,
+      "fitted_quantile": 0.8764810702377752
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.1347575559013348,
+      "fitted_quantile": 1.4278449810280116
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 1.1445871445363138,
+      "fitted_quantile": 1.9785151190463477
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 1.1550529958290534,
+      "fitted_quantile": 2.5288391339045955
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 1.164246321806272,
+      "fitted_quantile": 3.0791631487628432
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 1.1728784476173124,
+      "fitted_quantile": 3.6298332867811824
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 1.1838340986265563,
+      "fitted_quantile": 4.181197197571419
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 1.1974577073853665,
+      "fitted_quantile": 4.733605601140654
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 1.211704879062658,
+      "fitted_quantile": 5.287413867199937
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 1.2269387560168645,
+      "fitted_quantile": 5.842983648487387
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2427382518184746,
+      "fitted_quantile": 6.400684587954073
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2620436402801352,
+      "fitted_quantile": 6.960896121325875
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 1.2826486098358576,
+      "fitted_quantile": 7.524009398747312
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 1.304867212917312,
+      "fitted_quantile": 8.090429352016805
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 1.3297549008326832,
+      "fitted_quantile": 8.660576937446088
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 1.359328579810053,
+      "fitted_quantile": 9.234891588761904
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 1.3899290194718774,
+      "fitted_quantile": 9.813833919897872
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 1.4262990862395697,
+      "fitted_quantile": 10.39788872423495
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 1.4657124915229878,
+      "fitted_quantile": 10.987568325144135
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 1.5099732589957688,
+      "fitted_quantile": 11.583416342958607
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 1.5566609272016634,
+      "fitted_quantile": 12.18601195626599
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 1.6121089746627875,
+      "fitted_quantile": 12.795974751333793
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.6714849100209486,
+      "fitted_quantile": 13.413970273442203
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.736140160937838,
+      "fitted_quantile": 14.04071641906447
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8072444247836963,
+      "fitted_quantile": 14.676990839763592
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 1.8831832789744236,
+      "fitted_quantile": 15.323639569462932
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 1.967045612071029,
+      "fitted_quantile": 15.981587139249976
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 2.0528116461288115,
+      "fitted_quantile": 16.65184851200189
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 2.14011474053898,
+      "fitted_quantile": 17.33554325831185
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 2.222160725194635,
+      "fitted_quantile": 18.033912513067847
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 2.295332019751275,
+      "fitted_quantile": 18.748339409417547
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 2.3626140658503907,
+      "fitted_quantile": 19.480373899322466
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 2.4254901374449696,
+      "fitted_quantile": 20.23176316019766
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 2.490906289018198,
+      "fitted_quantile": 21.00448918894258
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.560438269614279,
+      "fitted_quantile": 21.800815748757522
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.63809263005796,
+      "fitted_quantile": 22.623347638385866
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.723776072722721,
+      "fitted_quantile": 23.475106419684217
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.817513719711039,
+      "fitted_quantile": 24.359628462564594
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.9230660211052526,
+      "fitted_quantile": 25.281093765542487
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 3.0403826903441673,
+      "fitted_quantile": 26.24449802222948
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 3.1717573579623077,
+      "fitted_quantile": 27.25588675944085
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 3.317419048943943,
+      "fitted_quantile": 28.32268073809699
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 3.476397198923465,
+      "fitted_quantile": 29.45413928615747
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 3.6462397325933043,
+      "fitted_quantile": 30.66203885365335
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 3.8403879823449083,
+      "fitted_quantile": 31.961700169064102
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 4.08571233263567,
+      "fitted_quantile": 33.37360565715552
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 4.402198034393535,
+      "fitted_quantile": 34.92607140815525
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 4.839359409848244,
+      "fitted_quantile": 36.65993243657414
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 5.473851575395641,
+      "fitted_quantile": 38.637410057552266
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.444284935371385,
+      "fitted_quantile": 40.960691751703564
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 8.072230764597142,
+      "fitted_quantile": 43.81687126022839
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 11.474656416913223,
+      "fitted_quantile": 47.61366430242467
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 22.48918490370097,
+      "fitted_quantile": 53.59788006648047
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.01,
+      "empirical_quantile": 0.10551819176475123,
+      "fitted_quantile": 0.020161542622019156
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.02,
+      "empirical_quantile": 0.1995837310101029,
+      "fitted_quantile": 0.04212731774784184
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.03,
+      "empirical_quantile": 0.28270493129236013,
+      "fitted_quantile": 0.06495367331284517
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.04,
+      "empirical_quantile": 0.3563186088159149,
+      "fitted_quantile": 0.08843482381416684
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.05,
+      "empirical_quantile": 0.42469645161406544,
+      "fitted_quantile": 0.11247550299039759
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 0.4832206203356985,
+      "fitted_quantile": 0.137022135798013
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 0.5373397860710696,
+      "fitted_quantile": 0.16204163610491973
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.08,
+      "empirical_quantile": 0.5842457944729572,
+      "fitted_quantile": 0.18751258850549352
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09,
+      "empirical_quantile": 0.6260618631844207,
+      "fitted_quantile": 0.2134209067799384
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 0.6621816116966951,
+      "fitted_quantile": 0.23975744617805683
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.11,
+      "empirical_quantile": 0.6976895082736684,
+      "fitted_quantile": 0.26651658275607587
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.12,
+      "empirical_quantile": 0.7286239603690831,
+      "fitted_quantile": 0.2936953170232434
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.13,
+      "empirical_quantile": 0.7573792125147079,
+      "fitted_quantile": 0.3212926823414437
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.14,
+      "empirical_quantile": 0.7816488323009326,
+      "fitted_quantile": 0.34930934051979345
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 0.8043223977792627,
+      "fitted_quantile": 0.37774729770959425
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.16,
+      "empirical_quantile": 0.8265464040680458,
+      "fitted_quantile": 0.4066097006010989
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.17,
+      "empirical_quantile": 0.8457461212686295,
+      "fitted_quantile": 0.43590068800257503
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 0.8633647767741947,
+      "fitted_quantile": 0.4656252817309192
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.19,
+      "empirical_quantile": 0.8804363226490192,
+      "fitted_quantile": 0.49578930614154837
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.2,
+      "empirical_quantile": 0.895461084029334,
+      "fitted_quantile": 0.5263993290312605
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 0.909687615495384,
+      "fitted_quantile": 0.5574626188608386
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.22,
+      "empirical_quantile": 0.9239141469614345,
+      "fitted_quantile": 0.5889871147201802
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.23,
+      "empirical_quantile": 0.9364483252378271,
+      "fitted_quantile": 0.6209814064667203
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 0.9483862660860352,
+      "fitted_quantile": 0.6534547231712392
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.25,
+      "empirical_quantile": 0.9594804756265597,
+      "fitted_quantile": 0.6864169285060264
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.26,
+      "empirical_quantile": 0.969282754784774,
+      "fitted_quantile": 0.719878522074015
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.27,
+      "empirical_quantile": 0.9794321578048797,
+      "fitted_quantile": 0.7538506459466777
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.28,
+      "empirical_quantile": 0.9895083299579424,
+      "fitted_quantile": 0.7883450958816657
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 0.9978369333961489,
+      "fitted_quantile": 0.8233743368477602
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.3,
+      "empirical_quantile": 1.0074710167519234,
+      "fitted_quantile": 0.8589515226081148
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.31,
+      "empirical_quantile": 1.014737040594692,
+      "fitted_quantile": 0.8950905192124942
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.32,
+      "empirical_quantile": 1.0217172865990742,
+      "fitted_quantile": 0.931805932331996
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.33,
+      "empirical_quantile": 1.0302902941305279,
+      "fitted_quantile": 0.9691131384406473
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.34,
+      "empirical_quantile": 1.0381676906439379,
+      "fitted_quantile": 1.007028319910936
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.046291258186522,
+      "fitted_quantile": 1.0455685041476912
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.0538251468400017,
+      "fitted_quantile": 1.0847516069390175
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.37,
+      "empirical_quantile": 1.0607477382402308,
+      "fitted_quantile": 1.1245964802560815
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.38,
+      "empirical_quantile": 1.0659504354564806,
+      "fitted_quantile": 1.165122964786993
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.39,
+      "empirical_quantile": 1.07086522977397,
+      "fitted_quantile": 1.2063519475453564
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.4,
+      "empirical_quantile": 1.078228189896222,
+      "fitted_quantile": 1.248305424952476
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.0867739406332655,
+      "fitted_quantile": 1.29100657185513
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.0946213551899922,
+      "fitted_quantile": 1.334479817009628
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.43,
+      "empirical_quantile": 1.1030375278233155,
+      "fitted_quantile": 1.3787509256388581
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.44,
+      "empirical_quantile": 1.1102354398934082,
+      "fitted_quantile": 1.423847089754052
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.45,
+      "empirical_quantile": 1.1151886256290673,
+      "fitted_quantile": 1.4697970270285168
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.46,
+      "empirical_quantile": 1.1169432969438846,
+      "fitted_quantile": 1.516631089119027
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.1254722608486045,
+      "fitted_quantile": 1.5643813804538949
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.1347575559013348,
+      "fitted_quantile": 1.6130818886481773
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.49,
+      "empirical_quantile": 1.1445871445363138,
+      "fitted_quantile": 1.6627686278688505
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5,
+      "empirical_quantile": 1.1550529958290534,
+      "fitted_quantile": 1.7134797966604434
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.51,
+      "empirical_quantile": 1.164246321806272,
+      "fitted_quantile": 1.7652559519588635
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.52,
+      "empirical_quantile": 1.1728784476173124,
+      "fitted_quantile": 1.818140201273857
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.53,
+      "empirical_quantile": 1.1838340986265563,
+      "fitted_quantile": 1.8721784153153802
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.54,
+      "empirical_quantile": 1.1974577073853665,
+      "fitted_quantile": 1.9274194636843074
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.55,
+      "empirical_quantile": 1.211704879062658,
+      "fitted_quantile": 1.9839154766535894
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.56,
+      "empirical_quantile": 1.2269387560168645,
+      "fitted_quantile": 2.041722136544188
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2427382518184746,
+      "fitted_quantile": 2.1008990027662198
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2620436402801352,
+      "fitted_quantile": 2.1615098752681594
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.59,
+      "empirical_quantile": 1.2826486098358576,
+      "fitted_quantile": 2.2236232019390068
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6,
+      "empirical_quantile": 1.304867212917312,
+      "fitted_quantile": 2.2873125364685785
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.61,
+      "empirical_quantile": 1.3297549008326832,
+      "fitted_quantile": 2.352657054325966
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.62,
+      "empirical_quantile": 1.359328579810053,
+      "fitted_quantile": 2.419742135911082
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.63,
+      "empirical_quantile": 1.3899290194718774,
+      "fitted_quantile": 2.4886600276266297
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.64,
+      "empirical_quantile": 1.4262990862395697,
+      "fitted_quantile": 2.559510593681605
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.65,
+      "empirical_quantile": 1.4657124915229878,
+      "fitted_quantile": 2.632402173966366
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.66,
+      "empirical_quantile": 1.5099732589957688,
+      "fitted_quantile": 2.707452566455214
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.67,
+      "empirical_quantile": 1.5566609272016634,
+      "fitted_quantile": 2.784790156452896
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.68,
+      "empirical_quantile": 1.6121089746627875,
+      "fitted_quantile": 2.864555219813072
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.6714849100209486,
+      "fitted_quantile": 2.9469014332914485
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.736140160937838,
+      "fitted_quantile": 3.031997632815426
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8072444247836963,
+      "fitted_quantile": 3.1200298701393656
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.72,
+      "empirical_quantile": 1.8831832789744236,
+      "fitted_quantile": 3.2112038307642674
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.73,
+      "empirical_quantile": 1.967045612071029,
+      "fitted_quantile": 3.305747692024304
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.74,
+      "empirical_quantile": 2.0528116461288115,
+      "fitted_quantile": 3.403915521109525
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.75,
+      "empirical_quantile": 2.14011474053898,
+      "fitted_quantile": 3.5059913402157097
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.76,
+      "empirical_quantile": 2.222160725194635,
+      "fitted_quantile": 3.6122940224002122
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.77,
+      "empirical_quantile": 2.295332019751275,
+      "fitted_quantile": 3.7231832305154975
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.78,
+      "empirical_quantile": 2.3626140658503907,
+      "fitted_quantile": 3.8390666777603983
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.79,
+      "empirical_quantile": 2.4254901374449696,
+      "fitted_quantile": 3.960409079218812
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8,
+      "empirical_quantile": 2.490906289018198,
+      "fitted_quantile": 4.087743290093518
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.81,
+      "empirical_quantile": 2.560438269614279,
+      "fitted_quantile": 4.2216843046120776
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.63809263005796,
+      "fitted_quantile": 4.362947045101295
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.723776072722721,
+      "fitted_quantile": 4.512369243321493
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.817513719711039,
+      "fitted_quantile": 4.670941269854387
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.85,
+      "empirical_quantile": 2.9230660211052526,
+      "fitted_quantile": 4.83984560761837
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.86,
+      "empirical_quantile": 3.0403826903441673,
+      "fitted_quantile": 5.020509970910938
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.87,
+      "empirical_quantile": 3.1717573579623077,
+      "fitted_quantile": 5.214680152943194
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.88,
+      "empirical_quantile": 3.317419048943943,
+      "fitted_quantile": 5.42452210391123
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.89,
+      "empirical_quantile": 3.476397198923465,
+      "fitted_quantile": 5.652768550137741
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9,
+      "empirical_quantile": 3.6462397325933043,
+      "fitted_quantile": 5.902935722506555
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.91,
+      "empirical_quantile": 3.8403879823449083,
+      "fitted_quantile": 6.179654712918663
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.92,
+      "empirical_quantile": 4.08571233263567,
+      "fitted_quantile": 6.489198900250381
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.93,
+      "empirical_quantile": 4.402198034393535,
+      "fitted_quantile": 6.840365566606442
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 4.839359409848244,
+      "fitted_quantile": 7.246042013484519
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 5.473851575395641,
+      "fitted_quantile": 7.726213116393433
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.444284935371385,
+      "fitted_quantile": 8.314369174496324
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.97,
+      "empirical_quantile": 8.072230764597142,
+      "fitted_quantile": 9.073314365168462
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.98,
+      "empirical_quantile": 11.474656416913223,
+      "fitted_quantile": 10.144104840929563
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.99,
+      "empirical_quantile": 22.48918490370097,
+      "fitted_quantile": 11.977094227406113
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.01,
+      "empirical_quantile": 0.10551819176475123,
+      "fitted_quantile": 0.17895468097471648
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.02,
+      "empirical_quantile": 0.1995837310101029,
+      "fitted_quantile": 0.22712379574767644
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.03,
+      "empirical_quantile": 0.28270493129236013,
+      "fitted_quantile": 0.26420588613351875
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.04,
+      "empirical_quantile": 0.3563186088159149,
+      "fitted_quantile": 0.29604033194396995
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.05,
+      "empirical_quantile": 0.42469645161406544,
+      "fitted_quantile": 0.3247437483375116
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 0.4832206203356985,
+      "fitted_quantile": 0.35135709733061404
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 0.5373397860710696,
+      "fitted_quantile": 0.3764804201578912
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.08,
+      "empirical_quantile": 0.5842457944729572,
+      "fitted_quantile": 0.4004959633678821
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09,
+      "empirical_quantile": 0.6260618631844207,
+      "fitted_quantile": 0.4236647899856205
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 0.6621816116966951,
+      "fitted_quantile": 0.446174673813281
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.11,
+      "empirical_quantile": 0.6976895082736684,
+      "fitted_quantile": 0.4681662390577006
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.12,
+      "empirical_quantile": 0.7286239603690831,
+      "fitted_quantile": 0.48974829624642596
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.13,
+      "empirical_quantile": 0.7573792125147079,
+      "fitted_quantile": 0.5110073631566084
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.14,
+      "empirical_quantile": 0.7816488323009326,
+      "fitted_quantile": 0.5320138513029044
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 0.8043223977792627,
+      "fitted_quantile": 0.5528262398916198
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.16,
+      "empirical_quantile": 0.8265464040680458,
+      "fitted_quantile": 0.5734939825556842
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.17,
+      "empirical_quantile": 0.8457461212686295,
+      "fitted_quantile": 0.594059587250359
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 0.8633647767741947,
+      "fitted_quantile": 0.6145601400296893
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.19,
+      "empirical_quantile": 0.8804363226490192,
+      "fitted_quantile": 0.6350284448781176
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.2,
+      "empirical_quantile": 0.895461084029334,
+      "fitted_quantile": 0.6554938923757994
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 0.909687615495384,
+      "fitted_quantile": 0.6759831330072174
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.22,
+      "empirical_quantile": 0.9239141469614345,
+      "fitted_quantile": 0.696520607254283
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.23,
+      "empirical_quantile": 0.9364483252378271,
+      "fitted_quantile": 0.7171289690791505
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 0.9483862660860352,
+      "fitted_quantile": 0.7378294289750775
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.25,
+      "empirical_quantile": 0.9594804756265597,
+      "fitted_quantile": 0.7586420356251548
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.26,
+      "empirical_quantile": 0.969282754784774,
+      "fitted_quantile": 0.7795859102334416
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.27,
+      "empirical_quantile": 0.9794321578048797,
+      "fitted_quantile": 0.8006794440692294
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.28,
+      "empirical_quantile": 0.9895083299579424,
+      "fitted_quantile": 0.8219404672329836
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 0.9978369333961489,
+      "fitted_quantile": 0.8433863948091552
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.3,
+      "empirical_quantile": 1.0074710167519234,
+      "fitted_quantile": 0.8650343552135529
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.31,
+      "empirical_quantile": 1.014737040594692,
+      "fitted_quantile": 0.8869013045331559
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.32,
+      "empirical_quantile": 1.0217172865990742,
+      "fitted_quantile": 0.90900412989861
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.33,
+      "empirical_quantile": 1.0302902941305279,
+      "fitted_quantile": 0.9313597443573892
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.34,
+      "empirical_quantile": 1.0381676906439379,
+      "fitted_quantile": 0.953985175281308
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.046291258186522,
+      "fitted_quantile": 0.9768976480118833
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.0538251468400017,
+      "fitted_quantile": 1.0001146661964244
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.37,
+      "empirical_quantile": 1.0607477382402308,
+      "fitted_quantile": 1.0236540900788795
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.38,
+      "empirical_quantile": 1.0659504354564806,
+      "fitted_quantile": 1.04753421386936
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.39,
+      "empirical_quantile": 1.07086522977397,
+      "fitted_quantile": 1.0717738432153328
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.4,
+      "empirical_quantile": 1.078228189896222,
+      "fitted_quantile": 1.0963923737288228
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.0867739406332655,
+      "fitted_quantile": 1.1214098714825342
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.0946213551899922,
+      "fitted_quantile": 1.146847156370145
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.43,
+      "empirical_quantile": 1.1030375278233155,
+      "fitted_quantile": 1.172725889229766
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.44,
+      "empirical_quantile": 1.1102354398934082,
+      "fitted_quantile": 1.1990686636534087
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.45,
+      "empirical_quantile": 1.1151886256290673,
+      "fitted_quantile": 1.2258991034486681
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.46,
+      "empirical_quantile": 1.1169432969438846,
+      "fitted_quantile": 1.2532419667819852
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.1254722608486045,
+      "fitted_quantile": 1.2811232581166625
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.1347575559013348,
+      "fitted_quantile": 1.3095703491649047
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.49,
+      "empirical_quantile": 1.1445871445363138,
+      "fitted_quantile": 1.3386121102038828
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5,
+      "empirical_quantile": 1.1550529958290534,
+      "fitted_quantile": 1.368279053264293
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.51,
+      "empirical_quantile": 1.164246321806272,
+      "fitted_quantile": 1.3986034888902046
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.52,
+      "empirical_quantile": 1.1728784476173124,
+      "fitted_quantile": 1.4296196983962706
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.53,
+      "empirical_quantile": 1.1838340986265563,
+      "fitted_quantile": 1.4613641238190245
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.54,
+      "empirical_quantile": 1.1974577073853665,
+      "fitted_quantile": 1.493875578081018
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.55,
+      "empirical_quantile": 1.211704879062658,
+      "fitted_quantile": 1.5271954782698185
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.56,
+      "empirical_quantile": 1.2269387560168645,
+      "fitted_quantile": 1.5613681053906574
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2427382518184746,
+      "fitted_quantile": 1.596440894497062
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2620436402801352,
+      "fitted_quantile": 1.6324647597570374
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.59,
+      "empirical_quantile": 1.2826486098358576,
+      "fitted_quantile": 1.6694944597970651
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6,
+      "empirical_quantile": 1.304867212917312,
+      "fitted_quantile": 1.707589009612073
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.61,
+      "empirical_quantile": 1.3297549008326832,
+      "fitted_quantile": 1.746812146474155
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.62,
+      "empirical_quantile": 1.359328579810053,
+      "fitted_quantile": 1.7872328586637591
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.63,
+      "empirical_quantile": 1.3899290194718774,
+      "fitted_quantile": 1.8289259875448405
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.64,
+      "empirical_quantile": 1.4262990862395697,
+      "fitted_quantile": 1.8719729155877904
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.65,
+      "empirical_quantile": 1.4657124915229878,
+      "fitted_quantile": 1.9164623555108165
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.66,
+      "empirical_quantile": 1.5099732589957688,
+      "fitted_quantile": 1.962491258891697
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.67,
+      "empirical_quantile": 1.5566609272016634,
+      "fitted_quantile": 2.0101658665670423
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.68,
+      "empirical_quantile": 1.6121089746627875,
+      "fitted_quantile": 2.059602928108427
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.6714849100209486,
+      "fitted_quantile": 2.1109311239397783
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.736140160937838,
+      "fitted_quantile": 2.1642927316333456
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8072444247836963,
+      "fitted_quantile": 2.2198455881250925
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.72,
+      "empirical_quantile": 1.8831832789744236,
+      "fitted_quantile": 2.277765412748741
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.73,
+      "empirical_quantile": 1.967045612071029,
+      "fitted_quantile": 2.3382485730955698
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.74,
+      "empirical_quantile": 2.0528116461288115,
+      "fitted_quantile": 2.401515398144146
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.75,
+      "empirical_quantile": 2.14011474053898,
+      "fitted_quantile": 2.4678141728055767
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.76,
+      "empirical_quantile": 2.222160725194635,
+      "fitted_quantile": 2.5374259877414964
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.77,
+      "empirical_quantile": 2.295332019751275,
+      "fitted_quantile": 2.610670671979497
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.78,
+      "empirical_quantile": 2.3626140658503907,
+      "fitted_quantile": 2.687914109220805
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.79,
+      "empirical_quantile": 2.4254901374449696,
+      "fitted_quantile": 2.7695773403000588
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8,
+      "empirical_quantile": 2.490906289018198,
+      "fitted_quantile": 2.856147996766523
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.81,
+      "empirical_quantile": 2.560438269614279,
+      "fitted_quantile": 2.9481948134798333
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.63809263005796,
+      "fitted_quantile": 3.0463862617438644
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.723776072722721,
+      "fitted_quantile": 3.1515147769390692
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.817513719711039,
+      "fitted_quantile": 3.264528703960809
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.85,
+      "empirical_quantile": 2.9230660211052526,
+      "fitted_quantile": 3.3865750800267143
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.86,
+      "empirical_quantile": 3.0403826903441673,
+      "fitted_quantile": 3.5190579399706112
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.87,
+      "empirical_quantile": 3.1717573579623077,
+      "fitted_quantile": 3.663719356286576
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.88,
+      "empirical_quantile": 3.317419048943943,
+      "fitted_quantile": 3.8227546312071374
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.89,
+      "empirical_quantile": 3.476397198923465,
+      "fitted_quantile": 3.9989803010359486
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9,
+      "empirical_quantile": 3.6462397325933043,
+      "fitted_quantile": 4.196086594519076
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.91,
+      "empirical_quantile": 3.8403879823449083,
+      "fitted_quantile": 4.419030355733298
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.92,
+      "empirical_quantile": 4.08571233263567,
+      "fitted_quantile": 4.674672752898888
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.93,
+      "empirical_quantile": 4.402198034393535,
+      "fitted_quantile": 4.972868354791619
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 4.839359409848244,
+      "fitted_quantile": 5.328446705148442
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 5.473851575395641,
+      "fitted_quantile": 5.765122738116687
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.444284935371385,
+      "fitted_quantile": 6.324096299000812
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.97,
+      "empirical_quantile": 8.072230764597142,
+      "fitted_quantile": 7.0860933304707014
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.98,
+      "empirical_quantile": 11.474656416913223,
+      "fitted_quantile": 8.243026942371724
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.99,
+      "empirical_quantile": 22.48918490370097,
+      "fitted_quantile": 10.461797128773297
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.01,
+      "empirical_quantile": 0.10551819176475123,
+      "fitted_quantile": 0.008926931221201683
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.02,
+      "empirical_quantile": 0.1995837310101029,
+      "fitted_quantile": 0.020510722215408488
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.03,
+      "empirical_quantile": 0.28270493129236013,
+      "fitted_quantile": 0.03345224196421695
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.04,
+      "empirical_quantile": 0.3563186088159149,
+      "fitted_quantile": 0.04741843173679271
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.05,
+      "empirical_quantile": 0.42469645161406544,
+      "fitted_quantile": 0.06224404983595032
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 0.4832206203356985,
+      "fitted_quantile": 0.07783042527230266
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 0.5373397860710696,
+      "fitted_quantile": 0.09411274925608382
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.08,
+      "empirical_quantile": 0.5842457944729572,
+      "fitted_quantile": 0.11104600510442597
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09,
+      "empirical_quantile": 0.6260618631844207,
+      "fitted_quantile": 0.12859785180382402
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 0.6621816116966951,
+      "fitted_quantile": 0.14674461947757314
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.11,
+      "empirical_quantile": 0.6976895082736684,
+      "fitted_quantile": 0.16546887775476207
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.12,
+      "empirical_quantile": 0.7286239603690831,
+      "fitted_quantile": 0.18475787250902836
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.13,
+      "empirical_quantile": 0.7573792125147079,
+      "fitted_quantile": 0.2046024754344306
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.14,
+      "empirical_quantile": 0.7816488323009326,
+      "fitted_quantile": 0.22499645311480918
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 0.8043223977792627,
+      "fitted_quantile": 0.24593594401003147
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.16,
+      "empirical_quantile": 0.8265464040680458,
+      "fitted_quantile": 0.26741907577677276
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.17,
+      "empirical_quantile": 0.8457461212686295,
+      "fitted_quantile": 0.2894456803098712
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 0.8633647767741947,
+      "fitted_quantile": 0.31201707870800616
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.19,
+      "empirical_quantile": 0.8804363226490192,
+      "fitted_quantile": 0.33513591750181304
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.2,
+      "empirical_quantile": 0.895461084029334,
+      "fitted_quantile": 0.3588060433012394
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 0.909687615495384,
+      "fitted_quantile": 0.3830324068334155
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.22,
+      "empirical_quantile": 0.9239141469614345,
+      "fitted_quantile": 0.4078209899072747
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.23,
+      "empirical_quantile": 0.9364483252378271,
+      "fitted_quantile": 0.4331787506056665
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 0.9483862660860352,
+      "fitted_quantile": 0.45911358324499396
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.25,
+      "empirical_quantile": 0.9594804756265597,
+      "fitted_quantile": 0.4856342905296598
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.26,
+      "empirical_quantile": 0.969282754784774,
+      "fitted_quantile": 0.5127505659754158
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.27,
+      "empirical_quantile": 0.9794321578048797,
+      "fitted_quantile": 0.5404729851555302
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.28,
+      "empirical_quantile": 0.9895083299579424,
+      "fitted_quantile": 0.5688130046858767
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 0.9978369333961489,
+      "fitted_quantile": 0.5977829681433086
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.3,
+      "empirical_quantile": 1.0074710167519234,
+      "fitted_quantile": 0.6273961183295165
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.31,
+      "empirical_quantile": 1.014737040594692,
+      "fitted_quantile": 0.6576666154665805
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.32,
+      "empirical_quantile": 1.0217172865990742,
+      "fitted_quantile": 0.688609561052559
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.33,
+      "empirical_quantile": 1.0302902941305279,
+      "fitted_quantile": 0.7202410272244811
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.34,
+      "empirical_quantile": 1.0381676906439379,
+      "fitted_quantile": 0.752578091578525
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.046291258186522,
+      "fitted_quantile": 0.7856388774879675
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.0538251468400017,
+      "fitted_quantile": 0.819442600042543
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.37,
+      "empirical_quantile": 1.0607477382402308,
+      "fitted_quantile": 0.8540096178112796
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.38,
+      "empirical_quantile": 1.0659504354564806,
+      "fitted_quantile": 0.8893614907072854
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.39,
+      "empirical_quantile": 1.07086522977397,
+      "fitted_quantile": 0.9255210443095695
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.4,
+      "empirical_quantile": 1.078228189896222,
+      "fitted_quantile": 0.9625124410758643
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.0867739406332655,
+      "fitted_quantile": 1.0003612589634527
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.0946213551899922,
+      "fitted_quantile": 1.0390945780641514
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.43,
+      "empirical_quantile": 1.1030375278233155,
+      "fitted_quantile": 1.0787410759568057
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.44,
+      "empirical_quantile": 1.1102354398934082,
+      "fitted_quantile": 1.1193311325880329
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.45,
+      "empirical_quantile": 1.1151886256290673,
+      "fitted_quantile": 1.1608969456118419
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.46,
+      "empirical_quantile": 1.1169432969438846,
+      "fitted_quantile": 1.2034726572537957
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.1254722608486045,
+      "fitted_quantile": 1.247094493918541
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.1347575559013348,
+      "fitted_quantile": 1.291800919934358
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.49,
+      "empirical_quantile": 1.1445871445363138,
+      "fitted_quantile": 1.3376328070289731
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5,
+      "empirical_quantile": 1.1550529958290534,
+      "fitted_quantile": 1.384633621362099
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.51,
+      "empirical_quantile": 1.164246321806272,
+      "fitted_quantile": 1.432849630207892
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.52,
+      "empirical_quantile": 1.1728784476173124,
+      "fitted_quantile": 1.4823301306916477
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.53,
+      "empirical_quantile": 1.1838340986265563,
+      "fitted_quantile": 1.5331277033481794
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.54,
+      "empirical_quantile": 1.1974577073853665,
+      "fitted_quantile": 1.5852984936945003
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.55,
+      "empirical_quantile": 1.211704879062658,
+      "fitted_quantile": 1.6389025255093326
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.56,
+      "empirical_quantile": 1.2269387560168645,
+      "fitted_quantile": 1.6940040501017313
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2427382518184746,
+      "fitted_quantile": 1.7506719365496342
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2620436402801352,
+      "fitted_quantile": 1.8089801087196364
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.59,
+      "empirical_quantile": 1.2826486098358576,
+      "fitted_quantile": 1.8690080358706325
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6,
+      "empirical_quantile": 1.304867212917312,
+      "fitted_quantile": 1.9308412848321586
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.61,
+      "empirical_quantile": 1.3297549008326832,
+      "fitted_quantile": 1.9945721431785237
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.62,
+      "empirical_quantile": 1.359328579810053,
+      "fitted_quantile": 2.060300324549136
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.63,
+      "empirical_quantile": 1.3899290194718774,
+      "fitted_quantile": 2.1281337693660323
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.64,
+      "empirical_quantile": 1.4262990862395697,
+      "fitted_quantile": 2.1981895567637353
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.65,
+      "empirical_quantile": 1.4657124915229878,
+      "fitted_quantile": 2.270594946692441
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.66,
+      "empirical_quantile": 1.5099732589957688,
+      "fitted_quantile": 2.345488575036007
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.67,
+      "empirical_quantile": 1.5566609272016634,
+      "fitted_quantile": 2.4230218293998336
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.68,
+      "empirical_quantile": 1.6121089746627875,
+      "fitted_quantile": 2.5033604392307143
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.6714849100209486,
+      "fitted_quantile": 2.5866863214742546
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.736140160937838,
+      "fitted_quantile": 2.6731997325118377
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8072444247836963,
+      "fitted_quantile": 2.7631217892605524
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.72,
+      "empirical_quantile": 1.8831832789744236,
+      "fitted_quantile": 2.856697437893934
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.73,
+      "empirical_quantile": 1.967045612071029,
+      "fitted_quantile": 2.9541989687800165
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.74,
+      "empirical_quantile": 2.0528116461288115,
+      "fitted_quantile": 3.0559302024965755
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.75,
+      "empirical_quantile": 2.14011474053898,
+      "fitted_quantile": 3.162231506348101
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.76,
+      "empirical_quantile": 2.222160725194635,
+      "fitted_quantile": 3.2734858467453303
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.77,
+      "empirical_quantile": 2.295332019751275,
+      "fitted_quantile": 3.390126144501912
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.78,
+      "empirical_quantile": 2.3626140658503907,
+      "fitted_quantile": 3.5126442839014693
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.79,
+      "empirical_quantile": 2.4254901374449696,
+      "fitted_quantile": 3.641602241612175
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8,
+      "empirical_quantile": 2.490906289018198,
+      "fitted_quantile": 3.7776459620728153
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.81,
+      "empirical_quantile": 2.560438269614279,
+      "fitted_quantile": 3.921522832919631
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.63809263005796,
+      "fitted_quantile": 4.074103939917928
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.723776072722721,
+      "fitted_quantile": 4.2364127569977175
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.817513719711039,
+      "fitted_quantile": 4.4096626359885045
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.85,
+      "empirical_quantile": 2.9230660211052526,
+      "fitted_quantile": 4.595306538862117
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.86,
+      "empirical_quantile": 3.0403826903441673,
+      "fitted_quantile": 4.795104133925301
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.87,
+      "empirical_quantile": 3.1717573579623077,
+      "fitted_quantile": 5.0112140604638284
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.88,
+      "empirical_quantile": 3.317419048943943,
+      "fitted_quantile": 5.246323584154564
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.89,
+      "empirical_quantile": 3.476397198923465,
+      "fitted_quantile": 5.5038353901094075
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9,
+      "empirical_quantile": 3.6462397325933043,
+      "fitted_quantile": 5.788144585086217
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.91,
+      "empirical_quantile": 3.8403879823449083,
+      "fitted_quantile": 6.1050636691853155
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.92,
+      "empirical_quantile": 4.08571233263567,
+      "fitted_quantile": 6.462501492354228
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.93,
+      "empirical_quantile": 4.402198034393535,
+      "fitted_quantile": 6.871602768341521
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 4.839359409848244,
+      "fitted_quantile": 7.348781378153423
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 5.473851575395641,
+      "fitted_quantile": 7.919644644497357
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.444284935371385,
+      "fitted_quantile": 8.62740214941767
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.97,
+      "empirical_quantile": 8.072230764597142,
+      "fitted_quantile": 9.553750820084584
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.98,
+      "empirical_quantile": 11.474656416913223,
+      "fitted_quantile": 10.88407528626206
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.99,
+      "empirical_quantile": 22.48918490370097,
+      "fitted_quantile": 13.218986515907522
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.01,
+      "empirical_quantile": 0.10551819176475123,
+      "fitted_quantile": 0.025415682615218888
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.02,
+      "empirical_quantile": 0.1995837310101029,
+      "fitted_quantile": 0.051089396875363915
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.03,
+      "empirical_quantile": 0.28270493129236013,
+      "fitted_quantile": 0.07702643587505073
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.04,
+      "empirical_quantile": 0.3563186088159149,
+      "fitted_quantile": 0.10323225726686013
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.05,
+      "empirical_quantile": 0.42469645161406544,
+      "fitted_quantile": 0.12971249015412675
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 0.4832206203356985,
+      "fitted_quantile": 0.15647294234844553
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 0.5373397860710696,
+      "fitted_quantile": 0.18351960801530165
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.08,
+      "empirical_quantile": 0.5842457944729572,
+      "fitted_quantile": 0.21085867573300154
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09,
+      "empirical_quantile": 0.6260618631844207,
+      "fitted_quantile": 0.23849653699200782
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 0.6621816116966951,
+      "fitted_quantile": 0.266439795163879
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.11,
+      "empirical_quantile": 0.6976895082736684,
+      "fitted_quantile": 0.29469527497129777
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.12,
+      "empirical_quantile": 0.7286239603690831,
+      "fitted_quantile": 0.32327003249316166
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.13,
+      "empirical_quantile": 0.7573792125147079,
+      "fitted_quantile": 0.35217136574143093
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.14,
+      "empirical_quantile": 0.7816488323009326,
+      "fitted_quantile": 0.38140682584939284
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 0.8043223977792627,
+      "fitted_quantile": 0.4109842289142552
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.16,
+      "empirical_quantile": 0.8265464040680458,
+      "fitted_quantile": 0.44091166854053243
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.17,
+      "empirical_quantile": 0.8457461212686295,
+      "fitted_quantile": 0.4711975291345849
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 0.8633647767741947,
+      "fitted_quantile": 0.5018505000049451
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.19,
+      "empirical_quantile": 0.8804363226490192,
+      "fitted_quantile": 0.5328795903277581
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.2,
+      "empirical_quantile": 0.895461084029334,
+      "fitted_quantile": 0.5642941450418218
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 0.909687615495384,
+      "fitted_quantile": 0.5961038617433926
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.22,
+      "empirical_quantile": 0.9239141469614345,
+      "fitted_quantile": 0.6283188086571764
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.23,
+      "empirical_quantile": 0.9364483252378271,
+      "fitted_quantile": 0.660949443766834
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 0.9483862660860352,
+      "fitted_quantile": 0.6940066351959486
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.25,
+      "empirical_quantile": 0.9594804756265597,
+      "fitted_quantile": 0.7275016829388407
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.26,
+      "empirical_quantile": 0.969282754784774,
+      "fitted_quantile": 0.7614463420499552
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.27,
+      "empirical_quantile": 0.9794321578048797,
+      "fitted_quantile": 0.7958528474108978
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.28,
+      "empirical_quantile": 0.9895083299579424,
+      "fitted_quantile": 0.830733940205701
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 0.9978369333961489,
+      "fitted_quantile": 0.8661028962476823
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.3,
+      "empirical_quantile": 1.0074710167519234,
+      "fitted_quantile": 0.9019735563154943
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.31,
+      "empirical_quantile": 1.014737040594692,
+      "fitted_quantile": 0.9383603586718425
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.32,
+      "empirical_quantile": 1.0217172865990742,
+      "fitted_quantile": 0.9752783739560773
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.33,
+      "empirical_quantile": 1.0302902941305279,
+      "fitted_quantile": 1.0127433426616945
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.34,
+      "empirical_quantile": 1.0381676906439379,
+      "fitted_quantile": 1.0507717154320029
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.046291258186522,
+      "fitted_quantile": 1.0893806964321384
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.0538251468400017,
+      "fitted_quantile": 1.1285882900836441
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.37,
+      "empirical_quantile": 1.0607477382402308,
+      "fitted_quantile": 1.168413351479373
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.38,
+      "empirical_quantile": 1.0659504354564806,
+      "fitted_quantile": 1.2088756408320853
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.39,
+      "empirical_quantile": 1.07086522977397,
+      "fitted_quantile": 1.2499958823503157
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.4,
+      "empirical_quantile": 1.078228189896222,
+      "fitted_quantile": 1.2917958279806627
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.0867739406332655,
+      "fitted_quantile": 1.3342983265072923
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.0946213551899922,
+      "fitted_quantile": 1.3775273985582148
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.43,
+      "empirical_quantile": 1.1030375278233155,
+      "fitted_quantile": 1.421508318134789
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.44,
+      "empirical_quantile": 1.1102354398934082,
+      "fitted_quantile": 1.4662677013573158
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.45,
+      "empirical_quantile": 1.1151886256290673,
+      "fitted_quantile": 1.5118336032069641
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.46,
+      "empirical_quantile": 1.1169432969438846,
+      "fitted_quantile": 1.5582356231445416
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.1254722608486045,
+      "fitted_quantile": 1.6055050206018229
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.1347575559013348,
+      "fitted_quantile": 1.6536748414739597
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.49,
+      "empirical_quantile": 1.1445871445363138,
+      "fitted_quantile": 1.7027800568949178
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5,
+      "empirical_quantile": 1.1550529958290534,
+      "fitted_quantile": 1.7528577157556242
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.51,
+      "empirical_quantile": 1.164246321806272,
+      "fitted_quantile": 1.8039471126309883
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.52,
+      "empirical_quantile": 1.1728784476173124,
+      "fitted_quantile": 1.8560899730224845
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.53,
+      "empirical_quantile": 1.1838340986265563,
+      "fitted_quantile": 1.9093306581040699
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.54,
+      "empirical_quantile": 1.1974577073853665,
+      "fitted_quantile": 1.963716391488626
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.55,
+      "empirical_quantile": 1.211704879062658,
+      "fitted_quantile": 2.0192975109195035
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.56,
+      "empirical_quantile": 1.2269387560168645,
+      "fitted_quantile": 2.0761277482487865
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2427382518184746,
+      "fitted_quantile": 2.1342645416050177
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2620436402801352,
+      "fitted_quantile": 2.193769384296157
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.59,
+      "empirical_quantile": 1.2826486098358576,
+      "fitted_quantile": 2.2547082157605693
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6,
+      "empirical_quantile": 1.304867212917312,
+      "fitted_quantile": 2.317151860797446
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.61,
+      "empirical_quantile": 1.3297549008326832,
+      "fitted_quantile": 2.3811765244128007
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.62,
+      "empirical_quantile": 1.359328579810053,
+      "fitted_quantile": 2.446864350951573
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.63,
+      "empirical_quantile": 1.3899290194718774,
+      "fitted_quantile": 2.5143040578055795
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.64,
+      "empirical_quantile": 1.4262990862395697,
+      "fitted_quantile": 2.5835916559613255
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.65,
+      "empirical_quantile": 1.4657124915229878,
+      "fitted_quantile": 2.6548312720711187
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.66,
+      "empirical_quantile": 1.5099732589957688,
+      "fitted_quantile": 2.7281360897117013
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.67,
+      "empirical_quantile": 1.5566609272016634,
+      "fitted_quantile": 2.8036294311876273
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.68,
+      "empirical_quantile": 1.6121089746627875,
+      "fitted_quantile": 2.8814460058392686
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 1.6714849100209486,
+      "fitted_quantile": 2.96173335658771
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 1.736140160937838,
+      "fitted_quantile": 3.0446535437362874
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 1.8072444247836963,
+      "fitted_quantile": 3.1303851143138397
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.72,
+      "empirical_quantile": 1.8831832789744236,
+      "fitted_quantile": 3.21912541711294
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.73,
+      "empirical_quantile": 1.967045612071029,
+      "fitted_quantile": 3.3110933389001658
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.74,
+      "empirical_quantile": 2.0528116461288115,
+      "fitted_quantile": 3.406532557229584
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.75,
+      "empirical_quantile": 2.14011474053898,
+      "fitted_quantile": 3.5057154315112484
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.76,
+      "empirical_quantile": 2.222160725194635,
+      "fitted_quantile": 3.608947688778109
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.77,
+      "empirical_quantile": 2.295332019751275,
+      "fitted_quantile": 3.7165741072442504
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.78,
+      "empirical_quantile": 2.3626140658503907,
+      "fitted_quantile": 3.8289854640044108
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.79,
+      "empirical_quantile": 2.4254901374449696,
+      "fitted_quantile": 3.9466271000517814
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8,
+      "empirical_quantile": 2.490906289018198,
+      "fitted_quantile": 4.070009576553071
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.81,
+      "empirical_quantile": 2.560438269614279,
+      "fitted_quantile": 4.1997220667071975
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.63809263005796,
+      "fitted_quantile": 4.3364493717169506
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.723776072722721,
+      "fitted_quantile": 4.480993805467326
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.817513719711039,
+      "fitted_quantile": 4.634303721594894
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.85,
+      "empirical_quantile": 2.9230660211052526,
+      "fitted_quantile": 4.797511259491911
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.86,
+      "empirical_quantile": 3.0403826903441673,
+      "fitted_quantile": 4.971983132868565
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.87,
+      "empirical_quantile": 3.1717573579623077,
+      "fitted_quantile": 5.159390272985209
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.88,
+      "empirical_quantile": 3.317419048943943,
+      "fitted_quantile": 5.361805404533733
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.89,
+      "empirical_quantile": 3.476397198923465,
+      "fitted_quantile": 5.581843179760035
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9,
+      "empirical_quantile": 3.6462397325933043,
+      "fitted_quantile": 5.822867292308695
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.91,
+      "empirical_quantile": 3.8403879823449083,
+      "fitted_quantile": 6.089307087472575
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.92,
+      "empirical_quantile": 4.08571233263567,
+      "fitted_quantile": 6.387161437350518
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.93,
+      "empirical_quantile": 4.402198034393535,
+      "fitted_quantile": 6.724840848624191
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 4.839359409848244,
+      "fitted_quantile": 7.11466312028936
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 5.473851575395641,
+      "fitted_quantile": 7.575725008064322
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 6.444284935371385,
+      "fitted_quantile": 8.140019153106147
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.97,
+      "empirical_quantile": 8.072230764597142,
+      "fitted_quantile": 8.86752083604498
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.98,
+      "empirical_quantile": 11.474656416913223,
+      "fitted_quantile": 9.892876868861762
+    },
+    {
+      "scenario": "TRIP_LEVEL_NEW_E_ALL_SAFE_B_INTERPOLATED_ACTUAL_TRIP",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.99,
+      "empirical_quantile": 22.48918490370097,
+      "fitted_quantile": 11.645734584617388
+    }
+  ],
+  "curves": []
+}

@@ -1,0 +1,5096 @@
+{
+  "version": 3,
+  "rows": [
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[1.4506063984696778, 1.1806798303597854]",
+      "log_likelihood": -12596099.714919087,
+      "AIC": 25192203.429838173,
+      "BIC": 25192231.206428405,
+      "AIC_effective_N": 50.90039608000488,
+      "BIC_effective_N": 52.28894863701825,
+      "KS": 0.27779452165642937,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.585028933208105,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.2778; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 7946921.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 14.794807557575082,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7636386.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 13.9769005739372,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.09238596935845,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[1.6457216567434192, 0.6902473760666197]",
+      "log_likelihood": -8004714.124351674,
+      "AIC": 16009432.248703348,
+      "BIC": 16009459.945573373,
+      "AIC_effective_N": 33.30210532543905,
+      "BIC_effective_N": 34.576917341297644,
+      "KS": 0.37915870195635093,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.0482333036009013,
+      "support_compatibility": "COMPATIBLE_BASELINE_ALLOWS_NEGATIVE",
+      "qualitative_fit": "Descriptive KS=0.3792; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7636386.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 13.9769005739372,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.09238596935845,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": "[6.135046595603618, 0.0, 0.26824925142748635]",
+      "log_likelihood": -7281448.545865856,
+      "AIC": 14562901.091731712,
+      "BIC": 14562928.788601737,
+      "AIC_effective_N": 30.654514939346086,
+      "BIC_effective_N": 31.92932695520468,
+      "KS": 0.36173204993696184,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.9535202314112794,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.3617; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7636386.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 13.9769005739372,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.09238596935845,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": "[0.40472191842232236, 0.0, 1.5135710520709655]",
+      "log_likelihood": -7093097.289993397,
+      "AIC": 14186198.579986794,
+      "BIC": 14186226.27685682,
+      "AIC_effective_N": 29.965035183790114,
+      "BIC_effective_N": 31.239847199648707,
+      "KS": 0.3490373351770365,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.9288552582325459,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.3490; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7636386.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 13.9769005739372,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.09238596935845,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": "[2.5851076400571382, 0.0, 1.8626303910186548]",
+      "log_likelihood": -7645249.649973206,
+      "AIC": 15290503.299946412,
+      "BIC": 15290530.996816438,
+      "AIC_effective_N": 31.986247479004778,
+      "BIC_effective_N": 33.26105949486337,
+      "KS": 0.36302060255112645,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.00116071266869,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.3630; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7636386.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 13.9769005739372,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.09238596935845,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": "[0.0, 1.6457216567434192]",
+      "log_likelihood": -11440673.027513098,
+      "AIC": 22881348.055026196,
+      "BIC": 22881361.903461207,
+      "AIC_effective_N": 43.879797434146376,
+      "BIC_effective_N": 44.51720344207567,
+      "KS": 0.4194184502752599,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.4981789851263538,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.4194; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_COUNT_WEIGHTED",
+      "L_base_candidate": "A_LOWER_EDGE",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 7636386.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 13.9769005739372,
+      "original_negative_mass": 310535.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 96.09238596935845,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    }
+  ],
+  "qq": [
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": -3.347485367894762,
+      "fitted_quantile": -1.2960656148107095
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": -3.347485367894762,
+      "fitted_quantile": -0.9742135169366972
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": -3.347485367894762,
+      "fitted_quantile": -0.7700086797441101
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": -0.616393335149573
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": -0.49143910276606495
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": -0.38508342544680896
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": -0.29183030232739915
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": -0.20833325300005856
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": -0.1323960272617155
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": -0.0624956865348385
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.002469385773346655
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.06332319213809812
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.1206991113173792
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.1750951424218805
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.22691039998293316
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.276470033621635
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.3240427292498276
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.36985330183815424
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.414091949755109
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.4569211831876161
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.49848109734165524
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.5388934453364039
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.5782648259118177
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.6166892083929617
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.654249954628754
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.6910214543676212
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.7270704601938937
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.7624571865380566
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.7972362216609887
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.8314572900849635
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.8651658944796459
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.8984038596716848
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.9312097966495679
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.9636195007711338
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.9956662955574374
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.0273813312628852
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.05879384569433
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.0899313933983077
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.1208200482619985
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.1514845837171586
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.1819486340497842
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.2122348397657305
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.2423649795163616
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.2723600907273929
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.3022405807820467
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.3320263303737936
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.3617367904544464
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.3913910740526008
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4210080441194777
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4506063984696778
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4802047528198778
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5098217228867548
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5394760064849093
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5691864665655622
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.5989722161573088
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6288527062119629
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6588478174229941
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6889779571736254
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7192641628895713
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.749728213222197
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.780392748677357
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8112814035410478
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8424189512450255
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8738314656764707
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.9055465013819182
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.9375932961682218
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 2.303545658858684,
+      "fitted_quantile": 1.9700030002897877
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 2.303545658858684,
+      "fitted_quantile": 2.002808937267671
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 2.03604690245971
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 2.069755506854392
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 2.1039765752783675
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 2.339520693038126,
+      "fitted_quantile": 2.138755610401299
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 2.3652911657849405,
+      "fitted_quantile": 2.174142336745462
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.2101913425717346
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.2469628423106016
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.284523588546394
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 2.4293856166591827,
+      "fitted_quantile": 2.3229479710275376
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 2.4442283987523097,
+      "fitted_quantile": 2.3623193516029515
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 2.465151280902242,
+      "fitted_quantile": 2.4027316995977004
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 2.496881736808508,
+      "fitted_quantile": 2.4442916137517394
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.4871208471842468
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.531359495101202
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.5771700676895284
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.521111281911598,
+      "fitted_quantile": 2.6247427633177205
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.5480482981467754,
+      "fitted_quantile": 2.6743023969564224
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 2.574302547237731,
+      "fitted_quantile": 2.7261176545174752
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 2.595121831252126,
+      "fitted_quantile": 2.780513685621976
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 2.6406563512336954,
+      "fitted_quantile": 2.8378896048012576
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 2.660450846716241,
+      "fitted_quantile": 2.8987434111660093
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 2.6638132448329244,
+      "fitted_quantile": 2.963708483474194
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 2.6819127481496254,
+      "fitted_quantile": 3.033608824201071
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 2.683689939868649,
+      "fitted_quantile": 3.1095460499394143
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 2.6863639038631373,
+      "fitted_quantile": 3.1930430992667547
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.694120571269393,
+      "fitted_quantile": 3.286296222386165
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.6962701184216487,
+      "fitted_quantile": 3.392651899705421
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7155249801409065,
+      "fitted_quantile": 3.51760613208893
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.671221476683465
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.875426313876052
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 4.197278411750065
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.039966140868569866
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.22812686008012473
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.34750880379414806
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.43731518974522987
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.5103657567265025
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.5725432626952747
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.6270607719200876
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.675874699053864
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.7202690127906349
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.7611340513321903
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.7991138402162253
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.8346901066068656
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.8682331354996696
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9000340664318757
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9303262291774983
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9592997122491221
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9871115944253167
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 1.013893306716926
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0397560426257018
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0647948086277634
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0890915069847074
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1127173168332303
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1357345577782358
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.15819816603392
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.180156876486744
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.2016541787664425
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.2227290976746552
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2434168356867485
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2637493061147538
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2837555788387038
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3034622555651176
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3228937878651208
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3420727484403094
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.361020063922263
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3797552158608295
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3982964152737758
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.4166607551264796
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.4348643443190472
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.4529224261306022
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4708494835698542
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4886593336797256
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5063652125207958
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5239798522974881
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5415155518799326
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.558984241803707
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.576397544691769
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5937668319321154
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.6111032773565486
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.628417908596989
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.6457216567434192
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.6630254048898494
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.6803400361302898
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6976764815547232
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7150457687950695
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7324590716831314
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7499277616069058
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7674634611893505
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7850781009660428
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8027839798071128
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8205938299169842
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8385208873562362
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8565789691677912
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8747825583603588
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8931468982130626
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.9116880976260089
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 2.303545658858684,
+      "fitted_quantile": 1.9304232495645754
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.9493705650465292
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.9685495256217176
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 1.987981057921721
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 2.0076877346481345
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.339520693038126,
+      "fitted_quantile": 2.0276940073720846
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 2.3652911657849405,
+      "fitted_quantile": 2.04802647780009
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.068714215812183
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.089789134720396
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.1112864370000946
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 2.4293856166591827,
+      "fitted_quantile": 2.1332451474529184
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 2.4442283987523097,
+      "fitted_quantile": 2.1557087557086025
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 2.465151280902242,
+      "fitted_quantile": 2.178725996653608
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 2.496881736808508,
+      "fitted_quantile": 2.202351806502131
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.226648504859075
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.2516872708611366
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.2775500067699124
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.521111281911598,
+      "fitted_quantile": 2.304331719061522
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.5440175975676245,
+      "fitted_quantile": 2.3321436012377164
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.574302547237731,
+      "fitted_quantile": 2.36111708430934
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 2.5844202105205065,
+      "fitted_quantile": 2.3914092470549626
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 2.6250587791352102,
+      "fitted_quantile": 2.4232101779871686
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 2.6491266139101457,
+      "fitted_quantile": 2.4567532068799727
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 2.6638132448329244,
+      "fitted_quantile": 2.4923294732706136
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 2.678647449866281,
+      "fitted_quantile": 2.530309262154648
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 2.6832421207754007,
+      "fitted_quantile": 2.5711743006962036
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 2.683689939868649,
+      "fitted_quantile": 2.6155686144329744
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 2.6863639038631373,
+      "fitted_quantile": 2.664382541566751
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.694120571269393,
+      "fitted_quantile": 2.718900050791564
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.6962701184216487,
+      "fitted_quantile": 2.7810775567603363
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7341374264057,
+      "fitted_quantile": 2.854128123741609
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 2.9439345096926903
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.0633164534067134
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.2514771726182685
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.01,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.49808905129322156
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.02,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.5814614732888256
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.03,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.6393535773687633
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.04,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.6855617586967905
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.05,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.7248768880713704
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.75958664880296
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.7909790389206113
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.08,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.8198579636482626
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.8467622266080848
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.8720723843064813
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.11,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.896068279315983
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.12,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9189623953399222
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.13,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9409203452702605
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.14,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.962074054749039
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9825305764787249
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.16,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 1.0023781755408248
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.17,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 1.0216906470341138
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 1.0405304525702432
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.19,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0589510460600893
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.2,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0769986298465979
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0947135022143488
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.22,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1121311063679746
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.23,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1292828577151546
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1461968040806163
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.25,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1628981583414963
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.26,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1794097324680304
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.27,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1957522945385386
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.28,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2119448649845854
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2280049644621729
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.3,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2439488229046403
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.31,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.259791557198693
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.32,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2755473233341472
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.33,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2912294476691477
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.34,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3068505410257327
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3224225986140625
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3379570882254912
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.37,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3534650286971308
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.38,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3689570603054977
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.39,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3844435084735454
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.4,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.3999344419581303
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4154397265119865
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4309690748765804
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.43,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4465320938529673
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.44,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4621383291117533
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.45,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4777973083364322
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.46,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4935185832437863
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5093117709883306
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5251865954334
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.49,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.541152928758153
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5572208338669296
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.51,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5734006080745466
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.52,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5897028285584467
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.53,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6061384000963763
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.54,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6227186056473035
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.55,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6394551603846357
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.56,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6563602698561897
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6734466930267657
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6907278110593846
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.59,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7082177028138061
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7259312281902244
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.61,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7438841206277222
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.62,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.762093090288371
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.63,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7805759397278156
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.64,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.799351694183641
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.65,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8184407490185068
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.66,
+      "empirical_quantile": 2.303545658858684,
+      "fitted_quantile": 1.8378650373555507
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.67,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.8576482215638115
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.68,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.8778159130243475
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 1.8983959255764453
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 1.9194185692651862
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.339520693038126,
+      "fitted_quantile": 1.9409169925632892
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.72,
+      "empirical_quantile": 2.3652911657849405,
+      "fitted_quantile": 1.9629275832250246
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.73,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 1.9854904404889073
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.74,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.0086499346726323
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.75,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.0324553745676486
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.76,
+      "empirical_quantile": 2.4293856166591827,
+      "fitted_quantile": 2.0569618088207107
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.77,
+      "empirical_quantile": 2.4442283987523097,
+      "fitted_quantile": 2.082230995224873
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.78,
+      "empirical_quantile": 2.465151280902242,
+      "fitted_quantile": 2.108332582310692
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.79,
+      "empirical_quantile": 2.496881736808508,
+      "fitted_quantile": 2.135345561967637
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.163360071726911
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.81,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.1924796533540625
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.2228241144626852
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.521111281911598,
+      "fitted_quantile": 2.2545331981356447
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.5440175975676245,
+      "fitted_quantile": 2.287771351919069
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.85,
+      "empirical_quantile": 2.574302547237731,
+      "fitted_quantile": 2.3227340182893266
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.86,
+      "empirical_quantile": 2.5844202105205065,
+      "fitted_quantile": 2.3596560712147037
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.87,
+      "empirical_quantile": 2.6250587791352102,
+      "fitted_quantile": 2.398823345442433
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.88,
+      "empirical_quantile": 2.6491266139101457,
+      "fitted_quantile": 2.440588732429584
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.89,
+      "empirical_quantile": 2.6638132448329244,
+      "fitted_quantile": 2.485395209705729
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9,
+      "empirical_quantile": 2.678647449866281,
+      "fitted_quantile": 2.533809741815973
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.91,
+      "empirical_quantile": 2.6832421207754007,
+      "fitted_quantile": 2.586574883337872
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.92,
+      "empirical_quantile": 2.683689939868649,
+      "fitted_quantile": 2.6446905276622608
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.93,
+      "empirical_quantile": 2.6863639038631373,
+      "fitted_quantile": 2.709549852804253
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.694120571269393,
+      "fitted_quantile": 2.7831794598773105
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.6962701184216487,
+      "fitted_quantile": 2.8686976502097044
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7341374264057,
+      "fitted_quantile": 2.971283899796531
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.97,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.10055075468982
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.98,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.2778112754285114
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.99,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.5698989067664777
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.01,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.5903426307333458
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.02,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.6592019085406274
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.03,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.706998592897019
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.04,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.7452248966964836
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.05,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.7778383742944924
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.8067195780695575
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.8329237461849994
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.08,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.8571079004270935
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.8797115973983788
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.901044877336915
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.11,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9213355103892165
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.12,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9407563358012879
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.13,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.959442027620663
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.14,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9774998679538845
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9950169410399595
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.16,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 1.0120650947097285
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.17,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 1.0287044573822968
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 1.044985990917813
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.19,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.060953382354571
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.2,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0766444715328631
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.092092346091928
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.22,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1073261936619776
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.23,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1223719738945839
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1372529548386119
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.25,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1519901458179627
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.26,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.166602650400377
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.27,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.181107957004393
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.28,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.1955221803650702
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2098602639379672
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.3,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2241361510112516
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.31,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2383629305778134
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.32,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2525529627276404
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.33,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2667179873402217
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.34,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.280869219105818
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2950174313247569
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3091730304833031
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.37,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3233461232522612
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.38,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3375465772775834
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.39,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3517840769139602
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.4,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.3660681748800387
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.3804083406779708
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.3948140065132775
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.43,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.40929461136802
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.44,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4238596438168931
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.45,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.438518684128963
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.46,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4532814461650863
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4681578195608822
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4831579126763896
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.49,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4982920967955284
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5135710520709655
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.51,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5290058157330373
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.52,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5446078331155157
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.53,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.5603890120970811
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.54,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.576361781616645
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.55,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.5925391549949663
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.56,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6089347988865514
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6255631087976747
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6424392922422253
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.59,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6595794607717764
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6770007323158558
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.61,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.694721345510436
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.62,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.712760787986956
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.63,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7311399409529311
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.64,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7498812428342545
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.65,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7690088752888082
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.66,
+      "empirical_quantile": 2.303545658858684,
+      "fitted_quantile": 1.7885489755671526
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.67,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.80852988002286
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.68,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.8289824046069905
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 1.8499401694770443
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 1.8714399764884915
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.339520693038126,
+      "fitted_quantile": 1.8935222504213678
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.72,
+      "empirical_quantile": 2.3652911657849405,
+      "fitted_quantile": 1.9162315574669224
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.73,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 1.939617217953167
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.74,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 1.9637340347898022
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.75,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 1.9886431650338239
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.76,
+      "empirical_quantile": 2.4293856166591827,
+      "fitted_quantile": 2.014413169840752
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.77,
+      "empirical_quantile": 2.4442283987523097,
+      "fitted_quantile": 2.0411212886204666
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.78,
+      "empirical_quantile": 2.465151280902242,
+      "fitted_quantile": 2.0688549975424215
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.79,
+      "empirical_quantile": 2.496881736808508,
+      "fitted_quantile": 2.097713932219401
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.127812281806978
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.81,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.1592818004717866
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.1922756377385606
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.521111281911598,
+      "fitted_quantile": 2.226973270337299
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.5440175975676245,
+      "fitted_quantile": 2.263586938866086
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.85,
+      "empirical_quantile": 2.574302547237731,
+      "fitted_quantile": 2.3023701760020665
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.86,
+      "empirical_quantile": 2.5844202105205065,
+      "fitted_quantile": 2.343629298347166
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.87,
+      "empirical_quantile": 2.6250587791352102,
+      "fitted_quantile": 2.387739189775172
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.88,
+      "empirical_quantile": 2.6491266139101457,
+      "fitted_quantile": 2.4351654540981014
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.89,
+      "empirical_quantile": 2.6638132448329244,
+      "fitted_quantile": 2.486496291344968
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9,
+      "empirical_quantile": 2.678647449866281,
+      "fitted_quantile": 2.5424897108766387
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.91,
+      "empirical_quantile": 2.6832421207754007,
+      "fitted_quantile": 2.604145877401424
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.92,
+      "empirical_quantile": 2.683689939868649,
+      "fitted_quantile": 2.6728225565598738
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.93,
+      "empirical_quantile": 2.6863639038631373,
+      "fitted_quantile": 2.7504286438705776
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.694120571269393,
+      "fitted_quantile": 2.839769099380507
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.6962701184216487,
+      "fitted_quantile": 2.945209963117438
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7341374264057,
+      "fitted_quantile": 3.0741019789093955
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.97,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.24031384600068
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.98,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.4752589456831315
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.99,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.8806232353936063
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.01,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.31427368917014026
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.02,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.4117242304022964
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.03,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.482593981366864
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.04,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.5404772087858175
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.05,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.5903886788978392
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.6348166309861148
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.6752020115581463
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.08,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.7124643270746405
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.7472311226348487
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.7799524183057353
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.11,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.810963456467671
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.12,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.8405216525271637
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.13,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.8688296036684539
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.14,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.8960500747993996
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9223161272642539
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.16,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9477381805902171
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.17,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9724090678920682
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.9964077384665135
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.19,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0198020240619226
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.2,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.04265074211351
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0650053199225564
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.22,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.0869110664687425
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.23,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.108408180870842
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1295325611810103
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.25,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1503164598247635
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.26,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.1707890198668809
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.27,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 1.190976717672295
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.28,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.210903731327358
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2305922496563928
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.3,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.250062733318337
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.31,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2693341369624458
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.32,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.2884240995277032
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.33,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.30734910832454
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.34,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3261246414236008
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3447652920111832
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.363284877693935
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.37,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.3816965372018677
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.38,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.400012816515707
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.39,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 1.4182457461073514
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.4,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4364069107121342
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4545075128345326
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4725584310141795
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.43,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.4905702737381572
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.44,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5085534297722687
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.45,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5265181155932712
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.46,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.544474420532185
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5624323501827484
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5804018685867194
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.49,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.5983929396773082
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.6164155684424082
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.51,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.6344798422596865
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.52,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.6525959728555668
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.53,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6707743393496117
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.54,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6890255328650177
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.55,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7073604032154628
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.56,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.725790108219307
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7443261662455236
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7629805126635
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.59,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.781765560953434
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8006942693385062
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.61,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8197802139282984
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.62,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.839037669520087
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.63,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8584816993971205
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.64,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8781282556990002
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.65,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.8979942922294308
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.66,
+      "empirical_quantile": 2.303545658858684,
+      "fitted_quantile": 1.9180978919245062
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.67,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.9384584116480605
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.68,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.959096647532535
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 1.980035024774647
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 2.001297816665092
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.339520693038126,
+      "fitted_quantile": 2.0229113987342626
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.72,
+      "empirical_quantile": 2.3652911657849405,
+      "fitted_quantile": 2.0449045453037065
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.73,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.067308777544085
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.74,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.0901587744893404
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.75,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.113492861530691
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.76,
+      "empirical_quantile": 2.4293856166591827,
+      "fitted_quantile": 2.137353594975037
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.77,
+      "empirical_quantile": 2.4442283987523097,
+      "fitted_quantile": 2.1617884666727076
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.78,
+      "empirical_quantile": 2.465151280902242,
+      "fitted_quantile": 2.1868507600348086
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.79,
+      "empirical_quantile": 2.496881736808508,
+      "fitted_quantile": 2.2126005987521
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.2391062433531492
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.81,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.2664457101430293
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.294708814719557
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.521111281911598,
+      "fitted_quantile": 2.3239997823551626
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.5440175975676245,
+      "fitted_quantile": 2.3544406267463844
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.85,
+      "empirical_quantile": 2.574302547237731,
+      "fitted_quantile": 2.386175587919058
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.86,
+      "empirical_quantile": 2.5844202105205065,
+      "fitted_quantile": 2.4193770578466247
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.87,
+      "empirical_quantile": 2.6250587791352102,
+      "fitted_quantile": 2.454253640483169
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.88,
+      "empirical_quantile": 2.6491266139101457,
+      "fitted_quantile": 2.4910613485520665
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.89,
+      "empirical_quantile": 2.6638132448329244,
+      "fitted_quantile": 2.5301195388260695
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9,
+      "empirical_quantile": 2.678647449866281,
+      "fitted_quantile": 2.5718342372313234
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.91,
+      "empirical_quantile": 2.6832421207754007,
+      "fitted_quantile": 2.616733426661086
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.92,
+      "empirical_quantile": 2.683689939868649,
+      "fitted_quantile": 2.6655225778034173
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.93,
+      "empirical_quantile": 2.6863639038631373,
+      "fitted_quantile": 2.719176320982262
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.694120571269393,
+      "fitted_quantile": 2.7790990633390917
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.6962701184216487,
+      "fitted_quantile": 2.847428697674278
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7341374264057,
+      "fitted_quantile": 2.9276722854728514
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.97,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.026241620889431
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.98,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.1570827304257345
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.99,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 3.36272021103235
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.01,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.01654005537165218
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.02,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.03324803295729051
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.03,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.050127377404826104
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.04,
+      "empirical_quantile": 0.6782503954605864,
+      "fitted_quantile": 0.06718164045344506
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.05,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.0844144854193076
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.10182969191859884
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.11943116084316314
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.08,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.137222919605107
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.15520912766800884
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.0360536949924355,
+      "fitted_quantile": 0.17339408238373885
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.11,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.19178222515537777
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.12,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.21037814794834475
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.13,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.2291866001736138
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.14,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.24821249596882905
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.2674609219052451
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.16,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.28693714515073043
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.17,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.3066466221216071
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.1548498496728283,
+      "fitted_quantile": 0.3265950076588819
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.19,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.34678816476747776
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.2,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.3672321749604315
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.38793334925372
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.22,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.40889823986144874
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.23,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.43013365264563014
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.45164666037973905
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.25,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.4734446168907252
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.26,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.49553517215023646
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.27,
+      "empirical_quantile": 1.2018678312262434,
+      "fitted_quantile": 0.5179262883925471
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.28,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.5406262573441704
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.5636437186584538
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.3,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.5869876796577169
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.31,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.6106675364958324
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.32,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.6346930968656768
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.33,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.6590746043887942
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.34,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.6838227648390702
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.7089487743684354
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.7344643499208631
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.37,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.7603817620414557
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.38,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.7867138703105809
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.39,
+      "empirical_quantile": 1.2241807025385705,
+      "fitted_quantile": 0.8134741616591983
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.4,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 0.8406767918511567
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 0.8683366304518744
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 0.8964693096410319
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.43,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 0.9250912772704641
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.44,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 0.9542198546181481
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.45,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 0.9838732993460564
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.46,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.0140708742348956
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.0448329223437236
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.0761809493288665
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.49,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.108137713756402
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.140727326358143
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.51,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.1739753593154336
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.52,
+      "empirical_quantile": 1.227551868373142,
+      "fitted_quantile": 1.207908966811588
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.53,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.242557018276742
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.54,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.2779502459632501
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.55,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.3141214087418822
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.56,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.351105474306488
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.3889398223269724
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.427664471508874
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.59,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.467322334017025
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.5079595013185745
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.61,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.549625566219592
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.62,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.592373986737882
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.63,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6362624985083796
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.64,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.6813535837023135
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.65,
+      "empirical_quantile": 1.2277255581246995,
+      "fitted_quantile": 1.7277150060158601
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.66,
+      "empirical_quantile": 2.303545658858684,
+      "fitted_quantile": 1.7754204232238198
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.67,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.8245500911972135
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.68,
+      "empirical_quantile": 2.3218364480532334,
+      "fitted_quantile": 1.8751916762790064
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 1.9274411966687244
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.333771328772489,
+      "fitted_quantile": 1.9814041182093
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.339520693038126,
+      "fitted_quantile": 2.0371966359991753
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.72,
+      "empirical_quantile": 2.3652911657849405,
+      "fitted_quantile": 2.094947180976291
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.73,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.1547982005930386
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.74,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.2169082756870098
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.75,
+      "empirical_quantile": 2.370211001820807,
+      "fitted_quantile": 2.281454652716286
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.76,
+      "empirical_quantile": 2.4293856166591827,
+      "fitted_quantile": 2.3486362931697315
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.77,
+      "empirical_quantile": 2.4442283987523097,
+      "fitted_quantile": 2.418677572321393
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.78,
+      "empirical_quantile": 2.465151280902242,
+      "fitted_quantile": 2.4918328006646315
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.79,
+      "empirical_quantile": 2.496881736808508,
+      "fitted_quantile": 2.568391797867017
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.648686827676718
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.81,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.7331013130960256
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.509123071923164,
+      "fitted_quantile": 2.8220809100604574
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.521111281911598,
+      "fitted_quantile": 2.916147749581963
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.5440175975676245,
+      "fitted_quantile": 3.01591900263715
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.85,
+      "empirical_quantile": 2.574302547237731,
+      "fitted_quantile": 3.1221314445674424
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.86,
+      "empirical_quantile": 2.5844202105205065,
+      "fitted_quantile": 3.2356745073344344
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.87,
+      "empirical_quantile": 2.6250587791352102,
+      "fitted_quantile": 3.357635602045153
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.88,
+      "empirical_quantile": 2.6491266139101457,
+      "fitted_quantile": 3.4893636195278743
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.89,
+      "empirical_quantile": 2.6638132448329244,
+      "fitted_quantile": 3.6325601270227748
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9,
+      "empirical_quantile": 2.678647449866281,
+      "fitted_quantile": 3.789414154034861
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.91,
+      "empirical_quantile": 2.6832421207754007,
+      "fitted_quantile": 3.9628082364186
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.92,
+      "empirical_quantile": 2.683689939868649,
+      "fitted_quantile": 4.1566463289952935
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.93,
+      "empirical_quantile": 2.6863639038631373,
+      "fitted_quantile": 4.3764018336925785
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.694120571269393,
+      "fitted_quantile": 4.630090945886019
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.6962701184216487,
+      "fitted_quantile": 4.930141480393006
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7341374264057,
+      "fitted_quantile": 5.2973736553534385
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.97,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 5.770818272244159
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.98,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 6.438100981711577
+    },
+    {
+      "scenario": "BIN_COUNT_WEIGHTED_A_LOWER_EDGE_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.99,
+      "empirical_quantile": 3.0672450769251727,
+      "fitted_quantile": 7.5788283080697205
+    }
+  ],
+  "curves": []
+}

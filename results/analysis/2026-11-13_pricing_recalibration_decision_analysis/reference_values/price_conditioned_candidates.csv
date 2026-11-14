@@ -1,0 +1,9 @@
+scope,half_window_USD,N,mean_distance_km,mean_fare,definition
+ARRAY_RANGE,0.25,114964,5.328358884915626,22.463885999095368,Diagnostic price-conditioned mean; tau not newly approved
+ARRAY_RANGE,0.5,209320,5.274441590735716,22.26220112746035,Diagnostic price-conditioned mean; tau not newly approved
+ARRAY_RANGE,1.0,346880,5.300620449409596,22.48320626729705,Diagnostic price-conditioned mean; tau not newly approved
+ARRAY_RANGE,2.0,714598,5.213069620551077,22.211669134254503,Diagnostic price-conditioned mean; tau not newly approved
+ALL_SAFE,0.25,116921,5.251216204254154,22.461005123117317,Diagnostic price-conditioned mean; tau not newly approved
+ALL_SAFE,0.5,212606,5.202022090304131,22.262091239193627,Diagnostic price-conditioned mean; tau not newly approved
+ALL_SAFE,1.0,353811,5.207588211940952,22.483371093606472,Diagnostic price-conditioned mean; tau not newly approved
+ALL_SAFE,2.0,728231,5.127082281254602,22.215870650933567,Diagnostic price-conditioned mean; tau not newly approved

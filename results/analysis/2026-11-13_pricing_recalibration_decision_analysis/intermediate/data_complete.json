@@ -1,0 +1,13 @@
+{
+  "candidates": {
+    "A_LOWER_EDGE": 4.5,
+    "B_INTERPOLATED": 4.616983790655043,
+    "C_PRICE_NEAR_PM1": 5.300620449409596
+  },
+  "N_all": 8692819,
+  "N_array": 7946921,
+  "historical_status_not_used": true,
+  "cache_min": "2026-01-01 00:00:00",
+  "cache_max": "2026-03-15 23:59:56",
+  "source_csv_sha256": "cb00116863f8cd0691bed8ec35a2c8c48a6fd466e5efa51b03811e3e56dd6811"
+}

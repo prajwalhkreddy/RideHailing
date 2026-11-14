@@ -1,0 +1,15 @@
+weather_code,weather_name,source_N,positive_N,dates,observed_T_groups,stable_weather_mapping,reliability_note
+1,Clear,2109308,1798309,56,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+2,Fair,497136,425053,50,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+3,Cloudy,3358512,2893822,73,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+5,Fog,426746,368567,17,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+7,Light Rain,52151,44996,7,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+8,Rain,121186,104368,9,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+9,Heavy Rain,101832,86813,8,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+12,Sleet,119587,101317,10,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+13,Heavy Sleet,18501,15394,4,T1;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+14,Light Snowfall,62047,52369,12,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+15,Snowfall,83209,71647,11,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+16,Heavy Snowfall,12829,9444,4,T1;T2;T3;T4,NOT_ASSESSED_STOP_GATE,Trip count is not independent weather-event replication; no stability test performed
+17,Rain Shower,596,510,1,T2,NOT_ASSESSED_STOP_GATE,One observed date: event-level generalization unsupported
+21,Snow Shower,3515,3044,1,T3,NOT_ASSESSED_STOP_GATE,One observed date: event-level generalization unsupported

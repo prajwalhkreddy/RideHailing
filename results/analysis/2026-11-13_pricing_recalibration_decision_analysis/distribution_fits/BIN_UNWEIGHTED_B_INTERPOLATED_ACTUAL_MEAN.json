@@ -1,0 +1,5096 @@
+{
+  "version": 3,
+  "rows": [
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[2.260620992590905, 0.4867345911687309]",
+      "log_likelihood": -103.43753172902768,
+      "AIC": 210.87506345805537,
+      "BIC": 216.8694880055836,
+      "AIC_effective_N": 210.87506345805534,
+      "BIC_effective_N": 216.86948800558358,
+      "KS": 0.13473023785083693,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.6989022414123494,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1347; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[2.286770073946791, 0.37057196233123557]",
+      "log_likelihood": -62.655943830584306,
+      "AIC": 129.3118876611686,
+      "BIC": 135.2927528347261,
+      "AIC_effective_N": 129.31188766116856,
+      "BIC_effective_N": 135.29275283472603,
+      "KS": 0.1313309304888064,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.426230910412138,
+      "support_compatibility": "COMPATIBLE_BASELINE_ALLOWS_NEGATIVE",
+      "qualitative_fit": "Descriptive KS=0.1313; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": "[31.782502629355598, 0.0, 0.07195059812044625]",
+      "log_likelihood": -74.38937456208257,
+      "AIC": 152.77874912416513,
+      "BIC": 158.7596142977226,
+      "AIC_effective_N": 152.77874912416488,
+      "BIC_effective_N": 158.75961429772235,
+      "KS": 0.13388768049136313,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.5060501670889962,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1339; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": "[0.18740053248665256, 0.0, 2.250890594252378]",
+      "log_likelihood": -81.69634118617208,
+      "AIC": 167.39268237234415,
+      "BIC": 173.37354754590163,
+      "AIC_effective_N": 167.39268237234415,
+      "BIC_effective_N": 173.37354754590163,
+      "KS": 0.1331944247908582,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.5557574230351842,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1332; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": "[8.210519109605906, 0.0, 2.4324101464161356]",
+      "log_likelihood": -50.37543969076416,
+      "AIC": 104.75087938152832,
+      "BIC": 110.7317445550858,
+      "AIC_effective_N": 104.7508793815283,
+      "BIC_effective_N": 110.73174455508578,
+      "KS": 0.1182031556316292,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.34269006592356566,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1182; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": "[0.0, 2.286770073946791]",
+      "log_likelihood": -268.58963496180456,
+      "AIC": 539.1792699236091,
+      "BIC": 542.1697025103879,
+      "AIC_effective_N": 539.1792699236092,
+      "BIC_effective_N": 542.169702510388,
+      "KS": 0.4845539849440748,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.8271403738898275,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.4846; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "ACTUAL_MEAN",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    }
+  ],
+  "qq": [
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": 1.0296095933955929,
+      "fitted_quantile": 1.12830701120339
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": 1.1928109776507256,
+      "fitted_quantile": 1.260990356211298
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": 1.243508136545978,
+      "fitted_quantile": 1.3451736846546434
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": 1.2460691636623042,
+      "fitted_quantile": 1.4085015234351883
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": 1.2572462294012483,
+      "fitted_quantile": 1.4600138349442755
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.6676607090680486,
+      "fitted_quantile": 1.5038589026648672
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.7926019217572555,
+      "fitted_quantile": 1.5423024498396352
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": 1.8177661830582728,
+      "fitted_quantile": 1.576724061120785
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": 1.8397141788265747,
+      "fitted_quantile": 1.6080291394102793
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.847768351339745,
+      "fitted_quantile": 1.6368455152739068
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": 1.8563764745630875,
+      "fitted_quantile": 1.6636273295279334
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": 1.874842441913738,
+      "fitted_quantile": 1.6887142767259578
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 1.8899361966060664,
+      "fitted_quantile": 1.712367466902119
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 1.8996652771095464,
+      "fitted_quantile": 1.7347921999076643
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9355499256805992,
+      "fitted_quantile": 1.756153010482023
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 1.9542799924672565,
+      "fitted_quantile": 1.7765839413722841
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 1.957175276404137,
+      "fitted_quantile": 1.7961957581933834
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9639740715326193,
+      "fitted_quantile": 1.8150811407896035
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 1.9774714271441185,
+      "fitted_quantile": 1.8333184983306015
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 1.982482005976854,
+      "fitted_quantile": 1.8509748255488696
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999638751950564,
+      "fitted_quantile": 1.8681078766137036
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 2.00899786828052,
+      "fitted_quantile": 1.884767844179507
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 2.0165346571260456,
+      "fitted_quantile": 1.900998673516435
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.0214210510019033,
+      "fitted_quantile": 1.9168391034255081
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 2.026209713731363,
+      "fitted_quantile": 1.9323234997817156
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 2.027830131408602,
+      "fitted_quantile": 1.947482529716702
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 2.0336112176200256,
+      "fitted_quantile": 1.9623437119455396
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 2.041336940746233,
+      "fitted_quantile": 1.9769318698330824
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.091457671619928,
+      "fitted_quantile": 1.9912695073589517
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 2.102612789470618,
+      "fitted_quantile": 2.005377123429284
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 2.1223794394232716,
+      "fitted_quantile": 2.019273476493869
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 2.132167815217777,
+      "fitted_quantile": 2.032975808813798
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 2.133413982531967,
+      "fitted_quantile": 2.0465000377472014
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 2.1440464768869805,
+      "fitted_quantile": 2.0598609199100673
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.1479295844405657,
+      "fitted_quantile": 2.0730721929050726
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.19049024060097,
+      "fitted_quantile": 2.0861466984069486
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 2.19162871542804,
+      "fitted_quantile": 2.0990964896850057
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 2.210321765976349,
+      "fitted_quantile": 2.111932926085443
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 2.2184959246482343,
+      "fitted_quantile": 2.1246667565534785
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 2.225753495765393,
+      "fitted_quantile": 2.137308193922319
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.2351466685013612,
+      "fitted_quantile": 2.1498669814129765
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.2697604897943093,
+      "fitted_quantile": 2.1623524525611635
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 2.281166329859697,
+      "fitted_quantile": 2.174773585603566
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 2.2992306801876716,
+      "fitted_quantile": 2.187139053207017
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 2.3220652135920328,
+      "fitted_quantile": 2.1994572683036884
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 2.3310950668407147,
+      "fitted_quantile": 2.2117364266982
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.3323520304947185,
+      "fitted_quantile": 2.2239845470344175
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3545405619871635,
+      "fitted_quantile": 2.236209508647551
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 2.354594548981657,
+      "fitted_quantile": 2.248419087778555
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 2.377010207067398,
+      "fitted_quantile": 2.260620992590905
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 2.387881778981161,
+      "fitted_quantile": 2.272822897403255
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 2.4064277875077456,
+      "fitted_quantile": 2.285032476534259
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 2.4180993427537736,
+      "fitted_quantile": 2.2972574381473923
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 2.424790151275288,
+      "fitted_quantile": 2.3095055584836097
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 2.440344655216522,
+      "fitted_quantile": 2.3217847168781214
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 2.4625264664960644,
+      "fitted_quantile": 2.334102931974793
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.4666564731139724,
+      "fitted_quantile": 2.346468399578244
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.466782623587886,
+      "fitted_quantile": 2.3588895326206463
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 2.4780813749494492,
+      "fitted_quantile": 2.3713750037688333
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 2.488056787832425,
+      "fitted_quantile": 2.3839337912594907
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 2.4990879192199222,
+      "fitted_quantile": 2.3965752286283313
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 2.5099585671617013,
+      "fitted_quantile": 2.409309059096367
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 2.5180598950361204,
+      "fitted_quantile": 2.422145495496804
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 2.519540421553538,
+      "fitted_quantile": 2.435095286774861
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 2.5247195886673044,
+      "fitted_quantile": 2.448169792276737
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 2.5251195042906267,
+      "fitted_quantile": 2.4613810652717425
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 2.5372055504965076,
+      "fitted_quantile": 2.4747419474346084
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 2.541934000963401,
+      "fitted_quantile": 2.4882661763680116
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.550993549386069,
+      "fitted_quantile": 2.501968508687941
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.555048505598397,
+      "fitted_quantile": 2.515864861752526
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.560351883893697,
+      "fitted_quantile": 2.5299724778228585
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 2.565010834452979,
+      "fitted_quantile": 2.5443101153487273
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 2.573791315260746,
+      "fitted_quantile": 2.55889827323627
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 2.5754401484596,
+      "fitted_quantile": 2.5737594554651078
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 2.5782210290175716,
+      "fitted_quantile": 2.588918485400094
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 2.582794303616978,
+      "fitted_quantile": 2.6044028817563016
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 2.5833392320940862,
+      "fitted_quantile": 2.6202433116653747
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 2.586733080815659,
+      "fitted_quantile": 2.6364741410023025
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 2.5875139392870223,
+      "fitted_quantile": 2.653134108568106
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 2.5894818111348967,
+      "fitted_quantile": 2.67026715963294
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.589775371975389,
+      "fitted_quantile": 2.6879234868512083
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.591362508259752,
+      "fitted_quantile": 2.7061608443922065
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.594984365087696,
+      "fitted_quantile": 2.7250462269884266
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.6008479364166264,
+      "fitted_quantile": 2.7446580438095256
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.6010069453833884,
+      "fitted_quantile": 2.7650889746997867
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 2.6053025466014317,
+      "fitted_quantile": 2.7864497852741454
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 2.6340998612979933,
+      "fitted_quantile": 2.8088745182796906
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 2.6342446519425224,
+      "fitted_quantile": 2.832527708455852
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 2.6426194158072525,
+      "fitted_quantile": 2.857614655653877
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 2.6719790874364224,
+      "fitted_quantile": 2.884396469907903
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 2.6827010555064654,
+      "fitted_quantile": 2.9132128457715307
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 2.6928971230253165,
+      "fitted_quantile": 2.944517924061025
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 2.700103559434045,
+      "fitted_quantile": 2.9789395353421746
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716257796034394,
+      "fitted_quantile": 3.0173830825169428
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.7350841923936176,
+      "fitted_quantile": 3.0612281502375343
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7392002115024336,
+      "fitted_quantile": 3.112740461746622
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 2.745208010182824,
+      "fitted_quantile": 3.176068300527166
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 2.8000665417876625,
+      "fitted_quantile": 3.2602516289705115
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 2.8304887508871457,
+      "fitted_quantile": 3.39293497397842
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": 1.1928109776507256,
+      "fitted_quantile": 1.4246907771983786
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": 1.2327062830199,
+      "fitted_quantile": 1.525708309998319
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": 1.2460691636623042,
+      "fitted_quantile": 1.589800695834137
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": 1.255905664056277,
+      "fitted_quantile": 1.6380149010969132
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": 1.6676607090680486,
+      "fitted_quantile": 1.6772334376597335
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7706566840214053,
+      "fitted_quantile": 1.7106145720162462
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8177661830582728,
+      "fitted_quantile": 1.7398832966436037
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": 1.8269028005632129,
+      "fitted_quantile": 1.7660899486270396
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": 1.847768351339745,
+      "fitted_quantile": 1.7899238501067258
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8544598838356283,
+      "fitted_quantile": 1.8118629954742616
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": 1.874842441913738,
+      "fitted_quantile": 1.8322531416503833
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": 1.879999357041437,
+      "fitted_quantile": 1.8513529126975765
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 1.8996652771095464,
+      "fitted_quantile": 1.8693611029063866
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 1.9233637086548336,
+      "fitted_quantile": 1.886434015876606
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9542799924672565,
+      "fitted_quantile": 1.9026969189764638
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 1.9569440889172016,
+      "fitted_quantile": 1.9182518647099862
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 1.957175276404137,
+      "fitted_quantile": 1.9331831837001259
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9651932864026225,
+      "fitted_quantile": 1.9475614370953758
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 1.9774714271441185,
+      "fitted_quantile": 1.961446321166336
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 1.9955033810047476,
+      "fitted_quantile": 1.9748888418820412
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999638751950564,
+      "fitted_quantile": 1.9879329699736399
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 2.014248600873199,
+      "fitted_quantile": 2.000616919266026
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 2.0165346571260456,
+      "fitted_quantile": 2.0129741471819758
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.02316747834926,
+      "fitted_quantile": 2.025034147235559
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 2.026209713731363,
+      "fitted_quantile": 2.0368230836443244
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 2.0336112176200256,
+      "fitted_quantile": 2.048364304613554
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 2.0393290846057797,
+      "fitted_quantile": 2.0596787613236858
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 2.091457671619928,
+      "fitted_quantile": 2.0707853528692013
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0962867010073607,
+      "fitted_quantile": 2.081701212496925
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 2.1223794394232716,
+      "fitted_quantile": 2.0924419469050664
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 2.1317464305115497,
+      "fitted_quantile": 2.1030218377076206
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 2.133413982531967,
+      "fitted_quantile": 2.1134540121789653
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 2.135407479421691,
+      "fitted_quantile": 2.1237505888879147
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 2.1440464768869805,
+      "fitted_quantile": 2.133922802680407
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173841917927284,
+      "fitted_quantile": 2.143981112583752
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.19049024060097,
+      "fitted_quantile": 2.15393529551681
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 2.2046858262369704,
+      "fitted_quantile": 2.1637945281515125
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 2.210321765976349,
+      "fitted_quantile": 2.173567458846305
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246926853460733,
+      "fitted_quantile": 2.183262271235132
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 2.225753495765393,
+      "fitted_quantile": 2.192886740786824
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.259705270364236,
+      "fitted_quantile": 2.202448285434265
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.2697604897943093,
+      "fitted_quantile": 2.2119540111993152
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 2.284373716131712,
+      "fitted_quantile": 2.2214107535994145
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 2.2992306801876716,
+      "fitted_quantile": 2.230825115508543
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 2.323220306158022,
+      "fitted_quantile": 2.2402035020535203
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 2.3310950668407147,
+      "fitted_quantile": 2.249552153052629
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.3414008177749825,
+      "fitted_quantile": 2.2588771734440556
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3545405619871635,
+      "fitted_quantile": 2.2681845621043215
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 2.368098044942255,
+      "fitted_quantile": 2.2774802394198588
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 2.377010207067398,
+      "fitted_quantile": 2.286770073946791
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 2.387881778981161,
+      "fitted_quantile": 2.2960599084737234
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 2.412972655233947,
+      "fitted_quantile": 2.3053555857892607
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 2.4180993427537736,
+      "fitted_quantile": 2.3146629744495266
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 2.4359292827720176,
+      "fitted_quantile": 2.3239879948409534
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 2.440344655216522,
+      "fitted_quantile": 2.333336645840062
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 2.465532161168352,
+      "fitted_quantile": 2.342715032385039
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.4666564731139724,
+      "fitted_quantile": 2.3521293942941677
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.4676711515449745,
+      "fitted_quantile": 2.3615861366942674
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 2.4780813749494492,
+      "fitted_quantile": 2.371091862459317
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 2.489458696275618,
+      "fitted_quantile": 2.380653407106758
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 2.4990879192199222,
+      "fitted_quantile": 2.39027787665845
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 2.5128649714278493,
+      "fitted_quantile": 2.399972689047277
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 2.5180598950361204,
+      "fitted_quantile": 2.4097456197420697
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 2.5217822141879904,
+      "fitted_quantile": 2.419604852376773
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 2.5247195886673044,
+      "fitted_quantile": 2.4295590353098304
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 2.525142711831491,
+      "fitted_quantile": 2.439617345213175
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 2.5372055504965076,
+      "fitted_quantile": 2.4497895590056675
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 2.541934000963401,
+      "fitted_quantile": 2.460086135714617
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.550993549386069,
+      "fitted_quantile": 2.4705183101859616
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.555048505598397,
+      "fitted_quantile": 2.481098200988516
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.560351883893697,
+      "fitted_quantile": 2.4918389353966575
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 2.565010834452979,
+      "fitted_quantile": 2.502754795024381
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 2.573791315260746,
+      "fitted_quantile": 2.5138613865698964
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 2.5754401484596,
+      "fitted_quantile": 2.5251758432800284
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 2.5785730590826295,
+      "fitted_quantile": 2.536717064249258
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 2.582794303616978,
+      "fitted_quantile": 2.548506000658023
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 2.586109976712528,
+      "fitted_quantile": 2.5605660007116064
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 2.586733080815659,
+      "fitted_quantile": 2.5729232286275563
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 2.5876530364378727,
+      "fitted_quantile": 2.5856071779199423
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 2.5894818111348967,
+      "fitted_quantile": 2.5986513060115413
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.590706303570838,
+      "fitted_quantile": 2.6120938267272464
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.591362508259752,
+      "fitted_quantile": 2.625978710798207
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.597403465391563,
+      "fitted_quantile": 2.640356964193457
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.6008479364166264,
+      "fitted_quantile": 2.655288283183596
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.6010069453833884,
+      "fitted_quantile": 2.6708432289171187
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 2.6053025466014317,
+      "fitted_quantile": 2.687106132016976
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 2.6340998612979933,
+      "fitted_quantile": 2.7041790449871956
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 2.6342446519425224,
+      "fitted_quantile": 2.7221872351960057
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 2.6426194158072525,
+      "fitted_quantile": 2.741287006243199
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 2.6719790874364224,
+      "fitted_quantile": 2.761677152419321
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 2.6827010555064654,
+      "fitted_quantile": 2.7836162977868564
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 2.6928971230253165,
+      "fitted_quantile": 2.8074501992665426
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 2.700103559434045,
+      "fitted_quantile": 2.8336568512499785
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716257796034394,
+      "fitted_quantile": 2.862925575877336
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.7350841923936176,
+      "fitted_quantile": 2.8963067102338487
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7392002115024336,
+      "fitted_quantile": 2.9355252467966695
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 2.745208010182824,
+      "fitted_quantile": 2.983739452059445
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 2.8000665417876625,
+      "fitted_quantile": 3.047831837895263
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 2.8304887508871457,
+      "fitted_quantile": 3.1488493706952037
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.01,
+      "empirical_quantile": 1.1928109776507256,
+      "fitted_quantile": 1.4499204490911815
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.02,
+      "empirical_quantile": 1.2327062830199,
+      "fitted_quantile": 1.5327065386577838
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.03,
+      "empirical_quantile": 1.2460691636623042,
+      "fitted_quantile": 1.5868883676722492
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.04,
+      "empirical_quantile": 1.255905664056277,
+      "fitted_quantile": 1.6285046679944555
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.05,
+      "empirical_quantile": 1.6676607090680486,
+      "fitted_quantile": 1.6629035977739168
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7706566840214053,
+      "fitted_quantile": 1.6925716841788718
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8177661830582728,
+      "fitted_quantile": 1.7188807894207383
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.08,
+      "empirical_quantile": 1.8269028005632129,
+      "fitted_quantile": 1.742673176956808
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09,
+      "empirical_quantile": 1.847768351339745,
+      "fitted_quantile": 1.7645055364697482
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8544598838356283,
+      "fitted_quantile": 1.7847662965513338
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.11,
+      "empirical_quantile": 1.874842441913738,
+      "fitted_quantile": 1.803737996595412
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.12,
+      "empirical_quantile": 1.879999357041437,
+      "fitted_quantile": 1.821633051965803
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.13,
+      "empirical_quantile": 1.8996652771095464,
+      "fitted_quantile": 1.838615509506842
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.14,
+      "empirical_quantile": 1.9233637086548336,
+      "fitted_quantile": 1.8548149246546346
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9542799924672565,
+      "fitted_quantile": 1.8703355658928547
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.16,
+      "empirical_quantile": 1.9569440889172016,
+      "fitted_quantile": 1.8852627231690684
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.17,
+      "empirical_quantile": 1.957175276404137,
+      "fitted_quantile": 1.899667153654148
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9651932864026225,
+      "fitted_quantile": 1.9136082909902978
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.19,
+      "empirical_quantile": 1.9774714271441185,
+      "fitted_quantile": 1.9271366109412613
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.2,
+      "empirical_quantile": 1.9955033810047476,
+      "fitted_quantile": 1.9402954076035042
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999638751950564,
+      "fitted_quantile": 1.9531221490135007
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.22,
+      "empirical_quantile": 2.014248600873199,
+      "fitted_quantile": 1.9656495269729584
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.23,
+      "empirical_quantile": 2.0165346571260456,
+      "fitted_quantile": 1.977906280831
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.02316747834926,
+      "fitted_quantile": 1.9899178516468197
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.25,
+      "empirical_quantile": 2.026209713731363,
+      "fitted_quantile": 2.001706907339034
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.26,
+      "empirical_quantile": 2.0336112176200256,
+      "fitted_quantile": 2.013293768496312
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.27,
+      "empirical_quantile": 2.0393290846057797,
+      "fitted_quantile": 2.024696756840343
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.28,
+      "empirical_quantile": 2.091457671619928,
+      "fitted_quantile": 2.035932482848169
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0962867010073607,
+      "fitted_quantile": 2.0470160850712786
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.3,
+      "empirical_quantile": 2.1223794394232716,
+      "fitted_quantile": 2.057961430778207
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.31,
+      "empirical_quantile": 2.1317464305115497,
+      "fitted_quantile": 2.0687812853876713
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.32,
+      "empirical_quantile": 2.133413982531967,
+      "fitted_quantile": 2.0794874565391406
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.33,
+      "empirical_quantile": 2.135407479421691,
+      "fitted_quantile": 2.0900909174200146
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.34,
+      "empirical_quantile": 2.1440464768869805,
+      "fitted_quantile": 2.1006019130294775
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173841917927284,
+      "fitted_quantile": 2.1110300523345678
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.19049024060097,
+      "fitted_quantile": 2.121384388710522
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.37,
+      "empirical_quantile": 2.2046858262369704,
+      "fitted_quantile": 2.131673490616073
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.38,
+      "empirical_quantile": 2.210321765976349,
+      "fitted_quantile": 2.1419055041063464
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246926853460733,
+      "fitted_quantile": 2.152088208509942
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.4,
+      "empirical_quantile": 2.225753495765393,
+      "fitted_quantile": 2.162229066376775
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.259705270364236,
+      "fitted_quantile": 2.1723352686271165
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.2697604897943093,
+      "fitted_quantile": 2.1824137756909074
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.43,
+      "empirical_quantile": 2.284373716131712,
+      "fitted_quantile": 2.192471355312781
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.44,
+      "empirical_quantile": 2.2992306801876716,
+      "fitted_quantile": 2.2025146176068735
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.45,
+      "empirical_quantile": 2.323220306158022,
+      "fitted_quantile": 2.2125500478723965
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.46,
+      "empirical_quantile": 2.3310950668407147,
+      "fitted_quantile": 2.22258403762273
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.3414008177749825,
+      "fitted_quantile": 2.232622914235149
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3545405619871635,
+      "fitted_quantile": 2.2426729695932344
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.49,
+      "empirical_quantile": 2.368098044942255,
+      "fitted_quantile": 2.252740488068187
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5,
+      "empirical_quantile": 2.377010207067398,
+      "fitted_quantile": 2.2628317741675907
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.51,
+      "empirical_quantile": 2.387881778981161,
+      "fitted_quantile": 2.2729531801699787
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.52,
+      "empirical_quantile": 2.412972655233947,
+      "fitted_quantile": 2.2831111340603636
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.53,
+      "empirical_quantile": 2.4180993427537736,
+      "fitted_quantile": 2.2933121680855924
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.54,
+      "empirical_quantile": 2.4359292827720176,
+      "fitted_quantile": 2.30356294825897
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.55,
+      "empirical_quantile": 2.440344655216522,
+      "fitted_quantile": 2.313870305161428
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.56,
+      "empirical_quantile": 2.465532161168352,
+      "fitted_quantile": 2.324241266412153
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.4666564731139724,
+      "fitted_quantile": 2.3346830912158394
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.4676711515449745,
+      "fitted_quantile": 2.3452033074378957
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.59,
+      "empirical_quantile": 2.4780813749494492,
+      "fitted_quantile": 2.3558097517144043
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6,
+      "empirical_quantile": 2.489458696275618,
+      "fitted_quantile": 2.3665106131726867
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.61,
+      "empirical_quantile": 2.4990879192199222,
+      "fitted_quantile": 2.3773144814233595
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.62,
+      "empirical_quantile": 2.5128649714278493,
+      "fitted_quantile": 2.3882303995894003
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.63,
+      "empirical_quantile": 2.5180598950361204,
+      "fitted_quantile": 2.3992679232661
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.64,
+      "empirical_quantile": 2.5217822141879904,
+      "fitted_quantile": 2.4104371864636014
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.65,
+      "empirical_quantile": 2.5247195886673044,
+      "fitted_quantile": 2.4217489757779913
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.66,
+      "empirical_quantile": 2.525142711831491,
+      "fitted_quantile": 2.4332148142770165
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.67,
+      "empirical_quantile": 2.5372055504965076,
+      "fitted_quantile": 2.444847056884295
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.68,
+      "empirical_quantile": 2.541934000963401,
+      "fitted_quantile": 2.4566589994171673
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.550993549386069,
+      "fitted_quantile": 2.4686650038986606
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.555048505598397,
+      "fitted_quantile": 2.4808806433507775
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.560351883893697,
+      "fitted_quantile": 2.493322870021077
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.72,
+      "empirical_quantile": 2.565010834452979,
+      "fitted_quantile": 2.506010211946519
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.73,
+      "empirical_quantile": 2.573791315260746,
+      "fitted_quantile": 2.5189630039849207
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.74,
+      "empirical_quantile": 2.5754401484596,
+      "fitted_quantile": 2.5322036610372662
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.75,
+      "empirical_quantile": 2.5785730590826295,
+      "fitted_quantile": 2.5457570032715555
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.76,
+      "empirical_quantile": 2.582794303616978,
+      "fitted_quantile": 2.559650645920709
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.77,
+      "empirical_quantile": 2.586109976712528,
+      "fitted_quantile": 2.5739154699189584
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.78,
+      "empirical_quantile": 2.586733080815659,
+      "fitted_quantile": 2.5885861946316404
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.79,
+      "empirical_quantile": 2.5876530364378727,
+      "fitted_quantile": 2.6037020807607183
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8,
+      "empirical_quantile": 2.5894818111348967,
+      "fitted_quantile": 2.6193078009716553
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.81,
+      "empirical_quantile": 2.590706303570838,
+      "fitted_quantile": 2.635454529091847
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.591362508259752,
+      "fitted_quantile": 2.65220131772865
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.597403465391563,
+      "fitted_quantile": 2.66961686174834
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.6008479364166264,
+      "fitted_quantile": 2.6877817858945505
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.85,
+      "empirical_quantile": 2.6010069453833884,
+      "fitted_quantile": 2.706791656532097
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.86,
+      "empirical_quantile": 2.6053025466014317,
+      "fitted_quantile": 2.7267610129303925
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.87,
+      "empirical_quantile": 2.6340998612979933,
+      "fitted_quantile": 2.7478288649595606
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.88,
+      "empirical_quantile": 2.6342446519425224,
+      "fitted_quantile": 2.7701663516155444
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.89,
+      "empirical_quantile": 2.6426194158072525,
+      "fitted_quantile": 2.7939876731181488
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9,
+      "empirical_quantile": 2.6719790874364224,
+      "fitted_quantile": 2.819566143960813
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.91,
+      "empirical_quantile": 2.6827010555064654,
+      "fitted_quantile": 2.847258563392804
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.92,
+      "empirical_quantile": 2.6928971230253165,
+      "fitted_quantile": 2.8775437115142983
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.93,
+      "empirical_quantile": 2.700103559434045,
+      "fitted_quantile": 2.911086165278555
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716257796034394,
+      "fitted_quantile": 2.948848631346046
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.7350841923936176,
+      "fitted_quantile": 2.992305479148186
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7392002115024336,
+      "fitted_quantile": 3.04389242743947
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.97,
+      "empirical_quantile": 2.745208010182824,
+      "fitted_quantile": 3.1081008436783475
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.98,
+      "empirical_quantile": 2.8000665417876625,
+      "fitted_quantile": 3.194808064693895
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.99,
+      "empirical_quantile": 2.8304887508871457,
+      "fitted_quantile": 3.334625775032569
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.01,
+      "empirical_quantile": 1.1928109776507256,
+      "fitted_quantile": 1.4555256796423266
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.02,
+      "empirical_quantile": 1.2327062830199,
+      "fitted_quantile": 1.5318134854574517
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.03,
+      "empirical_quantile": 1.2460691636623042,
+      "fitted_quantile": 1.582275868780315
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.04,
+      "empirical_quantile": 1.255905664056277,
+      "fitted_quantile": 1.6213294414939041
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.05,
+      "empirical_quantile": 1.6676607090680486,
+      "fitted_quantile": 1.6538063534303429
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7706566840214053,
+      "fitted_quantile": 1.6819613085474574
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8177661830582728,
+      "fitted_quantile": 1.7070418036377337
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.08,
+      "empirical_quantile": 1.8269028005632129,
+      "fitted_quantile": 1.7298155753518556
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09,
+      "empirical_quantile": 1.847768351339745,
+      "fitted_quantile": 1.7507911129368998
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8544598838356283,
+      "fitted_quantile": 1.7703238780149764
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.11,
+      "empirical_quantile": 1.874842441913738,
+      "fitted_quantile": 1.7886728759051307
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.12,
+      "empirical_quantile": 1.879999357041437,
+      "fitted_quantile": 1.8060331441522137
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.13,
+      "empirical_quantile": 1.8996652771095464,
+      "fitted_quantile": 1.822555542075699
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.14,
+      "empirical_quantile": 1.9233637086548336,
+      "fitted_quantile": 1.8383593896987656
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9542799924672565,
+      "fitted_quantile": 1.8535408606380215
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.16,
+      "empirical_quantile": 1.9569440889172016,
+      "fitted_quantile": 1.868178740495263
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.17,
+      "empirical_quantile": 1.957175276404137,
+      "fitted_quantile": 1.8823384890997037
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9651932864026225,
+      "fitted_quantile": 1.8960751757172016
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.19,
+      "empirical_quantile": 1.9774714271441185,
+      "fitted_quantile": 1.909435644679014
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.2,
+      "empirical_quantile": 1.9955033810047476,
+      "fitted_quantile": 1.9224601428486627
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999638751950564,
+      "fitted_quantile": 1.9351835627803131
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.22,
+      "empirical_quantile": 2.014248600873199,
+      "fitted_quantile": 1.9476364062820584
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.23,
+      "empirical_quantile": 2.0165346571260456,
+      "fitted_quantile": 1.959845541156519
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.02316747834926,
+      "fitted_quantile": 1.9718348026488857
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.25,
+      "empirical_quantile": 2.026209713731363,
+      "fitted_quantile": 1.983625476712174
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.26,
+      "empirical_quantile": 2.0336112176200256,
+      "fitted_quantile": 1.9952366922270046
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.27,
+      "empirical_quantile": 2.0393290846057797,
+      "fitted_quantile": 2.006685742299706
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.28,
+      "empirical_quantile": 2.091457671619928,
+      "fitted_quantile": 2.0179883497538604
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0962867010073607,
+      "fitted_quantile": 2.029158888302974
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.3,
+      "empirical_quantile": 2.1223794394232716,
+      "fitted_quantile": 2.040210568230873
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.31,
+      "empirical_quantile": 2.1317464305115497,
+      "fitted_quantile": 2.051155593430978
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.32,
+      "empirical_quantile": 2.133413982531967,
+      "fitted_quantile": 2.062005295173142
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.33,
+      "empirical_quantile": 2.135407479421691,
+      "fitted_quantile": 2.072770246842907
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.34,
+      "empirical_quantile": 2.1440464768869805,
+      "fitted_quantile": 2.0834603630382014
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173841917927284,
+      "fitted_quantile": 2.094084985744987
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.19049024060097,
+      "fitted_quantile": 2.1046529597973453
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.37,
+      "empirical_quantile": 2.2046858262369704,
+      "fitted_quantile": 2.1151726994233497
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.38,
+      "empirical_quantile": 2.210321765976349,
+      "fitted_quantile": 2.125652247359512
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246926853460733,
+      "fitted_quantile": 2.136099327764118
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.4,
+      "empirical_quantile": 2.225753495765393,
+      "fitted_quantile": 2.146521393958801
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.259705270364236,
+      "fitted_quantile": 2.156925671867125
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.2697604897943093,
+      "fitted_quantile": 2.167319199890432
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.43,
+      "empirical_quantile": 2.284373716131712,
+      "fitted_quantile": 2.177708865858361
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.44,
+      "empirical_quantile": 2.2992306801876716,
+      "fitted_quantile": 2.1881014416092768
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.45,
+      "empirical_quantile": 2.323220306158022,
+      "fitted_quantile": 2.198503615690709
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.46,
+      "empirical_quantile": 2.3310950668407147,
+      "fitted_quantile": 2.208922024618766
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.3414008177749825,
+      "fitted_quantile": 2.219363283096272
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3545405619871635,
+      "fitted_quantile": 2.2298340135603305
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.49,
+      "empirical_quantile": 2.368098044942255,
+      "fitted_quantile": 2.2403408754099416
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5,
+      "empirical_quantile": 2.377010207067398,
+      "fitted_quantile": 2.250890594252378
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.51,
+      "empirical_quantile": 2.387881778981161,
+      "fitted_quantile": 2.26148999150263
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.52,
+      "empirical_quantile": 2.412972655233947,
+      "fitted_quantile": 2.2721460146731878
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.53,
+      "empirical_quantile": 2.4180993427537736,
+      "fitted_quantile": 2.2828657687016656
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.54,
+      "empirical_quantile": 2.4359292827720176,
+      "fitted_quantile": 2.293656548681587
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.55,
+      "empirical_quantile": 2.440344655216522,
+      "fitted_quantile": 2.3045258743875507
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.56,
+      "empirical_quantile": 2.465532161168352,
+      "fitted_quantile": 2.3154815270207827
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.4666564731139724,
+      "fitted_quantile": 2.3265315886459508
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.4676711515449745,
+      "fitted_quantile": 2.337684484846514
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.59,
+      "empirical_quantile": 2.4780813749494492,
+      "fitted_quantile": 2.3489490311958883
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6,
+      "empirical_quantile": 2.489458696275618,
+      "fitted_quantile": 2.360334484227865
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.61,
+      "empirical_quantile": 2.4990879192199222,
+      "fitted_quantile": 2.3718505976952873
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.62,
+      "empirical_quantile": 2.5128649714278493,
+      "fitted_quantile": 2.383507685035239
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.63,
+      "empirical_quantile": 2.5180598950361204,
+      "fitted_quantile": 2.3953166891171978
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.64,
+      "empirical_quantile": 2.5217822141879904,
+      "fitted_quantile": 2.407289260544728
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.65,
+      "empirical_quantile": 2.5247195886673044,
+      "fitted_quantile": 2.4194378460200716
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.66,
+      "empirical_quantile": 2.525142711831491,
+      "fitted_quantile": 2.431775788575886
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.67,
+      "empirical_quantile": 2.5372055504965076,
+      "fitted_quantile": 2.4443174418441997
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.68,
+      "empirical_quantile": 2.541934000963401,
+      "fitted_quantile": 2.4570783009887474
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.550993549386069,
+      "fitted_quantile": 2.4700751534987404
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.555048505598397,
+      "fitted_quantile": 2.48332625376367
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.560351883893697,
+      "fitted_quantile": 2.4968515262651736
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.72,
+      "empirical_quantile": 2.565010834452979,
+      "fitted_quantile": 2.51067280339443
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.73,
+      "empirical_quantile": 2.573791315260746,
+      "fitted_quantile": 2.524814105415177
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.74,
+      "empirical_quantile": 2.5754401484596,
+      "fitted_quantile": 2.5393019720576544
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.75,
+      "empirical_quantile": 2.5785730590826295,
+      "fitted_quantile": 2.554165857806725
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.76,
+      "empirical_quantile": 2.582794303616978,
+      "fitted_quantile": 2.569438606361788
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.77,
+      "empirical_quantile": 2.586109976712528,
+      "fitted_quantile": 2.5851570243153144
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.78,
+      "empirical_quantile": 2.586733080815659,
+      "fitted_quantile": 2.6013625802803397
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.79,
+      "empirical_quantile": 2.5876530364378727,
+      "fitted_quantile": 2.6181022641669602
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8,
+      "empirical_quantile": 2.5894818111348967,
+      "fitted_quantile": 2.635429653062338
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.81,
+      "empirical_quantile": 2.590706303570838,
+      "fitted_quantile": 2.653406246716176
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.591362508259752,
+      "fitted_quantile": 2.672103159294508
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.597403465391563,
+      "fitted_quantile": 2.6916032884803123
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.6008479364166264,
+      "fitted_quantile": 2.712004134010576
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.85,
+      "empirical_quantile": 2.6010069453833884,
+      "fitted_quantile": 2.733421514942941
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.86,
+      "empirical_quantile": 2.6053025466014317,
+      "fitted_quantile": 2.755994554538122
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.87,
+      "empirical_quantile": 2.6340998612979933,
+      "fitted_quantile": 2.7798924917940244
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.88,
+      "empirical_quantile": 2.6342446519425224,
+      "fitted_quantile": 2.8053241900342525
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.89,
+      "empirical_quantile": 2.6426194158072525,
+      "fitted_quantile": 2.8325517402001164
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9,
+      "empirical_quantile": 2.6719790874364224,
+      "fitted_quantile": 2.861910484410787
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.91,
+      "empirical_quantile": 2.6827010555064654,
+      "fitted_quantile": 2.8938394933904514
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.92,
+      "empirical_quantile": 2.6928971230253165,
+      "fitted_quantile": 2.9289298463295794
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.93,
+      "empirical_quantile": 2.700103559434045,
+      "fitted_quantile": 2.968004917335365
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716257796034394,
+      "fitted_quantile": 3.0122621974397634
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.7350841923936176,
+      "fitted_quantile": 3.0635439613500197
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7392002115024336,
+      "fitted_quantile": 3.1249099273899
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.97,
+      "empirical_quantile": 2.745208010182824,
+      "fitted_quantile": 3.2020386376740366
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.98,
+      "empirical_quantile": 2.8000665417876625,
+      "fitted_quantile": 3.3075230864551317
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.99,
+      "empirical_quantile": 2.8304887508871457,
+      "fitted_quantile": 3.4808787904991423
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.01,
+      "empirical_quantile": 1.1928109776507256,
+      "fitted_quantile": 1.3890325790858005
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.02,
+      "empirical_quantile": 1.2327062830199,
+      "fitted_quantile": 1.5123217608560693
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.03,
+      "empirical_quantile": 1.2460691636623042,
+      "fitted_quantile": 1.5898690149844295
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.04,
+      "empirical_quantile": 1.255905664056277,
+      "fitted_quantile": 1.6475958807066382
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.05,
+      "empirical_quantile": 1.6676607090680486,
+      "fitted_quantile": 1.6940595151935254
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7706566840214053,
+      "fitted_quantile": 1.733204358349562
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8177661830582728,
+      "fitted_quantile": 1.7671900166054366
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.08,
+      "empirical_quantile": 1.8269028005632129,
+      "fitted_quantile": 1.7973331437136957
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09,
+      "empirical_quantile": 1.847768351339745,
+      "fitted_quantile": 1.8244983284306557
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8544598838356283,
+      "fitted_quantile": 1.849285142466425
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.11,
+      "empirical_quantile": 1.874842441913738,
+      "fitted_quantile": 1.8721271596430267
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.12,
+      "empirical_quantile": 1.879999357041437,
+      "fitted_quantile": 1.893348504617365
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.13,
+      "empirical_quantile": 1.8996652771095464,
+      "fitted_quantile": 1.9131981183962694
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.14,
+      "empirical_quantile": 1.9233637086548336,
+      "fitted_quantile": 1.9318715350556948
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9542799924672565,
+      "fitted_quantile": 1.9495252752194192
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.16,
+      "empirical_quantile": 1.9569440889172016,
+      "fitted_quantile": 1.9662866775979544
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.17,
+      "empirical_quantile": 1.957175276404137,
+      "fitted_quantile": 1.982260805060041
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9651932864026225,
+      "fitted_quantile": 1.997535414153008
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.19,
+      "empirical_quantile": 1.9774714271441185,
+      "fitted_quantile": 2.012184607026186
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.2,
+      "empirical_quantile": 1.9955033810047476,
+      "fitted_quantile": 2.026271565132033
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999638751950564,
+      "fitted_quantile": 2.0398506293629834
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.22,
+      "empirical_quantile": 2.014248600873199,
+      "fitted_quantile": 2.0529689061896765
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.23,
+      "empirical_quantile": 2.0165346571260456,
+      "fitted_quantile": 2.0656675242154465
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.02316747834926,
+      "fitted_quantile": 2.077982628985941
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.25,
+      "empirical_quantile": 2.026209713731363,
+      "fitted_quantile": 2.0899461791297083
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.26,
+      "empirical_quantile": 2.0336112176200256,
+      "fitted_quantile": 2.1015865898249455
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.27,
+      "empirical_quantile": 2.0393290846057797,
+      "fitted_quantile": 2.11292925760503
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.28,
+      "empirical_quantile": 2.091457671619928,
+      "fitted_quantile": 2.1239969919787183
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0962867010073607,
+      "fitted_quantile": 2.134810373172603
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.3,
+      "empirical_quantile": 2.1223794394232716,
+      "fitted_quantile": 2.145388050788268
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.31,
+      "empirical_quantile": 2.1317464305115497,
+      "fitted_quantile": 2.1557469948217625
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.32,
+      "empirical_quantile": 2.133413982531967,
+      "fitted_quantile": 2.165902707987646
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.33,
+      "empirical_quantile": 2.135407479421691,
+      "fitted_quantile": 2.1758694063938733
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.34,
+      "empirical_quantile": 2.1440464768869805,
+      "fitted_quantile": 2.185660174165322
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173841917927284,
+      "fitted_quantile": 2.1952870964972697
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.19049024060097,
+      "fitted_quantile": 2.204761374752439
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.37,
+      "empirical_quantile": 2.2046858262369704,
+      "fitted_quantile": 2.214093426535688
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.38,
+      "empirical_quantile": 2.210321765976349,
+      "fitted_quantile": 2.223292973144416
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246926853460733,
+      "fitted_quantile": 2.2323691163671473
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.4,
+      "empirical_quantile": 2.225753495765393,
+      "fitted_quantile": 2.2413304062627764
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.259705270364236,
+      "fitted_quantile": 2.2501849012797672
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.2697604897943093,
+      "fitted_quantile": 2.258940221854092
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.43,
+      "empirical_quantile": 2.284373716131712,
+      "fitted_quantile": 2.267603598445791
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.44,
+      "empirical_quantile": 2.2992306801876716,
+      "fitted_quantile": 2.276181914828446
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.45,
+      "empirical_quantile": 2.323220306158022,
+      "fitted_quantile": 2.284681747326975
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.46,
+      "empirical_quantile": 2.3310950668407147,
+      "fitted_quantile": 2.2931094006019235
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.3414008177749825,
+      "fitted_quantile": 2.30147094049887
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3545405619871635,
+      "fitted_quantile": 2.3097722244165455
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.49,
+      "empirical_quantile": 2.368098044942255,
+      "fitted_quantile": 2.3180189295943636
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5,
+      "empirical_quantile": 2.377010207067398,
+      "fitted_quantile": 2.3262165796773213
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.51,
+      "empirical_quantile": 2.387881778981161,
+      "fitted_quantile": 2.3343705698822173
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.52,
+      "empirical_quantile": 2.412972655233947,
+      "fitted_quantile": 2.342486191062646
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.53,
+      "empirical_quantile": 2.4180993427537736,
+      "fitted_quantile": 2.3505686529504666
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.54,
+      "empirical_quantile": 2.4359292827720176,
+      "fitted_quantile": 2.3586231068377312
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.55,
+      "empirical_quantile": 2.440344655216522,
+      "fitted_quantile": 2.366654667955112
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.56,
+      "empirical_quantile": 2.465532161168352,
+      "fitted_quantile": 2.374668437800326
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.4666564731139724,
+      "fitted_quantile": 2.3826695266731273
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.4676711515449745,
+      "fitted_quantile": 2.3906630766821393
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.59,
+      "empirical_quantile": 2.4780813749494492,
+      "fitted_quantile": 2.398654285503641
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6,
+      "empirical_quantile": 2.489458696275618,
+      "fitted_quantile": 2.4066484311940166
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.61,
+      "empirical_quantile": 2.4990879192199222,
+      "fitted_quantile": 2.414650898386861
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.62,
+      "empirical_quantile": 2.5128649714278493,
+      "fitted_quantile": 2.422667206243905
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.63,
+      "empirical_quantile": 2.5180598950361204,
+      "fitted_quantile": 2.430703038577716
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.64,
+      "empirical_quantile": 2.5217822141879904,
+      "fitted_quantile": 2.4387642766256574
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.65,
+      "empirical_quantile": 2.5247195886673044,
+      "fitted_quantile": 2.4468570350317034
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.66,
+      "empirical_quantile": 2.525142711831491,
+      "fitted_quantile": 2.4549877016891237
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.67,
+      "empirical_quantile": 2.5372055504965076,
+      "fitted_quantile": 2.4631629822175323
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.68,
+      "empirical_quantile": 2.541934000963401,
+      "fitted_quantile": 2.4713899499987235
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.550993549386069,
+      "fitted_quantile": 2.4796761028853096
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.555048505598397,
+      "fitted_quantile": 2.4880294279355297
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.560351883893697,
+      "fitted_quantile": 2.4964584758313184
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.72,
+      "empirical_quantile": 2.565010834452979,
+      "fitted_quantile": 2.504972447024654
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.73,
+      "empirical_quantile": 2.573791315260746,
+      "fitted_quantile": 2.513581292156116
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.74,
+      "empirical_quantile": 2.5754401484596,
+      "fitted_quantile": 2.5222958299363234
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.75,
+      "empirical_quantile": 2.5785730590826295,
+      "fitted_quantile": 2.5311278865264506
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.76,
+      "empirical_quantile": 2.582794303616978,
+      "fitted_quantile": 2.5400904615696747
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.77,
+      "empirical_quantile": 2.586109976712528,
+      "fitted_quantile": 2.5491979275124734
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.78,
+      "empirical_quantile": 2.586733080815659,
+      "fitted_quantile": 2.558466270858512
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.79,
+      "empirical_quantile": 2.5876530364378727,
+      "fitted_quantile": 2.567913386730115
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8,
+      "empirical_quantile": 2.5894818111348967,
+      "fitted_quantile": 2.577559441886218
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.81,
+      "empirical_quantile": 2.590706303570838,
+      "fitted_quantile": 2.5874273266318735
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.591362508259752,
+      "fitted_quantile": 2.597543223573423
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.597403465391563,
+      "fitted_quantile": 2.6079373320501205
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.6008479364166264,
+      "fitted_quantile": 2.6186448031013914
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.85,
+      "empirical_quantile": 2.6010069453833884,
+      "fitted_quantile": 2.629706963940096
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.86,
+      "empirical_quantile": 2.6053025466014317,
+      "fitted_quantile": 2.6411729480127613
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.87,
+      "empirical_quantile": 2.6340998612979933,
+      "fitted_quantile": 2.653101905332957
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.88,
+      "empirical_quantile": 2.6342446519425224,
+      "fitted_quantile": 2.665566063049153
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.89,
+      "empirical_quantile": 2.6426194158072525,
+      "fitted_quantile": 2.6786550663043376
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9,
+      "empirical_quantile": 2.6719790874364224,
+      "fitted_quantile": 2.6924823088890606
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.91,
+      "empirical_quantile": 2.6827010555064654,
+      "fitted_quantile": 2.7071944730183404
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.92,
+      "empirical_quantile": 2.6928971230253165,
+      "fitted_quantile": 2.7229864775402093
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.93,
+      "empirical_quantile": 2.700103559434045,
+      "fitted_quantile": 2.7401260392219795
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716257796034394,
+      "fitted_quantile": 2.758996482164202
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.7350841923936176,
+      "fitted_quantile": 2.780177209225188
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7392002115024336,
+      "fitted_quantile": 2.8046109891636797
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.97,
+      "empirical_quantile": 2.745208010182824,
+      "fitted_quantile": 2.8340047761229537
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.98,
+      "empirical_quantile": 2.8000665417876625,
+      "fitted_quantile": 2.872025702722191
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.99,
+      "empirical_quantile": 2.8304887508871457,
+      "fitted_quantile": 2.929657158987993
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.01,
+      "empirical_quantile": 1.1928109776507256,
+      "fitted_quantile": 0.02298280726290158
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.02,
+      "empirical_quantile": 1.2327062830199,
+      "fitted_quantile": 0.04619894650640933
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.03,
+      "empirical_quantile": 1.2460691636623042,
+      "fitted_quantile": 0.06965320415216762
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.04,
+      "empirical_quantile": 1.255905664056277,
+      "fitted_quantile": 0.09335051542773933
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.05,
+      "empirical_quantile": 1.6676607090680486,
+      "fitted_quantile": 0.11729597059959347
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7706566840214053,
+      "fitted_quantile": 0.14149482153589846
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8177661830582728,
+      "fitted_quantile": 0.16595248862028647
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.08,
+      "empirical_quantile": 1.8269028005632129,
+      "fitted_quantile": 0.1906745680393562
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09,
+      "empirical_quantile": 1.847768351339745,
+      "fitted_quantile": 0.21566683946842263
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8544598838356283,
+      "fitted_quantile": 0.24093527418191948
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.11,
+      "empirical_quantile": 1.874842441913738,
+      "fitted_quantile": 0.2664860436169241
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.12,
+      "empirical_quantile": 1.879999357041437,
+      "fitted_quantile": 0.29232552842052706
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.13,
+      "empirical_quantile": 1.8996652771095464,
+      "fitted_quantile": 0.3184603280142283
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.14,
+      "empirical_quantile": 1.9233637086548336,
+      "fitted_quantile": 0.3448972707112226
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9542799924672565,
+      "fitted_quantile": 0.3716434244253801
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.16,
+      "empirical_quantile": 1.9569440889172016,
+      "fitted_quantile": 0.39870610801393697
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.17,
+      "empirical_quantile": 1.957175276404137,
+      "fitted_quantile": 0.4260929032994359
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9651932864026225,
+      "fitted_quantile": 0.4538116678203218
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.19,
+      "empirical_quantile": 1.9774714271441185,
+      "fitted_quantile": 0.481870548363839
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.2,
+      "empirical_quantile": 1.9955033810047476,
+      "fitted_quantile": 0.510277995339545
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999638751950564,
+      "fitted_quantile": 0.5390427780568872
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.22,
+      "empirical_quantile": 2.014248600873199,
+      "fitted_quantile": 0.5681740009759503
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.23,
+      "empirical_quantile": 2.0165346571260456,
+      "fitted_quantile": 0.5976811210067247
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.02316747834926,
+      "fitted_quantile": 0.6275739659391385
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.25,
+      "empirical_quantile": 2.026209713731363,
+      "fitted_quantile": 0.6578627540937251
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.26,
+      "empirical_quantile": 2.0336112176200256,
+      "fitted_quantile": 0.6885581152912438
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.27,
+      "empirical_quantile": 2.0393290846057797,
+      "fitted_quantile": 0.7196711132489312
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.28,
+      "empirical_quantile": 2.091457671619928,
+      "fitted_quantile": 0.7512132695214646
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0962867010073607,
+      "fitted_quantile": 0.7831965891162783
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.3,
+      "empirical_quantile": 2.1223794394232716,
+      "fitted_quantile": 0.8156335879257428
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.31,
+      "empirical_quantile": 2.1317464305115497,
+      "fitted_quantile": 0.8485373221330815
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.32,
+      "empirical_quantile": 2.133413982531967,
+      "fitted_quantile": 0.8819214197649253
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.33,
+      "empirical_quantile": 2.135407479421691,
+      "fitted_quantile": 0.9158001145813395
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.34,
+      "empirical_quantile": 2.1440464768869805,
+      "fitted_quantile": 0.9501882825142526
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173841917927284,
+      "fitted_quantile": 0.9851014808877563
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.19049024060097,
+      "fitted_quantile": 1.0205559906790904
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.37,
+      "empirical_quantile": 2.2046858262369704,
+      "fitted_quantile": 1.056568862107662
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.38,
+      "empirical_quantile": 2.210321765976349,
+      "fitted_quantile": 1.093157963871637
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246926853460733,
+      "fitted_quantile": 1.1303420363880117
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.4,
+      "empirical_quantile": 2.225753495765393,
+      "fitted_quantile": 1.1681407494332703
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.259705270364236,
+      "fitted_quantile": 1.206574764628454
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.2697604897943093,
+      "fitted_quantile": 1.2456658032655792
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.43,
+      "empirical_quantile": 2.284373716131712,
+      "fitted_quantile": 1.2854367200328634
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.44,
+      "empirical_quantile": 2.2992306801876716,
+      "fitted_quantile": 1.3259115832652875
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.45,
+      "empirical_quantile": 2.323220306158022,
+      "fitted_quantile": 1.367115762426058
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.46,
+      "empirical_quantile": 2.3310950668407147,
+      "fitted_quantile": 1.4090760236151896
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.3414008177749825,
+      "fitted_quantile": 1.451820634005613
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3545405619871635,
+      "fitted_quantile": 1.4953794762273007
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.49,
+      "empirical_quantile": 2.368098044942255,
+      "fitted_quantile": 1.5397841738586504
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5,
+      "empirical_quantile": 2.377010207067398,
+      "fitted_quantile": 1.5850682293450757
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.51,
+      "empirical_quantile": 2.387881778981161,
+      "fitted_quantile": 1.6312671758514854
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.52,
+      "empirical_quantile": 2.412972655233947,
+      "fitted_quantile": 1.6784187447728152
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.53,
+      "empirical_quantile": 2.4180993427537736,
+      "fitted_quantile": 1.7265630508809744
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.54,
+      "empirical_quantile": 2.4359292827720176,
+      "fitted_quantile": 1.7757427973844322
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.55,
+      "empirical_quantile": 2.440344655216522,
+      "fitted_quantile": 1.8260035035269957
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.56,
+      "empirical_quantile": 2.465532161168352,
+      "fitted_quantile": 1.8773937577656032
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.4666564731139724,
+      "fitted_quantile": 1.9299655000562987
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.4676711515449745,
+      "fitted_quantile": 1.9837743373590133
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.59,
+      "empirical_quantile": 2.4780813749494492,
+      "fitted_quantile": 2.0388798971653976
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6,
+      "empirical_quantile": 2.489458696275618,
+      "fitted_quantile": 2.095346224684621
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.61,
+      "empirical_quantile": 2.4990879192199222,
+      "fitted_quantile": 2.1532422303210264
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.62,
+      "empirical_quantile": 2.5128649714278493,
+      "fitted_quantile": 2.2126421952842144
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.63,
+      "empirical_quantile": 2.5180598950361204,
+      "fitted_quantile": 2.2736263446363196
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.64,
+      "empirical_quantile": 2.5217822141879904,
+      "fitted_quantile": 2.3362814988665406
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.65,
+      "empirical_quantile": 2.5247195886673044,
+      "fitted_quantile": 2.4007018172708188
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.66,
+      "empirical_quantile": 2.525142711831491,
+      "fitted_quantile": 2.466989649110001
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.67,
+      "empirical_quantile": 2.5372055504965076,
+      "fitted_quantile": 2.5352565118593287
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.68,
+      "empirical_quantile": 2.541934000963401,
+      "fitted_quantile": 2.6056242200241666
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.550993549386069,
+      "fitted_quantile": 2.6782261932167137
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.555048505598397,
+      "fitted_quantile": 2.7532089787783462
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.560351883893697,
+      "fitted_quantile": 2.8307340326106556
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.72,
+      "empirical_quantile": 2.565010834452979,
+      "fitted_quantile": 2.910979812610363
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.73,
+      "empirical_quantile": 2.573791315260746,
+      "fitted_quantile": 2.9941442529602655
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.74,
+      "empirical_quantile": 2.5754401484596,
+      "fitted_quantile": 3.0804477055723765
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.75,
+      "empirical_quantile": 2.5785730590826295,
+      "fitted_quantile": 3.1701364586901515
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.76,
+      "empirical_quantile": 2.582794303616978,
+      "fitted_quantile": 3.263486974117891
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.77,
+      "empirical_quantile": 2.586109976712528,
+      "fitted_quantile": 3.360811026729508
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.78,
+      "empirical_quantile": 2.586733080815659,
+      "fitted_quantile": 3.462461987110679
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.79,
+      "empirical_quantile": 2.5876530364378727,
+      "fitted_quantile": 3.568842566704089
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8,
+      "empirical_quantile": 2.5894818111348967,
+      "fitted_quantile": 3.6804144540296972
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.81,
+      "empirical_quantile": 2.590706303570838,
+      "fitted_quantile": 3.7977104246292908
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.591362508259752,
+      "fitted_quantile": 3.921349728211617
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.597403465391563,
+      "fitted_quantile": 4.052057878455078
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.6008479364166264,
+      "fitted_quantile": 4.1906924493692435
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.85,
+      "empirical_quantile": 2.6010069453833884,
+      "fitted_quantile": 4.338277208123421
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.86,
+      "empirical_quantile": 2.6053025466014317,
+      "fitted_quantile": 4.496048041955439
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.87,
+      "empirical_quantile": 2.6340998612979933,
+      "fitted_quantile": 4.665515934917453
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.88,
+      "empirical_quantile": 2.6342446519425224,
+      "fitted_quantile": 4.848555203462967
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.89,
+      "empirical_quantile": 2.6426194158072525,
+      "fitted_quantile": 5.047530216455756
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9,
+      "empirical_quantile": 2.6719790874364224,
+      "fitted_quantile": 5.265482683374773
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.91,
+      "empirical_quantile": 2.6827010555064654,
+      "fitted_quantile": 5.5064179575566925
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.92,
+      "empirical_quantile": 2.6928971230253165,
+      "fitted_quantile": 5.775760678714319
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.93,
+      "empirical_quantile": 2.700103559434045,
+      "fitted_quantile": 6.081116271300517
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716257796034394,
+      "fitted_quantile": 6.433623432808045
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.7350841923936176,
+      "fitted_quantile": 6.850550912719851
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7392002115024336,
+      "fitted_quantile": 7.360828908059398
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.97,
+      "empirical_quantile": 2.745208010182824,
+      "fitted_quantile": 8.018691662153117
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.98,
+      "empirical_quantile": 2.8000665417876625,
+      "fitted_quantile": 8.945897137404467
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_ACTUAL_MEAN",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.99,
+      "empirical_quantile": 2.8304887508871457,
+      "fitted_quantile": 10.530965366749545
+    }
+  ],
+  "curves": []
+}

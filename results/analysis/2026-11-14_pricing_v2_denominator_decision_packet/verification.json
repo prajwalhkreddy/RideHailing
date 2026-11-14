@@ -1,0 +1,34 @@
+{
+  "reporting_only": true,
+  "source_audit_hashes": {
+    "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-14_pricing_v2_hourly_denominator_audit/denominator_threshold_sensitivity.csv": "f5f96642239bb9b4b15648284a35d3cfe7f4f72f06bcbbe5d117b788e8103ef2",
+    "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-14_pricing_v2_hourly_denominator_audit/extreme_contribution_analysis.csv": "45962ae4d70b4bc15093eb114bb1e89f549ecb4383d1d00513da47047c0a0461",
+    "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-14_pricing_v2_hourly_denominator_audit/fare_resolution_analysis.csv": "7e8b1f9ca9abf0e6e450da89af2b4b934355a207535bda8625259cc18a4b4cd9",
+    "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-14_pricing_v2_hourly_denominator_audit/weather_hour_statistics.csv": "2f847ca486d0c58e363b453e3ef68d2e25549c2c3b8f20e62a866fed529e1fd6",
+    "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-14_pricing_v2_hourly_denominator_audit/README.md": "fdd78f6e992ec005c10178efa5ec635c44d57cc91fa4280e84a53a047ee2b7d9",
+    "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-14_pricing_v2_hourly_denominator_audit/verification.json": "12305b2843a210a836c95c6ebb6468baa0696f9c8e36fb0798d95b992d88bcba",
+    "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-14_pricing_v2_hourly_denominator_audit/extreme_observations.csv": "558cf61976d735b7d8982f0470da1fb9a14edb5cc69cdf8b01cd7f9a883bc6f3",
+    "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-14_pricing_v2_hourly_denominator_audit/heavy_rain_hourly_diagnostic.csv": "c809ab4ceb4b859272cb8481648715b937e10c4e25d07938ba0ff10499846b85",
+    "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-14_pricing_v2_hourly_denominator_audit/t_vs_hour_comparison.csv": "aefaf4f3745790020aa77f4c792d5aced91431d6ec3a122bf1a29dc0af3c8efc"
+  },
+  "source_audit_unchanged": true,
+  "P_base": 22.354198442390455,
+  "L_base_km": 4.616983790655043,
+  "tradeoff_rows": 16,
+  "example_rows": 419,
+  "nearest_fare_rows": 408,
+  "example_categories": {
+    "D_Closest_Fare_22_35": 408,
+    "B_Fog_T3": 5,
+    "C_Heavy_Rain_Hour05": 5,
+    "A_Light_Rain_T1": 1
+  },
+  "fare_difference_conversion": "threshold * P_base",
+  "percent_change_formula": "100*(value/baseline_for_same_population-1)",
+  "variance_contribution_formula": "100*(epsilon-scenario_mean)^2/(scenario_N*scenario_population_SD^2)",
+  "no_threshold_selected": true,
+  "no_methodology_change": true,
+  "no_clustering": true,
+  "no_training": true,
+  "no_protected_period_access": true
+}

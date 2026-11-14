@@ -1,0 +1,13 @@
+operation,literal_source_expression,status,unresolved
+Observed distance,"PDF pp6,9: sample bin with p_i=N_i/sum N, then continuous distance within bin",PARTIALLY_SPECIFIED,Within-bin law and conditional OD/duration relationship unspecified
+Effective distance,"PDF p8: L_effective=max(L_observed,L_base)",FORMULA_EXPLICIT,Physical observed distance must remain unchanged
+Base price,PDF p2: sum N_i P_i / sum N_i; candidate22.35419844≈22.3542,FORMULA_EXPLICIT,Final calibration filters and precision still need selection
+Sensitivity calculation,PDF p3: e=((L-L_base)/(P-P_base))*(P_base/L_base),FORMULA_EXPLICIT,"Population, sign/zero support and denominator treatment unresolved"
+Sensitivity sampling,PDF pp6–7: independent common fitted population,PARTIALLY_SPECIFIED,No fitted family/parameters or mixture/zero specification
+Zero sensitivity,PDF p6: if e=0 then P=P_base,FORMULA_EXPLICIT,"Piecewise modelling branch, not definition of0/0"
+Short-distance fare,PDF p8: if L<=L_base then P=P_base,FORMULA_EXPLICIT,Interaction with action factor/clipping requires decision
+Long-distance reference fare / P_max,"PDF pp7,9: compute from approved pricing formulation",UNSPECIFIED,Complete equation and relation to factor-derived fare missing
+Action factor,PDF p7: P_action=P_base*alpha; seven factors illustrative,FORMULA_EXPLICIT,Final factors and relation to distance-dependent reference remain open
+Generated price,PDF p9: compute reference fare and apply pricing action,PARTIALLY_SPECIFIED,"No equation combines long-distance fare, sensitivity,P_max and aP_base"
+NYC clipping,"PDF p7: P_final=min(P_NYC_upper,max(P_NYC_lower,P_generated))",FORMULA_EXPLICIT,Exact bounds unresolved
+Passenger response,PDF p9: clip then evaluate approved utility/response model,PARTIALLY_SPECIFIED,No complete response equation or explicit resolution of current preselection mask

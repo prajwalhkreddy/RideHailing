@@ -1,0 +1,13 @@
+aspect,current_V2,governing_PDF,historical_comparator,reconciliation
+orientation,e=r_L/r_P,Not specified in PDF,October17 used Record029 r_P/r_L,Current formula reproduced; equivalence to a particular professor numerical analysis not established
+price_reference,22.354198442390455 USD candidate,Not specified,21.34586956773507 historical,"Current value is instructed candidate, not final population-alignment approval"
+distance_reference,4.616983790655043 km candidate,Not specified,3.01799878914405 miles historical Record029,Different reference construction; do not transfer prior SD results
+distance_units,TLC miles multiplied by1.609344; L_base in km,Not specified,Historical source/reference both miles,Units internally consistent; relative deviation is unit invariant under consistent conversion
+population_filters,Jan1–Mar15;1.5<=L<75 km; safe processed cache,Clean usable observations; exact dates/range not specified,"Full cleaned Jan–Mar,0<distance<=100 miles",New population differs; no protected rows read
+denominator,Price deviation; exact zero undefined; |r_P|<0.001 flag only,No exact handling specified,Old distance-denominator resolution |L-L_base|<0.005 miles,Old denominator exclusion cannot be transferred to new orientation
+sign,POSITIVE_VALID primary per latest prior decision; SIGNED_VALID companion; no abs,No positive-only restriction prescribed; illustrative means negative,Historical signed valid supported population,PDF does not establish positive-only applicability; both current populations fail
+support,No clipping/trimming/old support applied,No support quantiles or trimming prescribed,"October17 supported signed e within[-12.890744316473482,15.442447741158892]",Old supported results do not validate unrestricted new-e SD
+weather,All14 raw codes; no semantic membership constraint,Weather examples illustrative,Historical raw weather scenarios and later proposed groupings,Current scenario-first analysis consistent with general instruction
+time,"T1[00,04),T2[04,06),T3[06,16),T4[16,24)",No exact time boundaries prescribed,October17 six-hour presentation bins differed,User-approved T groups retained; do not equate old periods
+acceptance_rule,Combined population SD strictly<4; exactly4 rejected,Page2 explicitly says below4;4 or greater excluded,October17 SD<4; recent SD<=1 superseded,Current threshold verified directly; no SD<=1 tests run
+pooling,Underlying-observation or within+between pooled variance,"Explicit equivalent pooled calculation, never average SD",October17 pooled moments,No new merges after stop gate; candidate outputs intentionally empty

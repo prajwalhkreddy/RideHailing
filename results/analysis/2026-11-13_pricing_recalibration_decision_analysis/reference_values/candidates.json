@@ -1,0 +1,12 @@
+{
+  "P_base_exact": 22.354198442390455,
+  "P_base_document": 22.3542,
+  "P_base_historical": 21.34586956773507,
+  "L_candidates": {
+    "A_LOWER_EDGE": 4.5,
+    "B_INTERPOLATED": 4.616983790655043,
+    "C_PRICE_NEAR_PM1": 5.300620449409596
+  },
+  "C_definition": "Mean distance among 1<=km<75 safe-period rows with abs(fare-P_candidate)<=1USD; diagnostic inherited window, NOT selected.",
+  "taxi_meter_threshold": "NOT_ESTABLISHED"
+}

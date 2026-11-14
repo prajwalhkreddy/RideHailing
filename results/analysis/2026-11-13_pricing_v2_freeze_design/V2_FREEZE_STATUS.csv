@@ -1,0 +1,17 @@
+item,status,recommendation,evidence_and_condition
+P_base,ACADEMIC_CONFIRMATION_REQUIRED,22.354198442390455 USD retained as document-array normalization,"Exact for1<=km<75, N7946921;1.5<=km<75 mean24.20370974379068. Confirm reference population differs intentionally."
+L_base,ACADEMIC_CONFIRMATION_REQUIRED,4.616983790655043 km,"Interpolated reference crossing; acceptance-ceiling role, not operational floor. Controlled fixed-e ceiling comparison supplied."
+NYC bounds,ACADEMIC_CONFIRMATION_REQUIRED,"Empirical P0.5-P99.5 [6.60,94.70] USD","99.008419% in-range; simulation-support recommendation, not legal tariff. Long-distance tails disproportionately restricted."
+alpha range,ACADEMIC_CONFIRMATION_REQUIRED,"[0.2952465514256313,4.236340669698073] conditional on proposed bounds/references",Ratio equation frozen; numerical endpoints inherit unresolved references/bounds.
+action count/spacing,ENGINEERING_CHOICE_READY,"11 equally spaced dollar/alpha actions, conditional",Smallest tested grid meeting proposed maximum nearest-offer error<=5USD; spacing8.81. Adequacy tolerance itself needs approval.
+weather groups,READY_TO_FREEZE,"14 existing raw WeatherCode categories, no merging","Observed1,2,3,5,7,8,9,12,13,14,15,16,17,21. Preserve taxonomy/version; do not invent category names."
+time groups,ENGINEERING_CHOICE_READY,48 half-hour-of-day groups,Natural clock resolution;422observed of672potential weather/time pairs. Calendar-date dependence remains.
+sensitivity family per group,MORE_EVIDENCE_REQUIRED,Lognormal comparative leader; no approved sampler,"354groups ×3families; lognormal bestAIC in354, but median P99error≈-49.94%; truncated-normal positive fits boundary-limited. Sign/resolution/support not frozen."
+minimum group N,ENGINEERING_CHOICE_READY,"5000 positive eligible observations, proposed","187groups,92.856754% total trips;~50 nominal upper1% observations; not independence guarantee."
+fallback rule,ENGINEERING_CHOICE_READY,A:weather/time ->weather-only ->time-only ->global,"At5000:187direct,231weather-only,4time-only observedgroups; no extra adjacent-block parameter. Fallback fits still need validation."
+destination representation,ACADEMIC_CONFIRMATION_REQUIRED,One factor per destination per slot;142-entry schedule,Minimal reading of destination wording. Origin-conditioned interpretation remains possible; interactions preclude claiming factorization exact.
+state vector,ACADEMIC_CONFIRMATION_REQUIRED,"2146 system features; shared destination Q output[batch,142,11]",142×15grid fields +14weather onehot +2cyclic time. No passenger fields. Supply/arrivals/moving-average scopes specified as proposals.
+drop-off lambda,ENGINEERING_CHOICE_READY,0.30 EWMA,Lowest Mar1-15 forward predictive CE2.693708;lambda0.50 Brier slightly lower but more variable. Probabilistic scope/global vector proposed.
+accepted-unmatched reward,ACADEMIC_CONFIRMATION_REQUIRED,0,Allotment-gated revenue consistent with meeting table; no unassigned fare credited; explicit confirmation pending.
+slot reward aggregation,ACADEMIC_CONFIRMATION_REQUIRED,Total successful assigned gross fare; optional fixed positive scale,Preserves total-revenue objective; no per-offer normalization silently changes objective. Demand contextualized and controlled in evaluation.
+slot gamma,ACADEMIC_CONFIRMATION_REQUIRED,0.99 per30-minute slot as explicit candidate,Half-life≈34.48hours; not inherited request-step semantics. Horizon choice cannot be validated without authorized learning experiments.

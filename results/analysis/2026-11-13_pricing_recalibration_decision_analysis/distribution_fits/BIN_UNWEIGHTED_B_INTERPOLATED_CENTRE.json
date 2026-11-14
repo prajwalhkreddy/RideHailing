@@ -1,0 +1,5096 @@
+{
+  "version": 3,
+  "rows": [
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[2.259403660795627, 0.49661791806407746]",
+      "log_likelihood": -106.4126228029314,
+      "AIC": 216.8252456058628,
+      "BIC": 222.81967015339103,
+      "AIC_effective_N": 216.82524560586273,
+      "BIC_effective_N": 222.81967015339097,
+      "KS": 0.13895711569990532,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.7190042081279149,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1390; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": null,
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": null,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "INCOMPATIBLE_WITH_NEGATIVES",
+      "qualitative_fit": "No abs, shift or deletion applied to full population. See explicit positive-component diagnostic."
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "SIGNED_COMPLETE",
+      "zero_treatment": "Retained in full; positive component excludes zero explicitly",
+      "N_mass": 148.0,
+      "N_distinct_support_points": 148,
+      "effective_N_Kish": 147.99999999999994,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 100.0,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "real line",
+      "family": "normal",
+      "parameters": "[2.286582942776402, 0.37279690000922344]",
+      "log_likelihood": -63.53590217130386,
+      "AIC": 131.07180434260772,
+      "BIC": 137.0526695161652,
+      "AIC_effective_N": 131.07180434260763,
+      "BIC_effective_N": 137.0526695161651,
+      "KS": 0.1289346795480074,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.43221702157349534,
+      "support_compatibility": "COMPATIBLE_BASELINE_ALLOWS_NEGATIVE",
+      "qualitative_fit": "Descriptive KS=0.1289; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "positive",
+      "family": "gamma",
+      "parameters": "[31.13212951904676, 0.0, 0.0734476882276062]",
+      "log_likelihood": -75.86427228043796,
+      "AIC": 155.72854456087592,
+      "BIC": 161.7094097344334,
+      "AIC_effective_N": 155.72854456087595,
+      "BIC_effective_N": 161.70940973443342,
+      "KS": 0.13137532673072694,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.5160834849009386,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1314; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "positive",
+      "family": "lognormal",
+      "parameters": "[0.18987941621444368, 0.0, 2.2499589878272737]",
+      "log_likelihood": -83.56721588775463,
+      "AIC": 171.13443177550926,
+      "BIC": 177.11529694906673,
+      "AIC_effective_N": 171.13443177550926,
+      "BIC_effective_N": 177.11529694906673,
+      "KS": 0.13049577179851457,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.5684844618214601,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1305; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "positive",
+      "family": "weibull",
+      "parameters": "[8.182892883203838, 0.0, 2.4325091344216463]",
+      "log_likelihood": -51.04198290732087,
+      "AIC": 106.08396581464174,
+      "BIC": 112.06483098819922,
+      "AIC_effective_N": 106.08396581464173,
+      "BIC_effective_N": 112.0648309881992,
+      "KS": 0.11596895116819395,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -0.34722437351918956,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.1160; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "positive",
+      "family": "exponential",
+      "parameters": "[0.0, 2.286582942776402]",
+      "log_likelihood": -268.5776051526199,
+      "AIC": 539.1552103052398,
+      "BIC": 542.1456428920186,
+      "AIC_effective_N": 539.15521030524,
+      "BIC_effective_N": 542.1456428920187,
+      "KS": 0.48462902366630073,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "mean_log_score": -1.827058538453197,
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Descriptive KS=0.4846; ranking only within identical population/component; no final family selected",
+      "fit_method": "Full weighted MLE; loc=0 for positive families; normal unrestricted; no subsampling"
+    },
+    {
+      "population": "BIN_UNWEIGHTED",
+      "L_base_candidate": "B_INTERPOLATED",
+      "distance_representation": "CENTRE",
+      "scope": "ARRAY_RANGE",
+      "sign_treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "zero_treatment": "Conditional e>0 ONLY; omitted negative/zero mass separately reported; NOT a full-population replacement",
+      "N_mass": 147.0,
+      "N_distinct_support_points": 147,
+      "effective_N_Kish": 147.0,
+      "original_negative_mass": 1.0,
+      "original_zero_mass": 0.0,
+      "component_pct": 99.32432432432432,
+      "support": "empirical support",
+      "family": "empirical",
+      "parameters": "All empirical values with original probability masses; no fitted finite-dimensional parameterization",
+      "log_likelihood": null,
+      "AIC": null,
+      "BIC": null,
+      "AIC_effective_N": null,
+      "BIC_effective_N": null,
+      "KS": 0.0,
+      "KS_p_value": null,
+      "KS_interpretation": "Descriptive fitted-CDF discrepancy only. No unadjusted KS p-value: parameters estimated; bin proxies not IID passengers; trip records dependent. No calibrated hypothesis rejection claimed.",
+      "support_compatibility": "COMPATIBLE",
+      "qualitative_fit": "Exact in-sample empirical baseline; KS=0 is tautological, not out-of-sample validation; AIC/BIC not comparable"
+    }
+  ],
+  "qq": [
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": 0.9704006822760992,
+      "fitted_quantile": 1.104097622896672
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": 1.1673098289295911,
+      "fitted_quantile": 1.239475152571284
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": 1.2395146959628964,
+      "fitted_quantile": 1.3253678548073284
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": 1.2475214007097823,
+      "fitted_quantile": 1.3899815889065952
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": 1.2551986366538204,
+      "fitted_quantile": 1.4425398770588398
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.667767938082421,
+      "fitted_quantile": 1.4872752351859355
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.79284837152506,
+      "fitted_quantile": 1.5264993928836428
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": 1.8171906569882983,
+      "fitted_quantile": 1.5616199477836123
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": 1.839864399348954,
+      "fitted_quantile": 1.5935606873304595
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.848943299616796,
+      "fitted_quantile": 1.6229621904231084
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": 1.8554086056779129,
+      "fitted_quantile": 1.6502878193759989
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": 1.8751672045699033,
+      "fitted_quantile": 1.6758841663669761
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 1.8896941851275857,
+      "fitted_quantile": 1.700017643366532
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 1.899992975974735,
+      "fitted_quantile": 1.722897718915747
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9356223512680075,
+      "fitted_quantile": 1.744692268693126
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 1.9537513493834875,
+      "fitted_quantile": 1.76553805723359
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 1.9580069021239588,
+      "fitted_quantile": 1.7855480992890804
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9636117047408577,
+      "fitted_quantile": 1.8048169566025873
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 1.9783311045059688,
+      "fitted_quantile": 1.8234246304711188
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 1.9817722072144852,
+      "fitted_quantile": 1.8414394759801256
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999428565407148,
+      "fitted_quantile": 1.8589204200187912
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 2.00948696657072,
+      "fitted_quantile": 1.875918674422034
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 2.016450473061623,
+      "fitted_quantile": 1.8924790767850626
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.0212532336857274,
+      "fitted_quantile": 1.9086411525146605
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 2.0259979847857,
+      "fitted_quantile": 1.9244399652976891
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 2.0275037691218007,
+      "fitted_quantile": 1.9399068049733066
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 2.0346235192554607,
+      "fitted_quantile": 1.9550697490343294
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 2.0407599492804684,
+      "fitted_quantile": 1.9699541248932666
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0912180085423,
+      "fitted_quantile": 1.9845828934814154
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 2.102137300935555,
+      "fitted_quantile": 1.9989769699428248
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 2.122206842189538,
+      "fitted_quantile": 2.013155493624585
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 2.1321532874709903,
+      "fitted_quantile": 2.0271360568983106
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 2.1328532506165,
+      "fitted_quantile": 2.040934900330008
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 2.14967015869291,
+      "fitted_quantile": 2.0545670801742424
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.155726301560044,
+      "fitted_quantile": 2.0680466129808215
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.191703985050007,
+      "fitted_quantile": 2.0813866011794575
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 2.1927632544843485,
+      "fitted_quantile": 2.0945993427855782
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 2.21667609553753,
+      "fitted_quantile": 2.1076964278011308
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 2.2173376226591452,
+      "fitted_quantile": 2.1206888234326637
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 2.2268085345657,
+      "fitted_quantile": 2.1335869498887607
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.2419036919900592,
+      "fitted_quantile": 2.1464007482301604
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.271462238397386,
+      "fitted_quantile": 2.1591397415134876
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 2.2816127806646356,
+      "fitted_quantile": 2.171813090281865
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 2.300000446442876,
+      "fitted_quantile": 2.1844296433038504
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 2.322266768677997,
+      "fitted_quantile": 2.1969979843393324
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 2.330992109937667,
+      "fitted_quantile": 2.2095264756117916
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.3331538330142205,
+      "fitted_quantile": 2.222023298586639
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3491517512184714,
+      "fitted_quantile": 2.234496492591918
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 2.355916667836278,
+      "fitted_quantile": 2.2469539917680463
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 2.3772881670265287,
+      "fitted_quantile": 2.259403660795627
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 2.3841045301621415,
+      "fitted_quantile": 2.2718533298232075
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 2.407341848900817,
+      "fitted_quantile": 2.284310828999336
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 2.4184339007921856,
+      "fitted_quantile": 2.296784023004615
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 2.423731383179125,
+      "fitted_quantile": 2.3092808459794627
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 2.4404454553223225,
+      "fitted_quantile": 2.321809337251922
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 2.4608927871099446,
+      "fitted_quantile": 2.3343776782874035
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.466210288143696,
+      "fitted_quantile": 2.346994231309389
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.467838097503563,
+      "fitted_quantile": 2.3596675800777662
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 2.4809143703830383,
+      "fitted_quantile": 2.3724065733610935
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 2.4888788770432666,
+      "fitted_quantile": 2.385220371702493
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 2.49681264443324,
+      "fitted_quantile": 2.39811849815859
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 2.51075904170332,
+      "fitted_quantile": 2.411110893790123
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 2.5176487768078624,
+      "fitted_quantile": 2.4242079788056756
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 2.519506889491815,
+      "fitted_quantile": 2.4374207204117964
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 2.5216876187692736,
+      "fitted_quantile": 2.4507607086104324
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 2.5232263396597503,
+      "fitted_quantile": 2.4642402414170115
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 2.538966871655611,
+      "fitted_quantile": 2.477872421261246
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 2.545391379676417,
+      "fitted_quantile": 2.4916712646929433
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.552716066620943,
+      "fitted_quantile": 2.505651827966669
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.5552197501482037,
+      "fitted_quantile": 2.5198303516484293
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.563218358426081,
+      "fitted_quantile": 2.5342244281098387
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 2.5636459055934164,
+      "fitted_quantile": 2.548853196697987
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 2.57378119548599,
+      "fitted_quantile": 2.5637375725569247
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 2.574201041273817,
+      "fitted_quantile": 2.5789005166179475
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 2.578355209857627,
+      "fitted_quantile": 2.5943673562935645
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 2.583292068715141,
+      "fitted_quantile": 2.610166169076593
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 2.583311624368644,
+      "fitted_quantile": 2.6263282448061913
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 2.587226874737459,
+      "fitted_quantile": 2.6428886471692197
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 2.5880600304166497,
+      "fitted_quantile": 2.6598869015724627
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 2.5915227197246686,
+      "fitted_quantile": 2.677367845611128
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.591719888832981,
+      "fitted_quantile": 2.6953826911201353
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.5926487784984755,
+      "fitted_quantile": 2.7139903649886667
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.5944876715487553,
+      "fitted_quantile": 2.7332592223021734
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.602908247641278,
+      "fitted_quantile": 2.753269264357664
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.603751085509725,
+      "fitted_quantile": 2.7741150528981278
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 2.6039489456984284,
+      "fitted_quantile": 2.795909602675507
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 2.63414419185945,
+      "fitted_quantile": 2.818789678224722
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 2.6358759574613138,
+      "fitted_quantile": 2.8429231552242777
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 2.642983771365417,
+      "fitted_quantile": 2.868519502215255
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 2.6733843392720864,
+      "fitted_quantile": 2.8958451311681452
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 2.682372887734347,
+      "fitted_quantile": 2.9252466342607946
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 2.6922641720039264,
+      "fitted_quantile": 2.9571873738076415
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 2.701786197723342,
+      "fitted_quantile": 2.992307928707611
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716878397190883,
+      "fitted_quantile": 3.031532086405319
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.73624953114051,
+      "fitted_quantile": 3.076267444532414
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7401870617624726,
+      "fitted_quantile": 3.128825732684659
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 2.744293191148966,
+      "fitted_quantile": 3.1934394667839254
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 2.79992731850487,
+      "fitted_quantile": 3.2793321690199697
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "SIGNED_COMPLETE",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 2.8305085768557485,
+      "fitted_quantile": 3.414709698694582
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.01,
+      "empirical_quantile": 1.1673098289295911,
+      "fitted_quantile": 1.4193276669909292
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.02,
+      "empirical_quantile": 1.230929097480998,
+      "fitted_quantile": 1.5209517154955385
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.03,
+      "empirical_quantile": 1.2475214007097823,
+      "fitted_quantile": 1.5854289161004536
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.04,
+      "empirical_quantile": 1.249721880923784,
+      "fitted_quantile": 1.6339326025242666
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.05,
+      "empirical_quantile": 1.667767938082421,
+      "fitted_quantile": 1.6733866096799652
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7708839940014978,
+      "fitted_quantile": 1.706968166494498
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8171906569882983,
+      "fitted_quantile": 1.7364126224097824
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.08,
+      "empirical_quantile": 1.8260441928010092,
+      "fitted_quantile": 1.7627766208018483
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09,
+      "empirical_quantile": 1.848943299616796,
+      "fitted_quantile": 1.7867536225449272
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8541004031466408,
+      "fitted_quantile": 1.8088244919394079
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.11,
+      "empirical_quantile": 1.8751672045699033,
+      "fitted_quantile": 1.829337061852613
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.12,
+      "empirical_quantile": 1.8801186413368849,
+      "fitted_quantile": 1.8485515091423816
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.13,
+      "empirical_quantile": 1.899992975974735,
+      "fitted_quantile": 1.8666678216728478
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.14,
+      "empirical_quantile": 1.9231736245650473,
+      "fitted_quantile": 1.8838432415005788
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9537513493834875,
+      "fitted_quantile": 1.9002037881070653
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.16,
+      "empirical_quantile": 1.9572545029500288,
+      "fitted_quantile": 1.9158521267260715
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.17,
+      "empirical_quantile": 1.9580069021239588,
+      "fitted_quantile": 1.930873094306985
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9653721403301816,
+      "fitted_quantile": 1.9453376756519305
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.19,
+      "empirical_quantile": 1.9783311045059688,
+      "fitted_quantile": 1.9593059254517213
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.2,
+      "empirical_quantile": 1.9969639762643616,
+      "fitted_quantile": 1.972829155918481
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999428565407148,
+      "fitted_quantile": 1.9859516017864298
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.22,
+      "empirical_quantile": 2.0148357648275272,
+      "fitted_quantile": 1.9987117063187019
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.23,
+      "empirical_quantile": 2.016450473061623,
+      "fitted_quantile": 2.011143127818572
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.023270822664017,
+      "fitted_quantile": 2.0232755368810476
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.25,
+      "empirical_quantile": 2.0259979847857,
+      "fitted_quantile": 2.035135254815307
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.26,
+      "empirical_quantile": 2.0346235192554607,
+      "fitted_quantile": 2.0467457700107454
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.27,
+      "empirical_quantile": 2.040750378545622,
+      "fitted_quantile": 2.0581281594400234
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.28,
+      "empirical_quantile": 2.0912180085423,
+      "fitted_quantile": 2.069301435668989
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0967801560726755,
+      "fitted_quantile": 2.080282834813574
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.3,
+      "empirical_quantile": 2.122206842189538,
+      "fitted_quantile": 2.0910880572755968
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.31,
+      "empirical_quantile": 2.131354185725581,
+      "fitted_quantile": 2.101731470416775
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.32,
+      "empirical_quantile": 2.1328532506165,
+      "fitted_quantile": 2.1122262803284766
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.33,
+      "empirical_quantile": 2.145346400899025,
+      "fitted_quantile": 2.1225846783401763
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.34,
+      "empirical_quantile": 2.14967015869291,
+      "fitted_quantile": 2.132817966752543
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173256705571509,
+      "fitted_quantile": 2.1429366673895527
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.191703985050007,
+      "fitted_quantile": 2.1529506158713096
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.37,
+      "empirical_quantile": 2.2091088863102737,
+      "fitted_quantile": 2.1628690439670697
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.38,
+      "empirical_quantile": 2.21667609553753,
+      "fitted_quantile": 2.172700651960572
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246164049493036,
+      "fitted_quantile": 2.1824536726208215
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.4,
+      "empirical_quantile": 2.2268085345657,
+      "fitted_quantile": 2.1921359281010586
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.2596801373737443,
+      "fitted_quantile": 2.2017548808719103
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.271462238397386,
+      "fitted_quantile": 2.2113176796202434
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.43,
+      "empirical_quantile": 2.2849140133775823,
+      "fitted_quantile": 2.2208312009043807
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.44,
+      "empirical_quantile": 2.300000446442876,
+      "fitted_quantile": 2.230302087242379
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.45,
+      "empirical_quantile": 2.3236256381819347,
+      "fitted_quantile": 2.2397367822178467
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.46,
+      "empirical_quantile": 2.330992109937667,
+      "fitted_quantile": 2.249141563113333
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.341865684243745,
+      "fitted_quantile": 2.2585225715214636
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3491517512184714,
+      "fitted_quantile": 2.2678858423363955
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.49,
+      "empirical_quantile": 2.3673758188769605,
+      "fitted_quantile": 2.2772373314909387
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5,
+      "empirical_quantile": 2.3772881670265287,
+      "fitted_quantile": 2.286582942776402
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.51,
+      "empirical_quantile": 2.3841045301621415,
+      "fitted_quantile": 2.2959285540618652
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.52,
+      "empirical_quantile": 2.411239086425177,
+      "fitted_quantile": 2.3052800432164084
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.53,
+      "empirical_quantile": 2.4184339007921856,
+      "fitted_quantile": 2.3146433140313403
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.54,
+      "empirical_quantile": 2.4357383792302953,
+      "fitted_quantile": 2.3240243224394708
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.55,
+      "empirical_quantile": 2.4404454553223225,
+      "fitted_quantile": 2.3334291033349572
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.56,
+      "empirical_quantile": 2.465369287824096,
+      "fitted_quantile": 2.342863798310425
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.466210288143696,
+      "fitted_quantile": 2.352334684648423
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.468589939445947,
+      "fitted_quantile": 2.361848205932561
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.59,
+      "empirical_quantile": 2.4809143703830383,
+      "fitted_quantile": 2.3714110046808936
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6,
+      "empirical_quantile": 2.489504949281995,
+      "fitted_quantile": 2.3810299574517453
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.61,
+      "empirical_quantile": 2.49681264443324,
+      "fitted_quantile": 2.3907122129319824
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.62,
+      "empirical_quantile": 2.5127244121923944,
+      "fitted_quantile": 2.400465233592232
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.63,
+      "empirical_quantile": 2.5176487768078624,
+      "fitted_quantile": 2.410296841585734
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.64,
+      "empirical_quantile": 2.520969819257082,
+      "fitted_quantile": 2.4202152696814943
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.65,
+      "empirical_quantile": 2.5216876187692736,
+      "fitted_quantile": 2.430229218163251
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.66,
+      "empirical_quantile": 2.525342626474126,
+      "fitted_quantile": 2.440347918800261
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.67,
+      "empirical_quantile": 2.538966871655611,
+      "fitted_quantile": 2.4505812072126276
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.68,
+      "empirical_quantile": 2.545391379676417,
+      "fitted_quantile": 2.4609396052243273
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.552716066620943,
+      "fitted_quantile": 2.4714344151360295
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.5552197501482037,
+      "fitted_quantile": 2.482077828277207
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.563218358426081,
+      "fitted_quantile": 2.4928830507392306
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.72,
+      "empirical_quantile": 2.5636459055934164,
+      "fitted_quantile": 2.5038644498838147
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.73,
+      "empirical_quantile": 2.57378119548599,
+      "fitted_quantile": 2.5150377261127805
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.74,
+      "empirical_quantile": 2.574201041273817,
+      "fitted_quantile": 2.5264201155420585
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.75,
+      "empirical_quantile": 2.582632902868832,
+      "fitted_quantile": 2.538030630737497
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.76,
+      "empirical_quantile": 2.583292068715141,
+      "fitted_quantile": 2.5498903486717563
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.77,
+      "empirical_quantile": 2.586007264038793,
+      "fitted_quantile": 2.562022757734232
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.78,
+      "empirical_quantile": 2.587226874737459,
+      "fitted_quantile": 2.574454179234102
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.79,
+      "empirical_quantile": 2.5891214987324775,
+      "fitted_quantile": 2.5872142837663743
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8,
+      "empirical_quantile": 2.5915227197246686,
+      "fitted_quantile": 2.600336729634323
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.81,
+      "empirical_quantile": 2.592068838850378,
+      "fitted_quantile": 2.613859960101083
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.5926487784984755,
+      "fitted_quantile": 2.6278282099008736
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.595644339654079,
+      "fitted_quantile": 2.6422927912458194
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.602908247641278,
+      "fitted_quantile": 2.6573137588267324
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.85,
+      "empirical_quantile": 2.603751085509725,
+      "fitted_quantile": 2.6729620974457386
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.86,
+      "empirical_quantile": 2.6039489456984284,
+      "fitted_quantile": 2.689322644052225
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.87,
+      "empirical_quantile": 2.63414419185945,
+      "fitted_quantile": 2.7064980638799563
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.88,
+      "empirical_quantile": 2.6358759574613138,
+      "fitted_quantile": 2.7246143764104223
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.89,
+      "empirical_quantile": 2.642983771365417,
+      "fitted_quantile": 2.743828823700191
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9,
+      "empirical_quantile": 2.6733843392720864,
+      "fitted_quantile": 2.764341393613396
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.91,
+      "empirical_quantile": 2.682372887734347,
+      "fitted_quantile": 2.7864122630078767
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.92,
+      "empirical_quantile": 2.6922641720039264,
+      "fitted_quantile": 2.8103892647509556
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.93,
+      "empirical_quantile": 2.701786197723342,
+      "fitted_quantile": 2.8367532631430215
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716878397190883,
+      "fitted_quantile": 2.8661977190583063
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.73624953114051,
+      "fitted_quantile": 2.899779275872839
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7401870617624726,
+      "fitted_quantile": 2.9392332830285377
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.97,
+      "empirical_quantile": 2.744293191148966,
+      "fitted_quantile": 2.9877369694523503
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.98,
+      "empirical_quantile": 2.79992731850487,
+      "fitted_quantile": 3.052214170057265
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "normal",
+      "probability": 0.99,
+      "empirical_quantile": 2.8305085768557485,
+      "fitted_quantile": 3.1538382185618747
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.01,
+      "empirical_quantile": 1.1673098289295911,
+      "fitted_quantile": 1.4422338248900213
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.02,
+      "empirical_quantile": 1.230929097480998,
+      "fitted_quantile": 1.5255921812405198
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.03,
+      "empirical_quantile": 1.2475214007097823,
+      "fitted_quantile": 1.5801692939069276
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.04,
+      "empirical_quantile": 1.249721880923784,
+      "fitted_quantile": 1.622099750554885
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.05,
+      "empirical_quantile": 1.667767938082421,
+      "fitted_quantile": 1.656765004222635
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7708839940014978,
+      "fitted_quantile": 1.6866674739114333
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8171906569882983,
+      "fitted_quantile": 1.7131879636385625
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.08,
+      "empirical_quantile": 1.8260441928010092,
+      "fitted_quantile": 1.7371743140703197
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09,
+      "empirical_quantile": 1.848943299616796,
+      "fitted_quantile": 1.7591869502482969
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8541004031466408,
+      "fitted_quantile": 1.7796169371221828
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.11,
+      "empirical_quantile": 1.8751672045699033,
+      "fitted_quantile": 1.7987487512978204
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.12,
+      "empirical_quantile": 1.8801186413368849,
+      "fitted_quantile": 1.8167962779478783
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.13,
+      "empirical_quantile": 1.899992975974735,
+      "fitted_quantile": 1.8339247086196804
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.14,
+      "empirical_quantile": 1.9231736245650473,
+      "fitted_quantile": 1.8502645098789727
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9537513493834875,
+      "fitted_quantile": 1.865920688940914
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.16,
+      "empirical_quantile": 1.9572545029500288,
+      "fitted_quantile": 1.8809791443059378
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.17,
+      "empirical_quantile": 1.9580069021239588,
+      "fitted_quantile": 1.8955111414637582
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9653721403301816,
+      "fitted_quantile": 1.9095765438863048
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.19,
+      "empirical_quantile": 1.9783311045059688,
+      "fitted_quantile": 1.923226194796302
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.2,
+      "empirical_quantile": 1.9969639762643616,
+      "fitted_quantile": 1.9365037055443468
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999428565407148,
+      "fitted_quantile": 1.949446820547628
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.22,
+      "empirical_quantile": 2.0148357648275272,
+      "fitted_quantile": 1.9620884743763063
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.23,
+      "empirical_quantile": 2.016450473061623,
+      "fitted_quantile": 1.9744576212597797
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.023270822664017,
+      "fitted_quantile": 1.9865798938153356
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.25,
+      "empirical_quantile": 2.0259979847857,
+      "fitted_quantile": 1.9984781318793177
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.26,
+      "empirical_quantile": 2.0346235192554607,
+      "fitted_quantile": 2.010172811316373
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.27,
+      "empirical_quantile": 2.040750378545622,
+      "fitted_quantile": 2.021682394947372
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.28,
+      "empirical_quantile": 2.0912180085423,
+      "fitted_quantile": 2.033023622215673
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0967801560726755,
+      "fitted_quantile": 2.044211750215023
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.3,
+      "empirical_quantile": 2.122206842189538,
+      "fitted_quantile": 2.0552607557720224
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.31,
+      "empirical_quantile": 2.131354185725581,
+      "fitted_quantile": 2.066183506101698
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.32,
+      "empirical_quantile": 2.1328532506165,
+      "fitted_quantile": 2.076991903923579
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.33,
+      "empirical_quantile": 2.145346400899025,
+      "fitted_quantile": 2.0876970116895572
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.34,
+      "empirical_quantile": 2.14967015869291,
+      "fitted_quantile": 2.098309158629276
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173256705571509,
+      "fitted_quantile": 2.10883803358931
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.191703985050007,
+      "fitted_quantile": 2.1192927660750245
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.37,
+      "empirical_quantile": 2.2091088863102737,
+      "fitted_quantile": 2.129681997459618
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.38,
+      "empirical_quantile": 2.21667609553753,
+      "fitted_quantile": 2.1400139439743855
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246164049493036,
+      "fitted_quantile": 2.150296452816319
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.4,
+      "empirical_quantile": 2.2268085345657,
+      "fitted_quantile": 2.1605370524876153
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.2596801373737443,
+      "fitted_quantile": 2.1707429983043296
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.271462238397386,
+      "fitted_quantile": 2.1809213138690904
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.43,
+      "empirical_quantile": 2.2849140133775823,
+      "fitted_quantile": 2.191078829188368
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.44,
+      "empirical_quantile": 2.300000446442876,
+      "fitted_quantile": 2.2012222160228565
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.45,
+      "empirical_quantile": 2.3236256381819347,
+      "fitted_quantile": 2.2113580209859207
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.46,
+      "empirical_quantile": 2.330992109937667,
+      "fitted_quantile": 2.221492696846487
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.341865684243745,
+      "fitted_quantile": 2.2316326324468525
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3491517512184714,
+      "fitted_quantile": 2.2417841816106154
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.49,
+      "empirical_quantile": 2.3673758188769605,
+      "fitted_quantile": 2.2519536913900033
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5,
+      "empirical_quantile": 2.3772881670265287,
+      "fitted_quantile": 2.2621475299841363
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.51,
+      "empirical_quantile": 2.3841045301621415,
+      "fitted_quantile": 2.2723721146496025
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.52,
+      "empirical_quantile": 2.411239086425177,
+      "fitted_quantile": 2.282633939921613
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.53,
+      "empirical_quantile": 2.4184339007921856,
+      "fitted_quantile": 2.2929396064678422
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.54,
+      "empirical_quantile": 2.4357383792302953,
+      "fitted_quantile": 2.3032958509078725
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.55,
+      "empirical_quantile": 2.4404454553223225,
+      "fitted_quantile": 2.3137095769492912
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.56,
+      "empirical_quantile": 2.465369287824096,
+      "fitted_quantile": 2.324187888217495
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.466210288143696,
+      "fitted_quantile": 2.334738123191018
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.468589939445947,
+      "fitted_quantile": 2.3453678926989143
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.59,
+      "empirical_quantile": 2.4809143703830383,
+      "fitted_quantile": 2.3560851204929794
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6,
+      "empirical_quantile": 2.489504949281995,
+      "fitted_quantile": 2.366898087477492
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.61,
+      "empirical_quantile": 2.49681264443324,
+      "fitted_quantile": 2.377815480265317
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.62,
+      "empirical_quantile": 2.5127244121923944,
+      "fitted_quantile": 2.388846444835149
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.63,
+      "empirical_quantile": 2.5176487768078624,
+      "fitted_quantile": 2.4000006461946715
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.64,
+      "empirical_quantile": 2.520969819257082,
+      "fitted_quantile": 2.411288335114183
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.65,
+      "empirical_quantile": 2.5216876187692736,
+      "fitted_quantile": 2.422720423192007
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.66,
+      "empirical_quantile": 2.525342626474126,
+      "fitted_quantile": 2.4343085677560423
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.67,
+      "empirical_quantile": 2.538966871655611,
+      "fitted_quantile": 2.4460652684073994
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.68,
+      "empirical_quantile": 2.545391379676417,
+      "fitted_quantile": 2.45800397738796
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.552716066620943,
+      "fitted_quantile": 2.4701392264248416
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.5552197501482037,
+      "fitted_quantile": 2.4824867732988674
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.563218358426081,
+      "fitted_quantile": 2.495063772138177
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.72,
+      "empirical_quantile": 2.5636459055934164,
+      "fitted_quantile": 2.507888972402086
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.73,
+      "empirical_quantile": 2.57378119548599,
+      "fitted_quantile": 2.520982952762012
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.74,
+      "empirical_quantile": 2.574201041273817,
+      "fitted_quantile": 2.5343683976992013
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.75,
+      "empirical_quantile": 2.582632902868832,
+      "fitted_quantile": 2.548070426752604
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.76,
+      "empirical_quantile": 2.583292068715141,
+      "fitted_quantile": 2.562116989146781
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.77,
+      "empirical_quantile": 2.586007264038793,
+      "fitted_quantile": 2.5765393402680883
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.78,
+      "empirical_quantile": 2.587226874737459,
+      "fitted_quantile": 2.5913726215106396
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.79,
+      "empirical_quantile": 2.5891214987324775,
+      "fitted_quantile": 2.6066565719270027
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8,
+      "empirical_quantile": 2.5915227197246686,
+      "fitted_quantile": 2.622436409701182
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.81,
+      "empirical_quantile": 2.592068838850378,
+      "fitted_quantile": 2.638763934934016
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.5926487784984755,
+      "fitted_quantile": 2.655698924468978
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.595644339654079,
+      "fitted_quantile": 2.673310917428809
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.602908247641278,
+      "fitted_quantile": 2.6916815314878475
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.85,
+      "empirical_quantile": 2.603751085509725,
+      "fitted_quantile": 2.7109075123949227
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.86,
+      "empirical_quantile": 2.6039489456984284,
+      "fitted_quantile": 2.7311048159017925
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.87,
+      "empirical_quantile": 2.63414419185945,
+      "fitted_quantile": 2.752414174637055
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.88,
+      "empirical_quantile": 2.6358759574613138,
+      "fitted_quantile": 2.7750088531611965
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.89,
+      "empirical_quantile": 2.642983771365417,
+      "fitted_quantile": 2.7991057181018255
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9,
+      "empirical_quantile": 2.6733843392720864,
+      "fitted_quantile": 2.8249814942888607
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.91,
+      "empirical_quantile": 2.682372887734347,
+      "fitted_quantile": 2.8529974441783943
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.92,
+      "empirical_quantile": 2.6922641720039264,
+      "fitted_quantile": 2.8836383530450638
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.93,
+      "empirical_quantile": 2.701786197723342,
+      "fitted_quantile": 2.9175771577508285
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716878397190883,
+      "fitted_quantile": 2.9557887141461103
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.73624953114051,
+      "fitted_quantile": 2.9997660653506286
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7401870617624726,
+      "fitted_quantile": 3.0519759086469436
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.97,
+      "empirical_quantile": 2.744293191148966,
+      "fitted_quantile": 3.116967019705402
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.98,
+      "empirical_quantile": 2.79992731850487,
+      "fitted_quantile": 3.2047437854565084
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "gamma",
+      "probability": 0.99,
+      "empirical_quantile": 2.8305085768557485,
+      "fitted_quantile": 3.3463152371014573
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.01,
+      "empirical_quantile": 1.1673098289295911,
+      "fitted_quantile": 1.44655723443506
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.02,
+      "empirical_quantile": 1.230929097480998,
+      "fitted_quantile": 1.523404060261748
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.03,
+      "empirical_quantile": 1.2475214007097823,
+      "fitted_quantile": 1.5742642119138681
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.04,
+      "empirical_quantile": 1.249721880923784,
+      "fitted_quantile": 1.6136403914563942
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.05,
+      "empirical_quantile": 1.667767938082421,
+      "fitted_quantile": 1.6463951528021663
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7708839940014978,
+      "fitted_quantile": 1.6747978742905014
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8171906569882983,
+      "fitted_quantile": 1.7001043806042824
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.08,
+      "empirical_quantile": 1.8260441928010092,
+      "fitted_quantile": 1.723087639627464
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09,
+      "empirical_quantile": 1.848943299616796,
+      "fitted_quantile": 1.744259665782918
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8541004031466408,
+      "fitted_quantile": 1.763978422388228
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.11,
+      "empirical_quantile": 1.8751672045699033,
+      "fitted_quantile": 1.7825047623266135
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.12,
+      "empirical_quantile": 1.8801186413368849,
+      "fitted_quantile": 1.8000351316242644
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.13,
+      "empirical_quantile": 1.899992975974735,
+      "fitted_quantile": 1.8167214915869367
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.14,
+      "empirical_quantile": 1.9231736245650473,
+      "fitted_quantile": 1.8326840433316596
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9537513493834875,
+      "fitted_quantile": 1.8480196780821343
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.16,
+      "empirical_quantile": 1.9572545029500288,
+      "fitted_quantile": 1.8628077753025873
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.17,
+      "empirical_quantile": 1.9580069021239588,
+      "fitted_quantile": 1.87711429321
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9653721403301816,
+      "fitted_quantile": 1.8909947245690877
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.19,
+      "empirical_quantile": 1.9783311045059688,
+      "fitted_quantile": 1.9044962776206953
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.2,
+      "empirical_quantile": 1.9969639762643616,
+      "fitted_quantile": 1.9176595151263327
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999428565407148,
+      "fitted_quantile": 1.930519606429337
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.22,
+      "empirical_quantile": 2.0148357648275272,
+      "fitted_quantile": 1.9431072979633528
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.23,
+      "empirical_quantile": 2.016450473061623,
+      "fitted_quantile": 1.955449675482104
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.023270822664017,
+      "fitted_quantile": 1.9675707698978004
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.25,
+      "empirical_quantile": 2.0259979847857,
+      "fitted_quantile": 1.9794920440966353
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.26,
+      "empirical_quantile": 2.0346235192554607,
+      "fitted_quantile": 1.9912327880588685
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.27,
+      "empirical_quantile": 2.040750378545622,
+      "fitted_quantile": 2.0028104425490425
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.28,
+      "empirical_quantile": 2.0912180085423,
+      "fitted_quantile": 2.014240866598472
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0967801560726755,
+      "fitted_quantile": 2.0255385603494203
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.3,
+      "empirical_quantile": 2.122206842189538,
+      "fitted_quantile": 2.0367168521506778
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.31,
+      "empirical_quantile": 2.131354185725581,
+      "fitted_quantile": 2.0477880568049596
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.32,
+      "empirical_quantile": 2.1328532506165,
+      "fitted_quantile": 2.058763610375582
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.33,
+      "empirical_quantile": 2.145346400899025,
+      "fitted_quantile": 2.069654185828142
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.34,
+      "empirical_quantile": 2.14967015869291,
+      "fitted_quantile": 2.0804697929169738
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173256705571509,
+      "fitted_quantile": 2.0912198650579366
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.191703985050007,
+      "fitted_quantile": 2.1019133354094155
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.37,
+      "empirical_quantile": 2.2091088863102737,
+      "fitted_quantile": 2.1125587039763825
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.38,
+      "empirical_quantile": 2.21667609553753,
+      "fitted_quantile": 2.123164097231548
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246164049493036,
+      "fitted_quantile": 2.133737321493398
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.4,
+      "empirical_quantile": 2.2268085345657,
+      "fitted_quantile": 2.14428591109851
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.2596801373737443,
+      "fitted_quantile": 2.1548171722438543
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.271462238397386,
+      "fitted_quantile": 2.1653382232454166
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.43,
+      "empirical_quantile": 2.2849140133775823,
+      "fitted_quantile": 2.175856031855907
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.44,
+      "empirical_quantile": 2.300000446442876,
+      "fitted_quantile": 2.1863774502016744
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.45,
+      "empirical_quantile": 2.3236256381819347,
+      "fitted_quantile": 2.1969092478333736
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.46,
+      "empirical_quantile": 2.330992109937667,
+      "fitted_quantile": 2.20745814333357
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.341865684243745,
+      "fitted_quantile": 2.2180308348850404
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3491517512184714,
+      "fitted_quantile": 2.2286340301744323
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.49,
+      "empirical_quantile": 2.3673758188769605,
+      "fitted_quantile": 2.239274475985872
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5,
+      "empirical_quantile": 2.3772881670265287,
+      "fitted_quantile": 2.2499589878272737
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.51,
+      "empirical_quantile": 2.3841045301621415,
+      "fitted_quantile": 2.260694479927913
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.52,
+      "empirical_quantile": 2.411239086425177,
+      "fitted_quantile": 2.2714879959490295
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.53,
+      "empirical_quantile": 2.4184339007921856,
+      "fitted_quantile": 2.2823467407598543
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.54,
+      "empirical_quantile": 2.4357383792302953,
+      "fitted_quantile": 2.2932781136497233
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.55,
+      "empirical_quantile": 2.4404454553223225,
+      "fitted_quantile": 2.304289743373453
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.56,
+      "empirical_quantile": 2.465369287824096,
+      "fitted_quantile": 2.3153895254626664
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.466210288143696,
+      "fitted_quantile": 2.3265856622815266
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.468589939445947,
+      "fitted_quantile": 2.3378867063628124
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.59,
+      "empirical_quantile": 2.4809143703830383,
+      "fitted_quantile": 2.3493016076316304
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6,
+      "empirical_quantile": 2.489504949281995,
+      "fitted_quantile": 2.360839765211778
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.61,
+      "empirical_quantile": 2.49681264443324,
+      "fitted_quantile": 2.372511084617307
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.62,
+      "empirical_quantile": 2.5127244121923944,
+      "fitted_quantile": 2.3843260412634244
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.63,
+      "empirical_quantile": 2.5176487768078624,
+      "fitted_quantile": 2.396295751391969
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.64,
+      "empirical_quantile": 2.520969819257082,
+      "fitted_quantile": 2.408432051704301
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.65,
+      "empirical_quantile": 2.5216876187692736,
+      "fitted_quantile": 2.420747589237577
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.66,
+      "empirical_quantile": 2.525342626474126,
+      "fitted_quantile": 2.433255923320562
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.67,
+      "empirical_quantile": 2.538966871655611,
+      "fitted_quantile": 2.4459716418176
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.68,
+      "empirical_quantile": 2.545391379676417,
+      "fitted_quantile": 2.458910494333639
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.552716066620943,
+      "fitted_quantile": 2.4720895456354772
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.5552197501482037,
+      "fitted_quantile": 2.4855273532789606
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.563218358426081,
+      "fitted_quantile": 2.4992441743648874
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.72,
+      "empirical_quantile": 2.5636459055934164,
+      "fitted_quantile": 2.513262207540085
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.73,
+      "empirical_quantile": 2.57378119548599,
+      "fitted_quantile": 2.527605877899136
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.74,
+      "empirical_quantile": 2.574201041273817,
+      "fitted_quantile": 2.5423021744432366
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.75,
+      "empirical_quantile": 2.582632902868832,
+      "fitted_quantile": 2.557381052377494
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.76,
+      "empirical_quantile": 2.583292068715141,
+      "fitted_quantile": 2.5728759160046257
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.77,
+      "empirical_quantile": 2.586007264038793,
+      "fitted_quantile": 2.588824202625745
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.78,
+      "empirical_quantile": 2.587226874737459,
+      "fitted_quantile": 2.605268094155553
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.79,
+      "empirical_quantile": 2.5891214987324775,
+      "fitted_quantile": 2.62225539178435
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8,
+      "empirical_quantile": 2.5915227197246686,
+      "fitted_quantile": 2.6398406009897077
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.81,
+      "empirical_quantile": 2.592068838850378,
+      "fitted_quantile": 2.6580862910528382
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.5926487784984755,
+      "fitted_quantile": 2.6770648173322167
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.595644339654079,
+      "fitted_quantile": 2.696860529599297
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.602908247641278,
+      "fitted_quantile": 2.7175726416980552
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.85,
+      "empirical_quantile": 2.603751085509725,
+      "fitted_quantile": 2.7393190164286434
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.86,
+      "empirical_quantile": 2.6039489456984284,
+      "fitted_quantile": 2.7622412413772546
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.87,
+      "empirical_quantile": 2.63414419185945,
+      "fitted_quantile": 2.786511565117619
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.88,
+      "empirical_quantile": 2.6358759574613138,
+      "fitted_quantile": 2.8123425804121625
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.89,
+      "empirical_quantile": 2.642983771365417,
+      "fitted_quantile": 2.840001078200288
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9,
+      "empirical_quantile": 2.6733843392720864,
+      "fitted_quantile": 2.869828441580893
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.91,
+      "empirical_quantile": 2.682372887734347,
+      "fitted_quantile": 2.902271689365981
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.92,
+      "empirical_quantile": 2.6922641720039264,
+      "fitted_quantile": 2.937932656750539
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.93,
+      "empirical_quantile": 2.701786197723342,
+      "fitted_quantile": 2.9776497870709493
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716878397190883,
+      "fitted_quantile": 3.0226426272778086
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.73624953114051,
+      "fitted_quantile": 3.0747876281636666
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7401870617624726,
+      "fitted_quantile": 3.1372017419170626
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.97,
+      "empirical_quantile": 2.744293191148966,
+      "fitted_quantile": 3.2156707931195103
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.98,
+      "empirical_quantile": 2.79992731850487,
+      "fitted_quantile": 3.3230287216347145
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "lognormal",
+      "probability": 0.99,
+      "empirical_quantile": 2.8305085768557485,
+      "fitted_quantile": 3.4995611140694147
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.01,
+      "empirical_quantile": 1.1673098289295911,
+      "fitted_quantile": 1.3864640693660684
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.02,
+      "empirical_quantile": 1.230929097480998,
+      "fitted_quantile": 1.5099587169490423
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.03,
+      "empirical_quantile": 1.2475214007097823,
+      "fitted_quantile": 1.5876528119888416
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.04,
+      "empirical_quantile": 1.249721880923784,
+      "fitted_quantile": 1.6454973320615462
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.05,
+      "empirical_quantile": 1.667767938082421,
+      "fitted_quantile": 1.6920606475497548
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7708839940014978,
+      "fitted_quantile": 1.7312928220251347
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8171906569882983,
+      "fitted_quantile": 1.7653567302770232
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.08,
+      "empirical_quantile": 1.8260441928010092,
+      "fitted_quantile": 1.795571112400811
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09,
+      "empirical_quantile": 1.848943299616796,
+      "fitted_quantile": 1.822801979105703
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8541004031466408,
+      "fitted_quantile": 1.8476499194159608
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.11,
+      "empirical_quantile": 1.8751672045699033,
+      "fitted_quantile": 1.8705492627709948
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.12,
+      "empirical_quantile": 1.8801186413368849,
+      "fitted_quantile": 1.8918247120898892
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.13,
+      "empirical_quantile": 1.899992975974735,
+      "fitted_quantile": 1.9117256618510319
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.14,
+      "empirical_quantile": 1.9231736245650473,
+      "fitted_quantile": 1.9304480090518141
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9537513493834875,
+      "fitted_quantile": 1.9481485698204553
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.16,
+      "empirical_quantile": 1.9572545029500288,
+      "fitted_quantile": 1.964954927070541
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.17,
+      "empirical_quantile": 1.9580069021239588,
+      "fitted_quantile": 1.9809723480969377
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9653721403301816,
+      "fitted_quantile": 1.9962887625256138
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.19,
+      "empirical_quantile": 1.9783311045059688,
+      "fitted_quantile": 2.010978420525454
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.2,
+      "empirical_quantile": 1.9969639762643616,
+      "fitted_quantile": 2.0251046312827232
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999428565407148,
+      "fitted_quantile": 2.0387218468175017
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.22,
+      "empirical_quantile": 2.0148357648275272,
+      "fitted_quantile": 2.051877270997778
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.23,
+      "empirical_quantile": 2.016450473061623,
+      "fitted_quantile": 2.064612118369727
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.023270822664017,
+      "fitted_quantile": 2.07696261078864
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.25,
+      "empirical_quantile": 2.0259979847857,
+      "fitted_quantile": 2.088960775032152
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.26,
+      "empirical_quantile": 2.0346235192554607,
+      "fitted_quantile": 2.100635087468943
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.27,
+      "empirical_quantile": 2.040750378545622,
+      "fitted_quantile": 2.112010999853847
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.28,
+      "empirical_quantile": 2.0912180085423,
+      "fitted_quantile": 2.123111371769343
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0967801560726755,
+      "fitted_quantile": 2.1339568290547595
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.3,
+      "empirical_quantile": 2.122206842189538,
+      "fitted_quantile": 2.144566063041715
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.31,
+      "empirical_quantile": 2.131354185725581,
+      "fitted_quantile": 2.1549560820637916
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.32,
+      "empirical_quantile": 2.1328532506165,
+      "fitted_quantile": 2.165142424198714
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.33,
+      "empirical_quantile": 2.145346400899025,
+      "fitted_quantile": 2.175139338302067
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.34,
+      "empirical_quantile": 2.14967015869291,
+      "fitted_quantile": 2.1849599389405436
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173256705571509,
+      "fitted_quantile": 2.1946163397142713
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.191703985050007,
+      "fitted_quantile": 2.2041197685885243
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.37,
+      "empirical_quantile": 2.2091088863102737,
+      "fitted_quantile": 2.2134806681743737
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.38,
+      "empirical_quantile": 2.21667609553753,
+      "fitted_quantile": 2.222708783360856
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246164049493036,
+      "fitted_quantile": 2.231813238274869
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.4,
+      "empirical_quantile": 2.2268085345657,
+      "fitted_quantile": 2.2408026042043887
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.2596801373737443,
+      "fitted_quantile": 2.2496849598469435
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.271462238397386,
+      "fitted_quantile": 2.258467945024336
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.43,
+      "empirical_quantile": 2.2849140133775823,
+      "fitted_quantile": 2.267158808825399
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.44,
+      "empirical_quantile": 2.300000446442876,
+      "fitted_quantile": 2.2757644529927012
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.45,
+      "empirical_quantile": 2.3236256381819347,
+      "fitted_quantile": 2.284291471250025
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.46,
+      "empirical_quantile": 2.330992109937667,
+      "fitted_quantile": 2.29274618517002
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.341865684243745,
+      "fitted_quantile": 2.30113467710176
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3491517512184714,
+      "fitted_quantile": 2.309462820612756
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.49,
+      "empirical_quantile": 2.3673758188769605,
+      "fitted_quantile": 2.317736308847039
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5,
+      "empirical_quantile": 2.3772881670265287,
+      "fitted_quantile": 2.325960681158072
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.51,
+      "empirical_quantile": 2.3841045301621415,
+      "fitted_quantile": 2.3341413483412214
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.52,
+      "empirical_quantile": 2.411239086425177,
+      "fitted_quantile": 2.3422836167639733
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.53,
+      "empirical_quantile": 2.4184339007921856,
+      "fitted_quantile": 2.3503927116723182
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.54,
+      "empirical_quantile": 2.4357383792302953,
+      "fitted_quantile": 2.3584737999380097
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.55,
+      "empirical_quantile": 2.4404454553223225,
+      "fitted_quantile": 2.3665320125034417
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.56,
+      "empirical_quantile": 2.465369287824096,
+      "fitted_quantile": 2.3745724667784347
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.466210288143696,
+      "fitted_quantile": 2.3826002892462697
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.468589939445947,
+      "fitted_quantile": 2.3906206385451267
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.59,
+      "empirical_quantile": 2.4809143703830383,
+      "fitted_quantile": 2.3986387293059797
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6,
+      "empirical_quantile": 2.489504949281995,
+      "fitted_quantile": 2.4066598570497204
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.61,
+      "empirical_quantile": 2.49681264443324,
+      "fitted_quantile": 2.4146894244756893
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.62,
+      "empirical_quantile": 2.5127244121923944,
+      "fitted_quantile": 2.422732969512143
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.63,
+      "empirical_quantile": 2.5176487768078624,
+      "fitted_quantile": 2.430796195548182
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.64,
+      "empirical_quantile": 2.520969819257082,
+      "fitted_quantile": 2.4388850043284553
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.65,
+      "empirical_quantile": 2.5216876187692736,
+      "fitted_quantile": 2.4470055320693946
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.66,
+      "empirical_quantile": 2.525342626474126,
+      "fitted_quantile": 2.4551641894525305
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.67,
+      "empirical_quantile": 2.538966871655611,
+      "fitted_quantile": 2.4633677062714496
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.68,
+      "empirical_quantile": 2.545391379676417,
+      "fitted_quantile": 2.471623181660448
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.552716066620943,
+      "fitted_quantile": 2.479938141023362
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.5552197501482037,
+      "fitted_quantile": 2.4883206010213152
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.563218358426081,
+      "fitted_quantile": 2.496779144283132
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.72,
+      "empirical_quantile": 2.5636459055934164,
+      "fitted_quantile": 2.505323005891637
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.73,
+      "empirical_quantile": 2.57378119548599,
+      "fitted_quantile": 2.5139621741999916
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.74,
+      "empirical_quantile": 2.574201041273817,
+      "fitted_quantile": 2.522707509181613
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.75,
+      "empirical_quantile": 2.582632902868832,
+      "fitted_quantile": 2.531570882366128
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.76,
+      "empirical_quantile": 2.583292068715141,
+      "fitted_quantile": 2.5405653435340314
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.77,
+      "empirical_quantile": 2.586007264038793,
+      "fitted_quantile": 2.549705320835796
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.78,
+      "empirical_quantile": 2.587226874737459,
+      "fitted_quantile": 2.559006863013137
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.79,
+      "empirical_quantile": 2.5891214987324775,
+      "fitted_quantile": 2.5684879351434886
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8,
+      "empirical_quantile": 2.5915227197246686,
+      "fitted_quantile": 2.5781687831179765
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.81,
+      "empirical_quantile": 2.592068838850378,
+      "fitted_quantile": 2.588072387370837
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.5926487784984755,
+      "fitted_quantile": 2.5982250339278936
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.595644339654079,
+      "fitted_quantile": 2.6086570417626005
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.602908247641278,
+      "fitted_quantile": 2.619403701541955
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.85,
+      "empirical_quantile": 2.603751085509725,
+      "fitted_quantile": 2.63050650505404
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.86,
+      "empirical_quantile": 2.6039489456984284,
+      "fitted_quantile": 2.6420147818710875
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.87,
+      "empirical_quantile": 2.63414419185945,
+      "fitted_quantile": 2.6539879186466284
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.88,
+      "empirical_quantile": 2.6358759574613138,
+      "fitted_quantile": 2.6664984321101737
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.89,
+      "empirical_quantile": 2.642983771365417,
+      "fitted_quantile": 2.6796363275743937
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9,
+      "empirical_quantile": 2.6733843392720864,
+      "fitted_quantile": 2.6935154553597984
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.91,
+      "empirical_quantile": 2.682372887734347,
+      "fitted_quantile": 2.7082830894634715
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.92,
+      "empirical_quantile": 2.6922641720039264,
+      "fitted_quantile": 2.724134936803974
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.93,
+      "empirical_quantile": 2.701786197723342,
+      "fitted_quantile": 2.7413397989681254
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716878397190883,
+      "fitted_quantile": 2.760282557058019
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.73624953114051,
+      "fitted_quantile": 2.7815449735987365
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7401870617624726,
+      "fitted_quantile": 2.8060736684152148
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.97,
+      "empirical_quantile": 2.744293191148966,
+      "fitted_quantile": 2.835582593240813
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.98,
+      "empirical_quantile": 2.79992731850487,
+      "fitted_quantile": 2.873753982139827
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "weibull",
+      "probability": 0.99,
+      "empirical_quantile": 2.8305085768557485,
+      "fitted_quantile": 2.9316167522646963
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.01,
+      "empirical_quantile": 1.1673098289295911,
+      "fitted_quantile": 0.02298092653179051
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.02,
+      "empirical_quantile": 1.230929097480998,
+      "fitted_quantile": 0.04619516595014397
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.03,
+      "empirical_quantile": 1.2475214007097823,
+      "fitted_quantile": 0.06964750428502188
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.04,
+      "empirical_quantile": 1.249721880923784,
+      "fitted_quantile": 0.09334287636012713
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.05,
+      "empirical_quantile": 1.667767938082421,
+      "fitted_quantile": 0.11728637202538161
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.060000000000000005,
+      "empirical_quantile": 1.7708839940014978,
+      "fitted_quantile": 0.1414832427191824
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.06999999999999999,
+      "empirical_quantile": 1.8171906569882983,
+      "fitted_quantile": 0.16593890838160033
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.08,
+      "empirical_quantile": 1.8260441928010092,
+      "fitted_quantile": 0.1906589647412865
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09,
+      "empirical_quantile": 1.848943299616796,
+      "fitted_quantile": 0.21564919100059296
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.09999999999999999,
+      "empirical_quantile": 1.8541004031466408,
+      "fitted_quantile": 0.24091555794531164
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.11,
+      "empirical_quantile": 1.8751672045699033,
+      "fitted_quantile": 0.2664642365074982
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.12,
+      "empirical_quantile": 1.8801186413368849,
+      "fitted_quantile": 0.29230160681210166
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.13,
+      "empirical_quantile": 1.899992975974735,
+      "fitted_quantile": 0.31843426774057737
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.14,
+      "empirical_quantile": 1.9231736245650473,
+      "fitted_quantile": 0.3448690470473451
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.15000000000000002,
+      "empirical_quantile": 1.9537513493834875,
+      "fitted_quantile": 0.3716130120678928
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.16,
+      "empirical_quantile": 1.9572545029500288,
+      "fitted_quantile": 0.39867348106053924
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.17,
+      "empirical_quantile": 1.9580069021239588,
+      "fitted_quantile": 0.4260580352273908
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.18000000000000002,
+      "empirical_quantile": 1.9653721403301816,
+      "fitted_quantile": 0.45377453146389357
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.19,
+      "empirical_quantile": 1.9783311045059688,
+      "fitted_quantile": 0.48183111589062333
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.2,
+      "empirical_quantile": 1.9969639762643616,
+      "fitted_quantile": 0.5102362382256228
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.21000000000000002,
+      "empirical_quantile": 1.999428565407148,
+      "fitted_quantile": 0.5389986670607285
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.22,
+      "empirical_quantile": 2.0148357648275272,
+      "fitted_quantile": 0.5681275061109883
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.23,
+      "empirical_quantile": 2.016450473061623,
+      "fitted_quantile": 0.5976322115125138
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.24000000000000002,
+      "empirical_quantile": 2.023270822664017,
+      "fitted_quantile": 0.6275226102510044
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.25,
+      "empirical_quantile": 2.0259979847857,
+      "fitted_quantile": 0.6578089198108072
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.26,
+      "empirical_quantile": 2.0346235192554607,
+      "fitted_quantile": 0.688501769142821
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.27,
+      "empirical_quantile": 2.040750378545622,
+      "fitted_quantile": 0.7196122210589152
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.28,
+      "empirical_quantile": 2.0912180085423,
+      "fitted_quantile": 0.7511517961709345
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.29000000000000004,
+      "empirical_quantile": 2.0967801560726755,
+      "fitted_quantile": 0.7831324985039182
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.3,
+      "empirical_quantile": 2.122206842189538,
+      "fitted_quantile": 0.815566842926035
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.31,
+      "empirical_quantile": 2.131354185725581,
+      "fitted_quantile": 0.848467884552094
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.32,
+      "empirical_quantile": 2.1328532506165,
+      "fitted_quantile": 0.8818492502935158
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.33,
+      "empirical_quantile": 2.145346400899025,
+      "fitted_quantile": 0.9157251727455875
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.34,
+      "empirical_quantile": 2.14967015869291,
+      "fitted_quantile": 0.9501105266229093
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.35000000000000003,
+      "empirical_quantile": 2.173256705571509,
+      "fitted_quantile": 0.9850208679764842
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.36000000000000004,
+      "empirical_quantile": 2.191703985050007,
+      "fitted_quantile": 1.0204724764512458
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.37,
+      "empirical_quantile": 2.2091088863102737,
+      "fitted_quantile": 1.0564824008713465
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.38,
+      "empirical_quantile": 2.21667609553753,
+      "fitted_quantile": 1.0930685084727187
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.39,
+      "empirical_quantile": 2.2246164049493036,
+      "fitted_quantile": 1.1302495381387914
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.4,
+      "empirical_quantile": 2.2268085345657,
+      "fitted_quantile": 1.1680451580364302
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.41000000000000003,
+      "empirical_quantile": 2.2596801373737443,
+      "fitted_quantile": 1.2064760280958924
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.42000000000000004,
+      "empirical_quantile": 2.271462238397386,
+      "fitted_quantile": 1.245563867831696
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.43,
+      "empirical_quantile": 2.2849140133775823,
+      "fitted_quantile": 1.2853315300618113
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.44,
+      "empirical_quantile": 2.300000446442876,
+      "fitted_quantile": 1.3258030811516575
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.45,
+      "empirical_quantile": 2.3236256381819347,
+      "fitted_quantile": 1.3670038884884046
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.46,
+      "empirical_quantile": 2.330992109937667,
+      "fitted_quantile": 1.4089607159817417
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.47000000000000003,
+      "empirical_quantile": 2.341865684243745,
+      "fitted_quantile": 1.4517018284914374
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.48000000000000004,
+      "empirical_quantile": 2.3491517512184714,
+      "fitted_quantile": 1.4952571062021065
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.49,
+      "empirical_quantile": 2.3673758188769605,
+      "fitted_quantile": 1.539658170104323
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5,
+      "empirical_quantile": 2.3772881670265287,
+      "fitted_quantile": 1.5849385199019257
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.51,
+      "empirical_quantile": 2.3841045301621415,
+      "fitted_quantile": 1.6311336858520697
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.52,
+      "empirical_quantile": 2.411239086425177,
+      "fitted_quantile": 1.6782813962620529
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.53,
+      "empirical_quantile": 2.4184339007921856,
+      "fitted_quantile": 1.7264217626211082
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.54,
+      "empirical_quantile": 2.4357383792302953,
+      "fitted_quantile": 1.7755974846432123
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.55,
+      "empirical_quantile": 2.4404454553223225,
+      "fitted_quantile": 1.8258540778472376
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.56,
+      "empirical_quantile": 2.465369287824096,
+      "fitted_quantile": 1.8772401267140277
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5700000000000001,
+      "empirical_quantile": 2.466210288143696,
+      "fitted_quantile": 1.9298075669492711
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.5800000000000001,
+      "empirical_quantile": 2.468589939445947,
+      "fitted_quantile": 1.9836120009624654
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.59,
+      "empirical_quantile": 2.4809143703830383,
+      "fitted_quantile": 2.038713051365819
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6,
+      "empirical_quantile": 2.489504949281995,
+      "fitted_quantile": 2.0951747581275484
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.61,
+      "empirical_quantile": 2.49681264443324,
+      "fitted_quantile": 2.153066026012914
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.62,
+      "empirical_quantile": 2.5127244121923944,
+      "fitted_quantile": 2.21246113015293
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.63,
+      "empirical_quantile": 2.5176487768078624,
+      "fitted_quantile": 2.2734402890447467
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.64,
+      "empirical_quantile": 2.520969819257082,
+      "fitted_quantile": 2.3360903160728603
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.65,
+      "empirical_quantile": 2.5216876187692736,
+      "fitted_quantile": 2.400505362827961
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.66,
+      "empirical_quantile": 2.525342626474126,
+      "fitted_quantile": 2.4667877701954413
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.67,
+      "empirical_quantile": 2.538966871655611,
+      "fitted_quantile": 2.5350490465248354
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.68,
+      "empirical_quantile": 2.545391379676417,
+      "fitted_quantile": 2.605410996353172
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.6900000000000001,
+      "empirical_quantile": 2.552716066620943,
+      "fitted_quantile": 2.678007028374645
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7000000000000001,
+      "empirical_quantile": 2.5552197501482037,
+      "fitted_quantile": 2.752983677938356
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.7100000000000001,
+      "empirical_quantile": 2.563218358426081,
+      "fitted_quantile": 2.830502387733622
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.72,
+      "empirical_quantile": 2.5636459055934164,
+      "fitted_quantile": 2.910741601053583
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.73,
+      "empirical_quantile": 2.57378119548599,
+      "fitted_quantile": 2.9938992358836676
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.74,
+      "empirical_quantile": 2.574201041273817,
+      "fitted_quantile": 3.0801956261040324
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.75,
+      "empirical_quantile": 2.582632902868832,
+      "fitted_quantile": 3.1698770398038514
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.76,
+      "empirical_quantile": 2.583292068715141,
+      "fitted_quantile": 3.2632199161639788
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.77,
+      "empirical_quantile": 2.586007264038793,
+      "fitted_quantile": 3.3605360045451382
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.78,
+      "empirical_quantile": 2.587226874737459,
+      "fitted_quantile": 3.462178646615954
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.79,
+      "empirical_quantile": 2.5891214987324775,
+      "fitted_quantile": 3.5685505208643913
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8,
+      "empirical_quantile": 2.5915227197246686,
+      "fitted_quantile": 3.6801132780294745
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.81,
+      "empirical_quantile": 2.592068838850378,
+      "fitted_quantile": 3.7973996500548566
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8200000000000001,
+      "empirical_quantile": 2.5926487784984755,
+      "fitted_quantile": 3.921028835974787
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8300000000000001,
+      "empirical_quantile": 2.595644339654079,
+      "fitted_quantile": 4.051726290097368
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.8400000000000001,
+      "empirical_quantile": 2.602908247641278,
+      "fitted_quantile": 4.1903495162550985
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.85,
+      "empirical_quantile": 2.603751085509725,
+      "fitted_quantile": 4.337922197840281
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.86,
+      "empirical_quantile": 2.6039489456984284,
+      "fitted_quantile": 4.495680120955509
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.87,
+      "empirical_quantile": 2.63414419185945,
+      "fitted_quantile": 4.6651341460059585
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.88,
+      "empirical_quantile": 2.6358759574613138,
+      "fitted_quantile": 4.848158436065904
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.89,
+      "empirical_quantile": 2.642983771365417,
+      "fitted_quantile": 5.04711716651788
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9,
+      "empirical_quantile": 2.6733843392720864,
+      "fitted_quantile": 5.265051797931401
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.91,
+      "empirical_quantile": 2.682372887734347,
+      "fitted_quantile": 5.505967355876712
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.92,
+      "empirical_quantile": 2.6922641720039264,
+      "fitted_quantile": 5.775288036157025
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.93,
+      "empirical_quantile": 2.701786197723342,
+      "fitted_quantile": 6.080618640857437
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9400000000000001,
+      "empirical_quantile": 2.716878397190883,
+      "fitted_quantile": 6.433096955967832
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9500000000000001,
+      "empirical_quantile": 2.73624953114051,
+      "fitted_quantile": 6.849990317833329
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.9600000000000001,
+      "empirical_quantile": 2.7401870617624726,
+      "fitted_quantile": 7.3602265560589535
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.97,
+      "empirical_quantile": 2.744293191148966,
+      "fitted_quantile": 8.018035475869754
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.98,
+      "empirical_quantile": 2.79992731850487,
+      "fitted_quantile": 8.945165075960873
+    },
+    {
+      "scenario": "BIN_UNWEIGHTED_B_INTERPOLATED_CENTRE",
+      "treatment": "POSITIVE_COMPONENT_DIAGNOSTIC",
+      "family": "exponential",
+      "probability": 0.99,
+      "empirical_quantile": 2.8305085768557485,
+      "fitted_quantile": 10.5301035958628
+    }
+  ],
+  "curves": []
+}

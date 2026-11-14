@@ -1,0 +1,7 @@
+{
+  "N": 8692819,
+  "near_cent_grid_fraction": 1.0,
+  "minimum_distance_from_exact_P": 0.004198442390453749,
+  "nonfinite_fare_N": 0,
+  "comment": "Precision is observed, not an automatic exclusion rule; inclusive dollar bands are diagnostics."
+}
