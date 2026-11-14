@@ -1,6 +1,6 @@
-# Professor decision packet — denominator/data resolution
+# Methodology decision packet — denominator/data resolution
 
-Reporting only. Start with [professor_decision_summary.md](professor_decision_summary.md): a concise executive summary followed by the seven requested academic questions. No option or threshold is selected.
+Reporting only. Start with [methodology_decision_summary.md](methodology_decision_summary.md): a concise executive summary followed by the seven requested academic questions. No option or threshold is selected.
 
 ## Files and interpretation
 

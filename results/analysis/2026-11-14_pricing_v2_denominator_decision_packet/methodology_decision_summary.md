@@ -10,13 +10,13 @@ Fares occur on a **$0.01 grid**, while the reference is a continuous mean. The n
 
 Diagnostic thresholds reduce SD, but show no clear plateau. At abs(delta_P)>=0.01 (equivalent to about$0.223542 from P_base),0.481839% of positive observations are excluded; their mean falls about17.3%, although the median changes little. Median positive hourly SD remains4.71197 and only56/211 scenarios pass4. Signed outcomes differ and are reported separately. These are trade-offs, not threshold recommendations.
 
-The governing professor-analysis rule is **combined population SD strictly below4; exactly4 is rejected**. Clustering cannot substitute for resolving unstable scenario statistics. An explicit decision is needed about the valid ratio population or estimator before further processing. This is not a blanket claim that the professor's criterion is impossible under all approved methodologies.
+The governing methodology rule is **combined population SD strictly below4; exactly4 is rejected**. Clustering cannot substitute for resolving unstable scenario statistics. An explicit decision is needed about the valid ratio population or estimator before further processing. This is not a blanket claim that the reviewed criterion is impossible under all approved methodologies.
 
 Three options are presented neutrally: **A**, an identification/resolution rule for small denominators; **B**, approved robust/truncated support; **C**, a scenario-level relationship estimator. None is selected. A and B require principled rules rather than choosing a cutoff just to pass4; C is a material estimator change requiring approval.
 
 No methodology, threshold, production code or model was changed. No clustering or training was performed.
 
-## Questions for professor
+## Methodology Review Questions
 
 **Q1.** For valid trips where observed price is very close to global P_base, should epsilon = delta_L/delta_P still be treated as a valid observation even though the ratio becomes extremely large?
 
