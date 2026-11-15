@@ -1,0 +1,156 @@
+{
+  "authoritative_harness": "/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/weather_conditioned/training_harness.py",
+  "baselines_run": false,
+  "broader_preflight_tests": {
+    "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch",
+    "errors": 7,
+    "exit_code": 1,
+    "failures": 2,
+    "note": "One error occurs in setUpClass; run count is unittest-reported, not a simple pass-count subtraction.",
+    "ran": 111,
+    "skipped": 0
+  },
+  "completed_episodes": 0,
+  "contract_sha256": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+  "current_gate_evidence": "results/analysis/2026-11-14_pricing_v2_weather_time_conditioning/prelaunch_verification.json",
+  "current_weather_conditioning_gate": "READY_TO_LAUNCH_V2_STAGE25",
+  "empirical_support_sha256": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917",
+  "focused_tests": {
+    "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip",
+    "errors": 0,
+    "exit_code": 0,
+    "failures": 0,
+    "ran": 57,
+    "skipped": 0
+  },
+  "full_development_fixture_created": false,
+  "implementation_hashes_verified": {
+    "config/passenger_sensitivity_v2_validation.json": "1f3b2afa998c0906d74c4452e5f521ac96f827ce1ba5f3f2580cff8350c3a2d7",
+    "src/dispatch/request.py": "ece5e5480c0ecb487cdd05c221dd86b1b454de13de057f47243f51cd41248f1e",
+    "src/pricing/passenger_sensitive_v2.py": "ed5f884528025412e7a2e3cb7fc4b9d098c1e40e5f03682050ce60bc31db2bd2",
+    "src/rl/passenger_sensitive_dqn.py": "1736f03027f53ddbede0df063504cf61595233dcfb30678ad7192e1c3f306b7f",
+    "src/simulation/passenger_sensitive_v1.py": "435c346e38667e616acd068a57fcd11394fcf6effa4a3fce2594ea06e20fb9f5",
+    "tests/test_passenger_sensitive_v2.py": "7835e0d62352d3725da32543ebab9f1bb38c75b106a34d4ae7e0b55ef96e7a9e"
+  },
+  "issues": [
+    {
+      "detail": "Fixture starts March16 and requests train_dqn=True; temporal guard rejects development updates.",
+      "kind": "ERROR",
+      "test": "tests.test_final_production_runner.FinalRunnerTests.setUpClass"
+    },
+    {
+      "detail": "EmpiricalCustomerSensitivityModel has no parameters_for method.",
+      "kind": "ERROR",
+      "test": "tests.test_pricing_dqn_contract.PricingContractTests.test_verified_behavioral_source"
+    },
+    {
+      "count": 4,
+      "detail": "test_boundary_and_incoming, test_coincident_float_hop_and_absolute_passenger_event, test_future_not_processed_early, test_state_publication_after_due_arrivals: synthetic ProductionExperiment lacks routing used by station_reserve.",
+      "kind": "ERROR",
+      "test": "tests.test_passenger_arrival_boundary.BoundaryTests"
+    },
+    {
+      "detail": "Saved historical generation checkpoint rejected as pre-reachability.",
+      "kind": "ERROR",
+      "test": "tests.test_passenger_arrival_boundary.ResumeArtifactTests.test_checkpoint_resume_and_fleet"
+    },
+    {
+      "actual": "e1c41d5bacf542a58605dbd84a94effb845b33125495d591aa5c2a1a0627ecb1",
+      "detail": "Legacy driver-profile expected hash differs from persisted artifact. This is not evidence that the V2 contract hash failed.",
+      "expected": "dcb422e5e492f44a85815aad5f22a50f833f7071a67a126edf09a09270c0764d",
+      "kind": "FAIL",
+      "path": "data/processed/driver_preferences_seed42.parquet",
+      "test": "tests.test_production_simulation.ProductionSimulationTests.test_frozen_artifacts_and_first_eight_predictions_exist"
+    },
+    {
+      "detail": "Historical test expects slot_0006.parquet absent; it exists.",
+      "kind": "FAIL",
+      "test": "tests.test_passenger_arrival_boundary.ResumeArtifactTests.test_append_once_original_preserved"
+    }
+  ],
+  "latest_checkpoint": null,
+  "march16_snapshot_check": {
+    "failures": 0,
+    "last_timestamp": "2026-03-16 23:30:00",
+    "note": "Exact timestamp-filtered forecast/popularity reads only; not a simulation or frozen fixture.",
+    "slots": 48
+  },
+  "next_action": "Prepare and verify the full-day V2 fixture, baseline reproducibility, effective fresh-run config and automated Episode1\u201325 harness in a subsequent task; no launch here.",
+  "original_preflight_status": {
+    "next_action": "Reconcile stale test fixtures/contracts with the current frozen implementation, preserving guards and substantive assertions; rerun preflight before launch.",
+    "status": "BLOCKED_PREFLIGHT_TEST_CONTRACT_CONFLICT",
+    "verdict": "V2_TRAINING_BLOCKED_PREFLIGHT_TEST_CONTRACT_CONFLICT"
+  },
+  "protected_period_accessed": false,
+  "reconciliation": {
+    "checks": {
+      "config/passenger_sensitivity_v2_validation.json": true,
+      "contract": true,
+      "empirical_support": true,
+      "results/analysis/2026-11-09_academic_review_followup_pricing/jan01_mar15_analysis_cache.parquet": true,
+      "results/analysis/2026-11-13_pricing_v2_freeze_design/V2_NUMERICAL_FREEZE.md": true,
+      "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/candidate_population_comparison.csv": true,
+      "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/notation_contract.json": true,
+      "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/ratio_bias_validation.csv": true,
+      "routing": true,
+      "src/dispatch/request.py": true,
+      "src/pricing/passenger_sensitive_v2.py": true,
+      "src/rl/passenger_sensitive_dqn.py": true,
+      "src/simulation/passenger_sensitive_v1.py": true,
+      "tests/test_passenger_sensitive_v2.py": true
+    },
+    "fresh_v2_automated_execution_harness": "NOT_IMPLEMENTED",
+    "full_day_baselines": "NOT_COMPUTED; prohibited in reconciliation task",
+    "full_march16_request_fixture": "NOT_CREATED",
+    "march16_snapshots": 48,
+    "production_code_changed": false,
+    "protected_period_accessed": false,
+    "recorded_implementation_hashes_changed": false,
+    "snapshot_failures": 0,
+    "test_contract_reconciliation": "PASS",
+    "test_results": {
+      "A": {
+        "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_pricing_dqn_contract tests.test_passenger_arrival_boundary tests.test_production_simulation",
+        "errors": 0,
+        "failures": 0,
+        "ran": 38,
+        "skipped": 0
+      },
+      "B": {
+        "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_v2_preflight_contracts tests.test_final_temporal_protocol tests.test_station_reachability tests.test_empirical_passenger tests.test_charging_stations",
+        "errors": 0,
+        "failures": 0,
+        "ran": 41,
+        "skipped": 0
+      },
+      "C": {
+        "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip",
+        "errors": 0,
+        "failures": 0,
+        "ran": 57,
+        "skipped": 0
+      },
+      "D": {
+        "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch",
+        "errors": 0,
+        "failures": 0,
+        "ran": 123,
+        "skipped": 0
+      },
+      "E": {
+        "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch tests.test_v2_preflight_contracts tests.test_station_reachability tests.test_empirical_passenger tests.test_energy tests.test_fleet_state tests.test_operational_routing tests.test_operational_grid_state",
+        "errors": 0,
+        "failures": 0,
+        "ran": 239,
+        "skipped": 0
+      }
+    },
+    "training_started": false,
+    "unrestricted_discovery": "NOT_RUN: root README explicitly does not certify discovery as safe; explicit 239-test applicable set run instead.",
+    "verdict": "V2_TRAINING_BLOCKED_FULL_DAY_FIXTURE_AND_EXECUTION_HARNESS_NOT_PREPARED"
+  },
+  "scope": "No production source/test/contract/checkpoint modifications. Test runs include synthetic learner updates and temporary fixtures, not an authoritative V2 training run.",
+  "status": "BLOCKED_FULL_DAY_FIXTURE_AND_EXECUTION_HARNESS_NOT_PREPARED",
+  "training_started": false,
+  "verdict": "V2_TRAINING_BLOCKED_FULL_DAY_FIXTURE_AND_EXECUTION_HARNESS_NOT_PREPARED"
+}

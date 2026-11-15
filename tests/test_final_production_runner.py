@@ -21,7 +21,7 @@ def fixture_runner():
     origin=int(neighbors[neighbors.NeighbourGridID==target].iloc[0].GridID)
     fleet=Fleet([VehicleState(i,g,VehicleStatus.IDLE,None,0,'idle',e) for i,g,e in [(0,0,60.),(1,1,60.),(2,origin,15.)]],frozenset(range(142)),2)
     profiles=pd.DataFrame(dict(vehicle_id=[0,1,2],price_preference=[0.,0.,0.],wait_preference=[10.,10.,10.],charging_wait_preference_minutes=[10.,10.,10.]))
-    return ProductionExperiment(fleet=fleet,driver_profiles=profiles)
+    return ProductionExperiment(fleet=fleet,driver_profiles=profiles,start="2026-03-15 00:00")
 
 
 def fixture_requests(runner,slot):
@@ -73,7 +73,7 @@ class FinalRunnerTests(unittest.TestCase):
     def test_masked_nine_actions(self):
         x=self.runner
         for g in range(142):
-            s=x.current_states.build(g,0,x.timestamp)
+            s=x.current_states.build(g,0,x.timestamp-pd.Timedelta(minutes=30))
             self.assertEqual(len(s[3:12]),9);self.assertAlmostEqual(sum(s[3:12]),1.,places=6)
             for action in set(range(9))-set(x.routing.candidates(g)):self.assertEqual(s[3+action],0)
 
@@ -131,8 +131,8 @@ class FinalRunnerTests(unittest.TestCase):
         with patch.object(x.dqn,'train_step',wraps=x.dqn.train_step) as training:
             x.run_slot([r],train_dqn=True)
             training.assert_called_once()
-        self.assertEqual(x.passengers[0].committed_at,pd.Timestamp('2026-03-16 00:01:30'))
-        self.assertEqual(x.passengers[0].dropoff_at,pd.Timestamp('2026-03-16 00:41:30'))
+        self.assertEqual(x.passengers[0].committed_at,pd.Timestamp('2026-03-15 00:01:30'))
+        self.assertEqual(x.passengers[0].dropoff_at,pd.Timestamp('2026-03-15 00:41:30'))
         self.assertAlmostEqual(x.fleet.vehicle(0).remaining_travel_time,11.5)
 
     def test_no_instant_remote_admission(self):

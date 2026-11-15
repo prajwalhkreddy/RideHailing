@@ -1,0 +1,11 @@
+{
+  "classification": "POOLED_V2_CONTROL",
+  "authoritative": false,
+  "baseline_status": "INTERRUPTED_FOR_CHANGED_REQUIREMENTS",
+  "completed_baseline_pairs": 0,
+  "training_started": false,
+  "fixture_sha256": "c86b963c3e36de280e6155f884923bbb743dfc085ef90139eb43869319b9a442",
+  "reason": "Weather/time-conditioned methodology is required; existing pooled work cannot satisfy launch gate.",
+  "original_failure_evidence": "baseline_failure.json",
+  "next_action": "Resolve representation and cluster selection before mapping/runtime integration."
+}

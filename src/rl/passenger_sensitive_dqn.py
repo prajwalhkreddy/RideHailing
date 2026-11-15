@@ -97,11 +97,16 @@ class PassengerSensitiveDQN(PricingDQN):
         self.online.save(path/'online.keras');self.target.save(path/'target.keras')
         rows=list(self.replay.items)
         np.savez_compressed(path/'replay.npz',states=np.array([x[0] for x in rows],np.float32).reshape(-1,13),actions=np.array([x[1] for x in rows],np.int32),rewards=np.array([x[2] for x in rows]),next_states=np.array([x[3] for x in rows],np.float32).reshape(-1,13),dones=np.array([x[4] for x in rows],bool),next_action_masks=np.array([x[5] for x in rows],bool).reshape(-1,7),delta_t_minutes=np.array([x[6] for x in rows]))
-        (path/'checkpoint.json').write_text(json.dumps(dict(schema='passenger_sensitive_request_v1',discount_semantics='PER_REQUEST_TRANSITION',config=asdict(self.config),training_steps=self.training_steps,rng_state=self.rng.bit_generator.state,replay_rng_state=self.replay.rng.bit_generator.state),indent=2)+'\n')
+        metadata=dict(schema='passenger_sensitive_request_v1',discount_semantics='PER_REQUEST_TRANSITION',config=asdict(self.config),training_steps=self.training_steps,rng_state=self.rng.bit_generator.state,replay_rng_state=self.replay.rng.bit_generator.state)
+        if getattr(self,'sensitivity_provider',None) is not None:
+            metadata.update(schema='passenger_sensitive_request_v2',sensitivity_state=self.sensitivity_provider.state_dict())
+        (path/'checkpoint.json').write_text(json.dumps(metadata,indent=2)+'\n')
     @classmethod
-    def load(cls,path):
+    def load(cls,path,*,sensitivity_provider=None):
         path=Path(path);m=json.loads((path/'checkpoint.json').read_text())
-        if m.get('schema')!='passenger_sensitive_request_v1' or m.get('discount_semantics')!='PER_REQUEST_TRANSITION':raise ValueError('Legacy or time-aware pricing checkpoint prohibited for corrected V1.')
+        expected='passenger_sensitive_request_v2' if sensitivity_provider is not None else 'passenger_sensitive_request_v1'
+        if m.get('schema')!=expected or m.get('discount_semantics')!='PER_REQUEST_TRANSITION':raise ValueError('Incompatible sensitivity checkpoint schema.')
+        if sensitivity_provider is not None:sensitivity_provider.load_state_dict(m['sensitivity_state'])
         obj=cls(DQNConfig(**m['config']))
         obj.online=tf.keras.models.load_model(path/'online.keras');obj.target=tf.keras.models.load_model(path/'target.keras',compile=False)
         for model in [obj.online,obj.target]:
@@ -112,6 +117,8 @@ class PassengerSensitiveDQN(PricingDQN):
             if len({len(z[k]) for k in names})!=1 or len(z['states'])>obj.config.replay_capacity:raise ValueError('Invalid replay sizes.')
             for row in zip(*(z[k] for k in names)):obj.store(*row)
         obj.training_steps=m['training_steps'];obj.rng.bit_generator.state=m['rng_state'];obj.replay.rng.bit_generator.state=m['replay_rng_state']
+        obj._loaded_sensitivity_version=sensitivity_provider.version if sensitivity_provider is not None else 'v1'
+        if sensitivity_provider is not None:obj.sensitivity_provider=sensitivity_provider
         return obj
 
 class ActionableRequestLinker:

@@ -1,0 +1,21 @@
+{
+  "status": "VALIDATED",
+  "checkpoint": "/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/weather_conditioned/checkpoints/episode_001",
+  "completed_episode": 1,
+  "resume_slot": 0,
+  "next_episode": 2,
+  "optimizer_updates": 128,
+  "replay_size": 37111,
+  "exploration_epsilon": 0.997568,
+  "checkpoint_hashes": {
+    "replay.npz": "1a9c2c19faa310a48194d003014c07bb8c2a789e9679779293e466e4d9fa31da",
+    "checkpoint.json": "f616c1041fbe721740e42edbf11e4169b97d6313104f262f74ecae8cee9d30c5",
+    "target.keras": "34194a1b9e2c82e888e7ede0051259cc79df8f3c8bc09c30cd8f3969669600f3",
+    "online.keras": "600960bfb62cea9c35e5611d6d97cf230b5032badd901f6fd5c16e35476b8d0f",
+    "continuation.json": "9be6d484e9f8653dc9792517d45ca7759d873661a736133ff4681b3d33cbde04"
+  },
+  "config_sha256": "6fa4f1040d784d0d566dba566d111f74ffbdc10b3453bf6aed5742f812c8736f",
+  "environment_rng_contract": "Episode-boundary reset; next environment and sensitivity RNG use next persisted environment_seed. Learner/replay RNG and optimizer are in versioned checkpoint.",
+  "next_environment_seed": 4091952314,
+  "rejected_candidates": []
+}

@@ -1,0 +1,200 @@
+{
+  "sources": {
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json": {
+      "sha256": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+      "bytes": 4092
+    },
+    "results/analysis/2026-11-13_pricing_recalibration_decision_analysis/array_a/array_a_verified.csv": {
+      "sha256": "ff3e94b00fb4b7a714aa7abfac1ea93e4b418d04ef094c234f822bf03c16cd29",
+      "bytes": 15170
+    },
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/population_reconciliation.csv": {
+      "sha256": "525a0f79e53dbb4a588a78f02fd9005a0dad75b5eb033cdc62851cce4e6691c4",
+      "bytes": 523
+    },
+    "results/analysis/2026-11-13_pricing_recalibration_decision_analysis/intermediate/new_e_B_INTERPOLATED.npy": {
+      "sha256": "7b9d5f2a5e9a02d9cb1e49ebe64fd7cbf34f31e89593c301921ecf56cf09b9b0",
+      "bytes": 63575496
+    },
+    "results/analysis/2026-11-13_pricing_recalibration_decision_analysis/zero_denominator/price_gap_bands.csv": {
+      "sha256": "e7b50c9fdf30d79cd08fc2b8ccac6f0eddb675d2bbe0bfaed365a8fd27cc7a4d",
+      "bytes": 4455
+    },
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/global_distribution_comparison.csv": {
+      "sha256": "cf77406b7dbae5ac93179624b206d537911ee60c478a4878f413b68d4c0a938d",
+      "bytes": 3277
+    },
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/charts/density_comparison.png": {
+      "sha256": "eaddf568384d0f07a6c1cd593c35a0243fd4db52546d9d899f82d7ea4af091bc",
+      "bytes": 95408
+    },
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/charts/pooled_distribution_diagnostics.png": {
+      "sha256": "b603508b28dfc4d76c67f7c01c375575aa3a6e833d5df7cfe8a94a436f6d5964",
+      "bytes": 104542
+    },
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/charts/cdf_comparison.png": {
+      "sha256": "8ca7517316e0c682cedb1ed4612e4c3a254999808f4ba7bd3f5d9ed2e97a3890",
+      "bytes": 101392
+    },
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/charts/qq_comparison.png": {
+      "sha256": "37457f0bd408fec1fe2fdf9d17f3b103d737a4c69ca272cc057a1449f600946d",
+      "bytes": 173140
+    },
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/charts/central_quantile_comparison.png": {
+      "sha256": "0c3096130f94c6c5b66aa430a1a8fe1de96113cc05f8eea9c90e3c921e9e2b33",
+      "bytes": 109445
+    },
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/distribution_fit_comparison.csv": {
+      "sha256": "9ec001e7b1f7cff24639b95f57af682c0d9cb832e19c1dce7e2cc3344d17524d",
+      "bytes": 3458
+    },
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_code_time_statistics.csv": {
+      "sha256": "37a256469c32ac65e07d14247e05ca33578775cd7179d9bb0655bc99fe4568d0",
+      "bytes": 10363
+    },
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_time_group_mapping.csv": {
+      "sha256": "bc934d3816ca14f4ac33462bf813bcc435fca1f95ba94df75a1e1287c3378643",
+      "bytes": 5019
+    },
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/build.py": {
+      "sha256": "a8e1bd11b210491874a46ccd0f5af1497d10d6400bea12b1d99ddfe0ee37fd3b",
+      "bytes": 11831
+    },
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_time_grouping_contract.json": {
+      "sha256": "377f8859fd417cad8632a6c8d66fb864caae0f47ce7a1b43cb4054aece9abbde",
+      "bytes": 26046
+    },
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_cluster_candidates.csv": {
+      "sha256": "3db5fb65b09143ef9b52a4b21e3189f73f27cc4491da438d38fd2aedafaf86fc",
+      "bytes": 7998
+    },
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/runtime_cell_support_selection.csv": {
+      "sha256": "9806af2d0a4619a367823f8428c02a9c8be9446ec8f7e68eeb06506410ea9c2b",
+      "bytes": 6830
+    },
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/conditional_support_statistics.csv": {
+      "sha256": "e130ff2ffe3429d9c95ab62dcc2ad4587b03277d9d61d31a7fe41476dfc72ba6",
+      "bytes": 6305
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/HIGHEST_FEASIBLE_requests.parquet": {
+      "sha256": "cd1056edc3e5ddfdc9442a389ee781a9a612cb5c6a78a7fa26388ee070af80a9",
+      "bytes": 5336580
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/development_actions_ep25.csv": {
+      "sha256": "32f31edda9e4f4ad144f74a677403018b6632637808c4e55c0a317451bd83f86",
+      "bytes": 1911958
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/training_harness_config.json": {
+      "sha256": "6fa4f1040d784d0d566dba566d111f74ffbdc10b3453bf6aed5742f812c8736f",
+      "bytes": 5968
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/verification.json": {
+      "sha256": "6def78c096aafd54eb039d71f6df1d666902bf6cb6edd7ce9fb5ee2dcf20aac5",
+      "bytes": 2389
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/episode_metrics.csv": {
+      "sha256": "6bac9464d5ce948f18b30bc59b9b0ab6fc3020a7bdd532b2ea75eba2e6429816",
+      "bytes": 3688
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/value_calibration.csv": {
+      "sha256": "81c90073f6073b535d5328c5d7d940c6e40e8b0d7f4c193590a44fe50e5747d1",
+      "bytes": 1124
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/development_evaluations.csv": {
+      "sha256": "8cde76886e7118df0b271dee61907c6f5bbd1eedd49959668d06b5e9dccf117d",
+      "bytes": 4123
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/weather_conditioned_baseline_comparison.csv": {
+      "sha256": "1ff48770e784dd9be41fdbdc58b9cbb39ca9aa8916ebb6e8f3831af6f6bde647",
+      "bytes": 2082
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/postrun_analysis/policy_stability.csv": {
+      "sha256": "2fb40c1f37104eb220a84709b384bab50c885eb779037d8f7402e331a7320e62",
+      "bytes": 862
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/postrun_analysis/analyze.py": {
+      "sha256": "56f822d910d12c6ed5fe34d1f359c86a5d421e1b90365a66b4891023cd5343b5",
+      "bytes": 8517
+    },
+    "results/analysis/2026-11-15_pricing_v2_dynamic_opportunity_audit/q_value_realized_value.csv": {
+      "sha256": "8d1a153aea2ee2193220073177220c9e280f1304e0fd0e73906e8996bef56bff",
+      "bytes": 10720
+    },
+    "results/analysis/2026-11-15_pricing_v2_dynamic_opportunity_audit/verification.json": {
+      "sha256": "ac19829f7e603e362320c169220f6f0a8ec530c8092fd530924c400dd9aeabe4",
+      "bytes": 4735
+    },
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/resume_validation.json": {
+      "sha256": "144658c1263e1efd6b568efca2168fe4ca375fd8add48718bbf27236918d5e45",
+      "bytes": 1156
+    },
+    "results/analysis/2026-11-09_academic_review_followup_pricing/fare_distance/fare_vs_distance_hexbin.png": {
+      "sha256": "c8462e593da5bab4233da6e804b056342737a0eefe0bf517d47d21e6216f479f",
+      "bytes": 107845
+    },
+    "results/analysis/2026-10-31_temporal_federated_routing/training_progress.csv": {
+      "sha256": "8eada2eb408f712163306e77f7f60f346109d8e5cca86842e09dc9c5cd3e8944",
+      "bytes": 57674
+    },
+    "results/analysis/2026-10-31_temporal_federated_routing/development_metrics.csv": {
+      "sha256": "0fd7524a6a51c0cb82045df54fd825d844643b63e3d3c1f82f4684159fc0f706",
+      "bytes": 2708
+    },
+    "results/analysis/2026-11-13_pricing_recalibration_decision_analysis/intermediate/distance_array_range.npy": {
+      "sha256": "54a31500aec397fa2d11cf373c4e559d16e3f1cc0c88fa21f297b1f6484495b3",
+      "bytes": 63575496
+    },
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/GLOBAL.npy": {
+      "sha256": "424e84d2b0909b6a11cf11f60e6b6b74cc6710fdfe4fa2153c9359294767bd23",
+      "bytes": 46233832
+    },
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/charts/upper_tail_comparison.png": {
+      "sha256": "cf73e09a8697aaa57e67aef0709a44297838d6c1c70c968fce5667dfdab2027f",
+      "bytes": 130412
+    },
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/quantile_fit_comparison.csv": {
+      "sha256": "b156b4b29191bd5c7d1c92a5b3721351cc26c24ba0cd8f13b0323561411d9220",
+      "bytes": 5967
+    },
+    "notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf": {
+      "sha256": "6bff09ca3e92acfead77117723b793cc594861d5b08274b15533d4e5aa2f7540",
+      "bytes": 491734
+    },
+    "notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx": {
+      "sha256": "d655e5e94be20e443eff0b44ba328f711890b72dc8473a0d7f974259ff141579",
+      "bytes": 46581
+    },
+    "notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf": {
+      "sha256": "61f6a05a865915635272270d94a8a4561ae5177362228c919d60bcf8fdaa7f28",
+      "bytes": 557475
+    },
+    "notebooks/plan/supervisor/customer sensitivity.pdf": {
+      "sha256": "0354886a207e7c5512c4b6b4873898a410df39671811ccf1af5ef6830b947861",
+      "bytes": 319032
+    },
+    "notebooks/plan/supervisor/Final_Next_Implementation_Process.docx": {
+      "sha256": "4a57d6ae5921d1e53cfcf6aa793c82503bf1ddfab9430d5e5a4d9739a5f73021",
+      "bytes": 41004
+    },
+    "notebooks/plan/supervisor/Implementation Process Document.pdf": {
+      "sha256": "f0170d69fa70ea50deafec0b45665d3219c3191bd892e9d30d9bd6a62888f913",
+      "bytes": 118970
+    },
+    "results/analysis/2026-10-31_final_routing_freeze_validation/final_routing_readiness.json": {
+      "sha256": "781a50aa70d38ff34fe52ba295fd80e78e3b4c19753cc173610ff899d897bef7",
+      "bytes": 817
+    }
+  },
+  "read_policy": "Explicit persisted calibration Jan1\u2013Mar15, training March1\u201315, development March16; no protected observation reads",
+  "version": "WEATHER_TIME_CONDITIONED_V2",
+  "units": {
+    "fare": "USD",
+    "distance": "km",
+    "epsilon": "dimensionless"
+  },
+  "dates": {
+    "calibration": "Jan1\u2013Mar15",
+    "development": "March16"
+  },
+  "historical_note": "Source-document approval/status prose can predate subsequent integration; numerical populations are kept separate."
+}

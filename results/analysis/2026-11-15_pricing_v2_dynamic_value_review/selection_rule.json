@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "position": 0,
+      "request_id": 2,
+      "stratum": "ONE_BELOW"
+    },
+    {
+      "position": 325,
+      "request_id": 531,
+      "stratum": "ONE_BELOW"
+    },
+    {
+      "position": 614,
+      "request_id": 921,
+      "stratum": "ONE_BELOW"
+    },
+    {
+      "position": 896,
+      "request_id": 559,
+      "stratum": "ONE_BELOW"
+    },
+    {
+      "position": 835,
+      "request_id": 0,
+      "stratum": "TWO_BELOW"
+    },
+    {
+      "position": 846,
+      "request_id": 987,
+      "stratum": "THREE_PLUS"
+    },
+    {
+      "position": 2,
+      "request_id": 663,
+      "stratum": "CONTROL"
+    },
+    {
+      "position": 898,
+      "request_id": 595,
+      "stratum": "CONTROL"
+    }
+  ],
+  "horizons": [
+    0,
+    1,
+    5,
+    25,
+    100
+  ],
+  "limitations": "T1 and midnight initial fleet only; no slot-boundary routing intervention; no population extrapolation.",
+  "rule": "First-slot bounded review. Four evenly rank-spaced chronological cases per rank band; two choice controls; require100 later requests in same slot. No outcome-based selection.",
+  "runtime_source_sha256": "e8a3fb7b263ebdd819831cb2e29041c2d8cd12cdd66b12349477abcf4c6a2113"
+}

@@ -52,8 +52,8 @@ class PricingContractTests(unittest.TestCase):
   with self.assertRaises(ValueError):b.build(0,1,t+pd.Timedelta(minutes=1))
  def test_verified_behavioral_source(self):
   model=behavioural_model(np.random.default_rng(42),'2026-03-16')
-  p=model.parameters_for(1.,16);self.assertGreater(p.p_base,0);self.assertGreater(p.d_base,0)
-  self.assertGreater(model.sample_epsilon(1.,16),0)
+  resolved=model.resolve_parameters(1.,16);p=resolved.parameters;self.assertGreater(p.p_base,0);self.assertGreater(p.d_base,0)
+  draw=model.sample_epsilon(1.,16);self.assertGreater(draw,0);self.assertIn(draw,model.pool_for(resolved))
  def test_artifacts(self):
   a,b=artifact_snapshots('2026-03-16');self.assertEqual(len(a.values),142);self.assertEqual(len(b.values),142)
  def test_runtime_adapters(self):

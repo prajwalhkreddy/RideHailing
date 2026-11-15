@@ -1,0 +1,36 @@
+{
+  "March17_31_untouched": true,
+  "baseline_status": "FROZEN_REPRODUCIBLE",
+  "fixture_requests": 73754,
+  "focused_tests_passed": 23,
+  "gate": "READY_TO_LAUNCH_V2_STAGE25",
+  "grouping_contract_hash": "377f8859fd417cad8632a6c8d66fb864caae0f47ce7a1b43cb4054aece9abbde",
+  "implementation_hashes": {
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/prepare_development.py": "e0879968757ac5ace740c5b40d3895bb52effd713c4da610ce6ed5a69ff51789",
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/training_harness.py": "601a06fcfd743b4531264340e44bbcaec85599854e0427aca3a10c693600a3e9",
+    "src/dispatch/request.py": "7531225c72be30b881b50a675aad2e4a1e0af5e45a01b3dbdafb8f1c53bd0e0b",
+    "src/pricing/passenger_sensitive_v2.py": "b4cc77c065021ebfb8ae6352acb86e0fa09976558e44a60a11f4436875603c3b",
+    "src/pricing/passenger_sensitive_v2_conditioned.py": "912f696cb50c2f8be1220a9bb8e11ed164373b3e55988bb86bd6186a781b7813",
+    "src/rl/passenger_sensitive_dqn.py": "f4e76cd5baeccc65c1c5ce952753e99006f17864e1429d958b5230b6036ff241",
+    "src/simulation/passenger_sensitive_v1.py": "e8a3fb7b263ebdd819831cb2e29041c2d8cd12cdd66b12349477abcf4c6a2113"
+  },
+  "selected_K_per_T": {
+    "T1": 2,
+    "T2": null,
+    "T3": null,
+    "T4": null
+  },
+  "sensitivity_version": "WEATHER_TIME_CONDITIONED_V2",
+  "status": "INTEGRATED_VALIDATED_NOT_TRAINED",
+  "tests": {
+    "counts_overlap": true,
+    "errors": 0,
+    "expanded_applicable": 239,
+    "failures": 0,
+    "focused_conditional": 23,
+    "focused_v2": 57,
+    "reconciled_broader": 123,
+    "related": 41
+  },
+  "training_started": false
+}

@@ -1,0 +1,27 @@
+{
+  "reporting_tests": {
+    "passed": 12,
+    "failed": 0
+  },
+  "figure_counts": {
+    "CURRENT_AUTHORITATIVE": 49,
+    "HISTORICAL_SUPERSEDED": 2,
+    "DIAGNOSTIC_ONLY": 12
+  },
+  "coverage_missing": 3,
+  "coverage_complete": false,
+  "missing_items": [
+    "Actual frozen T1 hierarchical dendrogram",
+    "Per-training-episode action-frequency evolution",
+    "Mean vehicle utility / driver earnings"
+  ],
+  "source_hashes_unchanged": true,
+  "no_training_or_simulation": true,
+  "no_clustering_or_fitting": true,
+  "Episode26_started": false,
+  "protected_observation_access": false,
+  "protected_scope_note": "Existing aggregate CNN scope metadata was inspected; no March17\u201331 observation/prediction rows or CNN plots were opened.",
+  "one_page_summary_verified": true,
+  "visual_review": "PNG contact sheets and summary inspected; PDF has one page from same Matplotlib figure. Poppler unavailable.",
+  "methodology_unchanged": true
+}

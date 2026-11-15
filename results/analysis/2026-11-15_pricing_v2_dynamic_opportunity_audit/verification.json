@@ -1,0 +1,98 @@
+{
+  "cases": 24,
+  "controls_passed": 2,
+  "driver_changed": 5344,
+  "eligibility_changed": 11771,
+  "episode26": "NOT_STARTED",
+  "fixture_unchanged": true,
+  "outcome_changed": 1535,
+  "protected_access": false,
+  "screened": 15800,
+  "status": "PASS",
+  "new_infrastructure_tests_passed": 4,
+  "new_reporting_tests_passed": 4,
+  "counts": {
+    "genuine_cases_with_any_observed_recovery": 2,
+    "genuine_cases_with_any_observed_net_positive": 0,
+    "assigned_driver_changed_both_assigned": 3809,
+    "assigned_driver_changed_both_assigned_pct": 24.10759493670886,
+    "any_immediate_assignment_divergence_pct": 33.822784810126585,
+    "q_advantage_realized_value_correlation": -0.16524622820101337,
+    "q_discounted_correct": 0,
+    "q_discounted_incorrect": 20,
+    "screened": 15800,
+    "one_below": 11325,
+    "two_or_more": 4475,
+    "eligibility_changed": 11771,
+    "eligibility_changed_pct": 74.5,
+    "driver_changed": 5344,
+    "driver_changed_pct": 33.822784810126585,
+    "outcome_changed": 1535,
+    "outcome_changed_pct": 9.715189873417723,
+    "genuine_rollouts": 20,
+    "persist_boundary": 20,
+    "partial": 1,
+    "full": 1,
+    "net_positive": 0,
+    "q_correct": 0,
+    "q_incorrect": 19
+  },
+  "DYNAMIC_VALUE_OPPORTUNITY": "MEANINGFUL",
+  "DYNAMIC_VALUE_EVIDENCE": "WEAK",
+  "LONGER_TRAINING_RECOMMENDATION": "NO",
+  "tests": [
+    {
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_v2_time_specific_weather",
+      "stage": "focused",
+      "exit_code": 0,
+      "passed": 23
+    },
+    {
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip",
+      "stage": "C",
+      "exit_code": 0,
+      "passed": 57
+    },
+    {
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch",
+      "stage": "D",
+      "exit_code": 0,
+      "passed": 123
+    },
+    {
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch tests.test_v2_preflight_contracts tests.test_station_reachability tests.test_empirical_passenger tests.test_energy tests.test_fleet_state tests.test_operational_routing tests.test_operational_grid_state",
+      "stage": "E",
+      "exit_code": 0,
+      "passed": 239
+    }
+  ],
+  "failures": 0,
+  "errors": 0,
+  "classification_note": "Full-day assignment divergence affects about one third of screened choices, a substantial frequency of immediate opportunities. MEANINGFUL describes opportunities, not proof of beneficial value or optimality; beneficial value is evaluated separately.",
+  "output_consistency_checks": "PASS",
+  "paired_horizon_rows": 240,
+  "genuine_case_types": {
+    "ASSIGNED_DRIVER_CHANGED": 17,
+    "ASSIGNMENT_OUTCOME_CHANGED": 3
+  },
+  "genuine_cases_final_location_difference": 20,
+  "genuine_cases_final_soc_difference": 20,
+  "sampling_coverage": {
+    "hours": [
+      0,
+      4,
+      5,
+      6,
+      7,
+      16
+    ],
+    "weather_codes": [
+      3,
+      5,
+      8
+    ],
+    "demand_quartiles_represented": 2,
+    "supply_quartiles_represented": 3,
+    "limitation": "Chronological selection covers all T/support groups but not every hour or demand/supply quartile; peak-demand quartile is absent. No population-level beneficial-value prevalence estimate."
+  }
+}

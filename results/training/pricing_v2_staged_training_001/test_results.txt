@@ -1,0 +1,135 @@
+MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip
+Ran 57 tests in 2.494s
+OK
+
+MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch
+Ran 111 tests in 11.414s
+FAILED (failures=2, errors=7)
+
+[
+  {
+    "test": "tests.test_final_production_runner.FinalRunnerTests.setUpClass",
+    "kind": "ERROR",
+    "detail": "Fixture starts March16 and requests train_dqn=True; temporal guard rejects development updates."
+  },
+  {
+    "test": "tests.test_pricing_dqn_contract.PricingContractTests.test_verified_behavioral_source",
+    "kind": "ERROR",
+    "detail": "EmpiricalCustomerSensitivityModel has no parameters_for method."
+  },
+  {
+    "test": "tests.test_passenger_arrival_boundary.BoundaryTests",
+    "kind": "ERROR",
+    "count": 4,
+    "detail": "test_boundary_and_incoming, test_coincident_float_hop_and_absolute_passenger_event, test_future_not_processed_early, test_state_publication_after_due_arrivals: synthetic ProductionExperiment lacks routing used by station_reserve."
+  },
+  {
+    "test": "tests.test_passenger_arrival_boundary.ResumeArtifactTests.test_checkpoint_resume_and_fleet",
+    "kind": "ERROR",
+    "detail": "Saved historical generation checkpoint rejected as pre-reachability."
+  },
+  {
+    "test": "tests.test_production_simulation.ProductionSimulationTests.test_frozen_artifacts_and_first_eight_predictions_exist",
+    "kind": "FAIL",
+    "detail": "Legacy driver-profile expected hash differs from persisted artifact. This is not evidence that the V2 contract hash failed.",
+    "path": "data/processed/driver_preferences_seed42.parquet",
+    "expected": "dcb422e5e492f44a85815aad5f22a50f833f7071a67a126edf09a09270c0764d",
+    "actual": "e1c41d5bacf542a58605dbd84a94effb845b33125495d591aa5c2a1a0627ecb1"
+  },
+  {
+    "test": "tests.test_passenger_arrival_boundary.ResumeArtifactTests.test_append_once_original_preserved",
+    "kind": "FAIL",
+    "detail": "Historical test expects slot_0006.parquet absent; it exists."
+  }
+]
+
+
+RECONCILIATION RUNS (original results above retained)
+
+STAGE A initial
+MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_pricing_dqn_contract tests.test_passenger_arrival_boundary tests.test_production_simulation
+F.E....F..............................
+======================================================================
+ERROR: test_masked_nine_actions (tests.test_final_production_runner.FinalRunnerTests.test_masked_nine_actions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_final_production_runner.py", line 76, in test_masked_nine_actions
+    s=x.current_states.build(g,0,x.timestamp)
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/pricing/dqn_contract.py", line 117, in build
+    probs=np.asarray(self.routing.get(g,t),dtype=float)
+                     ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/pricing/dqn_contract.py", line 105, in get
+    raise ValueError('Snapshot is misaligned or uses future information.')
+ValueError: Snapshot is misaligned or uses future information.
+
+======================================================================
+FAIL: test_actual_pickup_offset_and_warmup_training_call (tests.test_final_production_runner.FinalRunnerTests.test_actual_pickup_offset_and_warmup_training_call)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_final_production_runner.py", line 133, in test_actual_pickup_offset_and_warmup_training_call
+    training.assert_called_once()
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/unittest/mock.py", line 928, in assert_called_once
+    raise AssertionError(msg)
+AssertionError: Expected 'train_step' to have been called once. Called 0 times.
+
+======================================================================
+FAIL: test_replay_and_assignment_reward (tests.test_final_production_runner.FinalRunnerTests.test_replay_and_assignment_reward)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_final_production_runner.py", line 59, in test_replay_and_assignment_reward
+    self.assertEqual(len(x.dqn.replay),4);self.assertEqual(x.dqn.training_steps,0)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 0 != 4
+
+----------------------------------------------------------------------
+Ran 38 tests in 6.707s
+
+FAILED (failures=2, errors=1)
+
+
+STAGE A corrected
+MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_pricing_dqn_contract tests.test_passenger_arrival_boundary tests.test_production_simulation
+......................................
+----------------------------------------------------------------------
+Ran 38 tests in 6.478s
+
+OK
+
+
+STAGE B
+MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_v2_preflight_contracts tests.test_final_temporal_protocol tests.test_station_reachability tests.test_empirical_passenger tests.test_charging_stations
+.........................................
+----------------------------------------------------------------------
+Ran 41 tests in 0.610s
+
+OK
+
+
+STAGE C
+MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip
+.........................................................
+----------------------------------------------------------------------
+Ran 57 tests in 2.299s
+
+OK
+
+
+STAGE D
+MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch
+{"status": "EPISODE_INITIALIZED", "pid": 2488, "episode": 1, "slots_completed": 16, "replay_size": 7662, "optimizer_updates": 120, "epsilon": 0.99772, "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a", "namespace": "/var/folders/ks/zx55ck690yzct8xpxz06zwl40000gn/T/tmpn4d1qq2i/models", "checkpoint": null, "resume": true}
+...........................................................................................................................
+----------------------------------------------------------------------
+Ran 123 tests in 15.479s
+
+OK
+
+
+STAGE E
+MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch tests.test_v2_preflight_contracts tests.test_station_reachability tests.test_empirical_passenger tests.test_energy tests.test_fleet_state tests.test_operational_routing tests.test_operational_grid_state
+{"status": "EPISODE_INITIALIZED", "pid": 2521, "episode": 1, "slots_completed": 16, "replay_size": 7662, "optimizer_updates": 120, "epsilon": 0.99772, "routing_sha256": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a", "namespace": "/var/folders/ks/zx55ck690yzct8xpxz06zwl40000gn/T/tmpce5ga6st/models", "checkpoint": null, "resume": true}
+...............................................................................................................................................................................................................................................
+----------------------------------------------------------------------
+Ran 239 tests in 17.958s
+
+OK

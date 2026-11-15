@@ -1,0 +1,8 @@
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.004s
+
+OK
+
+Integration: 8 exact-state branch pairs; 10 identical-action control horizon checks; immutable fixture and prefix equality PASS.
+Existing suites passed: [23, 57, 123, 239]; failures=0; errors=0. Commands: existing_tests.json.

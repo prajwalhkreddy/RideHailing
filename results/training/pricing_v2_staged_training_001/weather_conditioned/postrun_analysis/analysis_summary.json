@@ -1,0 +1,327 @@
+{
+  "verdict": "V2_STAGE25_REVIEW_REQUIRED",
+  "numerical_stability": "YES",
+  "learning_signal": "YES",
+  "q_calibration": "POOR",
+  "policy_stability": "PARTIAL",
+  "dynamic_value_evidence": "NONE",
+  "charging_coverage": "EXERCISED",
+  "converged": "NO",
+  "ready_for_longer_training": "REVIEW_REQUIRED",
+  "resume_continuity_validated": "YES",
+  "resume_evidence_limit": "Validated checkpoint contract, restored identities and cumulative accounting; no persisted per-slot IDs or full transition history beyond replay capacity.",
+  "episodes": 25,
+  "inferred_completed_slots": 400,
+  "requests": 1118214,
+  "assignments": 684815,
+  "revenue": 13877455.097158173,
+  "updates": 3200,
+  "replay_size": 100000,
+  "epsilon": 0.9392,
+  "training_charging_events": 1383,
+  "episodes_with_charging": 23,
+  "ep25": {
+    "policy": "GREEDY_DQN",
+    "requests": 73754,
+    "actionable_requests": 73754,
+    "offers": 73754,
+    "accepted": 73754,
+    "rejected": 0,
+    "assignments": 59632,
+    "assignment_rate": 0.8085256392873607,
+    "revenue": 1237868.2095870597,
+    "unmatched": 14122,
+    "no_price_eligible_driver": 14108,
+    "invalid_masks": 0,
+    "no_feasible_actions": 0,
+    "passenger_threshold_violations": 0,
+    "forced_requests": 46035,
+    "choice_requests": 27719,
+    "action_counts": "[49088, 502, 4031, 5089, 692, 7634, 6718]",
+    "action_percentages": "[66.55639016188952, 0.6806410499769504, 5.465466279794994, 6.899964747674702, 0.9382541963825691, 10.3506250508447, 9.10865851343656]",
+    "charging_events": 1956,
+    "vehicles_entering_charging": 854,
+    "vehicles_leaving_charging": 684,
+    "soc_min": 7.17012616725914,
+    "soc_max": 75.0,
+    "fleet_conserved": true,
+    "final_fleet_hash": "24597a2facee180770d493d0f0faa10b8d03fef4323c3544a2f53a41b304e5e8",
+    "outcome_hash": "128e5f2ce0f007f3e15bcdd4041c3a0ecc8f035d289f11a891dde9addd2ba5ae",
+    "optimizer_updates": 0,
+    "runtime_seconds": 1922.5111580829837,
+    "fallback_counts": "{\"0\": 4089, \"2\": 69665}",
+    "conditioning_sha256": "c7bd62051e16bfe6b53e9293f4b5d8503eb103339646b0da71a1f3f6f0a7abbd",
+    "revenue_difference": -23974.87782946392,
+    "assignment_difference": -136,
+    "episode": 25,
+    "mean_offer": 20.593465095026826,
+    "revenue_gap_pct": -1.8999888392264075,
+    "unmatched_difference": 136
+  },
+  "highest_feasible": {
+    "requests": 73754,
+    "actionable_requests": 73754,
+    "offers": 73754,
+    "accepted": 73754,
+    "rejected": 0,
+    "assignments": 59768,
+    "assignment_rate": 0.8103696070721588,
+    "revenue": 1261843.0874165236,
+    "unmatched": 13986,
+    "no_price_eligible_driver": 13972,
+    "invalid_masks": 0,
+    "no_feasible_actions": 0,
+    "passenger_threshold_violations": 0,
+    "forced_requests": 46035,
+    "choice_requests": 27719,
+    "action_counts": "[46035, 3414, 2475, 1910, 1476, 1197, 17247]",
+    "action_percentages": "[62.41695365675082, 4.62890148330938, 3.3557501965995065, 2.5896900507091143, 2.0012473899720695, 1.6229628223553976, 23.384494400303712]",
+    "charging_events": 1947,
+    "vehicles_entering_charging": 842,
+    "vehicles_leaving_charging": 687,
+    "soc_min": 5.557984647352647,
+    "soc_max": 75.0,
+    "fleet_conserved": true,
+    "final_fleet_hash": "26cce95f2613a49d1f947ab46661070f169587451bd45f34d41a27afdeb57bcb",
+    "outcome_hash": "539506391a169f8831d0c297f097c42905604c4641f5140a52b28e6efb0d6a15",
+    "optimizer_updates": 0,
+    "runtime_seconds": 2159.8106239159824,
+    "fallback_counts": "{\"0\": 4089, \"2\": 69665}",
+    "conditioning_sha256": "c7bd62051e16bfe6b53e9293f4b5d8503eb103339646b0da71a1f3f6f0a7abbd"
+  },
+  "dominance": {
+    "highest_pct": 42.99938670226199,
+    "one_below_pct": 40.85645225296728,
+    "two_or_more_below_pct": 16.144161044770737,
+    "mean_rank_below": 0.8798297196868574,
+    "median_rank_below": 1.0,
+    "choice_factor_counts": [
+      3053,
+      502,
+      4031,
+      5089,
+      692,
+      7634,
+      6718
+    ]
+  },
+  "policy_stability_comparisons": [
+    {
+      "from_episode": 1,
+      "to_episode": 5,
+      "all_agreement_pct": 66.54283157523659,
+      "choice_agreement_pct": 10.9780295104441,
+      "changed_pct": 33.4571684247634,
+      "action_distribution_total_variation": 0.2543048512623044,
+      "revenue_change": -3574.4363309380133,
+      "assignment_change": -742
+    },
+    {
+      "from_episode": 5,
+      "to_episode": 10,
+      "all_agreement_pct": 69.33318870840904,
+      "choice_agreement_pct": 18.402539774162125,
+      "changed_pct": 30.66681129159096,
+      "action_distribution_total_variation": 0.2791577405971202,
+      "revenue_change": 30103.281332445098,
+      "assignment_change": 392
+    },
+    {
+      "from_episode": 10,
+      "to_episode": 15,
+      "all_agreement_pct": 72.50454212652872,
+      "choice_agreement_pct": 26.840795122479165,
+      "changed_pct": 27.495457873471267,
+      "action_distribution_total_variation": 0.2691515036472598,
+      "revenue_change": -34832.31201293296,
+      "assignment_change": -109
+    },
+    {
+      "from_episode": 15,
+      "to_episode": 20,
+      "all_agreement_pct": 66.28386257016568,
+      "choice_agreement_pct": 10.288971463617013,
+      "changed_pct": 33.71613742983431,
+      "action_distribution_total_variation": 0.3149252921875424,
+      "revenue_change": 7256.172814399935,
+      "assignment_change": -526
+    },
+    {
+      "from_episode": 20,
+      "to_episode": 25,
+      "all_agreement_pct": 77.85611627843913,
+      "choice_agreement_pct": 41.0801255456546,
+      "changed_pct": 22.143883721560865,
+      "action_distribution_total_variation": 0.14424980340049354,
+      "revenue_change": 23116.47660927591,
+      "assignment_change": 1134
+    },
+    {
+      "from_episode": 10,
+      "to_episode": 25,
+      "all_agreement_pct": 81.60099791197766,
+      "choice_agreement_pct": 51.0444099714997,
+      "changed_pct": 18.399002088022346,
+      "action_distribution_total_variation": 0.12197304552973398,
+      "revenue_change": -4459.662589257117,
+      "assignment_change": 499
+    },
+    {
+      "from_episode": 15,
+      "to_episode": 25,
+      "all_agreement_pct": 73.0333270059929,
+      "choice_agreement_pct": 28.247772286157506,
+      "changed_pct": 26.96667299400711,
+      "action_distribution_total_variation": 0.2556064755809854,
+      "revenue_change": 30372.649423675844,
+      "assignment_change": 608
+    }
+  ],
+  "checkpoints": [
+    {
+      "episode": 1,
+      "updates": 128,
+      "replay_size": 37111,
+      "epsilon": 0.997568,
+      "hashes": {
+        "replay.npz": "1a9c2c19faa310a48194d003014c07bb8c2a789e9679779293e466e4d9fa31da",
+        "checkpoint.json": "f616c1041fbe721740e42edbf11e4169b97d6313104f262f74ecae8cee9d30c5",
+        "target.keras": "34194a1b9e2c82e888e7ede0051259cc79df8f3c8bc09c30cd8f3969669600f3",
+        "online.keras": "600960bfb62cea9c35e5611d6d97cf230b5032badd901f6fd5c16e35476b8d0f",
+        "continuation.json": "9be6d484e9f8653dc9792517d45ca7759d873661a736133ff4681b3d33cbde04"
+      }
+    },
+    {
+      "episode": 5,
+      "updates": 640,
+      "replay_size": 100000,
+      "epsilon": 0.98784,
+      "hashes": {
+        "replay.npz": "21949475ffe4f744cd5a76a524b45cc6c0dd1891f957cf778759c4305ad83046",
+        "checkpoint.json": "a5f1cf5c61f71aed34680cf3d04924756b12722a952a14d9d4a7b970e08532bb",
+        "target.keras": "9ee8e1881631e9f8025d3ba515b78c60410c383e19661a13df8bf4200dc6cb08",
+        "online.keras": "8228c916664b43267e1f20d2eabc002996dc83165633e5a4de8cc659e61459a4",
+        "continuation.json": "55b84f809f3b865d6be0dfc6733a39b253c7140299bc2f11312ecedffa5d44ae"
+      }
+    },
+    {
+      "episode": 10,
+      "updates": 1280,
+      "replay_size": 100000,
+      "epsilon": 0.97568,
+      "hashes": {
+        "replay.npz": "a2acc157aa6842ed0dd80d836a93ee2e23e828a5116b33c601d7f082fb307383",
+        "checkpoint.json": "f6893958b46c6ff4e8154f94163dd02716a8c4dc93021a4dcc779c9b7e13ca68",
+        "target.keras": "ef629c0cf310c20f9b942b9c7ba10e85810f5d9673a5619f72ba95e708e48e76",
+        "online.keras": "34f869a100a78c7a6c924cccb32293c9e58544ac2f94a60ccc51e08397dc29b7",
+        "continuation.json": "337165d8f54592f7fb08a39e10c02289df373400a0edf74b0a139cf97f5c8d67"
+      }
+    },
+    {
+      "episode": 15,
+      "updates": 1920,
+      "replay_size": 100000,
+      "epsilon": 0.96352,
+      "hashes": {
+        "replay.npz": "a0eeee8dd7dce88559421c1ade2a249c2df2bc1ca94ae56bea986d499be5b4b7",
+        "checkpoint.json": "0be95e6d642182b192a48753bca1c302a3c21cb4d16e3fa99153d6e9fea8c741",
+        "target.keras": "2b8e69b649caf34db0f7f83b31bb792836ec7e4553e6e37d6e2c4236d3caf062",
+        "online.keras": "9f880ff78eb50fd67d63c81de8d9ed958e6644d3983f2bb1d191e8709fd778bb",
+        "continuation.json": "7e621a9ebade7f9ff084f2aca53fc2422e2c26be3a3da00c59781b7145041936"
+      }
+    },
+    {
+      "episode": 20,
+      "updates": 2560,
+      "replay_size": 100000,
+      "epsilon": 0.95136,
+      "hashes": {
+        "replay.npz": "2bc012ceca0a2b8d8a4bb4c8440f55ba68d124e87d83e76d7d712654855c3946",
+        "checkpoint.json": "cb83c2b286c46d59ff6f5ea019c66d55c69b86988322d0ad373557cf3ce93042",
+        "target.keras": "2c118eeac9d96a55f4013329994ebda3ce2e8ef7ef4a1678e75d415067e9ac40",
+        "online.keras": "3455073072ee35236f6adfd7237d11d1a78bd3cb13e87effeb8b5fec85753424",
+        "continuation.json": "1d1eb758fe25b46271d4789173e53149420de9925b736640ec89439908cc7d5c"
+      }
+    },
+    {
+      "episode": 25,
+      "updates": 3200,
+      "replay_size": 100000,
+      "epsilon": 0.9392,
+      "hashes": {
+        "replay.npz": "26bf9b7e4985a1e2561bed0437ea30be249bb0f148ff215ee703626caea4a491",
+        "checkpoint.json": "82a71542d8506debe50b676dbf8982beba31716fe0983232f0eac721f7832568",
+        "target.keras": "e4ea19e39f0572950a0a5df42b45e8cc823c89d809891bc60ecd05940e37f0bc",
+        "online.keras": "46b6c43dc327b36072e8781b25dc2531a31fd1f7b155d80ee3119145fbcae27c",
+        "continuation.json": "f45615d16d734bafdaa38505045144ee8230c1e201c856b34921b5fe73af2c68"
+      }
+    }
+  ],
+  "missing_diagnostics": [
+    "Training per-episode forced/choice/action distributions",
+    "Training per-episode selected-Q and absolute-TD distributions/max Q",
+    "Independent persisted slot-level and complete transition-ID audit",
+    "Paired state-matched driver/trajectory/supply/commitment counterfactuals",
+    "Per-training-episode charging entry/exit vehicles",
+    "Original checkpoint payload digests: current digests are post-run fingerprints, not independent creation-time authentication"
+  ],
+  "protected_period_access": false,
+  "tests": [
+    {
+      "stage": "focused",
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_v2_time_specific_weather",
+      "exit_code": 0,
+      "passed": 23,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "stage": "B",
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_v2_preflight_contracts tests.test_final_temporal_protocol tests.test_station_reachability tests.test_empirical_passenger tests.test_charging_stations",
+      "exit_code": 0,
+      "passed": 41,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "stage": "C",
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip",
+      "exit_code": 0,
+      "passed": 57,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "stage": "D",
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch",
+      "exit_code": 0,
+      "passed": 123,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "stage": "E",
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch tests.test_v2_preflight_contracts tests.test_station_reachability tests.test_empirical_passenger tests.test_energy tests.test_fleet_state tests.test_operational_routing tests.test_operational_grid_state",
+      "exit_code": 0,
+      "passed": 239,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "stage": "resume",
+      "command": "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B results/training/pricing_v2_staged_training_001/weather_conditioned/test_detached_resume.py",
+      "exit_code": 0,
+      "passed": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "hard_invariants": "PASS_WITH_DOCUMENTED_PERSISTENCE_LIMITATIONS",
+  "checkpoint_payload_validation": "LOADABLE_FINITE_COMPATIBLE; CREATION_TIME_PAYLOAD_DIGESTS_UNAVAILABLE"
+}

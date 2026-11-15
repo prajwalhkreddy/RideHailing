@@ -1,0 +1,29 @@
+{
+  "status": "INTEGRATED_VALIDATED_NOT_TRAINED",
+  "verdict": "READY_FOR_V2_TRAINING",
+  "runtime_sample_N": 1000000,
+  "runtime_CDF_distance": 0.0005768333459936215,
+  "source_contract_unchanged": true,
+  "config": {
+    "passenger_sensitivity_version": "v2",
+    "contract_path": "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json",
+    "seed": 42,
+    "development_start": "2026-03-16 00:00:00",
+    "slots": 1,
+    "maximum_fixture_requests": 64,
+    "learning_enabled": false,
+    "expected_contract_sha256": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08"
+  },
+  "empirical_support_hash": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917",
+  "one_sample_per_request": true,
+  "training_started": false,
+  "protected_period_access": false,
+  "V1_artifacts_modified": false,
+  "focused_tests_passed": 57,
+  "focused_tests_failed": 0,
+  "checkpoint_version_and_rng_tests_passed": true,
+  "request_price_validation_passed": true,
+  "git_diff_check_passed": true,
+  "charging_active_event_coverage": false,
+  "smoke_optimizer_updates": 0
+}

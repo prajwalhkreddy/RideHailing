@@ -1,0 +1,32 @@
+[
+  {
+    "path": "notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf",
+    "sha256": "6bff09ca3e92acfead77117723b793cc594861d5b08274b15533d4e5aa2f7540",
+    "pages_or_document": 9
+  },
+  {
+    "path": "notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx",
+    "sha256": "d655e5e94be20e443eff0b44ba328f711890b72dc8473a0d7f974259ff141579",
+    "pages_or_document": 1
+  },
+  {
+    "path": "notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf",
+    "sha256": "61f6a05a865915635272270d94a8a4561ae5177362228c919d60bcf8fdaa7f28",
+    "pages_or_document": 39
+  },
+  {
+    "path": "notebooks/plan/supervisor/customer sensitivity.pdf",
+    "sha256": "0354886a207e7c5512c4b6b4873898a410df39671811ccf1af5ef6830b947861",
+    "pages_or_document": 8
+  },
+  {
+    "path": "notebooks/plan/supervisor/Final_Next_Implementation_Process.docx",
+    "sha256": "4a57d6ae5921d1e53cfcf6aa793c82503bf1ddfab9430d5e5a4d9739a5f73021",
+    "pages_or_document": 1
+  },
+  {
+    "path": "notebooks/plan/supervisor/Implementation Process Document.pdf",
+    "sha256": "f0170d69fa70ea50deafec0b45665d3219c3191bd892e9d30d9bd6a62888f913",
+    "pages_or_document": 1
+  }
+]

@@ -13,13 +13,21 @@ from src.simulation.operational_state import charging_grid_observations
 from src.fleet.fleet import validate_fleet
 
 class PassengerSensitiveExperiment(ProductionExperiment):
-    def __init__(self,*,provider,learner=None,seed=42,start='2026-03-12 15:30',routing_checkpoint,validation_only=True,**kwargs):
+    def __init__(self,*,provider,learner=None,seed=42,start='2026-03-12 15:30',routing_checkpoint,validation_only=True,passenger_sensitivity_version="v1",**kwargs):
+        from src.pricing.passenger_sensitive_v2 import resolve_pricing
+        self.pricing = resolve_pricing(passenger_sensitivity_version, provider)
+        self.passenger_sensitivity_version = passenger_sensitivity_version
+        if passenger_sensitivity_version in ("v2","WEATHER_TIME_CONDITIONED_V2") and learner is not None and (getattr(learner,"_loaded_sensitivity_version",None)=="v1" or ((learner.training_steps or len(learner.replay)) and getattr(learner,"sensitivity_provider",None) is not provider)):
+            raise ValueError("Historical learner/replay cannot resume under V2.")
+        if learner is not None and getattr(learner,'_loaded_sensitivity_version',passenger_sensitivity_version)!=passenger_sensitivity_version:
+            raise ValueError('Loaded learner sensitivity version mismatch')
         guard_date(start)
         if 'dqn_checkpoint' in kwargs:raise ValueError('No legacy DQN checkpoint allowed in V1.')
         if not validation_only:provider.require_training_ready()
         super().__init__(seed=seed,start=start,routing_checkpoint=routing_checkpoint,frozen_routing=True,**kwargs)
         self.dqn=learner if learner is not None else PassengerSensitiveDQN()
         if not isinstance(self.dqn,PassengerSensitiveDQN):raise ValueError('V1 learner required.')
+        if passenger_sensitivity_version in ("v2","WEATHER_TIME_CONDITIONED_V2"):self.dqn.sensitivity_provider=provider
         self.provider=provider;self.validation_only=validation_only
         self.linker=ActionableRequestLinker(self.dqn);self.request_audit=[];self.episode_finished=False
 
@@ -35,6 +43,10 @@ class PassengerSensitiveExperiment(ProductionExperiment):
         requests=self.requests_for_slot() if requests is None else list(requests)
         if len({r.request_id for r in requests})!=len(requests):raise ValueError('Duplicate request IDs.')
         for r in requests:r.validate(range(142),15)
+        weather_context=None
+        if self.passenger_sensitivity_version == 'WEATHER_TIME_CONDITIONED_V2':
+            weather_context=pd.read_parquet(self.base/'demand_master_jan_mar_2026.parquet',columns=['GridID','WeatherCode'],filters=[('TimeSlot','==',t)]).set_index('GridID')
+            if len(weather_context)!=142 or weather_context.index.duplicated().any() or weather_context.WeatherCode.isna().any():raise ValueError('Conditional weather context unavailable')
         rows=[];contexts={};assignment_times={};completed=0;assigned=0;offers=0;no_offer=0
         price_rejections=[];price_unmatched=0;before=len(self.linker.audit)
         for mini in range(15):
@@ -44,20 +56,27 @@ class PassengerSensitiveExperiment(ProductionExperiment):
                 completed+=self.advance_until(t+pd.Timedelta(seconds=offset))
                 key=(r.origin_grid,r.destination_grid)
                 if key not in contexts:contexts[key]=self.current_states.build(*key,t)
-                state=contexts[key];draw=self.provider.sample();raw_pc=maximum_price(r.trip_distance_km,draw.value);pc=effective_threshold(raw_pc);mask=feasible_mask(pc)
+                state=contexts[key];conditioning={}
+                if weather_context is not None:
+                    draw,conditioning=self.provider.sample_request(float(weather_context.loc[r.origin_grid,'WeatherCode']),self.clock)
+                else:draw=self.provider.sample()
+                raw_pc=self.pricing.maximum_price(r.trip_distance_km,draw.value);pc=self.pricing.effective_threshold(raw_pc);mask=self.pricing.feasible_mask(pc)
                 action=self.dqn.select_action(state,mask,explore=explore_pricing)
                 reward=0.;eligible=None
-                row=dict(Request_ID=r.request_id,timestamp=str(self.clock),slot=self.slot_index+1,Origin_Grid_ID=r.origin_grid,Destination_Grid_ID=r.destination_grid,state_sha256=hashlib.sha256(state.tobytes()).hexdigest(),state_13d=state.tolist(),L_gg_km=r.trip_distance_km,L_base_km=L_BASE_KM,epsilon_raw=draw.raw,epsilon_min=draw.minimum,epsilon_c=draw.value,P_base_USD=P_BASE_USD,P_c_USD=pc,P_raw_c=raw_pc,P_accept_c=pc,P_platform_min=P_PLATFORM_MIN,P_platform_max=P_PLATFORM_MAX,signed_source_epsilon=None,feasible_action_count=int(mask.sum()))
-                for i,label in enumerate(['085','090','095','100','105','110','115']):row['action_'+label+'_price']=float(CANDIDATE_PRICES[i]);row['mask_'+label]=bool(mask[i])
+                row=dict(Request_ID=r.request_id,timestamp=str(self.clock),slot=self.slot_index+1,Origin_Grid_ID=r.origin_grid,Destination_Grid_ID=r.destination_grid,state_sha256=hashlib.sha256(state.tobytes()).hexdigest(),state_13d=state.tolist(),L_gg_km=r.trip_distance_km,L_base_km=self.pricing.L_BASE_KM,epsilon_raw=draw.raw,epsilon_min=draw.minimum,epsilon_c=draw.value,P_base_USD=self.pricing.P_BASE_USD,P_c_USD=pc,P_raw_c=raw_pc,P_accept_c=pc,P_platform_min=self.pricing.P_PLATFORM_MIN,P_platform_max=self.pricing.P_PLATFORM_MAX,signed_source_epsilon=None,feasible_action_count=int(mask.sum()))
+                row.update(conditioning)
+                for i,label in enumerate(['085','090','095','100','105','110','115']):row['action_'+label+'_price']=float(self.pricing.CANDIDATE_PRICES[i]);row['mask_'+label]=bool(mask[i])
                 if action is None:
                     no_offer+=1;r.status=RequestStatus.UNSERVED
                     outcome='NO_FEASIBLE_PRICING_ACTION';r.v1_pricing_outcome=outcome
                     row.update(selected_action_index=None,selected_factor=None,P_offer_USD=None,passenger_status='NOT_OFFERED')
                 else:
-                    offers+=1;offered=action.pricing_factor*P_BASE_USD
+                    offers+=1;offered=action.pricing_factor*self.pricing.P_BASE_USD
                     if offered>pc:raise ValueError('Invariant: selected offer exceeds passenger maximum.')
-                    r.base_fare=P_BASE_USD;r.pricing_factor=action.pricing_factor;r.offered_fare=offered;r.customer_accepted=True;r.customer_model='passenger_sensitive_v1'
+                    r.base_fare=self.pricing.P_BASE_USD;r.pricing_factor=action.pricing_factor;r.offered_fare=offered;r.customer_accepted=True;r.customer_model='passenger_sensitive_'+self.passenger_sensitivity_version.lower()
                     r.v1_epsilon_c=draw.value;r.v1_epsilon_min=draw.minimum;r.v1_pc_usd=pc;r.v1_raw_pc_usd=raw_pc
+                    if self.passenger_sensitivity_version in ("v2","WEATHER_TIME_CONDITIONED_V2"):
+                        r.v2_reference_p_base=self.pricing.P_BASE_USD;r.v2_reference_l_base_km=self.pricing.L_BASE_KM
                     price_before=len(price_rejections)
                     dispatch_requests([r],self.fleet,self.lookup,2,15,energy_parameters=self.energy,dispatch_model=DISPATCH_MODEL_LEGACY,slot_start_time=t.to_pydatetime(),station_reserve=self.station_reserve,reserve_observer=self.record_reserve_rejection,driver_minimum_prices=self.profiles.price_preference,price_observer=lambda req,vehicle:price_rejections.append(req.request_id))
                     if r.status is RequestStatus.ASSIGNED:

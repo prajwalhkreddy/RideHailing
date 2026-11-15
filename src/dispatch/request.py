@@ -73,6 +73,8 @@ class RequestState:
     selected_best_alternative_utility: float | None = None
     selected_utility_margin: float | None = None
 
+    v2_reference_p_base: float | None = None
+    v2_reference_l_base_km: float | None = None
     v1_epsilon_c: float | None = None
     v1_epsilon_min: float | None = None
     v1_pc_usd: float | None = None
@@ -186,6 +188,20 @@ class RequestState:
                     raise ValueError("V1 raw preference formula mismatch.")
                 if self.v1_pc_usd != effective_threshold(self.v1_raw_pc_usd):
                     raise ValueError("V1 effective threshold mismatch.")
+            elif self.customer_model in ("passenger_sensitive_v2", "passenger_sensitive_weather_time_conditioned_v2"):
+                from src.pricing.passenger_sensitive_v2 import V2PriceContract
+                from src.pricing.passenger_sensitive_v1 import ACTIONS
+                vals = [self.v2_reference_p_base, self.v2_reference_l_base_km, self.v1_epsilon_c, self.v1_raw_pc_usd, self.v1_pc_usd]
+                if any(v is None or not math.isfinite(v) for v in vals) or min(vals[:3]) <= 0:
+                    raise ValueError("Incomplete V2 request sensitivity contract.")
+                pricing = V2PriceContract({'P_base':self.v2_reference_p_base,'L_base':self.v2_reference_l_base_km})
+                if self.base_fare != pricing.P_BASE_USD or self.pricing_factor not in ACTIONS or self.v1_epsilon_min != 0:
+                    raise ValueError("V2 reference/action or no-floor contract mismatch.")
+                raw = pricing.maximum_price(self.trip_distance_km,self.v1_epsilon_c)
+                if not math.isclose(raw,self.v1_raw_pc_usd,rel_tol=1e-12,abs_tol=1e-12) or pricing.effective_threshold(raw) != self.v1_pc_usd:
+                    raise ValueError("V2 request threshold mismatch.")
+                if self.offered_fare != self.pricing_factor*self.base_fare or self.offered_fare > self.v1_pc_usd or self.customer_accepted is not True or self.acceptance_probability is not None:
+                    raise ValueError("V2 passenger feasibility violation.")
             elif self.customer_model == "historical_sensitivity":
                 if self.acceptance_probability is not None or any(value is None for value in historical_values):
                     raise ValueError("Historical-sensitivity requests require the complete deterministic audit.")

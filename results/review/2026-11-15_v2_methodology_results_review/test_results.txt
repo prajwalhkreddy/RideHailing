@@ -1,0 +1,17 @@
+test_action_counts_and_agreement (__main__.ReportingIntegrity.test_action_counts_and_agreement) ... ok
+test_coverage_reports_real_gaps (__main__.ReportingIntegrity.test_coverage_reports_real_gaps) ... ok
+test_dynamic_evidence (__main__.ReportingIntegrity.test_dynamic_evidence) ... ok
+test_exact_development_comparison (__main__.ReportingIntegrity.test_exact_development_comparison) ... ok
+test_fixture_dates_and_feasibility (__main__.ReportingIntegrity.test_fixture_dates_and_feasibility) ... ok
+test_no_production_execution_imports (__main__.ReportingIntegrity.test_no_production_execution_imports) ... ok
+test_no_protected_observation_source (__main__.ReportingIntegrity.test_no_protected_observation_source) ... ok
+test_population_flow (__main__.ReportingIntegrity.test_population_flow) ... ok
+test_requested_core_ids_present (__main__.ReportingIntegrity.test_requested_core_ids_present) ... ok
+test_source_hashes_unchanged (__main__.ReportingIntegrity.test_source_hashes_unchanged) ... ok
+test_summary_one_page (__main__.ReportingIntegrity.test_summary_one_page) ... ok
+test_visual_images_and_ids (__main__.ReportingIntegrity.test_visual_images_and_ids) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.350s
+
+OK

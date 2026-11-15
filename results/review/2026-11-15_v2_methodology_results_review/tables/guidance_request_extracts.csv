@@ -1,0 +1,47 @@
+source,page_or_document,request_excerpt
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,1,"array a. Recording 5(2) addresses the demand/distance distribution, mean fare, passenger price"
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,1,"sensitivity (ε / e), fitted sensitivity distribution, price bounds, Pmax, pricing actions, and simulation"
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,1,"simulation must generate trips using the observed NYC distance/demand distribution, apply a"
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,1,"sensitivities sampled from a fitted distribution, and constrain generated prices within empirically"
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,2,distribution rather than assigning a bin's deterministic e value to every simulated trip in that
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,6,4. Demand & Distance Distribution
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,6,distribution resembles a Zipf-type or exponential-type decay (with secondary peaks visible in array a
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,6,distribution observed in the dataset rather than generating distances uniformly.
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,6,6. Treating ε as a Population Distribution & Distribution Fitting
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,6,"recorded for that exact distance bin. Instead, treat ε as a population probability distribution so that"
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,6,common fitted distribution.
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,6,Because the earlier assumption of a normal distribution does not match the skewed empirical
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,6,"observations, the academic reviewer directs the team to fit a suitable probability distribution using the"
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,7,"Inspect raw ε observations (including zero, negative, near-zero, and extreme values) and plot"
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,7,"Compare fits using histogram overlays, Q–Q plots, AIC/BIC criteria, and Kolmogorov–Smirnov"
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,7,Initially use one pooled ε distribution and one common Pbase across clear/rain weather and
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,9,"empirical distribution pi = Ni / ∑Nj, then sample an exact trip distance within that bin."
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,9,NYC spatial distribution subject to feasible OD routing rules.
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,9,population distribution fitted to the cleaned empirical sensitivity observations.
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,9,(1) Trip distance histogram/probability plot; (2) Trip count by distance bin; (3) Distance vs.
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,9,"mean fare curve & boxplots; (4) Sensitivity (ε) histogram, empirical vs. ﬁtted CDF, and Q–Q"
+notebooks/plan/Passenger Price Sensitivity and NYC Fare Calibration.pdf,9,"PNYC,upper bounds, complete Pmax formula, ﬁnal parametric distribution for ε, and"
+notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx,1,"Create a scatter plot with trip distance on the x-axis and historical fare on the y-axis. Inspect whether fares remain constant below approximately 3–3.17 km, whether a fare floor exists, whether different short distances share exactly the same fare, and whether P_base and L_base are calculated consistently."
+notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx,1,"Evaluate DQN behaviour across episodes. The meeting indicates that 25 episodes may reveal an early trend but are too few to claim convergence. A changing reward or action distribution can indicate learning, but does not by itself prove convergence."
+notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx,1,Deliverable / plot
+notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx,1,Scatter plot plus distance-bin counts and average fares.
+notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx,1,"Time series or scatter plot, MAE, RMSE, NRMSE, volume error, evaluation split and observation count."
+notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx,1,Calculate the distance distribution and trip counts by interval.
+notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx,1,"Plot reward, acceptance, offered price, action frequency and Q-network loss."
+notebooks/plan/Combined_DQN_Pricing_Validation_and_Implementation_Roadmap.docx,1,Plot actual versus predicted demand.
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,13,18. Another possible approach: sensitivity distribution
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,13,you can model a distribution:
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,13,"them through a more advanced model, but treats online learning of the distribution as"
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,22,elasticity values to create atruncated normal distribution.
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,22,2.1 Why a truncated normal distribution?
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,22,You should not estimate one global distribution.
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,23,The recording clearly says that a separate sensitivity distribution can be calculated for
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,24,7. Construct a truncated distribution.
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,25,Historical Data → Elasticity Distribution → Sample Customer Sensitivity →Pmax
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,26,The MAB receives the sensitivity distribution or sensitivity-related values directly.
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,27,Then calculate and plot:
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,28,plot selected representative vehicles
+notebooks/plan/supervisor/Explain Pricing Dispatch Results.pdf,31,numbers that are suitable for bar-chart comparisons.
+notebooks/plan/supervisor/customer sensitivity.pdf,1,Then fit a distribution/function to the data.
+notebooks/plan/supervisor/customer sensitivity.pdf,1,Sir mentions using a truncated normal distribution as one possibility.
+notebooks/plan/supervisor/Final_Next_Implementation_Process.docx,1,"The supervisor's default assumption is an ordinary normal distribution without mandatory truncation. If the implementation later requires bounds, truncation can be added as a modelling choice, but it is not the default discussed."

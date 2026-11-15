@@ -1,0 +1,4 @@
+group,cases,changed_immediate_driver,changed_immediate_assignment,any_state_difference,partial_recovery,full_recovery,net_positive,median_immediate_sacrifice,median_recovery,median_net,best_net,worst_net
+CONTROL,2,0,0,0,0,0,0,-0.0,0.0,0.0,0.0,0.0
+ONE_BELOW,4,0,0,0,0,0,0,1.11770992211952,1.7763568394002505e-14,-1.1177099221195022,-1.1177099221192748,-1.1177099221195022
+TWO_OR_MORE_BELOW,2,0,0,0,0,0,0,2.7942748052988087,5.3290705182007514e-14,-2.7942748052987554,-2.2354198442390043,-3.3531297663585065

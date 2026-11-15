@@ -1,0 +1,5 @@
+{
+  "policy": "GREEDY_DQN",
+  "slots_completed": 48,
+  "training": false
+}

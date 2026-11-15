@@ -1,0 +1,7 @@
+{
+  "comparison_sha256": "1ff48770e784dd9be41fdbdc58b9cbb39ca9aa8916ebb6e8f3831af6f6bde647",
+  "fixture_sha256": "c23f815ab8dd573b958e83260b442ab428255325bffc8ac83fdbfcf77e1177a6",
+  "reproducibility_sha256": "b04c59e7fc2e1c98fd6c6c2c4f94c19b718f9772041400b2239eaff9740de508",
+  "status": "FROZEN",
+  "training": false
+}

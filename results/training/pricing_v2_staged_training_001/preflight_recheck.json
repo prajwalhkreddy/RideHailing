@@ -1,0 +1,67 @@
+{
+  "checks": {
+    "src/pricing/passenger_sensitive_v2.py": true,
+    "src/simulation/passenger_sensitive_v1.py": true,
+    "src/dispatch/request.py": true,
+    "src/rl/passenger_sensitive_dqn.py": true,
+    "config/passenger_sensitivity_v2_validation.json": true,
+    "tests/test_passenger_sensitive_v2.py": true,
+    "contract": true,
+    "empirical_support": true,
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/notation_contract.json": true,
+    "results/analysis/2026-11-09_academic_review_followup_pricing/jan01_mar15_analysis_cache.parquet": true,
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/candidate_population_comparison.csv": true,
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/ratio_bias_validation.csv": true,
+    "results/analysis/2026-11-13_pricing_v2_freeze_design/V2_NUMERICAL_FREEZE.md": true,
+    "routing": true
+  },
+  "march16_snapshots": 48,
+  "snapshot_failures": 0,
+  "training_started": false,
+  "production_code_changed": false,
+  "recorded_implementation_hashes_changed": false,
+  "protected_period_accessed": false,
+  "full_march16_request_fixture": "NOT_CREATED",
+  "full_day_baselines": "NOT_COMPUTED; prohibited in reconciliation task",
+  "fresh_v2_automated_execution_harness": "NOT_IMPLEMENTED",
+  "verdict": "V2_TRAINING_BLOCKED_FULL_DAY_FIXTURE_AND_EXECUTION_HARNESS_NOT_PREPARED",
+  "test_results": {
+    "A": {
+      "ran": 38,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_pricing_dqn_contract tests.test_passenger_arrival_boundary tests.test_production_simulation"
+    },
+    "B": {
+      "ran": 41,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_v2_preflight_contracts tests.test_final_temporal_protocol tests.test_station_reachability tests.test_empirical_passenger tests.test_charging_stations"
+    },
+    "C": {
+      "ran": 57,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip"
+    },
+    "D": {
+      "ran": 123,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch"
+    },
+    "E": {
+      "ran": 239,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "command": "MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_passenger_sensitive_v2 tests.test_passenger_sensitive_v1 tests.test_passenger_trip tests.test_final_production_runner tests.test_standalone_pricing_dqn tests.test_pricing_dqn_simulator_integration tests.test_final_temporal_protocol tests.test_charging_stations tests.test_pricing_completed_episode_resume tests.test_pricing_dqn_contract tests.test_routing_production tests.test_final_pricing_training_execution tests.test_production_simulation tests.test_request_pricing_context tests.test_passenger_arrival_boundary tests.test_pricing_dispatch tests.test_v2_preflight_contracts tests.test_station_reachability tests.test_empirical_passenger tests.test_energy tests.test_fleet_state tests.test_operational_routing tests.test_operational_grid_state"
+    }
+  },
+  "test_contract_reconciliation": "PASS",
+  "unrestricted_discovery": "NOT_RUN: root README explicitly does not certify discovery as safe; explicit 239-test applicable set run instead."
+}

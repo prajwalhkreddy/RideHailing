@@ -1,0 +1,13 @@
+{
+  "comparisons": "First two eligibility-only cases and first two identical highest-action choice controls.",
+  "excluded": "Final slot cannot cross a full subsequent slot without protected-period access; retain screen but not rollout.",
+  "genuine": "First five distinct (hour,rank gap,divergence type,raw weather) strata per T group; cap20. Selected only from actual driver/outcome divergence.",
+  "horizons": [
+    "H0",
+    "H25",
+    "H100",
+    "NEXT_SLOT_BOUNDARY",
+    "ONE_FULL_SLOT_AFTER_BOUNDARY"
+  ],
+  "method": "Selection during screening is outcome-blind with respect to future value; branches begin only after full-day reproduction passes."
+}

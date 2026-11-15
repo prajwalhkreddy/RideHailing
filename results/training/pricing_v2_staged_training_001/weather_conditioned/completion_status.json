@@ -1,0 +1,7 @@
+{
+  "status": "COMPLETE",
+  "training_started": true,
+  "completed_episode": 25,
+  "verdict": "V2_STAGE25_REVIEW_REQUIRED",
+  "postrun_report": "/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/weather_conditioned/postrun_analysis/README.md"
+}

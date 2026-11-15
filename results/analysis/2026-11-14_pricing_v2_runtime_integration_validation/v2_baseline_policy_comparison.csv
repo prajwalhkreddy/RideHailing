@@ -1,0 +1,4 @@
+policy,requests,assignments,assignment_rate,revenue,unmatched,passenger_feasibility_violations,fleet_conservation,action_distribution,optimizer_updates,replay_transitions,routing_actions,charging_decisions
+highest_feasible,64,64,1.0,1330.0748073222326,0,0,True,"{""0.85"": 41, ""1.15"": 15, ""0.9"": 4, ""0.95"": 4}",0,64,"[3837, 76, 116, 317, 147, 315, 21, 147, 17]",0
+lowest_feasible,64,64,1.0,1216.0683952660415,0,0,True,"{""0.85"": 64}",0,64,"[3838, 76, 116, 316, 147, 315, 21, 147, 17]",0
+neutral,64,64,1.0,1279.7778608268543,0,0,True,"{""0.85"": 41, ""1.0"": 15, ""0.9"": 4, ""0.95"": 4}",0,64,"[3838, 76, 116, 316, 147, 315, 21, 147, 17]",0

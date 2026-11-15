@@ -1,0 +1,9 @@
+{
+  "action_sequence_matches": true,
+  "full_day_final_fleet_matches": true,
+  "requests": 73754,
+  "reward_sequence_matches": true,
+  "screened": 15800,
+  "snapshots": 24,
+  "status": "PASS"
+}

@@ -1,0 +1,15 @@
+{
+  "authoritative_harness": "/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/weather_conditioned/training_harness.py",
+  "baselines_run": false,
+  "completed_episodes": 0,
+  "current_gate_evidence": "results/analysis/2026-11-14_pricing_v2_weather_time_conditioning/prelaunch_verification.json",
+  "current_weather_conditioning_gate": "READY_TO_LAUNCH_V2_STAGE25",
+  "full_development_fixture_created": false,
+  "latest_checkpoint": null,
+  "next_action": "Prepare and verify the full-day V2 fixture, baseline reproducibility, effective fresh-run config and automated Episode1\u201325 harness in a subsequent task; no launch here.",
+  "protected_period_accessed": false,
+  "status": "BLOCKED_FULL_DAY_FIXTURE_AND_EXECUTION_HARNESS_NOT_PREPARED",
+  "test_contract_reconciliation": "PASS",
+  "training_started": false,
+  "verdict": "V2_TRAINING_BLOCKED_FULL_DAY_FIXTURE_AND_EXECUTION_HARNESS_NOT_PREPARED"
+}

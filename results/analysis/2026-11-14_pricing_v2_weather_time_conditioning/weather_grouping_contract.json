@@ -1,0 +1,87 @@
+{
+  "methodology_version": "WEATHER_TIME_CONDITIONED_V2_PROPOSED_NOT_FROZEN",
+  "status": "BLOCKED_TEMPORAL_CLUSTER_INSTABILITY",
+  "population_version": "PASSENGER_SENSITIVITY_V2_5PCT_POOLED_2026_11_14",
+  "denominator_rule": "abs(r_P)>=0.05 inclusive; otherwise epsilon NaN and DENOMINATOR_UNRESOLVED",
+  "epsilon_policy": "NEGATIVE_AUDITED_EXCLUDED; historical values retained; no abs transformation",
+  "T_group_definitions": {
+    "T1": [
+      0,
+      4
+    ],
+    "T2": [
+      4,
+      6
+    ],
+    "T3": [
+      6,
+      16
+    ],
+    "T4": [
+      16,
+      24
+    ]
+  },
+  "feature_definition": "[mean_T1, SD_T1, ..., mean_T4, SD_T4]; unscaled; N diagnostic only",
+  "missing_feature_rule": "No imputation; require >=100 observations in each shared group and >=3 shared groups; low-overlap codes excluded from clustering",
+  "distance_metric": "Euclidean over shared features",
+  "distance_normalization": "sqrt(sum squared differences / compared feature count)",
+  "clustering_method": "deterministic average linkage",
+  "cluster_selection_rule": "Evaluate all feasible cuts, separation, cluster sizes, threshold/date-support stability and leave-one-T-out temporal sensitivity. No scalar-only selection, forced K, or SD gate. No cut accepted due to unstable temporal membership; no new numerical stability cutoff invented.",
+  "number_of_groups": null,
+  "mapping": {},
+  "best_diagnostic_K": 3,
+  "best_diagnostic_memberships": [
+    [
+      1,
+      2,
+      3,
+      8,
+      12,
+      14
+    ],
+    [
+      5,
+      9,
+      16
+    ],
+    [
+      7,
+      15
+    ]
+  ],
+  "low_support_policy": "13,17,21 proposed explicit pooled fallback, not normal group assignment; runtime not activated",
+  "fallback_policy": {
+    "status": "RETAINED_EXISTING_NOT_ACTIVATED",
+    "minimum_support_N": 5000,
+    "levels": [
+      "weather_group_time_group",
+      "weather_group",
+      "time_group",
+      "global"
+    ],
+    "source": "results/analysis/2026-11-14_pricing_v2_weather_clustering_resolved/WEATHER_CLUSTER_VALIDATION.md",
+    "note": "Existing stronger four-level hierarchy preserved under task exception; N100 is grouping feature diagnostic, not replacement runtime support threshold."
+  },
+  "source_artifacts": [
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/notation_contract.json",
+    "results/analysis/2026-11-09_academic_review_followup_pricing/jan01_mar15_analysis_cache.parquet",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/candidate_population_comparison.csv",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/ratio_bias_validation.csv",
+    "results/analysis/2026-11-13_pricing_v2_freeze_design/V2_NUMERICAL_FREEZE.md",
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json",
+    "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/weather_hour_secondary_diagnostics.csv"
+  ],
+  "source_hashes": {
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/notation_contract.json": "eadf2255df63799569a6abde6a2dd61256c6ff9b783b81b95bd6ebdc7b06edf6",
+    "results/analysis/2026-11-09_academic_review_followup_pricing/jan01_mar15_analysis_cache.parquet": "d263631a679392ddabebda571e009c1f56501323d4ab975860ec90b53938cb61",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/candidate_population_comparison.csv": "7319e84964e26c5c02251ff4c441faf55b5239a973610958ff0a470432fa946a",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/ratio_bias_validation.csv": "85753cf3d3260622d0ff2e1216de863417e960659c758e691e7d81eaaef5da64",
+    "results/analysis/2026-11-13_pricing_v2_freeze_design/V2_NUMERICAL_FREEZE.md": "ad45f9f0a2b6e1f9a84c56c412a73124eaa16c2443e6713a8418dcae9f8c737d",
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+    "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/weather_hour_secondary_diagnostics.csv": "d84db0f052e4ce2f8f72e7b0a870350eb0cbc323dfa69f298c133245e8988d18"
+  },
+  "sd4_role": "INTERNAL_STABILITY_DIAGNOSTIC"
+}

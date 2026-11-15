@@ -1,0 +1,6 @@
+MPLCONFIGDIR=/tmp/v2-mpl OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 PYTHONPATH=. /Users/prajwalhk/miniconda3/envs/ridehailing-phd/bin/python -B -m unittest tests.test_v2_preflight_contracts tests.test_final_temporal_protocol tests.test_station_reachability tests.test_empirical_passenger tests.test_charging_stations
+.........................................
+----------------------------------------------------------------------
+Ran 41 tests in 0.640s
+
+OK

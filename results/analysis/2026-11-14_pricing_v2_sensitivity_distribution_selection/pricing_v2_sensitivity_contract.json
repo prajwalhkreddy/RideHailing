@@ -1,0 +1,58 @@
+{
+  "methodology_version": "PASSENGER_SENSITIVITY_V2_5PCT_POOLED_2026_11_14",
+  "calibration_period": {
+    "start_inclusive": "2026-01-01",
+    "end_exclusive": "2026-03-16"
+  },
+  "P_base": 22.354198442390455,
+  "P_norm": 22.354198442390455,
+  "L_base": 4.616983790655043,
+  "distance_unit": "km",
+  "fare_field": "fare derived from TLC fare_amount USD",
+  "distance_field": "trip_distance miles converted with 1.609344",
+  "epsilon_formula": "r_L/r_P; r_P=(P-P_base)/P_base; r_L=(L-L_base)/L_base",
+  "denominator_rule": "abs(r_P)>=0.05 inclusive; otherwise epsilon NaN and DENOMINATOR_UNRESOLVED",
+  "denominator_relative_threshold": 0.05,
+  "effective_current_USD_threshold": 1.1177099221195228,
+  "negative_epsilon_policy": "NEGATIVE_AUDITED_EXCLUDED; historical values retained; no abs transformation",
+  "zero_epsilon_policy": "NONNEGATIVE_VALID; retained; observed zero count=0",
+  "primary_population": "pooled finite nonnegative denominator-resolved observations",
+  "weather_time_role": "SECONDARY_DIAGNOSTICS",
+  "sd4_role": "INTERNAL_STABILITY_DIAGNOSTIC",
+  "sampling_candidate": "EMPIRICAL_RESAMPLING",
+  "sampling_candidate_status": "REVIEWED_NOT_INTEGRATED",
+  "source_artifacts": [
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/notation_contract.json",
+    "results/analysis/2026-11-09_academic_review_followup_pricing/jan01_mar15_analysis_cache.parquet",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/candidate_population_comparison.csv",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/ratio_bias_validation.csv",
+    "results/analysis/2026-11-13_pricing_v2_freeze_design/V2_NUMERICAL_FREEZE.md"
+  ],
+  "source_hashes": {
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/notation_contract.json": "eadf2255df63799569a6abde6a2dd61256c6ff9b783b81b95bd6ebdc7b06edf6",
+    "results/analysis/2026-11-09_academic_review_followup_pricing/jan01_mar15_analysis_cache.parquet": "d263631a679392ddabebda571e009c1f56501323d4ab975860ec90b53938cb61",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/candidate_population_comparison.csv": "7319e84964e26c5c02251ff4c441faf55b5239a973610958ff0a470432fa946a",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/ratio_bias_validation.csv": "85753cf3d3260622d0ff2e1216de863417e960659c758e691e7d81eaaef5da64",
+    "results/analysis/2026-11-13_pricing_v2_freeze_design/V2_NUMERICAL_FREEZE.md": "ad45f9f0a2b6e1f9a84c56c412a73124eaa16c2443e6713a8418dcae9f8c737d"
+  },
+  "reference_source": "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/notation_contract.json",
+  "reference_original_provenance": "results/analysis/2026-11-13_pricing_v2_freeze_design/V2_NUMERICAL_FREEZE.md",
+  "reference_scope_note": "P_base originates from [1,75) km calibration; applied unchanged to current [1.5,75) km scope; values reused, not recomputed; historical approval metadata untouched",
+  "source_cleaning": [
+    "existing positive fare and 0<trip_distance<=100 miles",
+    "current analysis 1.5<=distance_km<75"
+  ],
+  "population_path": "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet",
+  "population_sha256": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917",
+  "candidate_selector": "is_runtime_candidate == True",
+  "observation_id_definition": "zero-based row position in immutable source cache identified by SHA256",
+  "split": {
+    "rule": "NumPy default_rng(42), one uniform draw per candidate in source order; draw<0.8 FIT else VALIDATION",
+    "seed": 42,
+    "fit_N": 4623641,
+    "validation_N": 1155572,
+    "persisted_column": "distribution_split"
+  },
+  "empirical_sampler_contract": "uniform row index with replacement; preserve duplicate frequencies; caller-controlled RNG; reviewed final population includes all candidate rows after selection; no production integration",
+  "decision_authority": "explicit current project task; 5% relative band operative; economic resolution motivates but does not add a stronger floor"
+}

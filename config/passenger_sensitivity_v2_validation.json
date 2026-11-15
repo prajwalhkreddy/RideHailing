@@ -1,0 +1,10 @@
+{
+  "passenger_sensitivity_version": "v2",
+  "contract_path": "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json",
+  "seed": 42,
+  "development_start": "2026-03-16 00:00:00",
+  "slots": 1,
+  "maximum_fixture_requests": 64,
+  "learning_enabled": false,
+  "expected_contract_sha256": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08"
+}

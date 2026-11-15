@@ -1,0 +1,9 @@
+{
+  "pid": 11952,
+  "process_group": 11952,
+  "ps": "11952 11952 ??       Rs",
+  "descriptors": "p11952\nf0\nn/dev/null\nf1\nn/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/weather_conditioned/training.log\nf2\nn/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/weather_conditioned/training.log\n",
+  "writer_lock_owned": true,
+  "status": "RUNNING",
+  "detached": true
+}

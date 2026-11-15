@@ -1,0 +1,30 @@
+{
+  "contract_hash": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+  "source_hashes_verified": true,
+  "population_hash_verified": true,
+  "dates_verified": true,
+  "N": 5779213,
+  "zero_N": 0,
+  "formula_algebra": "epsilon=r_L/r_P implies P=P_base+(P_base/epsilon)*r_L",
+  "units": "USD + USD/dimensionless * dimensionless = USD",
+  "status": "INTEGRATED_VALIDATED_NOT_TRAINED",
+  "P_base": 22.354198442390455,
+  "L_base_km": 4.616983790655043,
+  "request_distance_unit": "km",
+  "epsilon_unit": "dimensionless",
+  "threshold_unit": "USD",
+  "action_unit": "dimensionless factors times P_base USD",
+  "threshold_formula": "P_base+(P_base/epsilon)*((distance_km-L_base)/L_base)",
+  "effective_threshold": "max(0.85*P_base,raw_threshold)",
+  "action_factors": [
+    0.85,
+    0.9,
+    0.95,
+    1.0,
+    1.05,
+    1.1,
+    1.15
+  ],
+  "zero_conflict": false,
+  "reviewed_contract_preserved": true
+}

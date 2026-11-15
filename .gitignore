@@ -46,3 +46,10 @@ outputs/logs/*
 
 q
 /results/analysis/2026-11-09_academic_review_followup_pricing/jan01_mar15_analysis_cache.parquet
+
+/results/training/pricing_v2_staged_training_001/march16_fixture.pkl
+/results/training/pricing_v2_staged_training_001/checkpoints/
+
+/results/training/pricing_v2_staged_training_001/weather_conditioned/march16_fixture.pkl
+/results/training/pricing_v2_staged_training_001/weather_conditioned/*_requests.parquet
+/results/training/pricing_v2_staged_training_001/weather_conditioned/checkpoints/

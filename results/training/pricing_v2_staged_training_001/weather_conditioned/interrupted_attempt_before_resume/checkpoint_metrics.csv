@@ -1,0 +1,2 @@
+episode,requests,assignments,revenue,unmatched,replay_size,optimizer_updates,cumulative_optimizer_updates,exploration_epsilon,mean_loss,median_loss,P95_loss,charging_events,runtime_seconds
+1,37111,33828,679986.7738694646,3283,37111,128,128,0.997568,24.948023974895477,25.142940521240234,29.814027786254883,34,761.8359178750543

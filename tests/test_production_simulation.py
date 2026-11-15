@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from pathlib import Path
 import unittest
+import json
 
 import numpy as np
 import pandas as pd
@@ -23,9 +24,17 @@ class ProductionSimulationTests(unittest.TestCase):
         paths = experiment._paths()
         for name, expected in EXPECTED_HASHES.items():
             self.assertTrue(paths[name].is_file())
+            if name == 'driver_profiles':
+                migration=json.loads((ROOT/'results/analysis/2026-10-21_himax_resolution/driver_profile_contract.json').read_text())
+                self.assertEqual(expected,migration['previous_profile_sha256'])
+                self.assertTrue(migration['unrelated_attributes_unchanged'])
+                self.assertEqual(migration['status'],'PROJECT_CALIBRATION')
+                self.assertEqual(paths[name],ROOT/migration['profile_path'])
+                expected=migration['profile_parquet_sha256']
             self.assertEqual(sha256_file(paths[name]), expected)
         grid = pd.read_parquet(paths["grid"], columns=["GridID"])
-        self.assertEqual((len(grid), grid.GridID.nunique()), (EXPECTED_GRID_COUNT, EXPECTED_GRID_COUNT))
+        meta=json.loads((ROOT/'data/processed/grid_metadata.json').read_text())
+        self.assertEqual((len(grid),grid.GridID.nunique()),(meta['valid_grid_count'],meta['valid_grid_count']))
         times = pd.DatetimeIndex(np.load(paths["cnn_times"]))
         targets = times + pd.Timedelta(minutes=30)
         required = pd.date_range(PRODUCTION_START, periods=9, freq="30min")

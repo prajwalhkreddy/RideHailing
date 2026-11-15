@@ -1,0 +1,14 @@
+{
+  "primary_N": 100,
+  "secondary_N": 50,
+  "selection": "Silhouette>=0.25, no single-code clusters, median perturbation ARI>=0.75, P10 ARI>=0.50. Among eligible cuts within0.02 silhouette of best, choose smallest K. Otherwise T_GROUP_POOLED_FALLBACK.",
+  "criteria_status": "PROJECT_ENGINEERING_ACCEPTANCE_CRITERIA_NOT_STATISTICAL_SIGNIFICANCE",
+  "bootstrap": "20 date-block resamples per T, seed42; same dates weighted across codes",
+  "feature_perturbation": "20 independent 1% multiplicative perturbations, seed42",
+  "support_variations": [
+    50,
+    100
+  ],
+  "date_subset": "alternating chronological dates; also exclude codes with<5 dates",
+  "fallback_minimum_N": 5000
+}

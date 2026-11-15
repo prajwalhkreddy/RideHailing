@@ -1,0 +1,33 @@
+{
+  "status": "INTEGRATED_VALIDATED_NOT_TRAINED",
+  "verdict": "READY_FOR_V2_TRAINING",
+  "contract_sha256": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+  "empirical_support_sha256": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917",
+  "implementation_hashes": {
+    "src/pricing/passenger_sensitive_v2.py": "ed5f884528025412e7a2e3cb7fc4b9d098c1e40e5f03682050ce60bc31db2bd2",
+    "src/simulation/passenger_sensitive_v1.py": "435c346e38667e616acd068a57fcd11394fcf6effa4a3fce2594ea06e20fb9f5",
+    "src/dispatch/request.py": "ece5e5480c0ecb487cdd05c221dd86b1b454de13de057f47243f51cd41248f1e",
+    "src/rl/passenger_sensitive_dqn.py": "1736f03027f53ddbede0df063504cf61595233dcfb30678ad7192e1c3f306b7f",
+    "config/passenger_sensitivity_v2_validation.json": "1f3b2afa998c0906d74c4452e5f521ac96f827ce1ba5f3f2580cff8350c3a2d7",
+    "tests/test_passenger_sensitive_v2.py": "7835e0d62352d3725da32543ebab9f1bb38c75b106a34d4ae7e0b55ef96e7a9e"
+  },
+  "git_head": "e33261d006cc3d93fc96a4d998f8e9ac94286a75",
+  "working_tree_changes": true,
+  "test_count": 57,
+  "test_status": "PASS",
+  "config": {
+    "passenger_sensitivity_version": "v2",
+    "contract_path": "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json",
+    "seed": 42,
+    "development_start": "2026-03-16 00:00:00",
+    "slots": 1,
+    "maximum_fixture_requests": 64,
+    "learning_enabled": false,
+    "expected_contract_sha256": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08"
+  },
+  "fixture": "March16 00:00-00:30, first64 generated chronological requests; each of three baselines resets fleet and RNG",
+  "validation_directory": "results/analysis/2026-11-14_pricing_v2_runtime_integration_validation",
+  "training_started": false,
+  "training_default_disabled": true,
+  "charging_coverage": "zero charging events; active charging transitions not exercised"
+}

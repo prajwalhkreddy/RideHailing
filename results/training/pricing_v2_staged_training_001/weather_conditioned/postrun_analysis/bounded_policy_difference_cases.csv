@@ -1,0 +1,21 @@
+Request_ID,dqn_action,highest_action,dqn_reward,highest_policy_reward,interpretation
+2,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+895,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+972,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+980,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+830,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+374,0,1,19.001068676031885,20.118778598151412,Policy-trajectory association only; no paired state-matched counterfactual
+899,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+844,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+31,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+933,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+953,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+537,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+166,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+508,0,1,19.001068676031885,20.118778598151412,Policy-trajectory association only; no paired state-matched counterfactual
+1,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+558,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+13,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+146,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+83,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual
+977,5,6,24.589618286629506,25.707328208749022,Policy-trajectory association only; no paired state-matched counterfactual

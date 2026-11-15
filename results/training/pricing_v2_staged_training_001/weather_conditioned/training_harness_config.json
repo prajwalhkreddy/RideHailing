@@ -1,0 +1,206 @@
+{
+  "checkpoint_episodes": [
+    1,
+    5,
+    10,
+    15,
+    20,
+    25
+  ],
+  "development_seed": 424242,
+  "discount_semantics": "PER_ACTIONABLE_REQUEST_TRANSITION",
+  "dqn_config": {
+    "batch_size": 64,
+    "epsilon_decay_steps": 50000,
+    "epsilon_end": 0.05,
+    "epsilon_start": 1.0,
+    "gamma": 0.99,
+    "learning_rate": 0.001,
+    "minimum_replay_size": 1000,
+    "replay_capacity": 100000,
+    "seed": 42,
+    "soft_target_tau": 0.005
+  },
+  "episodes": [
+    {
+      "environment_seed": 2684470948,
+      "episode": 1,
+      "start": "2026-03-02 07:00:00",
+      "start_slot": 62
+    },
+    {
+      "environment_seed": 4091952314,
+      "episode": 2,
+      "start": "2026-03-12 08:30:00",
+      "start_slot": 545
+    },
+    {
+      "environment_seed": 233227757,
+      "episode": 3,
+      "start": "2026-03-10 14:30:00",
+      "start_slot": 461
+    },
+    {
+      "environment_seed": 3276785861,
+      "episode": 4,
+      "start": "2026-03-07 10:30:00",
+      "start_slot": 309
+    },
+    {
+      "environment_seed": 3644269654,
+      "episode": 5,
+      "start": "2026-03-07 08:30:00",
+      "start_slot": 305
+    },
+    {
+      "environment_seed": 1206282609,
+      "episode": 6,
+      "start": "2026-03-13 14:30:00",
+      "start_slot": 605
+    },
+    {
+      "environment_seed": 3543069911,
+      "episode": 7,
+      "start": "2026-03-02 06:00:00",
+      "start_slot": 60
+    },
+    {
+      "environment_seed": 3479688010,
+      "episode": 8,
+      "start": "2026-03-11 05:30:00",
+      "start_slot": 491
+    },
+    {
+      "environment_seed": 877132087,
+      "episode": 9,
+      "start": "2026-03-03 23:00:00",
+      "start_slot": 142
+    },
+    {
+      "environment_seed": 1244265337,
+      "episode": 10,
+      "start": "2026-03-02 09:00:00",
+      "start_slot": 66
+    },
+    {
+      "environment_seed": 2740186692,
+      "episode": 11,
+      "start": "2026-03-08 17:30:00",
+      "start_slot": 371
+    },
+    {
+      "environment_seed": 3884972972,
+      "episode": 12,
+      "start": "2026-03-15 07:30:00",
+      "start_slot": 687
+    },
+    {
+      "environment_seed": 829139639,
+      "episode": 13,
+      "start": "2026-03-11 19:00:00",
+      "start_slot": 518
+    },
+    {
+      "environment_seed": 2545567356,
+      "episode": 14,
+      "start": "2026-03-12 04:00:00",
+      "start_slot": 536
+    },
+    {
+      "environment_seed": 2718398101,
+      "episode": 15,
+      "start": "2026-03-11 12:30:00",
+      "start_slot": 505
+    },
+    {
+      "environment_seed": 176092387,
+      "episode": 16,
+      "start": "2026-03-12 13:00:00",
+      "start_slot": 554
+    },
+    {
+      "environment_seed": 3528048386,
+      "episode": 17,
+      "start": "2026-03-08 12:30:00",
+      "start_slot": 361
+    },
+    {
+      "environment_seed": 569531098,
+      "episode": 18,
+      "start": "2026-03-02 21:00:00",
+      "start_slot": 90
+    },
+    {
+      "environment_seed": 1337295874,
+      "episode": 19,
+      "start": "2026-03-13 08:00:00",
+      "start_slot": 592
+    },
+    {
+      "environment_seed": 612016888,
+      "episode": 20,
+      "start": "2026-03-07 14:30:00",
+      "start_slot": 317
+    },
+    {
+      "environment_seed": 232150720,
+      "episode": 21,
+      "start": "2026-03-08 08:00:00",
+      "start_slot": 352
+    },
+    {
+      "environment_seed": 2324106676,
+      "episode": 22,
+      "start": "2026-03-06 10:30:00",
+      "start_slot": 261
+    },
+    {
+      "environment_seed": 1658700540,
+      "episode": 23,
+      "start": "2026-03-03 16:00:00",
+      "start_slot": 128
+    },
+    {
+      "environment_seed": 609942288,
+      "episode": 24,
+      "start": "2026-03-14 14:30:00",
+      "start_slot": 653
+    },
+    {
+      "environment_seed": 3405943863,
+      "episode": 25,
+      "start": "2026-03-12 11:30:00",
+      "start_slot": 551
+    }
+  ],
+  "implementation_hashes": {
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/prepare_development.py": "e0879968757ac5ace740c5b40d3895bb52effd713c4da610ce6ed5a69ff51789",
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/training_harness.py": "20e1f859e9f70849b6776d7625a58a63ac90bddf6691a9c13e497a1706612364",
+    "src/dispatch/request.py": "7531225c72be30b881b50a675aad2e4a1e0af5e45a01b3dbdafb8f1c53bd0e0b",
+    "src/pricing/passenger_sensitive_v2.py": "b4cc77c065021ebfb8ae6352acb86e0fa09976558e44a60a11f4436875603c3b",
+    "src/pricing/passenger_sensitive_v2_conditioned.py": "912f696cb50c2f8be1220a9bb8e11ed164373b3e55988bb86bd6186a781b7813",
+    "src/rl/passenger_sensitive_dqn.py": "f4e76cd5baeccc65c1c5ce952753e99006f17864e1429d958b5230b6036ff241",
+    "src/simulation/passenger_sensitive_v1.py": "e8a3fb7b263ebdd819831cb2e29041c2d8cd12cdd66b12349477abcf4c6a2113"
+  },
+  "initialization": "FRESH_NO_V1_RESUME",
+  "launch_authorized": true,
+  "passenger_sensitivity_version": "WEATHER_TIME_CONDITIONED_V2",
+  "protocol_sha256": "154f2483f5bad3b3d67e47cbb8f0162845700b840e37f8fa759ca29d00d0fac0",
+  "required_sensitivity_methodology": "WEATHER_TIME_CONDITIONED_V2",
+  "sensitivity_identity": {
+    "conditional_support_manifest_hash": "9d4b5e3f585f90c04108bb36a04814b83e0673c169f68fd51640dcfa94018180",
+    "contract_sha256": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+    "empirical_support_sha256": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917",
+    "fallback_policy_version": "TIME_SPECIFIC_RAW_WEATHER_FALLBACK_1",
+    "grouping_contract_hash": "377f8859fd417cad8632a6c8d66fb864caae0f47ce7a1b43cb4054aece9abbde",
+    "mapping_hash": "bc934d3816ca14f4ac33462bf813bcc435fca1f95ba94df75a1e1287c3378643",
+    "passenger_sensitivity_version": "WEATHER_TIME_CONDITIONED_V2",
+    "sensitivity_version": "WEATHER_TIME_CONDITIONED_V2",
+    "weather_time_grouping_version": "WEATHER_TIME_CONDITIONED_V2_2026_11_14"
+  },
+  "slots_per_episode": 16,
+  "status": "READY_PREPARED_NOT_STARTED",
+  "stop_after": 25,
+  "training_launched": false,
+  "updates_per_warm_slot": 8
+}

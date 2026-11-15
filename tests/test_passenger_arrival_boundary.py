@@ -12,7 +12,8 @@ class BoundaryTests(unittest.TestCase):
     def make(self):
         x=ProductionExperiment.__new__(ProductionExperiment);x.timestamp=pd.Timestamp('2026-03-01 00:30');x.clock=x.timestamp;x.fleet_size=5000
         x.fleet=Fleet([VehicleState(i,0,VehicleStatus.IDLE,None,0,'idle',60.) for i in range(5000)],frozenset(range(142)),2)
-        x.energy=object();x.charging=SimpleNamespace(advance_mini_slot=lambda *args:None);x.passengers={};x.missions={}
+        x.routing=SimpleNamespace(minimum_station_energy=lambda grid,rate: 1.0)
+        x.energy=SimpleNamespace(consumption_rate_kwh_per_km=.2);x.charging=SimpleNamespace(advance_mini_slot=lambda *args:None);x.passengers={};x.missions={}
         t=pd.Timestamp('2026-03-01 01:00')
         for i,arrival in enumerate([t-pd.Timedelta(seconds=1),t,t+pd.Timedelta(minutes=2),t+pd.Timedelta(minutes=30)]):
             duration=(arrival-x.clock).total_seconds()/60;x.fleet.assign_busy(i,i+1,duration)
@@ -60,6 +61,12 @@ class BoundaryTests(unittest.TestCase):
         self.assertEqual(x.fleet.vehicle(0).current_grid,1)
         self.assertEqual(x.fleet.vehicle(4).current_grid,5)
 
+    def test_missing_routing_fails_without_fallback(self):
+        x,t=self.make();del x.routing
+        with self.assertRaisesRegex(AttributeError,'routing'):x.advance_until(t)
+    def test_insufficient_station_reserve_fails(self):
+        x,t=self.make();x.routing.minimum_station_energy=lambda grid,rate: 100.
+        with self.assertRaisesRegex(ValueError,'station reachability'):x.advance_until(t)
     def test_destination_inconsistency_still_fails(self):
         x,t=self.make();x.fleet.vehicle(0).destination=9
         with self.assertRaisesRegex(ValueError,'destination/event mismatch'):x.advance_until(t)
@@ -76,18 +83,18 @@ class ResumeArtifactTests(unittest.TestCase):
         from src.simulation.routing_experience_generation import RoutingExperienceExperiment
         data,_=self.paths();x=RoutingExperienceExperiment.__new__(RoutingExperienceExperiment)
         x.request_rng=np.random.default_rng(42);x.customer=SimpleNamespace(rng=np.random.default_rng(42));x._state_sources=lambda:None
-        x.restore(data/'generation_checkpoint.pkl')
-        self.assertEqual(x.timestamp,pd.Timestamp('2026-03-01 03:00'));self.assertEqual(x.slot_index,6)
-        self.assertEqual(len(x.fleet.vehicles),5000);self.assertEqual(len({v.vehicle_id for v in x.fleet.vehicles}),5000)
-        self.assertTrue(all(pd.Timestamp(c.dropoff_at)>x.timestamp for c in x.passengers.values()))
-        self.assertTrue(np.isfinite(x.operational.state_for(x.timestamp)[['mu','sigma','F_hat','H_hat']]).all().all())
+        with self.assertRaisesRegex(ValueError,'Superseded pre-reachability checkpoint'):
+            x.restore(data/'generation_checkpoint.pkl')
+        self.assertFalse(hasattr(x,'fleet')) # rejection before restoring mutable environment
     def test_append_once_original_preserved(self):
         import hashlib,json
         data,out=self.paths();diag=json.loads((out/'arrival_failure_diagnosis.json').read_text())
         self.assertEqual(hashlib.sha256((data/'slot_0000.parquet').read_bytes()).hexdigest(),diag['initial_hashes']['slot_0000.parquet'])
         ids=np.concatenate([pd.read_parquet(data/f'slot_{i:04d}.parquet',columns=['experience_id']).experience_id.to_numpy() for i in range(6)])
         np.testing.assert_array_equal(ids,np.arange(len(ids)))
-        self.assertFalse((data/'slot_0006.parquet').exists())
+        continued=pd.read_parquet(data/'slot_0006.parquet',columns=['experience_id'])
+        self.assertGreater(len(continued),0)
+        np.testing.assert_array_equal(continued.experience_id.to_numpy(),np.arange(len(ids),len(ids)+len(continued)))
     def test_repeated_boundary_observations(self):
         import json
         _,out=self.paths();d=json.loads((out/'resume_boundary_observations.json').read_text())

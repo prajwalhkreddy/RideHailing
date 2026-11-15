@@ -1,0 +1,46 @@
+{
+  "source_hashes_verified": true,
+  "source_hashes": {
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/notation_contract.json": "eadf2255df63799569a6abde6a2dd61256c6ff9b783b81b95bd6ebdc7b06edf6",
+    "results/analysis/2026-11-09_academic_review_followup_pricing/jan01_mar15_analysis_cache.parquet": "d263631a679392ddabebda571e009c1f56501323d4ab975860ec90b53938cb61",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/candidate_population_comparison.csv": "7319e84964e26c5c02251ff4c441faf55b5239a973610958ff0a470432fa946a",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/ratio_bias_validation.csv": "85753cf3d3260622d0ff2e1216de863417e960659c758e691e7d81eaaef5da64",
+    "results/analysis/2026-11-13_pricing_v2_freeze_design/V2_NUMERICAL_FREEZE.md": "ad45f9f0a2b6e1f9a84c56c412a73124eaa16c2443e6713a8418dcae9f8c737d",
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+    "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917",
+    "results/analysis/2026-11-14_pricing_v2_denominator_rule_selection/weather_hour_secondary_diagnostics.csv": "d84db0f052e4ce2f8f72e7b0a870350eb0cbc323dfa69f298c133245e8988d18"
+  },
+  "N": 5779213,
+  "mean": 1.807320699612934,
+  "median": 1.1543559036424424,
+  "SD": 1.9900893312236287,
+  "codes": [
+    1,
+    2,
+    3,
+    5,
+    7,
+    8,
+    9,
+    12,
+    14,
+    15,
+    16
+  ],
+  "excluded_codes": [
+    13,
+    17,
+    21
+  ],
+  "mean_range": [
+    1.5069778023610745,
+    2.7539893340085846
+  ],
+  "SD_range": [
+    1.487832552743338,
+    3.213014791117946
+  ],
+  "hourly_cells": 211,
+  "hourly_max_SD": 3.582855943937716,
+  "March17_31_untouched": true
+}

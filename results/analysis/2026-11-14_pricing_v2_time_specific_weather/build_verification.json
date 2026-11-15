@@ -1,0 +1,19 @@
+{
+  "N": 5779213,
+  "source_hashes_verified": true,
+  "selected_K_per_T": {
+    "T1": 2,
+    "T2": null,
+    "T3": null,
+    "T4": null
+  },
+  "March17_31_untouched": true,
+  "training_started": false,
+  "library_versions": {
+    "numpy": "1.26.4",
+    "pandas": "3.0.5",
+    "scipy": "1.14.1",
+    "sklearn": "1.9.0"
+  },
+  "analysis_code_sha256": "a8e1bd11b210491874a46ccd0f5af1497d10d6400bea12b1d99ddfe0ee37fd3b"
+}

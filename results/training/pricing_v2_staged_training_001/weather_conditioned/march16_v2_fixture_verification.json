@@ -1,0 +1,10 @@
+{
+  "N": 73754,
+  "conditioning_sha256": "c7bd62051e16bfe6b53e9293f4b5d8503eb103339646b0da71a1f3f6f0a7abbd",
+  "initial_fleet": 5000,
+  "protected_access": false,
+  "reconstruction_exact": true,
+  "slots": 48,
+  "status": "PASS",
+  "training_started": false
+}

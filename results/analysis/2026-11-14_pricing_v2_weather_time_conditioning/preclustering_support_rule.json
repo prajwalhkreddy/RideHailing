@@ -1,0 +1,161 @@
+{
+  "T_group_definitions": {
+    "T1": [
+      0,
+      4
+    ],
+    "T2": [
+      4,
+      6
+    ],
+    "T3": [
+      6,
+      16
+    ],
+    "T4": [
+      16,
+      24
+    ]
+  },
+  "primary_N": 100,
+  "secondary_N": 50,
+  "minimum_shared_T_groups": 3,
+  "minimum_overlap_reason": "Strict majority of four approved time groups; no fabricated values. Pairwise-incompatible codes removed by lower supported-group count, then lower N, then descending code.",
+  "normalization": "sqrt(sum squared mean/SD differences / compared_feature_count)",
+  "leave_one_out_overlap": 2,
+  "features": "unscaled",
+  "support": {
+    "1": {
+      "N": 1738947,
+      "dates": 56,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "2": {
+      "N": 410397,
+      "dates": 50,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "3": {
+      "N": 2799512,
+      "dates": 73,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "5": {
+      "N": 356888,
+      "dates": 17,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "7": {
+      "N": 43590,
+      "dates": 7,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "8": {
+      "N": 101000,
+      "dates": 9,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "9": {
+      "N": 83779,
+      "dates": 8,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "12": {
+      "N": 97917,
+      "dates": 10,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "13": {
+      "N": 14817,
+      "dates": 4,
+      "T_groups": [
+        "T1",
+        "T4"
+      ]
+    },
+    "14": {
+      "N": 50563,
+      "dates": 12,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "15": {
+      "N": 69368,
+      "dates": 11,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "16": {
+      "N": 8984,
+      "dates": 4,
+      "T_groups": [
+        "T1",
+        "T2",
+        "T3",
+        "T4"
+      ]
+    },
+    "17": {
+      "N": 495,
+      "dates": 1,
+      "T_groups": [
+        "T2"
+      ]
+    },
+    "21": {
+      "N": 2956,
+      "dates": 1,
+      "T_groups": [
+        "T3"
+      ]
+    }
+  }
+}

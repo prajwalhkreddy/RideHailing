@@ -1,0 +1,61 @@
+{
+  "verdict": "V2_TRAINING_BLOCKED_WEATHER_CONDITIONING_TEMPORAL_CLUSTER_INSTABILITY",
+  "training_started": false,
+  "weather_mapping_frozen": false,
+  "conditional_supports_created": false,
+  "runtime_modified": false,
+  "baseline_run": false,
+  "March17_31_untouched": true,
+  "best_diagnostic_K": 3,
+  "silhouette": 0.3166924751255789,
+  "leave_one_T_out": [
+    {
+      "check": "omit_T1",
+      "ARI": 0.2578710644677661,
+      "compared_pairs": 55,
+      "co_membership_changes": 18,
+      "change_percentage": 32.72727272727273
+    },
+    {
+      "check": "omit_T2",
+      "ARI": 0.3693421846710923,
+      "compared_pairs": 55,
+      "co_membership_changes": 19,
+      "change_percentage": 34.54545454545455
+    },
+    {
+      "check": "omit_T3",
+      "ARI": 0.4278283485045513,
+      "compared_pairs": 55,
+      "co_membership_changes": 16,
+      "change_percentage": 29.09090909090909
+    },
+    {
+      "check": "omit_T4",
+      "ARI": 0.7350309704060565,
+      "compared_pairs": 55,
+      "co_membership_changes": 7,
+      "change_percentage": 12.727272727272727
+    }
+  ],
+  "source_hashes_verified": true,
+  "reason": "Best-separated nontrivial cut changes materially under removal of individual T groups; larger cuts have lower separation and singleton groups. Do not silently promote a scalar-score winner to a stable authoritative mapping.",
+  "source_hashes_unchanged_after": true,
+  "existing_runtime_hashes_unchanged": true,
+  "pooled_fixture_unchanged": true,
+  "conditional_runtime_tests": "NOT_APPLICABLE_NOT_INTEGRATED",
+  "conditional_supports": "NOT_CREATED_MAPPING_NOT_FROZEN",
+  "conditional_baselines": "NOT_RUN_MAPPING_NOT_FROZEN",
+  "tests": {
+    "new_grouping_tests": 18,
+    "combined_grouping_preparation_gate_tests": 32,
+    "existing_related": 41,
+    "existing_focused_v2": 57,
+    "reconciled_broader": 123,
+    "expanded_applicable": 239,
+    "failures": 0,
+    "errors": 0,
+    "counts_overlap": true,
+    "conditional_runtime_validation": "NOT_RUN_NOT_INTEGRATED"
+  }
+}

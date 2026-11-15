@@ -1,0 +1,384 @@
+{
+  "contract_hash": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+  "dependencies": {
+    "config/config.yaml": "2250d4fe4c49bb48536aea44bbb978aae579ee2e8ddcfdd1315e9376aff8f85f",
+    "config/passenger_sensitivity_v2_validation.json": "1f3b2afa998c0906d74c4452e5f521ac96f827ce1ba5f3f2580cff8350c3a2d7",
+    "data/processed/driver_preferences_seed42.parquet": "e1c41d5bacf542a58605dbd84a94effb845b33125495d591aa5c2a1a0627ecb1",
+    "data/processed/grid_lookup.parquet": "4e4020fd1c9faf8a3899bc718758052cc24b83e3c05caccb8e20ab98ec24fc2b",
+    "data/processed/grid_metadata.json": "096a31950aa694c901e37ba479477bf27e01fdd0250caa5c6f194c28ae1e444e",
+    "data/processed/spatial_3km_jan_mar_2026/charging_stations.parquet": "c0f8a0758962b9fef19d6611246e84b40ee61399bc9f56dd73168371bff13f77",
+    "data/processed/spatial_3km_jan_mar_2026/neighbour_map.parquet": "7eeb6c57d95d3d2a6a733915410f5c02ad07ed6445464f02db8e4f60a509ce63",
+    "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a"
+  },
+  "end_exclusive": "2026-03-17",
+  "epsilon_sequence_sha256": "4203aa9d643d23778a5cd7bb3d7923633d4eac06c110d4df2f2ab535ef30c302",
+  "fixture_sha256": "c86b963c3e36de280e6155f884923bbb743dfc085ef90139eb43869319b9a442",
+  "fixture_version": "V2_FULL_DAY_MARCH16_001",
+  "git_head": "e33261d006cc3d93fc96a4d998f8e9ac94286a75",
+  "implementation_hash": "a6dc9273866a43154f874309ad11de51b75ba629e72d3e5c0349dd211c831882",
+  "initial_fleet_hash": "899cdacec843f37fd272cbca1e58a528b0c9358b39e0b9cdb41df487016aa19d",
+  "request_count": 73754,
+  "request_hash": "9d0f8c0710473a4a9e8fbd576dbf8c95bb2888332443b4120dfd7eab5a79ac77",
+  "request_rng_end": {
+    "bit_generator": "PCG64",
+    "has_uint32": 1,
+    "state": {
+      "inc": 200812860179783933700771669184374854149,
+      "state": 331676490699137037850733094340132052737
+    },
+    "uinteger": 542092280
+  },
+  "seed": 424242,
+  "sensitivity_rng_end": {
+    "bit_generator": "PCG64",
+    "has_uint32": 0,
+    "state": {
+      "inc": 90750984832771704908184579979025356679,
+      "state": 249948781652029737125512821544051552481
+    },
+    "uinteger": 8685313
+  },
+  "snapshots": [
+    {
+      "forecast": "5a1fb90b7c837237ad6403ff87f330fb04b63759a1e9b1adfcdd821dd0c36f5b",
+      "popularity": "2a27e45eb8957af6fb4c70d39cd3312be1be4c160e71e6b6b9fe4b1541f44bcb",
+      "timestamp": "2026-03-16 00:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "0a71ee77a0b2216aa340b7b1b907d18bcef9fda5c6dd9070cc66796e9b5bb562",
+      "popularity": "682914f1454875995c2f9565572f3bf8b80176fec4803b30553a73735e797c47",
+      "timestamp": "2026-03-16 00:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "e786e326a1e2454770c4d0fd8ccf76bfc3d5dfced7fba82d1ba45a5234dd92a3",
+      "popularity": "abacebe7f9c63fc75f26350e38b090c0a5e8bc2edc133686a310aef6d8fd7ffb",
+      "timestamp": "2026-03-16 01:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "c8312e5920c98d14524430462e97807c48df2e496d945a51115c4ff1f6694dcc",
+      "popularity": "954dd36632c96f0908de1d5c125bbcc9937d1348e4fd98ac407e8a45833a6b08",
+      "timestamp": "2026-03-16 01:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "d631fc48f6c7a9251b85786cd69bdda98aec03544f844d5d387b335c32ecec4d",
+      "popularity": "1a961a3626704df04a535d24a236f9a31000695d28ea6ebb1ad89c8005f36ced",
+      "timestamp": "2026-03-16 02:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "dd82a2f5059fc966e4d7f03bfcaec5013c3b6a0e425764e81f11ded581bf0c5f",
+      "popularity": "d4ead5a3c50b405df3698b60312c48ce98856fbe3bdd40af6d24e0880482f3a2",
+      "timestamp": "2026-03-16 02:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "197232db575f34cdd3aabc404d70697b4647b0f7f279056ac1dd1b173fc6d006",
+      "popularity": "5c9b0b311d319cb3031a5e1d36a8b921c8e61d02012e8d9a0899da4a1dc66a2e",
+      "timestamp": "2026-03-16 03:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "d7828ef1616030fdb369b461c752d871c97503ae81885ba8e7ce1568ee51b615",
+      "popularity": "60d1abd5411569c82cafdbf5a963275a9001cac6f7b8d843467a1a081c5dd707",
+      "timestamp": "2026-03-16 03:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "ddaf3ce4718ca9f50498a9297dc1381b015ec599dd591a7ccc6a423e5e7bc341",
+      "popularity": "d090b24fe2c98e5a290cb9efb8dc7824e9adced1d73b8b3444a47bcd24926258",
+      "timestamp": "2026-03-16 04:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "56f6489c699f18bd4c9ade3400efabe854c79459191d905a591c9dd86b403f9f",
+      "popularity": "28e2269df565218ed312c41f4735febdec38d3a15b4b2742abdc799165dadac8",
+      "timestamp": "2026-03-16 04:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "4675a8a4d357ac9e04989b429f3c88ee78f73f57db97159c8c02e3d524e04687",
+      "popularity": "cab891553d4ff92b4d248a87fee44241872beda46a59dba24047b6a259c7dbb3",
+      "timestamp": "2026-03-16 05:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "4056fc39873fd4ea84ad897507ad8f1d657e77e0cd3d99a032cdc5a13e3ecffc",
+      "popularity": "e06ddc3c3960f8fdeedfe8427d990329c801076298f587dcf49a658fdc9c5813",
+      "timestamp": "2026-03-16 05:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "364aa42784f819fe5f7101342cccdb90925661603cdf0d7ee4de00170e4d4bca",
+      "popularity": "2fceee6a090c801fbac229f176930c45fe24884bc24150af109b38d34014905c",
+      "timestamp": "2026-03-16 06:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "3a7e2eb72ba32507ff34ee0f4bc201c3ae3f652f53ae08ee84847eb9b26e5a61",
+      "popularity": "02745656edd2dfa0b1ed6540c62ed48871e8912494ada46d97f4053e288252cb",
+      "timestamp": "2026-03-16 06:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "2f5a1d351202718ab92cae4ee4d8125491421192b379019a1096c62377225582",
+      "popularity": "823e24b47cbbfe669b336401bf431866475f3edba2d5c8ef6bb800ded6c41dee",
+      "timestamp": "2026-03-16 07:00:00",
+      "weather": "b9ffcda4ed184294746b82b0b4a4e847ef48ca49af36129ed22749dd3c136178"
+    },
+    {
+      "forecast": "f64728026ef20e0c1bd5b0e726550bced38f16122f079df17bddc0c4f823f0d5",
+      "popularity": "3287c539379fca285b23eb197074c2e5bff1cace176ea54376b6e33c9253a2c6",
+      "timestamp": "2026-03-16 07:30:00",
+      "weather": "b9ffcda4ed184294746b82b0b4a4e847ef48ca49af36129ed22749dd3c136178"
+    },
+    {
+      "forecast": "01097bc244a2c689ed371406767a02eeda9af4a7fc24b791c1c8fa266230618b",
+      "popularity": "d4690dcac470e321defd8bffe117cd33c4d62831ac61ade9b84b816ebd41b13f",
+      "timestamp": "2026-03-16 08:00:00",
+      "weather": "8b9db953e3823e0d12582c6e9048866474c22f2d4a46d5395ecf5c058f48e136"
+    },
+    {
+      "forecast": "af4135361922fd21387232ee008f6e1cd731588294e4aa911109525a9b1a71f6",
+      "popularity": "8a3b08a03749287ca5d3e0429aafb5daef97d2f086eac55024f46e634d52239c",
+      "timestamp": "2026-03-16 08:30:00",
+      "weather": "8b9db953e3823e0d12582c6e9048866474c22f2d4a46d5395ecf5c058f48e136"
+    },
+    {
+      "forecast": "ecdc1e0814764e5f5e9fc1ca6bc55bec0ff1fa66957b182ca376d72333a55529",
+      "popularity": "6ce7d41d112095e1c301e8168976b0d1f576411defb0b7608bfccc8dbf347cfb",
+      "timestamp": "2026-03-16 09:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "debc345ad00626234fdf0954906246a9d067b092e8ea49a87c65dad6028f51ef",
+      "popularity": "eecf8909112d469f11594ac7aaa01f5bc284c33b7bebf161469e63def93e02ac",
+      "timestamp": "2026-03-16 09:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "bfa9f7ff3ceea938ce816b83e9b833fa767b9f446b38764db012d610057c925c",
+      "popularity": "499c1b655822d8c65b5ba80d24483875b9595a21ef130b243f181a3c0a54dbcd",
+      "timestamp": "2026-03-16 10:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "87e9f28d801df3c4395448324d70db57edc2aa006ad99e647bfe349a73f2a27d",
+      "popularity": "c15e245e2d8b0907b4d8dd0a9a88bbd0ecdbfd2c0a7c204ccfb78d607ab7e524",
+      "timestamp": "2026-03-16 10:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "cce7b798f1b693f46cd65e82254fcfa700a7f8a6a1f590393caa5214efcb3073",
+      "popularity": "d3c62417e89490c7ac3b3718d859a54504dc6312bece4ff71bca9693926089a8",
+      "timestamp": "2026-03-16 11:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "66735f4f013fc3cb3b0343755354367ae3d9717b60f3716ab0f10546c77d3585",
+      "popularity": "54fa96bc38eb6fadeac8fdd182957ea07508216fd7093762970456e9fddc40b7",
+      "timestamp": "2026-03-16 11:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "63ac81f58e091d96c852a565a26a34453f57fe0fb82814663f026891a09300e1",
+      "popularity": "4a69eb5569914c25f0b68e6ce3636167e997e89a4cbf8fc2548f9fad6c1cfba1",
+      "timestamp": "2026-03-16 12:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "c2076a8f8a49e9032391665a6093b53bf2a63fbd096e39cb58bea0460e7ac12f",
+      "popularity": "8b1a4c89bb51f4c2cd7d882956790dd4c50558c943e51626f6d26cd3533f6db5",
+      "timestamp": "2026-03-16 12:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "52a792b6469999c6814706fdf5d84d3f43ed5f34b089ff89c5ceecd4ee1fa797",
+      "popularity": "fa71b6d0308c0a11715ce47ea229a29ec126ac37a0456354cd53e167b1f474f5",
+      "timestamp": "2026-03-16 13:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "0131886abab48b31ec93c4cc1f2e8cd31f50602804a506d651f2042cb2d99748",
+      "popularity": "dee1055b25ccc5cd96a9b73178c322710d993e51f7b3d636f1f9a6b72b577896",
+      "timestamp": "2026-03-16 13:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "8f69ba2823df2be64aabdef712c0c77ee3ca41fa3755524f47f78907b009480d",
+      "popularity": "f380776a7ae7866c5ccb0650fd64a8b9b1ef022c87f9c0544863afdb3e0c9938",
+      "timestamp": "2026-03-16 14:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "3545301c80541f0cf129c4005ea6d15bc1f7abbbed53eb77d8d06510a90ad749",
+      "popularity": "82de3f6561d37e9af7d7921c31ebca79e1d5048c3e0c8f6f3437f6f2d899c69a",
+      "timestamp": "2026-03-16 14:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "68739685827b99af439b385298f5bf3fdfff1b29f4213fd32d0f28fb179e141b",
+      "popularity": "8cecaeeb11dd2820bdf30e3a4d78b33feff8c186e013ff71b5d5745229d105ae",
+      "timestamp": "2026-03-16 15:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "3eca0e7cf4190a7153ac271714450775b1a9060a63b4f284e259540b48f05490",
+      "popularity": "7d8a705c6a70c17b792d8cbf783be02f2c59280af122dbdb0dac4f6d2d9a39bd",
+      "timestamp": "2026-03-16 15:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "04f346450fdf5092eb68bbb446f37824a6d13d43e20e3cf32665afff9f014916",
+      "popularity": "52f869063882e28ec8d2ae20bae6055efa065e03f4f6036f948eaebf9e976f93",
+      "timestamp": "2026-03-16 16:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "07b66a94d0a55ab4bddbebe10a1e17b961d72a53788890f29e0622b09ef0dab2",
+      "popularity": "5da90ac1d12e49000afbb0442c38ef2fefc592cf53fe0076fdbc52aa27b7f2ac",
+      "timestamp": "2026-03-16 16:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "5808dc71853566ebacdc65b10815de48a6365da157ad70749f6f796ea3386455",
+      "popularity": "6165ecc7bfa992e283ca183176e74e8d5d96ce71bfd827c9272b5a36d0dbb772",
+      "timestamp": "2026-03-16 17:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "436f5fab688fd59d23e192231a95dc84f247ed0e343d9c49d88b1d4e3918553d",
+      "popularity": "08e1403afe685e7ffa692b572a90cfb101ed6672ca0150d652b572978b027e3a",
+      "timestamp": "2026-03-16 17:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "1ecfc3ea166a2cc53ea6a1aae23fd9b14546b5959cf7edf4e57fb814be9a1ea0",
+      "popularity": "9ab5be44ac7a1e933c111c8006ea95d1cd2dec01ca60cb8fbd9e91d841239aec",
+      "timestamp": "2026-03-16 18:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "b4cd6571d3533edf685f0b3a0ac55e7d7fe541104001de8ff5c9298037847727",
+      "popularity": "d316bfbdacdd9fb886805a6abe7c021f57c83032e1352e9218985acb61da8123",
+      "timestamp": "2026-03-16 18:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "3708617a13120cc0f47ad4186183b0eaeaa5384cdb157f683b4d5c86474bf31f",
+      "popularity": "984c4279f18f471d8f8965e1787050be5d0da9a36cf3f6f0c74e2f100da62337",
+      "timestamp": "2026-03-16 19:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "d248c2e9730f55a1796ce7c9f66e9157e6cf8c720d7b26f2695f661a6c1291f4",
+      "popularity": "c855a40a742ed546a5a9249ef9df7b7c848e95f7f8a8e3e1f25a777e38314d07",
+      "timestamp": "2026-03-16 19:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "af9538fb22655eb1485af09e821f34b828a5f26780632adab1b4511cd1faed55",
+      "popularity": "547dd4b7d96c6e600ad7174e49661e1b1852e7816df50f53900848783dd8114d",
+      "timestamp": "2026-03-16 20:00:00",
+      "weather": "8b9db953e3823e0d12582c6e9048866474c22f2d4a46d5395ecf5c058f48e136"
+    },
+    {
+      "forecast": "1cca9cdbc29c65b8ca30d3437ee5a5d4f8f77488fec28150489d21d2c22c7c5b",
+      "popularity": "81137886d4b2b447aa113669fdc1a6df217eef8b4dc9ad04c323dd6b99c96791",
+      "timestamp": "2026-03-16 20:30:00",
+      "weather": "8b9db953e3823e0d12582c6e9048866474c22f2d4a46d5395ecf5c058f48e136"
+    },
+    {
+      "forecast": "2b67e186d83668a5eb321648679617ad27815bb903d773b6dc4e3c3530e20fc6",
+      "popularity": "4f07f3a07065f5021ee75ca48879e1b76f7469a5413dde81fc21f6fadae65b38",
+      "timestamp": "2026-03-16 21:00:00",
+      "weather": "b9ffcda4ed184294746b82b0b4a4e847ef48ca49af36129ed22749dd3c136178"
+    },
+    {
+      "forecast": "e6864eddbc2dd9f2e20e686bc06f7f01571d59095ca92c35f21b9b39f5c5526d",
+      "popularity": "d2f017fbf1ce3e5010a736b556c03cb62870c696bdeb0c6002d8a32e8b2d7d27",
+      "timestamp": "2026-03-16 21:30:00",
+      "weather": "b9ffcda4ed184294746b82b0b4a4e847ef48ca49af36129ed22749dd3c136178"
+    },
+    {
+      "forecast": "683d6fbb4cac53c73aa43bbb97d8f5618ddfb19bde732881c46941d2e7087837",
+      "popularity": "e14ac0de34d6bbc962155fba7dbf44e476c3baa8be892ca0473fd812e87ba78e",
+      "timestamp": "2026-03-16 22:00:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "25fdef812552775ae6532304c65d613870827fd570abdf36db0294f9089bcbb7",
+      "popularity": "20ffdd450a4e137bcc96a02340b4352c89fdd424c23fb1ec3755f0928f0f54cb",
+      "timestamp": "2026-03-16 22:30:00",
+      "weather": "1a92e70bf71805613c6107a9a7404e6f2bbd4b4e80d20164f2e5d80a2cdeba4b"
+    },
+    {
+      "forecast": "ad302786b843b274b27245b07cb1e0240a6b1be8047283f2595c7d720ab1cb0a",
+      "popularity": "67611e1a789738df94f250d6288e99ee03581d15f8b5431e476183044ea8033f",
+      "timestamp": "2026-03-16 23:00:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    },
+    {
+      "forecast": "b9d48a722553eaa9789f73cae149d9c30a9d1007e1d73b820668cc86bc0fa52e",
+      "popularity": "6345fb99f5ef68df2b343b30964ab67c6133f8b9573f9d34d622565feaf83f80",
+      "timestamp": "2026-03-16 23:30:00",
+      "weather": "4d4ea5259a77fdfb151e5d3879784a12e4e9c59290c50003d24c8fbfe223c986"
+    }
+  ],
+  "source_note": "Canonical generator samples intact January empirical trips; March16 simulated arrival times. No claim of observed March16 taxi-trip replay.",
+  "start_inclusive": "2026-03-16",
+  "support_hash": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917",
+  "unsupported_forecast_counts": [
+    13,
+    11,
+    14,
+    11,
+    12,
+    12,
+    9,
+    6,
+    13,
+    10,
+    13,
+    11,
+    9,
+    8,
+    10,
+    9,
+    4,
+    4,
+    5,
+    3,
+    4,
+    3,
+    6,
+    4,
+    7,
+    3,
+    6,
+    3,
+    8,
+    4,
+    8,
+    5,
+    8,
+    4,
+    8,
+    6,
+    16,
+    13,
+    20,
+    17,
+    11,
+    8,
+    10,
+    5,
+    13,
+    10,
+    4,
+    3
+  ]
+}

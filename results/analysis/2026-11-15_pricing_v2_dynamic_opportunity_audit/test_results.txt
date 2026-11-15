@@ -1,0 +1,14 @@
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.010s
+
+OK
+
+Reporting tests:
+....
+----------------------------------------------------------------------
+Ran 4 tests in 0.000s
+
+OK
+
+Final artifact consistency: PASS (15,800 unique screen rows; 24 pairs; 240 unique horizon records; required files present; finite metrics; final location/SOC differences verified).

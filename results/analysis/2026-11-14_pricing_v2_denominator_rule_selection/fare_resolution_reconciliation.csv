@@ -1,0 +1,11 @@
+concept,USD,adjacent_unique_level_count,difference_from_stored_cent_USD,difference_from_observed_minimum_gap_USD,difference_from_guidance_050_USD,difference_from_guidance_070_USD,difference_from_guidance_100_USD,interpretation
+stored_decimal_grid,0.01,,0.0,0.0,0.49,0.69,0.99,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings
+observed_unique_adjacent_gap,0.01,11262.0,0.0,0.0,0.49,0.69,0.99,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings
+observed_unique_adjacent_gap,0.02,574.0,0.01,0.01,0.48,0.6799999999999999,0.98,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings
+observed_unique_adjacent_gap,0.03,243.0,0.019999999999999997,0.019999999999999997,0.47,0.6699999999999999,0.97,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings
+observed_unique_adjacent_gap,0.04,139.0,0.03,0.03,0.46,0.6599999999999999,0.96,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings
+observed_unique_adjacent_gap,0.05,100.0,0.04,0.04,0.45,0.6499999999999999,0.95,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings
+guidance_meter_increment_low,0.5,,0.49,0.49,0.0,0.19999999999999996,0.5,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings
+guidance_meter_increment_high,0.7,,0.69,0.69,0.19999999999999996,0.0,0.30000000000000004,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings
+guidance_effective_floor_high,1.0,,0.99,0.99,0.5,0.30000000000000004,0.0,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings
+relative_5pct_equivalent,1.1177099221195228,,1.1077099221195228,1.1077099221195228,0.6177099221195228,0.41770992211952285,0.1177099221195228,decimal precision is not economic resolution; guidance amounts not independently established by stored spacings

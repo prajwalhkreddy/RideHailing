@@ -1,0 +1,6 @@
+{
+  "reason": "Invalid distance",
+  "status": "FAILED",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/prepare_development.py\", line 120, in main\n    p=provider();f,m=create_fixture(p);rows=[];repro=[]\n                     ^^^^^^^^^^^^^^^^^\n  File \"/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/prepare_development.py\", line 77, in create_fixture\n    n=validate_requests(slots);p.rng=np.random.default_rng(SEED);epsilon=p.sample_many(n)\n      ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/prepare_development.py\", line 57, in validate_requests\n    if not np.isfinite(r.trip_distance_km) or r.trip_distance_km<=0:raise ValueError('Invalid distance')\n                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nValueError: Invalid distance\n",
+  "training": false
+}

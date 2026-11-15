@@ -1,0 +1,23 @@
+{
+  "completed_episode": 25,
+  "current_episode": 25,
+  "current_slot": 16,
+  "episode": 25,
+  "exploration_epsilon": 0.9392,
+  "failure": null,
+  "last_safe_checkpoint": "/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/weather_conditioned/checkpoints/episode_025",
+  "last_update": "2026-11-15T00:58:18.122160+00:00",
+  "latest_checkpoint": "/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/weather_conditioned/checkpoints/episode_025",
+  "minutes_per_slot": 30,
+  "optimizer_updates": 3200,
+  "pid": 11952,
+  "replay_size": 100000,
+  "resume_checkpoint": "/Users/prajwalhk/Keerthi/Implementation/results/training/pricing_v2_staged_training_001/weather_conditioned/checkpoints/episode_001",
+  "resumed": true,
+  "simulated_hours_per_episode": 8,
+  "slot": 16,
+  "slots_per_episode": 16,
+  "status": "COMPLETED",
+  "target_episode": 25,
+  "training_started": true
+}
