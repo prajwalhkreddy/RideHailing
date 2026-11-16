@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "episode1_manifest_fields": "PASS",
+  "all_manifest_component_and_artifact_hashes": "PASS",
+  "full_runtime_reload": "PASS",
+  "stage_checkpoint_roundtrip": "PASS",
+  "focused_protocol_tests": 4,
+  "simulation_slots_executed": 0,
+  "optimizer_updates_executed": 0,
+  "March17_31": "UNTOUCHED"
+}

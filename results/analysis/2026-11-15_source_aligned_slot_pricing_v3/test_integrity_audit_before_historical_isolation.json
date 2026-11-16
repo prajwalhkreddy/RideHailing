@@ -1,0 +1,10 @@
+{
+  "original_tests_changed": false,
+  "new_tests": 5,
+  "skips": 0,
+  "xfails": 0,
+  "assertions_removed": 0,
+  "routing_mocked": false,
+  "original_subset_remains_red": true,
+  "legacy_tests_not_migrated_to_V3": true
+}

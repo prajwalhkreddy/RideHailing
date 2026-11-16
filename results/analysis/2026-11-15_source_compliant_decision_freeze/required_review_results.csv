@@ -1,0 +1,27 @@
+domain,result,requirement,basis,note
+WEATHER,weather/time scenario,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+WEATHER,N,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+WEATHER,mean epsilon,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+WEATHER,SD epsilon,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+WEATHER,similarity/grouping,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+WEATHER,final group,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+WEATHER,fitted candidate distributions,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+WEATHER,selected distribution,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+WEATHER,fallback rule,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,P_base,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,L_base,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,validated NYC bounds,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,alpha range,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,final action factors,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,proactive destination pricing,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,P_offer,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,P_max,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,passenger acceptance/rejection,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,dispatch outcome,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,slot reward,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,DQN transition,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,revenue,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,acceptance rate,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,dispatch success,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,action selection,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred
+PRICING,training metrics,REQUIRED_AFTER_IMPLEMENTATION,current task section13 and corresponding weather/pricing source requirements,numeric/tabular result; no mandatory chart type inferred

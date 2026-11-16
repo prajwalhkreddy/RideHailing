@@ -1,0 +1,165 @@
+Professor Meeting Clarifications
+DQN-Based Dynamic Pricing: Detailed Explanation and Implementation Roadmap
+Purpose: This document explains the professor’s clarifications from the uploaded meeting transcript and translates them into an understandable implementation flow. Examples and implementation suggestions are identified separately from decisions stated in the meeting.
+1. Pricing formula and the role of Pmax
+The discussion distinguishes the price offered by the platform from the maximum price a passenger is willing to accept. The DQN selects a pricing factor, α, and the platform calculates the offered price using that factor.
+P_offer = α × P_base
+For example, if P_base = $22 and the DQN selects α = 1.10:
+P_offer = 1.10 × 22 = $24.20
+The passenger-specific acceptance ceiling is represented by the right-hand side of the acceptance condition:
+P_max,j^c = P_base + (P_base / ε_j,t) × ((L − L_base) / L_base)
+The acceptance condition is an inequality:
+P_offer ≤ P_max,j^c
+The offered price must be less than or equal to the passenger’s maximum acceptable price. It does not have to equal that ceiling. The professor clarified that α × P_base can be used as P_offer because they represent the same offered-price quantity.
+2. Calculating alpha limits from NYC fare bounds
+The professor instructed that the minimum and maximum α values should be derived from the validated NYC fare limits divided by P_base:
+α_min = P_min^NYC / P_base
+α_max = P_max^NYC / P_base
+Illustrative example only: if the validated minimum fare were $10, the maximum fare were $50, and P_base were $22, then α_min = 10/22 = 0.455 and α_max = 50/22 = 2.273. These are not finalized NYC limits. Actual values must come from the cleaned and validated dataset and the agreed P_base.
+Implementation implication: define the DQN action space using the resulting feasible α range. Do not treat an arbitrary set of pricing multipliers as final until the NYC limits and P_base are confirmed.
+3. What information should the DQN receive?
+The professor clarified that individual passenger request details are not direct inputs to the DQN. The pricing strategy is proactive: the DQN calculates destination-based pricing factors before the time slot begins, independently of whether a particular passenger has already made a request.
+3.1 Proactive pricing sequence
+Before a 30-minute slot begins, prepare the system-level state using forecasts and operational information.
+The DQN determines pricing factors for the possible destination grids.
+Those destination-based pricing factors are available before individual passenger requests arrive.
+When a request arrives, the platform applies the corresponding α and calculates P_offer = α × P_base.
+Passenger acceptance or rejection is observed after the offer and contributes to the reward.
+3.2 DQN state features discussed in the meeting
+State feature
+Meaning
+Predicted demand
+Demand forecast produced by the CNN for the upcoming slot.
+Vehicle supply
+Available vehicle supply in the relevant grids.
+Vehicles arriving
+Number of vehicles expected to arrive into the slot.
+Mean successful dispatches (JVT1)
+Successful dispatch information referred to in the meeting transcript.
+Routing probabilities
+Probabilities associated with vehicle movement or routing to destinations.
+Drop-off probabilities
+Probabilities of trips ending in different destination grids.
+Destination popularity
+Popularity of destination grids.
+The professor also mentioned weather condition and time slot as possible additional state features. These are optional additions to evaluate, not mandatory finalized inputs. The central distinction is that passenger-specific information is not supplied to the DQN as a request-level input; passenger behaviour enters the learning process through the reward.
+4. Passenger acceptance/rejection and DQN reward
+After the DQN has selected a pricing factor and the platform has made an offer, the passenger either accepts or rejects it. The professor clarified the reward treatment as follows:
+Passenger response
+Dispatch outcome
+Reward described in meeting
+Accepts
+Ride is allotted/dispatched
+Revenue corresponding to the accepted request
+Rejects
+No ride is allotted
+Zero reward; no additional rejection penalty
+r_t = P_offer   (accepted request; as described in the meeting)
+r_t = 0         (rejected request)
+The meeting also refers to a binary decision variable indicating whether a passenger was allotted a ride: 1 for an allotted ride and 0 otherwise.
+4.1 Replay-buffer interpretation
+A DQN experience is commonly represented as (s_t, a_t, r_t, s_(t+1)): state, selected action, observed reward and next state. Under the professor’s clarification, a rejection is an observed outcome with zero reward and should not simply be discarded. An accepted request contributes the revenue reward.
+Important implementation point: because the pricing factor is selected proactively and may apply to multiple requests during a slot, the implementation must define how request-level rewards are aggregated into the DQN’s slot-level reward and transition. The transcript does not specify that aggregation rule.
+5. Passenger sensitivity distribution
+The professor did not approve one particular distribution. The instruction was to fit candidate probability distributions, identify which one fits the observed passenger-sensitivity data best, and then sample from the selected fitted distribution to simulate customer sensitivity.
+Candidate distributions mentioned in the meeting:
+Truncated normal distribution
+Gamma distribution
+Lognormal distribution
+Other suitable distributions supported by the data
+Lognormal was mentioned as one candidate, not as the final selected distribution.
+5.1 Weather-wise and time-slot-wise distributions
+The professor specifically said that sensitivity distributions are needed according to weather condition and time slot. For example, clear-weather morning sensitivity may have a different distribution from rainy-weather evening sensitivity.
+Weather group
+Time group
+Distribution to estimate
+Clear
+Morning
+f_ε(clear, morning)
+Clear
+Evening
+f_ε(clear, evening)
+Rainy
+Morning
+f_ε(rainy, morning)
+Rainy
+Evening
+f_ε(rainy, evening)
+Cloudy
+Morning
+f_ε(cloudy, morning)
+Cloudy
+Evening
+f_ε(cloudy, evening)
+These groups are illustrative; actual weather categories and time-slot definitions should match the dataset. If a group has too few observations, a fallback or pooling rule will be needed. The professor did not specify that rule in the transcript.
+5.2 Recommended fitting workflow
+Calculate passenger-level sensitivity observations from validated historical data.
+Apply the agreed data-cleaning and validity rules.
+Group observations by weather condition and time slot.
+Fit candidate distributions, such as truncated normal, gamma and lognormal, to each sufficiently populated group.
+Compare goodness of fit and whether each candidate represents the tails adequately.
+Select and document the most defensible distribution for each group.
+Sample sensitivity values from the selected distribution when generating simulated passenger requests.
+6. Drop-off probability updates
+The professor suggested initializing drop-off probabilities from historical trip data and then updating the probability vector using a moving-average model as new observations become available.
+For illustration, an exponentially weighted moving average could be written as:
+p_t = λ × p̂_t + (1 − λ) × p_(t−1)
+Here, p̂_t is the newly observed drop-off proportion, p_(t−1) is the previous estimate, and λ is a smoothing parameter between 0 and 1. This is an example implementation of the moving-average idea; the professor did not prescribe this exact equation or a value for λ.
+7. Integrated implementation flow
+Historical NYC trip data: prepare demand, supply, fare, distance, destination, weather and time information.
+CNN demand prediction: predict demand for the upcoming 30-minute slot.
+Operational state preparation: prepare supply, arriving vehicles, successful dispatch information, routing probabilities, drop-off probabilities and destination popularity.
+DQN pricing module: use the system-level state to select destination-based pricing factors α.
+Proactive pricing: make the selected pricing factors available before passenger requests arrive.
+Passenger request and offer: when a request arrives, calculate P_offer = α × P_base for its origin-destination pair.
+Sensitivity and acceptance: sample passenger sensitivity from the appropriate weather/time distribution and check the acceptance condition.
+Reward calculation: accepted request gives revenue reward; rejected request gives zero reward, with no additional rejection penalty.
+DQN learning: store the observed experience and update the policy after defining slot-level reward aggregation.
+8. Decisions clarified by the professor
+Topic
+Clarification from the meeting
+Offer price
+P_offer = α × P_base.
+Passenger acceptance
+Offer must satisfy the passenger-specific acceptance inequality.
+Alpha limits
+Derive from NYC minimum/maximum fare bounds divided by P_base.
+Passenger-specific DQN inputs
+Not required in the proactive pricing design discussed.
+DQN state
+Demand, supply, arriving vehicles, successful dispatches, routing probabilities, drop-off probabilities and destination popularity.
+Additional DQN features
+Weather and time slot may be considered.
+Pricing timing
+Pricing factors are selected before the slot begins.
+Accepted request reward
+Revenue corresponding to the accepted request.
+Rejected request reward
+Zero reward; no additional rejection penalty.
+Sensitivity modelling
+Fit candidate distributions and sample from the best-fitting distribution.
+Sensitivity grouping
+Weather-wise and time-slot-wise distributions.
+Drop-off probabilities
+Initialize from historical data and update using a moving average.
+9. Recommended next steps before and during coding
+Finalize the validated NYC minimum and maximum fare bounds.
+Confirm P_base and L_base so the offer and acceptance calculations use consistent reference values.
+Calculate α_min and α_max from the finalized fare bounds.
+Fit and compare sensitivity distributions for each weather/time-slot group.
+Prepare the DQN state using the system-level features discussed with the professor.
+Implement proactive destination-based pricing factors for each slot.
+Implement the passenger offer and acceptance check.
+Implement the reward: accepted request gives revenue; rejected request gives zero reward.
+Specify how request-level rewards are aggregated into a slot-level DQN transition.
+Evaluate revenue, passenger acceptance, dispatch success and other system-level metrics.
+10. Important implementation points that remain to be specified
+The final numerical NYC fare bounds and the final P_base and L_base values.
+The final fitted sensitivity distribution for each weather/time-slot group.
+The minimum sample-size rule and fallback method for sparse weather/time groups.
+The exact DQN state-vector structure and whether weather/time are included.
+The precise aggregation of multiple accepted and rejected requests into one slot-level reward and transition.
+The exact moving-average update rule and smoothing parameter for drop-off probabilities.
+Main takeaway
+The DQN proactively selects destination-based pricing factors before a slot begins. When a passenger request arrives, the platform calculates the offer using α × P_base. Passenger sensitivity is used to evaluate acceptance, and the passenger’s response affects learning through the reward: revenue for an accepted request and zero for a rejected request. Sensitivity distributions should be fitted and sampled separately by weather condition and time slot.
+Source note: This document is based on the uploaded three-page meeting transcript and the preceding explanation. Examples and clearly identified implementation suggestions are illustrative; they are not presented as decisions made by the professor.

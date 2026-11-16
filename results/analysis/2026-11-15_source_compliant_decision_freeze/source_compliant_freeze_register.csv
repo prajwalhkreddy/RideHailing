@@ -1,0 +1,23 @@
+decision,value,status,source_basis,project_decision_basis,ready_to_implement
+P_base,22.354198442390455,DATA_DERIVED,reference required; number not source-specified,existing frozen V2 USD reference retained,YES
+L_base,4.616983790655043,DATA_DERIVED,reference required; number not source-specified,existing frozen V2 km reference retained,YES
+NYC fare lower bound,UNRESOLVED,PROJECT_DECISION_REQUIRED,fare-derived endpoints; discretization unspecified,persisted empirical bound candidates;7/9/11 options only,NO
+NYC fare upper bound,UNRESOLVED,PROJECT_DECISION_REQUIRED,fare-derived endpoints; discretization unspecified,persisted empirical bound candidates;7/9/11 options only,NO
+alpha_min,UNRESOLVED,PROJECT_DECISION_REQUIRED,fare-derived endpoints; discretization unspecified,persisted empirical bound candidates;7/9/11 options only,NO
+alpha_max,UNRESOLVED,PROJECT_DECISION_REQUIRED,fare-derived endpoints; discretization unspecified,persisted empirical bound candidates;7/9/11 options only,NO
+action count,UNRESOLVED,PROJECT_DECISION_REQUIRED,fare-derived endpoints; discretization unspecified,persisted empirical bound candidates;7/9/11 options only,NO
+action factors,UNRESOLVED,PROJECT_DECISION_REQUIRED,fare-derived endpoints; discretization unspecified,persisted empirical bound candidates;7/9/11 options only,NO
+pricing decision unit,DESTINATION_GRID_PER_30_MINUTE_SLOT;142 actions shared across origins,SOURCE_SPECIFIED,destination factors before requests,explicit current user instruction freezes unit; no request-origin-conditioned action; global origin information need not be discarded,YES
+state vector,UNRESOLVED; no inherited13D or proposed2146/2288 freeze,PROJECT_DECISION_REQUIRED,seven system feature categories,destination query plus causal system information; supply/dropoff definitions and routing map unresolved,NO
+pricing timing,before30-minute slot and all requests,SOURCE_SPECIFIED,pricing paragraphs21–27,current task explicitly freezes,YES
+acceptance sequence,action→arrival→offer→epsilon→raw P_max→accept/reject→dispatch if accepted,SOURCE_SPECIFIED,"pricing paragraphs10–12,21–27,47–62",no passenger pre-action mask or floor; operational validity separate,YES
+outcome taxonomy,rejected0/no dispatch; assigned offered revenue; accepted-unmatched unresolved,PROJECT_DECISION_REQUIRED,rejected/assigned source-specified; unmatched not specified,historical unmatched0 exists but no approval for new architecture found,NO
+reward aggregation,UNRESOLVED,PROJECT_DECISION_REQUIRED,slot aggregation required; details unspecified,"whole-slot sum strongest objective provenance; additive Q, empty slots, gamma and horizon not frozen",NO
+transition unit,UNRESOLVED,PROJECT_DECISION_REQUIRED,slot aggregation required; details unspecified,"whole-slot sum strongest objective provenance; additive Q, empty slots, gamma and horizon not frozen",NO
+discount timing,UNRESOLVED,PROJECT_DECISION_REQUIRED,slot aggregation required; details unspecified,"whole-slot sum strongest objective provenance; additive Q, empty slots, gamma and horizon not frozen",NO
+terminal handling,UNRESOLVED,PROJECT_DECISION_REQUIRED,slot aggregation required; details unspecified,"whole-slot sum strongest objective provenance; additive Q, empty slots, gamma and horizon not frozen",NO
+weather grouping,T1K2 reusable;T2–4 dense pooling unresolved,PROJECT_DECISION_REQUIRED,behavioural similarity; sparse fallback,saved statistical evidence; unstable does not mean sparse,NO
+time grouping,"T1[00,04),T2[04,06),T3[06,16),T4[16,24)",DATA_DERIVED,time scenarios allowed; exact boundaries not prescribed,existing project time groups retained for audit; no new source attribution,YES
+distribution per group,NOT_SELECTED,PROJECT_DECISION_REQUIRED,conditional candidate fitting required,global comparison incomplete for conditional/truncated normal selection,NO
+sparse fallback,"existing group→raw weather across T→T→global hierarchy is evidence, not newly frozen",PROJECT_DECISION_REQUIRED,sparse pooling supported; threshold unspecified,N5000 and ungroupable bypass are project choices needing reconciliation,NO
+training/development/protected periods,calibration Jan1–Mar15; historical RL trainMar1–12/validationMar13–15;Mar16development;Mar17–31protected,DATA_DERIVED,exact dates not specified in sources,existing project chronology retained; no protected access,YES

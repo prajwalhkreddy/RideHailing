@@ -1,0 +1,72 @@
+{
+  "classification": "PROJECT_CONTINUATION_DECISION",
+  "episodes": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "windows": [
+    {
+      "episode": 2,
+      "start": "2026-03-01 08:00:00",
+      "last_slot": "2026-03-01 15:30:00"
+    },
+    {
+      "episode": 3,
+      "start": "2026-03-01 16:00:00",
+      "last_slot": "2026-03-01 23:30:00"
+    },
+    {
+      "episode": 4,
+      "start": "2026-03-02 00:00:00",
+      "last_slot": "2026-03-02 07:30:00"
+    },
+    {
+      "episode": 5,
+      "start": "2026-03-02 08:00:00",
+      "last_slot": "2026-03-02 15:30:00"
+    },
+    {
+      "episode": 6,
+      "start": "2026-03-02 16:00:00",
+      "last_slot": "2026-03-02 23:30:00"
+    },
+    {
+      "episode": 7,
+      "start": "2026-03-03 00:00:00",
+      "last_slot": "2026-03-03 07:30:00"
+    },
+    {
+      "episode": 8,
+      "start": "2026-03-03 08:00:00",
+      "last_slot": "2026-03-03 15:30:00"
+    },
+    {
+      "episode": 9,
+      "start": "2026-03-03 16:00:00",
+      "last_slot": "2026-03-03 23:30:00"
+    },
+    {
+      "episode": 10,
+      "start": "2026-03-04 00:00:00",
+      "last_slot": "2026-03-04 07:30:00"
+    }
+  ],
+  "stage_slots": 144,
+  "episode_slots": 16,
+  "final_boundary": "2026-03-04 08:00:00",
+  "runtime_continuation": "FULL_STATE_FROM_EPISODE1",
+  "environment_reset": false,
+  "optimizer_updates_per_warm_slot": 8,
+  "warmup": 1000,
+  "exploration_decay_unit": "optimizer_update",
+  "terminal_semantics": "Final slot of each 16-slot segment is terminal; environment carries forward",
+  "episode11": "NOT_STARTED",
+  "resume_checkpoint": "models/pricing_dqn/source_aligned_slot_pricing_v3/episode_001/episode_001"
+}

@@ -1,0 +1,8 @@
+order,source_sequence,current_dependency,required_change,classification
+1,choose proactive action,"select_action(state, passenger mask)",remove passenger feasibility from selection; keep separate operational constraints,SOURCE_SPECIFIED
+2,calculate offer alpha*P_base,offer after epsilon mask,use previously fixed schedule,SOURCE_SPECIFIED
+3,sample passenger epsilon,sample_request before action,sample after offer; preserve approved conditional contract,SOURCE_SPECIFIED
+4,calculate raw P_max,maximum_price then effective_threshold floor,use raw ceiling; no floor protection,SOURCE_SPECIFIED
+5,evaluate accept/reject,customer_accepted=True for every offered request,evaluate offer<=raw ceiling; retain rejected observations,SOURCE_SPECIFIED
+6,dispatch only if accepted,dispatch each offered request,rejected bypass dispatch,SOURCE_SPECIFIED
+7,record outcomes and aggregate,request linker ignores no-action; stores mask in replay/Bellman,replace request linker; remove passenger masks from bootstrap and schema,SOURCE_SPECIFIED

@@ -1,0 +1,6 @@
+stage,current,required,status,provenance
+action timing,per request after draw and mask,pre-slot destination factors before requests,SOURCE_SPECIFIED,source pricing paragraphs21–27; PassengerSensitiveExperiment.run_slot
+decision unit,13D origin/destination query at arrival,destination based; origin aggregation unspecified,STILL_REQUIRES_DECISION,earlier V2_SLOT_DQN_DESIGN proposes142 destination decisions or20164 OD decisions
+state architecture,origin scalars+destination popularity,system supply/dropoff features and causal mapping,STILL_REQUIRES_DECISION,earlier2146/2288 proposal not frozen
+slot closure,reports slot totals but request replay,aggregate outcomes into completed-slot transition,SOURCE_SPECIFIED,source paragraph62
+value factorization,single request action,joint schedule versus shared destination Q approximation,STILL_REQUIRES_DECISION,V2_SLOT_DQN_DESIGN additive decomposition proposal

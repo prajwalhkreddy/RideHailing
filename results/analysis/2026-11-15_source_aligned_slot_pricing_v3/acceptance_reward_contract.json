@@ -1,0 +1,15 @@
+{
+  "status": "VALIDATED",
+  "formula": "P_base+(P_base/epsilon)*((L-L_base)/L_base)",
+  "accept": "offer<=raw ceiling",
+  "floor": false,
+  "passenger_preaction_mask": false,
+  "outcomes": {
+    "PASSENGER_REJECTED": 0,
+    "ACCEPTED_AND_ASSIGNED": "offer",
+    "ACCEPTED_BUT_UNMATCHED": "offer"
+  },
+  "dispatch_enum": "frozen UNSERVED retained; separate pricing_outcome=PASSENGER_REJECTED",
+  "reward": "sum accepted offers per destination/slot",
+  "assignment_revenue": "separate operational metric"
+}

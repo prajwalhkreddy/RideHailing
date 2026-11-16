@@ -1,0 +1,10 @@
+owner,stream,persisted,validation
+learner,PCG64 exploration and replay sampling shared,True,exact state/trajectory checks; explicit cloned next draws for active streams
+provider,PCG64 fitted sensitivity,True,exact state/trajectory checks; explicit cloned next draws for active streams
+engine.request_rng,PCG64 empirical source/timing,True,exact state/trajectory checks; explicit cloned next draws for active streams
+charging.rng,PCG64 tie priority,True,exact state/trajectory checks; explicit cloned next draws for active streams
+engine.customer.rng,inactive legacy PCG64,True,exact state/trajectory checks; explicit cloned next draws for active streams
+engine.dqn,inactive constructor learner/replay RNGs,True,exact state/trajectory checks; explicit cloned next draws for active streams
+global Python,random state,True,exact state/trajectory checks; explicit cloned next draws for active streams
+global NumPy,RandomState,True,exact state/trajectory checks; explicit cloned next draws for active streams
+global TensorFlow,Generator state/algorithm,True,exact state/trajectory checks; explicit cloned next draws for active streams

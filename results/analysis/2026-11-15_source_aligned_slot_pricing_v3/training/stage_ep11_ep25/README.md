@@ -1,0 +1,3 @@
+# POST_EP10_UNPLANNED_CONTINUATION_NOT_USED_FOR_REVIEW
+
+All artifacts are preserved provenance and excluded from review tables, charts, totals and conclusions. The reporting-time persisted status records episode 12, slot 10, latest completed episode 11, status RUNNING. Episode12 is partial, not complete. This is a saved-status snapshot, not live process verification; this task neither stopped nor signalled the process. Scientific review remains Episode10. The continuation had prior overnight launch authorization, but the latest reporting instruction classifies it as unplanned/excluded for scientific review. No historical artifacts were erased.

@@ -1,0 +1,12 @@
+case,expected,result
+mid-slot save,reject without publishing partial runtime,PASS
+interrupted serialization,reject without publishing partial runtime,PASS
+existing checkpoint overwrite,reject without publishing partial runtime,PASS
+corrupt replay,reject without publishing partial runtime,PASS
+missing runtime component,reject without publishing partial runtime,PASS
+wrong artifact hash,reject without publishing partial runtime,PASS
+V1 methodology,reject without publishing partial runtime,PASS
+V2 methodology,reject without publishing partial runtime,PASS
+changed versions,reject without publishing partial runtime,PASS
+old action factors,reject without publishing partial runtime,PASS
+March17 metadata,reject without publishing partial runtime,PASS

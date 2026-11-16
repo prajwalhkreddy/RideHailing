@@ -1,0 +1,128 @@
+{
+  "schedule": {
+    "GLOBAL": {
+      "family": "Truncated_normal",
+      "parameters": [
+        35.12502551872622,
+        Infinity,
+        -2235.301337098009,
+        63.63842599648225
+      ],
+      "support": "(0,infinity)",
+      "empirical_fit_limitations": {
+        "median_relative_error_pct": 8.75258753497614,
+        "P95_relative_error_pct": 15.15883630851192,
+        "P99_relative_error_pct": -5.8620185825273
+      }
+    },
+    "RAW_13": {
+      "family": "Lognormal",
+      "parameters": [
+        0.8973301465070288,
+        0,
+        1.2027779118414001
+      ],
+      "support": "(0,infinity)",
+      "empirical_fit_limitations": {
+        "median_relative_error_pct": 12.531072918137278,
+        "P95_relative_error_pct": 15.83195992036953,
+        "P99_relative_error_pct": 19.97022947455733
+      }
+    },
+    "RAW_15": {
+      "family": "Truncated_normal",
+      "parameters": [
+        26.64001492147963,
+        Infinity,
+        -1250.7830748287206,
+        46.95129032454949
+      ],
+      "support": "(0,infinity)",
+      "empirical_fit_limitations": {
+        "median_relative_error_pct": 8.971977050668201,
+        "P95_relative_error_pct": 11.072377835478733,
+        "P99_relative_error_pct": -11.978198198288627
+      }
+    },
+    "T1_G1": {
+      "family": "Lognormal",
+      "parameters": [
+        1.00109793505493,
+        0,
+        1.3009213372607122
+      ],
+      "support": "(0,infinity)",
+      "empirical_fit_limitations": {
+        "median_relative_error_pct": 19.82630437828179,
+        "P95_relative_error_pct": 5.24495928690637,
+        "P99_relative_error_pct": 14.16225987539718
+      }
+    },
+    "T1_POOLED": {
+      "family": "Lognormal",
+      "parameters": [
+        1.0014103946124762,
+        0,
+        1.3017382005996434
+      ],
+      "support": "(0,infinity)",
+      "empirical_fit_limitations": {
+        "median_relative_error_pct": 19.901544680890957,
+        "P95_relative_error_pct": 5.3291172618924705,
+        "P99_relative_error_pct": 14.29201173015566
+      }
+    },
+    "T2_POOLED": {
+      "family": "Generalized_gamma",
+      "parameters": [
+        3.1349479162440574,
+        0.5910657612405081,
+        0,
+        0.2988498612281582
+      ],
+      "support": "(0,infinity)",
+      "empirical_fit_limitations": {
+        "median_relative_error_pct": -0.36270757555369,
+        "P95_relative_error_pct": 6.5018656271931095,
+        "P99_relative_error_pct": -11.32937022156934
+      }
+    },
+    "T3_POOLED": {
+      "family": "Truncated_normal",
+      "parameters": [
+        40.0862066546213,
+        Infinity,
+        -2932.589048305705,
+        73.15706057129815
+      ],
+      "support": "(0,infinity)",
+      "empirical_fit_limitations": {
+        "median_relative_error_pct": 4.09119216844424,
+        "P95_relative_error_pct": 19.9778242773855,
+        "P99_relative_error_pct": -0.60970485307162
+      }
+    },
+    "T4_POOLED": {
+      "family": "Truncated_normal",
+      "parameters": [
+        26.982761663428015,
+        Infinity,
+        -1259.7655114769498,
+        46.68779004872637
+      ],
+      "support": "(0,infinity)",
+      "empirical_fit_limitations": {
+        "median_relative_error_pct": 7.31632964305078,
+        "P95_relative_error_pct": 15.97297601934359,
+        "P99_relative_error_pct": -5.25435495507695
+      }
+    }
+  },
+  "source_hashes": {
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+    "results/analysis/2026-11-15_v3_final_decision_packet/conditional_distribution_exact_tradeoffs.csv": "01a4d06e76ba6d13055d04d1588c7172f11955a55327590b373381ded6ccf07d",
+    "results/analysis/2026-11-15_v3_remaining_decisions/dropoff_probability_contract.json": "34fc093982c6488feb3d4ef06cfc33c6c16b1abfef335a75570a6a52ac84d2c7",
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_time_grouping_contract.json": "377f8859fd417cad8632a6c8d66fb864caae0f47ce7a1b43cb4054aece9abbde"
+  },
+  "T1_limitation": "approximately20% median overestimation; frozen family not changed"
+}

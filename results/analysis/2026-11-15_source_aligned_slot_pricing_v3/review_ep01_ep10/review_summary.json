@@ -1,0 +1,38 @@
+{
+  "status": "PAUSED_AFTER_EPISODE10_FOR_REVIEW",
+  "classification": "EARLY_TRAINING_REVIEW",
+  "episodes": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "checkpoint": "models/pricing_dqn/source_aligned_slot_pricing_v3/stage_ep02_ep10/episode_010",
+  "window": "2026-03-01 00:00 \u2192 2026-03-04 07:30",
+  "final_timestamp": "2026-03-04 08:00:00",
+  "totals": {
+    "requests": 293819,
+    "accepted": 67908,
+    "rejected": 225911,
+    "assignments": 53357,
+    "accepted_unmatched": 14551,
+    "transitions": 22720,
+    "accepted_revenue": 1727639.7333333334
+  },
+  "final": {
+    "replay_size": 22720,
+    "optimizer_updates": 1224,
+    "epsilon": 0.9767440000000001
+  },
+  "learning_started": "YES",
+  "converged": "NOT_ESTABLISHED",
+  "policy_stable": "NOT_ESTABLISHED",
+  "DP": "NOT_IMPLEMENTED",
+  "unmatched_causes": "CAUSE_NOT_PERSISTED"
+}

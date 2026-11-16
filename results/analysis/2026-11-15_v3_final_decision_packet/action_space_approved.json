@@ -1,0 +1,28 @@
+{
+  "status": "FROZEN_PROJECT_APPROVED",
+  "P_base": 22.354198442390455,
+  "ACTION_COUNT": 7,
+  "ACTION_ENDPOINT_RULE": "P0.5_P99.5_FARE_SUPPORT_DIVIDED_BY_P_BASE",
+  "ACTION_SPACING": "EVEN_IN_ALPHA_SPACE",
+  "factors": [
+    0.2952465514256313,
+    0.9520955711377049,
+    1.6089445908497786,
+    2.265793610561852,
+    2.922642630273926,
+    3.5794916499859992,
+    4.236340669698073
+  ],
+  "alpha_min": 0.2952465514256313,
+  "alpha_max": 4.236340669698073,
+  "historical_action_set_provenance_only": [
+    0.85,
+    0.9,
+    0.95,
+    1,
+    1.05,
+    1.1,
+    1.15
+  ],
+  "production_applied": false
+}

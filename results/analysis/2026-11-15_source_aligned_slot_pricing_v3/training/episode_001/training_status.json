@@ -1,0 +1,23 @@
+{
+  "status": "COMPLETED",
+  "pid": 30936,
+  "episode": 1,
+  "timestamp": "2026-03-01 08:00:00",
+  "slots_completed": 16,
+  "target_slots": 16,
+  "requests": 24093,
+  "accepted": 5449,
+  "rejected": 18644,
+  "assignments": 4495,
+  "accepted_unmatched": 954,
+  "accepted_revenue": 134694.13333333333,
+  "replay_transitions": 2272,
+  "replay_size": 2272,
+  "optimizer_updates": 72,
+  "epsilon": 0.998632,
+  "mean_recent_loss": 69.13779544830322,
+  "latest_safe_checkpoint": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/source_aligned_slot_pricing_v3/episode_001/episode_001",
+  "failure": null,
+  "episode2": "NOT_STARTED",
+  "started_at": "2026-11-15T12:46:43.422655+00:00"
+}

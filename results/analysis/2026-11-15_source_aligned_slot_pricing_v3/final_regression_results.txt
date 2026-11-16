@@ -1,0 +1,17 @@
+Historical original subset12/12 PASS.
+Combined50/50 PASS: historical12 + V3/interface15 + routing23.
+Broader181/181 PASS,0 failures,0 errors.
+Bounded current V3:3 slots,426 transitions,0 optimizer updates PASS.
+Unrestricted discovery not run: root README prohibits claiming it safe.
+
+----------------------------------------------------------------------
+Ran 50 tests in 3.568s
+
+OK
+
+----------------------------------------------------------------------
+Ran 181 tests in 34.721s
+
+OK
+
+3 slots PASS; same producer; 426 transitions; zero optimizer updates

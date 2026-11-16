@@ -1,0 +1,39 @@
+{
+  "matches": {
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_cluster_candidates.csv": true,
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_code_time_statistics.csv": true,
+    "src/simulation/final_production.py": true,
+    "notebooks/plan/Professor_Meeting_Clarifications_DQN_Dynamic_Pricing_Explanation.docx": true,
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/build.py": true,
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/verification.json": true,
+    "src/routing/final_state.py": true,
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/distribution_fit_comparison.csv": true,
+    "tests/test_multi_slot.py": true,
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/training_harness.py": true,
+    "src/simulation/passenger_sensitive_v1.py": true,
+    "src/pricing/passenger_sensitive_v2.py": true,
+    "src/pricing/passenger_sensitive_v1.py": true,
+    "src/pricing/dqn_contract.py": true,
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_time_group_mapping.csv": true,
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json": true,
+    "src/rl/passenger_sensitive_dqn.py": true,
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/development_evaluations.csv": true,
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/conditional_support_statistics.csv": true,
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/training_harness_config.json": true,
+    "tests/test_main_slot.py": true,
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/runtime_cell_support_selection.csv": true,
+    "src/routing/learning.py": true,
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_time_grouping_contract.json": true,
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/episode_metrics.csv": true,
+    "src/pricing/passenger_sensitive_v2_conditioned.py": true,
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/HIGHEST_FEASIBLE_requests.parquet": true,
+    "notebooks/plan/Price_Elasticity_Weather_Scenario_Analysis_Explained.docx": true,
+    "src/routing/baseline.py": true
+  },
+  "pass": true,
+  "allowed_edits": [
+    "src/simulation/main_slot.py",
+    "src/simulation/multi_slot.py"
+  ],
+  "new_module": "src/simulation/pricing_version.py"
+}

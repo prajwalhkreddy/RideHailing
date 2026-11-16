@@ -1,0 +1,99 @@
+{
+  "status": "TECHNICAL_VALIDATION_COMPLETE_WITH_HUMAN_DECISIONS",
+  "conditions": 8,
+  "fit_attempts": 48,
+  "distribution_decision": "all8 condition Pareto fronts require human choice",
+  "fit_protocol": {
+    "seed": 42,
+    "split": "persisted canonical FIT/VALIDATION, Bernoulli0.8; identical rows across families",
+    "source": "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet",
+    "conditions": [
+      {
+        "condition": "GLOBAL",
+        "fit_N": 4623641,
+        "validation_N": 1155572,
+        "fit_ids_hash": "992d2f32e5444123bb7af09d1057ee9494933c002b9c7ff8584c62c2cdbf2c34",
+        "validation_ids_hash": "d6bcee31493ef040b534584825294b6ef9d258dd591eafe67c7a5af7b5831f5d"
+      },
+      {
+        "condition": "T1_POOLED",
+        "fit_N": 346633,
+        "validation_N": 86054,
+        "fit_ids_hash": "735cff7e97bcc90fbec37c419b2618ce55d8a7abc33f12fdcb2949cf958805ac",
+        "validation_ids_hash": "ef2390814b30d7a5c910955c5078fe6601e95867b3ca5976784a97468922c36c"
+      },
+      {
+        "condition": "T2_POOLED",
+        "fit_N": 86906,
+        "validation_N": 21834,
+        "fit_ids_hash": "7c50e15c6931aaacdfbbaa245ae0f119c76b5a08be2e5018189e22b2496d90f8",
+        "validation_ids_hash": "25e01111eb4ff0496ff2820a42df5545a7d389c4949990a40f2403ea3f5915d1"
+      },
+      {
+        "condition": "T3_POOLED",
+        "fit_N": 2035618,
+        "validation_N": 508915,
+        "fit_ids_hash": "80cd7688dd658248fad01a8b7f54436ec0ff81c8371c5b896292ea09fd69b48f",
+        "validation_ids_hash": "911213a0c31524eaf30ad0a648c0c7cda3da215faeb31d8a0f3d11f861804896"
+      },
+      {
+        "condition": "T4_POOLED",
+        "fit_N": 2154484,
+        "validation_N": 538769,
+        "fit_ids_hash": "81816d98fda3de5af44be6ed03fb40a20c390a2fc8bfd7f3b72fefa6d2acadb8",
+        "validation_ids_hash": "2487a2c3b4c5a8afc3b455ba77577f1cc9d957c1d20a0ff281ed75cb9c47bc2b"
+      },
+      {
+        "condition": "RAW_13",
+        "fit_N": 11787,
+        "validation_N": 3030,
+        "fit_ids_hash": "7b36c61b5edc04baebbde9fbaf96fe0c61eecff5e1129a7c57224bb491be1133",
+        "validation_ids_hash": "ea0a66f55ee091e0b05fa760ae09eb2bd0c175a444d4e65b365e93fcef16a89b"
+      },
+      {
+        "condition": "RAW_15",
+        "fit_N": 55539,
+        "validation_N": 13829,
+        "fit_ids_hash": "9f49769961cf46b161a9f6b43ca15c93b2932954c03df734a95b5c2a245b43c4",
+        "validation_ids_hash": "18d4c31a326937fc1867a56a105b0a7a57894b02f248aed212742a48fe245654"
+      },
+      {
+        "condition": "T1_G1",
+        "fit_N": 345292,
+        "validation_N": 85726,
+        "fit_ids_hash": "935064cd972430bb3a56351c3cd7cf5e63516ba57d912c80265370983761e2c6",
+        "validation_ids_hash": "e0397d0bf7fab552e8a6441bd9d4e85881c43cc77150075fe58046a433da94ef"
+      }
+    ]
+  },
+  "support_hashes_unchanged": {
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/GLOBAL.npy": "424e84d2b0909b6a11cf11f60e6b6b74cc6710fdfe4fa2153c9359294767bd23",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T1_POOLED.npy": "2e5f013a4e836ccaef04ca32e3ae71456ce0c0b917230fa4a8b6719b6867b25b",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T2_POOLED.npy": "66c297592b43bb3499c0a1d90674c8d18842e757238a3eb7aa3cfbb5bddaed4c",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T3_POOLED.npy": "81db1da657e2f489724f0e443a0ce0bd70cd8a4f4bd9dddb347fe3b764dce9d6",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T4_POOLED.npy": "5c0551272aab6ce2a26f55ca373d9813e7e1cb8eba36c90a4ab9110d18cd0720",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/RAW_13.npy": "25f3f7693a3bea0dbf1d9aa2de8473f65fe4bfe05328246f5bc588c3495c9d9d",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/RAW_15.npy": "693333d25a7f32cc89d1f666918b369e344a6e8ec8c1b4f886a54eec1718f15e",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T1_G1.npy": "f093cf8ad73e057283707c8dee3061cc3d73e09128707ba571b517f716d01151"
+  },
+  "checks": [
+    "heldout56 rows:6families+empirical per8conditions",
+    "720 normalized142-grid vectors",
+    "historical input hashes unchanged",
+    "focused and established tests passed"
+  ],
+  "production_changed": false,
+  "training_run": false,
+  "simulation_run": false,
+  "March16_access": false,
+  "March17_31_access": false,
+  "runtime_tests_run": false,
+  "fare_status": "HUMAN_DECISION_REQUIRED",
+  "population_caveat": "No new anomaly-filtered comparable-fare population invented; existing cleaned scope still includes0.01 diagnostics",
+  "empirical_references": 8,
+  "dropoff_state": "FROZEN",
+  "gamma_terminal": "FROZEN",
+  "dropoff_slots": 720,
+  "dropoff_zero_total": 0,
+  "tests": "10 focused + established suites; see test_results.txt"
+}

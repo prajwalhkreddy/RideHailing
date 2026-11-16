@@ -1,0 +1,10 @@
+{
+  "slots": 3,
+  "requests": 3,
+  "transitions": 426,
+  "optimizer_updates": 0,
+  "same_producer": true,
+  "current_routing_states_valid": true,
+  "no_future_access": true,
+  "status": "PASS"
+}

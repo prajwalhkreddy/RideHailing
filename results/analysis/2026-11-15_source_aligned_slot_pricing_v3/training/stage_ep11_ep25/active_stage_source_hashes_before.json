@@ -1,0 +1,10 @@
+{
+  "src/simulation/v3_stage2_checkpoint.py": "f20492c6091590a58796c7f62d7d08ad408ada9c968be81483f06f09c1280a95",
+  "src/simulation/v3_stage2_protocol.py": "9d36f633e881969df8eed24ce6abf1599d9687b9fb4fc90ce4257b1785318afb",
+  "scripts/train_v3_stage2.py": "e2e95fe6216cc4381fec2e71aba3592b444afd1c53819e6f987da53bd0ae7356",
+  "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/training/stage_ep02_ep10/stage2_protocol.json": "1e8dafbeadea82048977ea8480e92879c01c47f5613ce2e003dd0839846687fc",
+  "src/simulation/slot_pricing_v3.py": "d51335b1b6f81c0d69737258da1cfd2a5d071fb6e32db25fadd26c44ece71878",
+  "src/rl/slot_pricing_v3.py": "3775f36904a13241d67df84355d5f0aef3d070e336d2b9b9b0ec858c191e7fd7",
+  "src/simulation/v3_checkpoint.py": "4eaa5cf9556a5c3fbd074beb449d38e90eda435b940d6c8943b63c566c3a7580",
+  "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/methodology_contract.json": "a845c17a24d8c3a52301b85a836b27c0ad9211b2fc3db9c3bdc6eed0142276a2"
+}

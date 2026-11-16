@@ -1,0 +1,33 @@
+{
+  "protocol": {
+    "support": "positive continuous (0,infinity); lower0 upperinfinity; no finite upper truncation",
+    "truncnorm": "mu/sigma parameterization; density normal divided by Phi(mu/sigma) on x>0",
+    "fit": "full saved condition data MLE; exact zeros/nonfinite fail closed",
+    "selection": "descriptive Pareto comparison KS and relative quantile/tail errors; no unapproved universal adequacy threshold or p-value selection",
+    "empirical": "reference only",
+    "scope": "Jan1\u2013Mar15 persisted hashed supports; no March16 or later",
+    "fit_conditions": [
+      "GLOBAL",
+      "T1_POOLED",
+      "T2_POOLED",
+      "T3_POOLED",
+      "T4_POOLED",
+      "RAW_13",
+      "RAW_15",
+      "T1_G1"
+    ]
+  },
+  "hashes": {
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/GLOBAL.npy": "424e84d2b0909b6a11cf11f60e6b6b74cc6710fdfe4fa2153c9359294767bd23",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T1_POOLED.npy": "2e5f013a4e836ccaef04ca32e3ae71456ce0c0b917230fa4a8b6719b6867b25b",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T2_POOLED.npy": "66c297592b43bb3499c0a1d90674c8d18842e757238a3eb7aa3cfbb5bddaed4c",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T3_POOLED.npy": "81db1da657e2f489724f0e443a0ce0bd70cd8a4f4bd9dddb347fe3b764dce9d6",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T4_POOLED.npy": "5c0551272aab6ce2a26f55ca373d9813e7e1cb8eba36c90a4ab9110d18cd0720",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/RAW_13.npy": "25f3f7693a3bea0dbf1d9aa2de8473f65fe4bfe05328246f5bc588c3495c9d9d",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/RAW_15.npy": "693333d25a7f32cc89d1f666918b369e344a6e8ec8c1b4f886a54eec1718f15e",
+    "data/interim/pricing_v2_sensitivity/time_specific_weather_2026_11_14/T1_G1.npy": "f093cf8ad73e057283707c8dee3061cc3d73e09128707ba571b517f716d01151"
+  },
+  "fit_rows": 32,
+  "conditions": 8,
+  "status": "COMPLETE"
+}

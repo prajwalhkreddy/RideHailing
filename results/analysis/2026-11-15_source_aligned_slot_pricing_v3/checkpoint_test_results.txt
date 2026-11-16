@@ -1,0 +1,19 @@
+Final checkpoint suite19 PASS.
+V3/interface15, routing23, historical12 passed in combined run below (checkpoint suite then had17; two additional tests subsequently passed in final19).
+Broader181 PASS.
+No performance training. Controlled optimizer test only: two updates with synthetic replay fill; production warmup1000 unchanged.
+
+----------------------------------------------------------------------
+Ran 19 tests in 7.850s
+
+OK
+
+----------------------------------------------------------------------
+Ran 67 tests in 10.996s
+
+OK
+
+----------------------------------------------------------------------
+Ran 181 tests in 34.950s
+
+OK

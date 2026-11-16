@@ -1,0 +1,169 @@
+{
+  "status": "PASS",
+  "episode": 4,
+  "slots": 16,
+  "checkpoint": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/source_aligned_slot_pricing_v3/stage_ep02_ep10/episode_004",
+  "checkpoint_reload": true,
+  "metrics": [
+    {
+      "episode": 4,
+      "slot": "2026-03-02 00:00:00",
+      "requests": 895,
+      "accepted": 215,
+      "rejected": 680,
+      "assignments": 187,
+      "accepted_unmatched": 28,
+      "accepted_revenue": 5926.783333333334
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 00:30:00",
+      "requests": 624,
+      "accepted": 240,
+      "rejected": 384,
+      "assignments": 211,
+      "accepted_unmatched": 29,
+      "accepted_revenue": 4579.400000000001
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 01:00:00",
+      "requests": 497,
+      "accepted": 143,
+      "rejected": 354,
+      "assignments": 120,
+      "accepted_unmatched": 23,
+      "accepted_revenue": 3718.9500000000003
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 01:30:00",
+      "requests": 428,
+      "accepted": 82,
+      "rejected": 346,
+      "assignments": 76,
+      "accepted_unmatched": 6,
+      "accepted_revenue": 3419.1333333333337
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 02:00:00",
+      "requests": 418,
+      "accepted": 83,
+      "rejected": 335,
+      "assignments": 55,
+      "accepted_unmatched": 28,
+      "accepted_revenue": 3132.0666666666666
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 02:30:00",
+      "requests": 400,
+      "accepted": 96,
+      "rejected": 304,
+      "assignments": 76,
+      "accepted_unmatched": 20,
+      "accepted_revenue": 3775.8333333333335
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 03:00:00",
+      "requests": 317,
+      "accepted": 80,
+      "rejected": 237,
+      "assignments": 53,
+      "accepted_unmatched": 27,
+      "accepted_revenue": 3626.1833333333334
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 03:30:00",
+      "requests": 378,
+      "accepted": 111,
+      "rejected": 267,
+      "assignments": 81,
+      "accepted_unmatched": 30,
+      "accepted_revenue": 3757.366666666667
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 04:00:00",
+      "requests": 316,
+      "accepted": 81,
+      "rejected": 235,
+      "assignments": 62,
+      "accepted_unmatched": 19,
+      "accepted_revenue": 2883.9333333333334
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 04:30:00",
+      "requests": 262,
+      "accepted": 73,
+      "rejected": 189,
+      "assignments": 61,
+      "accepted_unmatched": 12,
+      "accepted_revenue": 2361.266666666667
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 05:00:00",
+      "requests": 566,
+      "accepted": 217,
+      "rejected": 349,
+      "assignments": 160,
+      "accepted_unmatched": 57,
+      "accepted_revenue": 6116.183333333333
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 05:30:00",
+      "requests": 754,
+      "accepted": 151,
+      "rejected": 603,
+      "assignments": 118,
+      "accepted_unmatched": 33,
+      "accepted_revenue": 6752.466666666667
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 06:00:00",
+      "requests": 903,
+      "accepted": 234,
+      "rejected": 669,
+      "assignments": 155,
+      "accepted_unmatched": 79,
+      "accepted_revenue": 9135.683333333334
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 06:30:00",
+      "requests": 1276,
+      "accepted": 387,
+      "rejected": 889,
+      "assignments": 322,
+      "accepted_unmatched": 65,
+      "accepted_revenue": 9029.550000000001
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 07:00:00",
+      "requests": 1549,
+      "accepted": 412,
+      "rejected": 1137,
+      "assignments": 304,
+      "accepted_unmatched": 108,
+      "accepted_revenue": 12527.666666666668
+    },
+    {
+      "episode": 4,
+      "slot": "2026-03-02 07:30:00",
+      "requests": 1924,
+      "accepted": 459,
+      "rejected": 1465,
+      "assignments": 398,
+      "accepted_unmatched": 61,
+      "accepted_revenue": 13674.816666666668
+    }
+  ]
+}

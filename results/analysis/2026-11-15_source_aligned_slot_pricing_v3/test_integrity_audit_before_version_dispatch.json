@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "test_edits": 0,
+  "assertion_changes": 0,
+  "deletions": 0,
+  "skips_added": 0,
+  "xfails_added": 0,
+  "tolerance_changes": 0,
+  "mocked_away_behavior": false,
+  "production_edits": 0,
+  "stop_rule": "section14 UNRELATED_REGRESSION_BLOCKER",
+  "preexisting_worktree_changes": " M README.md\n M results/.DS_Store\n M results/analysis/2026-11-01_current_state_review/README.md\n?? results/analysis/2026-11-15_source_aligned_slot_pricing_v3/\n?? results/analysis/2026-11-15_source_compliant_decision_freeze/\n?? results/analysis/2026-11-15_source_compliant_pricing_readiness/\n?? results/analysis/2026-11-15_source_pricing_weather_compliance_audit/\n?? results/analysis/2026-11-15_v3_final_decision_packet/\n?? results/analysis/2026-11-15_v3_remaining_decisions/\n?? src/pricing/README_V3.md\n?? src/pricing/slot_v3.py\n?? src/pricing/slot_v3_request.py\n?? src/rl/slot_pricing_v3.py\n?? src/simulation/slot_pricing_v3.py\n?? tests/test_slot_pricing_v3.py\n",
+  "diff_classification": "Tracked README changes and untracked V3 implementation/tests/results predate this reconciliation. results/.DS_Store is an unrelated pre-existing change, not attributable to V3 or this task. This task changes only V3 report files."
+}

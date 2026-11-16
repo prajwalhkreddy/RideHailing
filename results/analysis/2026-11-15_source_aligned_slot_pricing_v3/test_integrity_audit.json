@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "files": {
+    "test_main_slot.py": {
+      "all_original_assertions_preserved": true,
+      "original_assertions": 42,
+      "additional_assertions": 3,
+      "test_names_unchanged": true
+    },
+    "test_multi_slot.py": {
+      "all_original_assertions_preserved": true,
+      "original_assertions": 32,
+      "additional_assertions": 1,
+      "test_names_unchanged": true
+    }
+  },
+  "skips_added": 0,
+  "xfails_added": 0,
+  "test_deletions": 0,
+  "projection": false,
+  "production_edits_this_task": 0,
+  "historical_archive_changes": "namespace import rewriting only; original source hashes recorded"
+}

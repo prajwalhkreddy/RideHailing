@@ -1,0 +1,2 @@
+transition_interval,candidate_gamma,precedent,terminal_definition,episode_boundary,status
+30 minutes,"gamma_slot per completed slot, numeric value requires decision",legacy final_production OD transitions advance30min; historical current request gamma is not transferable; V2_SLOT_DQN_DESIGN proposes gamma_slot0.99 but not approved,true episodic end no bootstrap; artificial truncation requires explicit continuation decision,historical training16slots versus development48slots; source-compliant horizon not frozen,DISCOUNT_TIMING_DECISION_REQUIRED

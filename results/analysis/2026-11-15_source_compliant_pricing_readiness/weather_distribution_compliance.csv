@@ -1,0 +1,9 @@
+component,classification,reuse,finding,required_action,evidence
+denominator-cleaned epsilon,EXISTING_PROJECT_DECISION,REUSABLE,positive resolved rL/rP population5779213,preserve calibration scope and approved definitions,pricing_v2_sensitivity_contract.json
+scenario N mean SD,DATA_DERIVED,REUSABLE,separate raw-weather x time statistics,retain individual and combined statistics,weather_code_time_statistics.csv
+T1 K2,DATA_DERIVED,REUSABLE,behavioural mean/SD grouping supported; not semantic,retain evidence; fit conditional groups/fallbacks,weather_cluster_candidates.csv; weather_cluster_stability.csv
+T2 T3 T4 pooled,EXISTING_PROJECT_DECISION,PARTIAL,unstable grouping does not prove dense groups are sparse or equivalent,decide separate scenarios or justified pooling; no automatic replacement,weather_time_grouping_contract.json
+time boundaries,EXISTING_PROJECT_DECISION,REUSABLE subject to retained decision,T1 00–03 T2 04–05 T3 06–15 T4 16–23 not source-prescribed,document provenance,weather_time_grouping_contract.json
+fallback N5000,EXISTING_PROJECT_DECISION,PARTIAL,sparse fallback concept source-supported; hierarchy/threshold project-defined,review sparse versus unstable distinction,runtime_cell_support_selection.csv
+combined statistics,DATA_DERIVED,REUSABLE,"pooled actual observations with populationSD, not averageSD",retain; no joint predictive training inferred,conditional_support_statistics.csv
+empirical sampler,EXISTING_PROJECT_DECISION,PARTIAL,empirical allowed as justified candidate; existing comparison global only,per-group fit selection including source-mentioned truncated normal,distribution_fit_comparison.csv

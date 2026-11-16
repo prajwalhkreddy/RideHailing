@@ -1,0 +1,108 @@
+{
+  "classification": "PROJECT_CONTINUATION_DECISION",
+  "episodes": [
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "windows": [
+    {
+      "episode": 11,
+      "start": "2026-03-04 08:00:00",
+      "last_slot": "2026-03-04 15:30:00"
+    },
+    {
+      "episode": 12,
+      "start": "2026-03-04 16:00:00",
+      "last_slot": "2026-03-04 23:30:00"
+    },
+    {
+      "episode": 13,
+      "start": "2026-03-05 00:00:00",
+      "last_slot": "2026-03-05 07:30:00"
+    },
+    {
+      "episode": 14,
+      "start": "2026-03-05 08:00:00",
+      "last_slot": "2026-03-05 15:30:00"
+    },
+    {
+      "episode": 15,
+      "start": "2026-03-05 16:00:00",
+      "last_slot": "2026-03-05 23:30:00"
+    },
+    {
+      "episode": 16,
+      "start": "2026-03-06 00:00:00",
+      "last_slot": "2026-03-06 07:30:00"
+    },
+    {
+      "episode": 17,
+      "start": "2026-03-06 08:00:00",
+      "last_slot": "2026-03-06 15:30:00"
+    },
+    {
+      "episode": 18,
+      "start": "2026-03-06 16:00:00",
+      "last_slot": "2026-03-06 23:30:00"
+    },
+    {
+      "episode": 19,
+      "start": "2026-03-07 00:00:00",
+      "last_slot": "2026-03-07 07:30:00"
+    },
+    {
+      "episode": 20,
+      "start": "2026-03-07 08:00:00",
+      "last_slot": "2026-03-07 15:30:00"
+    },
+    {
+      "episode": 21,
+      "start": "2026-03-07 16:00:00",
+      "last_slot": "2026-03-07 23:30:00"
+    },
+    {
+      "episode": 22,
+      "start": "2026-03-08 00:00:00",
+      "last_slot": "2026-03-08 07:30:00"
+    },
+    {
+      "episode": 23,
+      "start": "2026-03-08 08:00:00",
+      "last_slot": "2026-03-08 15:30:00"
+    },
+    {
+      "episode": 24,
+      "start": "2026-03-08 16:00:00",
+      "last_slot": "2026-03-08 23:30:00"
+    },
+    {
+      "episode": 25,
+      "start": "2026-03-09 00:00:00",
+      "last_slot": "2026-03-09 07:30:00"
+    }
+  ],
+  "stage_slots": 240,
+  "episode_slots": 16,
+  "final_boundary": "2026-03-09 08:00:00",
+  "environment_reset": false,
+  "optimizer_updates_per_warm_slot": 8,
+  "warmup": 1000,
+  "exploration_decay_unit": "optimizer_update",
+  "resume_checkpoint": "models/pricing_dqn/source_aligned_slot_pricing_v3/stage_ep02_ep10/episode_010",
+  "episode26": "NOT_STARTED",
+  "March16": "NOT_USED",
+  "March17_31": "UNTOUCHED"
+}

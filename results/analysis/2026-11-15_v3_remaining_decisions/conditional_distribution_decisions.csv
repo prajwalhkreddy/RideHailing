@@ -1,0 +1,9 @@
+condition,N,selected_family,non_dominated,status,rationale,fallback
+GLOBAL,5779213,,Lognormal;Truncated_normal;Fisk;Generalized_gamma,DISTRIBUTION_HUMAN_REVIEW_REQUIRED,genuine CDF/central/P95/P99 tradeoff; no arbitrary weighting or simplicity tolerance,existing frozen runtime support selection
+RAW_13,14817,,Gamma;Lognormal;Truncated_normal;Fisk;Generalized_gamma,DISTRIBUTION_HUMAN_REVIEW_REQUIRED,genuine CDF/central/P95/P99 tradeoff; no arbitrary weighting or simplicity tolerance,existing frozen runtime support selection
+RAW_15,69368,,Lognormal;Weibull;Truncated_normal;Fisk,DISTRIBUTION_HUMAN_REVIEW_REQUIRED,genuine CDF/central/P95/P99 tradeoff; no arbitrary weighting or simplicity tolerance,existing frozen runtime support selection
+T1_G1,431018,,Lognormal;Truncated_normal;Fisk;Generalized_gamma,DISTRIBUTION_HUMAN_REVIEW_REQUIRED,genuine CDF/central/P95/P99 tradeoff; no arbitrary weighting or simplicity tolerance,existing frozen runtime support selection
+T1_POOLED,432687,,Lognormal;Truncated_normal;Fisk;Generalized_gamma,DISTRIBUTION_HUMAN_REVIEW_REQUIRED,genuine CDF/central/P95/P99 tradeoff; no arbitrary weighting or simplicity tolerance,existing frozen runtime support selection
+T2_POOLED,108740,,Gamma;Weibull;Fisk;Generalized_gamma,DISTRIBUTION_HUMAN_REVIEW_REQUIRED,genuine CDF/central/P95/P99 tradeoff; no arbitrary weighting or simplicity tolerance,existing frozen runtime support selection
+T3_POOLED,2544533,,Gamma;Lognormal;Truncated_normal;Fisk;Generalized_gamma,DISTRIBUTION_HUMAN_REVIEW_REQUIRED,genuine CDF/central/P95/P99 tradeoff; no arbitrary weighting or simplicity tolerance,existing frozen runtime support selection
+T4_POOLED,2693253,,Lognormal;Truncated_normal;Fisk;Generalized_gamma,DISTRIBUTION_HUMAN_REVIEW_REQUIRED,genuine CDF/central/P95/P99 tradeoff; no arbitrary weighting or simplicity tolerance,existing frozen runtime support selection

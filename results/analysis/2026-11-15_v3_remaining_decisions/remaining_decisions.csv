@@ -1,0 +1,10 @@
+decision,prior_project_status,latest_source_effect,current_evidence,recommended_final_value,human_decision_required
+fare lower/upper,unapproved proposal,validated NYC bounds required,persisted support options; comparable-fare anomaly rule not frozen,human chooses validated definition,YES
+seven action factors,count7 frozen,endpoints fare-derived,linear7 candidates,seven even endpoint-inclusive after bounds,YES endpoints only
+state vector,system features established,arrivals/dispatch/dropoff required,actual supply and lagged dropoff count found,FROZEN15D; dropoff adapter validated,NO
+accepted unmatched,accepted versus served distinct,no reopening,pre-dispatch accepted accumulator,accepted offered fare contributes,NO
+slot reward,context accumulated accepted revenue,retain,pricing_dispatch accumulators,"sum accepted fares, not LinUCB normalization",NO
+transition unit,slot context feedback,destination associated,clock and context dictionaries compatible,one per destination per30minutes,NO
+gamma/terminal,16slot horizon frozen,no contradictory prior slot DQN rule established,earlier slot design proposal;latest instructions,FROZEN0.99 per30minutes;terminal slot16,NO
+weather grouping,frozen,retain,mapping/hash verified,T1G1/G2;T2–4dense pooling;existing fallback,NO
+conditional distributions,new per-condition comparison required,fit not automatic empirical,actual fits in companionCSV,see conditional_distribution_decisions.csv exact Pareto fronts,YES if no clearly adequate candidate

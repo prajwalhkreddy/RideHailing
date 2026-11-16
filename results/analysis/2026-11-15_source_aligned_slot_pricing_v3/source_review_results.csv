@@ -1,0 +1,15 @@
+result,artifact,status,scope
+weather N/mean/SD,weather_scenario_statistics.csv,READY,controlled fixture validation; not trained performance
+grouping/pooling,weather_grouping_map.csv,READY,controlled fixture validation; not trained performance
+combined statistics,combined_condition_statistics.csv,READY,controlled fixture validation; not trained performance
+candidate fits,conditional_fit_comparison.csv,READY,controlled fixture validation; not trained performance
+selected family/parameters,conditional_distribution_parameters.csv,READY,controlled fixture validation; not trained performance
+runtime reproduction,runtime_distribution_validation.csv,READY,controlled fixture validation; not trained performance
+fare/actions,seven_action_table.csv,READY,controlled fixture validation; not trained performance
+state diagram,charts/v3_flow.md,READY,controlled fixture validation; not trained performance
+proactive flow,charts/v3_flow.md,READY,controlled fixture validation; not trained performance
+offers/ceilings,charts/offer_vs_ceiling.png,READY,controlled fixture validation; not trained performance
+outcomes,charts/passenger_and_dispatch_outcomes.png,READY,controlled fixture validation; not trained performance
+action counts,charts/destination_action_counts.png,READY,controlled fixture validation; not trained performance
+reward/transition,bounded_slot_validation.csv,READY,controlled fixture validation; not trained performance
+bounded summary,bounded_validation_summary.csv,READY,controlled fixture validation; not trained performance

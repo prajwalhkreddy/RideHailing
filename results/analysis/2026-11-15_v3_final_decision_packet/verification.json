@@ -1,0 +1,15 @@
+{
+  "status": "FARE_AND_ACTIONS_FROZEN_DISTRIBUTIONS_PENDING",
+  "fit_source": "results/analysis/2026-11-15_v3_remaining_decisions/conditional_distribution_pareto.csv",
+  "fit_source_hash_unchanged": "01902099b5b37593559cbdeff0a64e98b1ab96b37aab2683928eb7d504cbe877",
+  "non_dominated_rows": 34,
+  "reference_rows": 8,
+  "checks": "PASS: all candidates retained; eight references; sorting; exact supplied action values and endpoints; source hash unchanged",
+  "human_decisions_remaining": 1,
+  "refit": false,
+  "production_changes": false,
+  "training": false,
+  "March16_access": false,
+  "March17_31_access": false,
+  "T2": "Generalized Gamma recommendation retained; non-dominated, no strict dominance"
+}

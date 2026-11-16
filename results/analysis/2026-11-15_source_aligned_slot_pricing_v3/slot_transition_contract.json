@@ -1,0 +1,17 @@
+{
+  "status": "FROZEN",
+  "decision_unit": "destination per30minute slot",
+  "state": "final_destination_state.csv ordered15D",
+  "reward": "sum accepted offers including accepted unmatched; rejected0",
+  "transition": "one per active destination context per slot",
+  "next_state": "same destination after all frozen operational slot updates",
+  "gamma": 0.99,
+  "discount_unit": "30minute transition",
+  "episode_slots": 16,
+  "terminal": "last slot of16slot training episode",
+  "terminal_target": "reward",
+  "nonterminal_target": "reward+.99*bootstrap",
+  "compatibility": "existing integer grid IDs, slot clock, per-context revenue accumulators and next-boundary snapshots; new versioned adapter/replay required",
+  "lineage": "src/simulation/pricing_dispatch.py accumulators.add(fare,accepted) occurs before dispatch; old normalized LinUCB objective not transferred",
+  "decision_basis": "explicit latest user instruction; gamma applies once per30minute transition, not tuned"
+}

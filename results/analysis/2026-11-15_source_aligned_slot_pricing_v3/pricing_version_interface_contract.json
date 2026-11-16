@@ -1,0 +1,41 @@
+{
+  "V3": {
+    "version": "SOURCE_ALIGNED_SLOT_PRICING_V3",
+    "dimension": 15,
+    "probability_indices": [
+      4,
+      13
+    ],
+    "routing_order": [
+      "STAY",
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "runtime": "SlotPricingV3.engine.operational",
+    "entry_points": [
+      "run_main_slot",
+      "run_multi_slot_simulation"
+    ]
+  },
+  "legacy": {
+    "version": "LEGACY_LINUCB_8D",
+    "pricing_dimension": 8,
+    "routing_order": [
+      "STAY",
+      "N",
+      "E",
+      "S",
+      "W"
+    ],
+    "status": "LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING",
+    "unit_builder_preserved": true
+  },
+  "projection": "NOT_USED",
+  "training": false
+}

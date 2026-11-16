@@ -1,0 +1,9 @@
+{
+  "N": 293819,
+  "mismatch_count": 0,
+  "origin": "NOT_AVAILABLE_FROM_PERSISTED_V3_ARTIFACTS",
+  "driver_rejection_causes": "REQUEST_LEVEL_DRIVER_REJECTION_DIAGNOSTIC_NOT_AVAILABLE",
+  "sample_slot": "2026-03-01 09:30:00",
+  "sample_N": 300,
+  "request_log": "tables/request_level_audit.parquet"
+}

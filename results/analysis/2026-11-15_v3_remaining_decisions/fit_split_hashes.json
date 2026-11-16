@@ -1,0 +1,63 @@
+{
+  "seed": 42,
+  "split": "persisted canonical FIT/VALIDATION, Bernoulli0.8; identical rows across families",
+  "source": "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet",
+  "conditions": [
+    {
+      "condition": "GLOBAL",
+      "fit_N": 4623641,
+      "validation_N": 1155572,
+      "fit_ids_hash": "992d2f32e5444123bb7af09d1057ee9494933c002b9c7ff8584c62c2cdbf2c34",
+      "validation_ids_hash": "d6bcee31493ef040b534584825294b6ef9d258dd591eafe67c7a5af7b5831f5d"
+    },
+    {
+      "condition": "T1_POOLED",
+      "fit_N": 346633,
+      "validation_N": 86054,
+      "fit_ids_hash": "735cff7e97bcc90fbec37c419b2618ce55d8a7abc33f12fdcb2949cf958805ac",
+      "validation_ids_hash": "ef2390814b30d7a5c910955c5078fe6601e95867b3ca5976784a97468922c36c"
+    },
+    {
+      "condition": "T2_POOLED",
+      "fit_N": 86906,
+      "validation_N": 21834,
+      "fit_ids_hash": "7c50e15c6931aaacdfbbaa245ae0f119c76b5a08be2e5018189e22b2496d90f8",
+      "validation_ids_hash": "25e01111eb4ff0496ff2820a42df5545a7d389c4949990a40f2403ea3f5915d1"
+    },
+    {
+      "condition": "T3_POOLED",
+      "fit_N": 2035618,
+      "validation_N": 508915,
+      "fit_ids_hash": "80cd7688dd658248fad01a8b7f54436ec0ff81c8371c5b896292ea09fd69b48f",
+      "validation_ids_hash": "911213a0c31524eaf30ad0a648c0c7cda3da215faeb31d8a0f3d11f861804896"
+    },
+    {
+      "condition": "T4_POOLED",
+      "fit_N": 2154484,
+      "validation_N": 538769,
+      "fit_ids_hash": "81816d98fda3de5af44be6ed03fb40a20c390a2fc8bfd7f3b72fefa6d2acadb8",
+      "validation_ids_hash": "2487a2c3b4c5a8afc3b455ba77577f1cc9d957c1d20a0ff281ed75cb9c47bc2b"
+    },
+    {
+      "condition": "RAW_13",
+      "fit_N": 11787,
+      "validation_N": 3030,
+      "fit_ids_hash": "7b36c61b5edc04baebbde9fbaf96fe0c61eecff5e1129a7c57224bb491be1133",
+      "validation_ids_hash": "ea0a66f55ee091e0b05fa760ae09eb2bd0c175a444d4e65b365e93fcef16a89b"
+    },
+    {
+      "condition": "RAW_15",
+      "fit_N": 55539,
+      "validation_N": 13829,
+      "fit_ids_hash": "9f49769961cf46b161a9f6b43ca15c93b2932954c03df734a95b5c2a245b43c4",
+      "validation_ids_hash": "18d4c31a326937fc1867a56a105b0a7a57894b02f248aed212742a48fe245654"
+    },
+    {
+      "condition": "T1_G1",
+      "fit_N": 345292,
+      "validation_N": 85726,
+      "fit_ids_hash": "935064cd972430bb3a56351c3cd7cf5e63516ba57d912c80265370983761e2c6",
+      "validation_ids_hash": "e0397d0bf7fab552e8a6441bd9d4e85881c43cc77150075fe58046a433da94ef"
+    }
+  ]
+}

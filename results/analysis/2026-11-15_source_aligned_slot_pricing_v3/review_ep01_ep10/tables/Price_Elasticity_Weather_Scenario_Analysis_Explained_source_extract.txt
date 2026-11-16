@@ -1,0 +1,380 @@
+Price
+ 
+Elasticity
+ 
+Across
+ 
+Weather
+ 
+Conditions
+ 
+and Time Slots
+Document 1 — Mean, standard deviation, and 
+clustering
+The first recording explains that adding more data can increase the variance (spread) of elasticity values. The professor suggests calculating the mean and standard deviation of price elasticity separately for each weather scenario,
+ 
+then
+ 
+using
+ 
+clustering
+ 
+to
+ 
+identify
+ 
+scenarios
+ 
+with
+ 
+similar
+ 
+elasticity.
+ 
+Scenarios
+ 
+may
+ 
+have
+ 
+different
+ 
+numbers of rows, so keep their sample counts visible.
+Step 1: Analyze each scenario 
+separately
+For
+ 
+example,
+ 
+calculate
+ 
+elasticity
+ 
+separately
+ 
+for
+ 
+clear,
+ 
+cloudy,
+ 
+and
+ 
+rainy
+ 
+weather.
+ 
+Do
+ 
+not
+ 
+assume
+ 
+customers
+ 
+react to prices in the same way under every condition. These are example scenario categories; the actual results must come from your dataset.
+Step 2: Calculate the mean and standard 
+deviation
+Mean elasticity 
+is the average elasticity in a 
+scenario:
+Mean elasticity = (sum of all elasticity observations) / 
+n
+Here, n is the number of valid elasticity observations. The mean summarizes the average price 
+sensitivity.
+Standard
+ 
+deviation
+ 
+describes
+ 
+how
+ 
+widely
+ 
+the
+ 
+elasticity
+ 
+values
+ 
+are
+ 
+spread
+ 
+around
+ 
+their
+ 
+mean.
+ 
+A
+ 
+smaller
+ 
+value indicates values are more closely grouped; a larger value indicates greater spread.
+Step 3: Cluster similar 
+scenarios
+Clustering means grouping scenarios whose elasticity statistics are similar. For example, clear and cloudy weather might be candidates for one group if their mean elasticity and spread are close. Rainy weather might remain
+ 
+separate
+ 
+if
+ 
+its
+ 
+elasticity
+ 
+differs.
+ 
+The
+ 
+grouping
+ 
+must
+ 
+be
+ 
+supported
+ 
+by
+ 
+a
+ 
+defined
+ 
+similarity
+ 
+measure,
+ 
+not
+ 
+just by the weather labels.
+Document 2 — How to combine scenarios 
+correctly
+The second document says to calculate mean and standard deviation for each weather condition or time slot separately,
+ 
+then
+ 
+combine
+ 
+scenarios
+ 
+based
+ 
+on
+ 
+a
+ 
+similarity
+ 
+index
+ 
+or
+ 
+clustering.
+ 
+The
+ 
+professor
+ 
+explicitly
+ 
+says
+ 
+not
+ 
+to combine the raw data and train them together. This analysis is for understanding customer sensitivity.
+Step 1: Calculate statistics for each 
+scenario
+For
+ 
+every
+ 
+scenario
+ 
+(for
+ 
+example,
+ 
+clear-morning,
+ 
+clear-evening,
+ 
+cloudy-morning,
+ 
+or
+ 
+rainy-evening),
+ 
+record
+ 
+the observation count, mean elasticity, and standard deviation.
+Step 2: Compare 
+scenarios
+A
+ 
+distance
+ 
+measure
+ 
+can
+ 
+help
+ 
+compare
+ 
+scenarios.
+ 
+One
+ 
+possible
+ 
+example
+ 
+is
+ 
+Euclidean
+ 
+distance
+ 
+using
+ 
+mean elasticity and standard deviation:
+d(
+A,B
+) = sqrt[(
+MeanA
+ 
+
+ 
+MeanB
+)² + (
+StdA
+ 
+
+ 
+StdB
+)²]
+A
+ 
+smaller
+ 
+distance
+ 
+indicates
+ 
+greater
+ 
+similarity.
+ 
+The
+ 
+documents
+ 
+do
+ 
+not
+ 
+prescribe
+ 
+a
+ 
+specific
+ 
+clustering
+ 
+algorithm
+ 
+or similarity threshold, so that choice must be defined and justified in the implementation.
+Step 3: Check the combined standard 
+deviation
+Technical
+ 
+note:
+ 
+calculate
+ 
+the
+ 
+standard
+ 
+deviation
+ 
+of
+ 
+the
+ 
+combined
+ 
+elasticity
+ 
+observations,
+ 
+or
+ 
+use
+ 
+an
+ 
+equivalent pooled calculation. Do not simply average the individual scenario standard deviations.
+Recommended implementation 
+procedure
+Clean the complete 
+dataset
+Check missing or invalid values and ensure fare, demand, weather, and time information are 
+usable.
+Define 
+scenarios
+Separate observations by the selected weather classes and/or time 
+slots.
+Calculate 
+elasticity
+Apply the approved price-elasticity formula separately to each 
+scenario.
+Calculate 
+statistics
+Record observation count, mean elasticity, and standard deviation for every 
+scenario.
+Compare 
+scenarios
+Use a defined similarity index or clustering method to identify candidate 
+groups.
+Test 
+combinations
+Calculate combined elasticity statistics without merging raw records for joint model 
+training.
+Report 
+findings
+Present individual results,
+ accepted and excluded groups, and the implications for customer 
+sensitivity.
+Suggested scenario-level results 
+table
+Column
+Purpose
+Scenario_ID
+Unique scenario 
+identifier
+Weather_Condition
+Clear, cloudy, rainy, 
+etc.
+Time_Slot
+Defined 
+time 
+period
+Observation_Count
+Number of valid elasticity 
+observations
+Mean_Elasticity
+Average price 
+sensitivity
+Std_Elasticity
+Spread of elasticity 
+values
+Cluster_ID
+Cluster assigned by the selected 
+method
+Combined_Scenarios
+Scenarios in a candidate 
+combination

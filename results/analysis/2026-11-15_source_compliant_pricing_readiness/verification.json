@@ -1,0 +1,208 @@
+{
+  "FARE_BOUNDS": "DECISION_REQUIRED",
+  "ACTION_RANGE": "DECISION_REQUIRED",
+  "PROACTIVE_PRICING_UNIT": "DECISION_REQUIRED",
+  "SLOT_AGGREGATION": "DECISION_REQUIRED",
+  "WEATHER_GROUPING": "PARTIAL",
+  "CONDITIONAL_DISTRIBUTIONS": "REFIT_REQUIRED",
+  "SOURCE_COMPLIANT_IMPLEMENTATION": "NOT_READY",
+  "acceptance_impact": {
+    "population": "saved March16 Highest Feasible request draws; counterfactual inequality only, not a simulator rerun",
+    "N": 73754,
+    "raw_below_zero": {
+      "N": 6112,
+      "percentage": 8.287008162269165
+    },
+    "raw_equal_zero": {
+      "N": 0,
+      "percentage": 0.0
+    },
+    "raw_positive_below_base": {
+      "N": 45812,
+      "percentage": 62.11459717439054
+    },
+    "historical_offer_above_raw": {
+      "N": 42125,
+      "percentage": 57.11554627545624
+    },
+    "floor_changes_ceiling": {
+      "N": 42125,
+      "percentage": 57.11554627545624
+    },
+    "offer_comparisons": [
+      {
+        "definition": "historical action",
+        "alpha": 0.85,
+        "offer": 19.001068676031885,
+        "N": 42125,
+        "percentage": 57.11554627545624
+      },
+      {
+        "definition": "historical action",
+        "alpha": 0.9,
+        "offer": 20.118778598151412,
+        "N": 46035,
+        "percentage": 62.41695365675082
+      },
+      {
+        "definition": "historical action",
+        "alpha": 0.95,
+        "offer": 21.23648852027093,
+        "N": 49449,
+        "percentage": 67.0458551400602
+      },
+      {
+        "definition": "historical action",
+        "alpha": 1,
+        "offer": 22.354198442390455,
+        "N": 51924,
+        "percentage": 70.40160533665971
+      },
+      {
+        "definition": "historical action",
+        "alpha": 1.05,
+        "offer": 23.47190836450998,
+        "N": 53834,
+        "percentage": 72.99129538736881
+      },
+      {
+        "definition": "historical action",
+        "alpha": 1.1,
+        "offer": 24.589618286629502,
+        "N": 55310,
+        "percentage": 74.99254277734089
+      },
+      {
+        "definition": "historical action",
+        "alpha": 1.15,
+        "offer": 25.707328208749022,
+        "N": 56507,
+        "percentage": 76.61550559969629
+      },
+      {
+        "definition": "observed extrema (unvalidated) min",
+        "alpha": 0.00044734325973580497,
+        "offer": 0.01,
+        "N": 6116,
+        "percentage": 8.292431596930335
+      },
+      {
+        "definition": "observed extrema (unvalidated) max",
+        "alpha": 93.23080876153911,
+        "offer": 2084.1,
+        "N": 73712,
+        "percentage": 99.94305393605771
+      },
+      {
+        "definition": "empirical P0.1\u2013P99.9 min",
+        "alpha": 0.13420297792074148,
+        "offer": 3.0,
+        "N": 8234,
+        "percentage": 11.164140250020338
+      },
+      {
+        "definition": "empirical P0.1\u2013P99.9 max",
+        "alpha": 6.14649638876996,
+        "offer": 137.4,
+        "N": 72092,
+        "percentage": 97.74656289828349
+      },
+      {
+        "definition": "empirical P0.5\u2013P99.5 min",
+        "alpha": 0.2952465514256313,
+        "offer": 6.6,
+        "N": 12495,
+        "percentage": 16.941454022832662
+      },
+      {
+        "definition": "empirical P0.5\u2013P99.5 max",
+        "alpha": 4.236340669698073,
+        "offer": 94.7,
+        "N": 70694,
+        "percentage": 95.85107248420425
+      },
+      {
+        "definition": "empirical P1\u2013P99 min",
+        "alpha": 0.3220871470097796,
+        "offer": 7.2,
+        "N": 13410,
+        "percentage": 18.182064701575506
+      },
+      {
+        "definition": "empirical P1\u2013P99 max",
+        "alpha": 3.644058193807867,
+        "offer": 81.46,
+        "N": 69940,
+        "percentage": 94.82875505057353
+      },
+      {
+        "definition": "empirical P2.5\u2013P97.5 min",
+        "alpha": 0.35340117519128594,
+        "offer": 7.9,
+        "N": 14599,
+        "percentage": 19.794180654608564
+      },
+      {
+        "definition": "empirical P2.5\u2013P97.5 max",
+        "alpha": 3.131402818150635,
+        "offer": 70.0,
+        "N": 69009,
+        "percentage": 93.566450633186
+      },
+      {
+        "definition": "empirical P5\u2013P95 min",
+        "alpha": 0.38471520337279225,
+        "offer": 8.6,
+        "N": 15906,
+        "percentage": 21.56628793014616
+      },
+      {
+        "definition": "empirical P5\u2013P95 max",
+        "alpha": 2.8764171601012256,
+        "offer": 64.3,
+        "N": 68409,
+        "percentage": 92.75293543401037
+      }
+    ]
+  },
+  "source_files": {
+    "notebooks/plan/Price_Elasticity_Weather_Scenario_Analysis_Explained.docx": "5edf3966f6897cf74ef89bf07c3f34a9c9f21e39f0759bbebb26bf3599d573ce",
+    "notebooks/plan/Professor_Meeting_Clarifications_DQN_Dynamic_Pricing_Explanation.docx": "1befbfa76e245d11775b27e7b30728a582e35044ffb886c64ee2a7ebb4133150"
+  },
+  "evidence_hashes_unchanged": {
+    "notebooks/plan/Price_Elasticity_Weather_Scenario_Analysis_Explained.docx": "5edf3966f6897cf74ef89bf07c3f34a9c9f21e39f0759bbebb26bf3599d573ce",
+    "notebooks/plan/Professor_Meeting_Clarifications_DQN_Dynamic_Pricing_Explanation.docx": "1befbfa76e245d11775b27e7b30728a582e35044ffb886c64ee2a7ebb4133150",
+    "src/simulation/passenger_sensitive_v1.py": "e8a3fb7b263ebdd819831cb2e29041c2d8cd12cdd66b12349477abcf4c6a2113",
+    "src/pricing/passenger_sensitive_v2.py": "b4cc77c065021ebfb8ae6352acb86e0fa09976558e44a60a11f4436875603c3b",
+    "src/pricing/passenger_sensitive_v2_conditioned.py": "912f696cb50c2f8be1220a9bb8e11ed164373b3e55988bb86bd6186a781b7813",
+    "src/rl/passenger_sensitive_dqn.py": "f4e76cd5baeccc65c1c5ce952753e99006f17864e1429d958b5230b6036ff241",
+    "src/pricing/dqn_contract.py": "ef9e65e6029ee62504532db9c44fbcb84f5c8f9836056ba0706be01bbcb279ee",
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/build.py": "a8e1bd11b210491874a46ccd0f5af1497d10d6400bea12b1d99ddfe0ee37fd3b",
+    "src/pricing/passenger_sensitive_v1.py": "8874b1234f49496721582e43b997532f29bc48768a032be0d971875ce7a65b28",
+    "src/simulation/final_production.py": "b2cd5371a632e745e1e65dcf9018fa3992942ff2e493caf3ec68b1d422fbaa78",
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/training_harness.py": "20e1f859e9f70849b6776d7625a58a63ac90bddf6691a9c13e497a1706612364",
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/training_harness_config.json": "6fa4f1040d784d0d566dba566d111f74ffbdc10b3453bf6aed5742f812c8736f",
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_time_grouping_contract.json": "377f8859fd417cad8632a6c8d66fb864caae0f47ce7a1b43cb4054aece9abbde",
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_code_time_statistics.csv": "37a256469c32ac65e07d14247e05ca33578775cd7179d9bb0655bc99fe4568d0",
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_cluster_candidates.csv": "3db5fb65b09143ef9b52a4b21e3189f73f27cc4491da438d38fd2aedafaf86fc",
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/conditional_support_statistics.csv": "e130ff2ffe3429d9c95ab62dcc2ad4587b03277d9d61d31a7fe41476dfc72ba6",
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_time_group_mapping.csv": "bc934d3816ca14f4ac33462bf813bcc435fca1f95ba94df75a1e1287c3378643",
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/runtime_cell_support_selection.csv": "9806af2d0a4619a367823f8428c02a9c8be9446ec8f7e68eeb06506410ea9c2b",
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/distribution_fit_comparison.csv": "9ec001e7b1f7cff24639b95f57af682c0d9cb832e19c1dce7e2cc3344d17524d",
+    "results/analysis/2026-11-14_pricing_v2_sensitivity_distribution_selection/pricing_v2_sensitivity_contract.json": "83858a2064b548efd98796fb2e0d6e65716cb7d1ef8f5cf3425f38b6e49aaf08",
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/development_evaluations.csv": "8cde76886e7118df0b271dee61907c6f5bbd1eedd49959668d06b5e9dccf117d",
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/episode_metrics.csv": "6bac9464d5ce948f18b30bc59b9b0ab6fc3020a7bdd532b2ea75eba2e6429816",
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/verification.json": "6def78c096aafd54eb039d71f6df1d666902bf6cb6edd7ce9fb5ee2dcf20aac5",
+    "README.md": "2d3fa4a1f76315495db6b38ace94c743ef0d5d7fa2e085cc5574283d8b2a50f8",
+    "results/analysis/2026-11-01_current_state_review/README.md": "2be507e8100694cd1af00963369b57e3ac5f6277169c741a2791beeb4947c040",
+    "results/training/pricing_v2_staged_training_001/weather_conditioned/HIGHEST_FEASIBLE_requests.parquet": "cd1056edc3e5ddfdc9442a389ee781a9a612cb5c6a78a7fa26388ee070af80a9"
+  },
+  "inputs_unchanged": true,
+  "production_modified": false,
+  "training_run": false,
+  "fitting_run": false,
+  "protected_March17_31_access": false,
+  "tests_run": false,
+  "artifact_checks": "PASS: fare-bin N, saved-request date/N/finite values, before/after input hashes, required output inventory",
+  "conditional_support_count": 21
+}

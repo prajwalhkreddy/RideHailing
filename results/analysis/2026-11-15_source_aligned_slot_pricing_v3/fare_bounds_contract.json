@@ -1,0 +1,14 @@
+{
+  "status": "PROJECT_APPROVED_ROBUST_EMPIRICAL_FARE_SUPPORT",
+  "rule": "P0.5_P99.5",
+  "lower_USD": 6.6,
+  "upper_USD": 94.7,
+  "population_N": 6967155,
+  "retained_N": 6898070,
+  "retained_pct": 99.00841878786966,
+  "excluded_lower_pct": 0.4997305212816422,
+  "excluded_upper_pct": 0.4918506908487036,
+  "scope": "Jan1\u2013Mar15; TLC fare_amount; existing source cleaning and1.5<=distance_km<75",
+  "rationale": "Explicit project decision: approximately99% retention; nominal0.5% tails (actual percentages differ with ties); rare extrema do not define range; broad empirical support. Not source-prescribed numerical bounds, statutory fare limits or uniquely optimal.",
+  "approval": "latest explicit user instruction"
+}

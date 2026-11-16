@@ -1,0 +1,187 @@
+> Current status (reporting update): V3 implementation and Episodes1–10 are complete; scientific review is paused at Episode10. This folder retains the earlier decision evidence, not a current implementation blocker. See [Episodes1–10 review](../2026-11-15_source_aligned_slot_pricing_v3/review_ep01_ep10/README.md). Frozen numerical content below is unchanged.
+
+# Approved V3 fare support and exact distribution trade-offs
+
+Fare support and seven factors are now explicitly PROJECT_APPROVED. Older recommendation files remain historical snapshots; fare_support_approved.json and action_space_approved.json supersede their pending status. Every other established decision remains frozen. Only conditional distribution selection remains. No refit, production changes, training or March16–31 access.
+
+Fare range $6.60–$94.70; inclusive retained N=6,898,070 (99.008418788%). Actual lower/upper exclusions 0.499730521%/0.491850691%: nominal0.5% tails with ties. This is project empirical support, not statutory bounds or uniquely optimal.
+
+Factors: `[0.2952465514256313, 0.9520955711377049, 1.6089445908497786, 2.265793610561852, 2.922642630273926, 3.5794916499859992, 4.236340669698073]`.
+
+## Metric definitions
+
+N denotes full condition population; fit/validation N are shown separately. Parameters use SciPy positional order: Gamma/Lognormal/Weibull/Fisk=(shape,loc,scale); Generalized_gamma=(a,c,loc,scale); Truncated_normal=(a,b,loc,scale), a=(0−loc)/scale,b=infinity; normalized positive support. AIC/BIC use training likelihood; KS and quantiles use held-out rows. Relative errors are signed percentages. Best errors minimize absolute deviation. References are separate, never candidate winners; reference quantiles are recovered exactly as empirical held-out quantile plus persisted error, without refitting. Numeric values are serialized at float64 round-trip precision.
+
+## GLOBAL
+
+Fisk lowest KS=0.073615; median +13.44%, P95 +3.86%, P99 +15.66%. No sole dominating family.
+
+Lowest KS: Fisk; best median: Truncated_normal; best P95: Generalized_gamma; best P99: Truncated_normal.
+
+### Non-dominated candidates
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Truncated_normal|5779213|4623641|1155572|[35.12502551872622, Infinity, -2235.301337098009, 63.63842599648225]|(0,infinity)|0.1766349546609016|14721795.986570563|14721822.67995666|True|NON_DOMINATED|1.1534949490968147|1.254455604228042|8.75258753497614|4.703619535234772|5.4166335211562|15.158836308511919|8.839464826315469|8.321293755600891|-5.8620185825273|
+|Lognormal|5779213|4623641|1155572|[0.852148572733696, 0, 1.2963387192621558]|(0,infinity)|0.0937433492195513|14041891.38055433|14041918.073940426|True|NON_DOMINATED|1.1534949490968147|1.2963387192621558|12.38356269155644|4.703619535234772|5.265644718788337|11.9487807069309|8.839464826315469|9.41155266691468|6.4719737205818|
+|Fisk|5779213|4623641|1155572|[2.23521386449624, 0, 1.3085578849674053]|(0,infinity)|0.0736148687118582|13567094.920390457|13567121.613776552|True|NON_DOMINATED|1.1534949490968147|1.308557884967405|13.442879484821729|4.703619535234772|4.88525747408024|3.8616630763780897|8.839464826315469|10.223725000839943|15.65999980455233|
+|Generalized_gamma|5779213|4623641|1155572|[8.359114694921104, 0.4238912700214925, 0, 0.00999404223180363]|(0,infinity)|0.0873320787486465|13824503.116872748|13824543.156951891|True|NON_DOMINATED|1.1534949490968147|1.3609058437977928|17.98108391054339|4.703619535234772|4.729142355796898|0.54262085551212|8.839464826315469|7.452559781422854|-15.689920964035489|
+
+### Empirical reference — REFERENCE_ONLY
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Empirical_reference|5779213|4623641|1155572|fit rows only; preserve duplicate frequencies|observed FIT support only|0.0010894621717218|N/A|N/A|NOT_APPLICABLE_EMPIRICAL|REFERENCE_ONLY|1.1534949490968147|1.1551666121911255|0.14492157903419|4.703619535234772|4.70572894403394|0.044846501367000004|8.839464826315469|8.881658505405708|0.47733295984873003|
+
+## RAW_13
+
+Fisk lowest KS=0.087971; median +13.76%, P95 +7.39%, P99 +31.49%. No sole dominating family.
+
+Lowest KS: Fisk; best median: Lognormal; best P95: Gamma; best P99: Truncated_normal.
+
+### Non-dominated candidates
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Lognormal|14817|11787|3030|[0.8973301465070288, 0, 1.2027779118414001]|(0,infinity)|0.1017667157903301|35252.80928037066|35267.55878538711|True|NON_DOMINATED|1.0688407038617522|1.2027779118414|12.531072918137278|4.543239121718649|5.262522918555694|15.83195992036953|8.085420069684456|9.700097011582356|19.97022947455733|
+|Truncated_normal|14817|11787|3030|[32.355237020205855, Infinity, -1821.7102339966227, 56.30341180498737]|(0,infinity)|0.1666709739336824|36590.755821176856|36605.505326193306|True|NON_DOMINATED|1.0688407038617522|1.204643172894066|12.705585457370361|4.543239121718649|5.200689849137007|14.47096905543576|8.085420069684456|7.988634423543772|-1.1970391804820801|
+|Fisk|14817|11787|3030|[2.119222183655337, 0, 1.215954757291287]|(0,infinity)|0.0879711396492719|34135.10409210886|34149.85359712531|True|NON_DOMINATED|1.0688407038617522|1.215954757291287|13.76388950177584|4.543239121718649|4.878928613683552|7.388770059673099|8.085420069684456|10.63164019459268|31.49150078738694|
+|Generalized_gamma|14817|11787|3030|[8.311509605027672, 0.40268324903838904, 0, 0.007285969030395092]|(0,infinity)|0.1056774516429489|34763.158527062595|34785.282784587274|True|NON_DOMINATED|1.0688407038617522|1.2663606972524248|18.47983452323879|4.543239121718649|4.715636000922652|3.7945807954477004|8.085420069684456|7.620025131876046|-5.755977225640581|
+|Gamma|14817|11787|3030|[1.506170892104928, 0, 1.1530273892670142]|(0,infinity)|0.139757744812384|35521.5433879295|35536.29289294595|True|NON_DOMINATED|1.0688407038617522|1.371040854086359|28.273637889420648|4.543239121718649|4.517626120537385|-0.56376079918009|8.085420069684456|6.554790314251421|-18.9307388143257|
+
+### Empirical reference — REFERENCE_ONLY
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Empirical_reference|14817|11787|3030|fit rows only; preserve duplicate frequencies|observed FIT support only|0.0198110521156468|N/A|N/A|NOT_APPLICABLE_EMPIRICAL|REFERENCE_ONLY|1.0688407038617522|1.0757403593020072|0.6455270102763|4.543239121718649|4.820226701338541|6.09669824103625|8.085420069684456|9.265736859626628|14.598088655500549|
+
+## RAW_15
+
+Fisk lowest KS=0.075351; median +13.37%, P95 -1.95%, P99 +4.76%. No sole dominating family.
+
+Lowest KS: Fisk; best median: Truncated_normal; best P95: Weibull; best P99: Lognormal.
+
+### Non-dominated candidates
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Truncated_normal|69368|55539|13829|[26.64001492147963, Infinity, -1250.7830748287206, 46.95129032454949]|(0,infinity)|0.1826170156742669|173716.5442519143|173734.39393342563|True|NON_DOMINATED|1.1189298230386506|1.219319949974761|8.971977050668201|4.736857056160348|5.261339766944957|11.072377835478731|9.178300725793008|8.078905673622558|-11.978198198288629|
+|Lognormal|69368|55539|13829|[0.8431794284147743, 0, 1.2630250635129288]|(0,infinity)|0.0975620234482695|164607.45824435906|164625.30792587038|True|NON_DOMINATED|1.1189298230386506|1.2630250635129288|12.87795154864691|4.736857056160348|5.055195006079311|6.72044661987339|9.178300725793008|8.980345521246694|-2.1567740092675|
+|Fisk|69368|55539|13829|[2.2686296095798437, 0, 1.268484760987005]|(0,infinity)|0.0753507586700401|158668.11979404904|158685.96947556036|True|NON_DOMINATED|1.1189298230386506|1.268484760987005|13.36589077071979|4.736857056160348|4.644651312883399|-1.9465595474753499|9.178300725793008|9.615032396325825|4.75830639658062|
+|Weibull|69368|55539|13829|[1.21500336356737, 0, 1.890755565283936]|(0,infinity)|0.1139168098024167|169839.64054767793|169857.49022918925|True|NON_DOMINATED|1.1189298230386506|1.398388678030547|24.97554799576051|4.736857056160348|4.664636854737985|-1.5246438844600398|9.178300725793008|6.6453077435982975|-27.597624635205648|
+
+### Empirical reference — REFERENCE_ONLY
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Empirical_reference|69368|55539|13829|fit rows only; preserve duplicate frequencies|observed FIT support only|0.0047920195324143|N/A|N/A|NOT_APPLICABLE_EMPIRICAL|REFERENCE_ONLY|1.1189298230386506|1.117300017220537|-0.14565755461657|4.736857056160348|4.607098690178587|-2.73933463567385|9.178300725793008|8.879429217083185|-3.25628368081173|
+
+## T1_G1
+
+Lognormal lowest KS=0.079169; median +19.83%, P95 +5.24%, P99 +14.16%. No sole dominating family.
+
+Lowest KS: Lognormal; best median: Lognormal; best P95: Fisk; best P99: Generalized_gamma.
+
+### Non-dominated candidates
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Lognormal|431018|345292|85726|[1.00109793505493, 0, 1.3009213372607122]|(0,infinity)|0.0791685145597634|1162331.869686801|1162353.3739782306|True|NON_DOMINATED|1.0856725858404266|1.3009213372607122|19.82630437828179|6.414826239811378|6.7512812644152715|5.24495928690637|11.699243769921557|13.35612107607406|14.16225987539718|
+|Fisk|431018|345292|85726|[1.8354738056919295, 0, 1.3029397107448148]|(0,infinity)|0.0876351881808484|1144482.9964790223|1144504.5007704522|True|NON_DOMINATED|1.0856725858404266|1.3029397107448148|20.012214339574598|6.414826239811378|6.480565131032749|1.02479613264324|11.699243769921557|15.928805188565844|36.152434309629285|
+|Generalized_gamma|431018|345292|85726|[10.954795026840012, 0.3105278657340122, 0, 0.0006779413649017829]|(0,infinity)|0.099528794795322|1153145.6658744933|1153177.9223116378|True|NON_DOMINATED|1.0856725858404266|1.3679879572435605|26.003730322120223|6.414826239811378|6.107342230946285|-4.79333340249811|11.699243769921557|10.63544652704132|-9.09287184540278|
+|Truncated_normal|431018|345292|85726|[35.47190265991259, Infinity, -2603.889129132383, 73.40708938274922]|(0,infinity)|0.1069108551695917|1191363.4062937864|1191384.910585216|True|NON_DOMINATED|1.0856725858404266|1.432897813494492|31.982499344890048|6.414826239811378|6.187243270259387|-3.5477651466157596|11.699243769921557|9.505260628440736|-18.75320477654709|
+
+### Empirical reference — REFERENCE_ONLY
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Empirical_reference|431018|345292|85726|fit rows only; preserve duplicate frequencies|observed FIT support only|0.0039369916777592|N/A|N/A|NOT_APPLICABLE_EMPIRICAL|REFERENCE_ONLY|1.0856725858404266|1.082372413093774|-0.30397495429967997|6.414826239811378|6.353569845581531|-0.9549189945267701|11.699243769921557|11.73828559498023|0.33371238198359|
+
+## T1_POOLED
+
+Lognormal lowest KS=0.079065; median +19.90%, P95 +5.33%, P99 +14.29%. No sole dominating family.
+
+Lowest KS: Lognormal; best median: Lognormal; best P95: Fisk; best P99: Generalized_gamma.
+
+### Non-dominated candidates
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Lognormal|432687|346633|86054|[1.0014103946124762, 0, 1.3017382005996434]|(0,infinity)|0.079065473287493|1167497.486222839|1167518.9982665638|True|NON_DOMINATED|1.0856725858404266|1.3017382005996434|19.901544680890957|6.417022700188985|6.758993364604315|5.3291172618924705|11.701802591238208|13.374225590217632|14.292011730155659|
+|Fisk|432687|346633|86054|[1.8347967422022897, 0, 1.3036805932368658]|(0,infinity)|0.0875543061621225|1149598.4471822127|1149619.9592259375|True|NON_DOMINATED|1.0856725858404266|1.3036805932368658|20.08045613748989|6.417022700188985|6.488089717874829|1.10747648880455|11.701802591238208|15.952593297812896|36.32594784804773|
+|Generalized_gamma|432687|346633|86054|[10.988466262857807, 0.30993160667172986, 0, 0.0006616789581916335]|(0,infinity)|0.0993933927839289|1158294.4627336003|1158326.7307991874|True|NON_DOMINATED|1.0856725858404266|1.3687657163828588|26.07536878379294|6.417022700188985|6.1150955188306675|-4.70509760467928|11.701802591238208|10.652674197725258|-8.965528048631501|
+|Truncated_normal|432687|346633|86054|[41.15447650945193, Infinity, -3505.406080253585, 85.17678701242865]|(0,infinity)|0.1067075100103632|1196646.5853057946|1196668.0973495194|True|NON_DOMINATED|1.0856725858404266|1.4334577850258938|32.034077651158924|6.417022700188985|6.191105891386087|-3.52058609355152|11.701802591238208|9.51273999546038|-18.70705456454121|
+
+### Empirical reference — REFERENCE_ONLY
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Empirical_reference|432687|346633|86054|fit rows only; preserve duplicate frequencies|observed FIT support only|0.0038866958318438|N/A|N/A|NOT_APPLICABLE_EMPIRICAL|REFERENCE_ONLY|1.0856725858404266|1.082896678130116|-0.25568553047342|6.417022700188985|6.366241334808202|-0.7913539931733|11.701802591238208|11.753813850438352|0.44447219814738004|
+
+## T2_POOLED
+
+Fisk lowest KS=0.076166; median -5.09%, P95 +35.55%, P99 +81.82%. No sole dominating family. Retain Generalized Gamma recommendation: KS=0.076185; median -0.36%, P95 +6.50%, P99 -11.33%; non-dominated, not strict dominance.
+
+Lowest KS: Fisk; best median: Generalized_gamma; best P95: Gamma; best P99: Generalized_gamma.
+
+### Non-dominated candidates
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Generalized_gamma|108740|86906|21834|[3.1349479162440574, 0.5910657612405081, 0, 0.2988498612281582]|(0,infinity)|0.0761846763369596|324609.5597404198|324637.67748748104|True|NON_DOMINATED|1.7211857625819929|1.7149428914317564|-0.36270757555369|6.653975743803936|7.086608305532091|6.5018656271931095|12.928244681967126|11.46355597879672|-11.32937022156934|
+|Fisk|108740|86906|21834|[1.7232879173513893, 0, 1.633555226560681]|(0,infinity)|0.0761664372300449|328222.53106952296|328241.27623423043|True|NON_DOMINATED|1.7211857625819929|1.633555226560681|-5.09128868750663|6.653975743803936|9.019381211211911|35.54875398532375|12.928244681967126|23.50569826513278|81.81662587125646|
+|Weibull|108740|86906|21834|[1.0956136328594437, 0, 2.5364237439760453]|(0,infinity)|0.0805955372889739|327855.34203569393|327874.0872004014|True|NON_DOMINATED|1.7211857625819929|1.815257962617306|5.46554602532809|6.653975743803936|6.904633626351874|3.7670393190318703|12.928244681967126|10.223188954915091|-20.92361177867527|
+|Gamma|108740|86906|21834|[1.2459288203624237, 0, 1.96132034539949]|(0,infinity)|0.0915851119443072|326657.5302313807|326676.2753960882|True|NON_DOMINATED|1.7211857625819929|1.829777936001326|6.30914894720203|6.653975743803936|6.779569913324825|1.88750567114465|12.928244681967126|10.094836583334462|-21.91641764473118|
+
+### Empirical reference — REFERENCE_ONLY
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Empirical_reference|108740|86906|21834|fit rows only; preserve duplicate frequencies|observed FIT support only|0.0040939631396208|N/A|N/A|NOT_APPLICABLE_EMPIRICAL|REFERENCE_ONLY|1.7211857625819929|1.7229658589407948|0.10342267508253|6.653975743803936|6.603230645218035|-0.76262824722728|12.928244681967126|12.551762475906886|-2.91209066135152|
+
+## T3_POOLED
+
+Fisk lowest KS=0.064316; median +11.47%, P95 +5.35%, P99 +15.40%. No sole dominating family.
+
+Lowest KS: Fisk; best median: Truncated_normal; best P95: Gamma; best P99: Truncated_normal.
+
+### Non-dominated candidates
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Truncated_normal|2544533|2035618|508915|[40.0862066546213, Infinity, -2932.589048305705, 73.15706057129815]|(0,infinity)|0.19057671759824|6516044.084782042|6516069.137402074|True|NON_DOMINATED|1.2142537485846985|1.263931202851836|4.09119216844424|4.549775257785197|5.458721363801487|19.9778242773855|8.438656574796212|8.387205676125632|-0.60970485307162|
+|Lognormal|2544533|2035618|508915|[0.8231616018888479, 0, 1.338021919030879]|(0,infinity)|0.0953353788562124|6170076.707219904|6170101.759839937|True|NON_DOMINATED|1.2142537485846985|1.338021919030879|10.19294118634113|4.549775257785197|5.181904692508358|13.8936408703158|8.438656574796212|9.080711840347616|7.60850094870591|
+|Fisk|2544533|2035618|508915|[2.3286027382623598, 0, 1.3535842549171826]|(0,infinity)|0.064315745095093|5939283.164265412|5939308.216885445|True|NON_DOMINATED|1.2142537485846985|1.3535842549171826|11.474579056880339|4.549775257785197|4.793314205586031|5.3527687413594895|8.438656574796212|9.738566179804982|15.40422451710166|
+|Generalized_gamma|2544533|2035618|508915|[7.9746456679670334, 0.45110756877787184, 0, 0.015459867866674583]|(0,infinity)|0.0797219731046887|6061814.8933951|6061852.472325149|True|NON_DOMINATED|1.2142537485846985|1.4038123196567216|15.611116810878102|4.549775257785197|4.645750495954885|2.10945008779198|8.438656574796212|7.182805944118768|-14.8821156489328|
+|Gamma|2544533|2035618|508915|[1.7652394167046626, 0, 1.0326622761387692]|(0,infinity)|0.1051361090644054|6182588.368022593|6182613.420642626|True|NON_DOMINATED|1.2142537485846985|1.4926075536097496|22.923857995043708|4.549775257785197|4.500338775282177|-1.0865697688787601|8.438656574796212|6.396460765916939|-24.20048488498409|
+
+### Empirical reference — REFERENCE_ONLY
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Empirical_reference|2544533|2035618|508915|fit rows only; preserve duplicate frequencies|observed FIT support only|0.0012518942193491|N/A|N/A|NOT_APPLICABLE_EMPIRICAL|REFERENCE_ONLY|1.2142537485846985|1.2149354476625776|0.05614140196591|4.549775257785197|4.565131457664277|0.33751556964936996|8.438656574796212|8.465250122614192|0.31513959102691996|
+
+## T4_POOLED
+
+Fisk lowest KS=0.082017; median +12.79%, P95 +3.29%, P99 +13.66%. No sole dominating family.
+
+Lowest KS: Fisk; best median: Truncated_normal; best P95: Generalized_gamma; best P99: Truncated_normal.
+
+### Non-dominated candidates
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Truncated_normal|2693253|2154484|538769|[26.982761663428015, Infinity, -1259.7655114769498, 46.68779004872637]|(0,infinity)|0.1824789185393348|6659931.70492716|6659956.87105078|True|NON_DOMINATED|1.1155174379609465|1.1971323709478838|7.31632964305078|4.45432135199783|5.165809033376945|15.97297601934359|8.372350782066057|7.932437753892145|-5.25435495507695|
+|Lognormal|2693253|2154484|538769|[0.8420251750029267, 0, 1.2481246694214903]|(0,infinity)|0.097035428733698|6328306.629432097|6328331.795555716|True|NON_DOMINATED|1.1155174379609465|1.2481246694214905|11.88750860792785|4.45432135199783|4.986081463501361|11.93807248022257|8.372350782066057|8.850603387592702|5.71228580808013|
+|Fisk|2693253|2154484|538769|[2.2711009029504603, 0, 1.258242962400416]|(0,infinity)|0.0820170053245031|6097884.156439431|6097909.32256305|True|NON_DOMINATED|1.1155174379609465|1.258242962400416|12.794557895962381|4.45432135199783|4.600648121615553|3.28505193169533|8.372350782066057|9.5164024829538|13.66464127779204|
+|Generalized_gamma|2693253|2154484|538769|[8.266101149054089, 0.4316616752703401, 0, 0.01079678836127841]|(0,infinity)|0.0991000941045864|6225364.030922149|6225401.780107578|True|NON_DOMINATED|1.1155174379609465|1.309919622044639|17.42708607397837|4.45432135199783|4.479980564678235|0.57605212225867|8.372350782066057|7.016818205266524|-16.190585082783958|
+
+### Empirical reference — REFERENCE_ONLY
+
+|family|N|fit_N|validation_N|fitted_parameters|support|heldout_KS|AIC|BIC|convergence_status|pareto_status|median_empirical|median_fitted|median_relative_error_pct|P95_empirical|P95_fitted|P95_relative_error_pct|P99_empirical|P99_fitted|P99_relative_error_pct|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|Empirical_reference|2693253|2154484|538769|fit rows only; preserve duplicate frequencies|observed FIT support only|0.0017290178391632|N/A|N/A|NOT_APPLICABLE_EMPIRICAL|REFERENCE_ONLY|1.1155174379609465|1.1156518831416902|0.01205227064755|4.45432135199783|4.471299209349079|0.3811547486046|8.372350782066057|8.407645854210513|0.4215670492457|
+
+## Remaining decision
+
+Approve the conditional distribution schedule using all candidates above. T2 Generalized Gamma remains the supported recommendation: almost tied best KS while avoiding the existing10% median/20% tail review concerns; Fisk lowest KS has+81.82% P99 error. It is not a strict Pareto winner. No other family is automatically selected.

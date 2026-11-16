@@ -1,0 +1,27 @@
+{
+  "schema": "V3_FULL_RUNTIME_1",
+  "boundary": "POST_SLOT_COMMIT",
+  "default_namespace": "models/pricing_dqn/source_aligned_slot_pricing_v3/",
+  "validation_namespace": "temporary v3_resume_validation_* only",
+  "api": [
+    "src.simulation.v3_checkpoint.save_v3_checkpoint",
+    "src.simulation.v3_checkpoint.load_v3_checkpoint"
+  ],
+  "contents": [
+    "runtime.json",
+    "learner/",
+    "inactive_engine_learner/",
+    "manifest.json",
+    "status.json"
+  ],
+  "codec": "explicit allow-listed tagged JSON, no pickle; lossless numeric arrays and float hex; DataFrame dtypes and None preserved",
+  "atomicity": "same-parent hidden WRITING directory; files and directory fsync; rename; parent fsync; existing target refused",
+  "resume": "new objects from saved values, next uncompleted slot, no constructor episode reset, global RNG restored after loads",
+  "exploration": "Existing implementation advances by action decisions, not optimizer updates. Both positions saved; methodology unchanged.",
+  "limitations": [
+    "same software/hardware deterministic execution required",
+    "no mid-slot resume",
+    "no training launched",
+    "validation fixture checkpoint includes inactive legacy constructor state; it never supplies V3 prices or weights"
+  ]
+}

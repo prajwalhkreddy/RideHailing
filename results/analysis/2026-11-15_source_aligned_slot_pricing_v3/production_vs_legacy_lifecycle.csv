@@ -1,0 +1,10 @@
+stage,ProductionExperiment,legacy multi_slot/main_slot,missing_in_legacy,required_adapter
+initialization,configured_interfaces once,OperationalStatistics only,canonical owner missing,explicit persistent producer
+slot-start state,published142-grid boundary,legacy feature context,canonical state missing,from_producer
+requests/dispatch,actual assignments,existing legacy dispatch,no substitute needed,preserve outcomes
+fare/count recording,ASSIGNED offered fares/count by origin,NB9 fares and wait observations,canonical complete_slot missing,reuse requests
+charging waits,charging_grid_observations,legacy NB9 observations,canonical mapping absent,reuse canonical extractor
+slot completion,route then complete_slot,NB9 update only,persistent update absent,canonical completion timing
+routing inference,169D mask9,legacy object to current learner,type mismatch,canonical builder
+next-slot persistence,same producer next boundary,same NB9 owner,producer absent,multi-slot owner
+next pricing input,final pricing interface,nine probabilities to five-probability context,independent incompatible contract,BLOCKED: separate pricing decision

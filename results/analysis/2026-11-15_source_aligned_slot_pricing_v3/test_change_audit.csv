@@ -1,0 +1,3 @@
+test_file,original_behavioral_purpose,interface_update,behavioral_assertion_preserved
+tests/test_main_slot.py,ordering dispatch routing learning next state,NONE: blocked before edits,YES unchanged
+tests/test_multi_slot.py,chronology persistence charging RNG,NONE: blocked before edits,YES unchanged

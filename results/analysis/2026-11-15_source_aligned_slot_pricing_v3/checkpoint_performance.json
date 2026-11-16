@@ -1,0 +1,12 @@
+{
+  "bytes": 121052834,
+  "save_seconds": 0.7600369170540944,
+  "load_seconds": 0.9345734999515116,
+  "active_at_save": 1,
+  "queued_at_save": 1,
+  "outcomes": [
+    "ACCEPTED_AND_ASSIGNED",
+    "ACCEPTED_BUT_UNMATCHED",
+    "PASSENGER_REJECTED"
+  ]
+}

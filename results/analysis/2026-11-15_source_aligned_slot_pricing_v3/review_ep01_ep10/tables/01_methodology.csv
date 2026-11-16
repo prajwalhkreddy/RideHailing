@@ -1,0 +1,13 @@
+item,definition
+version,SOURCE_ALIGNED_SLOT_PRICING_V3
+P_base_USD,22.354198442390455
+L_base_km,4.616983790655043
+fare_support_USD,6.60–94.70
+state,"predicted_demand,idle_supply,incoming_supply,previous_dispatch,p_STAY,p_N,p_NE,p_E,p_SE,p_S,p_SW,p_W,p_NW,dropoff_probability,destination_popularity"
+actions,"[0.2952465514256313, 0.9520955711377049, 1.6089445908497786, 2.265793610561852, 2.922642630273926, 3.5794916499859992, 4.236340669698073]"
+reward,Accepted offered revenue including unmatched; rejected zero
+acceptance,P_offer <= P_base+(P_base/epsilon)*(L-L_base)/L_base
+transition,One destination per30min slot;142 contexts
+gamma,0.99
+episode_slots,16
+privacy,NON_PRIVATE

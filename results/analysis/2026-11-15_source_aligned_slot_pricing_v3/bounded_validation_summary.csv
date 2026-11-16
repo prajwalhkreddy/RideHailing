@@ -1,0 +1,2 @@
+slots,requests,accepted,rejected,assigned,accepted_unmatched,accepted_revenue,assignment_revenue,acceptance_rate,dispatch_success_rate,optimizer_updates,validation_type
+17,225,108,117,24,84,4926.916666666668,540.1666666666666,0.48,0.2222222222222222,0,controlled small-fleet frozen-simulator integration; not empirical demand performance

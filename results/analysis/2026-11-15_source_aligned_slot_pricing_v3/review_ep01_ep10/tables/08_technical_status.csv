@@ -1,0 +1,15 @@
+check,result
+status,PASS
+episode_scope,"[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]"
+requests_reconcile,True
+acceptance_mismatches,0
+dispatch_reconcile,True
+reward_reconcile,True
+transitions,22720
+optimizer_cadence,True
+epsilon_schedule,True
+routing_weights_unchanged,True
+operational_finite,True
+no_simulator_instantiated,True
+March17_31,UNTOUCHED
+post_ep10_metrics_used,False

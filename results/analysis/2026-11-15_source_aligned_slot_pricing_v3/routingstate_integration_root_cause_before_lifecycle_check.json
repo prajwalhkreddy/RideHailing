@@ -1,0 +1,44 @@
+{
+  "status": "BLOCKED_MISSING_CANONICAL_STATE_LIFECYCLE",
+  "production_fix_applied": false,
+  "root_cause": "main_slot builds baseline.RoutingState for both local observations and next policy inference, while learning requires final_state.RoutingState. Canonical producer is not an input or state owner of the legacy runner.",
+  "canonical_builder": "src.routing.final_state.RoutingState.from_producer -> OperationalRouting.encode",
+  "contract": {
+    "dimensions": 169,
+    "action_order": [
+      "STAY",
+      "N",
+      "NE",
+      "E",
+      "SE",
+      "S",
+      "SW",
+      "W",
+      "NW"
+    ],
+    "features": "9 candidate triples mu,sigma,F_hat then H_hat for Grid_ID 0..141",
+    "units": "mu/sigma USD; F_hat dispatches/minute; H_hat minutes",
+    "normalization": "none; masked candidate triples zero only",
+    "metadata": "values and mask only; private vehicle energy/preferences remain decision inputs"
+  },
+  "additional_evidence": [
+    "OperationalStatistics has fare/wait EWMAs, no canonical F_hat or H_hat state for all142 grids.",
+    "OperationalGridState requires metric142-grid geometry, explicit priors preceding decision, four smoothing coefficients, persistent complete_slot lifecycle.",
+    "multi_slot neither accepts nor forwards canonical operational/routing producers.",
+    "Legacy main_slot.select_action/execute_reposition still require baseline.RoutingState; replacing the object globally is not interface-compatible.",
+    "Next-policy inference repeats legacy build_routing_state at main_slot.py:267.",
+    "Two-grid historical test fixtures cannot establish unavailable142-grid estimates without new real fixture data; padding is forbidden."
+  ],
+  "required_next_scope": "Explicit canonical producer lifecycle wiring through multi-slot and main-slot, with provenance-backed142-grid fixtures; preserve legacy decision context separately from canonical learner state. No routing-core changes needed, but not a field-renaming repair.",
+  "tests": "Not rerun: no code changes; prior exact12-error reproduction remains evidence.",
+  "March17_31": "UNTOUCHED",
+  "source_hashes": {
+    "src/simulation/main_slot.py": "27b1cb1cf4470467af9753d57878dd8ba4c1c4d93d6601f777605f0d18efbdb5",
+    "src/simulation/multi_slot.py": "562479f16271b66c175e03cc932af043eaed83ea252f427b08b78b19f4adbf29",
+    "src/simulation/statistics.py": "bc475ed6f67204fdd61a776fa4f94231cd543fbca1d06d54a1af84c9784acbe2",
+    "src/simulation/operational_state.py": "38d803b200a07d78022abc720c9fe955abaeb7b1f53a20c371bb2f038c905e39",
+    "src/routing/final_state.py": "5db2dbd8528cbdfadf87d697484f0fb9911e8d4ad81b5cf38ec58aad605749b4",
+    "src/routing/operational_interface.py": "800b2826cf4b5e38ddca98106c9cd14050bf142589abf387671379a983be6e81",
+    "src/routing/configuration.py": "8607bdfdce35ae5799bc726211338ab3f11c93ff9be784282aa86034032669c1"
+  }
+}

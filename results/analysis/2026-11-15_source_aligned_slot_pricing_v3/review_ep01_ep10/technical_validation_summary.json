@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "episode_scope": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "requests_reconcile": true,
+  "acceptance_mismatches": 0,
+  "dispatch_reconcile": true,
+  "reward_reconcile": true,
+  "transitions": 22720,
+  "optimizer_cadence": true,
+  "epsilon_schedule": true,
+  "routing_weights_unchanged": true,
+  "operational_finite": true,
+  "no_simulator_instantiated": true,
+  "March17_31": "UNTOUCHED",
+  "post_ep10_metrics_used": false,
+  "saved_health_gates": [
+    {
+      "TECHNICAL_INVARIANTS": "PASS",
+      "NUMERICAL_STABILITY": "PASS",
+      "PASSENGER_ACCEPTANCE_INVARIANT": "PASS",
+      "REWARD_RECONCILIATION": "PASS",
+      "REPLAY_HEALTH": "PASS",
+      "LEARNING_STARTED": "PASS",
+      "CHECKPOINT_VALID": "PASS",
+      "ROUTING_FROZEN": "PASS",
+      "FLEET_INVARIANTS": "PASS",
+      "MARCH17_31": "UNTOUCHED",
+      "CONTINUE_TO_EPISODES_2_10": "RECOMMENDED",
+      "EPISODE2": "NOT_STARTED"
+    },
+    {
+      "TECHNICAL_INVARIANTS": "PASS",
+      "NUMERICAL_STABILITY": "PASS",
+      "PASSENGER_ACCEPTANCE_INVARIANT": "PASS",
+      "REWARD_RECONCILIATION": "PASS",
+      "REPLAY_HEALTH": "PASS",
+      "LEARNING_STARTED": "PASS",
+      "CHECKPOINT_VALID": "PASS",
+      "ROUTING_FROZEN": "PASS",
+      "FLEET_INVARIANTS": "PASS",
+      "MARCH17_31": "UNTOUCHED",
+      "CONTINUE_TO_EPISODES_11_25": "RECOMMENDED",
+      "EPISODE11": "NOT_STARTED"
+    }
+  ],
+  "scope": "Saved training validations plus deterministic reporting reconciliations; no new execution tests"
+}

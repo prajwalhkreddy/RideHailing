@@ -1,0 +1,60 @@
+{
+  "status": "BLOCKED_RUNTIME_SERIALIZATION",
+  "objects": {
+    "engine.operational": [
+      "timestamp",
+      "_state",
+      "_observations",
+      "parameters"
+    ],
+    "engine": [
+      "timestamp",
+      "clock",
+      "slot_index",
+      "current_states",
+      "ledger",
+      "passengers",
+      "missions",
+      "request_rng",
+      "request_id",
+      "charging_events",
+      "routing_experiences",
+      "profiles",
+      "reserve counters"
+    ],
+    "fleet": [
+      "vehicles and energy/status/destination/travel time"
+    ],
+    "charging": [
+      "stations queues sessions vehicle_station navigation and RNG"
+    ],
+    "routing": [
+      "frozen checkpoint identity and operational/topology config"
+    ],
+    "dropoff": [
+      "previous",
+      "last",
+      "audit"
+    ],
+    "learner": [
+      "online/target weights",
+      "optimizer",
+      "replay",
+      "RNG",
+      "decision/training counters"
+    ],
+    "provider": [
+      "RNG",
+      "contract identity",
+      "audit"
+    ],
+    "V3 runtime": [
+      "states",
+      "slots",
+      "audit",
+      "slot_audit"
+    ]
+  },
+  "note": "Learner checkpoint alone does not serialize the runtime. No training/resume implemented.",
+  "regression_gate": "PASS"
+}

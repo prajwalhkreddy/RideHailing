@@ -1,0 +1,9 @@
+question,decision
+Is the wide empirical fare-support action range acceptable given observed acceptance/revenue?,UNRESOLVED_REVIEWER_DECISION
+Is the grouping and selected parametric sensitivity approach acceptable?,UNRESOLVED_REVIEWER_DECISION
+Is slot-level accepted-revenue the desired objective?,UNRESOLVED_REVIEWER_DECISION
+Should accepted-but-unmatched revenue remain in pricing reward?,UNRESOLVED_REVIEWER_DECISION
+Are16-slot/8-hour terminal segments appropriate?,UNRESOLVED_REVIEWER_DECISION
+What horizon and fixed evaluation are required for convergence/stability claims?,UNRESOLVED_REVIEWER_DECISION
+Is fixed development evaluation needed before further training?,UNRESOLVED_REVIEWER_DECISION
+What evidence is required before Differential Privacy?,UNRESOLVED_REVIEWER_DECISION

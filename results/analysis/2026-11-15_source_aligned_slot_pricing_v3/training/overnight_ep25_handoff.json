@@ -1,0 +1,11 @@
+{
+  "status": "RUNNING_EP11_EP25",
+  "handoff_pid": 36697,
+  "current_stage2_pid": 33413,
+  "stage3_pid": 36697,
+  "stage2_status_file": "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-15_source_aligned_slot_pricing_v3/training/stage_ep02_ep10/training_status.json",
+  "stage3_status_file": "/Users/prajwalhk/Keerthi/Implementation/results/analysis/2026-11-15_source_aligned_slot_pricing_v3/training/stage_ep11_ep25/training_status.json",
+  "latest_event": "Same PID executing Stage3; stops after Episode25",
+  "failure": null,
+  "current_episode": 10
+}

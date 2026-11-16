@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "focused_tests": 5,
+  "active_stage_sources_unchanged": true,
+  "active_process_signalled": false,
+  "active_status_polled_by_codex": false,
+  "training_started_by_validation": false,
+  "checkpoint_validation": "Deferred to detached handoff after Episode10 COMPLETE"
+}

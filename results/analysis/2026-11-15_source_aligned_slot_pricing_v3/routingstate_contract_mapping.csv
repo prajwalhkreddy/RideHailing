@@ -1,0 +1,6 @@
+legacy_main_slot_field,current_RoutingState_field,source_of_current_value,conversion_needed,semantic_change
+action_features fare fields,"values[3*a:3*a+2] mu,sigma",OperationalGridState.state_for(timestamp),No lossless mapping from first-observation legacy EWMA,UNRESOLVED: use canonical producer
+no canonical dispatch-rate field,values[3*a+2] F_hat,Persistent canonical delta-smoothed successful dispatch count/30,Unavailable from legacy EWMA; do not invent,UNRESOLVED
+charging_wait instantaneous only,values[27:169] H_hat,Persistent canonical kappa-smoothed station waits for142grids,Unavailable for complete domain,UNRESOLVED
+directional neighbours,mask[0:9],OperationalRouting.candidates(grid),"Require canonical topology, not padding",NO when canonical source supplied
+vehicle_id/current_grid/energy,not encoded in current RoutingState,Vehicle and separate decision arguments,Keep separate; not input features,NO

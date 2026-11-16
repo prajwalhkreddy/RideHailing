@@ -1,0 +1,23 @@
+{
+  "producer": "src.simulation.operational_state.OperationalGridState",
+  "canonical_owner": "src.simulation.final_production.ProductionExperiment.operational",
+  "routing_builder": "src.routing.final_state.RoutingState.from_producer",
+  "producer_tests": {
+    "run": 23,
+    "passed": 23,
+    "failures": 0,
+    "errors": 0
+  },
+  "integration_status": "BLOCKED_INDEPENDENT_PRICING_DIMENSION_CONFLICT",
+  "production_changes": [],
+  "test_changes": [],
+  "operational_state_checkpoint_requirement": true,
+  "checkpoint_fields": [
+    "timestamp",
+    "_state",
+    "_observations",
+    "parameters"
+  ],
+  "protected_dates_accessed": false,
+  "reproduction": "canonical nine-action STAY-only vector -> PricingContextInput -> build_pricing_context -> ValueError: Routing probabilities must be five finite non-negative values."
+}

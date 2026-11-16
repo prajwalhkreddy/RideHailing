@@ -1,0 +1,23 @@
+{
+  "features": [
+    "predicted_demand",
+    "idle_supply",
+    "incoming_supply",
+    "previous_dispatch",
+    "p_STAY",
+    "p_N",
+    "p_NE",
+    "p_E",
+    "p_SE",
+    "p_S",
+    "p_SW",
+    "p_W",
+    "p_NW",
+    "dropoff_probability",
+    "destination_popularity"
+  ],
+  "dimension": 15,
+  "timestamp": "before requests at slot boundary",
+  "destination": "all signals indexed at destination context grid d",
+  "weather_time_appended": false
+}

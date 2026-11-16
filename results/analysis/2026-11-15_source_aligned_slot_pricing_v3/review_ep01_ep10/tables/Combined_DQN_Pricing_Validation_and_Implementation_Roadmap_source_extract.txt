@@ -1,0 +1,270 @@
+DQN Pricing Validation
+and Implementation Roadmap
+Integrated explanation of passenger acceptance, request-level pricing, driver preferences, DQN learning, CNN demand validation, and Differential Privacy
+Prepared as a single working document for implementation and professor review
+1. Executive summary and overall objective
+The immediate objective is to validate the existing pricing mechanism at the individual passenger-request level before making further changes or attributing results to Differential Privacy. Episode-level acceptance, rejection, assignment and revenue totals are useful, but they do not explain why a particular passenger accepted or rejected a particular offered fare.
+The corrected pricing-learning component is a Deep Q-Network (DQN), not a Multi-Armed Bandit (MAB) and not an actor–critic pricing agent. DQN observes the pricing state, selects an action, and the selected action maps to a pricing factor. That factor determines the offered price. The passenger acceptance mechanism then compares the offered price with that passenger's maximum acceptable price. The resulting interaction contributes to the reward used to train DQN.
+The work should proceed in this order: validate request-level passenger pricing; inspect distance and historical-fare behaviour; clarify driver/vehicle price constraints; evaluate DQN learning; validate CNN demand predictions; and only then introduce and evaluate Differential Privacy.
+2. End-to-end pricing logic
+2.1 DQN action and offered price
+At each pricing decision, the DQN agent observes its state and selects an action. The action is mapped to a pricing factor a. The conceptual offered-price equation is:
+P_offer (or P_GG′) = P_base × a
+The pricing factors discussed in the project include 0.85, 0.90, 0.95, 1.00, 1.05, 1.10 and 1.15. Confirm that the notebook's action-to-factor mapping and the equation above match the actual implementation before treating them as final.
+DQN does not directly decide whether a passenger accepts or rejects. DQN selects the pricing action; the passenger decision is made by the acceptance rule below.
+2.2 Passenger maximum acceptable price
+The meeting explanation expresses the passenger-specific maximum acceptable price as:
+P_max,j = P_base × [1 + (1 / ε_j) × ((L_GG′ − L_base) / L_base)]
+Symbol
+Meaning
+P_base
+Reference or base fare.
+ε_j
+Price elasticity / price sensitivity of passenger j, using its absolute value.
+L_GG′
+Distance-related value for the requested source–destination trip.
+L_base
+Reference or average trip distance.
+P_max,j
+Maximum fare passenger j is willing to accept.
+If elasticity is already stored as a positive absolute value, use it directly; do not apply an unnecessary second absolute-value operation.
+Distance interpretation under the stated formula: if L_GG′ is greater than L_base, P_max is above P_base; if the two are equal, P_max equals P_base; and if L_GG′ is below L_base, P_max is below P_base. A P_max below P_base is therefore not automatically a coding error. Print the exact inputs and intermediate terms from the implementation to verify the result.
+2.3 Passenger accept/reject rule
+Accept if P_offer ≤ P_max,j
+Reject if P_offer > P_max,j
+Check whether the code uses < or ≤ at equality and report the same boundary rule in the results. A fare below the base fare can still be rejected if it exceeds the individual passenger's P_max. Therefore, compare P_offer with P_max, not merely with P_base.
+2.4 Illustrative calculation
+Trip distance
+Calculation (illustrative)
+P_max
+6 km
+₹300 × [1 + (1/2) × ((6−5)/5)]
+₹330
+5 km
+₹300 × [1 + (1/2) × ((5−5)/5)]
+₹300
+4 km
+₹300 × [1 + (1/2) × ((4−5)/5)]
+₹270
+Assumptions: base fare ₹300, reference distance 5 km and elasticity 2. These are explanatory examples only, not experimental results.
+3. Request-level validation required by the professor
+Choose one training episode and one representative time slot. Extract all requests in that slot; if the number is large, provide a representative sample of approximately 100–500 rows while retaining the full dataset for analysis. The professor wants to inspect individual requests rather than only episode-level totals.
+Required column
+What it records
+Episode_ID / Slot_ID
+Selected training episode and time slot.
+Request_ID
+Unique passenger-request identifier.
+ε (epsilon)
+Passenger price-sensitivity value actually used.
+P_base
+Reference/base dispatch price.
+L_GG′ and L_base
+Actual source–destination distance and reference distance.
+P_max
+Calculated passenger maximum acceptable price.
+DQN action
+Action selected by the DQN pricing agent.
+Pricing factor (a)
+Factor mapped from the selected DQN action.
+Offered price (P_offer / P_GG′)
+Price actually offered for the request.
+Accept_Reject
+Passenger response from the implemented decision rule.
+Illustrative table only — values below are fabricated to show the required format.
+Request
+ε
+P_base
+P_max
+DQN factor
+Offered
+Decision
+R001
+0.25
+100
+115
+1.05
+105
+Accept
+R002
+0.35
+100
+110
+1.20
+120
+Reject
+R003
+0.20
+100
+125
+1.15
+115
+Accept
+R004
+0.40
+100
+108
+1.10
+110
+Reject
+R005
+0.30
+100
+118
+0.95
+95
+Accept
+3.1 Checks for every request
+For every rejected request, verify that P_offer is greater than P_max.
+For every accepted request, verify that P_offer is less than or equal to P_max, subject to the exact equality rule in the code.
+If the recorded decision does not match the comparison, inspect whether the same P_max is used in both calculation and decision, whether currency and units match, whether the correct passenger's epsilon is used, whether rounding changes the comparison, whether values are missing, and whether another rejection condition exists.
+Include the actual accept/reject outcome. Do not fabricate missing values or replace actual outcomes with expected outcomes.
+4. Interpreting the acceptance rate and assignment outcomes
+The meeting refers to an acceptance rate of approximately 29% (about 29% accept and 71% reject) and vehicle availability of approximately 45–90%. The professor is asking why so many passengers reject when vehicles appear to be available.
+Keep these measures separate:
+Passenger acceptance rate.
+Passenger rejection rate.
+Accepted requests successfully assigned.
+Accepted requests not assigned because of supply or dispatch constraints.
+Vehicle availability does not imply that the same percentage of requests can be assigned. Vehicles may be too far away, occupied, ineligible, or unable to satisfy dispatch constraints. The request-level table helps determine whether low acceptance is caused by the fare threshold; assignment analysis then explains what happens after acceptance.
+5. Distance and historical fare investigation
+The professor mentions a distance around 3 km or 3.17 km and suspects historical data may contain a minimum-fare rule. This is a hypothesis to inspect, not a confirmed property of the dataset.
+Illustrative trip distance
+Illustrative historical fare
+1 km
+₹100
+1.5 km
+₹100
+2 km
+₹100
+2.5 km
+₹100
+3 km
+₹100
+4 km
+₹130
+5 km
+₹160
+Create a scatter plot with trip distance on the x-axis and historical fare on the y-axis. Inspect whether fares remain constant below approximately 3–3.17 km, whether a fare floor exists, whether different short distances share exactly the same fare, and whether P_base and L_base are calculated consistently.
+Also calculate the minimum and maximum trip distance, trip counts grouped into distance intervals, and average fare for each interval. Trace L_GG′, L_base and their difference through the P_max calculation. Do not change the acceptance formula before inspecting the actual data and implementation.
+6. Driver / vehicle price preference
+Passenger willingness to pay and driver/vehicle price preference are separate constraints. The passenger has a maximum acceptable price P_max,passenger. A driver or vehicle may have a minimum acceptable compensation or price preference P_min,driver.
+The meeting discusses a possible lower bound of 0.85 × P_base. For example, if P_base = ₹300, this lower bound is ₹255. However, the recording contains an ambiguity: it first suggests the vehicle preference should not be below P_base, then discusses allowing a lower bound such as 0.85 × P_base. The second guide also notes that the recording does not define a complete driver acceptance equation or an upper bound.
+Do not silently finalize either interpretation. Confirm with the professor whether the driver-side minimum is P_base or can go down to 0.85 × P_base, and identify the actual implemented driver constraint. Analyse passenger and driver constraints together: a price acceptable to a passenger may still fail a driver-side constraint.
+7. DQN learning and training evaluation
+Evaluate DQN behaviour across episodes. The meeting indicates that 25 episodes may reveal an early trend but are too few to claim convergence. A changing reward or action distribution can indicate learning, but does not by itself prove convergence.
+Monitor the following DQN-specific outputs:
+Episode versus cumulative or average reward.
+Episode versus passenger acceptance rate and rejection rate.
+Episode versus average offered price.
+Frequency of each DQN pricing action / pricing factor.
+Q-network loss across training updates.
+Stability of action selection and reward over a sufficiently long training run.
+Assess stability over a longer run and, where practical, across repeated random seeds or evaluation episodes. Also verify that the reward function reflects the objectives and constraints in the approved research model. The meeting materials do not specify the exact reward equation; retain the equation in the implementation/specification and validate it separately.
+8. CNN demand-prediction validation
+The professor advises interpreting CNN prediction error relative to the scale of actual demand, rather than judging an absolute RMSE number alone. For the NYC January–March 2026, 30-minute demand-prediction task (48 slots per day), report MAE, RMSE, NRMSE, actual-versus-predicted demand, the evaluation split and the number of observations.
+RMSE = √[(1/N) Σ (y_i − ŷ_i)²]
+MAE = (1/N) Σ |y_i − ŷ_i|
+NRMSE (%) = [RMSE / mean(actual demand)] × 100
+Use the mean actual demand across the same grid-slot observations used to calculate RMSE. Do not divide a per-grid-slot RMSE directly by the grand total number of requests across the full dataset; those quantities are at different scales.
+Example
+Mean actual demand
+RMSE
+NRMSE
+A — low demand
+5 requests
+2.5
+50%
+B — higher demand
+25 requests
+2.5
+10%
+You may also report aggregate demand-volume error:
+Volume Error (%) = |Σ(predicted) − Σ(actual)| / Σ(actual) × 100
+NRMSE measures RMSE relative to average demand per observation. Volume error measures whether total predicted request volume is above or below total actual volume. The professor mentions 10–15% as an understandable indicative range; it is not a universal guarantee or acceptance threshold.
+9. Differential Privacy: why it comes after baseline validation
+First establish a reliable non-private baseline. If the pricing mechanism is already inconsistent before privacy noise is introduced, later changes in acceptance or revenue cannot be attributed confidently to Differential Privacy.
+Validate P_base, P_max, offered price and passenger response without Differential Privacy.
+Validate DQN reward and learning behaviour in the baseline environment.
+Record baseline acceptance, reward, offered price and CNN prediction metrics.
+Introduce the low-privacy and high-privacy regimes described in the reference paper.
+Test the alpha settings specified by that paper.
+Compare privacy-enabled results with the baseline and explain the utility–privacy trade-off.
+The meeting materials mention two privacy regimes and alpha but do not define the exact meaning or values of alpha. Obtain the mathematical definition and parameter values from the referenced paper; do not guess them.
+10. Consolidated deliverables and recommended plots
+Deliverable / plot
+Required contents
+Purpose
+Request-level pricing CSV
+Episode, slot, request, ε, P_base, distance terms, P_max, DQN action, factor, offered price and actual decision.
+Verify pricing calculations and acceptance logic.
+Offered price vs P_max
+Each request plotted against the equality line P_offer = P_max.
+Show which offers fall above or below the passenger threshold.
+P_base vs P_max
+Request-level comparison and relevant distance conditions.
+Understand when and why P_max is below P_base.
+Distance vs historical fare
+Scatter plot plus distance-bin counts and average fares.
+Inspect minimum-fare / fare-floor behaviour.
+Driver preference check
+Implemented minimum and allowed price range; passenger/driver constraint conflicts.
+Verify the driver-side lower-price constraint.
+DQN reward by episode
+Cumulative or average reward across episodes.
+Inspect learning trend and stability.
+Acceptance/rejection by episode
+Acceptance and rejection rates over episodes.
+Track passenger response as DQN learns.
+DQN action frequency
+Frequency of each action/pricing factor over episodes.
+Inspect policy action selection.
+Q-network loss
+Loss across training updates.
+Diagnose training stability alongside reward and evaluation.
+CNN actual vs predicted
+Time series or scatter plot, MAE, RMSE, NRMSE, volume error, evaluation split and observation count.
+Assess prediction quality at the correct demand scale.
+11. Step-by-step implementation work plan
+Priority 1 — Request-level pricing validation
+Choose one training episode and one time slot.
+Extract all requests in that slot; target approximately 100–500 rows where available.
+Export ε, P_base, L_GG′, L_base, P_max, DQN action, pricing factor, offered price and actual decision.
+Recompute the acceptance comparison and check every recorded outcome.
+Investigate cases where P_max < P_base and any mismatch between the comparison and recorded decision.
+Priority 2 — Dataset distance/fare investigation
+Calculate the distance distribution and trip counts by interval.
+Calculate average fare for each distance interval.
+Check repeated fare values and minimum-fare behaviour for short trips.
+Trace distance terms and intermediate values through the P_max calculation.
+Priority 3 — Driver preference checks
+Identify the driver-side preference or constraint actually implemented.
+Confirm whether 0.85 × P_base is the intended lower bound or only a candidate constraint.
+Check where passenger and driver constraints conflict.
+Priority 4 — DQN evaluation
+Plot reward, acceptance, offered price, action frequency and Q-network loss.
+Treat 25 episodes as an early trend only, not proof of convergence.
+Continue training and evaluate policy stability over a sufficiently long run.
+Priority 5 — CNN evaluation
+Calculate MAE, RMSE and NRMSE using the same grid-slot observations.
+Calculate aggregate demand-volume error separately.
+Plot actual versus predicted demand.
+Report evaluation split, time period and number of observations.
+Priority 6 — Differential Privacy
+Freeze and record the validated non-private baseline.
+Implement the paper's low- and high-privacy regimes.
+Test the paper-defined alpha settings.
+Compare privacy-enabled results against the baseline.
+12. Questions to clarify with the professor
+Should P_max be allowed to fall below P_base when L_GG′ is below L_base, according to the exact approved formula?
+Is 0.85 × P_base the finalized minimum driver-side preference, or only an initial constraint to test? Is there a driver-side upper bound?
+Should P_base remain flat across weather conditions and time slots for the baseline experiment?
+How many episodes and what evaluation criteria should be used before making a DQN convergence claim?
+Which exact alpha values and definitions should be used for the low-privacy and high-privacy regimes in the reference paper?
+Does the notebook's DQN action-to-pricing-factor mapping exactly match P_offer = P_base × a, and what is the implemented reward equation?
+13. Suggested explanation for the professor
+I will first validate the passenger acceptance mechanism using request-level results rather than only episode-level statistics. For one selected episode and time slot, I will extract each request's elasticity, base fare, distance terms, calculated maximum acceptable fare, DQN action, pricing factor, offered fare and actual acceptance decision. I will verify that every rejection and acceptance follows the implemented threshold rule. I will also inspect the historical fare–distance relationship and confirm the driver-side minimum-price constraint. After the non-private pricing baseline is validated, I will evaluate DQN reward, action selection and learning stability. Separately, I will normalize CNN RMSE against mean actual demand and report MAE, RMSE, NRMSE and actual-versus-predicted demand. Only after these baseline checks will I compare the results under the Differential Privacy settings specified in the paper.
+14. Final recommendation
+Start with the request-level pricing CSV for one episode and one time slot. It is the most direct evidence requested by the professor and answers the central question: is each passenger accepting or rejecting for the reason the mathematical model and implemented decision rule specify? Use that validated baseline as the foundation for DQN evaluation and the later Differential Privacy comparison.
+Source and interpretation notes
+This consolidated guide combines the uploaded “Detailed Explanation of the Meeting Recording” PDF (7 pages) and “DQN Pricing Validation and Implementation Guide” Word document (6 pages). Repeated explanations have been merged. The DQN pricing-agent framing from the second document is retained; MAB and actor–critic are not presented as the selected pricing learner. Numerical tables are explicitly illustrative and are not experimental results. Where the source materials identify ambiguity or omit an equation/parameter (driver preference, reward equation, Differential Privacy alpha), this document flags the issue for confirmation rather than inventing a value.

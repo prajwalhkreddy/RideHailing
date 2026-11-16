@@ -1,0 +1,9 @@
+{
+  "selected_mode": "legacy_grid/LinUCB",
+  "routing_shape": 9,
+  "pricing_expected_shape": 5,
+  "failing_symbol": "src.pricing.state.build_pricing_context",
+  "reason": "current routing supplied to historical pricing contract",
+  "resolution": "explicit V3 delegation to existing persistent runtime; legacy execution rejected without historical policy source",
+  "remaining_blocker": "Original historical end-to-end tests still mix current learner with legacy pricing; preserving assertions does not permit replacing them by rejection-only tests."
+}

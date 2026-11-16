@@ -1,0 +1,58 @@
+{
+  "source_type": "CODE_PATH",
+  "architecture": "87 -> 64 ReLU -> 32 ReLU -> 5 logits",
+  "action_order": [
+    "STAY",
+    "NORTH",
+    "EAST",
+    "SOUTH",
+    "WEST"
+  ],
+  "checkpoint_search": "Top-level models/routing_policy contains only current nine-action named directories; no five-action checkpoint selected. Preserved executable code is available.",
+  "learned_accuracy_claim": false,
+  "usage": "historical orchestration tests only; their original bounded local-learning assertions remain",
+  "sources": [
+    {
+      "path": "src/routing/baseline.py",
+      "git_commit": "bf95251efbcd130fb816f83d1d8c6c53bfb1490c",
+      "original_sha256": "88e8ac824fbcc3f9ac4307d4523af146d08688d3d38e8f46e488aa7d52e9cf10",
+      "test_copy": "tests/historical_five_action/baseline.py",
+      "change": "imports redirected to isolated historical namespace only"
+    },
+    {
+      "path": "src/routing/learning.py",
+      "git_commit": "bf95251efbcd130fb816f83d1d8c6c53bfb1490c",
+      "original_sha256": "d2032cfff8f95783c50b520fddccca698a5809460f835df056c55654d7cf5f2d",
+      "test_copy": "tests/historical_five_action/learning.py",
+      "change": "imports redirected to isolated historical namespace only"
+    },
+    {
+      "path": "src/routing/federated.py",
+      "git_commit": "bf95251efbcd130fb816f83d1d8c6c53bfb1490c",
+      "original_sha256": "883e9e6ba1d8f19282c894d26d091a75452dc02fdee7181b3ee8d4ace6c1a5d8",
+      "test_copy": "tests/historical_five_action/federated.py",
+      "change": "imports redirected to isolated historical namespace only"
+    },
+    {
+      "path": "src/simulation/grid_policy.py",
+      "git_commit": "bf95251efbcd130fb816f83d1d8c6c53bfb1490c",
+      "original_sha256": "d82b3359f8acefefda0f956b52923851c17453bc11465fe9e839bc7e57b78813",
+      "test_copy": "tests/historical_five_action/grid_policy.py",
+      "change": "imports redirected to isolated historical namespace only"
+    },
+    {
+      "path": "src/simulation/main_slot.py",
+      "git_commit": "bf95251efbcd130fb816f83d1d8c6c53bfb1490c",
+      "original_sha256": "27b1cb1cf4470467af9753d57878dd8ba4c1c4d93d6601f777605f0d18efbdb5",
+      "test_copy": "tests/historical_five_action/main_slot.py",
+      "change": "imports redirected to isolated historical namespace only"
+    },
+    {
+      "path": "src/simulation/multi_slot.py",
+      "git_commit": "bf95251efbcd130fb816f83d1d8c6c53bfb1490c",
+      "original_sha256": "562479f16271b66c175e03cc932af043eaed83ea252f427b08b78b19f4adbf29",
+      "test_copy": "tests/historical_five_action/multi_slot.py",
+      "change": "imports redirected to isolated historical namespace only"
+    }
+  ]
+}

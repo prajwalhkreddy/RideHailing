@@ -1,0 +1,220 @@
+======================================================================
+ERROR: test_all_zero_federation_is_no_update_and_initializes_empty_grid_policy (tests.test_main_slot.MainSlotOrchestrationTests.test_all_zero_federation_is_no_update_and_initializes_empty_grid_policy)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 152, in test_all_zero_federation_is_no_update_and_initializes_empty_grid_policy
+    learners, global_policy = self._learners(ids=(0,))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 41, in _learners
+    learner.reset_from_global_weights(common)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/learning.py", line 213, in reset_from_global_weights
+    self.policy_model.set_weights([np.asarray(weight).copy() for weight in weights])
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/layers/layer.py", line 785, in set_weights
+    raise ValueError(
+ValueError: Layer LocalRoutingPolicyNetwork weight shape (9,) is not compatible with provided weight shape (5,).
+
+======================================================================
+ERROR: test_complete_order_pricing_nb9_nb11_nb12_nb13_and_next_state (tests.test_main_slot.MainSlotOrchestrationTests.test_complete_order_pricing_nb9_nb11_nb12_nb13_and_next_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 81, in test_complete_order_pricing_nb9_nb11_nb12_nb13_and_next_state
+    result, requests, _, _, _, _, pricing = self._run()
+                                            ^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 63, in _run
+    learners, global_policy = self._learners()
+                              ^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 41, in _learners
+    learner.reset_from_global_weights(common)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/learning.py", line 213, in reset_from_global_weights
+    self.policy_model.set_weights([np.asarray(weight).copy() for weight in weights])
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/layers/layer.py", line 785, in set_weights
+    raise ValueError(
+ValueError: Layer LocalRoutingPolicyNetwork weight shape (9,) is not compatible with provided weight shape (5,).
+
+======================================================================
+ERROR: test_nb11_controls_actual_movement_and_charging_vehicle_is_excluded (tests.test_main_slot.MainSlotOrchestrationTests.test_nb11_controls_actual_movement_and_charging_vehicle_is_excluded)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 105, in test_nb11_controls_actual_movement_and_charging_vehicle_is_excluded
+    result, _, fleet, _, _, global_policy, _ = self._run()
+                                               ^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 63, in _run
+    learners, global_policy = self._learners()
+                              ^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 41, in _learners
+    learner.reset_from_global_weights(common)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/learning.py", line 213, in reset_from_global_weights
+    self.policy_model.set_weights([np.asarray(weight).copy() for weight in weights])
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/layers/layer.py", line 785, in set_weights
+    raise ValueError(
+ValueError: Layer LocalRoutingPolicyNetwork weight shape (9,) is not compatible with provided weight shape (5,).
+
+======================================================================
+ERROR: test_nb12_labels_are_nb11_actions_and_fedavg_exports_only_models (tests.test_main_slot.MainSlotOrchestrationTests.test_nb12_labels_are_nb11_actions_and_fedavg_exports_only_models)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 124, in test_nb12_labels_are_nb11_actions_and_fedavg_exports_only_models
+    result, _, _, _, learners, _, _ = self._run()
+                                      ^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 63, in _run
+    learners, global_policy = self._learners()
+                              ^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 41, in _learners
+    learner.reset_from_global_weights(common)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/learning.py", line 213, in reset_from_global_weights
+    self.policy_model.set_weights([np.asarray(weight).copy() for weight in weights])
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/layers/layer.py", line 785, in set_weights
+    raise ValueError(
+ValueError: Layer LocalRoutingPolicyNetwork weight shape (9,) is not compatible with provided weight shape (5,).
+
+======================================================================
+ERROR: test_nb9_uses_served_offered_fares_and_nb10_advances_once_per_mini_slot (tests.test_main_slot.MainSlotOrchestrationTests.test_nb9_uses_served_offered_fares_and_nb10_advances_once_per_mini_slot)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 94, in test_nb9_uses_served_offered_fares_and_nb10_advances_once_per_mini_slot
+    result, _, fleet, infrastructure, _, _, _ = self._run()
+                                                ^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 63, in _run
+    learners, global_policy = self._learners()
+                              ^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 41, in _learners
+    learner.reset_from_global_weights(common)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/learning.py", line 213, in reset_from_global_weights
+    self.policy_model.set_weights([np.asarray(weight).copy() for weight in weights])
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/layers/layer.py", line 785, in set_weights
+    raise ValueError(
+ValueError: Layer LocalRoutingPolicyNetwork weight shape (9,) is not compatible with provided weight shape (5,).
+
+======================================================================
+ERROR: test_next_global_probabilities_are_masked_grid_means_with_audit_sources (tests.test_main_slot.MainSlotOrchestrationTests.test_next_global_probabilities_are_masked_grid_means_with_audit_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 138, in test_next_global_probabilities_are_masked_grid_means_with_audit_sources
+    result, _, _, _, _, _, _ = self._run()
+                               ^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 63, in _run
+    learners, global_policy = self._learners()
+                              ^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_main_slot.py", line 41, in _learners
+    learner.reset_from_global_weights(common)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/learning.py", line 213, in reset_from_global_weights
+    self.policy_model.set_weights([np.asarray(weight).copy() for weight in weights])
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/layers/layer.py", line 785, in set_weights
+    raise ValueError(
+ValueError: Layer LocalRoutingPolicyNetwork weight shape (9,) is not compatible with provided weight shape (5,).
+
+======================================================================
+ERROR: test_fleet_nb9_learning_and_charging_state_persist (tests.test_multi_slot.MultiSlotTemporalTests.test_fleet_nb9_learning_and_charging_state_persist)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 91, in test_fleet_nb9_learning_and_charging_state_persist
+    result, fleet, _, _, statistics, charging, learners, _ = self.build()
+                                                             ^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 57, in build
+    result = run_four_slot_simulation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 357, in run_four_slot_simulation
+    return run_multi_slot_simulation(slot_count=4, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 365, in run_multi_slot_simulation
+    require_v3_execution(pricing_version, runtime)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/pricing_version.py", line 41, in require_v3_execution
+    raise ValueError("LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: "
+ValueError: LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: historical five-action pricing requires a historical policy source
+
+======================================================================
+ERROR: test_four_slots_exact_time_and_no_premature_pricing (tests.test_multi_slot.MultiSlotTemporalTests.test_four_slots_exact_time_and_no_premature_pricing)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 70, in test_four_slots_exact_time_and_no_premature_pricing
+    result, _, pricing, _, _, _, _, _ = self.build()
+                                        ^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 57, in build
+    result = run_four_slot_simulation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 357, in run_four_slot_simulation
+    return run_multi_slot_simulation(slot_count=4, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 365, in run_multi_slot_simulation
+    require_v3_execution(pricing_version, runtime)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/pricing_version.py", line 41, in require_v3_execution
+    raise ValueError("LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: "
+ValueError: LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: historical five-action pricing requires a historical policy source
+
+======================================================================
+ERROR: test_grid_policy_initialization_then_mean_then_latest_carry_forward (tests.test_multi_slot.MultiSlotTemporalTests.test_grid_policy_initialization_then_mean_then_latest_carry_forward)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 117, in test_grid_policy_initialization_then_mean_then_latest_carry_forward
+    result, *_ = self.build()
+                 ^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 57, in build
+    result = run_four_slot_simulation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 357, in run_four_slot_simulation
+    return run_multi_slot_simulation(slot_count=4, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 365, in run_multi_slot_simulation
+    require_v3_execution(pricing_version, runtime)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/pricing_version.py", line 41, in require_v3_execution
+    raise ValueError("LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: "
+ValueError: LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: historical five-action pricing requires a historical policy source
+
+======================================================================
+ERROR: test_nb11_authority_federation_schedule_and_global_persistence (tests.test_multi_slot.MultiSlotTemporalTests.test_nb11_authority_federation_schedule_and_global_persistence)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 103, in test_nb11_authority_federation_schedule_and_global_persistence
+    result, _, _, _, _, _, learners, _ = self.build()
+                                         ^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 57, in build
+    result = run_four_slot_simulation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 357, in run_four_slot_simulation
+    return run_multi_slot_simulation(slot_count=4, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 365, in run_multi_slot_simulation
+    require_v3_execution(pricing_version, runtime)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/pricing_version.py", line 41, in require_v3_execution
+    raise ValueError("LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: "
+ValueError: LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: historical five-action pricing requires a historical policy source
+
+======================================================================
+ERROR: test_passenger_energy_limitation_and_busy_state_can_cross_boundaries (tests.test_multi_slot.MultiSlotTemporalTests.test_passenger_energy_limitation_and_busy_state_can_cross_boundaries)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 136, in test_passenger_energy_limitation_and_busy_state_can_cross_boundaries
+    result = run_four_slot_simulation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 357, in run_four_slot_simulation
+    return run_multi_slot_simulation(slot_count=4, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 365, in run_multi_slot_simulation
+    require_v3_execution(pricing_version, runtime)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/pricing_version.py", line 41, in require_v3_execution
+    raise ValueError("LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: "
+ValueError: LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: historical five-action pricing requires a historical policy source
+
+======================================================================
+ERROR: test_rng_is_one_stream_and_full_replay_is_deterministic (tests.test_multi_slot.MultiSlotTemporalTests.test_rng_is_one_stream_and_full_replay_is_deterministic)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 80, in test_rng_is_one_stream_and_full_replay_is_deterministic
+    first, _, _, rng, _, _, _, _ = self.build(seed=3)
+                                   ^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_multi_slot.py", line 57, in build
+    result = run_four_slot_simulation(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 357, in run_four_slot_simulation
+    return run_multi_slot_simulation(slot_count=4, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/multi_slot.py", line 365, in run_multi_slot_simulation
+    require_v3_execution(pricing_version, runtime)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/pricing_version.py", line 41, in require_v3_execution
+    raise ValueError("LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: "
+ValueError: LEGACY_INTERFACE_NOT_EXECUTABLE_WITH_CURRENT_ROUTING: historical five-action pricing requires a historical policy source
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.607s
+
+FAILED (errors=12)
