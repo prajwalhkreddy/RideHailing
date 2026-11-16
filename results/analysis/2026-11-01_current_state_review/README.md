@@ -1,3 +1,27 @@
+## V3 checkpoint readiness — 15 November 2026
+
+SOURCE_ALIGNED_SLOT_PRICING_V3 = CHECKPOINT_READY_NOT_TRAINED. Full-runtime schema V3_FULL_RUNTIME_1 saves only POST_SLOT_COMMIT boundaries.19 checkpoint tests pass; uninterrupted/resumed four-slot validation is bitwise identical, including optimizer/replay, active/queued charging and operational/RNG state. Broader181/181 passes. Frozen methodology unchanged; no9→5 projection; March17–31 unevaluated. TRAINING_READINESS=READY_FOR_FRESH_EPISODE1_LAUNCH; no training launched. Await a separate launch instruction. Details: results/analysis/2026-11-15_source_aligned_slot_pricing_v3/README.md. Earlier entries below are historical snapshots.
+
+## V3 regression reconciliation complete — 15 November 2026
+
+SOURCE_ALIGNED_SLOT_PRICING_V3 = VALIDATED_NOT_TRAINED. Exact broader regression181/181 passed; historical12/12, V3/interface15/15, routing23/23. Current V3 consumes nine-action routing; historical tests use the preserved87→64→32→5 code under tests/historical_five_action. No interface mixing or9→5 projection. Three-slot current V3 integration passed; production unchanged. REVIEW_RESULTS=READY. CHECKPOINT_READINESS=BLOCKED_RUNTIME_SERIALIZATION; deterministic full runtime save/resume is the next task. No training started; March17–31 untouched. Details: results/analysis/2026-11-15_source_aligned_slot_pricing_v3/README.md. Earlier entries below are historical snapshots.
+
+## V3 implementation status — 15 November 2026
+
+SOURCE_ALIGNED_SLOT_PRICING_V3 = IMPLEMENTED_REGRESSION_BLOCKED. Approved fare/action and conditional-family contracts implemented in a separate versioned path. Controlled17-slot225-request integration and10focused tests pass;181 broader tests include12legacy routing/state errors. Frozen upstream modules unchanged; HISTORICAL_REQUEST_LEVEL_MASKED_V2 = COMPLETED_HISTORICAL. V3_TRAINING = NOT_STARTED. MARCH17_31 = UNTOUCHED. Details: `results/analysis/2026-11-15_source_aligned_slot_pricing_v3/README.md`. Next: resolve regression-contract blocker, review, then explicit approval before training.
+
+## V3 technical decisions resolved — 15 November 2026
+
+FROZEN: weather grouping/fallback; seven action count; proactive pricing; accepted-revenue reward including unmatched; destination-slot transition;16-slot horizon; gamma0.99 per30minutes;15D state with validated causal dropoff adapter. PENDING: validated fare endpoints and conditional-distribution Pareto choices for GLOBAL, RAW_13, RAW_15, T1_G1, T1_POOLED, T2_POOLED, T3_POOLED, T4_POOLED. See `results/analysis/2026-11-15_v3_remaining_decisions/README.md`. No production runtime integration or training; historical V2 preserved; protected period untouched.
+
+## V3 remaining-decision correction — 15 November 2026
+
+ALREADY FROZEN: proactive30-minute destination pricing; seven action count; accepted-unmatched accepted-revenue treatment; context/slot revenue aggregation; weather mapping and fallback hierarchy;16-slot horizon. These are not external blockers. REMAINING: validated fare/alpha endpoints, dropoff probability normalization for the reconciled destination state, conditional parametric-fit adequacy/selection, slot-gamma confirmation. See `results/analysis/2026-11-15_v3_remaining_decisions/README.md`. No training or production change; historical maskedV2 preserved; March17–31 untouched.
+
+## Active V3 implementation gate — 15 November 2026
+
+SOURCE_ALIGNED_SLOT_PRICING_V3 is the active workstream, **BLOCKED_PRE_IMPLEMENTATION** by FARE_BOUNDS_EXTERNAL_DECISION_REQUIRED. Seven actions, retained weather grouping, accepted-revenue slot reward and slot gamma/terminal decisions are resolved by the latest instruction; no new runtime is validated. Frozen upstream modules unchanged. HISTORICAL_REQUEST_LEVEL_MASKED_V2 remains completed historical evidence. V3 TRAINING: NOT_STARTED. PROTECTED PERIOD: UNTOUCHED. See `results/analysis/2026-11-15_source_aligned_slot_pricing_v3/README.md`. Next: approve validated fare bounds, finish implementation/fitting/tests; fresh V3 training only after explicit review/approval. Older entries below are historical snapshots.
+
 ## Consolidated V2 academic review — 15 November 2026
 
 [Visual and results package](../../review/2026-11-15_v2_methodology_results_review/README.md): current weather/time handling, Episode25 comparisons, Q calibration, and full-day dynamic-value evidence. Dynamic opportunity **MEANINGFUL**, realized evidence **WEAK**, longer-training recommendation **NO**; this latest audit supersedes earlier NONE/CONDITIONAL snapshots below. Reporting coverage gaps are explicitly listed; no completeness claim is made. Episode26 not started; March17–31 untouched.

@@ -14,9 +14,9 @@ from src.dispatch.request import RequestState
 from src.fleet.fleet import Fleet
 from src.fleet.state import VehicleState, VehicleStatus
 from src.pricing.linucb import DisjointLinUCB
-from src.routing.baseline import CandidateUtilityInput, RoutingAction, RoutingParameters
-from src.routing.learning import LocalRoutingLearner, RoutingLearningParameters
-from src.simulation.multi_slot import PASSENGER_TRIP_ENERGY_STATUS, TemporalSlotInput, run_four_slot_simulation
+from tests.historical_five_action.baseline import CandidateUtilityInput, RoutingAction, RoutingParameters
+from tests.historical_five_action.learning import LocalRoutingLearner, RoutingLearningParameters
+from tests.historical_five_action.multi_slot import PASSENGER_TRIP_ENERGY_STATUS, TemporalSlotInput, run_four_slot_simulation
 from src.simulation.pricing_dispatch import PricingContextInput
 from src.simulation.statistics import OperationalStatistics
 
@@ -115,6 +115,9 @@ class MultiSlotTemporalTests(unittest.TestCase):
 
     def test_grid_policy_initialization_then_mean_then_latest_carry_forward(self) -> None:
         result, *_ = self.build()
+        for slot in result.slots:
+            for policy in slot.grid_policy.values():
+                self.assertEqual(policy.probabilities.shape, (5,))
         grid_one = [slot.grid_policy[1] for slot in result.slots]
         self.assertEqual([item.source for item in grid_one[:3]], ["initialization", "carry_forward", "current_vehicle_mean"])
         self.assertEqual([item.vehicle_vector_count for item in grid_one[:3]], [0, 0, 1])

@@ -98,7 +98,7 @@ def _present_low_energy_vehicles(
     return presented
 
 
-def run_main_slot(
+def _historical_run_main_slot(
     *,
     slot_id: int,
     requests: Iterable[RequestState],
@@ -312,3 +312,15 @@ def run_main_slot(
         next_pricing_contexts=next_contexts,
         stage_order=tuple(stage_order),
     )
+
+
+def run_main_slot(*, pricing_version="LEGACY_LINUCB_8D", runtime=None,
+                  requests=None, policy=None, weather_code=None, **legacy_inputs):
+    """Version-selected execution; historical pricing never consumes current routing."""
+    from src.simulation.pricing_version import require_v3_execution, validate_v3_runtime
+    require_v3_execution(pricing_version, runtime)
+    if legacy_inputs:
+        raise ValueError("V3 takes its inputs from the persistent runtime, not legacy arguments")
+    result = runtime.run_slot(requests, policy=policy, weather_code=weather_code)
+    validate_v3_runtime(runtime)
+    return result

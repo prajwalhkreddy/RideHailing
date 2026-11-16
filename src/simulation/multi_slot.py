@@ -123,7 +123,7 @@ def _weight_norm(learner: LocalRoutingLearner) -> float:
     return float(sum(np.linalg.norm(weight) for weight in learner.policy_model.get_weights()))
 
 
-def run_multi_slot_simulation(
+def _historical_run_multi_slot_simulation(
     *,
     start_time: datetime,
     slot_inputs: Sequence[TemporalSlotInput],
@@ -355,3 +355,18 @@ def run_four_slot_simulation(**kwargs) -> MultiSlotResult:
     if "slot_count" in kwargs:
         raise ValueError("run_four_slot_simulation fixes slot_count at four.")
     return run_multi_slot_simulation(slot_count=4, **kwargs)
+
+
+def run_multi_slot_simulation(*, pricing_version="LEGACY_LINUCB_8D", runtime=None,
+                              slot_requests=None, policy=None, weather_code=None,
+                              **legacy_inputs):
+    """Reuse one V3 runtime/operational producer across the bounded sequence."""
+    from src.simulation.pricing_version import require_v3_execution
+    require_v3_execution(pricing_version, runtime)
+    if legacy_inputs:
+        raise ValueError("V3 runtime owns initialization; legacy inputs are incompatible")
+    if slot_requests is None or not 1 <= len(slot_requests) <= 16 - runtime.slots:
+        raise ValueError("Explicit bounded slot request sequence required")
+    return tuple(run_main_slot(pricing_version=pricing_version, runtime=runtime,
+                               requests=rows, policy=policy, weather_code=weather_code)
+                 for rows in slot_requests)

@@ -13,9 +13,9 @@ from src.dispatch.request import RequestState
 from src.fleet.fleet import Fleet
 from src.fleet.state import VehicleState, VehicleStatus
 from src.pricing.linucb import DisjointLinUCB
-from src.routing.baseline import ACTION_ORDER, CandidateUtilityInput, RoutingAction, RoutingParameters
-from src.routing.learning import LocalRoutingLearner, RoutingLearningParameters
-from src.simulation.main_slot import run_main_slot
+from tests.historical_five_action.baseline import ACTION_ORDER, CandidateUtilityInput, RoutingAction, RoutingParameters
+from tests.historical_five_action.learning import LocalRoutingLearner, RoutingLearningParameters
+from tests.historical_five_action.main_slot import run_main_slot
 from src.simulation.pricing_dispatch import PricingContextInput
 from src.simulation.statistics import OperationalStatistics
 
@@ -35,6 +35,8 @@ class MainSlotOrchestrationTests(unittest.TestCase):
 
     def _learners(self, ids=(0, 1, 2)):
         learners = {vehicle_id: LocalRoutingLearner(vehicle_id, self.learning, seed=10 + vehicle_id) for vehicle_id in ids}
+        self.assertEqual(learners[ids[0]].policy_model.input_shape[-1], 87)
+        self.assertEqual(learners[ids[0]].policy_model.output_shape[-1], 5)
         common = learners[ids[0]].policy_model.get_weights()
         common[-1] = np.array([0., 0., 100., 0., 0.], dtype=np.float32)  # Global policy strongly prefers EAST when valid.
         for learner in learners.values():
@@ -137,6 +139,7 @@ class MainSlotOrchestrationTests(unittest.TestCase):
     def test_next_global_probabilities_are_masked_grid_means_with_audit_sources(self) -> None:
         result, _, _, _, _, _, _ = self._run()
         for grid_id, context in result.next_pricing_contexts.items():
+            self.assertEqual(context.routing_probabilities.shape, (5,))
             self.assertAlmostEqual(float(context.routing_probabilities.sum()), 1.)
             self.assertTrue((context.routing_probabilities >= 0).all())
             self.assertEqual((context.predicted_demand, context.popularity), ((12., .8) if grid_id == 0 else (8., .6)))
