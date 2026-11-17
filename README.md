@@ -1,4 +1,51 @@
-# Current V3 review status
+# Master-alignment implementation status
+
+The methodology authority is `notebooks/plan/masterdocument/MASTER DOCUMENT1.docx`
+(16 November 2026). Opt-in `FEASIBLE_OD_PRICING_V1` adds a shared 13D DQN with
+origin–destination states/actions/replay and preserves `SUCCESSFUL_DISPATCH_REWARD_V1`.
+The January observed-support mask contains 9,572 pairs. Assignment-only rewards
+reconcile across request, OD, environment and replay. Historical V3 is unchanged.
+
+New OD full-runtime checkpoints use `FEASIBLE_OD_HISTORICAL_REPLAY_RUNTIME_3`, including
+optimizer/replay/RNG, fleet, operational state and feasibility metadata; historical
+15D or incompatible reward checkpoints are rejected. The earlier reward-only
+adapter still has learner-only checkpoints. No training was performed.
+
+[OD implementation and commands](src/pricing/README.md) ·
+[OD validation](results_v2/pricing_dqn/2026-11-17_feasible_od_validation/README.md) ·
+[earlier reward validation](results_v2/pricing_dqn/README.md).
+
+The new primary `HISTORICAL_REQUEST_REPLAY_V1` protocol uses eligible observed
+pickups, independently of CNN forecasts, with versioned demand-cursor persistence.
+Historical V3 forecast-driven generation remains unchanged.
+[Protocol and reproduction](src/simulation/README.md) ·
+[Replay validation](results_v2/simulation/2026-11-17_historical_request_replay/README.md).
+
+Remaining master gaps include unsupported-OD handling, stricter OD significance,
+empirical pricing bounds, observed-pickup proxy limitations, sensitivity/weather support, CNN information availability,
+EWMA deviation, Bellman loss and full hierarchy/privacy integration.
+
+Repository conventions: `src/` implementation, `scripts/` execution, `config/`
+configuration, `tests/` validation, `models/` checkpoints, `data/` datasets,
+`notebooks/` specifications, `results/` historical evidence, and `results_v2/`
+new master-alignment evidence. Use snake_case paths/functions, PascalCase classes,
+UPPER_SNAKE_CASE constants and dated descriptive run directories. Preserve history.
+
+Provisional `PROVISIONAL_BINNED_EMPIRICAL_SENSITIVITY_V1` is opt-in for the OD
+runtime. It preserves common references and existing weather/T1–T4 groups;
+continuous Temperature/WindSpeed conditioning and final calibration remain open.
+Historical V3 stays the default. [Evidence, limitations and tests](results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/README.md).
+
+[Bounded calibration decision evidence](results_v2/passenger_sensitivity/2026-11-17_methodology_decision/README.md) compares bin weighting, references, temporal weather evidence and acceptance. No final calibration or active behavior changed.
+
+Approved request-count weighting is implemented as explicit
+`REQUEST_COUNT_WEIGHTED_BINNED_SENSITIVITY_V1`, with finite empirical resampling,
+unchanged provisional references and historical-mode preservation.
+[Weighted contract and validation](results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/README.md). No training performed.
+
+[CNN timing correction](results_v2/cnn_demand/2026-11-17_causal_timing/README.md) provides chronological history, explicit one-slot-ahead timestamps and DST-safe civil-time handling. The versioned dataset is oracle-weather-only; operational weather availability and timezone alignment remain unresolved. No training or forecast replacement occurred.
+
+# Historical V3 review status
 
 <!-- V3_REVIEW_CURRENT_BEGIN -->
 SOURCE_ALIGNED_SLOT_PRICING_V3 = PAUSED_AFTER_EPISODE10_FOR_REVIEW (scientific review scope; not a claim that a live process was stopped).
