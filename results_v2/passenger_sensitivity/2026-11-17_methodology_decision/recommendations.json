@@ -1,0 +1,17 @@
+{
+  "status": "RECOMMENDATIONS_NOT_NEW_METHODOLOGY_FREEZE",
+  "weighting": "Retain uniform bins provisionally as literal master reading; explicitly resolve passenger-mix versus interval estimand",
+  "references": "Retain existing pair provisionally; no faithful complete alternative without selected targets and representative-distance rule",
+  "continuous_weather": "Do not promote tested linear extension; continuous-feature consistency remains unresolved",
+  "distribution": "Retain provisional finite empirical sampler; no final parametric family justified",
+  "can_reaffirm": [
+    "Common aggregate references across groups",
+    "Distance-bin lower-limit estimator",
+    "Disjoint population accounting",
+    "Explicit positive finite support",
+    "Deterministic sampling",
+    "Temporal information boundaries"
+  ],
+  "next_single_task": "Resolve weighting estimand and reference-selection rule, then implement only the approved calibration contract",
+  "training_authorized": false
+}

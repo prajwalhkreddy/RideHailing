@@ -1,0 +1,14 @@
+{
+  "seed": "No stochastic draws; deterministic midpoint quadrature for historical fits",
+  "population": "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet",
+  "N": 6967155,
+  "period": "Jan1-Mar15 inclusive",
+  "bin_width_km": 0.5,
+  "P_base": 22.354198442390455,
+  "L_base_km": 4.616983790655043,
+  "weights": "Uniform or normalized positive-bin request counts, comparison only",
+  "quantiles": "Inverse discrete CDF (first cumulative weight >= probability)",
+  "production_modified": false,
+  "protected_period_read": false,
+  "new_conditional_model_implemented": false
+}

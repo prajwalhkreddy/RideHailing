@@ -1,0 +1,21 @@
+{
+  "version": "MASTER_BINNED_SENSITIVITY_ESTIMATOR_V1",
+  "runtime_approved": false,
+  "status": "BLOCKED_PENDING_CONDITIONING_DECISION",
+  "P_base": 22.354198442390455,
+  "L_base_km": 4.616983790655043,
+  "reference_status": "PROVISIONAL_UNCHANGED",
+  "bin_width_km": 0.5,
+  "bin_origin_km": 0,
+  "bin_convention": "LEFT_CLOSED_RIGHT_OPEN_LOWER_LIMIT",
+  "denominator": "exact zero undefined; near-zero values retained for diagnostic only",
+  "distribution_weighting": "NOT_FROZEN_EQUAL_BIN_AND_REQUEST_WEIGHTED_DIAGNOSTICS",
+  "source_N": 6967155,
+  "calibration_start": "2026-01-01",
+  "calibration_end_exclusive": "2026-03-16",
+  "blockers": [
+    "CNN Temperature/WindSpeed conditioning not defined for sensitivity",
+    "Binned support/sign/near-zero and sparse-bin fit eligibility need reconciliation before runtime promotion"
+  ],
+  "historical_runtime_unchanged": true
+}

@@ -1,0 +1,25 @@
+{
+  "N": 6967155,
+  "hours": 1775,
+  "units": {
+    "Temperature": "Celsius",
+    "WindSpeed": "km/h"
+  },
+  "processed_finite_coverage": "100%; prior fill retained",
+  "observed_not_forecast": true,
+  "decision_time_availability_verified": false,
+  "temporal_split": "Train Jan1-Feb28; validation Mar1-Mar15",
+  "outcome": "Median positive hourly bin elasticity; descriptive noisy aggregation, not individual latent sensitivity",
+  "group_temperature_explained_variance": 0.04879761997322618,
+  "group_wind_explained_variance": 0.0216745502471396,
+  "temperature_wind_correlation": -0.08274125702993436,
+  "independence_caveat": "1776 hours at most, serially correlated weather; trips/grids are not independent weather replicates; no p-values",
+  "WeatherCode_Temperature_explained_variance": 0.07103018786321147,
+  "WeatherCode_WindSpeed_explained_variance": 0.04680770539711154,
+  "T_group_Temperature_explained_variance": 0.04867630041080273,
+  "T_group_WindSpeed_explained_variance": 0.021673266710556027,
+  "no_eligible_outcome_hours": [
+    "2026-03-08 02:00:00"
+  ],
+  "validation_hours_excluded_unseen_condition": 2
+}

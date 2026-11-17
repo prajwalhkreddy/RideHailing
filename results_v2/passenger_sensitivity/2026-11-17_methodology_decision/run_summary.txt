@@ -1,0 +1,92 @@
+{
+  "reference": {
+    "existing_P_base": 22.354198442390455,
+    "existing_L_base_km": 4.616983790655043,
+    "existing_derivation": "Pbase weighted mean on prior [1,75)km scope; Lbase interpolated mean-fare crossing",
+    "master_derivation": "Observed fare nearest selected base fare; mean of selected representative distances near selected base distance",
+    "equivalent": false,
+    "full_faithful_alternative_computable": false,
+    "missing_choices": [
+      "Selected base fare/distance targets",
+      "Representative distance selection/nearness rule"
+    ],
+    "conditional_nearest_observed_fare": 22.35,
+    "conditional_nearest_fare_support": 408,
+    "conditional_P_delta": -0.004198442390453749,
+    "conditional_L_unchanged": 4.616983790655043,
+    "conditional_max_abs_bin_epsilon_change": 0.017185157154061326,
+    "conditional_mean_bin_epsilon_change": -0.0005527612438995044,
+    "warning": "One-component diagnostic, not a fully master-selected reference pair; no references replaced"
+  },
+  "weather": {
+    "N": 6967155,
+    "hours": 1775,
+    "units": {
+      "Temperature": "Celsius",
+      "WindSpeed": "km/h"
+    },
+    "processed_finite_coverage": "100%; prior fill retained",
+    "observed_not_forecast": true,
+    "decision_time_availability_verified": false,
+    "temporal_split": "Train Jan1-Feb28; validation Mar1-Mar15",
+    "outcome": "Median positive hourly bin elasticity; descriptive noisy aggregation, not individual latent sensitivity",
+    "group_temperature_explained_variance": 0.04879761997322618,
+    "group_wind_explained_variance": 0.0216745502471396,
+    "temperature_wind_correlation": -0.08274125702993436,
+    "independence_caveat": "1776 hours at most, serially correlated weather; trips/grids are not independent weather replicates; no p-values",
+    "WeatherCode_Temperature_explained_variance": 0.07103018786321147,
+    "WeatherCode_WindSpeed_explained_variance": 0.04680770539711154,
+    "T_group_Temperature_explained_variance": 0.04867630041080273,
+    "T_group_WindSpeed_explained_variance": 0.021673266710556027,
+    "no_eligible_outcome_hours": [
+      "2026-03-08 02:00:00"
+    ],
+    "validation_hours_excluded_unseen_condition": 2
+  },
+  "association": [
+    {
+      "distance_composition_control": false,
+      "continuous_weather": false,
+      "train_hours": 1416,
+      "validation_hours": 357,
+      "MAE": 0.19650310125754467,
+      "RMSE": 0.25852946490712614,
+      "temperature_coefficient": null,
+      "wind_coefficient": null,
+      "negative_predictions": 0
+    },
+    {
+      "distance_composition_control": false,
+      "continuous_weather": true,
+      "train_hours": 1416,
+      "validation_hours": 357,
+      "MAE": 0.2319910818879981,
+      "RMSE": 0.2957256115975272,
+      "temperature_coefficient": 0.008944922786710425,
+      "wind_coefficient": -0.0020098896224471927,
+      "negative_predictions": 0
+    },
+    {
+      "distance_composition_control": true,
+      "continuous_weather": false,
+      "train_hours": 1416,
+      "validation_hours": 357,
+      "MAE": 0.17743788324916324,
+      "RMSE": 0.2355587684243722,
+      "temperature_coefficient": null,
+      "wind_coefficient": null,
+      "negative_predictions": 0
+    },
+    {
+      "distance_composition_control": true,
+      "continuous_weather": true,
+      "train_hours": 1416,
+      "validation_hours": 357,
+      "MAE": 0.21751989065985747,
+      "RMSE": 0.27789281280147793,
+      "temperature_coefficient": 0.008947488486213606,
+      "wind_coefficient": -0.0013227568738955618,
+      "negative_predictions": 0
+    }
+  ]
+}

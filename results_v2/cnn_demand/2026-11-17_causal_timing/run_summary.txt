@@ -1,0 +1,54 @@
+{
+  "version": "CNN_CAUSAL_HISTORY_ORACLE_WEATHER_V1",
+  "timezone": "America/New_York",
+  "source_timestamp_assumption": "TLC naive pickup slots interpreted as New York civil time; Meteostat naive clock relationship not established",
+  "source": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+  "selected_population_hash": "a99104b26eac8097b8bed43bf3878c8e0328ed38f2c8a99dd76268784747a601",
+  "period": "Jan1-Mar16 inclusive only",
+  "issuance": "target_start minus 30 elapsed minutes",
+  "target": "[target_start,target_start+30 elapsed minutes)",
+  "feature_cutoff": "issuance; completed demand interval end <= issuance",
+  "historical_updates": "Only earlier Jan-Feb intervals; frozen history and scalers for validation/development test",
+  "weather_mode": "ORACLE_OBSERVED_TARGET_WEATHER",
+  "operational_available": false,
+  "weather_provenance": "Meteostat 1.7.6 Hourly(Point).fetch; no archived issuance metadata in inspected lineage; naive time preserved; forward/backward fill",
+  "normalization": "Calendar/code scaling retained; weather prior-training running mean/std; history scaled by prior-training demand population SD; zero SD uses scale1",
+  "warmup": "No earlier complete training demand -> ineligible; zero placeholder never a training sample",
+  "shape": [
+    3598,
+    7,
+    16,
+    16
+  ],
+  "split_counts": {
+    "test": {
+      "samples": 48,
+      "eligible": 48
+    },
+    "train": {
+      "samples": 2832,
+      "eligible": 2830
+    },
+    "validation": {
+      "samples": 718,
+      "eligible": 718
+    }
+  },
+  "source_rows": 511200,
+  "nonexistent_rows": 284,
+  "nonexistent_slots": 2,
+  "nonexistent_slot_demand": 0.0,
+  "retained_demand": 9140364.0,
+  "original_selected_demand": 9140364.0,
+  "historical_training_self_inclusion_rows": 402144,
+  "historical_future_training_lookup": "Full Jan-Feb means included future training dates for early origins",
+  "label_semantics": "Existing Y(t) is demand at t, confirmed on development prefix; do not shift labels",
+  "retraining_required": true,
+  "training_performed": false,
+  "remaining_blockers": [
+    "Archived ex-ante weather and timezone alignment",
+    "Legacy naive OD clock DST boundary integration before operational promotion",
+    "New-model training approval after protocol validation"
+  ],
+  "legacy_label_alignment_verified": true
+}

@@ -1,0 +1,7 @@
+......./Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam', because it has 18 variables whereas the saved optimizer has 2 variables. 
+  saveable.load_own_variables(store)
+..................
+----------------------------------------------------------------------
+Ran 25 tests in 13.361s
+
+OK

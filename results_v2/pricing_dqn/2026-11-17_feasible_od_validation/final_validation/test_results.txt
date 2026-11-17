@@ -1,0 +1,14 @@
+test_corrupt_support_rejected (tests.test_od_pricing.ODContractTests.test_corrupt_support_rejected) ... ok
+test_support_date_and_grid_rejected (tests.test_od_pricing.ODContractTests.test_support_date_and_grid_rejected) ... ok
+test_support_deterministic_and_sparse (tests.test_od_pricing.ODContractTests.test_support_deterministic_and_sparse) ... ok
+test_dispatch_and_rng_preserved_for_same_offers (tests.test_od_pricing.ODIntegrationTests.test_dispatch_and_rng_preserved_for_same_offers) ... ok
+test_full_resume_equivalence_and_historical_rejection (tests.test_od_pricing.ODIntegrationTests.test_full_resume_equivalence_and_historical_rejection) ... ok
+test_od_actions_and_invalid_request (tests.test_od_pricing.ODIntegrationTests.test_od_actions_and_invalid_request) ... ok
+test_origin_demand_destination_popularity_and_ewma (tests.test_od_pricing.ODIntegrationTests.test_origin_demand_destination_popularity_and_ewma) ... ok
+test_reward_replay_next_states_and_targets (tests.test_od_pricing.ODIntegrationTests.test_reward_replay_next_states_and_targets) ... ok
+test_two_origins_reward_attribution (tests.test_od_pricing.ODIntegrationTests.test_two_origins_reward_attribution) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 12.696s
+
+OK

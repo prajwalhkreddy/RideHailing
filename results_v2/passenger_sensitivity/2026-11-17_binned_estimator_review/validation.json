@@ -1,0 +1,97 @@
+{
+  "contract": {
+    "version": "MASTER_BINNED_SENSITIVITY_ESTIMATOR_V1",
+    "runtime_approved": false,
+    "status": "BLOCKED_PENDING_CONDITIONING_DECISION",
+    "P_base": 22.354198442390455,
+    "L_base_km": 4.616983790655043,
+    "reference_status": "PROVISIONAL_UNCHANGED",
+    "bin_width_km": 0.5,
+    "bin_origin_km": 0,
+    "bin_convention": "LEFT_CLOSED_RIGHT_OPEN_LOWER_LIMIT",
+    "denominator": "exact zero undefined; near-zero values retained for diagnostic only",
+    "distribution_weighting": "NOT_FROZEN_EQUAL_BIN_AND_REQUEST_WEIGHTED_DIAGNOSTICS",
+    "source_N": 6967155,
+    "calibration_start": "2026-01-01",
+    "calibration_end_exclusive": "2026-03-16",
+    "blockers": [
+      "CNN Temperature/WindSpeed conditioning not defined for sensitivity",
+      "Binned support/sign/near-zero and sparse-bin fit eligibility need reconciliation before runtime promotion"
+    ],
+    "historical_runtime_unchanged": true
+  },
+  "od_coverage": {
+    "start": "2026-03-01",
+    "end_exclusive": "2026-03-17",
+    "source_N": 2062741,
+    "eligible_N": 2024014,
+    "geographically_invalid_N": 0,
+    "unseen_valid_pairs": 690,
+    "unseen_valid_requests": 914,
+    "unseen_percentage": 0.04515779041054064
+  },
+  "comparison": [
+    {
+      "estimator": "EXISTING_TRIP_LEVEL_5PCT_POSITIVE",
+      "source_N": 6967155,
+      "N": 5779213,
+      "mean": 1.807320699612934,
+      "SD": 1.9900893312236287,
+      "minimum": 8.163316667918035e-05,
+      "maximum": 286.51240630276504,
+      "P005": 0.0480468437153052,
+      "P05": 0.3460352538725095,
+      "median": 1.1543559036424424,
+      "P95": 4.705541983198753,
+      "P995": 11.064993374856416
+    },
+    {
+      "estimator": "NEW_SIGNED_BIN_LEVEL_EXACT_DENOMINATOR",
+      "source_N": 6967155,
+      "N": 147,
+      "mean": 2.257964827235803,
+      "SD": 0.3399710157148463,
+      "minimum": 1.3563048375726001,
+      "maximum": 2.856160057081828,
+      "P005": 1.3792760687851155,
+      "P05": 1.6403907311067871,
+      "median": 2.3304561242725232,
+      "P95": 2.707563626315174,
+      "P995": 2.8251740721652583
+    },
+    {
+      "estimator": "NEW_POSITIVE_BIN_DIAGNOSTIC_NOT_SELECTED",
+      "source_N": 6967155,
+      "N": 147,
+      "mean": 2.257964827235803,
+      "SD": 0.3399710157148463,
+      "minimum": 1.3563048375726001,
+      "maximum": 2.856160057081828,
+      "P005": 1.3792760687851155,
+      "P05": 1.6403907311067871,
+      "median": 2.3304561242725232,
+      "P95": 2.707563626315174,
+      "P995": 2.8251740721652583
+    }
+  ],
+  "conditional_population_fraction_sum": 99.99999999999997,
+  "conditional_groups": 6,
+  "observed_weather_time_combinations": 48,
+  "tests": {
+    "run": 45,
+    "failures": 0,
+    "errors": 0
+  },
+  "git_commit": "71e7803ef30b8cc6833c0de26c18d6d08f82f411",
+  "git_dirty_state": " M README.md\n M notebooks/plan/.DS_Store\n?? config/dispatch_reward_validation.json\n?? config/historical_request_replay_validation.json\n?? config/od_pricing_validation.json\n?? notebooks/plan/masterdocument/\n?? results_v2/\n?? scripts/audit_binned_sensitivity.py\n?? scripts/validate_dispatch_reward.py\n?? scripts/validate_historical_request_replay.py\n?? scripts/validate_od_pricing.py\n?? src/pricing/README.md\n?? src/pricing/binned_sensitivity.py\n?? src/pricing/dispatch_reward.py\n?? src/pricing/od_contract.py\n?? src/rl/dispatch_reward_dqn.py\n?? src/rl/od_pricing_dqn.py\n?? src/simulation/README.md\n?? src/simulation/dispatch_reward_runtime.py\n?? src/simulation/historical_request_replay.py\n?? src/simulation/od_pricing_checkpoint.py\n?? src/simulation/od_pricing_runtime.py\n?? tests/test_binned_sensitivity.py\n?? tests/test_dispatch_reward.py\n?? tests/test_historical_request_replay.py\n?? tests/test_od_pricing.py\n",
+  "seed": 42,
+  "source_hashes": {
+    "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917",
+    "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/methodology_contract.json": "a845c17a24d8c3a52301b85a836b27c0ad9211b2fc3db9c3bdc6eed0142276a2",
+    "results/analysis/2026-11-14_pricing_v2_time_specific_weather/weather_time_grouping_contract.json": "377f8859fd417cad8632a6c8d66fb864caae0f47ce7a1b43cb4054aece9abbde",
+    "src/pricing/binned_sensitivity.py": "941e6db7a169b3929a319523d7b90dd4db5e744d2ea5f1c36f70f7ea50f8b2e9",
+    "scripts/audit_binned_sensitivity.py": "4893fab150645f7ee2d18d6ace2608cb78bf1f6643d627e3569b7aa9ec6d687d",
+    "tests/test_binned_sensitivity.py": "1cf0c7f6a465c87b859917aa393e639fb840cdd716cc7b397b341c2a5c1a56cd",
+    "data/processed/cnn_jan_mar_2026_3km_30min/feature_specification.json": "505850fd130efb28f8dfe26324f51c10781b126fc25c073c4232d2940d8a6db9"
+  }
+}

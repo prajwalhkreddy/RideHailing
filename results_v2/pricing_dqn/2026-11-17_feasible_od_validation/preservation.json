@@ -1,0 +1,12 @@
+{
+  "historical_snapshot_paths_checked": 2279,
+  "changed_snapshot_paths": [],
+  "final_validation_source_hash_mismatches": [],
+  "tracked_models_and_results_diff": [],
+  "historical_code_diff": [],
+  "focused_tests": 9,
+  "bounded_regression_tests": 76,
+  "failures": 0,
+  "errors": 0,
+  "training_performed": false
+}

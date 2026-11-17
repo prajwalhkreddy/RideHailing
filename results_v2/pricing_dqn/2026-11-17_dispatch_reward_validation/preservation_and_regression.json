@@ -1,0 +1,44 @@
+{
+  "status": "PASS",
+  "focused": {
+    "run": 12,
+    "failures": 0,
+    "errors": 0
+  },
+  "bounded_regression": {
+    "run": 64,
+    "failures": 0,
+    "errors": 0,
+    "modules": [
+      "tests.test_slot_pricing_v3",
+      "tests.test_operational_grid_state",
+      "tests.test_driver_price_gate",
+      "tests.test_v3_episode1_protocol",
+      "tests.test_v3_stage2_protocol",
+      "tests.test_routing_privacy",
+      "tests.test_routing_federated",
+      "tests.test_metric_grid"
+    ]
+  },
+  "historical_tracked_files_stat_checked": 2279,
+  "historical_stat_changes": [],
+  "models_and_results_git_diff": "",
+  "git_diff_check": "PASS",
+  "historical_uncommitted_work_preserved": [
+    "notebooks/plan/.DS_Store",
+    "notebooks/plan/masterdocument/"
+  ],
+  "broader_181_suite": "NOT_RERUN; bounded 64-test regression subset executed",
+  "experiment_training": false,
+  "checkpoint_writes": "Temporary test directories only; no models/ writes",
+  "new_runtime_resume": "NOT_SUPPORTED; historical saver rejects new phase",
+  "remaining_gaps": [
+    "OD state identity",
+    "realized demand",
+    "sensitivity and weather",
+    "CNN causality",
+    "EWMA deviation",
+    "Bellman loss",
+    "hierarchy/privacy integration"
+  ]
+}

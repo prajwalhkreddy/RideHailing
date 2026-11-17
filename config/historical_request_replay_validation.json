@@ -1,0 +1,14 @@
+{
+  "demand_protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+  "pricing_contract": "FEASIBLE_OD_PRICING_V1",
+  "reward_contract": "SUCCESSFUL_DISPATCH_REWARD_V1",
+  "seed": 42,
+  "observed_slot": "2026-03-12 00:00:00",
+  "slot_minutes": 30,
+  "mini_slot_minutes": 2,
+  "unsupported_od_rule": "FAIL_CLOSED_WITHOUT_DROPPING_REQUESTS_OR_EXTENDING_SUPPORT",
+  "eligibility": "finite nonnegative fare/distance, finite positive duration; valid spatial IDs and source identifiers required",
+  "arrival_proxy": "TLC observed pickups",
+  "training_performed": false,
+  "protected_evaluation_authorized": false
+}

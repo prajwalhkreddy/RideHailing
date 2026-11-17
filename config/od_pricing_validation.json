@@ -1,0 +1,15 @@
+{
+  "methodology_version": "FEASIBLE_OD_PRICING_V1",
+  "reward_contract": "SUCCESSFUL_DISPATCH_REWARD_V1",
+  "seed": 42,
+  "fixture_date": "2026-03-12",
+  "training": false,
+  "state_dimension": 13,
+  "architecture": [13, 64, 64, 7],
+  "feasibility": "Positive observed support in eligible January 2026 empirical generator rows",
+  "state_features": ["origin CNN request count", "origin preceding-slot dispatch EWMA: F_hat per minute times 30 minutes", "origin expected passenger dropoff arrivals during current slot", "origin routing probabilities: STAY,N,NE,E,SE,S,SW,W,NW", "destination ordinal popularity"],
+  "pricing_actions": "Unchanged provisional seven actions from historical V3 contract",
+  "historical_configuration_reference": "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/methodology_contract.json",
+  "routing_model_reference": "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras",
+  "full_runtime_checkpoint_schema": "FEASIBLE_OD_FULL_RUNTIME_1"
+}

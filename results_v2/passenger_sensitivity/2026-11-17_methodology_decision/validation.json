@@ -1,0 +1,43 @@
+{
+  "status": "DECISION_EVIDENCE_COMPLETE_NO_FINAL_CALIBRATION_CHANGE",
+  "focused_and_bounded_tests": 15,
+  "failed": 0,
+  "historical_files_preserved": 2279,
+  "existing_calibration_runtime_fingerprints_verified": 17,
+  "production_changed": false,
+  "models_changed": false,
+  "training": false,
+  "protected_period_access": false,
+  "source_sha256": {
+    "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917"
+  },
+  "random_sampling": false,
+  "limitations": [
+    "Full-period family fits not held-out selection",
+    "Weather probe uses hourly noisy outcomes with serial dependence",
+    "No forecast availability verification",
+    "No final weighting or reference freeze"
+  ],
+  "fingerprints": {
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/reference_comparison.json": "ab99708160a8a7f41e8cac8ff7c291eaf78332996d4d00edab296ab1d859eae6",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/distribution_fit_summary.csv": "30259eaee6445a287c1b9c5ddb0a63163cc16cb4cf40e21ab786dc566d1dc7f7",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/test_results.txt": "debaa2e4091eb4c1e9c1c87e75c479670c93ddd5368f14f4dfa61f9537536cb7",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/assigned_population_proportions.csv": "bdfbd2f83fb71f55ed59b4f85a8b1bcc54b1dc26a886284f6393beec3eff3dd5",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/temporal_weather_association.csv": "dea1b84f397fc6034e9ef256b3182ece96eb0d7cf5d2bc4a136048950eb37934",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/bin_request_counts.csv": "ce50de03fb8c3607d5970eb204cd84baef4c9eb6cba94740a44a218474b7edde",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/temporal_distribution_stability.csv": "103c56bd0f595f26447885c3baa8938f68eab5b024a63557d758f7cf26d1a867",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/conditional_weather_support.csv": "4a1ce400cfd70698ec236a058d8bcfa9080af016b491acc7b8036fb929dd6ae7",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/README.md": "21f0ba07aee7a46b64a6cce5779acdd191c6e76a0429e2c18339ad06fbac83fb",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/configuration.json": "9288f97c9558cad78e305d6e56ce8a8b27ddab33728b0ae93d82ece288a1cd24",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/run_summary.txt": "3fe9416423f523928f0fa95a08d37fb9c823b1edcce491bf7383ad005ffeb462",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/acceptance_impact.csv": "64b5486b15c253349124683cfd2e2d49ad76e98ba649d6e694cd5b8ef79196a2",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/weather_evidence.json": "71734d8e1a3a9f85562d880f0bbed7d4349c4cda0432ec18088766b6ff0ed3f9",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/weighting_comparison.csv": "d4e40bb048e49e994ff2c8c5abf5f86629b62d7757f3b218876b6967028213a5",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/hourly_weather_evidence.csv": "2b9d9a7b7c7154175209ce9ab5e9a9fbcb7489410107cb153887ade42e19910d",
+    "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/recommendations.json": "42026fe535a0e0cf3af15560011b010752f70671846f25de69b6ca4702f1f991",
+    "scripts/sensitivity_decision_analysis.py": "e04b0779df2c8204891d8f4dc09736e1b90247fd09b9bf8db82e8276b5600a70",
+    "tests/test_sensitivity_decision_analysis.py": "28c8f48704db6fafac9ef793f592bc629b3e978aa4010182f63af0db2224eb8d",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/provisional_sampling/validation.json": "d33bce1679bfcfe978e2fa89313a459210e04842816bd230ff2d03d74f87165e",
+    "notebooks/plan/masterdocument/MASTER DOCUMENT1.docx": "17ca4a5f8ad8181bb59eec418fb696e9aabd78fd3dcf32247c0627641a0b07dd"
+  }
+}

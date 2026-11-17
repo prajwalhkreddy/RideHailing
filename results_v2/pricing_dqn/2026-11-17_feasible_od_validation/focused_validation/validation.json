@@ -1,0 +1,66 @@
+{
+  "run_id": "focused_validation",
+  "git_commit": "71e7803ef30b8cc6833c0de26c18d6d08f82f411",
+  "git_status": " M README.md\n M notebooks/plan/.DS_Store\n?? config/dispatch_reward_validation.json\n?? config/od_pricing_validation.json\n?? notebooks/plan/masterdocument/\n?? results_v2/\n?? scripts/validate_dispatch_reward.py\n?? scripts/validate_od_pricing.py\n?? src/pricing/dispatch_reward.py\n?? src/pricing/od_contract.py\n?? src/rl/dispatch_reward_dqn.py\n?? src/rl/od_pricing_dqn.py\n?? src/simulation/dispatch_reward_runtime.py\n?? src/simulation/od_pricing_checkpoint.py\n?? src/simulation/od_pricing_runtime.py\n?? tests/test_dispatch_reward.py\n?? tests/test_od_pricing.py\n",
+  "started_at": "2026-11-17T05:48:21.995493+00:00",
+  "methodology_version": "FEASIBLE_OD_PRICING_V1",
+  "configuration": {
+    "methodology_version": "FEASIBLE_OD_PRICING_V1",
+    "reward_contract": "SUCCESSFUL_DISPATCH_REWARD_V1",
+    "seed": 42,
+    "fixture_date": "2026-03-12",
+    "training": false,
+    "state_dimension": 13,
+    "architecture": [
+      13,
+      64,
+      64,
+      7
+    ],
+    "feasibility": "Positive observed support in eligible January 2026 empirical generator rows",
+    "state_features": [
+      "origin CNN request count",
+      "origin preceding-slot dispatch EWMA: F_hat per minute times 30 minutes",
+      "origin expected passenger dropoff arrivals during current slot",
+      "origin routing probabilities: STAY,N,NE,E,SE,S,SW,W,NW",
+      "destination ordinal popularity"
+    ],
+    "pricing_actions": "Unchanged provisional seven actions from historical V3 contract",
+    "historical_configuration_reference": "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/methodology_contract.json",
+    "routing_model_reference": "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras",
+    "full_runtime_checkpoint_schema": "FEASIBLE_OD_FULL_RUNTIME_1"
+  },
+  "source_sha256": {
+    "config/od_pricing_validation.json": "21c0a5f9a4d104d9a45fc1631b37e5d0cdcae4370ef8157f0d4c44e45850de53",
+    "src/pricing/od_contract.py": "4f614be6481a732403a6e2519180d4e4001b82dfced19a619261bfc69adf95bb",
+    "src/pricing/dispatch_reward.py": "2b277eda620166842b012d8b77a2696eca1a22d78596b1f7d0b52f3eee06882a",
+    "src/rl/od_pricing_dqn.py": "474357505b17d62b6ffc704c5b9b79555dcffd58c7a77cd5dd7d008f8ff7ec31",
+    "src/simulation/od_pricing_runtime.py": "d91b12170d6b1c40c294ffed699729adc24c28c021592b32993cd5db53c5ac45",
+    "src/simulation/od_pricing_checkpoint.py": "ccb205ae9da53dbafce6d4e2e17c50b288c82d0f9a06afc631d4548ab663058b",
+    "tests/test_od_pricing.py": "10a68f59b0115730f9f043b1eedd8645864b5408ae691da9aa27ed3b09c365a7",
+    "scripts/validate_od_pricing.py": "72f18722ae87512d081a51c3e26c8dd2bd503e8a50ccf66f960c889c564d45dd",
+    "notebooks/plan/masterdocument/MASTER DOCUMENT1.docx": "17ca4a5f8ad8181bb59eec418fb696e9aabd78fd3dcf32247c0627641a0b07dd",
+    "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/methodology_contract.json": "a845c17a24d8c3a52301b85a836b27c0ad9211b2fc3db9c3bdc6eed0142276a2",
+    "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a"
+  },
+  "python": "3.12.13 | packaged by conda-forge | (main, Aug 11 2026, 10:25:41) [Clang 19.1.7 ]",
+  "command": [
+    "scripts/validate_od_pricing.py",
+    "--output",
+    "results_v2/pricing_dqn/2026-11-17_feasible_od_validation/focused_validation"
+  ],
+  "metric_definitions": {
+    "reward": "Sum offered fare for ACCEPTED_AND_ASSIGNED only",
+    "accepted_revenue": "Descriptive sum of accepted fares; not learning reward",
+    "learning_reward": "Successful-assignment fare sum stored per identified OD transition"
+  },
+  "full_master_compliance": false,
+  "datasets": "Existing frozen runtime dependencies; four constructed requests, no raw regeneration",
+  "validation": {
+    "status": "PASS",
+    "tests_run": 9,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

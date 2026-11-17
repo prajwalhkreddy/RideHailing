@@ -1,0 +1,9 @@
+{
+  "historical_snapshot_paths_checked": 2279,
+  "changed_snapshot_paths": [],
+  "final_source_hash_mismatches": [],
+  "unchanged_historical_source_and_artifact_diff": [],
+  "focused_tests": 16,
+  "bounded_regression_tests": 76,
+  "training_performed": false
+}

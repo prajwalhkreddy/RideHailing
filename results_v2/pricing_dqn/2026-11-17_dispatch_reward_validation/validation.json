@@ -1,0 +1,53 @@
+{
+  "run_id": "2026-11-17_dispatch_reward_validation",
+  "git_commit": "71e7803ef30b8cc6833c0de26c18d6d08f82f411",
+  "git_status": " M README.md\n M notebooks/plan/.DS_Store\n?? config/dispatch_reward_validation.json\n?? notebooks/plan/masterdocument/\n?? results_v2/\n?? scripts/validate_dispatch_reward.py\n?? src/pricing/dispatch_reward.py\n?? src/rl/dispatch_reward_dqn.py\n?? src/simulation/dispatch_reward_runtime.py\n?? tests/test_dispatch_reward.py\n",
+  "started_at": "2026-11-17T05:16:33.397783+00:00",
+  "methodology_version": "SUCCESSFUL_DISPATCH_REWARD_V1",
+  "configuration": {
+    "methodology_version": "SUCCESSFUL_DISPATCH_REWARD_V1",
+    "implementation": "src.simulation.dispatch_reward_runtime.DispatchRewardRuntime",
+    "scope": "REWARD_ONLY_DESTINATION_CONTEXT_BASELINE",
+    "seed": 42,
+    "fixture_date": "2026-03-12",
+    "fixture_fleet_size": 2,
+    "fixture_requests": 4,
+    "training": false,
+    "full_runtime_resume": "NOT_SUPPORTED_IN_THIS_BATCH",
+    "historical_configuration_reference": "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/methodology_contract.json",
+    "routing_model_reference": "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras"
+  },
+  "source_sha256": {
+    "config/dispatch_reward_validation.json": "febc6d0152227227b856f93cf1b93d7140dba8fda2d91c83bc2fb980e3902226",
+    "src/pricing/dispatch_reward.py": "2b277eda620166842b012d8b77a2696eca1a22d78596b1f7d0b52f3eee06882a",
+    "src/rl/dispatch_reward_dqn.py": "ede8c6f2bbfaaddf602550ddf8b39875db9719981aadf35cfbbcdf753ce5000d",
+    "src/simulation/dispatch_reward_runtime.py": "ef6abb6e34d6f2783af1895329f7bdc8c2fcc70c2dae15393931aa586634283d",
+    "src/simulation/slot_pricing_v3.py": "d51335b1b6f81c0d69737258da1cfd2a5d071fb6e32db25fadd26c44ece71878",
+    "src/rl/slot_pricing_v3.py": "3775f36904a13241d67df84355d5f0aef3d070e336d2b9b9b0ec858c191e7fd7",
+    "tests/test_dispatch_reward.py": "9e55f77c585650558f6d2e0ebac6669408776549de21562e5414ada9a20635f0",
+    "scripts/validate_dispatch_reward.py": "e6ac2d5e668c17de8d72dd3a66079302cf94e1aa00b755432ac4439b3f41256a",
+    "notebooks/plan/masterdocument/MASTER DOCUMENT1.docx": "17ca4a5f8ad8181bb59eec418fb696e9aabd78fd3dcf32247c0627641a0b07dd",
+    "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/methodology_contract.json": "a845c17a24d8c3a52301b85a836b27c0ad9211b2fc3db9c3bdc6eed0142276a2",
+    "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras": "db2d4170477addbbbf8654421b8eaf231b3359f68159ae860c4edbac1d2e8b2a"
+  },
+  "python": "3.12.13 | packaged by conda-forge | (main, Aug 11 2026, 10:25:41) [Clang 19.1.7 ]",
+  "command": [
+    "scripts/validate_dispatch_reward.py",
+    "--output",
+    "results_v2/pricing_dqn/2026-11-17_dispatch_reward_validation"
+  ],
+  "metric_definitions": {
+    "reward": "Sum offered fare for ACCEPTED_AND_ASSIGNED only",
+    "accepted_revenue": "Descriptive sum of accepted fares; not learning reward",
+    "learning_reward": "Successful-assignment fare sum stored per destination-context transition"
+  },
+  "full_master_compliance": false,
+  "datasets": "Existing frozen runtime dependencies; four constructed requests, no raw regeneration",
+  "validation": {
+    "status": "PASS",
+    "tests_run": 12,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "status": "WEIGHTED_CALIBRATION_IMPLEMENTED_AND_VALIDATED",
+  "sensitivity_version": "REQUEST_COUNT_WEIGHTED_BINNED_SENSITIVITY_V1",
+  "tests": {
+    "passed": 57,
+    "failed": 0,
+    "scope": "Weighted sampler, binned estimator, uniform sampler, historical V3, OD, rewards and replay"
+  },
+  "pooled_mean": 1.7152994769891912,
+  "pooled_SD": 0.4160148893137902,
+  "pooled_variance": 0.1730683881307651,
+  "pooled_requests": 6967155,
+  "comparison_tolerance_absolute": 1e-12,
+  "population_provenance": {
+    "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet": "66b4c422d081322abcea55b9039af4ecea0f436c6cbebcfa0c17bd4d443bf917"
+  },
+  "calibration_period": "Jan1-Mar15 inclusive",
+  "historical_recorded_files_preserved": 2279,
+  "decision_evidence_fingerprints_preserved": 17,
+  "training_performed": false,
+  "protected_march17_31_access": false,
+  "default_historical_mode_unchanged": true,
+  "weighted_mode_explicit_opt_in": true,
+  "checkpoint_schema": "FEASIBLE_OD_HISTORICAL_REPLAY_RUNTIME_3",
+  "support_bounds_changed": false,
+  "scientific_limitations": [
+    "Common references provisional",
+    "Continuous-weather alignment unresolved",
+    "Decision-time weather availability unverified",
+    "Empirical tail/support adequacy provisional"
+  ],
+  "seed": 42,
+  "software": {
+    "python": "3.12.13",
+    "numpy": "1.26.4",
+    "pandas": "3.0.5"
+  },
+  "fingerprints": {
+    "src/pricing/binned_sampler.py": "5cf497e3a831f6bde13b3796854abf3ee0863cecf292b88bc585f548f0318ce0",
+    "src/pricing/weighted_binned_sampler.py": "4a7c9fbc8ccfac228db4f094bffc35a31edf6e36505000553518b9f26a849c47",
+    "src/simulation/od_pricing_runtime.py": "521d97d2c05c337601608059acf15eb780507d3941d51b0f739bba046cc2537d",
+    "src/simulation/od_pricing_checkpoint.py": "74fc85de1ce026f0fedf3b031f710b0f5770d995c12bd9922153669af6174839",
+    "scripts/build_weighted_binned_calibration.py": "d445d3c344bff89d0a3adcab6f88d8f3fbb3b4020836ff1d31066a0422e7f8aa",
+    "tests/test_weighted_binned_sampler.py": "61e944ad6df066418acf68871c9ee2cb4481cd962b35d3d27312b0c89aa8af29",
+    "README.md": "0dfb705c8c3f560abe8a2a77aa951538c58477ba6fefa35fce7c2512ed7141bd",
+    "src/pricing/README.md": "b2e2ce5281fc7e58101c898b7c0133c8000fe7431251c706ec45191c7704a480",
+    "results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/test_results.txt": "1aeabbba998a484645c65525257d843bfbf666a4af2d0a5bc68d93202124bfd9",
+    "results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/distribution_statistics.csv": "d17632103c4fed3f239210588f20471a63023f744c7f3f7289ad695c113ef606",
+    "results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/support_exceedance_review.csv": "4d397abbcb17082f8540c1fdc9bdb922ca1ed4d52805131e369aab8e2d6ca5cc",
+    "results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/README.md": "64567af4c8654970a0aba1f2e579a2f93ac517bee9996969dc971b2fa70fea73",
+    "results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/sampling_contract.json": "73e423695fd043cac80695d8c7285122cdd6a48f933fe0d9846a539337024efc"
+  }
+}

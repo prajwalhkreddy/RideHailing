@@ -1,0 +1,85 @@
+{
+  "configuration": {
+    "demand_protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+    "pricing_contract": "FEASIBLE_OD_PRICING_V1",
+    "reward_contract": "SUCCESSFUL_DISPATCH_REWARD_V1",
+    "seed": 42,
+    "observed_slot": "2026-03-12 00:00:00",
+    "slot_minutes": 30,
+    "mini_slot_minutes": 2,
+    "unsupported_od_rule": "FAIL_CLOSED_WITHOUT_DROPPING_REQUESTS_OR_EXTENDING_SUPPORT",
+    "eligibility": "finite nonnegative fare/distance, finite positive duration; valid spatial IDs and source identifiers required",
+    "arrival_proxy": "TLC observed pickups",
+    "training_performed": false,
+    "protected_evaluation_authorized": false
+  },
+  "git_commit": "71e7803ef30b8cc6833c0de26c18d6d08f82f411",
+  "git_dirty_state": " M README.md\n M notebooks/plan/.DS_Store\n?? config/dispatch_reward_validation.json\n?? config/historical_request_replay_validation.json\n?? config/od_pricing_validation.json\n?? notebooks/plan/masterdocument/\n?? results_v2/\n?? scripts/validate_dispatch_reward.py\n?? scripts/validate_historical_request_replay.py\n?? scripts/validate_od_pricing.py\n?? src/pricing/README.md\n?? src/pricing/dispatch_reward.py\n?? src/pricing/od_contract.py\n?? src/rl/dispatch_reward_dqn.py\n?? src/rl/od_pricing_dqn.py\n?? src/simulation/dispatch_reward_runtime.py\n?? src/simulation/historical_request_replay.py\n?? src/simulation/od_pricing_checkpoint.py\n?? src/simulation/od_pricing_runtime.py\n?? tests/test_dispatch_reward.py\n?? tests/test_historical_request_replay.py\n?? tests/test_od_pricing.py\n",
+  "python": "3.12.13 | packaged by conda-forge | (main, Aug 11 2026, 10:25:41) [Clang 19.1.7 ]",
+  "command": [
+    "scripts/validate_historical_request_replay.py",
+    "--output",
+    "results_v2/simulation/2026-11-17_historical_request_replay"
+  ],
+  "source_hashes": {
+    "src/simulation/historical_request_replay.py": "ba0c311604145d920bdcd28cccc7fc53ecda13f4af22c5a2878ccf9d896250a6",
+    "src/simulation/od_pricing_runtime.py": "df45222c4585053c004916084417b2ce5f33b72602ac9cf211948d3284becc27",
+    "src/simulation/od_pricing_checkpoint.py": "202da82696950aa5b90f0acad9c1acbf489a4e4c98b884cbb1db95f959a570cb",
+    "src/rl/od_pricing_dqn.py": "8a9e174b5ed3db853487c453ab5aefed266a7c7d127105d2631e2756c9182ca2",
+    "src/pricing/od_contract.py": "4f614be6481a732403a6e2519180d4e4001b82dfced19a619261bfc69adf95bb",
+    "src/simulation/final_production.py": "b2cd5371a632e745e1e65dcf9018fa3992942ff2e493caf3ec68b1d422fbaa78",
+    "src/dispatch/generation.py": "ae070a0a2e36341f169e12af98421b0916d9d58bd52ef65b5e61c2a46e3c4abf",
+    "src/pricing/dqn_contract.py": "ef9e65e6029ee62504532db9c44fbcb84f5c8f9836056ba0706be01bbcb279ee",
+    "tests/test_historical_request_replay.py": "8e2778411f50452a0607b3c3266bf67a453953c5789f5e9df317a13acc022a8b",
+    "scripts/validate_historical_request_replay.py": "45bdf1ff4f2b3e128700babfbf2a82e81ff4601852a0f49989b217307eb93b6b",
+    "config/historical_request_replay_validation.json": "19aab204841da646196f8b481ac91f478da120449646a9c3b98d11b48d713abb",
+    "config/final_temporal_protocol.json": "0ac51d6ce0a07d020aafa4dc94d8c3c5bd2f9eccebdddb55a5b4081391cb6fac",
+    "notebooks/plan/masterdocument/MASTER DOCUMENT1.docx": "17ca4a5f8ad8181bb59eec418fb696e9aabd78fd3dcf32247c0627641a0b07dd"
+  },
+  "historical_source": {
+    "path": "/Users/prajwalhk/Keerthi/Implementation/data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet",
+    "sha256": "40749c9aec5fec0fd1235dea6fc0c87fb97fa830a7235707933548467f12afe4",
+    "filter_start": "2026-03-12 00:00:00",
+    "filter_end_exclusive": "2026-03-12 00:30:00",
+    "fingerprint_note": "Whole-file integrity fingerprint; only selected slot rows inspected"
+  },
+  "od_support_sha256": "41a3f10e58fa5addb46bf06b95afccfc53f0c6489ac1bcab94b17cad91671d87",
+  "count_reconciliation": {
+    "source_rows": 1746,
+    "eligible_rows": 1717,
+    "excluded_invalid_trip_rows": 29,
+    "realized_requests": 1717,
+    "unsupported_pairs": 0,
+    "order_hash": "9fa41b3d20a647b1091c0b8bd883094c28db3f8056898128f874cc4ef1bd102b"
+  },
+  "performance": {
+    "contexts": 9572,
+    "cartesian_contexts": 20164,
+    "read_seconds": 0.21453883312642574,
+    "request_conversion_seconds": 0.030001541133970022,
+    "state_construction_seconds": 0.549267582828179,
+    "batched_inference_seconds": 0.2020384999923408,
+    "inference_batches": 10,
+    "state_array_bytes": 497744,
+    "selected_frame_bytes": 97908,
+    "replay_transitions_per_slot": 9572,
+    "replay_transitions_per_16_slots": 153152,
+    "replay_capacity": 100000,
+    "training_updates": 0,
+    "scope": "One observed slot read/conversion; full-support state/inference only; small synthetic fleet; no full-slot simulation"
+  },
+  "focused": {
+    "tests": 15,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "regression": {
+    "tests": 76,
+    "failures": 0,
+    "errors": 0,
+    "passed": true
+  },
+  "training_performed": false,
+  "protected_period_used_for_evaluation": false
+}

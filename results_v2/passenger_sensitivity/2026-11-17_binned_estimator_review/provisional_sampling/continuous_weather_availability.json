@@ -1,0 +1,23 @@
+{
+  "period": "2026-01-01 <= pickup_timestamp < 2026-03-16",
+  "slots": 3552,
+  "expected_slots": 3552,
+  "source": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+  "within_slot_unique_max": {
+    "Temperature": 1,
+    "WindSpeed": 1,
+    "WeatherCode": 1
+  },
+  "population_N": 6967155,
+  "finite_temperature_N": 6967155,
+  "finite_windspeed_N": 6967155,
+  "weather_code_mismatch_N": 0,
+  "temperature_min": -15.2,
+  "temperature_max": 25.0,
+  "windspeed_min": 0.0,
+  "windspeed_max": 37.0,
+  "units": "Meteostat metric defaults: Temperature Celsius; WindSpeed km/h; see installed Meteostat source evidence",
+  "coverage_caveat": "Processed coverage includes existing forward/backward filling; not original observation completeness",
+  "decision": "OPEN_METHODOLOGICAL_DECISION",
+  "potential_approaches": "Conditional regression or validated stratification could be evaluated separately; neither selected or implemented."
+}

@@ -1,0 +1,60 @@
+{
+  "status": "PROVISIONAL_IMPLEMENTATION_VALIDATED",
+  "final_master_compliance": false,
+  "tests": {
+    "passed": 51,
+    "failures": 0,
+    "errors": 0,
+    "scope": "50 focused/bounded regression tests plus one opt-in historical replay integration test"
+  },
+  "historical_preservation": {
+    "files_checked": 2279,
+    "check": "pre-task file size and nanosecond modification time",
+    "changed": []
+  },
+  "weather_conditioning": "OPEN_METHODOLOGICAL_DECISION",
+  "training_performed": false,
+  "protected_march17_31_observations_read": false,
+  "seed": 42,
+  "runtime_seed": "caller-controlled",
+  "checkpoint_schema": "FEASIBLE_OD_HISTORICAL_REPLAY_RUNTIME_3",
+  "software": {
+    "python": "3.12.13",
+    "numpy": "1.26.4",
+    "pandas": "3.0.5",
+    "scipy": "1.14.1"
+  },
+  "fingerprints": {
+    "src/pricing/binned_sensitivity.py": "0fd36897e980ff186eab218110e6f0701bfa90bd9bd0a1288b45eae05b930e55",
+    "src/pricing/binned_sampler.py": "b5357df058fbca91d9a82053f461389d87a0f6496a7395a2ebc5397c7bacd272",
+    "src/simulation/od_pricing_runtime.py": "452d9bc03e2087f548e41a52a61d102f52a712482c277e230e9f1001a465df0b",
+    "src/simulation/od_pricing_checkpoint.py": "d0c2bce1c19fe8c58782a99db3e9a553fd974e8f47aecde1b4b692d8f84bbe2e",
+    "scripts/audit_binned_sensitivity.py": "6afb264cd7d6dd658854216987b543219232f8049f90d0ff8df7dbfa034707bb",
+    "scripts/complete_binned_sensitivity.py": "aa34651430665da6a79a60086fba7f582ac2f6acadd9f16485673e982881acdc",
+    "tests/test_binned_sensitivity.py": "b376d3c41420294fa5417cc20bc486cf1fa42e3bed1ddc9c8cad33b88d8e8243",
+    "tests/test_binned_sampler.py": "6876463b84d4669ec2d5481b15b498e817f1d3b1dbc246f649b5533d7dbae83e",
+    "src/data/weather.py": "8394be0e511f5a2b40e8fae470b7c0e46bdbfb6f7c6578b47a3e55f2b6f66a97",
+    "data/processed/cnn_jan_mar_2026_3km_30min/feature_specification.json": "505850fd130efb28f8dfe26324f51c10781b126fc25c073c4232d2940d8a6db9",
+    "README.md": "3aadcce811580f055004b9638b6aab2c4f321b56a587b94cda5a87fdcfa0641c",
+    "src/pricing/README.md": "b01488b15ead7db0190669327213b85707e7d2a836cb08e4fb400883956c2384",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/README.md": "dc431b9d77deefa59b6ecb7098f89390387dadbb8707a38d4839d17f6d39c3eb",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/provisional_sampling/test_results.txt": "22daeb4468557358f14b3cd86a88a43757b3458f8d9f78ceb9f86982788cdb1b",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/provisional_sampling/sampling_contract.json": "a4083dba0d89fac11aa5e44bb2409ee3d0f2267682cab13c4078de0bc6e8fa10",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/provisional_sampling/replay_integration_test.txt": "647c6c46a5c81dbe885784a3a8edb3c53c868e845e63b75b477546f0c0b9a751",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/provisional_sampling/continuous_weather_availability.json": "1338e2ae00bb1973d18bc49994f50ad92fc362f209da666a1b198e7037cc2ab4",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/provisional_sampling/bounded_family_comparison.csv": "a4575b618408e50a6ff4c8ca231dac23d84f7869c78b188d9c08f7ce81b9f73f",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/final_validation/conditional_distance_bins.csv": "55cde162c76e17baf433c7593d6045b4841429a3e7ff45983e98c2262ea55815",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/final_validation/validation.json": "c341ba88a1fea4b7277a47c3d5de311f119300b4971793631c02d904304da3b9",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/final_validation/conditional_population_support.csv": "5ef83f522664d497363fa1c38e3e80cd7cbb98afdfc963b34e1ca8ed966b1f58",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/final_validation/od_coverage_by_date.csv": "55c4b3ccd9c871b4f1fde46744c5abe80b5b0d8a1260451fc87abb24236c1d59",
+    "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/final_validation/unseen_valid_od_pairs.csv": "d17ef3638054927ab77b9c5adc2697beb691abe2c33b4637cf1c042c59e4c85f"
+  },
+  "supersedes_status_only": "final_validation/calibration_contract.json: BLOCKED_PENDING_CONDITIONING_DECISION",
+  "remaining_decisions": [
+    "Continuous weather conditioning",
+    "Final reference selection",
+    "Final distribution/weighting approval",
+    "Unseen valid OD handling"
+  ],
+  "recommended_next_single_task": "Resolve continuous-weather conditioning and conditional-support validation protocol"
+}

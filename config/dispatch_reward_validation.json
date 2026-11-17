@@ -1,0 +1,13 @@
+{
+  "methodology_version": "SUCCESSFUL_DISPATCH_REWARD_V1",
+  "implementation": "src.simulation.dispatch_reward_runtime.DispatchRewardRuntime",
+  "scope": "REWARD_ONLY_DESTINATION_CONTEXT_BASELINE",
+  "seed": 42,
+  "fixture_date": "2026-03-12",
+  "fixture_fleet_size": 2,
+  "fixture_requests": 4,
+  "training": false,
+  "full_runtime_resume": "NOT_SUPPORTED_IN_THIS_BATCH",
+  "historical_configuration_reference": "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/methodology_contract.json",
+  "routing_model_reference": "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/final_march12.keras"
+}

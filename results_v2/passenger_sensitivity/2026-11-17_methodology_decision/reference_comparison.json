@@ -1,0 +1,19 @@
+{
+  "existing_P_base": 22.354198442390455,
+  "existing_L_base_km": 4.616983790655043,
+  "existing_derivation": "Pbase weighted mean on prior [1,75)km scope; Lbase interpolated mean-fare crossing",
+  "master_derivation": "Observed fare nearest selected base fare; mean of selected representative distances near selected base distance",
+  "equivalent": false,
+  "full_faithful_alternative_computable": false,
+  "missing_choices": [
+    "Selected base fare/distance targets",
+    "Representative distance selection/nearness rule"
+  ],
+  "conditional_nearest_observed_fare": 22.35,
+  "conditional_nearest_fare_support": 408,
+  "conditional_P_delta": -0.004198442390453749,
+  "conditional_L_unchanged": 4.616983790655043,
+  "conditional_max_abs_bin_epsilon_change": 0.017185157154061326,
+  "conditional_mean_bin_epsilon_change": -0.0005527612438995044,
+  "warning": "One-component diagnostic, not a fully master-selected reference pair; no references replaced"
+}

@@ -1,0 +1,17 @@
+test_assigned (tests.test_dispatch_reward.RewardArithmeticTests.test_assigned) ... ok
+test_duplicate_rejected (tests.test_dispatch_reward.RewardArithmeticTests.test_duplicate_rejected) ... ok
+test_invalid_audit_rejected (tests.test_dispatch_reward.RewardArithmeticTests.test_invalid_audit_rejected) ... ok
+test_multiple_and_empty_context (tests.test_dispatch_reward.RewardArithmeticTests.test_multiple_and_empty_context) ... ok
+test_rejected (tests.test_dispatch_reward.RewardArithmeticTests.test_rejected) ... ok
+test_unmatched (tests.test_dispatch_reward.RewardArithmeticTests.test_unmatched) ... ok
+test_all_outcomes_exercised (tests.test_dispatch_reward.RewardIntegrationTests.test_all_outcomes_exercised) ... ok
+test_checkpoint_version_roundtrip_and_rejection (tests.test_dispatch_reward.RewardIntegrationTests.test_checkpoint_version_roundtrip_and_rejection) ... ok
+test_dispatch_rng_and_states_identical (tests.test_dispatch_reward.RewardIntegrationTests.test_dispatch_rng_and_states_identical) ... ok
+test_historical_full_runtime_save_rejected_without_writes (tests.test_dispatch_reward.RewardIntegrationTests.test_historical_full_runtime_save_rejected_without_writes) ... ok
+test_historical_reward_unchanged (tests.test_dispatch_reward.RewardIntegrationTests.test_historical_reward_unchanged) ... ok
+test_replay_matches_assignment_and_request_rewards (tests.test_dispatch_reward.RewardIntegrationTests.test_replay_matches_assignment_and_request_rewards) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 4.262s
+
+OK
