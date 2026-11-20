@@ -1,11 +1,11 @@
 flowchart TD
-  I[Available vehicle] --> E{EV?}
-  E -->|No| U[Private reposition utility]
-  E -->|Yes| B{Above energy threshold?}
-  B -->|Yes| R[Feasible moves preserve station reserve]
+  I["Available vehicle"] --> E{"EV?"}
+  E -->|No| U["Private reposition utility"]
+  E -->|Yes| B{"Above energy threshold?"}
+  B -->|Yes| R["Feasible moves preserve station reserve"]
   R --> U
-  B -->|No| C[Charging utility over reachable stations]
-  C --> N[Timed next hop]
-  N --> Q[Station admission or queue]
-  Q --> H[Timed charging]
-  U --> T[STAY or timed movement]
+  B -->|No| C["Charging utility over reachable stations"]
+  C --> N["Timed next hop"]
+  N --> Q["Station admission or queue"]
+  Q --> H["Timed charging"]
+  U --> T["STAY or timed movement"]

@@ -1,13 +1,13 @@
 flowchart LR
-  D[NYC historical data] --> C[Causal CNN: trained, underperforming]
-  D --> B[January historical mean: active research forecast]
-  C -. Future downstream study .-> Q[OD pricing DQN]
+  D["NYC historical data"] --> C["Causal CNN: trained, underperforming"]
+  D --> B["January historical mean: active research forecast"]
+  C -. Future downstream study .-> Q["OD pricing DQN"]
   B --> Q
-  Q --> A[Passenger acceptance and dispatch]
-  A --> U[Private driver utility and EV charging]
-  U --> L[Local routing learning]
-  L --> F[Equal-client NONPRIVATE FedAvg]
-  F --> N[Next-slot routing probabilities]
+  Q --> A["Passenger acceptance and dispatch"]
+  A --> U["Private driver utility and EV charging"]
+  U --> L["Local routing learning"]
+  L --> F["Equal-client NONPRIVATE FedAvg"]
+  F --> N["Next-slot routing probabilities"]
   N --> Q
-  D --> R[Realized requests at event time]
+  D --> R["Realized requests at event time"]
   R --> A

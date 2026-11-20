@@ -1,10 +1,10 @@
 flowchart LR
-  G[Global weights at slot start] --> C[Participating driver local copy]
-  U[Private realized utility decision] --> M[Eligible private memory]
+  G["Global weights at slot start"] --> C["Participating driver local copy"]
+  U["Private realized utility decision"] --> M["Eligible private memory"]
   M --> C
-  C --> L[One local cross-entropy update]
-  L --> A[Equal-client parameter average]
-  A --> V[New global version at slot end]
-  V --> N[Next-slot masked responses]
+  C --> L["One local cross-entropy update"]
+  L --> A["Equal-client parameter average"]
+  A --> V["New global version at slot end"]
+  V --> N["Next-slot masked responses"]
   N --> G
-  A -. Not integrated .-> P[DP threat model and accountant]
+  A -. Not integrated .-> P["DP threat model and accountant"]

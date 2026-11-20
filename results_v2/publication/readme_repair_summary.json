@@ -1,0 +1,42 @@
+{
+  "status": "STATIC_AND_SUPPLEMENTAL_PARSER_CHECKS_PASS",
+  "equation_groups_reformatted": 15,
+  "display_formulas": 29,
+  "inline_formulas": 40,
+  "removed_macro": "operatorname replaced with mathrm; tag numbering moved to Markdown labels",
+  "mermaid_blocks": 9,
+  "mermaid_engine_validation": "UNVERIFIED",
+  "links_checked": 111,
+  "unique_links": 100,
+  "binary_or_checkpoint_links_replaced": 4,
+  "unresolved_local_links": 0,
+  "image_references_checked": 15,
+  "tests_passed": 14,
+  "tests_failed": 0,
+  "scientific_correction": "Retain seven recorded charging events; completed charging sessions not established; do not repeat stale zero-event claim for latest pilot",
+  "no_training_or_simulation": true,
+  "files": {
+    "README.md": "c51a447b3ed1f3935ce3c4a9ce00446aa7b4159d630613c8b50035707aff87ee",
+    "scripts/validate_readme_rendering.py": "8a1c84d412b77c9fe198e5f9c684e37b9347a5abcf14f9d3b6b5f9d23f10f429",
+    "tests/test_research_review_documentation.py": "74ffb7ca89d9a71f8166f570d0546ad06cc19df9da108ce620c17fe34060394b",
+    "results_v2/publication/diagrams/01.mmd": "d5e5609e4affe596fa47d8d2245df3a860f7ad661666bec85ee451261e68e6a5",
+    "results_v2/publication/diagrams/02.mmd": "33201c9efe2d755aa8703183940e2aa0a6bdc8c1a8da9b1c49387b40847e73be",
+    "results_v2/publication/diagrams/03.mmd": "cb4c1ab333c4f720d0e79096daf1cc1a05b7f18ef02bf51a8f73e06170d2ce9a",
+    "results_v2/publication/diagrams/04.mmd": "1ba9bbc3ed1b6920831fb4eb76aed5ca17ecab328aa8e13f880f33dccbfb8a1d",
+    "results_v2/publication/diagrams/05.mmd": "462fe6cef81fa28a59b557d599329d62ef0d560d474c17c2ad9f52118e405929",
+    "results_v2/publication/diagrams/06.mmd": "90ef0d4b356ffd01f48d9926e1df03e376150157d6b6b6d659df4657bdf16f04",
+    "results_v2/publication/diagrams/07.mmd": "76e3a39a6aadd7288442e0c77f435c001ca9c09f73cd17653b91f8746ecb3197",
+    "results_v2/publication/diagrams/08.mmd": "5b6b0be5471e5611af3deb31b868501905f57746360bd497ab6b0d7b7109582c",
+    "results_v2/publication/diagrams/09.mmd": "8f9d92552783479b7073a9cf83b3f4f3d5bfc34cc7f2904e288f3b0e0e5f156e",
+    "results_v2/publication/master_specification_excerpt.md": "52902bdc2b78a7370ac36268e60bd5dbade4da818a2eab94c681bdd0c97eb018",
+    "results_v2/publication/readme_structural_preview.html": "59975b1c2360e36c51b2547b5affbcfce35d8c395be9bcae8a499aa0a9235681",
+    "results_v2/publication/readme_render_validation.json": "5a7e0adc597f517ae39ed51ce5f6575fcbe12a3d266b9529d6587d4ecd949539",
+    "results_v2/publication/readme_repair_tests.log": "f09a5e8342534c32e9161bfd2292a0fabdea2b8717678f624554afecec0ed5a8",
+    "results_v2/publication/documentation_validation.json": "e1c015062ee850a38206f25072e463f7894c603b76052830f65678b6d5a69ad8"
+  },
+  "limitations": [
+    "Full GitHub browser layout unavailable",
+    "KaTeX/MathJax and Mermaid parser unavailable; no graphical pass claimed",
+    "MathText is supplemental, not GitHub math engine"
+  ]
+}

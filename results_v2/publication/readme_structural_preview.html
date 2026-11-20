@@ -1,0 +1,757 @@
+<!doctype html><meta charset="utf-8"><base href="../../"><title>README structural preview</title><style>body{max-width:1040px;margin:2em auto;font:16px sans-serif;line-height:1.6}img{max-width:100%}table{border-collapse:collapse}td,th{border:1px solid #ddd;padding:6px}pre{overflow:auto;white-space:pre-wrap}</style><p>Structural preview only: math and Mermaid engines unavailable. Use GitHub for final rendering.</p><h1>Hierarchical OD Pricing and Private-Utility Repositioning for NYC Ride-Hailing</h1>
+<h2>A. Research abstract and current status</h2>
+<p>This repository studies destination-based dispatch pricing coupled to private driver repositioning, EV charging, demand forecasting and federated routing-response estimation. A top-level deep Q-network prices supported origin–destination (OD) pairs; passengers accept or reject prices under a population sensitivity model, while drivers retain private utility-based decisions. Locally learned routing responses are aggregated and enter subsequent pricing states. The research objective is discounted revenue from successful assignments, not revenue from merely accepted requests.</p>
+<p><strong>Review snapshot: 20 November 2026.</strong> The latest verified master-alignment milestone is <strong>two chronological eight-hour episodes (32 slots), 256 pricing updates and 32 NONPRIVATE FedAvg rounds</strong>. Episodes 3–35 have not run. This is an engineering and bounded-learning result, not a converged policy, operational deployment, private-learning guarantee or publication-ready effectiveness claim. All training and implementation development are paused for this review.</p>
+<p>The <a href="results_v2/publication/master_specification_excerpt.md">readable master specification extract</a> reproduces the normative source at <code>notebooks/plan/masterdocument/MASTER DOCUMENT1.docx</code>; the original DOCX remains unchanged. This README is the current review entry point; historical reports describe their own dated contracts and may contain superseded readiness statements. The <a href="results_v2/publication/root_readme_before_review.md">prior root text</a> is retained verbatim as an archival snapshot, not a competing current guide. Existing source changes and historical evidence have not been reverted.</p>
+<p><strong>Critical qualifications:</strong> the trained CNN underperforms a historical-average benchmark; current hierarchical training uses that benchmark rather than CNN output. Weather availability is assumption-based. Common sensitivity references and continuous-weather alignment remain provisional. Active federation is nonprivate. Final policy benchmarks, EV-penetration comparisons and protected-period evaluation remain outstanding.</p>
+<h2>Current Research Status and Next Steps</h2>
+<p>Latest verified experiment evidence: <strong>20 November 2026</strong>, from the <a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json">two-episode validation</a>. Status below describes bounded engineering evidence, not scientific superiority or complete master compliance.</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Status</th>
+<th>Verified scope or remaining limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NYC data and spatial mapping</td>
+<td>VALIDATED</td>
+<td>Versioned 142-cell true-3-km geometry and bounded replay reconciliation</td>
+</tr>
+<tr>
+<td>CNN prediction</td>
+<td>PARTIALLY_VALIDATED</td>
+<td>Causal Softplus trained; worse than historical mean; assumed weather timing</td>
+</tr>
+<tr>
+<td>Passenger sensitivity</td>
+<td>PARTIALLY_VALIDATED</td>
+<td>Count-weighted binned sampler tested; references/weather/tails remain qualified</td>
+</tr>
+<tr>
+<td>OD pricing DQN</td>
+<td>PARTIALLY_VALIDATED</td>
+<td>Learning demonstrated; no final policy effectiveness evaluation</td>
+</tr>
+<tr>
+<td>Dispatch and reward</td>
+<td>VALIDATED</td>
+<td>Successful assignments reconcile to reward and separate fallback revenue</td>
+</tr>
+<tr>
+<td>Driver repositioning</td>
+<td>VALIDATED</td>
+<td>Private utility and bounded learned-response feedback tested</td>
+</tr>
+<tr>
+<td>EV charging</td>
+<td>PARTIALLY_VALIDATED</td>
+<td>Seven event records in latest pilot; completed-cycle/long-run coverage not established</td>
+</tr>
+<tr>
+<td>Federated learning</td>
+<td>PARTIALLY_VALIDATED</td>
+<td>32 equal-client rounds; active mode NONPRIVATE</td>
+</tr>
+<tr>
+<td>Differential privacy</td>
+<td>PENDING</td>
+<td>Active hierarchical mechanism and accounting not validated</td>
+</tr>
+<tr>
+<td>Gymnasium environment</td>
+<td>IMPLEMENTED</td>
+<td>Adapter fixtures; full training campaign uses direct runtime</td>
+</tr>
+<tr>
+<td>Checkpoint and reproducibility</td>
+<td>VALIDATED</td>
+<td>Exact bounded cross-episode recovery</td>
+</tr>
+<tr>
+<td>Multi-episode training</td>
+<td>PARTIALLY_VALIDATED</td>
+<td>Two 16-slot episodes complete; remaining33 not executed</td>
+</tr>
+<tr>
+<td>EV penetration comparisons</td>
+<td>NOT_EVALUATED</td>
+<td>10/20/30% initialization exists; performance comparison pending</td>
+</tr>
+<tr>
+<td>Publication evaluation</td>
+<td>NOT_EVALUATED</td>
+<td>Frozen-policy benchmarks and protected evaluation pending</td>
+</tr>
+</tbody>
+</table>
+<p>Current pricing training uses <strong>historical-average forecasts</strong>, not the trained CNN. Earlier short runs had zero charging events; the latest pilot records3+4 events. Event records must not be represented as completed charging sessions. March17–31 remains protected in the current research protocol; older historical reports have different evaluation scopes.</p>
+<h3>Next steps</h3>
+<ol>
+<li>Complete academic methodology review.</li>
+<li>Resolve decisions that materially affect the frozen experiment protocol.</li>
+<li>With explicit authorization, resume controlled OD-DQN development training from the authoritative checkpoint.</li>
+<li>Perform the configured frozen-policy development evaluations.</li>
+<li>Complete privacy and EV charging experiments under approved protocols.</li>
+<li>Conduct protected evaluation only after methodology and model selection are frozen.</li>
+<li>Prepare publication-ready comparative results.</li>
+</ol>
+<p>No training is authorized or launched by this documentation repair. Update this table only from new validated evidence.</p>
+<p><strong>Navigation:</strong> <a href="#c-end-to-end-architecture">Architecture</a> · <a href="#f-cnn-forecasting-implemented-not-the-active-hierarchical-input">CNN</a> · <a href="#g-passenger-elasticity-and-acceptance">Sensitivity</a> · <a href="#n-training-mathematics-and-hyperparameters">Mathematics</a> · <a href="#q-verified-experiments-and-latest-milestone">Results</a> · <a href="#t-open-methodological-decisions-and-experimental-limitations">Open decisions</a> · <a href="#u-reproducibility-and-execution-reference">Reproduction</a></p>
+<h2>B. Objectives and contributions under investigation</h2>
+<p>The intended contributions are an OD-specific pricing controller, empirically conditioned passenger response, local utility-preserving driver decisions, federated routing feedback and reproducible temporal simulation. Implemented contributions include versioned mathematical/information contracts, explicit historical-request replay, masked spatial responses, mixed-fleet safety and full-state checkpoint restoration. Their implementation is distinguishable from evidence of policy benefit. The present experiments establish bounded numerical and integration correctness; they do not identify causal willingness-to-pay, demonstrate privacy, or establish optimal pricing.</p>
+<h2>C. End-to-end architecture</h2>
+<pre><code class="language-mermaid">flowchart LR
+  D[&quot;NYC historical data&quot;] --&gt; C[&quot;Causal CNN: trained, underperforming&quot;]
+  D --&gt; B[&quot;January historical mean: active research forecast&quot;]
+  C -. Future downstream study .-&gt; Q[&quot;OD pricing DQN&quot;]
+  B --&gt; Q
+  Q --&gt; A[&quot;Passenger acceptance and dispatch&quot;]
+  A --&gt; U[&quot;Private driver utility and EV charging&quot;]
+  U --&gt; L[&quot;Local routing learning&quot;]
+  L --&gt; F[&quot;Equal-client NONPRIVATE FedAvg&quot;]
+  F --&gt; N[&quot;Next-slot routing probabilities&quot;]
+  N --&gt; Q
+  D --&gt; R[&quot;Realized requests at event time&quot;]
+  R --&gt; A
+</code></pre>
+<p>The global routing network estimates aggregate responses; it does <strong>not</strong> replace private utility maximization. Therefore routing probabilities can change without changing physical driver actions in a fully exploratory/no-pricing-update control. The <a href="results_v2/federated_learning/2026-11-18_hierarchical_coupling_validation/README.md">coupling validation</a> demonstrates that all nine routing dimensions reach the pricing network and affect its forward computation. It does not require an untrained network to select a different greedy action.</p>
+<h2>D. Dataset, spatial grid and time</h2>
+<p>The primary population is NYC Yellow Taxi historical trips in January–March 2026, using recorded pickup/drop-off, zone IDs, fare and distance. Trips proxy realized passenger requests; missing rejected/unserved demand is not recovered. Calendar coverage of a source file does not authorize reading its protected evaluation rows.</p>
+<p>The active geometry is <strong>142 valid true 3-km cells on a 16×16 raster</strong>, with explicit validity and neighbour masks. Cardinal movement is 3 km; diagonal movement is $3\sqrt{2}$ km; STAY is zero. Zone/grid membership uses polygon-intersection inclusion, with no centroid/majority substitution in the mapping metadata. Taxi-zone assignment is an approximation to unavailable individual GPS positions, not exact passenger localization. <a href="data/processed/spatial_3km_jan_mar_2026/grid_metadata.json">Grid metadata</a>, <a href="data/processed/spatial_3km_jan_mar_2026/zone_grid_mapping.metadata.json">zone mapping metadata</a> and <a href="data/processed/spatial_3km_jan_mar_2026/grid_raster_mapping.metadata.json">raster mapping</a> identify the saved geometry. Legacy grid versions are not interchangeable. Code action order is STAY,N,NE,E,SE,S,SW,W,NW (zero-based); the master describes clockwise order starting from the left. This indexing deviation is explicit; saved masks/labels must never be reinterpreted without their action contract.</p>
+<p>Internal events use UTC elapsed time; America/New_York supplies calendar features. Slots are 30 elapsed minutes and mini-slots 120 seconds. March 8 has 46 local half-hours: 01:30 EST advances to 03:00 EDT, without fabricated 02:00/02:30 intervals. Arrival, repositioning and charging durations remain elapsed durations. See <a href="results_v2/simulation/2026-11-17_utc_od_runtime/README.md">UTC runtime validation</a> and <a href="src/simulation/utc_od_state.py">temporal implementation</a>.</p>
+<h2>E. Cleaning, preprocessing and population accounting</h2>
+<p>Population definitions are versioned rather than silently combined. Historical Record-029 used its own cleaned population and signed estimator; it is not the current binned calibration. The binned Jan1–Mar15 analysis uses 6,967,155 eligible fare/distance records with $1.5\leq L&lt;75$ km. Prospective sampling refits positive binned values using <strong>5,457,435 Jan–Feb records</strong>. These counts are not the full demand or runtime request populations.</p>
+<p><a href="results_v2/simulation/2026-11-17_historical_request_replay/README.md">Historical request replay</a> validates observed origin/destination, timestamps, finite positive trip distance and fare, and positive elapsed duration through the existing eligibility path. Source identities order ties deterministically; predictions never generate request counts. Invalid spatial mappings and unchanged eligibility exclusions are reconciled separately. Unsupported but valid unseen ODs use an explicit reference-price fallback; they are not silently deleted or added to learned support. See <a href="src/simulation/historical_request_replay.py">replay source</a> and <a href="results_v2/simulation/2026-11-17_end_to_end_acceptance/README.md">unseen-OD acceptance evidence</a>.</p>
+<p>The newest pilot reconciles <strong>70,106 source rows = 1,261 excluded rows + 68,845 eligible requests</strong>, including 36 fallback requests. This verifies its selected windows, not a universal quarter-wide cleaning total or a raw-data deduplication audit. The complete per-episode records are linked in the evidence index. No raw preparation or cleaning was rerun for this review.</p>
+<h2>F. CNN forecasting: implemented, not the active hierarchical input</h2>
+<p>Master §4 requires seven aligned planes, nonnegative expected counts and chronological forecasting. The implemented channel order is day of week, hour, half-hour period, weather code, temperature (°C), wind speed (km/h), and historical average demand. Tensor layout is $(N,7,16,16)$, with internal framework layout conversion and 142-cell loss/output masking. Calendar/code features use fixed scaling; weather uses prior moments; historical counts use causal training-history scale. Targets and reported errors remain original request counts. Held-out labels do not update historical means or scaling.</p>
+<pre><code class="language-mermaid">flowchart LR
+  A[&quot;Seven causal feature planes&quot;] --&gt; B[&quot;Conv 3x3: 14 ReLU&quot;]
+  B --&gt; C[&quot;Conv 3x3: 7 ReLU&quot;]
+  C --&gt; D[&quot;Conv 3x3: 1 Softplus&quot;]
+  D --&gt; M[&quot;142-cell validity mask&quot;]
+  M --&gt; O[&quot;Fractional grid demand forecast&quot;]
+  O --&gt; V[&quot;Metadata and issuance validation&quot;]
+</code></pre>
+<p>The 14→7→1 model differs from the larger illustrative §4 architecture, which is explicitly proposed rather than source-mandated. ReLU-output and output-only Softplus experiments are separately preserved. Adam learning rate 0.001, batch64, seed42, no shuffle, maximum100 epochs and validation patience10 are experiment settings. Softplus selected epoch42 and stopped52; ReLU selected50 and stopped60.</p>
+<p>Training is Jan1–Feb28 (2,830 samples after two no-history exclusions), validation March1–15 (718), development March16 (48). March17–31 remains protected. Issuance is 30 elapsed minutes before target start; labels cover the following 30-minute interval. The master includes inconsistent illustrative issuance examples; the implemented convention is explicit and tested. The master’s proposed Jan1–Feb20/Feb21–28 split was not the executed split.</p>
+<p>Weather uses the latest complete observation whose <strong>assumed</strong> availability, observation time +120 minutes, precedes issuance. This is not an archived operational forecast. The <a href="src/demand/persistence_weather.py">persistence protocol</a> must wrap the causal-history builder; its oracle-weather path is not an operational forecast. <a href="results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/forecast_contract.json">Forecast export</a> binds channels, grid/mask, model and preprocessing hashes. A model selected on March1–15 cannot be backdated into the prospective March1/March12 experiment merely because its features are causal.</p>
+<table>
+<thead>
+<tr>
+<th>Population</th>
+<th style="text-align:right">ReLU MAE / RMSE</th>
+<th style="text-align:right">Softplus MAE / RMSE</th>
+<th style="text-align:right">Historical-average MAE / RMSE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>March1–15 validation</td>
+<td style="text-align:right">7.107571 / 26.145924</td>
+<td style="text-align:right">7.013677 / 26.027186</td>
+<td style="text-align:right">3.518426 / 18.226779</td>
+</tr>
+<tr>
+<td>March16 development</td>
+<td style="text-align:right">9.167995 / 39.863315</td>
+<td style="text-align:right">8.956793 / 39.232116</td>
+<td style="text-align:right">5.085002 / 29.771590</td>
+</tr>
+</tbody>
+</table>
+<p>Units: requests per valid grid per half-hour; 101,956 and 6,816 grid-time observations respectively. <a href="results_v2/publication/tables/cnn_metrics.csv">Exact consolidated metrics</a> are regenerated from saved metrics and independently checked against saved Softplus predictions.</p>
+<p><img src="results_v2/publication/figures/cnn_baseline_comparison.png" alt="CNN comparison" /></p>
+<p>The <a href="results_v2/cnn_demand/2026-11-18_cnn_activation_gradient_diagnosis/README.md">activation diagnosis</a> directly identified blocked final-ReLU gradients. Softplus removed that exact mechanism but retained severe near-zero predictions: 86.18% of positive validation cells below0.01 requests. The <a href="results_v2/cnn_demand/2026-11-18_softplus_final_diagnosis/README.md">final diagnosis</a> found strongly negative pre-activations and small gradients, rather than a verified scaling/alignment defect or entirely dead hidden representation. High-demand cells dominate squared errors. CNN work is frozen; no superiority or additional justified retraining is claimed here.</p>
+<p>Further figures: <a href="results_v2/publication/figures/cnn_training_loss.svg">loss curves</a>, <a href="results_v2/publication/figures/cnn_high_low_grids.svg">high/low grids</a>, <a href="results_v2/publication/figures/cnn_city_development.svg">city counts</a>, <a href="results_v2/publication/figures/cnn_spatial_error.svg">spatial and signed errors</a>. Positive signed error means underprediction. These are saved prediction summaries, not new inference.</p>
+<h2>G. Passenger elasticity and acceptance</h2>
+<p>Master §3.1 defines a distance-over-price relative-change estimator. For bin $b$ with lower distance $l_b$ km, mean fare $\bar P_b$ USD and request count $n_b$:</p>
+<p><strong>R1a.</strong></p>
+<p>$$
+\epsilon_b=\frac{(l_b-L_0)/L_0}{(\bar P_b-P_0)/P_0}
+$$</p>
+<p><strong>R1b.</strong></p>
+<p>$$
+P_0=22.354198442390455\ \mathrm{USD}
+$$</p>
+<p><strong>R1c.</strong></p>
+<p>$$
+L_0=4.616983790655043\ \mathrm{km}
+$$</p>
+<p>The 0.5-km bin estimator preserves undefined/nonpositive estimates diagnostically; positive finite values form sampling support. These common references remain <strong>PROVISIONAL_ASSUMPTION</strong>: inherited count-weighted fare mean/interpolated crossing provenance differs from the master’s selected observed fare/representative distance procedure. Historical Record-029 used the reverse signed ratio and its own references. Its results remain historical evidence, not interchangeable estimates of R1.</p>
+<p>For supported weather/time pool $c$, request-count empirical resampling is</p>
+<p><strong>R2a.</strong></p>
+<p>$$
+w_{b|c}=n_{b,c}/\sum_{k\in B_c^+}n_{k,c}
+$$</p>
+<p><strong>R2b.</strong></p>
+<p>$$
+\epsilon\sim\sum_{b\in B_c^+}w_{b|c}\delta_{\epsilon_{b,c}}
+$$</p>
+<p>$B_c^+$ is the set of positive finite bin estimates in pool $c$; $\delta_{\epsilon}$ denotes a point mass at that sensitivity value. This represents the observed historical distance mixture; it does not identify individual elasticity. Draws use replacement and controlled RNG, independent of the requesting passenger’s own distance bin. Bounds are the positive empirical support, without fabricated tails, silent clipping or validation-driven widening. Implementations: <a href="src/pricing/weighted_binned_sampler.py">weighted sampler</a>, <a href="scripts/build_weighted_binned_calibration.py">calibration builder</a>; <a href="tests/test_weighted_binned_sampler.py">focused tests</a>.</p>
+<pre><code class="language-mermaid">flowchart LR
+  D[&quot;Eligible calibration trips only&quot;] --&gt; B[&quot;0.5-km bins and counts&quot;]
+  B --&gt; E[&quot;Common-reference elasticity&quot;]
+  E --&gt; P[&quot;Positive finite empirical support&quot;]
+  W[&quot;Weather code and T1-T4&quot;] --&gt; G[&quot;Supported pool or documented fallback&quot;]
+  P --&gt; G
+  G --&gt; S[&quot;Request-count weighted RNG draw&quot;]
+  S --&gt; A[&quot;Request-level acceptance&quot;]
+  L[&quot;OD distance&quot;] --&gt; A
+</code></pre>
+<p>T1 is00–03, T2 04–05, T3 06–15 and T4 16–23 local time. Existing mapped group, T1 raw-weather pool, time pool and GLOBAL fallback ordering is retained with its support criteria. Temperature/wind conditioning was tested but worsened diagnostic RMSE from0.258529 to0.295726; it was not promoted. Complete CNN/sensitivity weather alignment is therefore <strong>PARTIALLY_IMPLEMENTED</strong>. Selection/grouping decisions have development exposure even when numerical pool estimates use Jan–Feb only.</p>
+<p>The Jan1–Mar15 GLOBAL comparison has147 positive bins: uniform-bin mean/SD2.257965/0.339971 versus request-weighted1.715299/0.416015, support[1.356305,2.856160]. The current prospective Jan–Feb population instead has mean/SD1.725916/0.426314. These are different calibration populations. Conditional pools overlap and cannot be summed as disjoint population shares. <a href="results_v2/publication/tables/sensitivity_group_proportions.csv">Disjoint assigned proportions</a>, <a href="results_v2/publication/tables/prospective_sensitivity.csv">pool statistics</a> and <a href="results_v2/publication/tables/sensitivity_weighting.csv">weighting comparison</a> distinguish them.</p>
+<p>Temporal support exceedance0.71–6.16% refers to positive validation <strong>bin estimates</strong>, not passenger proportions. It remains a limitation of finite training support. Empirical resampling is the selected implemented assumption; parametric fit evidence does not establish a final parametric family, and the master’s “ZIF” term remains unresolved.</p>
+<p>Master equations(1)–(2), implemented by <a href="src/pricing/slot_v3.py">price contract</a>:</p>
+<p><strong>R3a.</strong></p>
+<p>$$
+P_{gg't}^{\mathrm{disp}}=a_{gg't}P_0
+$$</p>
+<p><strong>R3b.</strong></p>
+<p>$$
+P_{c}^{\mathrm{raw}}=P_0+\frac{P_0}{\epsilon_c}\frac{L_{gg'}-L_0}{L_0}
+$$</p>
+<p><strong>R3c.</strong></p>
+<p>$$
+\mathrm{accept}<em>c=\mathbf{1}(P</em>{gg't}^{\mathrm{disp}}\leq P_c^{\mathrm{raw}})
+$$</p>
+<p>There is no minimum-price clamp on the acceptance threshold in this research contract. Nonpositive/nonfinite epsilon rejects; consistent km units enter the relative distance. Price factors derive from seven evenly spaced fare levels USD 6.60 through USD 94.70, divided by $P_0$; they are <strong>not</strong> the old0.85–1.15 action set. Conditioning and raw preference are private simulation inputs, not exposed individual DQN features.</p>
+<p>Figures: <a href="results_v2/publication/figures/sensitivity_conditional_support.svg">conditional empirical support</a>, <a href="results_v2/publication/figures/sensitivity_weighting.svg">weighting</a>, <a href="results_v2/publication/figures/sensitivity_group_counts.svg">group shares</a>, <a href="results_v2/publication/figures/sensitivity_acceptance.svg">acceptance diagnostics</a>. The preserved <a href="results/analysis/2026-10-09_price_distance_sensitivity_record029_full_jan_mar/charts/authoritative_epsilon_histogram_full.png">historical signed Record-029 histogram</a> depicts a different estimator and historical full-quarter scope; it is linked without reopening source rows and is not a current calibration figure. Historical trip-level summaries remain in the <a href="results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/README.md">binned comparison</a>; no trip-level density is reconstructed from summary moments.</p>
+<h2>H. Top-level OD pricing DQN</h2>
+<p>Master §5.1 and <a href="src/pricing/od_contract.py">od_states</a> define</p>
+<p><strong>R4a.</strong></p>
+<p>$$
+s_{gg't}=[\hat J_{g,t},30\hat F_{g,t},I_{g,t},p_{g,t},\pi_{g',t}]\in\mathbb{R}^{13}
+$$</p>
+<p><strong>R4b.</strong></p>
+<p>$$
+p_{g,t}=[p_{g,t}^{(0)},\ldots,p_{g,t}^{(8)}]
+$$</p>
+<p>Demand, dispatch estimate and incoming passenger commitments are origin-specific counts. Routing probabilities sum to1 over valid actions; invalid neighbours have zero mass. Destination popularity is the existing discrete0/0.25/0.5/0.75/1 feature, rather than an asserted normalized probability over all destinations—an interpretation to preserve explicitly in alignment review. The active January observed support contains9,572 OD contexts. A strictly positive observed count is the current rule; a stricter significance threshold is not established.</p>
+<pre><code class="language-mermaid">flowchart LR
+  S[&quot;13D state per supported OD&quot;] --&gt; Q[&quot;64 ReLU then 64 ReLU then 7 Q values&quot;]
+  Q --&gt; A[&quot;Epsilon-greedy fare factor&quot;]
+  A --&gt; D[&quot;Acceptance and successful assignment&quot;]
+  D --&gt; R[&quot;OD sum of assigned fares&quot;]
+  R --&gt; T[&quot;State action reward next-state terminal&quot;]
+  T --&gt; B[&quot;FIFO replay 100000&quot;]
+  B --&gt; U[&quot;8 updates per warm slot&quot;]
+  U --&gt; Q
+</code></pre>
+<p>Master(3)–(4), <a href="src/simulation/od_pricing_runtime.py">runtime</a>, <a href="tests/test_joint_od_pilot.py">reward checks</a>:</p>
+<p><strong>R5a.</strong></p>
+<p>$$
+R_{gg't}=\sum_{j:O_j=g,D_j=g'}P^{\mathrm{disp}}<em>{gg't}x</em>{jt}
+$$</p>
+<p><strong>R5b.</strong></p>
+<p>$$
+\max_\theta\mathbb{E}!\left[\sum_t\gamma^t\sum_{g,g'}R_{gg't}\right]
+$$</p>
+<p>Here $x=1$ only for a successful assignment; units are USD. Slot reward sums assignment-time entries. Accepted-unmatched/rejected requests contribute zero. Valid unseen-OD reference-price revenue is system revenue but excluded from supported-OD learning rewards and replay. An assignment can still be physically in flight at terminal time; assignment revenue does not imply completed travel.</p>
+<h2>I. Grid EWMA statistics</h2>
+<p>Master §6(5)–(8), <a href="src/simulation/master_od_contract.py">ewma</a>, <a href="src/simulation/master_operational_state.py">state integration</a>, <a href="tests/test_master_od_math.py">exact tests</a>: for successful fares $p_j$ in the preceding slot, count $N$ and observed charging wait $H$,</p>
+<p><strong>R6a.</strong></p>
+<p>$$
+\mu_t=\alpha\bar p+(1-\alpha)\mu_{t-1}
+$$</p>
+<p><strong>R6b.</strong></p>
+<p>$$
+\sigma_t=\beta\frac{1}{N}\sum_j|p_j-\mu_{t-1}|+(1-\beta)\sigma_{t-1}
+$$</p>
+<p><strong>R7a.</strong></p>
+<p>$$
+\hat F_t=\delta\frac{N}{30}+(1-\delta)\hat F_{t-1}
+$$</p>
+<p><strong>R7b.</strong></p>
+<p>$$
+\hat H_t=\kappa H+(1-\kappa)\hat H_{t-1}
+$$</p>
+<p>$\mu,\sigma$ are USD; $\sigma$ is smoothed previous-mean absolute deviation, <strong>not population SD</strong>. $\hat F$ is dispatches/minute; waits and tolerances are minutes. Converting both waits to slots leaves their ratio unchanged. Current $\alpha=\beta=\delta=\kappa=0.3$ is retained experiment configuration, not the master’s illustrative0.125 or0.1–0.2 range. No-dispatch slots retain mean/deviation but decay frequency with observed count0. Missing charging wait retains its estimate; observed zero wait is a valid update. Raw zero deviation is retained, with a positive floor only at utility consumption.</p>
+<h2>J. Private driver repositioning</h2>
+<p>Master §7(9)–(11), <a href="src/routing/operational_interface.py">OperationalRouting</a>:</p>
+<p><strong>R8a.</strong></p>
+<p>$$
+U^1_{ig}=1-\Phi!\left(\frac{P_i^{min}-\mu_g}{\max(\sigma_g,\sigma_{\mathrm{floor}})}\right)
+$$</p>
+<p><strong>R8b.</strong></p>
+<p>$$
+U^2_{ig}=1-\exp(-\hat F_gW_i^{max})
+$$</p>
+<p><strong>R9.</strong></p>
+<p>$$
+y_i=\arg\max_{g\in N_i}{U^1_{ig}+U^2_{ig}-c_{\mathrm{km}}d_{ig}}
+$$</p>
+<p>$P_i^{min}$ is USD, $W_i^{max}$ minutes, $d$ km and cost is normalized utility cost. This uses a normal-price/exponential-wait utility approximation, not an empirical claim that fare data are normal. Source conversion is metres/1000 before multiplying cost/km. Ties use deterministic action/station ordering. EV feasibility additionally preserves ability to reach a station. Numerical safeguards are $\sigma_{floor}=10^{-6}$ USD and $H_{floor}=10^{-6}$ minutes. Cost is $0.25d/(3\sqrt{2})$ for distance $d$ in km, using full path distance for charging. Initial dispatch frequency and charging wait are zero. The experiment’s <a href="src/routing/configuration.py">routing configuration</a> is authoritative for numerical safeguards and movement-cost calibration; these are not manuscript constants.</p>
+<p>The network observes aggregate169D state (nine triples of price mean/deviation/dispatch frequency plus142 charging-wait entries), while private preferences and energy determine local labels. This creates residual state/label non-identifiability. Earlier conflicting-label diagnostics cannot be erased by FedAvg convergence. The platform-facing response is aggregate probabilities, not raw preferences.</p>
+<h2>K. EV charging and vehicle dynamics</h2>
+<p>Master(12)–(13), implemented in <a href="src/routing/operational_interface.py">charging navigation</a>:</p>
+<p><strong>R10a.</strong></p>
+<p>$$
+U^3_{ig}=1-\exp!\left(-\frac{H_i^{max}}{\max(\hat H_g,H_{\mathrm{floor}})}\right)
+$$</p>
+<p><strong>R10b.</strong></p>
+<p>$$
+D'<em>i=\arg\max</em>{g\in G_{\mathrm{charge}}}{U^3_{ig}-c_{\mathrm{km}}d_{ig}}
+$$</p>
+<p>$H_i^{max}=10$ minutes is explicit persisted <strong>PROJECT_CALIBRATION</strong>, not a source-derived numerical value; future5/10/20 sensitivity remains pending. EVs navigate when energy is at/below threshold, with feasible next-hop path and reserve checks. Non-EVs are exempt from battery-to-station reserve requirements under the mixed-fleet contract; normal arrival/travel validation remains. Travel duration is distance/speed with consistent elapsed-time units. Charging admission, queue and energy evolution are timed rather than instantaneous.</p>
+<pre><code class="language-mermaid">flowchart TD
+  I[&quot;Available vehicle&quot;] --&gt; E{&quot;EV?&quot;}
+  E --&gt;|No| U[&quot;Private reposition utility&quot;]
+  E --&gt;|Yes| B{&quot;Above energy threshold?&quot;}
+  B --&gt;|Yes| R[&quot;Feasible moves preserve station reserve&quot;]
+  R --&gt; U
+  B --&gt;|No| C[&quot;Charging utility over reachable stations&quot;]
+  C --&gt; N[&quot;Timed next hop&quot;]
+  N --&gt; Q[&quot;Station admission or queue&quot;]
+  Q --&gt; H[&quot;Timed charging&quot;]
+  U --&gt; T[&quot;STAY or timed movement&quot;]
+</code></pre>
+<p>10%,20%,30% EV initialization is fixture-tested; only10% has bounded joint-learning evidence. Earlier four/16-slot runs recorded zero charging events. The latest two-episode pilot records3 and4 events; these are <strong>event records, not seven completed sessions</strong>. Reset censored231 passenger commitments and one charging occupant. Full charging-cycle coverage, continuous operation and penetration effects remain untested. See <a href="results_v2/federated_learning/2026-11-17_online_routing_retry_001/README.md">mixed-fleet correction evidence</a> and <a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/reset_checks.json">reset checks</a>.</p>
+<h2>L. Federated learning and privacy</h2>
+<p>Master §8(19)–(21), <a href="src/routing/research_hierarchy.py">hierarchy</a>, <a href="src/routing/learning.py">local learning</a>, <a href="tests/test_multi_episode_federation.py">federation tests</a>:</p>
+<p><strong>R11a.</strong></p>
+<p>$$
+p_{gk}=\frac{m_{gk}\exp z_{gk}}{\sum_l m_{gl}\exp z_{gl}}
+$$</p>
+<p><strong>R11b.</strong></p>
+<p>$$
+C_i=-\frac{1}{N_i}\sum_n\log p_{i,y_n}(s_n)
+$$</p>
+<p><strong>R12a.</strong></p>
+<p>$$
+\phi_i\leftarrow\mathrm{Adam}(\phi_i,\nabla C_i;0.001)
+$$</p>
+<p><strong>R12b.</strong></p>
+<p>$$
+\phi_{t+1}=\frac{1}{|A_t|}\sum_{i\in A_t}\phi_{i,t}^{\mathrm{local}}
+$$</p>
+<p>$m$ masks invalid neighbours; $A_t$ comprises clients with current-slot experience and an eligible local update. Equal-client weighting is the current research contract, not older sample-weighted offline FedAvg. The local169→64→32→9 network resets weights from global, retains its Adam state, and performs one update on the latest at most32 eligible observations from capacity1000 memory. The latest-minibatch rule is an experiment choice, not claimed uniform random sampling from the entire memory.</p>
+<pre><code class="language-mermaid">flowchart LR
+  G[&quot;Global weights at slot start&quot;] --&gt; C[&quot;Participating driver local copy&quot;]
+  U[&quot;Private realized utility decision&quot;] --&gt; M[&quot;Eligible private memory&quot;]
+  M --&gt; C
+  C --&gt; L[&quot;One local cross-entropy update&quot;]
+  L --&gt; A[&quot;Equal-client parameter average&quot;]
+  A --&gt; V[&quot;New global version at slot end&quot;]
+  V --&gt; N[&quot;Next-slot masked responses&quot;]
+  N --&gt; G
+  A -. Not integrated .-&gt; P[&quot;DP threat model and accountant&quot;]
+</code></pre>
+<p>Fresh initialization and direct/indirect lineage guards reject incompatible historical routing weights. A completed-slot update is not visible to earlier decisions. Local preferences remain out of platform-facing summaries, but stored research checkpoints include private memory. <strong>NONPRIVATE</strong> means no differential-privacy guarantee: clipping/noise, threat model, accounting and privacy–utility experiments are not established by the existence of <a href="src/routing/privacy.py">legacy privacy code</a>.</p>
+<h2>M. Gymnasium interface and slot sequence</h2>
+<p><a href="src/simulation/od_gymnasium.py">Gymnasium adapter</a> has bounded interface tests; the completed pilot uses the direct runtime orchestrator. Interface existence is not an independently validated full Gymnasium training campaign.</p>
+<pre><code class="language-mermaid">sequenceDiagram
+  participant P as Pricing runtime
+  participant D as Drivers and dispatch
+  participant R as Realized requests
+  participant F as Federation
+  P-&gt;&gt;P: Validate issuance and prior aggregates
+  P-&gt;&gt;P: Price supported OD contexts
+  P-&gt;&gt;D: Broadcast aggregates and begin private routing
+  R-&gt;&gt;D: Requests revealed in UTC event order
+  D-&gt;&gt;D: Acceptance, contention, assignment, arrivals, charging
+  D-&gt;&gt;P: Successful fares and slot-end EWMA
+  D-&gt;&gt;F: Eligible local observations
+  F-&gt;&gt;F: Local update and equal-client average
+  F-&gt;&gt;P: Global response available at next boundary
+  P-&gt;&gt;P: Next state, replay, post-slot pricing updates
+</code></pre>
+<p>Forecast quantities never replace actual request counts. The current <a href="src/simulation/historical_request_replay.py">replay implementation</a> orders requests stably by UTC pickup/source identity. See <a href="src/dispatch/dispatch.py">dispatch implementation</a> for contention and eligibility, and <a href="src/simulation/final_production.py">production adapter</a> for arrivals/charging. Multiple-decision reposition cadence, random eligible-driver contention interpretation and short-run versus continuous-operating implications must remain explicit rather than inferred from a high-level diagram.</p>
+<h2>N. Training mathematics and hyperparameters</h2>
+<p>Master §10.3, <a href="src/rl/od_pricing_dqn.py">ODPricingDQN.train_step</a>, <a href="tests/test_master_od_math.py">mathematical tests</a>:</p>
+<p><strong>R13a.</strong></p>
+<p>$$
+y=r+\gamma(1-d)\max_a Q_{\bar\theta}(s',a)
+$$</p>
+<p><strong>R13b.</strong></p>
+<p>$$
+\mathcal{L}(\theta)=\frac{1}{2M}\sum_m[y_m-Q_\theta(s_m,a_m)]^2
+$$</p>
+<p><strong>R14.</strong></p>
+<p>$$
+\bar\theta\leftarrow(1-\tau)\bar\theta+\tau\theta
+$$</p>
+<p>$M$ is minibatch size, $r$ is successful-dispatch reward in USD, $\theta$ denotes online weights, and $\bar\theta$ denotes target weights. $d$ is terminal, targets are gradient-stopped and the collected action $a_m$ indexes the online prediction. This follows the displayed Bellman equation; the master’s nearby prose about current-state argmax and its shorthand gradient line are not implemented as replacing collected actions or omitting the error gradient. Historical Huber paths remain separate.</p>
+<p>Exploration (master§5.3/10.4): choose uniformly among seven actions with probability $e(u)$, otherwise choose maximum Q:</p>
+<p><strong>R15.</strong></p>
+<p>$$
+e(u)=\max(0.1,1-0.005\lfloor u/10\rfloor)
+$$</p>
+<p>$u$ counts successful optimizer updates, not actions, slots or warm-up attempts. The schedule persists across episodes. Current validated settings: pricing13→64→64→7; Adam0.001; $\gamma=.99$; batch64; replay100000; warm-up1000; eight updates/warm slot; $\tau=.005$; seed42. Bellman/soft-update forms are required mathematics; the numerical settings are <strong>EXPERIMENT_CONFIGURATION</strong>. The master’s1.5×batch warm-up is illustrative, not the active1000 threshold.</p>
+<h2>O. Experimental protocols and information boundaries</h2>
+<pre><code class="language-mermaid">flowchart LR
+  J[&quot;January: OD support and mean demand&quot;] --&gt; C[&quot;Jan-Feb: sensitivity values&quot;]
+  C --&gt; T[&quot;March1 to March12 17:00: planned35 episodes&quot;]
+  T --&gt; A[&quot;Completed only March1 00:00-16:00:2 episodes&quot;]
+  T --&gt; V[&quot;March13-15: future development windows&quot;]
+  V --&gt; D[&quot;March16: confirmation only&quot;]
+  D --&gt; X[&quot;March17-31: protected, not accessed&quot;]
+</code></pre>
+<p>The approved35-episode budget spans280 elapsed hours/560slots, not all March1–12 local hours. March12 17:00–24:00 lies outside the selected training scope. Each episode is16slots. Physical fleet/energy/queues/commitments/priors reset; driver identity/EV membership and pricing/routing weights, optimizers, replay, private memories, counters and RNG persist. Terminal transitions have zero bootstrap; unfinished physical jobs are right-censored, not retroactively completed.</p>
+<p>Development evaluation is planned after episodes7/14/21/28/35 on fixed March13 00–08, March14 08–16 and March15 16–24 windows. Frozen greedy policies disable both learners and isolate evaluation RNG/replay. Selection uses mean successful-assignment system revenue with earliest-checkpoint ties. Plateau/wall/RSS guards are frozen in <a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/frozen_configuration.json">configuration</a>. These evaluations have <strong>not executed</strong>. March16 is development confirmation, not final testing. Historical design decisions already saw March evidence; chronological runtime isolation does not establish independent model-selection provenance.</p>
+<pre><code class="language-mermaid">flowchart LR
+  S[&quot;Committed runtime boundary&quot;] --&gt; H[&quot;Hashes and contract identities&quot;]
+  H --&gt; W[&quot;Atomic checkpoint write&quot;]
+  W --&gt; P[&quot;Advance role pointer only after completion&quot;]
+  P --&gt; R[&quot;Restore weights, optimizer, replay and memories&quot;]
+  R --&gt; G[&quot;Restore fleet, clocks, queues and all RNG domains&quot;]
+  G --&gt; E[&quot;Exact continuation comparison&quot;]
+  H --&gt; X[&quot;Reject incompatible source or lineage&quot;]
+</code></pre>
+<p>The <a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/recovery_validation.json">recovery result</a> verifies exact cross-episode reset and replay of episode2’s first slot, including losses/gradients. An earlier interrupted attempt retained eight committed slots; the environment-RNG reset wrapper was corrected before resuming. The uncommitted partial slot was rolled back and evidence preserved. This is not evidence that every later milestone/recovery path is already validated.</p>
+<h2>P. Implementation traceability</h2>
+<p>**82 auditable requirement rows:**64 implemented/tested,1 implemented but not end-to-end validated,8 partial,1 configuration pending,2 not implemented in the active hierarchy and6 not evaluated. These counts summarize the review decomposition, not a claim that the master contains82 numbered requirements.</p>
+<p>The <a href="results_v2/publication/tables/master_traceability.csv">requirement matrix</a> records master section/equation, code, contract, test, evidence and limitation per requirement. <a href="results_v2/publication/tables/requirement_counts.json">Status counts</a> are mechanically derived. <code>IMPLEMENTED_AND_TESTED</code> refers to the bounded requirement, not publication readiness. Other statuses distinguish unvalidated integration, partial methodology, pending configuration, missing implementation and unevaluated experiments.</p>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Current assessment</th>
+<th>Principal qualification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Data/grid/UTC replay</td>
+<td>IMPLEMENTED_AND_TESTED</td>
+<td>Trip proxy and spatial approximation</td>
+</tr>
+<tr>
+<td>Causal CNN</td>
+<td>IMPLEMENTED_AND_TESTED</td>
+<td>Worse than baseline; assumed weather timing</td>
+</tr>
+<tr>
+<td>Sensitivity</td>
+<td>PARTIALLY_IMPLEMENTED</td>
+<td>Reference and continuous-weather alignment</td>
+</tr>
+<tr>
+<td>OD pricing/reward/Bellman</td>
+<td>IMPLEMENTED_AND_TESTED</td>
+<td>Bounded training only</td>
+</tr>
+<tr>
+<td>EWMA/private utilities</td>
+<td>IMPLEMENTED_AND_TESTED</td>
+<td>Calibrations differ from illustrative guidance</td>
+</tr>
+<tr>
+<td>Mixed EV/charging</td>
+<td>IMPLEMENTED_AND_TESTED</td>
+<td>Long-duration penetration studies NOT_EVALUATED</td>
+</tr>
+<tr>
+<td>Online equal-client federation</td>
+<td>IMPLEMENTED_AND_TESTED</td>
+<td>NONPRIVATE</td>
+</tr>
+<tr>
+<td>Privacy protocol</td>
+<td>NOT_IMPLEMENTED in active hierarchy</td>
+<td>Threat model/accountant pending</td>
+</tr>
+<tr>
+<td>Gymnasium campaign</td>
+<td>IMPLEMENTED_NOT_END_TO_END_VALIDATED</td>
+<td>Adapter fixtures only</td>
+</tr>
+<tr>
+<td>Full35-episode evaluation</td>
+<td>NOT_EVALUATED</td>
+<td>Only first2 completed</td>
+</tr>
+</tbody>
+</table>
+<p>The complete master text was inspected. Its contents lists §15 “Source traceability,” but the supplied body ends after §14 and final implementation order. No missing §15 text or equation numbers are fabricated. §13 checklist and §14 decision requirements are cross-referenced in the matrix rather than counted as independent evidence of completion.</p>
+<h2>Q. Verified experiments and latest milestone</h2>
+<table>
+<thead>
+<tr>
+<th>Experiment</th>
+<th>Verified outcome</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Historical CNN (superseded timing)</td>
+<td>Original epoch100 and continuation200; baseline superior; incompatible timing/evaluation scope</td>
+<td><a href="results/analysis/2026-10-19_final_jan_mar_3km_cnn/README.md">Original</a>, <a href="results/analysis/2026-10-19_final_cnn_performance_diagnosis/README.md">continuation</a></td>
+</tr>
+<tr>
+<td>Causal ReLU CNN</td>
+<td>Best50/stop60; worse than mean baseline</td>
+<td><a href="results_v2/cnn_demand/2026-11-18_causal_research_training/README.md">Training</a></td>
+</tr>
+<tr>
+<td>Softplus CNN</td>
+<td>Best42/stop52; severe near-zero bias remains</td>
+<td><a href="results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/README.md">Training</a></td>
+</tr>
+<tr>
+<td>Final CNN diagnosis</td>
+<td>Gradient saturation; freeze result</td>
+<td><a href="results_v2/cnn_demand/2026-11-18_softplus_final_diagnosis/README.md">Diagnosis</a></td>
+</tr>
+<tr>
+<td>Binned/weighted sensitivity</td>
+<td>Distinct estimand and count reconciliation</td>
+<td><a href="results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/README.md">Calibration</a></td>
+</tr>
+<tr>
+<td>Weather/distribution decision</td>
+<td>Continuous extension not promoted</td>
+<td><a href="results_v2/passenger_sensitivity/2026-11-17_methodology_decision/README.md">Decision analysis</a></td>
+</tr>
+<tr>
+<td>Prospective utility acceptance</td>
+<td>4,137eligible;996assignments;USD 21,934.508397;repeat/resume</td>
+<td><a href="results_v2/simulation/2026-11-17_prospective_utility_acceptance/README.md">Acceptance</a></td>
+</tr>
+<tr>
+<td>Online routing/control</td>
+<td>19,342 local updates;4rounds;probabilities differ, physical totals match</td>
+<td><a href="results_v2/federated_learning/2026-11-17_online_routing_rng_retry_002/README.md">Routing/control</a></td>
+</tr>
+<tr>
+<td>Joint four-slot pilot</td>
+<td>32pricingupdates;975assignments;exact repeat/resume</td>
+<td><a href="results_v2/pricing_dqn/2026-11-18_joint_learning_pilot/README.md">Joint pilot</a></td>
+</tr>
+<tr>
+<td>March12 16-slot episode</td>
+<td>128pricingupdates;76,387routingupdates;4,119assignments</td>
+<td><a href="results_v2/pricing_dqn/2026-11-20_full_episode_development/README.md">Full development episode</a></td>
+</tr>
+<tr>
+<td>Chronological episodes1–2</td>
+<td>256pricingupdates;149,096routingupdates;32rounds</td>
+<td><a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json">Latest validated pilot</a></td>
+</tr>
+<tr>
+<td>Training/evaluation protocol</td>
+<td>35episode budget; remaining33 not launched</td>
+<td><a href="results_v2/pricing_dqn/2026-11-20_training_protocol_decision/README.md">Decision packet</a></td>
+</tr>
+</tbody>
+</table>
+<p>The decision packet records its pre-approval state; the later orchestration report documents implementation approval. Historical V3 is <strong>superseded methodology with retained provenance</strong>, not evidence of current master-aligned OD performance. Its archived <a href="results/analysis/2026-11-15_source_aligned_slot_pricing_v3/README.md">review</a> must not be merged into current learning curves. Earlier historical CNN results likewise have distinct feature timing and lineage; no causal comparison combines incompatible samples.</p>
+<table>
+<thead>
+<tr>
+<th>Latest pilot</th>
+<th style="text-align:right">Episode1</th>
+<th style="text-align:right">Episode2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eligible requests</td>
+<td style="text-align:right">30,359</td>
+<td style="text-align:right">38,486</td>
+</tr>
+<tr>
+<td>Accepted / rejected</td>
+<td style="text-align:right">8,354 /22,005</td>
+<td style="text-align:right">9,864 /28,622</td>
+</tr>
+<tr>
+<td>Assigned / accepted-unmatched</td>
+<td style="text-align:right">5,958 /2,396</td>
+<td style="text-align:right">8,876 /988</td>
+</tr>
+<tr>
+<td>System revenue USD</td>
+<td style="text-align:right">133,576.496310</td>
+<td style="text-align:right">193,410.700636</td>
+</tr>
+<tr>
+<td>Supported OD reward USD</td>
+<td style="text-align:right">133,241.183333</td>
+<td style="text-align:right">192,963.616667</td>
+</tr>
+<tr>
+<td>Pricing updates</td>
+<td style="text-align:right">128</td>
+<td style="text-align:right">128</td>
+</tr>
+<tr>
+<td>Ending exploration</td>
+<td style="text-align:right">0.940</td>
+<td style="text-align:right">0.875</td>
+</tr>
+<tr>
+<td>Local routing updates</td>
+<td style="text-align:right">76,148</td>
+<td style="text-align:right">72,948</td>
+</tr>
+<tr>
+<td>Charging event records</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">4</td>
+</tr>
+</tbody>
+</table>
+<p>Total revenue USD 326,987.196945 reconciles to supported reward USD 326,204.8 plus fallback USD 782.396945. The final replay holds100,000 of306,304 generated transitions;206,304 were FIFO-evicted. Retained replay is97.319% zero reward, representing9,572OD identities. Twenty-seven distinct prior focused tests passed, zero failed. Committed-slot execution was57.59minutes, excluding initialization/checkpoint/recovery and interrupted work; peak recorded RSS4.86GB and two retained checkpoints3.10GB. These are bounded resource measurements, not full-run forecasts.</p>
+<p><img src="results_v2/publication/figures/dqn_episode_outcomes.png" alt="Bounded episode results" /></p>
+<h2>R. Benchmark interpretation</h2>
+<p>The historical-average forecast beats both causal CNN variants on identical saved validation/development samples. The matched routing control establishes changed response estimates with identical physical outcomes while pricing learning was disabled. It does not establish no value from hierarchy. The two episode revenues concern different time windows under exploration and cannot be interpreted as policy improvement.</p>
+<p>No final fixed-price, myopic-pricing or trained-policy benchmark is reported as completed. No statistical significance or multi-seed generalization is claimed. Full EV10/20/30 comparison and privacy–utility trade-offs remain NOT_YET_EVALUATED. <a href="results_v2/publication/tables/routing_control.csv">Routing control table</a>, <a href="results_v2/publication/figures/routing_control.svg">control figure</a>, <a href="results_v2/publication/figures/dqn_learning_replay.svg">learning/replay diagnostics</a>, <a href="results_v2/publication/figures/federation_progress.svg">federation progress</a> and <a href="results_v2/publication/figures/simulation_reconciliation.svg">reward/charging reconciliation</a> show only recorded quantities.</p>
+<h2>S. Methodological decision register</h2>
+<table>
+<thead>
+<tr>
+<th>Decision</th>
+<th>Classification</th>
+<th>Rationale / qualification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3-km grid; OD identity; successful-dispatch objective</td>
+<td>MASTER_REQUIRED</td>
+<td>Derived valid geometry and supported pairs; not legacy grid reuse</td>
+</tr>
+<tr>
+<td>30-minute slots;120-second mini-slots</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Master examples adopted explicitly</td>
+</tr>
+<tr>
+<td>UTC elapsed/New York features</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Avoid nonexistent civil slots and duration errors</td>
+</tr>
+<tr>
+<td>Observed TLC OD replay</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Preserves requests in selected windows; trips proxy demand</td>
+</tr>
+<tr>
+<td>January positive OD support/fallback</td>
+<td>PROVISIONAL_ASSUMPTION</td>
+<td>No empirically selected stricter threshold</td>
+</tr>
+<tr>
+<td>0.5-km distance bins</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Preserved documented analysis resolution</td>
+</tr>
+<tr>
+<td>Request-count empirical weighting</td>
+<td>EMPIRICALLY_SELECTED</td>
+<td>Represents observed mixture; comparison evidence, not causal identification</td>
+</tr>
+<tr>
+<td>Common reference values</td>
+<td>PROVISIONAL_ASSUMPTION</td>
+<td>Construction differs from master selection prescription</td>
+</tr>
+<tr>
+<td>Weather/T1–T4 fallback</td>
+<td>EMPIRICALLY_SELECTED</td>
+<td>Inherited support/stability decisions; development exposure</td>
+</tr>
+<tr>
+<td>Positive empirical tails</td>
+<td>PROVISIONAL_ASSUMPTION</td>
+<td>No extrapolation; validation exceedance unresolved</td>
+</tr>
+<tr>
+<td>Seven CNN features</td>
+<td>MASTER_REQUIRED</td>
+<td>Continuous-weather alignment incomplete downstream</td>
+</tr>
+<tr>
+<td>120-minute weather lag</td>
+<td>PROVISIONAL_ASSUMPTION</td>
+<td>Not verified publication timing</td>
+</tr>
+<tr>
+<td>Historical mean as active demand input</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Cutoff-safe engineering arm; CNN underperforms</td>
+</tr>
+<tr>
+<td>13D OD state and seven fare-derived actions</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Master structure, selected discretization and popularity encoding</td>
+</tr>
+<tr>
+<td>EWMA recurrence/Bellman objective</td>
+<td>MASTER_REQUIRED</td>
+<td>Explicit safe no-observation/terminal handling</td>
+</tr>
+<tr>
+<td>EWMA0.3;gamma.99;tau.005</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Not manuscript-derived calibrations</td>
+</tr>
+<tr>
+<td>Equal-client FedAvg</td>
+<td>MASTER_REQUIRED</td>
+<td>Active-client set and Adam work are selected implementation choices</td>
+</tr>
+<tr>
+<td>NONPRIVATE mode</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>No claim of privacy compliance</td>
+</tr>
+<tr>
+<td>5000vehicles;10%pilotEV</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>20/30% effect comparisons pending</td>
+</tr>
+<tr>
+<td>Replay100000;8updates/slot;warm-up1000</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Retained tested settings, not convergence guarantee</td>
+</tr>
+<tr>
+<td>Staircase exploration;35episode horizon</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Approved bounded protocol; only2episodes executed</td>
+</tr>
+<tr>
+<td>Physical reset/learning persistence</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Terminal censoring limits continuous-operation interpretation</td>
+</tr>
+<tr>
+<td>Three checkpoint roles/all RNG restoration</td>
+<td>EXPERIMENT_CONFIGURATION</td>
+<td>Atomic retention and exact bounded recovery</td>
+</tr>
+</tbody>
+</table>
+<h2>T. Open Methodological Decisions and experimental limitations</h2>
+<p>Genuine unresolved decisions are: final reference construction justification; continuous-temperature/wind sensitivity alignment; empirical-tail adequacy and meaning of “ZIF”; stricter OD significance and popularity interpretation; verified decision-time weather availability; final privacy threat model/mechanism/accountant; final benchmark and independent protected evaluation protocol; and scientific adequacy of physical resets for charging studies. No new choice is made in this review.</p>
+<p>Known limitations are distinct: CNN underperformance is observed, not a reason to force a new model; the CNN-versus-historical-mean downstream study has not run; only one seed and bounded joint learning exist; charging records do not establish complete charging cycles;10/20/30EV outcomes are absent; later evaluation/continuation paths have not been demonstrated with real data. The35episode development schedule is already configured, but final publication evaluation remains pending. Research readiness does not mean deployment readiness.</p>
+<p>The recommended next single task is <strong>review and accept this methodology/evidence boundary before authorizing continuation</strong>. This review does not launch episodes3–7, extend training, change hyperparameters or resolve scientific choices implicitly.</p>
+<h2>U. Reproducibility and execution reference</h2>
+<p>Use the existing <code>ridehailing-phd</code> Python environment. <a href="requirements.txt">Dependencies</a> describe the project; causal CNN evidence records TensorFlow2.16.2. Recreating an environment from scratch was not tested in this review. <a href="results_v2/publication/review_provenance.json">Review provenance</a> records Git HEAD and pre-existing modifications; HEAD alone is insufficient for a dirty worktree. <a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/implementation_sources.json">Pilot source manifest</a> and <a href="results_v2/publication/figure_sources.json">figure source hashes</a> bind actual evidence.</p>
+<p>Directory roles: <code>src/</code> implementation; <code>scripts/</code> entry points; <code>tests/</code> focused tests; <code>data/processed/</code> versioned input artifacts; <code>models/</code> checkpoints; <code>results/</code> preserved historical research; <code>results_v2/</code> newer contract/evaluation evidence; <code>results_v2/publication/</code> this documentation-only review’s tables and figures.</p>
+<p>Safe review regeneration from repository root (no inference/training):</p>
+<pre><code class="language-sh">conda activate ridehailing-phd
+MPLCONFIGDIR=/tmp/causal_cnn_mpl python -B scripts/build_research_review.py
+python -B scripts/build_research_traceability.py
+python -B -m unittest tests.test_research_review_documentation -v
+</code></pre>
+<p>The figure builder reads saved CSV/JSON and validation/March16 forecast exports, checks count-unit metrics and reconciliation, and writes SVG/PNG plus tables. It never loads model weights or protected evaluation labels. Figure source/caption manifest is <a href="results_v2/publication/tables/figure_manifest.csv">here</a>.</p>
+<p>Historical executed entry points, <strong>reference only, do not run during this review</strong>: <a href="scripts/train_causal_research_cnn.py">ReLU trainer</a>, <a href="scripts/train_softplus_research_cnn.py">Softplus trainer</a>, <a href="scripts/run_full_od_development.py">full development runner</a>, <a href="scripts/run_multi_episode_od_pilot.py">pilot primary/resume/recover</a>. Their existing output guards and code/contract hashes apply; these are not promises of a clean-machine full reproduction. Future <a href="scripts/continue_multi_episode_od.py">continuation</a> requires explicit authorization and verified checkpoint/output arguments; its full33episode campaign is unverified and unexecuted.</p>
+<p>The <a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json">latest pilot checkpoint inventory</a> and <a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/recovery_validation.json">episode1 milestone recovery report</a> describe the retained full-state checkpoints. Three roles (<code>latest</code>, <code>best</code>, <code>milestone</code>) plus one staging generation are allowed; no <code>best</code> exists before evaluation. Checks require50GiB reserve plus20GiB projected write, ≤100GiB run storage,16GiB RSS and96hour wall guard. Prior historical payload consolidation left some tombstones non-resumable; <a href="results_v2/repository_maintenance/2026-11-18_checkpoint_consolidation/README.md">retention evidence</a> is authoritative. No removed payload is offered as a runnable checkpoint.</p>
+<h2>V. Supporting evidence and review validation</h2>
+<ul>
+<li><a href="results_v2/publication/tables/master_traceability.csv">Master requirement matrix</a>: source sections, code/symbol context, contracts, tests, evidence and limitations.</li>
+<li><a href="results_v2/publication/tables/evidence_index.csv">Evidence index with hashes</a>: finite authoritative report set.</li>
+<li><a href="results_v2/publication/tables/requirement_counts.json">Requirement counts</a>: implementation versus pending scope.</li>
+<li><a href="results_v2/publication/documentation_validation.json">Documentation validation</a>: local links, source paths, figures, chronology and preservation checks.</li>
+<li><a href="results_v2/publication/tables/completed_episode_results.csv">Completed episode table</a>, <a href="results_v2/publication/tables/cnn_metrics.csv">CNN metrics</a>, <a href="results_v2/publication/tables/cnn_city_counts.csv">city predictions</a>, <a href="results_v2/publication/tables/prospective_sensitivity.csv">prospective sensitivity</a>.</li>
+<li><a href="results_v2/publication/diagrams">Nine editable diagrams</a>: extracted Mermaid source matching this README.</li>
+</ul>
+<p><a href="results_v2/publication/readme_render_validation.json">Rendering repair validation</a> records Markdown parsing, math checks, image decoding and local anchors. The complete document has a <a href="results_v2/publication/readme_structural_preview.html">structural HTML preview</a>; this is not a GitHub MathJax/Mermaid visual pass. Full browser rendering remains unverified because those engines are unavailable locally.</p>
+<p>All numerical figures use persisted sources. No missing charging completion, repositioning-cost, historical density or final benchmark points are invented. Publication figures are descriptive; SVG versions are editable. Mermaid rendering is validated only to the extent reported in the validation artifact, not assumed from code-fence presence. The package supports academic methodology review <strong>with the stated unresolved items</strong>, not a declaration of full master compliance or publishable performance superiority.</p>

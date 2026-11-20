@@ -5,7 +5,7 @@ sequenceDiagram
   participant F as Federation
   P->>P: Validate issuance and prior aggregates
   P->>P: Price supported OD contexts
-  P->>D: Broadcast aggregates; private routing
+  P->>D: Broadcast aggregates and begin private routing
   R->>D: Requests revealed in UTC event order
   D->>D: Acceptance, contention, assignment, arrivals, charging
   D->>P: Successful fares and slot-end EWMA

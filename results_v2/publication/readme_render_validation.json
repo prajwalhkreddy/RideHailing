@@ -1,0 +1,1147 @@
+{
+  "status": "PASS",
+  "local_links": 111,
+  "unique_links": 100,
+  "link_errors": [],
+  "links": [
+    {
+      "url": "results_v2/publication/master_specification_excerpt.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/root_readme_before_review.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "#c-end-to-end-architecture",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "#f-cnn-forecasting-implemented-not-the-active-hierarchical-input",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "#g-passenger-elasticity-and-acceptance",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "#n-training-mathematics-and-hyperparameters",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "#q-verified-experiments-and-latest-milestone",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "#t-open-methodological-decisions-and-experimental-limitations",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "#u-reproducibility-and-execution-reference",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/federated_learning/2026-11-18_hierarchical_coupling_validation/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "data/processed/spatial_3km_jan_mar_2026/grid_metadata.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "data/processed/spatial_3km_jan_mar_2026/zone_grid_mapping.metadata.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "data/processed/spatial_3km_jan_mar_2026/grid_raster_mapping.metadata.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/simulation/2026-11-17_utc_od_runtime/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/utc_od_state.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/simulation/2026-11-17_historical_request_replay/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/historical_request_replay.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/simulation/2026-11-17_end_to_end_acceptance/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/demand/persistence_weather.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/forecast_contract.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/cnn_metrics.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_baseline_comparison.png",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/cnn_demand/2026-11-18_cnn_activation_gradient_diagnosis/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/cnn_demand/2026-11-18_softplus_final_diagnosis/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_training_loss.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_high_low_grids.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_city_development.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_spatial_error.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/pricing/weighted_binned_sampler.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "scripts/build_weighted_binned_calibration.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "tests/test_weighted_binned_sampler.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/sensitivity_group_proportions.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/prospective_sensitivity.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/sensitivity_weighting.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/pricing/slot_v3.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/sensitivity_conditional_support.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/sensitivity_weighting.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/sensitivity_group_counts.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/sensitivity_acceptance.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results/analysis/2026-10-09_price_distance_sensitivity_record029_full_jan_mar/charts/authoritative_epsilon_histogram_full.png",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/passenger_sensitivity/2026-11-17_binned_estimator_review/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/pricing/od_contract.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/od_pricing_runtime.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "tests/test_joint_od_pilot.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/master_od_contract.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/master_operational_state.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "tests/test_master_od_math.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/routing/operational_interface.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/routing/configuration.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/routing/operational_interface.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/federated_learning/2026-11-17_online_routing_retry_001/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/reset_checks.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/routing/research_hierarchy.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/routing/learning.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "tests/test_multi_episode_federation.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/routing/privacy.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/od_gymnasium.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/historical_request_replay.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/dispatch/dispatch.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/final_production.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/rl/od_pricing_dqn.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "tests/test_master_od_math.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/frozen_configuration.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/recovery_validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/master_traceability.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/requirement_counts.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results/analysis/2026-10-19_final_jan_mar_3km_cnn/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results/analysis/2026-10-19_final_cnn_performance_diagnosis/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/cnn_demand/2026-11-18_causal_research_training/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/cnn_demand/2026-11-18_softplus_final_diagnosis/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/simulation/2026-11-17_prospective_utility_acceptance/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/federated_learning/2026-11-17_online_routing_rng_retry_002/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-18_joint_learning_pilot/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_full_episode_development/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_training_protocol_decision/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results/analysis/2026-11-15_source_aligned_slot_pricing_v3/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/dqn_episode_outcomes.png",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/routing_control.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/routing_control.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/dqn_learning_replay.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/federation_progress.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/simulation_reconciliation.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "requirements.txt",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/review_provenance.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/implementation_sources.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figure_sources.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/figure_manifest.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "scripts/train_causal_research_cnn.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "scripts/train_softplus_research_cnn.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "scripts/run_full_od_development.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "scripts/run_multi_episode_od_pilot.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "scripts/continue_multi_episode_od.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/recovery_validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/repository_maintenance/2026-11-18_checkpoint_consolidation/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/master_traceability.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/evidence_index.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/requirement_counts.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/documentation_validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/completed_episode_results.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/cnn_metrics.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/cnn_city_counts.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/prospective_sensitivity.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/diagrams",
+      "exists": true,
+      "kind": "directory"
+    },
+    {
+      "url": "results_v2/publication/readme_render_validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/readme_structural_preview.html",
+      "exists": true,
+      "kind": "file"
+    }
+  ],
+  "images": [
+    {
+      "path": "results_v2/publication/figures/cnn_baseline_comparison.png",
+      "format": "PNG",
+      "dimensions": [
+        1800,
+        720
+      ],
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_training_loss.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_high_low_grids.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_city_development.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_spatial_error.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/sensitivity_conditional_support.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/sensitivity_weighting.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/sensitivity_group_counts.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/sensitivity_acceptance.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results/analysis/2026-10-09_price_distance_sensitivity_record029_full_jan_mar/charts/authoritative_epsilon_histogram_full.png",
+      "format": "PNG",
+      "dimensions": [
+        1700,
+        850
+      ],
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/dqn_episode_outcomes.png",
+      "format": "PNG",
+      "dimensions": [
+        1800,
+        720
+      ],
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/routing_control.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/dqn_learning_replay.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/federation_progress.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/simulation_reconciliation.svg",
+      "format": "SVG",
+      "readable": true
+    }
+  ],
+  "display_formulas": 29,
+  "inline_formulas": 40,
+  "mathtext_diagnostics": [
+    {
+      "kind": "display",
+      "expression": "\\epsilon_b=\\frac{(l_b-L_0)/L_0}{(\\bar P_b-P_0)/P_0}",
+      "width": 88.0,
+      "height": 23.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "P_0=22.354198442390455\\ \\mathrm{USD}",
+      "width": 221.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "L_0=4.616983790655043\\ \\mathrm{km}",
+      "width": 204.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "w_{b|c}=n_{b,c}/\\sum_{k\\in B_c^+}n_{k,c}",
+      "width": 133.0,
+      "height": 33.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\epsilon\\sim\\sum_{b\\in B_c^+}w_{b|c}\\delta_{\\epsilon_{b,c}}",
+      "width": 112.0,
+      "height": 33.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "P_{gg't}^{\\mathrm{disp}}=a_{gg't}P_0",
+      "width": 90.0,
+      "height": 24.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "P_{c}^{\\mathrm{raw}}=P_0+\\frac{P_0}{\\epsilon_c}\\frac{L_{gg'}-L_0}{L_0}",
+      "width": 129.0,
+      "height": 22.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\mathrm{accept}_c=\\mathbf{1}(P_{gg't}^{\\mathrm{disp}}\\leq P_c^{\\mathrm{raw}})",
+      "width": 165.0,
+      "height": 24.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "s_{gg't}=[\\hat J_{g,t},30\\hat F_{g,t},I_{g,t},p_{g,t},\\pi_{g',t}]\\in\\mathbb{R}^{13}",
+      "width": 256.0,
+      "height": 22.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "p_{g,t}=[p_{g,t}^{(0)},\\ldots,p_{g,t}^{(8)}]",
+      "width": 129.0,
+      "height": 22.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "R_{gg't}=\\sum_{j:O_j=g,D_j=g'}P^{\\mathrm{disp}}_{gg't}x_{jt}",
+      "width": 164.0,
+      "height": 34.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\max_\\theta\\mathbb{E}\\!\\left[\\sum_t\\gamma^t\\sum_{g,g'}R_{gg't}\\right]",
+      "width": 127.0,
+      "height": 32.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\mu_t=\\alpha\\bar p+(1-\\alpha)\\mu_{t-1}",
+      "width": 143.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\sigma_t=\\beta\\frac{1}{N}\\sum_j|p_j-\\mu_{t-1}|+(1-\\beta)\\sigma_{t-1}",
+      "width": 224.0,
+      "height": 31.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\hat F_t=\\delta\\frac{N}{30}+(1-\\delta)\\hat F_{t-1}",
+      "width": 145.0,
+      "height": 22.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\hat H_t=\\kappa H+(1-\\kappa)\\hat H_{t-1}",
+      "width": 146.0,
+      "height": 19.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "U^1_{ig}=1-\\Phi\\!\\left(\\frac{P_i^{min}-\\mu_g}{\\max(\\sigma_g,\\sigma_{\\mathrm{floor}})}\\right)",
+      "width": 156.0,
+      "height": 27.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "U^2_{ig}=1-\\exp(-\\hat F_gW_i^{max})",
+      "width": 162.0,
+      "height": 23.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "y_i=\\arg\\max_{g\\in N_i}\\{U^1_{ig}+U^2_{ig}-c_{\\mathrm{km}}d_{ig}\\}",
+      "width": 216.0,
+      "height": 26.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "U^3_{ig}=1-\\exp\\!\\left(-\\frac{H_i^{max}}{\\max(\\hat H_g,H_{\\mathrm{floor}})}\\right)",
+      "width": 187.0,
+      "height": 29.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "D'_i=\\arg\\max_{g\\in G_{\\mathrm{charge}}}\\{U^3_{ig}-c_{\\mathrm{km}}d_{ig}\\}",
+      "width": 204.0,
+      "height": 27.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "p_{gk}=\\frac{m_{gk}\\exp z_{gk}}{\\sum_l m_{gl}\\exp z_{gl}}",
+      "width": 96.0,
+      "height": 32.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "C_i=-\\frac{1}{N_i}\\sum_n\\log p_{i,y_n}(s_n)",
+      "width": 141.0,
+      "height": 27.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\phi_i\\leftarrow\\mathrm{Adam}(\\phi_i,\\nabla C_i;0.001)",
+      "width": 170.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\phi_{t+1}=\\frac{1}{|A_t|}\\sum_{i\\in A_t}\\phi_{i,t}^{\\mathrm{local}}",
+      "width": 125.0,
+      "height": 31.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "y=r+\\gamma(1-d)\\max_a Q_{\\bar\\theta}(s',a)",
+      "width": 189.0,
+      "height": 21.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\mathcal{L}(\\theta)=\\frac{1}{2M}\\sum_m[y_m-Q_\\theta(s_m,a_m)]^2",
+      "width": 199.0,
+      "height": 27.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "\\bar\\theta\\leftarrow(1-\\tau)\\bar\\theta+\\tau\\theta",
+      "width": 114.0,
+      "height": 16.0,
+      "parsed": true
+    },
+    {
+      "kind": "display",
+      "expression": "e(u)=\\max(0.1,1-0.005\\lfloor u/10\\rfloor)",
+      "width": 224.0,
+      "height": 13.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "3\\sqrt{2}",
+      "width": 30.0,
+      "height": 17.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "1.5\\leq L<75",
+      "width": 82.0,
+      "height": 12.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "(N,7,16,16)",
+      "width": 87.0,
+      "height": 13.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "b",
+      "width": 9.0,
+      "height": 12.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "l_b",
+      "width": 11.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\bar P_b",
+      "width": 16.0,
+      "height": 16.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "n_b",
+      "width": 16.0,
+      "height": 11.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "c",
+      "width": 8.0,
+      "height": 9.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "B_c^+",
+      "width": 23.0,
+      "height": 17.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "c",
+      "width": 8.0,
+      "height": 9.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\delta_{\\epsilon}",
+      "width": 15.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "P_0",
+      "width": 15.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "x=1",
+      "width": 35.0,
+      "height": 11.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "p_j",
+      "width": 12.0,
+      "height": 13.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "N",
+      "width": 11.0,
+      "height": 11.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "H",
+      "width": 11.0,
+      "height": 11.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\mu,\\sigma",
+      "width": 25.0,
+      "height": 11.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\sigma",
+      "width": 9.0,
+      "height": 9.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\hat F",
+      "width": 8.0,
+      "height": 16.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\alpha=\\beta=\\delta=\\kappa=0.3",
+      "width": 126.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "P_i^{min}",
+      "width": 29.0,
+      "height": 19.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "W_i^{max}",
+      "width": 37.0,
+      "height": 17.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "d",
+      "width": 9.0,
+      "height": 12.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\sigma_{floor}=10^{-6}",
+      "width": 81.0,
+      "height": 16.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "H_{floor}=10^{-6}",
+      "width": 83.0,
+      "height": 16.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "0.25d/(3\\sqrt{2})",
+      "width": 85.0,
+      "height": 18.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "d",
+      "width": 9.0,
+      "height": 12.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "H_i^{max}=10",
+      "width": 68.0,
+      "height": 17.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "m",
+      "width": 14.0,
+      "height": 8.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "A_t",
+      "width": 14.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "M",
+      "width": 12.0,
+      "height": 11.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "r",
+      "width": 6.0,
+      "height": 8.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\theta",
+      "width": 9.0,
+      "height": 12.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\bar\\theta",
+      "width": 9.0,
+      "height": 15.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "d",
+      "width": 9.0,
+      "height": 12.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "a_m",
+      "width": 19.0,
+      "height": 11.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "e(u)",
+      "width": 29.0,
+      "height": 13.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "u",
+      "width": 9.0,
+      "height": 9.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\gamma=.99",
+      "width": 51.0,
+      "height": 14.0,
+      "parsed": true
+    },
+    {
+      "kind": "inline",
+      "expression": "\\tau=.005",
+      "width": 60.0,
+      "height": 12.0,
+      "parsed": true
+    }
+  ],
+  "mermaid_blocks": 9,
+  "restricted_grammar_errors": [],
+  "markdown_parser": "markdown-it-py CommonMark plus tables",
+  "rendered_tables": 6,
+  "math_engine": "Matplotlib MathText supplemental parser; NOT KaTeX/MathJax",
+  "mermaid_engine": "Unavailable: no Node/Mermaid CLI installed",
+  "visual_rendering": "UNVERIFIED: full GitHub browser rendering unavailable",
+  "commands": "Documentation scripts and referenced entry points exist; no training commands executed"
+}

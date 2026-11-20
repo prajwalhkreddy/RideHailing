@@ -1,9 +1,9 @@
 flowchart LR
-  S[13D state per supported OD] --> Q[64 ReLU then 64 ReLU then 7 Q values]
-  Q --> A[Epsilon-greedy fare factor]
-  A --> D[Acceptance and successful assignment]
-  D --> R[OD sum of assigned fares]
-  R --> T[State action reward next-state terminal]
-  T --> B[FIFO replay 100000]
-  B --> U[8 updates per warm slot]
+  S["13D state per supported OD"] --> Q["64 ReLU then 64 ReLU then 7 Q values"]
+  Q --> A["Epsilon-greedy fare factor"]
+  A --> D["Acceptance and successful assignment"]
+  D --> R["OD sum of assigned fares"]
+  R --> T["State action reward next-state terminal"]
+  T --> B["FIFO replay 100000"]
+  B --> U["8 updates per warm slot"]
   U --> Q

@@ -16,4 +16,21 @@ class ReviewDocumentationTests(unittest.TestCase):
  def test_review_sections(self):
   text=(R/'README.md').read_text();self.assertEqual(len(re.findall(r'^## [A-V]\. ',text,re.M)),22);self.assertEqual(text.count('```')%2,0);self.assertNotRegex(text.lower(),r'professor|\bprof\b')
  def test_status_totals(self):self.assertEqual(sum(self.report['requirement_statuses'].values()),self.report['master_requirements'])
+
+class RenderingRepairTests(unittest.TestCase):
+ @classmethod
+ def setUpClass(cls):
+  from scripts.validate_readme_rendering import audit
+  cls.report=audit()
+ def test_links_and_anchors(self):self.assertEqual(self.report['link_errors'],[])
+ def test_math_parser(self):
+  self.assertTrue(all(r['parsed'] for r in self.report['mathtext_diagnostics']))
+  self.assertGreater(self.report['display_formulas'],0)
+ def test_diagram_subset(self):self.assertEqual(self.report['restricted_grammar_errors'],[])
+ def test_images_decode(self):self.assertTrue(all(r['readable'] for r in self.report['images']))
+ def test_status_and_next_steps(self):
+  text=(R/'README.md').read_text();self.assertIn('## Current Research Status and Next Steps',text);self.assertIn('### Next steps',text)
+ def test_complete_html(self):
+  text=(O/'readme_structural_preview.html').read_text();self.assertIn('Supporting evidence and review validation',text);self.assertGreaterEqual(self.report['rendered_tables'],6)
+
 if __name__=='__main__':unittest.main()
