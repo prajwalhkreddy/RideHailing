@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETED_PENDING_RECOVERY",
+  "episodes": 2,
+  "slots": 32,
+  "updates": 256,
+  "epsilon": 0.875,
+  "routing_updates": 149096,
+  "federation_round": 32,
+  "seconds": 2862.5147479581647,
+  "peak_rss": 4861247488,
+  "checkpoint_bytes": 3103537628,
+  "protected_access": false,
+  "remaining_episodes_started": false
+}

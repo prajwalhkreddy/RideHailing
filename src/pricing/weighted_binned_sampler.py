@@ -35,7 +35,8 @@ class WeightedBinnedSensitivity(BinnedSensitivity):
 
 def load_sensitivity(path, seed=42):
     version=json.loads(Path(path).read_text()).get('version')
-    classes={BinnedSensitivity.VERSION:BinnedSensitivity,VERSION:WeightedBinnedSensitivity}
+    from src.pricing.prospective_binned_sampler import ProspectiveBinnedSensitivity
+    classes={ProspectiveBinnedSensitivity.VERSION:ProspectiveBinnedSensitivity,BinnedSensitivity.VERSION:BinnedSensitivity,VERSION:WeightedBinnedSensitivity}
     if version not in classes:raise ValueError('Unknown sensitivity version')
     return classes[version](path,seed)
 

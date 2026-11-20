@@ -1,0 +1,16 @@
+{
+  "capacity": 100000,
+  "contexts_per_slot": 9572,
+  "generated_per_episode": 153152,
+  "eviction": "FIFO per append; oldest evicted",
+  "retained_full_slots": 10,
+  "additional_older_contexts": 4280,
+  "zero_reward_retained": 98281,
+  "retained": 100000,
+  "unique_retained_pairs": 9572,
+  "zero_request_contexts_lower_bound": 137094,
+  "zero_reward_contexts_lower_bound": 149033,
+  "updates_per_transition": 0.0008357709987463436,
+  "sample_presentations_per_transition": 0.05348934391976599,
+  "notes": "Exact retained zero rewards measured read-only from saved replay; no exact generated zero-request count claimed. Bounds allow every request/assignment to occupy a distinct OD-slot. Uniform contexts do not imply uniform request weighting."
+}

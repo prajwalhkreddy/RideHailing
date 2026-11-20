@@ -1,0 +1,5 @@
+slot,learned_accepted,control_accepted,learned_assigned,control_assigned,learned_revenue,control_revenue,revenue_difference,repositioning_vehicles_learned,repositioning_vehicles_control,routing_actions_equal,ev_energy_sum_equal,charging_events_learned,charging_events_control,mean_abs_probability_difference,max_abs_probability_difference,charging_state_hash_equal,full_runtime_hash_equal
+1,479,479,363,363,6830.166666666667,6830.166666666667,0.0,1135,1135,True,True,0,0,0.007878092117607594,0.23235613107681274,True,False
+2,250,250,236,236,5656.391730218114,5656.391730218114,0.0,1291,1291,True,True,0,0,0.018981805071234703,0.4444538354873657,True,False
+3,239,239,185,185,4656.9,4656.9,0.0,322,322,True,True,0,0,0.03176017105579376,0.5780720114707947,True,False
+4,224,224,212,212,4791.05,4791.05,0.0,549,549,True,True,0,0,0.048714738339185715,0.7063923478126526,True,False

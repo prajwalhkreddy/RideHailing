@@ -1,3 +1,72 @@
+## Routing-to-pricing coupling validation — 2026-11-18
+
+Bounded validation confirms that next-slot global routing probabilities enter the nine routing dimensions of the 13D OD pricing state and change unchanged-network Q outputs. Private utility still chooses physical driver actions. The prior fully exploratory, zero-pricing-update control therefore need not differ in assignments or revenue. Fifteen focused tests passed; no training was initiated. Evidence: `results_v2/federated_learning/2026-11-18_hierarchical_coupling_validation/README.md`. A frozen, separately authorized joint-learning protocol remains the next step.
+
+## Online-routing reproducibility and control — 18 November 2026
+
+The RNG discrepancy was the separately unseeded TensorFlow global Generator.
+Research-run initialization now seeds it once; resume restores it. Historical
+runtime behavior and scientific settings are unchanged. All 50 focused tests
+passed. The four-slot learned run, independent repeat and checkpoint/resume
+matched exactly, including RNG state. The matched no-update control completed:
+routing probabilities changed, but dispatch/revenue/movement aggregates did not.
+There were 19,342 genuine local updates and four NONPRIVATE FedAvg rounds;
+pricing optimization remained disabled. No policy-improvement claim is made.
+[Evidence and limitations](../../results_v2/federated_learning/2026-11-17_online_routing_rng_retry_002/README.md).
+
+## Online-routing retry 001 — 17 November 2026
+
+The mixed-fleet arrival reserve guard now exempts explicit non-EVs while retaining
+historical EV safety. All 46 focused tests passed. The four-slot real-data run
+completed with 19,342 genuine local updates and four equal-client NONPRIVATE
+FedAvg rounds; checkpoint/resume matched exactly. The independent fresh repeat
+stopped at slot1 because only the global RNG fingerprint differed. All other
+compared state fingerprints matched. The no-update control was not run.
+Pricing optimization remains disabled. Next: resolve RNG-state reproducibility
+before continuing the bounded validation; no extended training is authorized.
+[Retry evidence](../../results_v2/federated_learning/2026-11-17_online_routing_retry_001/README.md).
+
+## Bounded online-routing attempt — 17 November 2026
+
+The first real-data mixed-fleet attempt passed provenance/startup checks but
+stopped before completing slot 1 at the post-arrival station-reserve guard.
+An isolated regression confirms that this guard incorrectly applies EV battery
+requirements to non-EVs. No routing or pricing optimizer update occurred.
+Control/repeat/resume were not run after the safety stop. Forty existing tests
+passed; the new non-EV arrival regression fails while the EV rejection passes.
+Production code and historical artifacts are unchanged. Next: correct arrival
+reserve applicability, preserve EV safety, and retry the bounded protocol.
+[Attempt evidence](../../results_v2/federated_learning/2026-11-17_online_routing_experiment/README.md).
+
+## Prospective online routing — 17 November 2026
+
+A fresh-only routing initialization and online-experience provenance contract now
+supports the versioned equal-client next-slot FedAvg interface. Historical learned
+lineage remains rejected; prior sample-weighted and utility modes are preserved.
+Updates remain off by default. Validation uses synthetic parameter updates and
+small fixtures, with no gradient training or experiment launch. FedAvg is nonprivate;
+weather availability and development-tuning limitations remain.
+[Contract and evidence](../../results_v2/federated_learning/2026-11-17_prospective_online_routing/README.md).
+
+## Hierarchical research interfaces — 17 November 2026
+
+Opt-in driver-local routing/FedAvg lifecycle, deterministic mixed-EV composition
+and a thin Gymnasium OD adapter are implemented and fixture-tested. Updates are
+disabled by default; FedAvg is explicitly nonprivate. Historical V3 and the
+non-learned research baseline remain available. Learned prospective activation
+still requires an online-policy provenance contract. No training experiment ran.
+[Architecture and bounded evidence](../../results_v2/simulation/2026-11-17_hierarchical_interfaces/README.md).
+
+## Prospective utility-baseline acceptance — 17 November 2026
+
+The opt-in non-learned private-utility routing baseline completed March12’s four-slot
+engineering acceptance with 5,000 vehicles and January–February sensitivity.
+All 4,137 eligible requests reconciled; 996 assignments produced $21,934.5083968848.
+Deterministic repeat/resume and 48 focused tests passed; no training occurred.
+The earlier learned-routing lineage remains blocked and unchanged. This research
+baseline does not establish policy effectiveness or verified weather availability.
+[Evidence](../../results_v2/simulation/2026-11-17_prospective_utility_acceptance/README.md).
+
 # Historical observed-request replay
 
 `HISTORICAL_REQUEST_REPLAY_V1` is the primary demand protocol of the opt-in
@@ -105,3 +174,51 @@ hashes, Git state, seed, reconciliation, timing and test outcomes are saved.
 ## Versioned CNN timing boundary
 
 The [new CNN timing evidence](../../results_v2/cnn_demand/2026-11-17_causal_timing/README.md) preserves target-start alignment but does not replace runtime forecasts. Oracle weather is rejected operationally; the legacy naive OD clock also cannot silently represent a spring-forward issuance crossing. Resolve these contracts before forecast promotion.
+
+### Assumption-based CNN weather boundary
+
+The new `src.demand.persistence_weather.validate_persistence_forecast` adapter
+validates research forecast metadata without changing historical OD consumption.
+It preserves fractional demand, rejects oracle/checkpoint mismatches and fails
+closed on the legacy DST bridge. Actual publication availability and consistency
+with realized passenger weather remain unresolved.
+[Evidence](../../results_v2/cnn_demand/2026-11-17_observation_persistence/README.md).
+
+## Earlier OD mathematical correction status (temporal limitation superseded)
+
+Opt-in `master_math=True` implements previous-mean absolute-deviation EWMA and
+half squared Bellman loss. UTC boundary helpers are tested, but the inherited
+engine/ledger clock migration remains incomplete. Operational startup fails closed;
+no training started. Historical V3 is unchanged.
+[Contract, validation and exact remaining work](../../results_v2/simulation/2026-11-17_master_math_temporal/README.md).
+
+## UTC OD research runtime
+
+`OD_AWARE_UTC_ELAPSED_V1` now integrates UTC request/event flow, master mathematics
+and checkpoint restoration through the inherited engine. DST trip, charging and
+repositioning checks pass; 42 bounded tests passed. Historical V3 is unchanged.
+Operational forecasts remain blocked by unverified weather availability; no training
+was performed. [Evidence and input contract](../../results_v2/simulation/2026-11-17_utc_od_runtime/README.md).
+
+
+## Real-data OD acceptance gate — 17 November 2026
+
+March12 00:00–02:00 NY bounded research acceptance completed all four slots and
+4,137 eligible requests. Explicit `VALID_UNSEEN_OD_REFERENCE_PRICE_V1` served two
+January-unseen pairs at factor 1.0, without expanding support or adding fallback
+DQN transitions. Total revenue $22,254.5750635514 includes $44.7083968848 fallback
+revenue. Repeat/resume passed; no training occurred. January historical-average
+forecasts are a labeled baseline, not trained CNN output. Frozen sensitivity remains
+retrospectively calibrated through March15; prospective information timing remains
+unresolved. [Preflight evidence](../../results_v2/simulation/2026-11-17_end_to_end_acceptance/FALLBACK_ACCEPTANCE.md).
+
+## Prospective OD information cutoff — 17 November 2026
+
+The versioned January–February request-weighted sensitivity calibration contains
+5,457,435 observations (weighted mean 1.725916, population SD 0.426314).
+Prospective startup is **blocked**: the routing snapshot’s direct updates end
+before March12, but its generated training requests inherit CNN model selection
+using March1–15 validation. The new information guard rejects this lineage.
+No prospective replay or training ran; earlier retrospective acceptance evidence
+remains unchanged. Grouping/reference choices remain development-tuned.
+[Cutoff evidence and next step](../../results_v2/simulation/2026-11-17_prospective_acceptance_v1/README.md).

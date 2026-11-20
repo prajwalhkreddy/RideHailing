@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "cross_episode_reset_exact": true,
+  "episode2_first_slot_exact": true,
+  "losses_gradients_exact": true,
+  "additional_slots": 1
+}

@@ -50,3 +50,21 @@ resume. The earlier reward-only adapter remains distinct. See
 [OD validation](2026-11-17_feasible_od_validation/README.md) and
 [implementation contract](../../../src/pricing/README.md). Historical results and
 models are unchanged; no new training was performed.
+
+
+## First bounded joint-learning pilot
+
+[2026-11-18 joint pilot](2026-11-18_joint_learning_pilot/README.md): four March12 slots passed with 32 pricing updates, 19,344 routing updates, four FedAvg rounds, exact repeat and checkpoint continuation. Cutoff-safe historical-average forecasts were used. This is engineering integration evidence, not policy efficacy; no extended training has started.
+
+
+## Single full-episode development validation
+
+[2026-11-20 full episode](2026-11-20_full_episode_development/README.md) completed 16 March12 slots with 128 pricing updates and 16 NONPRIVATE FedAvg rounds. One-slot recovery matched exactly. The historical-average forecast preserves the fitted-information boundary; no CNN or protected evaluation data were used. This is development integration evidence, not policy efficacy. Only rolling recovery and final checkpoints are retained in the versioned models hierarchy. Further training requires a separately frozen development/evaluation protocol.
+
+## Proposed multi-episode protocol — approval pending
+
+[2026-11-20 decision packet](2026-11-20_training_protocol_decision/README.md) proposes one chronological 35-episode pass, master-described exploration, frozen development evaluation and bounded retention. It uses historical-average forecasts, not the later-selected CNN. Multi-episode resets and evaluation isolation require implementation validation after approval. No additional training or protected evaluation has been launched.
+
+## Approved multi-episode orchestration — bounded pilot complete
+
+[2026-11-20 orchestration](2026-11-20_multi_episode_orchestration/README.md) freezes the approved35-episode protocol and validates only the first two chronological March1 episodes. All32 slots completed with256 pricing updates,149,096 routing updates and32 NONPRIVATE FedAvg rounds. Epsilon continued from1.0 to0.875. Exact cross-episode checkpoint recovery and27 focused tests passed. The environment-RNG reset correction and interrupted-attempt evidence are documented. The continuation entry point is explicitly gated; the remaining33 episodes and real-data development evaluation were not launched. Long-horizon resource growth and later evaluation milestones remain unexecuted.

@@ -1,0 +1,11 @@
+{
+  "scope": "Explicit mixed-fleet non-EV reserve bypass; absent identity retains EV semantics",
+  "original_real_run_vehicle_identity": "NOT_CAPTURED; no retrospective attribution",
+  "isolated_prepatch": "non-EV arrival failed; EV rejection passed",
+  "diagnostics": "Exception contains ID/type/grid/destination/energy/reserve/time/reason; local logs only, no private preferences",
+  "source_sha256": {
+    "src/simulation/final_production.py": "459915c8712096de75427e2df521842f58b9082c4c01595b63c7dfcc1e33bf7b",
+    "tests/test_online_routing_arrival_integration.py": "3b36de8c2187c7b891d41e83b277bbc0a86d4c8e8456baf039367896683ec5e0",
+    "scripts/validate_online_routing_experiment.py": "5ef8556823d7c9995ca6729ecd5868bc6934acb3951630b1141c6fca91ec2b8a"
+  }
+}

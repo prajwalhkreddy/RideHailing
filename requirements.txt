@@ -1,1 +1,4 @@
 # Add project dependencies here as the modular implementation is developed.
+
+# Optional research OD environment adapter
+gymnasium==1.2.3

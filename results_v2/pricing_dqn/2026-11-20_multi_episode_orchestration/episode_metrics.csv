@@ -1,0 +1,3 @@
+episode,requests,accepted,assigned,revenue,supported_reward,fallback_revenue,pricing_updates,epsilon_start,epsilon_end,routing_updates,routing_sample_presentations,federation_round,charging_events,zero_request_contexts,seconds
+1,30359,8354,5958,133576.4963099692,133241.18333333335,335.3129766358552,128,1.0,0.94,76148,627939,16,3,146287,1753.2205545853358
+2,38486,9864,8876,193410.70063551448,192963.61666666667,447.0839688478127,128,0.94,0.875,72948,1723087,32,4,145291,1702.4482598749455

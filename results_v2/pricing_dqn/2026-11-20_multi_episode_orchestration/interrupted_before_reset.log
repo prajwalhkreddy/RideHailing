@@ -1,0 +1,61 @@
+{"episode": 1, "slot": 1, "requests": 4434, "updates": 8, "epsilon_after": 1.0, "seconds": 271.0881535001099}
+{"episode": 1, "slot": 2, "requests": 4039, "updates": 16, "epsilon_after": 0.995, "seconds": 103.69267649995163}
+{"episode": 1, "slot": 3, "requests": 3693, "updates": 24, "epsilon_after": 0.99, "seconds": 98.78969279211015}
+{"episode": 1, "slot": 4, "requests": 3153, "updates": 32, "epsilon_after": 0.985, "seconds": 97.2603891659528}
+{"episode": 1, "slot": 5, "requests": 2738, "updates": 40, "epsilon_after": 0.98, "seconds": 103.26492700004019}
+{"episode": 1, "slot": 6, "requests": 2172, "updates": 48, "epsilon_after": 0.98, "seconds": 100.40342879202217}
+{"episode": 1, "slot": 7, "requests": 1880, "updates": 56, "epsilon_after": 0.975, "seconds": 99.44268524996005}
+{"episode": 1, "slot": 8, "requests": 1736, "updates": 64, "epsilon_after": 0.97, "seconds": 97.18922416702844}
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/run_multi_episode_od_pilot.py", line 122, in <module>
+    try:run(sys.argv[1])
+        ^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/run_multi_episode_od_pilot.py", line 113, in run
+    d=step(r);metrics.append(d);write('slot_metrics.json',metrics)
+      ^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/run_multi_episode_od_pilot.py", line 62, in step
+    rows=r.run_slot();boundary(r)
+         ^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 80, in run_slot
+    result=self._run_slot(requests,policy=policy,weather_code=weather_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 132, in _run_slot
+    if getattr(e,"driver_hierarchy",None) is not None:e.driver_hierarchy.finish_slot(t,end)
+                                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/online_provenance.py", line 52, in finish_slot
+    result=super().finish_slot(start,end);self.experience_cutoff=end
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/research_hierarchy.py", line 36, in finish_slot
+    learner.reset_from_global_weights(weights)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/learning.py", line 213, in reset_from_global_weights
+    self.policy_model.set_weights([np.asarray(weight).copy() for weight in weights])
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/layers/layer.py", line 790, in set_weights
+    variable.assign(value)
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/backend/common/variables.py", line 283, in assign
+    value = self._convert_to_tensor(value, dtype=self._dtype)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/backend/tensorflow/core.py", line 74, in _convert_to_tensor
+    return convert_to_tensor(value, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/backend/tensorflow/core.py", line 154, in convert_to_tensor
+    return tf.convert_to_tensor(x, dtype=dtype)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/tensorflow/python/util/traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/tensorflow/python/util/dispatch.py", line 1260, in op_dispatch_handler
+    return dispatch_target(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/tensorflow/python/framework/tensor_conversion.py", line 161, in convert_to_tensor_v2_with_dispatch
+    return convert_to_tensor_v2(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/tensorflow/python/framework/tensor_conversion.py", line 171, in convert_to_tensor_v2
+    return tensor_conversion_registry.convert(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/tensorflow/python/framework/tensor_conversion_registry.py", line 252, in convert
+    if dtype and not dtype.is_compatible_with(ret.dtype):
+                                              ^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/tensorflow/python/framework/ops.py", line 377, in dtype
+    @property
+  
+KeyboardInterrupt

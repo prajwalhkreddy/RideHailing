@@ -1,0 +1,27 @@
+EE
+======================================================================
+ERROR: test_ev_without_station_reserve_still_rejected (tests.test_online_routing_arrival_integration.MixedArrivalTests.test_ev_without_station_reserve_still_rejected)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_online_routing_arrival_integration.py", line 30, in test_ev_without_station_reserve_still_rejected
+    e.advance_until(e.clock+pd.Timedelta(minutes=1))
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/final_production.py", line 201, in advance_until
+    self.charging.advance_mini_slot(self.fleet.vehicles,delta,self.energy)
+                                                              ^^^^^^^^^^^
+AttributeError: 'ProductionExperiment' object has no attribute 'energy'
+
+======================================================================
+ERROR: test_non_ev_arrival_requires_no_battery_reserve (tests.test_online_routing_arrival_integration.MixedArrivalTests.test_non_ev_arrival_requires_no_battery_reserve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_online_routing_arrival_integration.py", line 23, in test_non_ev_arrival_requires_no_battery_reserve
+    e.advance_until(e.clock+pd.Timedelta(minutes=1))
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/final_production.py", line 201, in advance_until
+    self.charging.advance_mini_slot(self.fleet.vehicles,delta,self.energy)
+                                                              ^^^^^^^^^^^
+AttributeError: 'ProductionExperiment' object has no attribute 'energy'
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (errors=2)

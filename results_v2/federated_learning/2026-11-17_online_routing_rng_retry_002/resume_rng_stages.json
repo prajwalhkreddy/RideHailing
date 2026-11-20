@@ -1,0 +1,32 @@
+{
+  "process_initial": {
+    "python": "335049221dea194734b0d33d9f6372fe4fd27c127465bf6f85bf3a89cd28e9cf",
+    "numpy": "b1a435053f5ed33636248e1138688bc62c2d293fd573e7452fbefe9623f90618",
+    "tensorflow": "b697c031d53a956d2c315a635c865ba790f29a56183c57737406862d8d5d226b",
+    "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+  },
+  "run_initialized": {
+    "python": "335049221dea194734b0d33d9f6372fe4fd27c127465bf6f85bf3a89cd28e9cf",
+    "numpy": "b1a435053f5ed33636248e1138688bc62c2d293fd573e7452fbefe9623f90618",
+    "tensorflow": "b697c031d53a956d2c315a635c865ba790f29a56183c57737406862d8d5d226b",
+    "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+  },
+  "before_slots": {
+    "python": "241472a33ebbc00a86514e6178993530cbe3bfb06c5ca6e9aa5609b121110fce",
+    "numpy": "53141c7c85317097d08ff9a61263bc8fffbfbb39878ed120583fa65d10187bb7",
+    "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+    "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+  },
+  "after_slot_3": {
+    "python": "ef773d9525f8889fba441e3f49774fd9d8cc2c82a60e19e9add7d2243d666355",
+    "numpy": "14346e13e556d517c9fddfe053dcc13201f8a7febecc895f13c2d5db3bbabf22",
+    "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+    "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+  },
+  "after_slot_4": {
+    "python": "c64164e0cbb1e8568d1b3a43b79308c83cd7c27f23b557abb4bd6e839617da86",
+    "numpy": "c91e0ef8fcdae23fef5f632572951af2d0d71dcf846262da69b8689e57a061d3",
+    "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+    "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+  }
+}

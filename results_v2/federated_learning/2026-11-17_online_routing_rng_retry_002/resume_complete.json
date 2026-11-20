@@ -1,0 +1,24 @@
+{
+  "status": "PASSED",
+  "slots": 4,
+  "requests": 4137,
+  "total_revenue": 21934.508396884783,
+  "accepted": 1192,
+  "assigned": 996,
+  "pricing_updates": 0,
+  "final_state": {
+    "runtime": "d325318e3ec5580d1e5f4ed71ca0999fb3b21ea06e1115818d5ee2638e60a3de",
+    "hierarchy": "388eb1720bc6fbfe21d27d65a63d7439d6ac0abf48e8ecfec1d3cf2063bf5768",
+    "local_parameters_and_optimizers": "e5efce9a98060d639c925c224f38f98fca2831f544afed3fa6a9e4592ca082db",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "2d62e6bcfb1c85ee1de659fc61734d6a1843893763859b9155396e4cd3a57fbe",
+    "global_rng_domains": {
+      "python": "c64164e0cbb1e8568d1b3a43b79308c83cd7c27f23b557abb4bd6e839617da86",
+      "numpy": "c91e0ef8fcdae23fef5f632572951af2d0d71dcf846262da69b8689e57a061d3",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_weights": "01d5dc206a4eedbf6cbd158d6a77e777b2f0dcf9f829b299e0ae660184fc26de",
+    "pricing_optimizer": "ba6781a4449292b1a9c0ddaa9baa6bc7e0bdf71229710b2bf7824a1793af437b"
+  }
+}

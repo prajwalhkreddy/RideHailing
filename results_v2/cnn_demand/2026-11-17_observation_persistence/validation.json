@@ -1,0 +1,71 @@
+{
+  "shape": [
+    3598,
+    7,
+    16,
+    16
+  ],
+  "samples": 3598,
+  "eligible": 3596,
+  "split_counts": {
+    "test": {
+      "size": 48,
+      "sum": 48
+    },
+    "train": {
+      "size": 2832,
+      "sum": 2830
+    },
+    "validation": {
+      "size": 718,
+      "sum": 718
+    }
+  },
+  "source_rows": 511200,
+  "nonexistent_civil_rows": 284,
+  "request_demand_retained": 9140364.0,
+  "target_labels_unchanged": true,
+  "age_min_minutes": 120.0,
+  "age_max_minutes": 240.0,
+  "availability_violations": 0,
+  "weather_missing_cells": 0,
+  "development_only": true,
+  "training_performed": false,
+  "operational_ready": false,
+  "source_timezone_evidence": "Meteostat1.7.6 utilities/mutations.py localize treats native time as UTC; fetch omitted timezone",
+  "publication_time_recorded": false,
+  "archived_forecasts_in_inspected_lineage": false,
+  "model_data_allowed": true,
+  "source_flags_retained": false,
+  "local_fill_changed_values": false,
+  "assumption": "120-minute lag covers hourly support plus assumed one-hour delay; NOT measured release latency or historical-vintage proof",
+  "interval_semantics": "Hourly labels; exact observation/aggregation interval not persisted; conservative one-hour support allowance is assumed",
+  "od_dst_bridge": "Legacy naive runtime bridge fails closed at spring transition; no new civil slots",
+  "sensitivity": "Weighted sampler unchanged; realized legacy WeatherCode clock differs from new UTC-converted persistence weather",
+  "checks": "Finite tensors; exact unchanged targets; mask; availability ordering",
+  "source_sha256": {
+    "src/demand/persistence_weather.py": "b430c24d8d28f7ab493d667333344cbd32f08102b55fe7a2263a299c91f5a128",
+    "src/demand/causal_timing.py": "af7099a33377ba66823d95537ec0e053e55b0a9d8a153c3d5b1976d06247ca48",
+    "src/demand/final_cnn.py": "8ea68fb6c7d6df9e8e396ae9cbeec0e13bd9bb97daf511843ecadb7192455664",
+    "src/data/weather.py": "8394be0e511f5a2b40e8fae470b7c0e46bdbfb6f7c6578b47a3e55f2b6f66a97",
+    "src/simulation/od_pricing_runtime.py": "521d97d2c05c337601608059acf15eb780507d3941d51b0f739bba046cc2537d",
+    "src/pricing/weighted_binned_sampler.py": "4a7c9fbc8ccfac228db4f094bffc35a31edf6e36505000553518b9f26a849c47"
+  },
+  "selected_weather_hash": "2f60aa55e3ef2dfa898636c39ca2b3f4902e910ce094c737aca1153ba359d9a4",
+  "tests": {
+    "passed": 31,
+    "failed": 0,
+    "seconds": 14.175,
+    "modules": [
+      "test_persistence_weather",
+      "test_cnn_causal_timing",
+      "test_cnn_model",
+      "test_cnn_tensors",
+      "test_od_pricing"
+    ]
+  },
+  "preservation": {
+    "historical_files_checked_size_mtime": 2279,
+    "changed": 0
+  }
+}

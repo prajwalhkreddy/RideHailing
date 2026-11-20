@@ -1,0 +1,12 @@
+local updates 1000 slot 1
+local updates 2000 slot 1
+local updates 3000 slot 1
+local updates 4000 slot 1
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/validate_online_routing_experiment.py", line 118, in <module>
+    try:run(mode)
+        ^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/validate_online_routing_experiment.py", line 107, in run
+    if expected is not None:assert state==expected[i], 'Determinism mismatch at slot '+str(i+1)+': '+str([k for k in state if state[k]!=expected[i][k]])
+                                   ^^^^^^^^^^^^^^^^^^
+AssertionError: Determinism mismatch at slot 1: ['global_rng']

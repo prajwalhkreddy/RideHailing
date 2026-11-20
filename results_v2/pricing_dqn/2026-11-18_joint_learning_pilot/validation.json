@@ -1,0 +1,41 @@
+{
+  "status": "PASSED",
+  "version": "MASTER_OD_JOINT_PILOT_V1",
+  "slots": 4,
+  "requests": 4137,
+  "accepted": 1144,
+  "rejected": 2993,
+  "assigned": 975,
+  "accepted_unmatched": 169,
+  "successful_dispatch_revenue": 21605.02506355145,
+  "pricing_optimizer_updates": 32,
+  "routing_optimizer_updates": 19344,
+  "federation_rounds": 4,
+  "replay_size": 38288,
+  "epsilon_start": 1.0,
+  "epsilon_end": 0.999392,
+  "loss_min": 0.36721277236938477,
+  "loss_max": 452.7617492675781,
+  "primary_slot_seconds": 587.4804877068382,
+  "peak_rss_bytes": 3874963456,
+  "independent_repeat_exact": true,
+  "checkpoint_restore_and_continuation_exact": true,
+  "pricing_losses_exact": true,
+  "tests_passed": 31,
+  "tests_failed": 0,
+  "charging_events": 0,
+  "protected_period_accessed": false,
+  "extended_training_started": false,
+  "remaining_correctness_blockers": [],
+  "initial_preflight_failure": "Superseded: reused unchanged corrected manifest from successful prior run",
+  "checkpoint_bytes": {
+    "recovery_checkpoint": 1207356615,
+    "final_checkpoint": 1252664226
+  },
+  "source_hashes": {
+    "scripts/validate_joint_od_pilot.py": "ae2c4dd384057e580469a72444e81341768018632fcb3a6fa49f579ef6a8c480",
+    "tests/test_joint_od_pilot.py": "3a27c80f6c174b754df94a852535dcbabdf8eef66816f57ed23437d8c061af05",
+    "src/rl/od_pricing_dqn.py": "77f8dda3d36507428dd78151c3b1fd66bc14a37d92386faf5f395715d22ec105",
+    "src/simulation/od_pricing_runtime.py": "348d72b978c7f673cba72e3f42ef85a9f9d85400e5acd257294f0f1af3577d3b"
+  }
+}

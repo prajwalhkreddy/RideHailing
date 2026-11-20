@@ -1,0 +1,36 @@
+{
+  "fallback": {
+    "version": "VALID_UNSEEN_OD_REFERENCE_PRICE_V1",
+    "factor": 1.0
+  },
+  "forecast": {
+    "method": "January grid/local-half-hour arithmetic mean",
+    "training_start": "2026-01-01",
+    "training_end_exclusive": "2026-02-01",
+    "available_at": "2026-02-01 05:00:00+00:00",
+    "artifact_path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/simulation/2026-11-17_end_to_end_acceptance/january_historical_average.csv",
+    "artifact_sha256": "ac6f65537b954066c82542e12597a8c079ecd6a086660d8704a3abb136ebfa6a",
+    "source": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+    "selected_source_sha256": "0efc70a3f52aaf45c1ae570c36936c57e1671bb6beb7fbde2b85542722d8873e"
+  },
+  "routing_checkpoint": "models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/global_after_slot_528.keras",
+  "routing_sha256": "1c69b8367cfffa8e9554b3fc71e4c2e66b0ddf8669bab295d9d56ef9ef6b88da",
+  "routing_available_local": "2026-03-12 00:00",
+  "routing_source_end_local": "2026-03-11 23:30",
+  "sensitivity": "results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/sampling_contract.json",
+  "sensitivity_sha256": "73e423695fd043cac80695d8c7285122cdd6a48f933fe0d9846a539337024efc",
+  "support_sha256": "4ede929e911bfc9fcc4ba309642782b706ec04f2177cc647c7fefbcb4f3acd1a",
+  "seed": 42,
+  "fleet_size": 5000,
+  "interval": [
+    "2026-03-12 00:00",
+    "2026-03-12 02:00"
+  ],
+  "research_limitations": [
+    "Frozen sensitivity calibrated through March15; not a prospectively fitted March12 model.",
+    "Retrospective passenger weather preserves current calibration semantics.",
+    "Weather availability remains a 120-minute assumption.",
+    "Historical average is not a trained CNN.",
+    "Routing fixed throughout; no online federated updates."
+  ]
+}

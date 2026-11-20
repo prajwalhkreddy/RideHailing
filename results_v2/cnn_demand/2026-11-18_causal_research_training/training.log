@@ -1,0 +1,10 @@
+PREFLIGHT PASS; training single configuration
+2026-11-18 07:39:42.002442: W external/local_tsl/tsl/platform/profile_utils/cpu_utils.cc:145] Failed to get CPU frequency: 0 Hz
+epoch=1 train_MSE=18316.193359 val_MSE=9293.297372 best=1
+epoch=10 train_MSE=2593.880615 val_MSE=1752.267025 best=10
+epoch=20 train_MSE=854.456726 val_MSE=835.826431 best=20
+epoch=30 train_MSE=724.096375 val_MSE=704.659595 best=30
+epoch=40 train_MSE=674.869568 val_MSE=685.029647 best=40
+epoch=50 train_MSE=630.361206 val_MSE=683.609344 best=50
+epoch=60 train_MSE=594.513550 val_MSE=686.107763 best=50
+COMPLETE {"epochs": 60, "best_epoch": 50, "metrics": [{"split": "train", "model": "CNN", "slots": 2830, "grid_time_N": 401860, "MAE": 6.911756480121868, "RMSE": 26.210066656447005, "R2": 0.9146578319124109}, {"split": "train", "model": "HistoricalAverage", "slots": 2830, "grid_time_N": 401860, "MAE": 4.644207496544885, "RMSE": 24.91163893041971, "R2": 0.9229039687337861}, {"split": "validation", "model": "CNN", "slots": 718, "grid_time_N": 101956, "MAE": 7.107570662000421, "RMSE": 26.14592404917409, "R2": 0.929096299121098}, {"split": "validation", "model": "HistoricalAverage", "slots": 718, "grid_time_N": 101956, "MAE": 3.5184255783193383, "RMSE": 18.226778827311207, "R2": 0.9655427383317093}, {"split": "development", "model": "CNN", "slots": 48, "grid_time_N": 6816, "MAE": 9.167994631208401, "RMSE": 39.86331510133653, "R2": 0.7908352419812714}, {"split": "development", "model": "HistoricalAverage", "slots": 48, "grid_time_N": 6816, "MAE": 5.085002202291154, "RMSE": 29.771589830839805, "R2": 0.8833336149248856}]}

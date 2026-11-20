@@ -1,0 +1,258 @@
+[
+  {
+    "runtime": "295a891482e2615d303b9b357895cfd8f9acea48130d36a0a556bdd72d17e0f5",
+    "hierarchy": "2a8fa27937ab9818f8bfd8a6254364f6af6c7665093c9729273b45881c37793a",
+    "local_parameters_and_optimizers": "c3bda515d6ad5c8b6274674a203b26ba7ebccea863c118c9bff5600712f4cb12",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "c1c28f11bfbc841c899e0beca2eb0f2776020d1058b918dbcecc3c48045710e9",
+    "global_rng_domains": {
+      "python": "5227971de8c3c5d1c7387ec48877382ecb423c43ef493e252163418265a0e5fc",
+      "numpy": "d6f8c865429af61972f7b3fce6cc0862c26ae569a57b40b9a162d3e7ccc1fff4",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "9cca767394393ec6ee498d0e3f266e050d50ae0e1563971713dd8822e68b15e2",
+    "pricing_weights": "3327c420bb1b2803315dd1ba91daa21ccc6cfb9f49869cee019811ffb661700d",
+    "pricing_optimizer": "94c3831e5195b133feb9df06a8c47c698ff7c6c205285677d27485de60740b12"
+  },
+  {
+    "runtime": "a6b83a8879fc71299c049494dbb97ced123cf6bfa02f2ea8c4b818aac8c7f5c6",
+    "hierarchy": "28257aedce69f0790ba04194ae6f8b2a0ce8ce47cb04ebe5f981f010a02c64c8",
+    "local_parameters_and_optimizers": "1c5e7f557dec401c4c77243c2bd61d1a1041ab422a9efa37eda613428ac1a28e",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "9d0dc61ea2e1de2942a672084e233d6a4b5d84bc3bc40116621f2ac149325be7",
+    "global_rng_domains": {
+      "python": "241472a33ebbc00a86514e6178993530cbe3bfb06c5ca6e9aa5609b121110fce",
+      "numpy": "53141c7c85317097d08ff9a61263bc8fffbfbb39878ed120583fa65d10187bb7",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "f1d8caefc154e397e2b3c33aa0fb6a5a081f1064d8165f144fa86540007b6f54",
+    "pricing_weights": "38c4159c1a793d331a9ad0fe9b7162bd184ac1b78e155304f3825c237a066b92",
+    "pricing_optimizer": "453213924ea925a14a66ce4656a555cd0ad1fc30599dda0a4414bbf3a39772f6"
+  },
+  {
+    "runtime": "d7c7bdab5e742df7ff30b6163147e413c2e22d9b9055af8edefb5de49767ba4a",
+    "hierarchy": "9a8c252eaecc309e758a50d4f5ca67256549a9bdeb991c0fe91e4a1b3a20b3e8",
+    "local_parameters_and_optimizers": "65c50fbea9f3ae87c30fbf8a5a294ddbe2c95fdb685ed620ba7ef350933f0d18",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "134ad26392b8183ed4ea2347cdb05e3edd95542a9ab664f890ce92f7e9d29bc5",
+    "global_rng_domains": {
+      "python": "3511fcedffadd9de7debce00083b552c3f4ca7c1ccd5e6e3958a0d3d65fd1e04",
+      "numpy": "9ebc73296a4d05e6007428c5026fa038614eea8bdeb833b54a44431cf71535f0",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "085502c25749e000c5eb431db7d5e06ab68fcda8d435669a864fe7b326645c9a",
+    "pricing_weights": "29cb9922a0651d38ea0284ed80b4193d6998e6e92a526210c4f6a6e6bf0d458b",
+    "pricing_optimizer": "ace21df96f555c9c6b1650e546c300ffc864f9f71594ed0a197eac2107c7d77b"
+  },
+  {
+    "runtime": "6bc4f87d3bb55aee1dec3ec2837bbb6bfbcb17a2127cb4b23b59c7a8e75b141d",
+    "hierarchy": "758b424711954e4ec3ce5cd4326b3a114872eefc58aa72192681efc5d503dbd6",
+    "local_parameters_and_optimizers": "eb777eaf2344a8d5cd46c7565248c5354dc656f5126de143a71348a9244aa857",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "8823a7810c44d77473e54538e1c51d406411113828671441d8b4eb5cf7ecf7b6",
+    "global_rng_domains": {
+      "python": "ee15f548f623fdce8c699728c1586563219f4928428c5fec8a4231152454bda6",
+      "numpy": "8207f016378499372ab1cc746dc00b3be6dc784a355bc54f38f3c16b4f297c46",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "756c3e956161f570ad97cf025828e57a8c8962748d13e4965625c16ba0038a02",
+    "pricing_weights": "afa6065a01ce57e0d0f7f05a86b6b55dbd66f16623da3e257aea97da960a4a00",
+    "pricing_optimizer": "5edbbd1bf1daf9399f9ec21280d994406fb9d71ee37aafda42b3902bce4d40b1"
+  },
+  {
+    "runtime": "540157a84df64343c75c6adeca3510daf408e64163a44288476e787abe72828d",
+    "hierarchy": "2304578d7ee6b3efbc0e5541b562343571a5f6ce218027db0bc423f36bcdd13d",
+    "local_parameters_and_optimizers": "034ffd8483346dbd13b7dd0e12ec5a7a34c5a3560f0bf857ae59c82f7ae780a2",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "b11f2c91c593e5690dbd78a6a274e12cb7c09520317cbd9acee77e642580091d",
+    "global_rng_domains": {
+      "python": "d888402faa613be1b1c0d485bd4d5611ee0f52e182d4b1745fbd41ec7388d6a7",
+      "numpy": "75d5dbf017aea9f88f3679243ebc26e6b844e05891333bdffaf08f1b5d3ac39e",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "de36a36edd53e76eb311d03b9273a445fbd14fd06fb3f74edf2faea0990596a9",
+    "pricing_weights": "dd9429cd7117585e7533d6c3c4aace9bc97fe4fb60a1c06ad56911ccc264e6a5",
+    "pricing_optimizer": "59fbe8430b5aea1a537f6373f1ae8da6ffa769a94ae3917719e07e32796dacb7"
+  },
+  {
+    "runtime": "efabaf5e35d5277ec047d1a9f6a2c17d2457d72385244248f931daa7a4e79649",
+    "hierarchy": "583b57ac7b952410efa1301817386bfb91c0e3def48df00c0bbcb601018b6e5c",
+    "local_parameters_and_optimizers": "ce81ae2ee660e390920fa92010f008ebdd3dda605baf56c52672bbe5074a2023",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "55d21209b6aa9df93dead026c766783871bd5da953634562255e547110227ccc",
+    "global_rng_domains": {
+      "python": "5bec843ba83f66bc3a575f6f8623be1b42abafa1fab60dc934fa7ff4b4babe36",
+      "numpy": "b2c8f438bdd35558a3d98331018dd426e9cad214a43c83d025df2ae4c3ce7d23",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "9d1f9d12afaf1d29b525d74db0139bdd2e014a52d045b92c7c7a09c3855feaff",
+    "pricing_weights": "5098c6f6af71ce7d85b58eab91e354106228540e6742162b74d7d51926b7fc9c",
+    "pricing_optimizer": "f0ec49126fc1e43897776b4b9add0c2c635562e848b14d7ee9b555433a9868bb"
+  },
+  {
+    "runtime": "6b646dd3cba1b0f33e140959468db85bdad933855d3aa13b743e177a7ec7dbb7",
+    "hierarchy": "9f291a2098205cddd6f009fc2a53366fc117cfc15e70f7bc3a341ebdf8133dab",
+    "local_parameters_and_optimizers": "6d3d00da7d00ca1f56f01aafce7205d447d0e37fefd75686fefa56ac9831fca7",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "55d21209b6aa9df93dead026c766783871bd5da953634562255e547110227ccc",
+    "global_rng_domains": {
+      "python": "5bec843ba83f66bc3a575f6f8623be1b42abafa1fab60dc934fa7ff4b4babe36",
+      "numpy": "b2c8f438bdd35558a3d98331018dd426e9cad214a43c83d025df2ae4c3ce7d23",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "ad123eef3714c80bc1149e56c18736327644e4c25d82b1a3e6e8ddcc8e055531",
+    "pricing_weights": "781598b89d42d32e6e91d98d390a3faf5439df20d146297b5dff01a9c3ed7f3f",
+    "pricing_optimizer": "f0e6a01dfe2303259c36f8fc614c34c61c6f452af98bccb7ad6bf3d684516687"
+  },
+  {
+    "runtime": "91fddd58c52de3f0fe1644cac89848b08460b673f1566f8afa16468e6c9a6ed3",
+    "hierarchy": "5c011effb6b86316b0e084920f7efbfe78a320449c6478d9ab276da88c590d85",
+    "local_parameters_and_optimizers": "ddfba370eeaad8d810c6d8aeec532cfc2fa605ae1713538bc26be410d2e58469",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "55d21209b6aa9df93dead026c766783871bd5da953634562255e547110227ccc",
+    "global_rng_domains": {
+      "python": "5bec843ba83f66bc3a575f6f8623be1b42abafa1fab60dc934fa7ff4b4babe36",
+      "numpy": "b2c8f438bdd35558a3d98331018dd426e9cad214a43c83d025df2ae4c3ce7d23",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "4b1cbaa8106c7da47ea31ac8767fb41e1b75e91f6fc6b0585bbfc5454acb3be2",
+    "pricing_weights": "565c81f0eb260cb996d04c99e4b015783b1bbfc52739dbed8fb0fa9d2aac77d7",
+    "pricing_optimizer": "4e0ac05746e791d5d2beb91a5bf93bda718b612fe09c523b8485ec0854ccd136"
+  },
+  {
+    "runtime": "7b9d0cf8f3822d216107aca10537b59480bee10c773a1b6237ded0dd68a1148d",
+    "hierarchy": "6b6cd4df6c248781a7df0f87ee96cccbd182f48d703cd6e32aa4e37adc0aece6",
+    "local_parameters_and_optimizers": "13da471a168d08dd6f1dd004925b313f320aa04b5a61e9e345fdc003bfc12b57",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "55d21209b6aa9df93dead026c766783871bd5da953634562255e547110227ccc",
+    "global_rng_domains": {
+      "python": "5bec843ba83f66bc3a575f6f8623be1b42abafa1fab60dc934fa7ff4b4babe36",
+      "numpy": "b2c8f438bdd35558a3d98331018dd426e9cad214a43c83d025df2ae4c3ce7d23",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "820071b16d0499d35fac40b16e017f3f13140982d99754178ad9004c4e30fe2e",
+    "pricing_weights": "508c56268d2b764b702f6f1fae39c276fdb0d9ca33512be2e9b07b5e51c50fec",
+    "pricing_optimizer": "a8def2cab78771e4a81618750442bd96943f855b025b56aa1cfafb66ed46e31b"
+  },
+  {
+    "runtime": "3d2d34d9e1fe035d55d17b5709394f1d9d4995ac18325f4b3ede81d74e9500c2",
+    "hierarchy": "ec785461b1d6ccd838c2956c5ff2c9150591e4c34f669d4fb9eb01b32f3433aa",
+    "local_parameters_and_optimizers": "6d85d637973ccba24acf765c446caafda6811bc44e262df922dea483166bf8b2",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "aa939f3cabcf24b745cb509538a78c2ade487f1e4b71968653e412046a7eb013",
+    "global_rng_domains": {
+      "python": "a4b34dc308bd9db963e6ef9fe9d97e0de0a813daa6768e44468a2f7d2e222217",
+      "numpy": "9eeca84916325b7ae0048c626f78635f281d917706175e45d6a886836ae23efc",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "2d7c799a47cbc5bd2346b69d6f1fee2df40a51493e9613fc6fac74fbed5d2153",
+    "pricing_weights": "3495c5a8d70f11081090f49e0767d56978ca9070b1acf45061cf6633b0c03125",
+    "pricing_optimizer": "0211724ef7f7a76b81ff80b8c30a6befe7bfa46ecd5c5e0c4aa081a400d98c33"
+  },
+  {
+    "runtime": "f53cc68d89214b0126027794d98e0354a79eb17eece0d88b1dc0eb92114394da",
+    "hierarchy": "80a54a3b74370bfe57c47a1b7fbcb7c3db3ac1d4b955ececf95258737cdb737e",
+    "local_parameters_and_optimizers": "17db83c229a34d0b7c5af76cd01016f52846acf7482a30661af7bf63ac8c2056",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "aa939f3cabcf24b745cb509538a78c2ade487f1e4b71968653e412046a7eb013",
+    "global_rng_domains": {
+      "python": "a4b34dc308bd9db963e6ef9fe9d97e0de0a813daa6768e44468a2f7d2e222217",
+      "numpy": "9eeca84916325b7ae0048c626f78635f281d917706175e45d6a886836ae23efc",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "90a6026cbaf372ada57a0922ab8d46938fc7599915f8f66582ea7ae960b65fab",
+    "pricing_weights": "4246dc84230830d8569fba475d647985c2d171ca201e197cdebfaefb85e16ba6",
+    "pricing_optimizer": "208fcde0c4fc83d5ddd692bca1906669e425ff118d327dea59227b0b498d142c"
+  },
+  {
+    "runtime": "1363a682bad1aa57b3005dc1772a0bcb1b6eb635e1c788d4e76a999f8bd42e9c",
+    "hierarchy": "6f8504831de6983f19a1ab13eb04f3824ec34026d5ebfa07b71c891a7208d52b",
+    "local_parameters_and_optimizers": "bc8de64818efdd8e76e37cd24d5587b4ffba080af1cac05cfee490aa0c00ff2d",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "aa939f3cabcf24b745cb509538a78c2ade487f1e4b71968653e412046a7eb013",
+    "global_rng_domains": {
+      "python": "a4b34dc308bd9db963e6ef9fe9d97e0de0a813daa6768e44468a2f7d2e222217",
+      "numpy": "9eeca84916325b7ae0048c626f78635f281d917706175e45d6a886836ae23efc",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "35cde19d28edad265c8986b337a889560e24a5ce2030b486de2b6aed10d69991",
+    "pricing_weights": "408c18d9f3fd0d94eb19a74f433c4586ada5df78812c7341577cd4e2180ef46a",
+    "pricing_optimizer": "c7ced75a3693acbade740eba6a1185d810a3849d94038c682e64b4b721f54734"
+  },
+  {
+    "runtime": "980f8bea4c989e3e18df241d8b6b775d8d5def8e18e301c8e328d352ff178be3",
+    "hierarchy": "0d1b30ad3f15667d2c526bc1dc5d41608cfd3dde1d05cbbced3570fedaab3928",
+    "local_parameters_and_optimizers": "d281ffd37f74a3c37447b8d40844d20ca282c88f7439ba5ee620405bd5d1945c",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "aa939f3cabcf24b745cb509538a78c2ade487f1e4b71968653e412046a7eb013",
+    "global_rng_domains": {
+      "python": "a4b34dc308bd9db963e6ef9fe9d97e0de0a813daa6768e44468a2f7d2e222217",
+      "numpy": "9eeca84916325b7ae0048c626f78635f281d917706175e45d6a886836ae23efc",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "5857ffa2a423198d0277d9b101c4c4f71d9c67ea85e70ec376374fa0d6e476e7",
+    "pricing_weights": "0d1cc3463897476dc47b193c97c4309f7b819d6d3110860dd1729ba62621171a",
+    "pricing_optimizer": "8387fed412922631d515126584efe5679ba667531c733047a3e083c82861b1e2"
+  },
+  {
+    "runtime": "6e45afb8077e47d7b69891ba40d3c4e92d3ace6bcc4590b5dc4227168d0afcfa",
+    "hierarchy": "bb535db7c202f076949586d6561ab85f220fe2fa0d254965958cc5021c6c7c50",
+    "local_parameters_and_optimizers": "f252513183858928f1949992379485ffb234ac9803320ca992284661e7f5554a",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "aa939f3cabcf24b745cb509538a78c2ade487f1e4b71968653e412046a7eb013",
+    "global_rng_domains": {
+      "python": "a4b34dc308bd9db963e6ef9fe9d97e0de0a813daa6768e44468a2f7d2e222217",
+      "numpy": "9eeca84916325b7ae0048c626f78635f281d917706175e45d6a886836ae23efc",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "c39d98fd97e171401ba90e807f2eb986e0e313761af5a62ac1157aabc19f9e80",
+    "pricing_weights": "e23e3e33d256cf25251e38c4002a1e5805aa2880f207719f4c92d92b60335279",
+    "pricing_optimizer": "0036b979d26b41c845235fa1b5dad1e72644754f5c6b21da8ff4c050a2946fc8"
+  },
+  {
+    "runtime": "63d473b77969699c2a25cb8455ab771ecce02dd7c173c2ec505d5488df0f98d5",
+    "hierarchy": "14dbeb889db54586e4f7c0dd423abe325863c50b374a68af5ab92aaaef9b1dd5",
+    "local_parameters_and_optimizers": "4576292d9723d0266f551538ad13ebe98debb5a3a94da5ca175fb39052cf36b1",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "aa939f3cabcf24b745cb509538a78c2ade487f1e4b71968653e412046a7eb013",
+    "global_rng_domains": {
+      "python": "a4b34dc308bd9db963e6ef9fe9d97e0de0a813daa6768e44468a2f7d2e222217",
+      "numpy": "9eeca84916325b7ae0048c626f78635f281d917706175e45d6a886836ae23efc",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "604abfd06cfe1e65e52e4a3de5359ba61afeb53f8dfa95b7cdd2f7c585a64874",
+    "pricing_weights": "e25d7505550b560a8f2aaa18f36a4e0ee31db72dc16ba2b9ef1949937852cbd5",
+    "pricing_optimizer": "6b0349ee53c3cac9ce9f28ab993bd732c43885e5571833d911f78ce02dd97275"
+  },
+  {
+    "runtime": "017bb3038857422ecd87a7c792f0f6067e0263146c55bae8fa5316569dae91d7",
+    "hierarchy": "27e8b6766cbca0c1724c4459ebf4db1909499d2872aa0ab401dfa18d3bcc7ec5",
+    "local_parameters_and_optimizers": "3413e02c499f71ed392f27c8c36d0cce0e923c5f3afe48f30c98d704077e01d5",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "aa939f3cabcf24b745cb509538a78c2ade487f1e4b71968653e412046a7eb013",
+    "global_rng_domains": {
+      "python": "a4b34dc308bd9db963e6ef9fe9d97e0de0a813daa6768e44468a2f7d2e222217",
+      "numpy": "9eeca84916325b7ae0048c626f78635f281d917706175e45d6a886836ae23efc",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_target": "0f2aa446c599b02174c6dbcdfd74ee8746afe7e9586da98c585b91260198a1f8",
+    "pricing_weights": "b2cf0c46a9d2de385c59142f70221b4d3a0d89252352a97a3a553fcf3e91e056",
+    "pricing_optimizer": "f5c4959e7e80775c1a30109067fde8e9d1addb9784d5e3627a8e3c19cca6f110"
+  }
+]

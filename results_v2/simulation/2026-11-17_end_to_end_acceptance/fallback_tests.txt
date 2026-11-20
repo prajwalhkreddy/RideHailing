@@ -1,0 +1,24 @@
+Matplotlib is building the font cache; this may take a moment.
+======================================================================
+ERROR: test_revenue_replay_and_resume (tests.test_unseen_od.FallbackTests.test_revenue_replay_and_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_unseen_od.py", line 26, in test_revenue_replay_and_resume
+    rows=r.run_slot(req,policy=lambda d,s:0,weather_code=1)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 46, in run_slot
+    result=self._run_slot(requests,policy=policy,weather_code=weather_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 80, in _run_slot
+    dispatch_requests([r],e.fleet,e.lookup,2,15,energy_parameters=e.energy,dispatch_model=DISPATCH_MODEL_LEGACY,slot_start_time=(e.clock-pd.Timedelta(minutes=r.request_time*2)).to_pydatetime() if self.utc_mode else t.to_pydatetime(),station_reserve=e.station_reserve,reserve_observer=e.record_reserve_rejection,driver_minimum_prices=e.profiles.price_preference)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/dispatch/dispatch.py", line 138, in dispatch_requests
+    request.validate(fleet.valid_grid_ids, mini_slots_per_main_slot)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/pricing/slot_v3_request.py", line 11, in validate
+    if self.pricing_factor not in c['actions'] or self.base_fare!=c['P_base'] or self.offered_fare!=self.pricing_factor*self.base_fare:raise ValueError('V3 offer mismatch')
+                                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: V3 offer mismatch
+
+----------------------------------------------------------------------
+Ran 16 tests in 37.060s
+
+FAILED (errors=1)

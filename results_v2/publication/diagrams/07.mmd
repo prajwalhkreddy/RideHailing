@@ -1,0 +1,15 @@
+sequenceDiagram
+  participant P as Pricing runtime
+  participant D as Drivers and dispatch
+  participant R as Realized requests
+  participant F as Federation
+  P->>P: Validate issuance and prior aggregates
+  P->>P: Price supported OD contexts
+  P->>D: Broadcast aggregates; private routing
+  R->>D: Requests revealed in UTC event order
+  D->>D: Acceptance, contention, assignment, arrivals, charging
+  D->>P: Successful fares and slot-end EWMA
+  D->>F: Eligible local observations
+  F->>F: Local update and equal-client average
+  F->>P: Global response available at next boundary
+  P->>P: Next state, replay, post-slot pricing updates

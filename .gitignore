@@ -53,3 +53,5 @@ q
 /results/training/pricing_v2_staged_training_001/weather_conditioned/march16_fixture.pkl
 /results/training/pricing_v2_staged_training_001/weather_conditioned/*_requests.parquet
 /results/training/pricing_v2_staged_training_001/weather_conditioned/checkpoints/
+# Generated checkpoint runtime state
+/results_v2/**/runtime.json

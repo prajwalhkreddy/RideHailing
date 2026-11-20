@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/validate_od_fallback_acceptance.py", line 81, in <module>
+    try:run()
+        ^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/validate_od_fallback_acceptance.py", line 55, in run
+    start=time.perf_counter();rows=r.run_slot();elapsed=time.perf_counter()-start
+                                   ^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 46, in run_slot
+    result=self._run_slot(requests,policy=policy,weather_code=weather_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 92, in _run_slot
+    rows.append(dict(request_id=r.request_id,slot=str(t),origin_grid=d[0],destination_grid=d[1],od_context=d,is_fallback=fallback,fallback_contract=self.fallback_contract['version'] if fallback else None,factor=factor,P_offer=offer,weather_code=code,**draw,L=r.trip_distance_km,L_base=self.provider.contract['L_base'],P_base=self.provider.contract['P_base'],P_max=ceiling,accepted=bool(accepted),dispatch_outcome=outcome,reward_contribution=contribution,demand_protocol=demand_mode,source_trip_id=r.source_trip_id,source_pickup=str(r.empirical_pickup_datetime),source_dropoff=str(r.empirical_dropoff_datetime),source_file_month=getattr(r,'source_file_month',None),source_prepared_row=getattr(r,'source_prepared_row',None),observed_fare=getattr(r,'observed_fare',None),trip_duration_minutes=r.trip_duration_minutes,reason='offer<=raw ceiling' if accepted else 'offer>raw ceiling'))
+  ^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/final_production.py", line 209, in route_idle
+    decision=self.routing.decide(self.operational,self.timestamp,grid=g,energy_kwh=v.energy_level,minimum_energy_kwh=self.energy.battery_capacity_kwh*self.energy.charging_trigger_soc,p_min=profile.price_preference,w_max_minutes=profile.wait_preference,h_max_minutes=profile.charging_wait_preference_minutes,energy_per_km=self.energy.consumption_rate_kwh_per_km)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/operational_interface.py", line 125, in decide
+    state=self.state(producer,timestamp);options=[]
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/operational_interface.py", line 87, in state
+    frame=producer.state_for(timestamp)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/operational_state.py", line 85, in state_for
+    result = self._state.join(self._observations).reset_index()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/pandas/core/frame.py", line 12818, in join
+    return merge(
+           ^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 399, in merge
+    return op.get_result()
+           ^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1148, in get_result
+    self._maybe_add_join_keys(result, left_indexer, right_indexer)
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/pandas/core/reshape/merge.py", line 1272, in _maybe_add_join_keys
+    @final
+
+KeyboardInterrupt

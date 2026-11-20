@@ -1,0 +1,8 @@
+flowchart LR
+  S[Committed runtime boundary] --> H[Hashes and contract identities]
+  H --> W[Atomic checkpoint write]
+  W --> P[Advance role pointer only after completion]
+  P --> R[Restore weights, optimizer, replay and memories]
+  R --> G[Restore fleet, clocks, queues and all RNG domains]
+  G --> E[Exact continuation comparison]
+  H --> X[Reject incompatible source or lineage]

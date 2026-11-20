@@ -1,0 +1,36 @@
+{
+  "status": "BOUNDED_RESEARCH_ACCEPTANCE_PASSED_WITH_DOCUMENTED_LIMITATIONS",
+  "git_commit": "100fbba55b9dc70ec2b0f543acf50f5415a1d42e",
+  "source_sha256": {
+    "src/pricing/unseen_od.py": "af88c4734caa988163491965bd9e080d50645ca58620784ed600b6cdcfe51461",
+    "src/simulation/historical_request_replay.py": "de239c8810a89379ed54467af79475b8167d39f03b660fa4cbaaa9b16e7c79e1",
+    "src/simulation/od_pricing_runtime.py": "e93311a65ff685987b20b5238e75b973163d08f3720eb2d424a80cf4c3b5ca61",
+    "src/simulation/od_pricing_checkpoint.py": "05c2aff44ec9ee37ba1372b7deeabca24638e0b3fed10edda93543f892a972c9",
+    "src/simulation/utc_od_inputs.py": "e60347156386e9a699db3adac288da3e9cbfe0f4ce49a240088acf39b18e630f",
+    "tests/test_unseen_od.py": "5d5cfc13c1d88733f2f743851f25199c2df232d697e2a4920af2a99cf09be83d",
+    "tests/test_od_research_baseline.py": "f5d5da46940127c436cbe8c79e0b7c601e6ebe7985a9f6e8759f64a0dca8fa1f",
+    "tests/test_historical_request_replay.py": "9649d3e091cc040e9046736853b918b66beb1809177f92d2c7fba53745b7cb7d",
+    "scripts/validate_od_fallback_acceptance.py": "c9c3b24e85173bf37ad180a3d72832df98ac8adcb7d3040546181f1461612b8f"
+  },
+  "focused_tests": {
+    "first_suite_passed": 16,
+    "additional_suite_passed": 12,
+    "distinct_tests": 26,
+    "errors": 0
+  },
+  "historical_preservation": {
+    "checked": 2279,
+    "changed": [],
+    "method": "Existing preservation manifest size/mtime; not full content rehash"
+  },
+  "temporary_checkpoint_present": false,
+  "training_performed": false,
+  "protected_period_evaluation": false,
+  "limitations": [
+    "Fixed calibration includes March13\u201315 relative to March12 simulation; retrospective acceptance only.",
+    "Passenger weather uses existing retrospective conditioning.",
+    "120-minute weather availability is assumed, not verified.",
+    "January demand average is not a trained CNN.",
+    "Charging stress/DST evidence comes from focused tests; primary interval is ordinary-day."
+  ]
+}

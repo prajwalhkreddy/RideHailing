@@ -1,0 +1,21 @@
+{
+  "schema": "FEASIBLE_OD_HISTORICAL_REPLAY_RUNTIME_5",
+  "slot": 2,
+  "timestamp": "2026-03-12 05:00:00+00:00",
+  "support_hash": "41a3f10e58fa5addb46bf06b95afccfc53f0c6489ac1bcab94b17cad91671d87",
+  "unseen_od_policy": {
+    "version": "VALID_UNSEEN_OD_REFERENCE_PRICE_V1",
+    "factor": 1.0
+  },
+  "forecast_input_protocol": "JANUARY_HISTORICAL_AVERAGE_DEMAND_V1",
+  "mathematics": "MASTER_HALF_SQUARED_BELLMAN_V1",
+  "temporal_protocol": "OD_AWARE_UTC_ELAPSED_V1",
+  "sensitivity": {
+    "version": "REQUEST_COUNT_WEIGHTED_BINNED_SENSITIVITY_V1",
+    "sha256": "73e423695fd043cac80695d8c7285122cdd6a48f933fe0d9846a539337024efc"
+  },
+  "training_steps": 0,
+  "decisions": 19144,
+  "temporary_checkpoint_bytes": 146156797,
+  "retention": "Temporary only; removed at exit of acceptance runner"
+}

@@ -1,0 +1,5 @@
+policy,pricing,routing,updates,requests,fleet,forecast
+candidate,greedy DQN epsilon0,same frozen learned response estimator as candidate,NONE,identical eligible rows and exclusion/fallback rules,same seed42 initialization per window,January historical average
+fixed_low,lowest configured frozen fare-support action,same frozen learned response estimator as candidate,NONE,identical eligible rows and exclusion/fallback rules,same seed42 initialization per window,January historical average
+fixed_reference,"reference Pbase, separately labeled non-DQN benchmark",same frozen learned response estimator as candidate,NONE,identical eligible rows and exclusion/fallback rules,same seed42 initialization per window,January historical average
+fixed_high,highest configured frozen fare-support action,same frozen learned response estimator as candidate,NONE,identical eligible rows and exclusion/fallback rules,same seed42 initialization per window,January historical average

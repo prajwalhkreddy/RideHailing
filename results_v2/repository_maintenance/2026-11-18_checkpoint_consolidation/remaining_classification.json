@@ -1,0 +1,30 @@
+[
+  {
+    "path": "models/pricing_dqn/source_aligned_slot_pricing_v3/stage_ep11_ep25",
+    "classification": "REQUIRES_APPROVAL",
+    "allocated_kib": 50560160,
+    "reason": "Post-Episode10 continuation excluded from review but latest checkpoint/unique provenance remains; no payload deleted",
+    "approved_recoverable_bytes": 0
+  },
+  {
+    "path": "models/pricing_dqn/source_aligned_slot_pricing_v3/episode_001",
+    "classification": "REQUIRES_APPROVAL",
+    "allocated_kib": 24609272,
+    "reason": "Earlier protocol and recovery evidence not dependency-audited; retain",
+    "approved_recoverable_bytes": 0
+  },
+  {
+    "path": "models/pricing_dqn/source_aligned_slot_pricing_v3/stage_ep02_ep10/episode_010_slot_015",
+    "classification": "KEEP_HISTORICAL_MINIMAL",
+    "allocated_kib": 1871760,
+    "reason": "Referenced by handoff negative-test fixture; conservatively retained",
+    "approved_recoverable_bytes": 0
+  },
+  {
+    "path": "models/routing_policy",
+    "classification": "KEEP_ACTIVE",
+    "allocated_kib": 9446880,
+    "reason": "Multiple models and caches with unresolved dependencies; retain",
+    "approved_recoverable_bytes": 0
+  }
+]

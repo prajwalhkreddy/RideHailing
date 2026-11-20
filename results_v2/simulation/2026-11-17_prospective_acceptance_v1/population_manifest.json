@@ -1,0 +1,19 @@
+{
+  "source": "data/interim/pricing_v2_sensitivity/pricing_v2_sensitivity_population_jan01_mar15_2026.parquet",
+  "columns": [
+    "pickup_timestamp",
+    "distance_km",
+    "fare",
+    "weather_code",
+    "hour"
+  ],
+  "filters": "2026-01-01 <= pickup_timestamp < 2026-03-01",
+  "N": 5457435,
+  "latest_observation": "2026-02-28 23:59:59-05:00",
+  "selected_rows_sha256": "f5235e28fb34c5eafb31d0ffc5d2d90ea932a7a0bc73f9568b951bb07c9abbd3",
+  "excluded_derived_fields": [
+    "epsilon",
+    "is_runtime_candidate"
+  ],
+  "scope": "Fixed 1.5 <= distance_km < 75; no March-fitted support or candidate flag consumed"
+}

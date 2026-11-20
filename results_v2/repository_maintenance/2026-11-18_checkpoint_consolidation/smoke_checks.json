@@ -1,0 +1,43 @@
+{
+  "models": [
+    {
+      "path": "models/cnn/causal_persistence_120min_2026_seed42_v1/best.keras",
+      "load": "PASS",
+      "input": "(None, 7, 16, 16)",
+      "output": "(None, 1, 16, 16)",
+      "sha256": "46d43798283437faafc8693f3fc9404af7cd9945ab04935541aff8084f71255d"
+    },
+    {
+      "path": "models/cnn/causal_persistence_120min_2026_seed42_softplus_v1/best.keras",
+      "load": "PASS",
+      "input": "(None, 7, 16, 16)",
+      "output": "(None, 1, 16, 16)",
+      "sha256": "2bacfc25e5c897a556b90b5fdf9959c1dc514db78777e835276577e2bf8ca03f"
+    },
+    {
+      "path": "models/pricing_dqn/source_aligned_slot_pricing_v3/stage_ep02_ep10/episode_010/learner/online.keras",
+      "load": "PASS",
+      "input": "(None, 15)",
+      "output": "(None, 7)",
+      "sha256": "77297a37bddb0d68c0c840fec146a57c5aa0ee41a52691d0fa130835d90c4fb1"
+    },
+    {
+      "path": "models/routing_policy/mar01_mar12_2026_final_behavioral_169x64x32x9_seed42/central.keras",
+      "load": "PASS",
+      "input": "(None, 169)",
+      "output": "(None, 9)",
+      "sha256": "8026f9039d42cd4646d4ed30643d3f122142fefc8de5d52852ee0badccb58b48"
+    }
+  ],
+  "OD_dependency_paths": {
+    "sensitivity": true,
+    "routing": true,
+    "od_support": true,
+    "forecast": true,
+    "popularity": true,
+    "driver_profiles": true,
+    "operational_prior": true
+  },
+  "episode10_components_present": true,
+  "full_historical_runtime_resume_attempted": false
+}

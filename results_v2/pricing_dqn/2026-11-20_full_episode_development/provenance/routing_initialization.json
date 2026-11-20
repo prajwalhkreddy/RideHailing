@@ -1,0 +1,46 @@
+{
+  "version": "FRESH_PROSPECTIVE_ONLINE_ROUTING_V1",
+  "architecture": [
+    169,
+    64,
+    32,
+    9
+  ],
+  "parameters": {
+    "hidden_units": [
+      64,
+      32
+    ],
+    "learning_rate": 0.001,
+    "local_observation_capacity": 1000,
+    "batch_size": 32,
+    "local_epochs": 1
+  },
+  "initialization": "FRESH_SEEDED_EXISTING_KERAS_INITIALIZERS",
+  "seed": 42,
+  "local_seed_rule": "global_seed + driver_id + 1",
+  "initial_weights_sha256": "90e6782df84c2e4c61b4597c64d22ed24325ddb14d39be5532bec04b232b11e0",
+  "experiment_start": "2026-03-12T04:00:00+00:00",
+  "experience_end_exclusive": "2026-03-12T12:00:00+00:00",
+  "offline_fitting_period": null,
+  "validation_selection_period": null,
+  "historical_checkpoint": null,
+  "initial_global_version": 0,
+  "initial_federation_round": 0,
+  "aggregation": "EQUAL_PARTICIPATING_CLIENT_V1",
+  "privacy": "NONPRIVATE",
+  "source_sha256": {
+    "src/simulation/od_pricing_runtime.py": "348d72b978c7f673cba72e3f42ef85a9f9d85400e5acd257294f0f1af3577d3b",
+    "src/simulation/od_pricing_checkpoint.py": "f18e52a751c84183a3f3d7cc3eb9f79699f3c0634211a7b8cba06baae2dca970",
+    "src/simulation/final_production.py": "459915c8712096de75427e2df521842f58b9082c4c01595b63c7dfcc1e33bf7b",
+    "src/routing/online_provenance.py": "b52668186e50951dfde470b795b8955c2a0cd420acb3108a6ca9511bbe4c8b7e",
+    "src/routing/research_hierarchy.py": "9e20627da9785de217eb9bf7f5197ba4831dec23b61772d51622cd628f1aa024",
+    "src/routing/learning.py": "286dfa64de6f758402ebcc7fd134753326790f15e5b7c5700b4a2e875b256701",
+    "src/routing/federated.py": "4eba5a392e82af17565022c57301f102647c0bb044af8a390dc66fda08433760",
+    "src/routing/configuration.py": "8607bdfdce35ae5799bc726211338ab3f11c93ff9be784282aa86034032669c1"
+  },
+  "configuration_sha256": "2250d4fe4c49bb48536aea44bbb978aae579ee2e8ddcfdd1315e9376aff8f85f",
+  "development_tuning": "Architecture/hyperparameters and grouping/reference choices are inherited project choices exposed to March development evidence; no independent model-selection claim.",
+  "local_experience_semantics": "Private utility decisions at slot close; memories may reuse only already completed experiment slots; current-slot participants only.",
+  "activation": "Authorized bounded routing-only retry; corrected mixed-fleet arrival guard"
+}

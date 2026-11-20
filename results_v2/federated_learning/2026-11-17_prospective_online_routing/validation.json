@@ -1,0 +1,42 @@
+{
+  "status": "STRUCTURALLY_ELIGIBLE_FOR_FUTURE_BOUNDED_RESEARCH",
+  "provenance_version": "FRESH_PROSPECTIVE_ONLINE_ROUTING_V1",
+  "initial_weights_sha256": "90e6782df84c2e4c61b4597c64d22ed24325ddb14d39be5532bec04b232b11e0",
+  "initialization_manifest_sha256": "a6f10ce97c1926810bd6aee889a766ff0aac0333d169355bd444f934c9a4835b",
+  "information_manifest_sha256": "54467bc1ef83c4369393019d1d722dc8fe460052b7029ec5087198256e1911f3",
+  "aggregation": "EQUAL_PARTICIPATING_CLIENT_V1",
+  "previous_aggregation_preserved": "SAMPLE_WEIGHTED_ACTUAL_LOCAL_BATCH_V1",
+  "privacy": "NONPRIVATE",
+  "test_results": {
+    "unique_passed": 54,
+    "remaining_failures": 0,
+    "batches": [
+      36,
+      22,
+      1
+    ],
+    "overlapping_batches": true,
+    "initial_failure": "Snapshot event-time aliasing; corrected with deep copies; affected checks passed on rerun",
+    "runtime_synthetic_updates_resume": "PASS",
+    "mixed_ev_counts": [
+      500,
+      1000,
+      1500
+    ],
+    "historical_lineage_rejection": "PASS"
+  },
+  "gradient_training_performed": false,
+  "synthetic_update_fixture": true,
+  "full_training_started": false,
+  "real_data_episode_started": false,
+  "updates_default": false,
+  "weather_availability": "ASSUMED_120_MINUTES",
+  "model_selection": "Inherited development-tuned configuration, no independent selection claim",
+  "preservation": {
+    "files_checked": 2279,
+    "changes": [],
+    "method": "size/mtime_ns"
+  },
+  "test_source_sha256": "11519d9473370d08def76b2529ee1d2eca5dceb93ced362918a3890420e9448d",
+  "next_task": "Freeze and authorize one bounded online-routing experiment; do not interpret structural validation as learned-policy effectiveness."
+}

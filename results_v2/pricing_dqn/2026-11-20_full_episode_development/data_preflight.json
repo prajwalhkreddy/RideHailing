@@ -1,0 +1,8 @@
+{
+  "status": "PASSED",
+  "forecast_intervals": 17,
+  "source_rows": 16329,
+  "eligible_rows": 16075,
+  "March12_role": "development: src/pricing/slot_v3.py allowed interval and explicit current authorization",
+  "protected_period_accessed": false
+}

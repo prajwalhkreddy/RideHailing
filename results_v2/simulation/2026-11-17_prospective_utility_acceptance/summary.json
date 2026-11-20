@@ -1,0 +1,32 @@
+{
+  "source_rows": 4215,
+  "eligible": 4137,
+  "supported": 4135,
+  "fallback": 2,
+  "accepted": 1192,
+  "rejected": 2945,
+  "assigned": 996,
+  "accepted_unmatched": 196,
+  "supported_reward": 21889.8,
+  "fallback_reward": 44.70839688478091,
+  "total_reward": 21934.50839688478,
+  "previous_acceptance": {
+    "accepted": 1200,
+    "assigned": 1000,
+    "total_reward": 22254.5750635514
+  },
+  "delta": {
+    "accepted": -8,
+    "assigned": -4,
+    "total_reward": -320.06666666662204
+  },
+  "tests_passed": 48,
+  "tests_failed": 0,
+  "historical_preservation": {
+    "checked": 2279,
+    "changed": [],
+    "method": "size/mtime_ns"
+  },
+  "charging_caveat": "No charging events in real window; safety covered by focused regression tests",
+  "earlier_setup_assertion": "Resolved: explicitly applied January1 lower bound, excluding four pre-January rows. blocker.json retained as superseded setup evidence."
+}

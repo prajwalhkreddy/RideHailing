@@ -1,0 +1,27 @@
+{
+  "status": "PROPOSAL_VALIDATED_NOT_LAUNCH_READY",
+  "tests_passed": 8,
+  "tests_failed": 0,
+  "source_preservation": {
+    "notebooks/plan/masterdocument/MASTER DOCUMENT1.docx": true,
+    "src/rl/od_pricing_dqn.py": true,
+    "src/routing/learning.py": true,
+    "src/routing/research_hierarchy.py": true,
+    "src/pricing/slot_v3.py": true,
+    "src/simulation/od_pricing_runtime.py": true,
+    "src/simulation/od_pricing_checkpoint.py": true,
+    "scripts/run_full_od_development.py": true,
+    "results_v2/pricing_dqn/2026-11-20_full_episode_development/validation.json": true,
+    "results_v2/pricing_dqn/2026-11-20_full_episode_development/frozen_protocol.json": true,
+    "results_v2/pricing_dqn/2026-11-20_full_episode_development/primary_slot_metrics.csv": true
+  },
+  "no_training": true,
+  "no_simulation": true,
+  "protected_data_accessed": false,
+  "configuration_executable": false,
+  "approval_required": true,
+  "source_hashes": {
+    "scripts/build_od_training_protocol_packet.py": "673c2ade93e4f275419d0c50362ba25549a340ebb9e3e3d3d630c550097af015",
+    "tests/test_od_training_protocol_packet.py": "5140ffdf4dbba240465fc064b38da5cb149c3d3b16101ea02f661d961c95593f"
+  }
+}

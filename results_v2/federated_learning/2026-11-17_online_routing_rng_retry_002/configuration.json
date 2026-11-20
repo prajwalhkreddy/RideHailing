@@ -1,0 +1,168 @@
+{
+  "configuration": {
+    "rng_contract": "EXPLICIT_RESEARCH_GLOBAL_RNG_INIT_V1",
+    "tensorflow_generator": "philox_seed42_once_at_fresh_run_entry",
+    "start": "2026-03-12T04:00:00+00:00",
+    "end": "2026-03-12T06:00:00+00:00",
+    "slots": 4,
+    "mini_slot_seconds": 120,
+    "fleet": 5000,
+    "evs": 500,
+    "seed": 42,
+    "pricing_updates": false,
+    "routing_updates": true,
+    "control": "same fresh weights, updates disabled",
+    "pricing_config": {
+      "gamma": 0.99,
+      "learning_rate": 0.001,
+      "batch_size": 64,
+      "replay_capacity": 100000,
+      "minimum_replay_size": 1000,
+      "epsilon_start": 1.0,
+      "epsilon_end": 0.05,
+      "epsilon_decay_steps": 50000,
+      "soft_target_tau": 0.005,
+      "seed": 42
+    }
+  },
+  "routing_initialization": {
+    "version": "FRESH_PROSPECTIVE_ONLINE_ROUTING_V1",
+    "architecture": [
+      169,
+      64,
+      32,
+      9
+    ],
+    "parameters": {
+      "hidden_units": [
+        64,
+        32
+      ],
+      "learning_rate": 0.001,
+      "local_observation_capacity": 1000,
+      "batch_size": 32,
+      "local_epochs": 1
+    },
+    "initialization": "FRESH_SEEDED_EXISTING_KERAS_INITIALIZERS",
+    "seed": 42,
+    "local_seed_rule": "global_seed + driver_id + 1",
+    "initial_weights_sha256": "90e6782df84c2e4c61b4597c64d22ed24325ddb14d39be5532bec04b232b11e0",
+    "experiment_start": "2026-03-12T04:00:00+00:00",
+    "experience_end_exclusive": "2026-03-12T06:00:00+00:00",
+    "offline_fitting_period": null,
+    "validation_selection_period": null,
+    "historical_checkpoint": null,
+    "initial_global_version": 0,
+    "initial_federation_round": 0,
+    "aggregation": "EQUAL_PARTICIPATING_CLIENT_V1",
+    "privacy": "NONPRIVATE",
+    "source_sha256": {
+      "src/simulation/od_pricing_runtime.py": "348d72b978c7f673cba72e3f42ef85a9f9d85400e5acd257294f0f1af3577d3b",
+      "src/simulation/od_pricing_checkpoint.py": "f18e52a751c84183a3f3d7cc3eb9f79699f3c0634211a7b8cba06baae2dca970",
+      "src/simulation/final_production.py": "459915c8712096de75427e2df521842f58b9082c4c01595b63c7dfcc1e33bf7b",
+      "src/routing/online_provenance.py": "b52668186e50951dfde470b795b8955c2a0cd420acb3108a6ca9511bbe4c8b7e",
+      "src/routing/research_hierarchy.py": "9e20627da9785de217eb9bf7f5197ba4831dec23b61772d51622cd628f1aa024",
+      "src/routing/learning.py": "286dfa64de6f758402ebcc7fd134753326790f15e5b7c5700b4a2e875b256701",
+      "src/routing/federated.py": "4eba5a392e82af17565022c57301f102647c0bb044af8a390dc66fda08433760",
+      "src/routing/configuration.py": "8607bdfdce35ae5799bc726211338ab3f11c93ff9be784282aa86034032669c1"
+    },
+    "configuration_sha256": "2250d4fe4c49bb48536aea44bbb978aae579ee2e8ddcfdd1315e9376aff8f85f",
+    "development_tuning": "Architecture/hyperparameters and grouping/reference choices are inherited project choices exposed to March development evidence; no independent model-selection claim.",
+    "local_experience_semantics": "Private utility decisions at slot close; memories may reuse only already completed experiment slots; current-slot participants only.",
+    "activation": "Authorized bounded routing-only retry; corrected mixed-fleet arrival guard"
+  },
+  "information_contract": {
+    "version": "PROSPECTIVE_INFORMATION_CUTOFF_V1",
+    "artifacts": {
+      "sensitivity": {
+        "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/simulation/2026-11-17_prospective_acceptance_v1/sampling_contract.json",
+        "sha256": "c4c9f24dc13953f8b0a5040d6ae2065fc6bb04e567c3703e2e7b9b39756e0d41",
+        "source_start": "2026-01-01T00:00:00-05:00",
+        "source_end_exclusive": "2026-03-01T00:00:00-05:00",
+        "latest_observation": "2026-02-28 23:59:59-05:00",
+        "fitting_cutoff": "2026-03-01T00:00:00-05:00",
+        "methodology_version": "JAN_FEB_REQUEST_WEIGHTED_BINNED_SENSITIVITY_V1"
+      },
+      "routing": {
+        "kind": "FRESH_ONLINE",
+        "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/federated_learning/2026-11-17_online_routing_retry_001/routing_initialization.json",
+        "sha256": "b365fb65a363611e2c4c3065eaffcafb4b2ce51cff7e5cc94e43c2ee6ed7f414",
+        "methodology_version": "FRESH_PROSPECTIVE_ONLINE_ROUTING_V1"
+      },
+      "od_support": {
+        "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/pricing_dqn/2026-11-17_feasible_od_validation/od_feasibility.json",
+        "sha256": "4ede929e911bfc9fcc4ba309642782b706ec04f2177cc647c7fefbcb4f3acd1a",
+        "source_start": "2026-01-01T00:00:00-05:00",
+        "source_end_exclusive": "2026-02-01T00:00:00-05:00",
+        "latest_observation": "2026-01-31 23:59:59-05:00",
+        "fitting_cutoff": "2026-02-01T00:00:00-05:00",
+        "methodology_version": "POSITIVE_OBSERVED_JANUARY_SUPPORT"
+      },
+      "forecast": {
+        "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/simulation/2026-11-17_prospective_utility_acceptance/january_historical_average.csv",
+        "sha256": "ac6f65537b954066c82542e12597a8c079ecd6a086660d8704a3abb136ebfa6a",
+        "source_start": "2026-01-01T00:00:00-05:00",
+        "source_end_exclusive": "2026-02-01T00:00:00-05:00",
+        "latest_observation": "2026-01-31T23:30:00-05:00",
+        "fitting_cutoff": "2026-02-01T00:00:00-05:00",
+        "methodology_version": "JANUARY_HISTORICAL_STATISTICS_V1"
+      },
+      "popularity": {
+        "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/simulation/2026-11-17_prospective_utility_acceptance/january_popularity.json",
+        "sha256": "89d92b01c6666f7f64bc53dc8e2556bddba10c90bd7dd54865aeb6115dc42dc0",
+        "source_start": "2026-01-01T00:00:00-05:00",
+        "source_end_exclusive": "2026-02-01T00:00:00-05:00",
+        "latest_observation": "2026-01-31T23:30:00-05:00",
+        "fitting_cutoff": "2026-02-01T00:00:00-05:00",
+        "methodology_version": "JANUARY_HISTORICAL_STATISTICS_V1"
+      },
+      "driver_profiles": {
+        "path": "/Users/prajwalhk/Keerthi/Implementation/data/processed/driver_preferences_seed42.parquet",
+        "sha256": "e1c41d5bacf542a58605dbd84a94effb845b33125495d591aa5c2a1a0627ecb1",
+        "source_start": "2026-01-01T00:00:00-05:00",
+        "source_end_exclusive": "2026-01-25T18:30:00-05:00",
+        "latest_observation": "2026-01-25 18:29:57-05:00",
+        "fitting_cutoff": "2026-01-25T18:30:00-05:00",
+        "methodology_version": "VERIFIED_JAN25_PRIORS_V1"
+      },
+      "operational_prior": {
+        "path": "/Users/prajwalhk/Keerthi/Implementation/data/processed/spatial_3km_jan_mar_2026/fare_bootstrap_legacy_cutoff.parquet",
+        "sha256": "ec565e225c88148963cf459a9458fe3b880b29fdbe17bd19f686bed3ef22548d",
+        "source_start": "2026-01-01T00:00:00-05:00",
+        "source_end_exclusive": "2026-01-25T18:30:00-05:00",
+        "latest_observation": "2026-01-25 18:29:57-05:00",
+        "fitting_cutoff": "2026-01-25T18:30:00-05:00",
+        "methodology_version": "VERIFIED_JAN25_PRIORS_V1"
+      }
+    },
+    "permitted_cutoffs": {
+      "sensitivity": "2026-03-01T00:00:00-05:00",
+      "od_support": "2026-02-01T00:00:00-05:00",
+      "routing": "2026-03-12T00:00:00-04:00",
+      "forecast": "2026-03-11T23:30:00-04:00",
+      "popularity": "2026-02-01T00:00:00-05:00",
+      "operational_prior": "2026-03-01T00:00:00-05:00",
+      "driver_profiles": "2026-03-01T00:00:00-05:00"
+    }
+  },
+  "git_head": "100fbba55b9dc70ec2b0f543acf50f5415a1d42e",
+  "git_status": " M README.md\n M requirements.txt\n M src/charging/energy.py\n M src/demand/README.md\n M src/dispatch/dispatch.py\n M src/pricing/weighted_binned_sampler.py\n M src/rl/od_pricing_dqn.py\n M src/simulation/README.md\n M src/simulation/final_production.py\n M src/simulation/historical_request_replay.py\n M src/simulation/od_pricing_checkpoint.py\n M src/simulation/od_pricing_runtime.py\n M tests/test_historical_request_replay.py\n",
+  "script_sha256": "e498a98edad9d118b77c8438a7b4478998b9e1af5d54ac20ef9f3cbe1a8f1529",
+  "initial_state": {
+    "runtime": "2f88acbe680084eee045b560cb2a58aa00b9cd0e4b3ef23ef89afa5f4dc9d055",
+    "hierarchy": "35b57104f57752abf989ca5f613bf776586e15cad1ffb6a5f9dcc59f9c9b9b86",
+    "local_parameters_and_optimizers": "a52234089e14fc78d24987dea553cdff417bc0199b8b25c139630aa4d53d5040",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "06b45de658ea690dd1306b9ef429cf73c55b95686613b451d79d6b4dc96bce55",
+    "global_rng_domains": {
+      "python": "be8292892db6d02ddd4b3ca835a529c92396717e984dd8d9b07e171d1beb2008",
+      "numpy": "03c95ad9bd35ed669cd70eaaccdd93b68fb1e93fac869880545914587ad76491",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_weights": "01d5dc206a4eedbf6cbd158d6a77e777b2f0dcf9f829b299e0ae660184fc26de",
+    "pricing_optimizer": "ba6781a4449292b1a9c0ddaa9baa6bc7e0bdf71229710b2bf7824a1793af437b"
+  },
+  "forecast_weather_assumption": "120-minute persistence; realized request weather remains retrospective context",
+  "model_selection_caveat": "Architecture/hyperparameters and grouping/reference choices are inherited project choices exposed to March development evidence; no independent model-selection claim."
+}

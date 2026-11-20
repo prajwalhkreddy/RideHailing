@@ -1,0 +1,9 @@
+................/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/gymnasium/utils/env_checker.py:311: UserWarning: [33mWARN: A Box observation space minimum value is -infinity. This is probably too low.[0m
+  logger.warn(
+/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/gymnasium/utils/env_checker.py:315: UserWarning: [33mWARN: A Box observation space maximum value is infinity. This is probably too high.[0m
+  logger.warn(
+....
+----------------------------------------------------------------------
+Ran 20 tests in 28.899s
+
+OK

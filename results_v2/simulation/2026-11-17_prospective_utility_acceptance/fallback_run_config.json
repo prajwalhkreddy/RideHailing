@@ -1,0 +1,36 @@
+{
+  "fallback": {
+    "version": "VALID_UNSEEN_OD_REFERENCE_PRICE_V1",
+    "factor": 1.0
+  },
+  "forecast": {
+    "method": "January grid/local-half-hour arithmetic mean",
+    "training_start": "2026-01-01",
+    "training_end_exclusive": "2026-02-01",
+    "available_at": "2026-02-01 05:00:00+00:00",
+    "artifact_path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/simulation/2026-11-17_prospective_utility_acceptance/january_historical_average.csv",
+    "artifact_sha256": "ac6f65537b954066c82542e12597a8c079ecd6a086660d8704a3abb136ebfa6a",
+    "source": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+    "selected_source_sha256": "0efc70a3f52aaf45c1ae570c36936c57e1671bb6beb7fbde2b85542722d8873e"
+  },
+  "routing_checkpoint": "results_v2/simulation/2026-11-17_prospective_utility_acceptance/routing_contract.json",
+  "routing_sha256": "1c6fabc60577dea7bfd35da7af63f236b73af9b876023cb48b8a15fd8db0110c",
+  "routing_available_local": null,
+  "routing_source_end_local": null,
+  "sensitivity": "results_v2/simulation/2026-11-17_prospective_acceptance_v1/sampling_contract.json",
+  "sensitivity_sha256": "c4c9f24dc13953f8b0a5040d6ae2065fc6bb04e567c3703e2e7b9b39756e0d41",
+  "support_sha256": "4ede929e911bfc9fcc4ba309642782b706ec04f2177cc647c7fefbcb4f3acd1a",
+  "seed": 42,
+  "fleet_size": 5000,
+  "interval": [
+    "2026-03-12 00:00",
+    "2026-03-12 02:00"
+  ],
+  "research_limitations": [
+    "Non-learned routing; no federated learning or DP.",
+    "References/grouping/action design remain development-tuned; not independent model selection.",
+    "Weather availability is assumed 120 minutes; realized passenger weather is retrospective environmental context.",
+    "Untrained pricing; no performance claims."
+  ],
+  "routing_contract": "NONLEARNED_PRIVATE_UTILITY_ROUTING_V1"
+}

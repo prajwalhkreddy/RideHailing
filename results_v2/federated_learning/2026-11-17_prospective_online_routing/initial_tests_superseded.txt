@@ -1,0 +1,16 @@
+======================================================================
+ERROR: test_equal_client_timing_private_release_and_resume (tests.test_online_routing_provenance.OnlineTests.test_equal_client_timing_private_release_and_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_online_routing_provenance.py", line 43, in test_equal_client_timing_private_release_and_resume
+    for h in [a,b]:record(h,1,drivers=(0,));h.finish_slot(start+pd.Timedelta(minutes=30),start+pd.Timedelta(minutes=60))
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/routing/online_provenance.py", line 48, in finish_slot
+    if len(times)!=len(memory) or any(not utc(self.provenance['experiment_start'])<=t<=end for t in times):raise ValueError('Ineligible local memory')
+                                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Ineligible local memory
+
+----------------------------------------------------------------------
+Ran 36 tests in 15.744s
+
+FAILED (errors=1)

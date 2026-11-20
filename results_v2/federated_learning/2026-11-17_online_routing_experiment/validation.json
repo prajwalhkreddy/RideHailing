@@ -1,0 +1,44 @@
+{
+  "status": "BLOCKED_FIRST_SLOT",
+  "slots_completed": 0,
+  "primary_attempts": 1,
+  "fleet": 5000,
+  "EVs": 500,
+  "non_EVs": 4500,
+  "local_optimizer_updates": 0,
+  "federation_rounds": 0,
+  "pricing_optimizer_updates": 0,
+  "committed_replay_transitions": 0,
+  "preflight": "PASSED",
+  "control": "NOT_RUN_STOP_RULE",
+  "repeat": "NOT_RUN_STOP_RULE",
+  "resume": "NOT_RUN_STOP_RULE",
+  "checkpoint_created": false,
+  "request_metrics": null,
+  "revenue": null,
+  "charging_events": null,
+  "blocker": "ProductionExperiment.advance_until: unconditional post-arrival station-reserve check also applies to explicit non-EVs",
+  "actual_exception": "Post-movement station reachability violated.",
+  "attribution_limit": "Actual failing vehicle was not captured in the first-run traceback; isolated regression confirms the non-EV defect at the same guard without rerunning real data.",
+  "tests": {
+    "existing_focused_passed": 40,
+    "new_arrival_passed": 1,
+    "new_arrival_errors": 1
+  },
+  "production_code_changed": false,
+  "historical_preservation": {
+    "historical_manifest_paths": 2279,
+    "changed_paths": [],
+    "method": "Existing size/mtime preservation manifest; not a new content-hash audit"
+  },
+  "protected_dates_accessed": false,
+  "source_hashes": {
+    "scripts/validate_online_routing_experiment.py": "39e621976cd1b2da9a6535434f765da147f958cb2c77084b1706cbe55f33ebda",
+    "tests/test_online_routing_arrival_integration.py": "8e1a44475392e0459bf1e2d15adf80501a086427cb711e41ff656d5864b87dcf",
+    "src/simulation/final_production.py": "0df05290ec64f97ce4780bd485d27c597f6e8378648da61661eb623af8f9c8be",
+    "src/routing/learning.py": "286dfa64de6f758402ebcc7fd134753326790f15e5b7c5700b4a2e875b256701",
+    "src/routing/online_provenance.py": "b52668186e50951dfde470b795b8955c2a0cd420acb3108a6ca9511bbe4c8b7e",
+    "src/routing/research_hierarchy.py": "9e20627da9785de217eb9bf7f5197ba4831dec23b61772d51622cd628f1aa024"
+  },
+  "next_task": "Correct mixed-fleet arrival reserve applicability while preserving EV safety, then retry the same bounded protocol."
+}

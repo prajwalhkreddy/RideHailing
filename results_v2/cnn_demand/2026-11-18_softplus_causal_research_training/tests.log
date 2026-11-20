@@ -1,0 +1,7 @@
+/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/site-packages/keras/src/saving/saving_lib.py:869: UserWarning: Skipping variable loading for optimizer 'adam_4', because it has 18 variables whereas the saved optimizer has 2 variables. 
+  saveable.load_own_variables(store)
+2026-11-18 08:11:58.122476: W external/local_tsl/tsl/platform/profile_utils/cpu_utils.cc:145] Failed to get CPU frequency: 0 Hz
+----------------------------------------------------------------------
+Ran 32 tests in 24.487s
+
+OK

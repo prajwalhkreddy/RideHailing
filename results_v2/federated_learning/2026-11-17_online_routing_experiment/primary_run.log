@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/validate_online_routing_experiment.py", line 118, in <module>
+    try:run(mode)
+        ^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/scripts/validate_online_routing_experiment.py", line 85, in run
+    rows=r.run_slot();elapsed=time.perf_counter()-start
+         ^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 75, in run_slot
+    result=self._run_slot(requests,policy=policy,weather_code=weather_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 104, in _run_slot
+    e.advance_until(t+pd.Timedelta(seconds=offset));d=(r.origin_grid,r.destination_grid);fallback=d not in actions;factor=self.fallback_contract['factor'] if fallback else self.provider.contract['actions'][actions[d]];offer=factor*self.provider.contract['P_base'];code=weather_code if weather_code is not None else float(w.loc[r.origin_grid,'WeatherCode']);draw=self.provider.draw(code,local_t if self.utc_mode else e.clock);ceiling=pmax(r.trip_distance_km,draw['epsilon'],self.provider.contract);accepted=offer<=ceiling
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/final_production.py", line 206, in advance_until
+    if vid not in self.missions and v.energy_level < self.station_reserve(v.current_grid):raise ValueError('Post-movement station reachability violated.')
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Post-movement station reachability violated.

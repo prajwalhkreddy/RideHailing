@@ -1,0 +1,75 @@
+{
+  "status": "BOUNDED_RESEARCH_ACCEPTANCE_PASSED",
+  "slots": 4,
+  "requests": 4137,
+  "supported_requests": 4135,
+  "fallback_requests": 2,
+  "deterministic_repeat": true,
+  "checkpoint_resume": true,
+  "checks": [
+    "a0b7fa3b51c4bf48e4412f4acb5e22b6aad6c8930c504cd7b7182cfc4556cbea",
+    "ed4347b74269da5ce25e3483a7ffa25278a4a2b9a9978e6643d007288e71cd01",
+    "8b011f3114a694d5aceba94cf5e4cf57b5a2ca5ff59248471dd6b2a2f167b74c",
+    "fbd27376d3a2f81665e60e412dc14973862d03a3249003c08b40ffc0740be5f3"
+  ],
+  "metrics": [
+    {
+      "slot": "2026-03-12 04:00:00+00:00",
+      "requests": 0,
+      "accepted": 0,
+      "assigned": 0,
+      "fallback_revenue": 0,
+      "supported_reward": 6990.200000000001,
+      "total_system_revenue": 6990.200000000001,
+      "slot_number": 1,
+      "total_requests": 1717,
+      "total_accepted": 483,
+      "total_assigned": 365,
+      "seconds": 43.38840749999508
+    },
+    {
+      "slot": "2026-03-12 04:30:00+00:00",
+      "requests": 2,
+      "accepted": 2,
+      "assigned": 2,
+      "fallback_revenue": 44.70839688478091,
+      "supported_reward": 5727.666666666667,
+      "total_system_revenue": 5772.375063551448,
+      "slot_number": 2,
+      "total_requests": 1153,
+      "total_accepted": 253,
+      "total_assigned": 238,
+      "seconds": 45.45485583413392
+    },
+    {
+      "slot": "2026-03-12 05:00:00+00:00",
+      "requests": 0,
+      "accepted": 0,
+      "assigned": 0,
+      "fallback_revenue": 0,
+      "supported_reward": 4686.266666666666,
+      "total_system_revenue": 4686.266666666666,
+      "slot_number": 3,
+      "total_requests": 729,
+      "total_accepted": 239,
+      "total_assigned": 185,
+      "seconds": 39.18616166594438
+    },
+    {
+      "slot": "2026-03-12 05:30:00+00:00",
+      "requests": 0,
+      "accepted": 0,
+      "assigned": 0,
+      "fallback_revenue": 0,
+      "supported_reward": 4805.733333333334,
+      "total_system_revenue": 4805.733333333334,
+      "slot_number": 4,
+      "total_requests": 538,
+      "total_accepted": 225,
+      "total_assigned": 212,
+      "seconds": 38.76758233294822
+    }
+  ],
+  "scope": "Frozen retrospective research components; not a prospective full-system no-lookahead claim",
+  "training": false
+}

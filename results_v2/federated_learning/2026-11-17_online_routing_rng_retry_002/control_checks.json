@@ -1,0 +1,62 @@
+[
+  {
+    "runtime": "3bc1221ac873ec03b8d49f125f3711fd5180f5d274b9b3bf348261ad7f177ce5",
+    "hierarchy": "6a95613c139dca8c564b56772d73381c2f03051ddba677655e6cc7e5b11ab895",
+    "local_parameters_and_optimizers": "a52234089e14fc78d24987dea553cdff417bc0199b8b25c139630aa4d53d5040",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "06b45de658ea690dd1306b9ef429cf73c55b95686613b451d79d6b4dc96bce55",
+    "global_rng_domains": {
+      "python": "be8292892db6d02ddd4b3ca835a529c92396717e984dd8d9b07e171d1beb2008",
+      "numpy": "03c95ad9bd35ed669cd70eaaccdd93b68fb1e93fac869880545914587ad76491",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_weights": "01d5dc206a4eedbf6cbd158d6a77e777b2f0dcf9f829b299e0ae660184fc26de",
+    "pricing_optimizer": "ba6781a4449292b1a9c0ddaa9baa6bc7e0bdf71229710b2bf7824a1793af437b"
+  },
+  {
+    "runtime": "6894454d04e1e191680765982b7924632a2fdc66a20e2baee18105149e4bea80",
+    "hierarchy": "678ea6c12c8ed971837a5619a7a9955a69049bbb6824b967176587a2799b449a",
+    "local_parameters_and_optimizers": "a52234089e14fc78d24987dea553cdff417bc0199b8b25c139630aa4d53d5040",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "06b45de658ea690dd1306b9ef429cf73c55b95686613b451d79d6b4dc96bce55",
+    "global_rng_domains": {
+      "python": "be8292892db6d02ddd4b3ca835a529c92396717e984dd8d9b07e171d1beb2008",
+      "numpy": "03c95ad9bd35ed669cd70eaaccdd93b68fb1e93fac869880545914587ad76491",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_weights": "01d5dc206a4eedbf6cbd158d6a77e777b2f0dcf9f829b299e0ae660184fc26de",
+    "pricing_optimizer": "ba6781a4449292b1a9c0ddaa9baa6bc7e0bdf71229710b2bf7824a1793af437b"
+  },
+  {
+    "runtime": "8c0216c397ea8e3c09819f00360e47041af50828192ca422aa34d0fce6422fa9",
+    "hierarchy": "00cdf2b83ad307b3e9726a96a29116f7d8af5f7855b27a536311c99eb1ac7d9f",
+    "local_parameters_and_optimizers": "a52234089e14fc78d24987dea553cdff417bc0199b8b25c139630aa4d53d5040",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "06b45de658ea690dd1306b9ef429cf73c55b95686613b451d79d6b4dc96bce55",
+    "global_rng_domains": {
+      "python": "be8292892db6d02ddd4b3ca835a529c92396717e984dd8d9b07e171d1beb2008",
+      "numpy": "03c95ad9bd35ed669cd70eaaccdd93b68fb1e93fac869880545914587ad76491",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_weights": "01d5dc206a4eedbf6cbd158d6a77e777b2f0dcf9f829b299e0ae660184fc26de",
+    "pricing_optimizer": "ba6781a4449292b1a9c0ddaa9baa6bc7e0bdf71229710b2bf7824a1793af437b"
+  },
+  {
+    "runtime": "30884900f11678a7ffa2e0e04409cafdf71df2ccb4dc30f55c8c71499a2e6a50",
+    "hierarchy": "2e796b05fe506654ab6168ce0b02bc49194466ddd19ed14ba48e6a94630ce89f",
+    "local_parameters_and_optimizers": "a52234089e14fc78d24987dea553cdff417bc0199b8b25c139630aa4d53d5040",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "06b45de658ea690dd1306b9ef429cf73c55b95686613b451d79d6b4dc96bce55",
+    "global_rng_domains": {
+      "python": "be8292892db6d02ddd4b3ca835a529c92396717e984dd8d9b07e171d1beb2008",
+      "numpy": "03c95ad9bd35ed669cd70eaaccdd93b68fb1e93fac869880545914587ad76491",
+      "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+      "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+    },
+    "pricing_weights": "01d5dc206a4eedbf6cbd158d6a77e777b2f0dcf9f829b299e0ae660184fc26de",
+    "pricing_optimizer": "ba6781a4449292b1a9c0ddaa9baa6bc7e0bdf71229710b2bf7824a1793af437b"
+  }
+]

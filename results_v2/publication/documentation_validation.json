@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "local_link_occurrences": 101,
+  "unique_local_links": 93,
+  "broken_links": [],
+  "missing_matrix_paths": [],
+  "master_requirements": 82,
+  "requirement_statuses": {
+    "CONFIGURATION_PENDING": 1,
+    "IMPLEMENTED_AND_TESTED": 64,
+    "IMPLEMENTED_NOT_END_TO_END_VALIDATED": 1,
+    "NOT_EVALUATED": 6,
+    "NOT_IMPLEMENTED": 2,
+    "PARTIALLY_IMPLEMENTED": 8
+  },
+  "diagrams": 9,
+  "mermaid_validation": "Source fences, diagram types and extraction checked; no Mermaid renderer installed; rendering not verified",
+  "figures": 14,
+  "figure_files": 28,
+  "figure_source_hashes_changed": [],
+  "pilot_source_hashes_changed": [],
+  "evidence_hashes_changed": [],
+  "latest_completed_episodes": 2,
+  "remaining_training_started": false,
+  "protected_data_loaded": false,
+  "models_loaded": false,
+  "simulation_executed": false,
+  "training_executed": false,
+  "limitations": [
+    "Historical raw cleaning not rerun",
+    "Historical reports are version-qualified, not current compliance evidence",
+    "Saved predictions only; no protected-period rows accessed",
+    "Formula review is source correspondence, not a formal proof"
+  ]
+}

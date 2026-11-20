@@ -1,0 +1,16 @@
+{
+  "results_v2/cnn_demand/2026-11-18_causal_research_training/training_history.csv": "416c216c5645425243067a84da6d2b28a3af9c2b7106062113e1a33076d9ef50",
+  "results_v2/cnn_demand/2026-11-18_causal_research_training/metrics.csv": "ea9278f2f0f09ff361100b1f73bed8d89eac4be823bc75ecc78cf3540ec00e8b",
+  "results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/training_history.csv": "b49d78346363e215c84cfee471a544f99cec8cc293f2da5ead30ae4785fb1360",
+  "results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/metrics.csv": "862313c9d135a483c105607d577b2d312a6d50061b91af7862e14e0b40fca98c",
+  "results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/forecasts.parquet": "44624c0a28750115d6c199ffa3d4852bd35740265d1e885b7c33e01e30b32e46",
+  "data/processed/spatial_3km_jan_mar_2026/grid_raster_mapping.parquet": "d7dd12fee9a0fddf01c40fd1e1ca4e150c72f754ba6fe4b0170e10ed33832cec",
+  "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/weighting_comparison.csv": "d4e40bb048e49e994ff2c8c5abf5f86629b62d7757f3b218876b6967028213a5",
+  "results_v2/simulation/2026-11-17_prospective_acceptance_v1/sampling_contract.json": "c4c9f24dc13953f8b0a5040d6ae2065fc6bb04e567c3703e2e7b9b39756e0d41",
+  "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/assigned_population_proportions.csv": "bdfbd2f83fb71f55ed59b4f85a8b1bcc54b1dc26a886284f6393beec3eff3dd5",
+  "results_v2/passenger_sensitivity/2026-11-17_methodology_decision/acceptance_impact.csv": "64b5486b15c253349124683cfd2e2d49ad76e98ba649d6e694cd5b8ef79196a2",
+  "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json": "7a74d65c858bf64dacc987225edc64bcc41a01b4c1c051584070e4275b55f2b5",
+  "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/episode_metrics.csv": "807008b7e5fbd91c3b080b85d147ad9adc11e3161cb328f0c78fe1c7beb72657",
+  "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/slot_metrics.json": "6d88bd6c78f77a0403729632dc0e29d1fde8a2f98f425474a7cf5e1fc864d623",
+  "results_v2/federated_learning/2026-11-17_online_routing_rng_retry_002/control_comparison.csv": "1470856d939cd8bb5351a3be1b21d18989637ef5c252a1efd1f1e10022b473de"
+}

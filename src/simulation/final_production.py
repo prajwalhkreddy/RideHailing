@@ -47,27 +47,51 @@ def validate_driver_profiles(profiles, vehicle_ids):
     return profiles
 
 class ProductionExperiment:
-    def __init__(self,root=ROOT,*,seed=42,fleet_size=5000,start='2026-03-16 00:00',fleet=None,driver_profiles=None,dqn_checkpoint=None,routing_checkpoint=None,frozen_routing=False):
+    def __init__(self,root=ROOT,*,seed=42,fleet_size=5000,start='2026-03-16 00:00',fleet=None,driver_profiles=None,dqn_checkpoint=None,routing_checkpoint=None,frozen_routing=False,utc_inputs=None,research_routing=False,driver_hierarchy=None,ev_share=None):
+        if utc_inputs is not None:
+            self.utc_inputs=utc_inputs
         self.root=Path(root).resolve()
         self.frozen_routing=bool(frozen_routing)
+        self.research_routing=bool(research_routing)
+        self.driver_hierarchy=driver_hierarchy
+        if driver_hierarchy is not None and not self.research_routing:raise ValueError("Hierarchy requires opt-in research routing")
+        if self.research_routing and (utc_inputs is None or not self.frozen_routing):raise ValueError("Research utility routing requires UTC frozen execution")
         if self.root!=ROOT:raise ValueError('Final configured interfaces require the active project root.')
         self.config=yaml.safe_load((self.root/'config/config.yaml').read_text());self.timestamp=pd.Timestamp(start);self.clock=self.timestamp
-        if self.timestamp.tz is not None or self.timestamp!=self.timestamp.floor('30min'):raise ValueError('Aligned timezone-naive start required.')
+        if utc_inputs is None:
+            if self.timestamp.tz is not None or self.timestamp!=self.timestamp.floor('30min'):raise ValueError('Aligned timezone-naive start required.')
+        else:
+            from src.simulation.utc_od_state import instant
+            instant(self.timestamp,True)
         meta=json.loads((self.root/'data/processed/grid_metadata.json').read_text());validate_final_contract(meta)
         base=self.root/'data/processed/spatial_3km_jan_mar_2026';self.base=base
         required=[self.root/'data/processed/grid_lookup.parquet',base/'neighbour_map.parquet',base/'charging_stations.parquet',Path(routing_checkpoint) if routing_checkpoint is not None else self.root/'models/routing_policy/mar01_mar12_2026_reachability_169x64x32x9_seed42/fedavg_round_5.keras',self.root/'results/analysis/2026-10-19_operational_grid_state/dqn_ready_forecasts.parquet']
+        if utc_inputs is not None:required=required[:-1]
         for path in required:
             if not path.is_file():raise FileNotFoundError(f'Missing final production component: {path}')
         self.grid=gpd.read_parquet(required[0]);self.neighbours=pd.read_parquet(required[1]);station_defs=pd.read_parquet(required[2])
-        self.operational,self.routing=configured_interfaces(self.grid,self.neighbours,station_defs,self.timestamp)
+        self.operational,self.routing=configured_interfaces(self.grid,self.neighbours,station_defs,self.timestamp if utc_inputs is None else self.timestamp.tz_convert("America/New_York").tz_localize(None))
+        if utc_inputs is not None:self.operational.timestamp=self.timestamp
         if self.operational is None:raise ValueError('Canonical operational state required.')
         if dqn_checkpoint is not None:assert_final_training_checkpoint(dqn_checkpoint)
-        self.policy=load_final_policy(required[3]);self.dqn=PricingDQN.load(dqn_checkpoint) if dqn_checkpoint else PricingDQN(DQNConfig(seed=seed))
+        if self.research_routing:
+            from src.simulation.research_utility_routing import validate
+            if hasattr(self.driver_hierarchy,'provenance'):
+                if json.loads(required[3].read_text())!=self.driver_hierarchy.provenance:raise ValueError('Online routing contract mismatch')
+            else:validate(required[3])
+            self.policy=None
+        else:self.policy=load_final_policy(required[3])
+        self.dqn=PricingDQN.load(dqn_checkpoint) if dqn_checkpoint else PricingDQN(DQNConfig(seed=seed))
         if self.dqn.config.seed!=seed:raise ValueError('DQN seed must match episode seed.')
-        validate_final_contract(meta,self.policy.input_shape[-1],self.policy.output_shape[-1],self.dqn.online.input_shape[-1],ACTIONS)
+        validate_final_contract(meta,169 if self.research_routing else self.policy.input_shape[-1],9 if self.research_routing else self.policy.output_shape[-1],self.dqn.online.input_shape[-1],ACTIONS)
         self.energy=EnergyParameters(**self.config['energy']);self.energy.validate()
         self.fleet=fleet or Fleet(initialize_ev_fleet(fleet_size,range(142),seed,self.energy,self.config['simulation']['initialization_method']),frozenset(range(142)),2)
         self.fleet_size=len(self.fleet.vehicles)
+        self.ev_composition=None
+        if ev_share is not None:
+            if driver_hierarchy is None:raise ValueError("Mixed fleet requires research hierarchy")
+            from src.fleet.research_mixed import configure
+            self.ev_composition=configure(self.fleet,ev_share,seed)
         if self.fleet.valid_grid_ids!=frozenset(range(142)) or self.fleet.mini_slot_minutes!=2:raise ValueError('Fleet requires final domain and two-minute clock.')
         validate_fleet(self.fleet.vehicles,range(142),self.fleet_size)
         profiles=driver_profiles if driver_profiles is not None else pd.read_parquet(self.root/'data/processed/driver_preferences_seed42.parquet')
@@ -78,14 +102,19 @@ class ProductionExperiment:
         centroids={int(r.GridID):(float(r.CentroidX),float(r.CentroidY)) for r in self.grid.itertuples()}
         self.charging=TimedChargingInfrastructure(stations_from_definition(station_defs,self.config['charging']['station_max_power_kw'],self.energy.charging_power_kw),centroids,random_seed=seed)
         validate_final_contract(meta,timed_charging=self.charging.timed_navigation)
-        self.customer=behavioural_model(np.random.default_rng(seed),self.timestamp);self.lookup=build_neighbour_lookup(self.neighbours,range(142))
-        self.ledger=DispatchLedger();self.ledger.complete_slot(self.timestamp-pd.Timedelta(minutes=30),self.timestamp,[])
+        self.customer=behavioural_model(np.random.default_rng(seed),self.timestamp if utc_inputs is None else self.timestamp.tz_convert("America/New_York").tz_localize(None));self.lookup=build_neighbour_lookup(self.neighbours,range(142))
+        from src.simulation.utc_od_state import UTCLedger
+        self.ledger=DispatchLedger() if utc_inputs is None else UTCLedger();self.ledger.complete_slot(self.timestamp-pd.Timedelta(minutes=30),self.timestamp,[])
         self.od=None;self.request_rng=np.random.default_rng(np.random.SeedSequence(seed).spawn(1)[0]);self.unsupported_demand={}
         self.passengers={};self.missions={};self.routing_experiences=[];self.routing_experiences_by_vehicle={};self.charging_events=[];self.reports=[];self.request_id=0;self.slot_index=0
-        artifact_snapshots(self.timestamp);artifact_snapshots(self.timestamp+pd.Timedelta(minutes=30))
+        if utc_inputs is None:
+            artifact_snapshots(self.timestamp);artifact_snapshots(self.timestamp+pd.Timedelta(minutes=30))
         self.current_states=self._state_sources()
 
     def _state_sources(self):
+        if hasattr(self,"utc_inputs"):
+            from src.simulation.utc_od_inputs import state_sources
+            return state_sources(self)
         t=self.timestamp;forecast,popularity=artifact_snapshots(t);vectors=[];masks={}
         for g in range(142):
             state=RoutingState.from_producer(self.routing,self.operational,t,g);vectors.append(state.values);masks[g]=state.mask
@@ -173,8 +202,16 @@ class ProductionExperiment:
             self.clock=next_clock
             for vid in arrivals:
                 v=self.fleet.vehicle(vid)
-                if v.trip_status is not VehicleStatus.IDLE or v.current_grid!=prior_dest[vid]:raise ValueError('Arrival location/status mismatch.')
-                if vid not in self.missions and v.energy_level < self.station_reserve(v.current_grid):raise ValueError('Post-movement station reachability violated.')
+                # Explicit mixed-fleet identity; absent identity retains historical EV semantics.
+                is_ev=getattr(v,'is_ev',True)
+                reserve=self.station_reserve(v.current_grid) if is_ev and vid not in self.missions else None
+                reason=None
+                if v.trip_status is not VehicleStatus.IDLE or v.current_grid!=prior_dest[vid]:reason='Arrival location/status mismatch.'
+                elif reserve is not None and v.energy_level < reserve:reason='Post-movement station reachability violated.'
+                if reason:
+                    # Exception details belong in restricted validation logs, not platform reports.
+                    diagnostic=dict(vehicle_id=vid,vehicle_type='EV' if is_ev else 'NON_EV',current_grid=v.current_grid,destination=prior_dest[vid],energy_kwh=v.energy_level,reserve_kwh=reserve,event_timestamp=str(self.clock),guard_reason=reason)
+                    raise ValueError(reason+' '+json.dumps(diagnostic,sort_keys=True))
                 if vid in self.passengers:self.passengers.pop(vid);completed+=1
                 if vid in self.missions:self._continue_charging(v)
             validate_fleet(self.fleet.vehicles,range(142),self.fleet_size)
@@ -193,16 +230,23 @@ class ProductionExperiment:
             if v.trip_status is not VehicleStatus.IDLE or v.vehicle_id in self.charging.vehicle_station:continue
             profile=self.profiles.loc[v.vehicle_id];g=v.current_grid
             s=RoutingState.from_producer(self.routing,self.operational,self.timestamp,g)
-            decision=self.routing.decide(self.operational,self.timestamp,grid=g,energy_kwh=v.energy_level,minimum_energy_kwh=self.energy.battery_capacity_kwh*self.energy.charging_trigger_soc,p_min=profile.price_preference,w_max_minutes=profile.wait_preference,h_max_minutes=profile.charging_wait_preference_minutes,energy_per_km=self.energy.consumption_rate_kwh_per_km)
+            if getattr(self,"driver_hierarchy",None) is not None:
+                from src.fleet.research_mixed import decision as private_decision
+                decision=private_decision(self,v)
+            else:
+                decision=self.routing.decide(self.operational,self.timestamp,grid=g,energy_kwh=v.energy_level,minimum_energy_kwh=self.energy.battery_capacity_kwh*self.energy.charging_trigger_soc,p_min=profile.price_preference,w_max_minutes=profile.wait_preference,h_max_minutes=profile.charging_wait_preference_minutes,energy_per_km=self.energy.consumption_rate_kwh_per_km)
             label=self.routing.label(decision,g);counts[label]+=1
-            observation=LocalPolicyObservation(s.values,label,s.mask,slot_id=self.slot_index)
+            observation=LocalPolicyObservation(s.values,label,s.mask,slot_id=self.slot_index+getattr(self,"routing_slot_offset",0))
+            if getattr(self,"driver_hierarchy",None) is not None:
+                if hasattr(self.driver_hierarchy,"provenance"):self.driver_hierarchy.record(v.vehicle_id,observation,event_time=self.clock)
+                else:self.driver_hierarchy.record(v.vehicle_id,observation)
             if not getattr(self,'frozen_routing',False):
                 self.routing_experiences.append(observation)
                 self.routing_experiences_by_vehicle.setdefault(v.vehicle_id,[]).append(observation)
             if decision.branch=='CHARGING':
                 charging+=1;self.missions[v.vehicle_id]=decision.station_id;self._continue_charging(v)
             else:
-                self.routing.start_next_hop(v,decision,speed_kmph=self.config['routing']['speed_kmph'],energy_per_km=self.energy.consumption_rate_kwh_per_km)
+                self.routing.start_next_hop(v,decision,speed_kmph=self.config['routing']['speed_kmph'],energy_per_km=self.energy.consumption_rate_kwh_per_km if getattr(v,"is_ev",True) else 0.)
                 if decision.action_index:v.current_action='repositioning'
         return counts,charging
 

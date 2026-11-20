@@ -1,0 +1,7 @@
+{
+  "version": "DRIVER_LOCAL_NEXT_SLOT_FEDAVG_V1",
+  "privacy": "NONPRIVATE",
+  "updates_default": false,
+  "evidence": "../../simulation/2026-11-17_hierarchical_interfaces/validation.json",
+  "learned_prospective_activation": "BLOCKED_PENDING_ONLINE_PROVENANCE_CONTRACT"
+}

@@ -1,0 +1,48 @@
+{
+  "temporal_contract": "OD_AWARE_UTC_ELAPSED_V1",
+  "timezone": "UTC",
+  "calendar_timezone": "America/New_York",
+  "slot_minutes": 30,
+  "mini_slot_minutes": 2,
+  "episode_slots": 16,
+  "checkpoint_schema": "FEASIBLE_OD_HISTORICAL_REPLAY_RUNTIME_5",
+  "tests": {
+    "passed": 42,
+    "failed": 0,
+    "seconds": 41.779,
+    "log": "tests.txt"
+  },
+  "training_started": false,
+  "operational_ready": false,
+  "research_utc_integration_validated": true,
+  "forecast": "Synthetic bounded fixtures with exact persistence metadata; no CNN retraining",
+  "weather_availability_assumed_minutes": 120,
+  "dst_examples": {
+    "slot": "2026-03-08 01:30 EST -> 03:00 EDT = 30 elapsed minutes",
+    "trip": "01:01 EST -> 03:31 EDT = 90 elapsed minutes",
+    "checkpoint": "Saved before DST; pending-trip and charging continuation compared"
+  },
+  "source_hashes": {
+    "src/simulation/utc_od_state.py": "434d82b104f0a83bc4e7e932a1ace44ac08233213d3e15093a9ae7cc38adfb6d",
+    "src/simulation/utc_od_inputs.py": "98a97a96032b738fdffc8d270feddaf33619f2ae7659b4d945c6941b0341c390",
+    "src/simulation/utc_od_codec.py": "4c8046d0a5c1190cdad2e84d2253b4201dbdfe79472581fa4ff8c642b1132e14",
+    "src/simulation/final_production.py": "e613ea948987d21670b7bd9e9a8bce11bf707220c14531c262b0a3dff192518a",
+    "src/simulation/historical_request_replay.py": "eebd20b88b3dd9035b529ec8f94fe49ba9a6a4197417b53258a403b57aa60c09",
+    "src/simulation/od_pricing_runtime.py": "c559b458143a7a4bfaa64bced37a56573221257deb0fa42b7cbc004b1d7dfe85",
+    "src/simulation/od_pricing_checkpoint.py": "8a3ba952817fb29147c463aa378faf262db54184ded9815102ac14ed04fc3b08",
+    "src/rl/od_pricing_dqn.py": "77f8dda3d36507428dd78151c3b1fd66bc14a37d92386faf5f395715d22ec105",
+    "tests/test_utc_od_runtime.py": "f7e2e33f18f9ee1b3c66113aad59e393936e9a9b14dcc00b14ae8df6610c671f",
+    "config/config.yaml": "2250d4fe4c49bb48536aea44bbb978aae579ee2e8ddcfdd1315e9376aff8f85f"
+  },
+  "preservation": {
+    "checked": 2279,
+    "changed": []
+  },
+  "arrival_bucket_followup": {
+    "passed": 7,
+    "failed": 0,
+    "seconds": 24.439,
+    "expected_incoming_at_0330_EDT": 2,
+    "log": "arrival_check_tests.txt"
+  }
+}

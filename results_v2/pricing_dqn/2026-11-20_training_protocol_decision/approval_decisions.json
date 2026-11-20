@@ -1,0 +1,17 @@
+{
+  "status": "AWAITING_PROJECT_APPROVAL",
+  "decisions": [
+    "Replace inherited 50000-update/.05 linear epsilon schedule with master-described .005 per ten successful updates, floor .1.",
+    "Fresh 35-episode chronological pass with physical resets, persistent learned/private-memory state, exact scoped boundary and no synthetic demand.",
+    "Development windows, three fixed-price benchmarks, revenue selection and plateau rule.",
+    "Historical-average forecast primary; CNN arm deferred to a separately cutoff-valid protocol.",
+    "Resource caps/retention and separate continuous 24-hour charging gate before EV performance claims."
+  ],
+  "implementation_prerequisites": [
+    "Generalize March12-only provenance and input preparation without merely editing source hashes.",
+    "Validate cross-episode reset/persistence, terminal transitions, monotone absolute FedAvg IDs and RNG checkpoint equivalence.",
+    "Implement proposed staircase epsilon as new version; current runtime remains unchanged.",
+    "Validate readonly evaluation clones and common request/sensitivity random-number alignment across policies."
+  ],
+  "protected_evaluation_authorized": false
+}

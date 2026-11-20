@@ -1,0 +1,7 @@
+phase,start_local,end_exclusive_local,repetitions
+DEVELOPMENT_SELECTION,2026-03-13T00:00:00-04:00,2026-03-13T08:00:00-04:00,"after episodes 7,14,21,28,35; comparators once"
+DEVELOPMENT_SELECTION,2026-03-14T08:00:00-04:00,2026-03-14T16:00:00-04:00,"after episodes 7,14,21,28,35; comparators once"
+DEVELOPMENT_SELECTION,2026-03-15T16:00:00-04:00,2026-03-16T00:00:00-04:00,"after episodes 7,14,21,28,35; comparators once"
+DEVELOPMENT_CONFIRMATION,2026-03-16T00:00:00-04:00,2026-03-16T08:00:00-04:00,selected model and comparators once; no tuning
+DEVELOPMENT_CONFIRMATION,2026-03-16T08:00:00-04:00,2026-03-16T16:00:00-04:00,selected model and comparators once; no tuning
+DEVELOPMENT_CONFIRMATION,2026-03-16T16:00:00-04:00,2026-03-17T00:00:00-04:00,selected model and comparators once; no tuning

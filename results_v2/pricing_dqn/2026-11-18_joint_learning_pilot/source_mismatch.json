@@ -1,0 +1,7 @@
+[
+  {
+    "path": "src/simulation/final_production.py",
+    "expected": "0df05290ec64f97ce4780bd485d27c597f6e8378648da61661eb623af8f9c8be",
+    "actual": "459915c8712096de75427e2df521842f58b9082c4c01595b63c7dfcc1e33bf7b"
+  }
+]

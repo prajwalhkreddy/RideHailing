@@ -1,0 +1,141 @@
+{
+  "status": "COMPLETE",
+  "epochs": 60,
+  "best_epoch": 50,
+  "best_validation_MSE": 683.6093443851801,
+  "checkpoint_sha256": "46d43798283437faafc8693f3fc9404af7cd9945ab04935541aff8084f71255d",
+  "checkpoint_reload_exact": true,
+  "export_intervals_validated": 766,
+  "protected_period_accessed": false,
+  "final_test_performed": false,
+  "training_runs": 1,
+  "metrics": [
+    {
+      "split": "train",
+      "model": "CNN",
+      "slots": 2830,
+      "grid_time_N": 401860,
+      "MAE": 6.911756480121868,
+      "RMSE": 26.210066656447005,
+      "R2": 0.9146578319124109
+    },
+    {
+      "split": "train",
+      "model": "HistoricalAverage",
+      "slots": 2830,
+      "grid_time_N": 401860,
+      "MAE": 4.644207496544885,
+      "RMSE": 24.91163893041971,
+      "R2": 0.9229039687337861
+    },
+    {
+      "split": "validation",
+      "model": "CNN",
+      "slots": 718,
+      "grid_time_N": 101956,
+      "MAE": 7.107570662000421,
+      "RMSE": 26.14592404917409,
+      "R2": 0.929096299121098
+    },
+    {
+      "split": "validation",
+      "model": "HistoricalAverage",
+      "slots": 718,
+      "grid_time_N": 101956,
+      "MAE": 3.5184255783193383,
+      "RMSE": 18.226778827311207,
+      "R2": 0.9655427383317093
+    },
+    {
+      "split": "development",
+      "model": "CNN",
+      "slots": 48,
+      "grid_time_N": 6816,
+      "MAE": 9.167994631208401,
+      "RMSE": 39.86331510133653,
+      "R2": 0.7908352419812714
+    },
+    {
+      "split": "development",
+      "model": "HistoricalAverage",
+      "slots": 48,
+      "grid_time_N": 6816,
+      "MAE": 5.085002202291154,
+      "RMSE": 29.771589830839805,
+      "R2": 0.8833336149248856
+    }
+  ],
+  "city_metrics": [
+    {
+      "split": "train",
+      "model": "CNN",
+      "MAE": 590.6453857421875,
+      "RMSE": 754.253662109375,
+      "mean_signed_error": -406.6376647949219
+    },
+    {
+      "split": "train",
+      "model": "HistoricalAverage",
+      "MAE": 477.5528529828638,
+      "RMSE": 722.286247474946,
+      "mean_signed_error": -69.51414049707248
+    },
+    {
+      "split": "validation",
+      "model": "CNN",
+      "MAE": 780.9930419921875,
+      "RMSE": 954.3334350585938,
+      "mean_signed_error": -772.2416381835938
+    },
+    {
+      "split": "validation",
+      "model": "HistoricalAverage",
+      "MAE": 333.55050714210927,
+      "RMSE": 475.4345428949791,
+      "mean_signed_error": -251.72088973864618
+    },
+    {
+      "split": "development",
+      "model": "CNN",
+      "MAE": 1300.15185546875,
+      "RMSE": 1505.5008544921875,
+      "mean_signed_error": -1300.15185546875
+    },
+    {
+      "split": "development",
+      "model": "HistoricalAverage",
+      "MAE": 574.1640620265434,
+      "RMSE": 812.1254100841131,
+      "mean_signed_error": -525.1640628408377
+    }
+  ],
+  "tests": {
+    "passed": 29,
+    "failed": 0,
+    "seconds": 26.213
+  },
+  "preservation": {
+    "historical_paths_checked": 2279,
+    "changed_historical_paths": [],
+    "changed_existing_pipeline_sources": []
+  },
+  "high_low_groups": {
+    "low": [
+      57,
+      120,
+      132,
+      140,
+      141
+    ],
+    "high": [
+      27,
+      37,
+      28,
+      46,
+      36
+    ]
+  },
+  "git_head": "100fbba55b9dc70ec2b0f543acf50f5415a1d42e",
+  "report_source_sha256": "7ef3c94b5c7cd7cef25131601bc4cc39f310806ce6497d892605998d0f69e915",
+  "evaluation_scope": "Retrospective chronological research evaluation; no claim checkpoint existed at historical issuance"
+}

@@ -1,0 +1,73 @@
+{
+  "status": "BLOCKED_AT_OD_SUPPORT_PREFLIGHT",
+  "acceptance_passed": false,
+  "interval_local": [
+    "2026-03-12T00:00:00-04:00",
+    "2026-03-12T02:00:00-04:00"
+  ],
+  "interval_utc": [
+    "2026-03-12T04:00:00+00:00",
+    "2026-03-12T06:00:00+00:00"
+  ],
+  "seed": 42,
+  "seed_used_for_simulation": false,
+  "slot_minutes": 30,
+  "mini_slot_seconds": 120,
+  "source_rows": 4215,
+  "eligible_rows": 4137,
+  "ineligible_rows": 78,
+  "supported_eligible_rows": 4135,
+  "unsupported_eligible_rows": 2,
+  "invalid_geographic_rows": 0,
+  "january_feasible_pairs": 9572,
+  "verified_support_sha256": "41a3f10e58fa5addb46bf06b95afccfc53f0c6489ac1bcab94b17cad91671d87",
+  "replay_rejections": [
+    "UNSUPPORTED_HISTORICAL_OD: 2 pairs; first=[(32, 70), (89, 122)]; research decision required"
+  ],
+  "slots_completed": 0,
+  "simulation_requests_processed": 0,
+  "optimizer_updates": 0,
+  "forecast": "NOT_CONSTRUCTED_OR_VALIDATED_AFTER_OD_STOP",
+  "runtime_metrics": null,
+  "repeat_and_resume": "NOT_RUN_OD_SUPPORT_STOP",
+  "remaining_preflight": "Forecast provenance, fleet initialization, full runtime/checkpoint compatibility not acceptance-validated",
+  "source": "/Users/prajwalhk/Keerthi/Implementation/data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.parquet",
+  "source_size": 262305030,
+  "source_mtime_ns": 1792381652961517088,
+  "selected_rows_sha256": "23d4f75bd54cfabb5a2cbdb6cc2cc8a4ca855bb4522bec4a5c76b024009d06fd",
+  "hash_scope": "Selected interval CSV serialization; full multi-month Parquet not hashed/read",
+  "file_sha256": {
+    "results_v2/pricing_dqn/2026-11-17_feasible_od_validation/od_feasibility.json": "4ede929e911bfc9fcc4ba309642782b706ec04f2177cc647c7fefbcb4f3acd1a",
+    "/Users/prajwalhk/Keerthi/Implementation/data/processed/spatial_3km_jan_mar_2026/trips_jan_mar_2026.metadata.json": "dff6595f6636945dfc077eec13de605cf78312138e25cf7a62428a731d4bbaed",
+    "results_v2/passenger_sensitivity/2026-11-17_request_weighted_calibration/sampling_contract.json": "73e423695fd043cac80695d8c7285122cdd6a48f933fe0d9846a539337024efc",
+    "src/simulation/historical_request_replay.py": "eebd20b88b3dd9035b529ec8f94fe49ba9a6a4197417b53258a403b57aa60c09",
+    "src/pricing/od_contract.py": "4f614be6481a732403a6e2519180d4e4001b82dfced19a619261bfc69adf95bb"
+  },
+  "git_commit": "100fbba55b9dc70ec2b0f543acf50f5415a1d42e",
+  "git_tracked_dirty_before_report": [
+    " M README.md",
+    " M src/demand/README.md",
+    " M src/rl/od_pricing_dqn.py",
+    " M src/simulation/README.md",
+    " M src/simulation/final_production.py",
+    " M src/simulation/historical_request_replay.py",
+    " M src/simulation/od_pricing_checkpoint.py",
+    " M src/simulation/od_pricing_runtime.py"
+  ],
+  "decision_required": "Approve an explicit policy for geographically valid OD pairs absent from January support before replay; no mask expansion or request exclusion authorized.",
+  "protected_period_records_loaded": 0,
+  "regressions": {
+    "command": "python -B -m unittest tests.test_historical_request_replay -q",
+    "ran": 7,
+    "passed": 5,
+    "errors": 2,
+    "seconds": 4.402,
+    "cause": "Two existing mock readers reject the utc_mode keyword: test_forecast_volume_independence_and_no_lookahead and test_historical_replay_resume. No tests weakened or code changed."
+  },
+  "preflight_assertions": "PASS: counts, geographic IDs, identity uniqueness, January support hash, actual UTC unsupported-pair rejection",
+  "prior_historical_preservation_manifest": {
+    "checked": 2279,
+    "changed": 0,
+    "method": "size/mtime comparison with prior manifest; not a new full content hash"
+  }
+}

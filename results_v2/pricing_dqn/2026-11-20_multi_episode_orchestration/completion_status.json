@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE",
+  "pilot_passed": true,
+  "episodes_completed": 2,
+  "cross_episode_recovery_exact": true,
+  "tests_passed": 27,
+  "tests_failed": 0,
+  "remaining_episodes_started": false,
+  "protected_evaluation_accessed": false,
+  "continuation_launch_requires_explicit_authorization": true
+}

@@ -1,0 +1,60 @@
+/Users/prajwalhk/.matplotlib is not a writable directory
+Matplotlib created a temporary cache directory at /var/folders/ks/zx55ck690yzct8xpxz06zwl40000gn/T/matplotlib-jwofawdw because there was an issue with the default path ({configdir}); it is highly recommended to set the MPLCONFIGDIR environment variable to a writable directory, in particular to speed up the import of Matplotlib and to better support multiprocessing.
+Matplotlib is building the font cache; this may take a moment.
+======================================================================
+ERROR: test_forecast_volume_independence_and_no_lookahead (tests.test_historical_request_replay.ReplayTests.test_forecast_volume_independence_and_no_lookahead)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_historical_request_replay.py", line 62, in test_forecast_volume_independence_and_no_lookahead
+    with patch('src.simulation.historical_request_replay.read_slot',side_effect=read):rows=r.run_slot(policy=policy,weather_code=1)
+                                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 42, in run_slot
+    result=self._run_slot(requests,policy=policy,weather_code=weather_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 53, in _run_slot
+    requests,demand_report=historical.realize(self.demand_state,t,self.pairs,utc_mode=self.utc_mode);demand_mode=historical.PROTOCOL
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/historical_request_replay.py", line 85, in realize
+    return replay_requests(read_slot(slot,utc_mode=utc_mode),slot,pairs,utc_mode=utc_mode)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/unittest/mock.py", line 1204, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: ReplayTests.test_forecast_volume_independence_and_no_lookahead.<locals>.read() got an unexpected keyword argument 'utc_mode'
+
+======================================================================
+ERROR: test_historical_replay_resume (tests.test_historical_request_replay.ReplayTests.test_historical_replay_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_historical_request_replay.py", line 72, in test_historical_replay_resume
+    r.run_slot(weather_code=1)
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 42, in run_slot
+    result=self._run_slot(requests,policy=policy,weather_code=weather_code)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/od_pricing_runtime.py", line 53, in _run_slot
+    requests,demand_report=historical.realize(self.demand_state,t,self.pairs,utc_mode=self.utc_mode);demand_mode=historical.PROTOCOL
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/historical_request_replay.py", line 85, in realize
+    return replay_requests(read_slot(slot,utc_mode=utc_mode),slot,pairs,utc_mode=utc_mode)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/unittest/mock.py", line 1139, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/unittest/mock.py", line 1143, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/prajwalhk/miniconda3/envs/ridehailing-phd/lib/python3.12/unittest/mock.py", line 1204, in _execute_mock_call
+    result = effect(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: frame() got an unexpected keyword argument 'utc_mode'
+
+----------------------------------------------------------------------
+Ran 7 tests in 4.402s
+
+FAILED (errors=2)

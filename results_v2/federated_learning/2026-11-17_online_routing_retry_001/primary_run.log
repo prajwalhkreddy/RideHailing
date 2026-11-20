@@ -1,0 +1,21 @@
+local updates 1000 slot 1
+local updates 2000 slot 1
+local updates 3000 slot 1
+local updates 4000 slot 1
+primary slot 1 complete 1717 requests 4788 updates 279.63 seconds
+local updates 1000 slot 2
+local updates 2000 slot 2
+local updates 3000 slot 2
+local updates 4000 slot 2
+primary slot 2 complete 1153 requests 4824 updates 104.79 seconds
+slot2 checkpoint saved
+local updates 1000 slot 3
+local updates 2000 slot 3
+local updates 3000 slot 3
+local updates 4000 slot 3
+primary slot 3 complete 729 requests 4855 updates 99.1 seconds
+local updates 1000 slot 4
+local updates 2000 slot 4
+local updates 3000 slot 4
+local updates 4000 slot 4
+primary slot 4 complete 538 requests 4875 updates 95.97 seconds

@@ -1,0 +1,4 @@
+epsilon,current_updates,current_completed_episodes,proposed_updates,proposed_completed_episodes
+0.5,26316,206,1000,8
+0.2,42106,329,1600,13
+0.1,47369,371,1800,15

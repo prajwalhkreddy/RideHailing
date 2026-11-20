@@ -1,0 +1,14 @@
+{
+  "groups": 134,
+  "files": 938,
+  "allocated_bytes_removed": 235606589440,
+  "apparent_bytes_removed": 235126386887,
+  "before_du_kib": 343119500,
+  "after_du_kib": 112877012,
+  "df_available_before_kib": 2359416,
+  "df_available_after_kib": 232602680,
+  "filesystem_free_increase_bytes": 235769102336,
+  "tests_passed": 12,
+  "tests_failed": 0,
+  "tracked_files_deleted": 0
+}

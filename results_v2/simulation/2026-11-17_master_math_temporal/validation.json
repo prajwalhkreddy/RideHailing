@@ -1,0 +1,52 @@
+{
+  "status": "PARTIAL_MATHEMATICS_VALIDATED_TEMPORAL_INTEGRATION_BLOCKED",
+  "math_contract": "MASTER_PREVIOUS_MEAN_ABSOLUTE_DEVIATION_V1",
+  "loss_contract": "MASTER_HALF_SQUARED_BELLMAN_V1",
+  "temporal_helper": "UTC_ELAPSED_NY_CALENDAR_V1",
+  "runtime_temporal": "LEGACY_NAIVE_CLOCK",
+  "operational_ready": false,
+  "training_started": false,
+  "source_hashes": {
+    "src/rl/od_pricing_dqn.py": "a3c6bb5b0bdb368fd285798aa644ccfd8e0df479f19911436af07e7016da10c7",
+    "src/simulation/od_pricing_runtime.py": "8601f5706d85d00d9475af4f08212dbb92dd22434729ef82a19cf012196b2a23",
+    "src/simulation/od_pricing_checkpoint.py": "17e118603b2cf7974f785696fbee0730b8815a6d01b190d236b221c75e5a7b50",
+    "src/simulation/master_od_contract.py": "ca2fbb2af2f85602dd290f9ba70cf85f7f3b9ceaca58bb6d2a8028ec4481dba1",
+    "src/simulation/master_operational_state.py": "323170db0029af3c10e79950462a1f3e357122302cb0ee8d703eab0a6f247d01",
+    "tests/test_master_od_math.py": "8a7449dd942f9d0fdcb2baaac9442d64f5ac392ee02072a8568877257c46a679"
+  },
+  "historical_source_hashes": {
+    "src/rl/slot_pricing_v3.py": "3775f36904a13241d67df84355d5f0aef3d070e336d2b9b9b0ec858c191e7fd7",
+    "src/simulation/final_production.py": "b2cd5371a632e745e1e65dcf9018fa3992942ff2e493caf3ec68b1d422fbaa78",
+    "src/simulation/operational_state.py": "38d803b200a07d78022abc720c9fe955abaeb7b1f53a20c371bb2f038c905e39",
+    "src/simulation/v3_checkpoint_codec.py": "878f3f33e57787a3d12451ff8cf5e1de1377e46d6bf701cbb94aae89e95c3633",
+    "src/pricing/weighted_binned_sampler.py": "4a7c9fbc8ccfac228db4f094bffc35a31edf6e36505000553518b9f26a849c47"
+  },
+  "master_sha256": {
+    "notebooks/plan/masterdocument/MASTER DOCUMENT1.docx": "17ca4a5f8ad8181bb59eec418fb696e9aabd78fd3dcf32247c0627641a0b07dd"
+  },
+  "historical_manifest_checked": 2279,
+  "historical_manifest_changed": [],
+  "coefficients": {
+    "alpha": 0.3,
+    "beta": 0.3,
+    "delta": 0.3,
+    "kappa": 0.3
+  },
+  "units": {
+    "mu": "USD",
+    "sigma": "USD absolute deviation",
+    "F_hat": "dispatches/minute",
+    "H_hat": "minutes"
+  },
+  "blockers": [
+    "Production engine/ledger/source boundaries not migrated to UTC",
+    "No verified operational forecast availability/vintage",
+    "Full UTC charging/repositioning/termination and resume not validated"
+  ],
+  "tests": {
+    "passed": 35,
+    "failed": 0,
+    "elapsed_seconds": 17.274,
+    "log": "tests.txt"
+  }
+}

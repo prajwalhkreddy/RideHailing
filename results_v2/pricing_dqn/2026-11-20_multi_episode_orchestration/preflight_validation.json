@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "source_fingerprints": {
+    "src/simulation/od_pricing_runtime.py": true,
+    "src/simulation/od_pricing_checkpoint.py": true,
+    "src/simulation/final_production.py": true,
+    "src/routing/online_provenance.py": true,
+    "src/routing/research_hierarchy.py": true,
+    "src/routing/learning.py": true,
+    "src/routing/federated.py": true,
+    "src/routing/configuration.py": true,
+    "src/rl/od_pricing_dqn.py": true,
+    "src/simulation/multi_episode_od.py": true,
+    "src/simulation/information_cutoff.py": true,
+    "scripts/run_multi_episode_od_pilot.py": true,
+    "src/simulation/multi_episode_rng.py": true,
+    "src/simulation/od_development_evaluation.py": true
+  },
+  "focused_preflight_tests": 20,
+  "additional_rng_schedule_federation_tests": 5,
+  "git_head": "100fbba55b9dc70ec2b0f543acf50f5415a1d42e",
+  "pilot_cap": 2,
+  "future_budget": 35,
+  "protected_access": false,
+  "environment_rng_correction": "Explicit wrapper, before first episode boundary; existing checkpoint source files unchanged."
+}

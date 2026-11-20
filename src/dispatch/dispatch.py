@@ -52,11 +52,11 @@ def build_neighbour_lookup(neighbour_map, valid_grid_ids: Collection[int]) -> di
 def find_eligible_vehicle(request: RequestState, fleet: Fleet, neighbour_lookup: Mapping[int, Iterable[int]], energy_parameters: EnergyParameters | None = None, station_reserve=None, reserve_observer=None, driver_minimum_prices=None, price_observer=None):
     """Find lowest-ID idle supply: same grid, then direct neighbours only."""
     required_energy = None if energy_parameters is None or request.trip_distance_km is None else energy_consumed_kwh(request.trip_distance_km, energy_parameters)
-    eligible = lambda vehicle: vehicle.trip_status is VehicleStatus.IDLE and (energy_parameters is None or (not requires_charging(vehicle, energy_parameters) and (required_energy is None or vehicle.energy_level >= required_energy)))
+    eligible = lambda vehicle: vehicle.trip_status is VehicleStatus.IDLE and (energy_parameters is None or not getattr(vehicle,"is_ev",True) or (not requires_charging(vehicle, energy_parameters) and (required_energy is None or vehicle.energy_level >= required_energy)))
     base_eligible=eligible
     def eligible(vehicle):
         if not base_eligible(vehicle):return False
-        if station_reserve is not None:
+        if station_reserve is not None and getattr(vehicle,"is_ev",True):
             if required_energy is None:raise ValueError('Passenger distance required for station reserve.')
             allowed=vehicle.energy_level-required_energy >= station_reserve(request.destination_grid)
             if not allowed:

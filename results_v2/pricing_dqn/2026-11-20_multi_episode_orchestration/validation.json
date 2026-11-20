@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "episodes": 2,
+  "slots": 32,
+  "updates": 256,
+  "epsilon": 0.875,
+  "routing_updates": 149096,
+  "federation_round": 32,
+  "seconds": 2862.5147479581647,
+  "peak_rss": 4861247488,
+  "checkpoint_bytes": 3103537628,
+  "protected_access": false,
+  "remaining_episodes_started": false,
+  "recovery": {
+    "status": "PASS",
+    "cross_episode_reset_exact": true,
+    "episode2_first_slot_exact": true,
+    "losses_gradients_exact": true,
+    "additional_slots": 1
+  },
+  "episode_metrics": [
+    {
+      "episode": 1,
+      "requests": 30359,
+      "accepted": 8354,
+      "assigned": 5958,
+      "revenue": 133576.4963099692,
+      "supported_reward": 133241.18333333335,
+      "fallback_revenue": 335.3129766358552,
+      "pricing_updates": 128,
+      "epsilon_start": 1.0,
+      "epsilon_end": 0.94,
+      "routing_updates": 76148,
+      "routing_sample_presentations": 627939,
+      "federation_round": 16,
+      "charging_events": 3,
+      "zero_request_contexts": 146287,
+      "seconds": 1753.2205545853358
+    },
+    {
+      "episode": 2,
+      "requests": 38486,
+      "accepted": 9864,
+      "assigned": 8876,
+      "revenue": 193410.70063551448,
+      "supported_reward": 192963.61666666667,
+      "fallback_revenue": 447.0839688478127,
+      "pricing_updates": 128,
+      "epsilon_start": 0.94,
+      "epsilon_end": 0.875,
+      "routing_updates": 72948,
+      "routing_sample_presentations": 1723087,
+      "federation_round": 32,
+      "charging_events": 4,
+      "zero_request_contexts": 145291,
+      "seconds": 1702.4482598749455
+    }
+  ],
+  "checkpoint_inventory": {
+    "latest": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/2026-11-20_multi_episode_orchestration_seed42/latest_episode02_slot16",
+      "bytes": 1645570902,
+      "slot": 16,
+      "timestamp": "2026-03-01 21:00:00+00:00",
+      "manifest_sha256": "3392eae4c8d0541548bdcb42c0e0a3205380a649384cf85290d9031eda5c899e"
+    },
+    "milestone": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/models/pricing_dqn/2026-11-20_multi_episode_orchestration_seed42/milestone_episode01_slot16",
+      "bytes": 1457966726,
+      "slot": 16,
+      "timestamp": "2026-03-01 13:00:00+00:00",
+      "manifest_sha256": "b453c8bf9ddc59c9630781f12c47933213fbd89d6f47ced8afe932da360f82d7"
+    }
+  },
+  "tests_distinct_passed": 27,
+  "tests_failed": 0,
+  "interrupted_attempt": "Stopped before first reset; eight committed slots retained, uncommitted partial slot rolled back; resumed slot8 checkpoint after RNG-wrapper correction.",
+  "evaluation_dates_accessed": false,
+  "source_rows": 70106,
+  "excluded_invalid_rows": 1261,
+  "fallback_requests": 36,
+  "committed_slot_seconds": 3455.6688144602813,
+  "disk_free_bytes": 222758109184,
+  "pilot_ready": true,
+  "full_training_started": false,
+  "full_training_limit": 35,
+  "continuation_requires_explicit_authorization": true,
+  "readiness_limitation": "Only episodes1\u20132 and fixture evaluation isolation are empirically validated; later development evaluation and long-horizon resource growth remain unexecuted."
+}

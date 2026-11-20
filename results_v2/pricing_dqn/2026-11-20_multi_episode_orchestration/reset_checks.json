@@ -1,0 +1,18 @@
+[
+  {
+    "previous_timestamp": "2026-03-01 13:00:00+00:00",
+    "episode": 2,
+    "identities_unchanged": true,
+    "learner_identity_preserved": true,
+    "hierarchy_identity_preserved": true,
+    "provider_rng_preserved": true,
+    "censored_passengers": 231,
+    "censored_charging": 1,
+    "censored_missions": 0,
+    "environment_rng_streams_preserved": [
+      "engine.request_rng",
+      "charging.rng",
+      "customer.rng"
+    ]
+  }
+]

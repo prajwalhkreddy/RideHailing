@@ -1,0 +1,69 @@
+{
+  "version": "CNN_OBSERVATION_PERSISTENCE_ASSUMED_AVAILABILITY_V1",
+  "weather_contract_sha256": "eec140213ed63a510788f3fdc0bbe4c1fff0b7fb08722b57658f8a51ae677a94",
+  "weather_contract": {
+    "version": "CNN_OBSERVATION_PERSISTENCE_ASSUMED_AVAILABILITY_V1",
+    "timezone": "America/New_York",
+    "source_timezone": "UTC",
+    "assumed_availability_lag_minutes": 120.0,
+    "availability_status": "ASSUMED_NOT_OBSERVED",
+    "operational_available": false,
+    "missing_weather": "Latest complete earlier observation; no initial observation -> reject",
+    "units": {
+      "WeatherCode": "Meteostat code",
+      "Temperature": "Celsius",
+      "WindSpeed": "km/h"
+    }
+  },
+  "channels": [
+    "DayOfWeek",
+    "Hour",
+    "PeriodWithinHour",
+    "WeatherType",
+    "Temperature",
+    "WindSpeed",
+    "HistoricalAverageDemandDistribution"
+  ],
+  "shape": [
+    3598,
+    7,
+    16,
+    16
+  ],
+  "architecture": "Conv2D 7->14->7->1, 3x3 same ReLU, valid-grid mask",
+  "optimizer": "Adam",
+  "learning_rate": 0.001,
+  "batch_size": 64,
+  "max_epochs": 100,
+  "patience": 10,
+  "seed": 42,
+  "shuffle": false,
+  "loss": "142-valid-cell masked MSE",
+  "selection": "minimum March1-15 validation MSE",
+  "train": "Jan1-Feb28; two no-history samples excluded",
+  "validation": "March1-15, 718 elapsed-time slots",
+  "development": "March16 only; NOT final test",
+  "final_test": "March17-31 protected; not accessed",
+  "framework": "2.16.2",
+  "provenance": {
+    "demand_path": "data/processed/spatial_3km_jan_mar_2026/demand_master_jan_mar_2026.parquet",
+    "demand_selected_rows": 511200,
+    "demand_selected_sha256": "a99104b26eac8097b8bed43bf3878c8e0328ed38f2c8a99dd76268784747a601",
+    "weather_path": "data/processed/spatial_3km_jan_mar_2026/weather_jan_mar_2026.parquet",
+    "weather_selected_rows": 1800,
+    "weather_selected_sha256": "2f60aa55e3ef2dfa898636c39ca2b3f4902e910ce094c737aca1153ba359d9a4",
+    "grid_sha256": "4e4020fd1c9faf8a3899bc718758052cc24b83e3c05caccb8e20ab98ec24fc2b",
+    "mask_sha256": "d2ceb1918812ab8e866dedd7fb9c594ef2f88c8da8e285893d03d450fb42292d",
+    "X_sha256": "f3ea225295719b2d17fc5a8aa6fa517f3478553dcb8b1bcca1f419c4782144a7",
+    "Y_sha256": "1659679412027a717df4e58ba47cc12e65da21d7166738a3129413a726809ad6",
+    "protected_labels_read": false,
+    "fingerprints_scope": "Selected permitted rows; full protected-period files not hashed",
+    "source_hashes": {
+      "src/demand/causal_timing.py": "af7099a33377ba66823d95537ec0e053e55b0a9d8a153c3d5b1976d06247ca48",
+      "src/demand/persistence_weather.py": "b430c24d8d28f7ab493d667333344cbd32f08102b55fe7a2263a299c91f5a128",
+      "src/demand/final_cnn.py": "8ea68fb6c7d6df9e8e396ae9cbeec0e13bd9bb97daf511843ecadb7192455664",
+      "scripts/train_causal_research_cnn.py": "fe1ec008a7f0993407ddfc5dfb35fef7093ad1624af53f8e655f8691a807c4fd",
+      "config/final_temporal_protocol.json": "0ac51d6ce0a07d020aafa4dc94d8c3c5bd2f9eccebdddb55a5b4081391cb6fac"
+    }
+  }
+}

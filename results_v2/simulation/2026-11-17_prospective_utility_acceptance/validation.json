@@ -1,0 +1,63 @@
+{
+  "status": "PROSPECTIVE_ENGINEERING_ACCEPTANCE_PASSED",
+  "slots": 4,
+  "requests": 4137,
+  "metrics": [
+    {
+      "slot": "2026-03-12 04:00:00+00:00",
+      "requests": 0,
+      "accepted": 479,
+      "assigned": 363,
+      "fallback_revenue": 0,
+      "supported_reward": 6830.166666666667,
+      "total_system_revenue": 6830.166666666667,
+      "total_requests": 1717,
+      "seconds": 48.452823707833886
+    },
+    {
+      "slot": "2026-03-12 04:30:00+00:00",
+      "requests": 2,
+      "accepted": 250,
+      "assigned": 236,
+      "fallback_revenue": 44.70839688478091,
+      "supported_reward": 5611.683333333333,
+      "total_system_revenue": 5656.391730218114,
+      "total_requests": 1153,
+      "seconds": 49.031852040905505
+    },
+    {
+      "slot": "2026-03-12 05:00:00+00:00",
+      "requests": 0,
+      "accepted": 239,
+      "assigned": 185,
+      "fallback_revenue": 0,
+      "supported_reward": 4656.9,
+      "total_system_revenue": 4656.9,
+      "total_requests": 729,
+      "seconds": 48.14327120804228
+    },
+    {
+      "slot": "2026-03-12 05:30:00+00:00",
+      "requests": 0,
+      "accepted": 224,
+      "assigned": 212,
+      "fallback_revenue": 0,
+      "supported_reward": 4791.05,
+      "total_system_revenue": 4791.05,
+      "total_requests": 538,
+      "seconds": 46.44839220796712
+    }
+  ],
+  "repeat": true,
+  "resume": true,
+  "checks": [
+    "b8f9811b08a0b05b6524d916cd1f36abaceff8460501e13bb097179add0940ee",
+    "3f05dce5b6ec03728279a0d20236a0916227e9c08e1f6bbb1b8081fd01840d46",
+    "537c2a1ea4a14c48dc6e3f84c13201bcfb36dd3c6c2a2a0f347c3615405589b8",
+    "84ca9b1a8f2cd03b7df017011970c63ded52d822cd4446b8f1bd9a87eaa6ee2c"
+  ],
+  "training": false,
+  "optimizer_updates": 0,
+  "charging_events": 0,
+  "fleet": 5000
+}

@@ -1,0 +1,9 @@
+{
+  "status": "PASSED",
+  "fresh_hash": "90e6782df84c2e4c61b4597c64d22ed24325ddb14d39be5532bec04b232b11e0",
+  "fleet": 5000,
+  "EV": 500,
+  "non_EV": 4500,
+  "protected_dates_accessed": false,
+  "pricing_optimizer_updates": 0
+}

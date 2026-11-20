@@ -1,0 +1,733 @@
+{
+  "deleted": [
+    {
+      "path": "tests/__pycache__/test_passenger_trip.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_multi_slot.cpython-312.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "tests/__pycache__/test_cnn_model.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_fleet_state.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_pricing_dispatch.cpython-312.pyc",
+      "allocated_bytes": 57344
+    },
+    {
+      "path": "tests/__pycache__/test_driver_contention.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_multi_slot.cpython-314.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "tests/__pycache__/test_routing_learning.cpython-312.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "tests/__pycache__/test_fleet_state.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "tests/__pycache__/test_routing_production.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_pricing_dispatch.cpython-314.pyc",
+      "allocated_bytes": 61440
+    },
+    {
+      "path": "tests/__pycache__/test_grid.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "tests/__pycache__/test_pricing.cpython-312.pyc",
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "tests/__pycache__/test_demand_artifacts.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "tests/__pycache__/test_main_slot.cpython-312.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "tests/__pycache__/test_customer_sensitivity.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_artifacts.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "tests/__pycache__/test_config.cpython-314.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_elasticity_v2_preclustering.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_main_slot.cpython-314.pyc",
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "tests/__pycache__/test_empirical_arrivals.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "tests/__pycache__/test_pricing_scaler_reference.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "tests/__pycache__/test_pricing_supply.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_demand_aggregation.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_config.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_destination_popularity.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_time_pricing_policy.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "tests/__pycache__/test_energy.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "tests/__pycache__/test_driver_waiting.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "tests/__pycache__/test_request_pricing_context.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_weather_contract.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_routing_baseline.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_validation_24h.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_routing_federated.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_grid_policy.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_validation_24h.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_routing_baseline.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_passenger_sensitivity_m10.cpython-312.pyc",
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "tests/__pycache__/test_m10_time_weather_reporting.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_statistics.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "tests/__pycache__/test_spatial_mapping.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "tests/__pycache__/test_historical_sensitivity.cpython-312.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "tests/__pycache__/test_dispatch.cpython-314.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "tests/__pycache__/test_reporting.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "tests/__pycache__/test_cnn_tensors.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "tests/__pycache__/test_production_simulation.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "tests/__pycache__/test_dispatch.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_charging_stations.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "tests/__pycache__/test_elasticity_v2_population.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/__pycache__/run_record030_time_pricing_experiment.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/__pycache__/test_fleet_state.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/__pycache__/generate_validation_figures.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/__pycache__/build_demand_master.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/__pycache__/build_charging_stations.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/__pycache__/plot_m10_time_weather.cpython-312.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "scripts/__pycache__/test_energy.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/__pycache__/build_weather.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/__pycache__/test_routing_baseline.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "scripts/__pycache__/test_statistics.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "scripts/__pycache__/build_customer_sensitivity.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "scripts/__pycache__/build_grid.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "scripts/__pycache__/analyze_passenger_sensitivity_m10.cpython-312.pyc",
+      "allocated_bytes": 61440
+    },
+    {
+      "path": "scripts/__pycache__/test_dispatch.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/reporting/__pycache__/dispatch.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/reporting/__pycache__/dispatch.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/reporting/__pycache__/customer_response.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/reporting/__pycache__/customer_response.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/reporting/__pycache__/pricing.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/reporting/__pycache__/pricing.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/reporting/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/reporting/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/analysis/__pycache__/passenger_sensitivity_m10.cpython-312.pyc",
+      "allocated_bytes": 28672
+    },
+    {
+      "path": "src/analysis/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/dispatch/__pycache__/contention.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/dispatch/__pycache__/generation.cpython-314.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "src/dispatch/__pycache__/dispatch.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/dispatch/__pycache__/contention.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/dispatch/__pycache__/generation.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/dispatch/__pycache__/dispatch.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/dispatch/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/dispatch/__pycache__/request.cpython-314.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "src/dispatch/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/dispatch/__pycache__/request.cpython-312.pyc",
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "src/simulation/__pycache__/production.cpython-312.pyc",
+      "allocated_bytes": 69632
+    },
+    {
+      "path": "src/simulation/__pycache__/grid_policy.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/simulation/__pycache__/multi_slot.cpython-314.pyc",
+      "allocated_bytes": 32768
+    },
+    {
+      "path": "src/simulation/__pycache__/grid_policy.cpython-314.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/simulation/__pycache__/multi_slot.cpython-312.pyc",
+      "allocated_bytes": 28672
+    },
+    {
+      "path": "src/simulation/__pycache__/statistics.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/simulation/__pycache__/pricing_dispatch.cpython-312.pyc",
+      "allocated_bytes": 40960
+    },
+    {
+      "path": "src/simulation/__pycache__/statistics.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/simulation/__pycache__/pricing_dispatch.cpython-314.pyc",
+      "allocated_bytes": 40960
+    },
+    {
+      "path": "src/simulation/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/simulation/__pycache__/main_slot.cpython-314.pyc",
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "src/simulation/__pycache__/validation_24h.cpython-314.pyc",
+      "allocated_bytes": 40960
+    },
+    {
+      "path": "src/simulation/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/simulation/__pycache__/main_slot.cpython-312.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "src/simulation/__pycache__/validation_24h.cpython-312.pyc",
+      "allocated_bytes": 36864
+    },
+    {
+      "path": "src/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/routing/__pycache__/federated.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/routing/__pycache__/production.cpython-312.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "src/routing/__pycache__/federated.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/routing/__pycache__/baseline.cpython-314.pyc",
+      "allocated_bytes": 28672
+    },
+    {
+      "path": "src/routing/__pycache__/baseline.cpython-312.pyc",
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "src/routing/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/routing/__pycache__/learning.cpython-314.pyc",
+      "allocated_bytes": 28672
+    },
+    {
+      "path": "src/routing/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/routing/__pycache__/learning.cpython-312.pyc",
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "src/fleet/__pycache__/supply.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/fleet/__pycache__/supply.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/fleet/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/fleet/__pycache__/state.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/fleet/__pycache__/fleet.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/fleet/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/fleet/__pycache__/state.cpython-314.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/fleet/__pycache__/fleet.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/spatial/__pycache__/mapping.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/spatial/__pycache__/grid.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/spatial/__pycache__/mapping.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/spatial/__pycache__/grid.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/spatial/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/spatial/__pycache__/artifacts.cpython-314.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/spatial/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/spatial/__pycache__/artifacts.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/demand/__pycache__/inference.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/demand/__pycache__/inference.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/demand/__pycache__/tensors.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/demand/__pycache__/model.cpython-314.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "src/demand/__pycache__/aggregation.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/demand/__pycache__/tensors.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/demand/__pycache__/model.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/demand/__pycache__/aggregation.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/demand/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/demand/__pycache__/contracts.cpython-314.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/demand/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/demand/__pycache__/contracts.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/data/__pycache__/config.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/data/__pycache__/config.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/data/__pycache__/taxi.cpython-314.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/data/__pycache__/taxi.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/data/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/data/__pycache__/weather.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/data/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/data/__pycache__/weather.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/pricing/__pycache__/customer_sensitivity.cpython-314.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "src/pricing/__pycache__/customer.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/pricing/__pycache__/customer_sensitivity.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/pricing/__pycache__/customer.cpython-314.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/pricing/__pycache__/linucb.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/pricing/__pycache__/request_context.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/pricing/__pycache__/linucb.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/pricing/__pycache__/request_context.cpython-314.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/pricing/__pycache__/reward.cpython-314.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/pricing/__pycache__/time_policy.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/pricing/__pycache__/supply.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/pricing/__pycache__/scaler.cpython-312.pyc",
+      "allocated_bytes": 12288
+    },
+    {
+      "path": "src/pricing/__pycache__/reward.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/pricing/__pycache__/supply.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/pricing/__pycache__/scaler.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/pricing/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/pricing/__pycache__/historical_sensitivity.cpython-314.pyc",
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "src/pricing/__pycache__/state.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/pricing/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/pricing/__pycache__/historical_sensitivity.cpython-312.pyc",
+      "allocated_bytes": 24576
+    },
+    {
+      "path": "src/pricing/__pycache__/state.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/charging/__pycache__/stations.cpython-312.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "src/charging/__pycache__/stations.cpython-314.pyc",
+      "allocated_bytes": 20480
+    },
+    {
+      "path": "src/charging/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/charging/__pycache__/energy.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/charging/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/charging/__pycache__/energy.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/federated/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/federated/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/elasticity_v2/__pycache__/population.cpython-312.pyc",
+      "allocated_bytes": 8192
+    },
+    {
+      "path": "src/elasticity_v2/__pycache__/preclustering.cpython-312.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/popularity/__pycache__/destination.cpython-314.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/popularity/__pycache__/destination.cpython-312.pyc",
+      "allocated_bytes": 16384
+    },
+    {
+      "path": "src/popularity/__pycache__/__init__.cpython-314.pyc",
+      "allocated_bytes": 4096
+    },
+    {
+      "path": "src/popularity/__pycache__/__init__.cpython-312.pyc",
+      "allocated_bytes": 4096
+    }
+  ],
+  "allocated_bytes_removed": 2465792,
+  "category": "untracked unopened Python bytecode only",
+  "other_artifacts_deleted": false,
+  "du_before_kib": 343468620,
+  "du_after_cleanup_kib": 343022444,
+  "df_available_after_cleanup_kib": 2409316,
+  "net_du_change_attribution": "Concurrent Git operation; only allocated_bytes_removed attributed to this cleanup",
+  "new_training_output_budget_bytes": 52428800,
+  "minimum_free_reserve_bytes": 536870912
+}

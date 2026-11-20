@@ -1,0 +1,14 @@
+{
+  "version": "CNN_OBSERVATION_PERSISTENCE_ASSUMED_AVAILABILITY_V1",
+  "timezone": "America/New_York",
+  "source_timezone": "UTC",
+  "assumed_availability_lag_minutes": 120.0,
+  "availability_status": "ASSUMED_NOT_OBSERVED",
+  "operational_available": false,
+  "missing_weather": "Latest complete earlier observation; no initial observation -> reject",
+  "units": {
+    "WeatherCode": "Meteostat code",
+    "Temperature": "Celsius",
+    "WindSpeed": "km/h"
+  }
+}

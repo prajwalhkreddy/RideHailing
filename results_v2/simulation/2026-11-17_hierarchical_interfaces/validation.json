@@ -1,0 +1,47 @@
+{
+  "status": "BOUNDED_INTERFACES_VALIDATED",
+  "unique_tests_passed": 54,
+  "failed_remaining": 0,
+  "test_batches": [
+    52,
+    12,
+    2,
+    1
+  ],
+  "test_batches_overlap": true,
+  "checkpoint_json_issue": "Corrected tuple/list contract normalization; affected tests passed on rerun",
+  "gymnasium": "1.2.3",
+  "gym_checker": "PASS_REAL_RUNTIME_SMALL_FIXTURES",
+  "gym_warnings": "Unbounded observation Box intentional",
+  "ev_scenarios": {
+    "0.1": 500,
+    "0.2": 1000,
+    "0.3": 1500
+  },
+  "fleet_size": 5000,
+  "privacy": "NONPRIVATE",
+  "full_training_runs": 0,
+  "fixture_optimizer_steps": true,
+  "real_data_simulations": 0,
+  "historical_preservation": {
+    "files_checked": 2279,
+    "changed": [],
+    "method": "size/mtime_ns"
+  },
+  "source_sha256": {
+    "src/routing/research_hierarchy.py": "3c6ff7f7a1d697f254ffbbc88d0598dd4da78d9023e5295a408b75c6bc198e62",
+    "src/routing/research_feedback.py": "0a60fed9d158f49763cfd61e45c0d3bd79029608dd7e3139719c41f85838470f",
+    "src/fleet/research_mixed.py": "a60dccc3674871322e32d9c470f99cc970d880c026a832a08b0948ab430f09e3",
+    "src/simulation/od_gymnasium.py": "4e21c178c198c8e3fee3b4f380b67d1424fb26c81e3b4515c0c28dd24f6fe805",
+    "src/simulation/final_production.py": "108631c1ef9a593be975296781c836a361332f729f2582438a0dc7f8b6c189c5",
+    "src/simulation/utc_od_inputs.py": "9b873ac5097499094e9212be92fe1e36c7fbaf0fd3b8c5ac715ca45f2737deaf",
+    "src/simulation/od_pricing_runtime.py": "805b63bf4a43ff37d0030232230ecdb77bc67cb9e8ea92a60a06d405a7bf27f9",
+    "src/simulation/od_pricing_checkpoint.py": "8ff7784080d8f32c26b3709bc9083a690946b6cd02ed2f13ff4e31dccf2f75b8",
+    "src/charging/energy.py": "d9bbd540c75560dafe0dfa1e00212cb3f6bea1ab90bd520bf8c1e4477d5e1c2e",
+    "src/dispatch/dispatch.py": "ecb943269f29d91cdd60803dc1ae33ce1e3f950724de67144e58f1faa09d0bba",
+    "tests/test_research_hierarchy.py": "049c8f05cf9e23d51336f2629443273c033235f19dc0f116805d16924ca3e9e0",
+    "requirements.txt": "48de40b65f907931a2fd6aac570d88265372728643cc486c771ba13a173cac31"
+  },
+  "remaining_blocker": "Prospective learned online routing needs its own information/provenance contract; existing baseline manifest rejects activation",
+  "weather_limitation": "120-minute availability remains an assumption"
+}

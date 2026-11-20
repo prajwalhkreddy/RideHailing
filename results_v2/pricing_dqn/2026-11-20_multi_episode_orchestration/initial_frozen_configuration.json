@@ -1,0 +1,126 @@
+{
+  "version": "PROPOSED_MASTER_OD_TRAIN_EVAL_V1",
+  "status": "APPROVED_IMPLEMENTATION_PILOT",
+  "launch_authorized": false,
+  "seed": 42,
+  "training": {
+    "episodes": 35,
+    "slots": 16,
+    "mini_slot_seconds": 120,
+    "start": "2026-03-01T05:00:00+00:00",
+    "end_exclusive": "2026-03-12T21:00:00+00:00",
+    "ordering": "one chronological pass, no resampling",
+    "fleet": 5000,
+    "ev_fraction": 0.1,
+    "physical_reset_each_episode": true,
+    "pricing_replay_optimizer_rng_persist": true,
+    "routing_global_local_optimizer_memory_persist": true,
+    "terminal_each_episode": true
+  },
+  "exploration": {
+    "formula": "max(0.1, 1 - 0.005 * floor(successful_optimizer_updates / 10))",
+    "start": 1.0,
+    "floor": 0.1,
+    "decrement": 0.005,
+    "interval_updates": 10,
+    "decay_updates": 1800,
+    "clock": "successful pricing optimizer updates",
+    "reset_each_episode": false
+  },
+  "pricing": {
+    "gamma": 0.99,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "replay_capacity": 100000,
+    "minimum_replay_size": 1000,
+    "updates_per_warm_slot": 8,
+    "soft_target_tau": 0.005,
+    "loss": "MASTER_HALF_SQUARED_BELLMAN_V1"
+  },
+  "routing": {
+    "architecture": [
+      169,
+      64,
+      32,
+      9
+    ],
+    "initialization": "fresh seed42, no historical weights",
+    "learning_rate": 0.001,
+    "batch_size": 32,
+    "local_epochs": 1,
+    "memory_capacity": 1000,
+    "local_work": "one update on latest min(32, eligible memory size)",
+    "participation": "all drivers with current-slot experience",
+    "aggregation": "EQUAL_PARTICIPATING_CLIENT_V1",
+    "privacy": "NONPRIVATE",
+    "round_every_slots": 1
+  },
+  "forecast": {
+    "primary": "JANUARY_HISTORICAL_STATISTICS_V1",
+    "cnn_enabled": false,
+    "weather": "ASSUMED_120_MINUTE_OBSERVATION_PERSISTENCE"
+  },
+  "evaluation": {
+    "epsilon": 0,
+    "pricing_updates": false,
+    "routing_updates": false,
+    "private_utility_decisions": true,
+    "checkpoints_after_episodes": [
+      7,
+      14,
+      21,
+      28,
+      35
+    ],
+    "seed": 42,
+    "selection": "mean successful-assignment system revenue on three fixed development windows; ties earliest",
+    "protected_access": false,
+    "march16": "development confirmation only, no selection"
+  },
+  "storage": {
+    "max_retained_resumable": 3,
+    "roles": [
+      "latest",
+      "best",
+      "latest_milestone"
+    ],
+    "milestone_every_episodes": 7,
+    "recovery_every_slots": 4,
+    "atomic": true,
+    "max_checkpoint_GiB": 20,
+    "max_run_GiB": 100,
+    "min_free_GiB": 50,
+    "temporary_checkpoint_slots": 1
+  },
+  "stop": {
+    "max_episodes": 35,
+    "max_wall_hours": 96,
+    "max_rss_GiB": 16,
+    "correctness_failure": "stop immediately; retain last verified checkpoint",
+    "plateau": "after episode21: last three development scores improve best by less than 1 percent of max(abs(previous_best),1 USD); stop, no convergence claim"
+  },
+  "protected_period": [
+    "2026-03-17",
+    "2026-04-01"
+  ],
+  "final_ev_fractions": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "pilot_episode_cap": 2,
+  "source_sha256": {
+    "src/simulation/od_pricing_runtime.py": "01c361d9f8dcccbc2f4398fcb47fc665b2b713219afb3dc5e6c00ddc20a0636b",
+    "src/simulation/od_pricing_checkpoint.py": "dd1775a5ec8798d8687d4b2916e8b73a49961d68c037771e322ab3bd83558e28",
+    "src/simulation/final_production.py": "f5cb19d71f58f587e6a794ea030e41577bb98cf97f01186c6ab8092f99c78e91",
+    "src/routing/online_provenance.py": "68e8fc06c6054c1d8237f24c31e967bcad4239a46ebacf4150333abdba386526",
+    "src/routing/research_hierarchy.py": "9e20627da9785de217eb9bf7f5197ba4831dec23b61772d51622cd628f1aa024",
+    "src/routing/learning.py": "286dfa64de6f758402ebcc7fd134753326790f15e5b7c5700b4a2e875b256701",
+    "src/routing/federated.py": "4eba5a392e82af17565022c57301f102647c0bb044af8a390dc66fda08433760",
+    "src/routing/configuration.py": "8607bdfdce35ae5799bc726211338ab3f11c93ff9be784282aa86034032669c1",
+    "src/rl/od_pricing_dqn.py": "8ef00cd17db6b87fc9252ad841e8835133e1b331daf9e845fa229632c1aed43a",
+    "src/simulation/multi_episode_od.py": "adbe3f14e4836844040bfb68e49449c40ffb1c49b3fbad68c3ef72c961059bb1",
+    "src/simulation/information_cutoff.py": "fab86d9011ba1cb70a18b96084a997fc40cdca078c07372eeb876acccb878325",
+    "scripts/run_multi_episode_od_pilot.py": "5c5030812c6889b535a52a8ba0bdec9c0b16d41b5dc55d301a9178e0953ba9f0"
+  }
+}

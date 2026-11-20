@@ -1,0 +1,20 @@
+[
+  {
+    "runtime": "237196c0ebdbe61fa59043f6e1b8eb1d19d94a19ab31fc8437112485cc4d34fa",
+    "hierarchy": "e53991836ba935c0a1c92b0c1e6f5b70fe79807b94a97c1f8065b107d24d4e0a",
+    "local_parameters_and_optimizers": "d541dac386af3fc4da8597610e061ea4e7c993697a55707d4d60b1eb7d28e20e",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "fa2cd37cff7b86a2872b37870646ad8f253fccb9474a12dbfcf7dead75199b46",
+    "pricing_weights": "01d5dc206a4eedbf6cbd158d6a77e777b2f0dcf9f829b299e0ae660184fc26de",
+    "pricing_optimizer": "ba6781a4449292b1a9c0ddaa9baa6bc7e0bdf71229710b2bf7824a1793af437b"
+  },
+  {
+    "runtime": "d325318e3ec5580d1e5f4ed71ca0999fb3b21ea06e1115818d5ee2638e60a3de",
+    "hierarchy": "388eb1720bc6fbfe21d27d65a63d7439d6ac0abf48e8ecfec1d3cf2063bf5768",
+    "local_parameters_and_optimizers": "e5efce9a98060d639c925c224f38f98fca2831f544afed3fa6a9e4592ca082db",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "3084c2aa1c25baba8b875d3493c9f254ac36ec90e7a6e2dad96a3f9493c9f757",
+    "pricing_weights": "01d5dc206a4eedbf6cbd158d6a77e777b2f0dcf9f829b299e0ae660184fc26de",
+    "pricing_optimizer": "ba6781a4449292b1a9c0ddaa9baa6bc7e0bdf71229710b2bf7824a1793af437b"
+  }
+]

@@ -1,0 +1,184 @@
+{
+  "demand": [
+    {
+      "slot": "2026-03-01 13:00:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 1009,
+      "eligible_rows": 995,
+      "excluded_invalid_trip_rows": 14,
+      "realized_requests": 995,
+      "unsupported_pairs": 2,
+      "fallback_requests": 2,
+      "order_hash": "3bb272b6c8904c4db9a8697a15d37daef8845a490f9c5bdebc51d11829394194"
+    },
+    {
+      "slot": "2026-03-01 13:30:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 1369,
+      "eligible_rows": 1342,
+      "excluded_invalid_trip_rows": 27,
+      "realized_requests": 1342,
+      "unsupported_pairs": 0,
+      "fallback_requests": 0,
+      "order_hash": "31b50563ea09657d83d85715cc7103f2e2f404bdf6e496a1cfa73e126f2e063c"
+    },
+    {
+      "slot": "2026-03-01 14:00:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 1494,
+      "eligible_rows": 1463,
+      "excluded_invalid_trip_rows": 31,
+      "realized_requests": 1463,
+      "unsupported_pairs": 2,
+      "fallback_requests": 2,
+      "order_hash": "27b8ea5ecfafb1169e9a0104766b02caa2e275d5d5746541c1ee5a1f58fdad0a"
+    },
+    {
+      "slot": "2026-03-01 14:30:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 1942,
+      "eligible_rows": 1902,
+      "excluded_invalid_trip_rows": 40,
+      "realized_requests": 1902,
+      "unsupported_pairs": 0,
+      "fallback_requests": 0,
+      "order_hash": "5934196dfd2904cb6e674b64e90644f66fc1c523ce8d5abe937b8edd0df91a2a"
+    },
+    {
+      "slot": "2026-03-01 15:00:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2041,
+      "eligible_rows": 2002,
+      "excluded_invalid_trip_rows": 39,
+      "realized_requests": 2002,
+      "unsupported_pairs": 1,
+      "fallback_requests": 1,
+      "order_hash": "8f2bb3d9db46a0e7f5a0899d11d70f46524fa0ddc81e0b715d602d5b6086885f"
+    },
+    {
+      "slot": "2026-03-01 15:30:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2494,
+      "eligible_rows": 2447,
+      "excluded_invalid_trip_rows": 47,
+      "realized_requests": 2447,
+      "unsupported_pairs": 1,
+      "fallback_requests": 1,
+      "order_hash": "42230a215832fc1e77e7e5afa5c3392446a31db518dca2eb5550633e6a03d2d5"
+    },
+    {
+      "slot": "2026-03-01 16:00:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2500,
+      "eligible_rows": 2448,
+      "excluded_invalid_trip_rows": 52,
+      "realized_requests": 2448,
+      "unsupported_pairs": 1,
+      "fallback_requests": 1,
+      "order_hash": "d96ccf2ea4183bf23c88c6921d2ab512954ab1b0a0c771b267ae71e17447386f"
+    },
+    {
+      "slot": "2026-03-01 16:30:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2778,
+      "eligible_rows": 2712,
+      "excluded_invalid_trip_rows": 66,
+      "realized_requests": 2712,
+      "unsupported_pairs": 2,
+      "fallback_requests": 2,
+      "order_hash": "071c1a852eb34d1a67a1f2830c6de6b07863821298a5b66cea83ca8b9cd9d21d"
+    },
+    {
+      "slot": "2026-03-01 17:00:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2877,
+      "eligible_rows": 2822,
+      "excluded_invalid_trip_rows": 55,
+      "realized_requests": 2822,
+      "unsupported_pairs": 2,
+      "fallback_requests": 2,
+      "order_hash": "51f606dbf4934341b7d73fb7fa5ce1f36f4ba3985c9271c807f883b5c6093e31"
+    },
+    {
+      "slot": "2026-03-01 17:30:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2900,
+      "eligible_rows": 2833,
+      "excluded_invalid_trip_rows": 67,
+      "realized_requests": 2833,
+      "unsupported_pairs": 0,
+      "fallback_requests": 0,
+      "order_hash": "a1809d4444327694286d63eb502ab209167f29c279a055c2d11bfa386921e59f"
+    },
+    {
+      "slot": "2026-03-01 18:00:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 3189,
+      "eligible_rows": 3118,
+      "excluded_invalid_trip_rows": 71,
+      "realized_requests": 3118,
+      "unsupported_pairs": 0,
+      "fallback_requests": 0,
+      "order_hash": "04184d2e7da5c9151cb916126ffb45c247d629bd46ed43aacdb66c133bba25ee"
+    },
+    {
+      "slot": "2026-03-01 18:30:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2936,
+      "eligible_rows": 2868,
+      "excluded_invalid_trip_rows": 68,
+      "realized_requests": 2868,
+      "unsupported_pairs": 1,
+      "fallback_requests": 1,
+      "order_hash": "bb36adc15615de1fe96eece58c146111a1a08eafb12e8d9f57c16aa2c8158d94"
+    },
+    {
+      "slot": "2026-03-01 19:00:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2830,
+      "eligible_rows": 2761,
+      "excluded_invalid_trip_rows": 69,
+      "realized_requests": 2761,
+      "unsupported_pairs": 1,
+      "fallback_requests": 1,
+      "order_hash": "c41b3c14ad10a6bf0b7a5de102d11b7f09b2a210895f8ce6e304ccb6751c8338"
+    },
+    {
+      "slot": "2026-03-01 19:30:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2919,
+      "eligible_rows": 2847,
+      "excluded_invalid_trip_rows": 72,
+      "realized_requests": 2847,
+      "unsupported_pairs": 3,
+      "fallback_requests": 3,
+      "order_hash": "92b3dd2468c1abf05b1c1eca8755868e566fd9e98287bf314c158c0cc8667744"
+    },
+    {
+      "slot": "2026-03-01 20:00:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 2802,
+      "eligible_rows": 2755,
+      "excluded_invalid_trip_rows": 47,
+      "realized_requests": 2755,
+      "unsupported_pairs": 2,
+      "fallback_requests": 2,
+      "order_hash": "caad8752364d41b1e087ad8b2f01d4b64ef036d83af8c80f23636c12f557961f"
+    },
+    {
+      "slot": "2026-03-01 20:30:00+00:00",
+      "protocol": "HISTORICAL_REQUEST_REPLAY_V1",
+      "source_rows": 3243,
+      "eligible_rows": 3171,
+      "excluded_invalid_trip_rows": 72,
+      "realized_requests": 3171,
+      "unsupported_pairs": 2,
+      "fallback_requests": 2,
+      "order_hash": "ea383d96bcdd97465b9cb9b0faf359bf751f02fed595aaa8ec62b0849cb58535"
+    }
+  ],
+  "source_requests": 38486,
+  "rejected": 28622,
+  "accepted": 9864,
+  "assigned": 8876
+}

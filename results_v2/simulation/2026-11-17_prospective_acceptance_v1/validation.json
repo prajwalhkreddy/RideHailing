@@ -1,0 +1,32 @@
+{
+  "status": "INDEPENDENT_WORK_VALIDATED_PROSPECTIVE_RUN_BLOCKED",
+  "tests": {
+    "passed": 17,
+    "failed": 0,
+    "seconds": 15.559,
+    "log": "tests_final.txt"
+  },
+  "source_sha256": {
+    "src/simulation/information_cutoff.py": "3eabdbd69d33553e419c541b98bc74d5fa2fdfd8a62380e752a2fd6ad8938f13",
+    "src/pricing/prospective_binned_sampler.py": "6c7b69fdb441d028651b64b4d7a76162fec46ed2c07911262d9c4f73f2f86837",
+    "scripts/build_prospective_sensitivity.py": "7445bfb3add734717605ae5b3424d837694ae6ea2ce34e6bdc2912993975651e",
+    "tests/test_information_cutoff.py": "c91144cb2041f502e8b54d8ff5bb9b3248d01f6f441a117814529cdd81be44e8",
+    "src/pricing/weighted_binned_sampler.py": "8ef32e0c334a974ff0d9846adc282cb845248013ffac2716dc34f7b8499dc961",
+    "src/simulation/od_pricing_runtime.py": "187184077437fb831878daa721cd6b98d52d54870d361fa2eff548f8ea7f9fff",
+    "src/simulation/od_pricing_checkpoint.py": "bfa1a7a2522a49ff166f8315cc702c5574f4dbd410b4883cd5237aa91b1bc9d2"
+  },
+  "git_head": "100fbba55b9dc70ec2b0f543acf50f5415a1d42e",
+  "working_tree": "pre-existing uncommitted changes retained",
+  "preservation": {
+    "method": "size and mtime_ns comparison against pre-task manifest",
+    "files_checked": 2279,
+    "changed": []
+  },
+  "prospective_slots_completed": 0,
+  "prospective_repeat_resume": "NOT_RUN",
+  "unit_sampling_resume": "PASS",
+  "training_started": false,
+  "march17_31_accessed": false,
+  "blocker": "Routing experience generation inherits CNN selection using March1\u201315 validation; prospective guard rejects before simulator initialization",
+  "manifest_complete": false
+}

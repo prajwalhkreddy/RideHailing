@@ -1,0 +1,40 @@
+{
+  "version": "PROSPECTIVE_INFORMATION_CUTOFF_V1",
+  "status": "BLOCKED_UPSTREAM_SELECTION",
+  "manifest_complete": false,
+  "artifacts": {
+    "sensitivity": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/simulation/2026-11-17_prospective_acceptance_v1/sampling_contract.json",
+      "sha256": "c4c9f24dc13953f8b0a5040d6ae2065fc6bb04e567c3703e2e7b9b39756e0d41",
+      "source_start": "2026-01-01T00:00:00-05:00",
+      "source_end_exclusive": "2026-03-01T00:00:00-05:00",
+      "latest_observation": "2026-02-28 23:59:59-05:00",
+      "fitting_cutoff": "2026-03-01T00:00:00-05:00",
+      "methodology_version": "JAN_FEB_REQUEST_WEIGHTED_BINNED_SENSITIVITY_V1"
+    },
+    "routing": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/models/routing_policy/mar01_mar12_2026_temporal_fedavg_169x64x32x9_seed42/global_after_slot_528.keras",
+      "sha256": "1c69b8367cfffa8e9554b3fc71e4c2e66b0ddf8669bab295d9d56ef9ef6b88da",
+      "source_start": "2026-03-01T00:00:00-05:00",
+      "source_end_exclusive": "2026-03-12T00:00:00-04:00",
+      "latest_observation": "2026-03-11T23:30:00-04:00",
+      "fitting_cutoff": "2026-03-12T00:00:00-04:00",
+      "methodology_version": "TEMPORAL_ACCUMULATED_LOCAL_HISTORY",
+      "selection_end_exclusive": "2026-03-16T00:00:00-04:00",
+      "selection_scope": "Inherited CNN model selection used March1-15 validation; not routing checkpoint selection",
+      "evidence": {
+        "training_progress": "results/analysis/2026-10-31_temporal_federated_routing/training_progress.csv",
+        "training_progress_sha256": "8eada2eb408f712163306e77f7f60f346109d8e5cca86842e09dc9c5cd3e8944",
+        "upstream_temporal_protocol": "config/final_temporal_protocol.json",
+        "upstream_forecast_loader": "src/pricing/dqn_contract.py:artifact_snapshots",
+        "generation": "src/simulation/routing_experience_generation.py:RoutingExperienceExperiment",
+        "cnn_selection": "scripts/train_final_cnn.py:79-96; continuation_metadata.json best_validation_RMSE"
+      }
+    }
+  },
+  "permitted_cutoffs": {
+    "sensitivity": "2026-03-01T00:00:00-05:00",
+    "routing": "2026-03-12T00:00:00-04:00"
+  },
+  "note": "Remaining role manifest completion deferred after essential routing lineage rejection; no run authorized by this partial manifest"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED_UPSTREAM_ROUTING_SELECTION",
+  "exception": "Upstream model selection exceeds cutoff",
+  "calibration_N": 5457435,
+  "slots_completed": 0,
+  "training": false,
+  "repeat_resume": "NOT_RUN: essential fitted component rejected",
+  "request_reward_comparison": "NOT_AVAILABLE: no prospective replay",
+  "remaining_manifest_fields": "Some inherited artifacts expose cutoff but not exact latest observation; no timestamps invented.",
+  "previous_acceptance": "Preserved, retrospective only"
+}

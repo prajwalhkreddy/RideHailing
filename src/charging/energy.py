@@ -109,7 +109,7 @@ def deduct_passenger_trip_energy(vehicle: VehicleState, distance_km: float, para
     validate_vehicle_energy(vehicle, parameters)
     if vehicle.trip_status is not VehicleStatus.IDLE:
         raise ValueError("Passenger-trip energy can only be deducted from the selected IDLE vehicle.")
-    consumed = energy_consumed_kwh(distance_km, parameters)
+    consumed = energy_consumed_kwh(distance_km, parameters) if getattr(vehicle,"is_ev",True) else 0.0
     if consumed > vehicle.energy_level:
         raise ValueError("Vehicle lacks energy for the empirical passenger-trip distance.")
     vehicle.energy_level -= consumed
@@ -119,7 +119,7 @@ def deduct_passenger_trip_energy(vehicle: VehicleState, distance_km: float, para
 def requires_charging(vehicle: VehicleState, parameters: EnergyParameters) -> bool:
     """Return whether an EV is strictly below the configured minimum energy."""
     validate_vehicle_energy(vehicle, parameters)
-    return vehicle.energy_level <= parameters.battery_capacity_kwh * parameters.charging_trigger_soc
+    return getattr(vehicle,"is_ev",True) and vehicle.energy_level <= parameters.battery_capacity_kwh * parameters.charging_trigger_soc
 
 
 def enter_charging(vehicle: VehicleState, parameters: EnergyParameters) -> None:
@@ -148,7 +148,7 @@ def apply_distance_energy(vehicle: VehicleState, distance_km: float, parameters:
     validate_vehicle_energy(vehicle, parameters)
     if vehicle.trip_status is not VehicleStatus.IDLE:
         raise ValueError("Apply distance energy only after the existing BUSY travel transition completes and before charging begins.")
-    consumed = energy_consumed_kwh(distance_km, parameters)
+    consumed = energy_consumed_kwh(distance_km, parameters) if getattr(vehicle,"is_ev",True) else 0.0
     if consumed > vehicle.energy_level:
         raise ValueError("Movement is impossible because it would make vehicle energy negative.")
     vehicle.energy_level -= consumed

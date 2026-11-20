@@ -1,0 +1,10 @@
+local updates 1000 slot 3
+local updates 2000 slot 3
+local updates 3000 slot 3
+local updates 4000 slot 3
+resume slot 3 complete 729 requests 4850 updates 85.73 seconds
+local updates 1000 slot 4
+local updates 2000 slot 4
+local updates 3000 slot 4
+local updates 4000 slot 4
+resume slot 4 complete 538 requests 4888 updates 82.59 seconds

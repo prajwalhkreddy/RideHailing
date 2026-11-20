@@ -1,0 +1,9 @@
+flowchart LR
+  D[Eligible calibration trips only] --> B[0.5-km bins and counts]
+  B --> E[Common-reference elasticity]
+  E --> P[Positive finite empirical support]
+  W[Weather code and T1-T4] --> G[Supported pool or documented fallback]
+  P --> G
+  G --> S[Request-count weighted RNG draw]
+  S --> A[Request-level acceptance]
+  L[OD distance] --> A

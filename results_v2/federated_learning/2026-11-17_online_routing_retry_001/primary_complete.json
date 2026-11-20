@@ -1,0 +1,18 @@
+{
+  "status": "PASSED",
+  "slots": 4,
+  "requests": 4137,
+  "total_revenue": 21934.508396884783,
+  "accepted": 1192,
+  "assigned": 996,
+  "pricing_updates": 0,
+  "final_state": {
+    "runtime": "d325318e3ec5580d1e5f4ed71ca0999fb3b21ea06e1115818d5ee2638e60a3de",
+    "hierarchy": "388eb1720bc6fbfe21d27d65a63d7439d6ac0abf48e8ecfec1d3cf2063bf5768",
+    "local_parameters_and_optimizers": "e5efce9a98060d639c925c224f38f98fca2831f544afed3fa6a9e4592ca082db",
+    "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+    "global_rng": "3084c2aa1c25baba8b875d3493c9f254ac36ec90e7a6e2dad96a3f9493c9f757",
+    "pricing_weights": "01d5dc206a4eedbf6cbd158d6a77e777b2f0dcf9f829b299e0ae660184fc26de",
+    "pricing_optimizer": "ba6781a4449292b1a9c0ddaa9baa6bc7e0bdf71229710b2bf7824a1793af437b"
+  }
+}

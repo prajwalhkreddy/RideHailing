@@ -1,0 +1,74 @@
+{
+  "version": "PROSPECTIVE_INFORMATION_CUTOFF_V1",
+  "artifacts": {
+    "sensitivity": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/simulation/2026-11-17_prospective_acceptance_v1/sampling_contract.json",
+      "sha256": "c4c9f24dc13953f8b0a5040d6ae2065fc6bb04e567c3703e2e7b9b39756e0d41",
+      "source_start": "2026-01-01T00:00:00-05:00",
+      "source_end_exclusive": "2026-03-01T00:00:00-05:00",
+      "latest_observation": "2026-02-28 23:59:59-05:00",
+      "fitting_cutoff": "2026-03-01T00:00:00-05:00",
+      "methodology_version": "JAN_FEB_REQUEST_WEIGHTED_BINNED_SENSITIVITY_V1"
+    },
+    "routing": {
+      "kind": "FRESH_ONLINE",
+      "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/federated_learning/2026-11-17_online_routing_retry_001/routing_initialization.json",
+      "sha256": "b365fb65a363611e2c4c3065eaffcafb4b2ce51cff7e5cc94e43c2ee6ed7f414",
+      "methodology_version": "FRESH_PROSPECTIVE_ONLINE_ROUTING_V1"
+    },
+    "od_support": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/pricing_dqn/2026-11-17_feasible_od_validation/od_feasibility.json",
+      "sha256": "4ede929e911bfc9fcc4ba309642782b706ec04f2177cc647c7fefbcb4f3acd1a",
+      "source_start": "2026-01-01T00:00:00-05:00",
+      "source_end_exclusive": "2026-02-01T00:00:00-05:00",
+      "latest_observation": "2026-01-31 23:59:59-05:00",
+      "fitting_cutoff": "2026-02-01T00:00:00-05:00",
+      "methodology_version": "POSITIVE_OBSERVED_JANUARY_SUPPORT"
+    },
+    "forecast": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/simulation/2026-11-17_prospective_utility_acceptance/january_historical_average.csv",
+      "sha256": "ac6f65537b954066c82542e12597a8c079ecd6a086660d8704a3abb136ebfa6a",
+      "source_start": "2026-01-01T00:00:00-05:00",
+      "source_end_exclusive": "2026-02-01T00:00:00-05:00",
+      "latest_observation": "2026-01-31T23:30:00-05:00",
+      "fitting_cutoff": "2026-02-01T00:00:00-05:00",
+      "methodology_version": "JANUARY_HISTORICAL_STATISTICS_V1"
+    },
+    "popularity": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/results_v2/simulation/2026-11-17_prospective_utility_acceptance/january_popularity.json",
+      "sha256": "89d92b01c6666f7f64bc53dc8e2556bddba10c90bd7dd54865aeb6115dc42dc0",
+      "source_start": "2026-01-01T00:00:00-05:00",
+      "source_end_exclusive": "2026-02-01T00:00:00-05:00",
+      "latest_observation": "2026-01-31T23:30:00-05:00",
+      "fitting_cutoff": "2026-02-01T00:00:00-05:00",
+      "methodology_version": "JANUARY_HISTORICAL_STATISTICS_V1"
+    },
+    "driver_profiles": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/data/processed/driver_preferences_seed42.parquet",
+      "sha256": "e1c41d5bacf542a58605dbd84a94effb845b33125495d591aa5c2a1a0627ecb1",
+      "source_start": "2026-01-01T00:00:00-05:00",
+      "source_end_exclusive": "2026-01-25T18:30:00-05:00",
+      "latest_observation": "2026-01-25 18:29:57-05:00",
+      "fitting_cutoff": "2026-01-25T18:30:00-05:00",
+      "methodology_version": "VERIFIED_JAN25_PRIORS_V1"
+    },
+    "operational_prior": {
+      "path": "/Users/prajwalhk/Keerthi/Implementation/data/processed/spatial_3km_jan_mar_2026/fare_bootstrap_legacy_cutoff.parquet",
+      "sha256": "ec565e225c88148963cf459a9458fe3b880b29fdbe17bd19f686bed3ef22548d",
+      "source_start": "2026-01-01T00:00:00-05:00",
+      "source_end_exclusive": "2026-01-25T18:30:00-05:00",
+      "latest_observation": "2026-01-25 18:29:57-05:00",
+      "fitting_cutoff": "2026-01-25T18:30:00-05:00",
+      "methodology_version": "VERIFIED_JAN25_PRIORS_V1"
+    }
+  },
+  "permitted_cutoffs": {
+    "sensitivity": "2026-03-01T00:00:00-05:00",
+    "od_support": "2026-02-01T00:00:00-05:00",
+    "routing": "2026-03-12T00:00:00-04:00",
+    "forecast": "2026-03-11T23:30:00-04:00",
+    "popularity": "2026-02-01T00:00:00-05:00",
+    "operational_prior": "2026-03-01T00:00:00-05:00",
+    "driver_profiles": "2026-03-01T00:00:00-05:00"
+  }
+}

@@ -13,7 +13,8 @@ from src.simulation.od_pricing_checkpoint import save_od_checkpoint,load_od_chec
 from src.simulation.v3_checkpoint_codec import encode
 
 
-def frame(slot='2026-03-12', n=4):
+def frame(slot='2026-03-12', n=4, *, utc_mode=False):
+    if utc_mode: raise AssertionError('Legacy fixture expects naive mode')
     t=pd.Timestamp(slot)
     return pd.DataFrame(dict(tpep_pickup_datetime=[t+pd.Timedelta(seconds=17)]*n,
         tpep_dropoff_datetime=[t+pd.Timedelta(minutes=150,seconds=17)]*n,
@@ -56,7 +57,8 @@ class ReplayTests(unittest.TestCase):
             r=runtime();r.engine.current_states.forecast.values[0]=forecast;r.states=od_states(r.engine,r.pairs)
             decisions=[]
             def policy(od,state):decisions.append((od,state.copy()));return 0
-            def read(t):
+            def read(t, *, utc_mode=False):
+                self.assertFalse(utc_mode)
                 self.assertEqual(len(decisions),len(r.pairs))
                 return frame(t,count)
             with patch('src.simulation.historical_request_replay.read_slot',side_effect=read):rows=r.run_slot(policy=policy,weather_code=1)

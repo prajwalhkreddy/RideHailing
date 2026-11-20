@@ -1,0 +1,16 @@
+{
+  "runtime": "89e623fee1c195a57503997db9b5f9da9fe7a133099735f1184f8f0675e8d5ab",
+  "hierarchy": "d80186a1d8fb8a079b443eaf271f4e1b35040954bfcad898038f6fd0035938a0",
+  "local_parameters_and_optimizers": "20b3642625cc45d1f041cfbf98a9b5c4ab32a644b22a5cb17782ab1605fd8bc1",
+  "charging": "0b97906b3583f7bb7316c7c95c5557cbdd3cab23418684e563c3054cfaf04367",
+  "global_rng": "99835ecd936f39fa5a34ca421124dd4abd471f37e7b2d59fe09474e7c8b28849",
+  "global_rng_domains": {
+    "python": "24a1e9fc4903030b167c72e3e71aa4f642268869134ed8043943907ca453bff6",
+    "numpy": "57883cca8ae5d2fd7c13a0dc2c7fd6fc1015b073d8b87f7190b2128f3e921897",
+    "tensorflow": "298c2f9cf0ceeb90e30cb6bc1bb207caf64f90613790ab61aa05abc2ef4988d4",
+    "tensorflow_algorithm": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"
+  },
+  "pricing_target": "e95eee94351efd1ba22ce55ffb253315631374a890b0bebeeb993a9621ba466f",
+  "pricing_weights": "7c19f90f2e289dea69627efabd42f546ecfbe07b7f9afecb0195bbcbc79b3bd5",
+  "pricing_optimizer": "f6bbbfb44c8cb3b832323268f79b500001673c5885fd2fbd886f0c81d6dc16fa"
+}

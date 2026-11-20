@@ -1,0 +1,17 @@
+{
+  "version": "VALID_UNSEEN_OD_REFERENCE_PRICE_V1",
+  "status": "PROVISIONAL_RESEARCH_PROJECT_DECISION",
+  "factor": 1.0,
+  "offer": "1.0 * common P_base",
+  "acceptance": "Existing pmax inequality unchanged",
+  "eligibility": "Geographically valid pair absent from frozen January support",
+  "invalid_grid": "HARD_FAILURE",
+  "dqn_support": "UNCHANGED",
+  "dqn_replay": "Supported OD pairs only; no fallback transition",
+  "supported_reward": "Successful assigned fares for supported OD requests",
+  "fallback_revenue": "Successful assigned fares for fallback requests",
+  "system_revenue": "supported_reward + fallback_revenue",
+  "default": "Disabled; unsupported requests still reject without explicit contract",
+  "checkpoint": "Schema 5 plus explicit unseen_od_policy and source hashes; loader must request matching policy",
+  "classification": "Not master-specified or empirically optimized"
+}

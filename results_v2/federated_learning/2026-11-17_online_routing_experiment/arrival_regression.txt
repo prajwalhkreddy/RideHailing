@@ -1,0 +1,16 @@
+.E
+======================================================================
+ERROR: test_non_ev_arrival_requires_no_battery_reserve (tests.test_online_routing_arrival_integration.MixedArrivalTests.test_non_ev_arrival_requires_no_battery_reserve)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/prajwalhk/Keerthi/Implementation/tests/test_online_routing_arrival_integration.py", line 23, in test_non_ev_arrival_requires_no_battery_reserve
+    e.advance_until(e.clock+pd.Timedelta(minutes=1))
+  File "/Users/prajwalhk/Keerthi/Implementation/src/simulation/final_production.py", line 206, in advance_until
+    if vid not in self.missions and v.energy_level < self.station_reserve(v.current_grid):raise ValueError('Post-movement station reachability violated.')
+                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Post-movement station reachability violated.
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.001s
+
+FAILED (errors=1)

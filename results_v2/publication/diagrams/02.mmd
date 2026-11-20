@@ -1,0 +1,7 @@
+flowchart LR
+  A[Seven causal feature planes] --> B[Conv 3x3: 14 ReLU]
+  B --> C[Conv 3x3: 7 ReLU]
+  C --> D[Conv 3x3: 1 Softplus]
+  D --> M[142-cell validity mask]
+  M --> O[Fractional grid demand forecast]
+  O --> V[Metadata and issuance validation]

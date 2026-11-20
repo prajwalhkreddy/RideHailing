@@ -1,0 +1,138 @@
+{
+  "classification": "A_CONFIRMED_ACTIVATION_GRADIENT_BLOCKING",
+  "batch": "Jan7 2026 local: 00,03,06,09,12,15,18,21; eight eligible training samples; prefix Jan1-7 for exact history",
+  "checkpoint_sha256": "46d43798283437faafc8693f3fc9404af7cd9945ab04935541aff8084f71255d",
+  "shape": [
+    8,
+    7,
+    16,
+    16
+  ],
+  "target_zero_pct": 53.345070422535215,
+  "loss": 818.2899780273438,
+  "loss_manual": 818.2899450689582,
+  "output_bias": [
+    -0.08551890403032303
+  ],
+  "parameter_gradient_L2": {
+    "full_loss": [
+      1219.6597900390625,
+      1.6634081602096558
+    ],
+    "positive_target_zero_output_only": [
+      0.0,
+      0.0
+    ],
+    "positive_target_positive_output_only": [
+      1219.7099609375,
+      1.669734001159668
+    ]
+  },
+  "parameter_order": [
+    "final_kernel",
+    "final_bias"
+  ],
+  "blocked_loss": 77.63996887207031,
+  "active_positive_loss": 740.6414794921875,
+  "original_forward_exact": true,
+  "weights_unchanged": true,
+  "optimizer_iterations_before": 2250,
+  "optimizer_iterations_after": 2250,
+  "optimizer_steps_performed": 0,
+  "checkpoint_unchanged": true,
+  "statistics": [
+    {
+      "group": "all_valid",
+      "N": 1136,
+      "mean_target": 16.989437103271484,
+      "zero_output_pct": 94.54225352112677,
+      "pre_min": -527.11865234375,
+      "pre_median": -17.459850311279297,
+      "pre_max": 1020.3438720703125,
+      "negative_pre_pct": 94.54225352112677,
+      "zero_pre_pct": 0.0,
+      "positive_pre_pct": 5.457746478873239,
+      "mean_abs_dloss_doutput": 0.013225897215306759,
+      "max_abs_dloss_doutput": 0.5750783085823059,
+      "mean_abs_dloss_dpre": 0.0075149149633944035,
+      "max_abs_dloss_dpre": 0.5750783085823059,
+      "SSE": 929577.3776415382
+    },
+    {
+      "group": "positive_target_zero_output",
+      "N": 470,
+      "mean_target": 7.840425491333008,
+      "zero_output_pct": 100.0,
+      "pre_min": -527.11865234375,
+      "pre_median": -25.97243881225586,
+      "pre_max": -1.1896536350250244,
+      "negative_pre_pct": 100.0,
+      "zero_pre_pct": 0.0,
+      "positive_pre_pct": 0.0,
+      "mean_abs_dloss_doutput": 0.013803564943373203,
+      "max_abs_dloss_doutput": 0.1672535240650177,
+      "mean_abs_dloss_dpre": 0.0,
+      "max_abs_dloss_dpre": 0.0,
+      "SSE": 88199.0
+    },
+    {
+      "group": "positive_target_positive_output",
+      "N": 60,
+      "mean_target": 260.25,
+      "zero_output_pct": 0.0,
+      "pre_min": 0.7598234415054321,
+      "pre_median": 135.42770385742188,
+      "pre_max": 1020.3438720703125,
+      "negative_pre_pct": 0.0,
+      "zero_pre_pct": 0.0,
+      "positive_pre_pct": 100.0,
+      "mean_abs_dloss_doutput": 0.14217694103717804,
+      "max_abs_dloss_doutput": 0.5750783085823059,
+      "mean_abs_dloss_dpre": 0.14217694103717804,
+      "max_abs_dloss_dpre": 0.5750783085823059,
+      "SSE": 841368.738938055
+    },
+    {
+      "group": "zero_target",
+      "N": 606,
+      "mean_target": 0.0,
+      "zero_output_pct": 99.66996699669967,
+      "pre_min": -169.63436889648438,
+      "pre_median": -15.05938720703125,
+      "pre_max": 3.0582046508789062,
+      "negative_pre_pct": 99.66996699669967,
+      "zero_pre_pct": 0.0,
+      "positive_pre_pct": 0.33003300330033003,
+      "mean_abs_dloss_doutput": 1.043867723637959e-05,
+      "max_abs_dloss_doutput": 0.005384162999689579,
+      "mean_abs_dloss_dpre": 1.043867723637959e-05,
+      "max_abs_dloss_dpre": 0.005384162999689579,
+      "SSE": 9.638703483126253
+    },
+    {
+      "group": "invalid",
+      "N": 912,
+      "mean_target": 0.0,
+      "zero_output_pct": 100.0,
+      "pre_min": -242.9668426513672,
+      "pre_median": -8.21078872680664,
+      "pre_max": -0.8414739370346069,
+      "negative_pre_pct": 100.0,
+      "zero_pre_pct": 0.0,
+      "positive_pre_pct": 0.0,
+      "mean_abs_dloss_doutput": 0.0,
+      "max_abs_dloss_doutput": 0.0,
+      "mean_abs_dloss_dpre": 0.0,
+      "max_abs_dloss_dpre": 0.0,
+      "SSE": 0.0
+    }
+  ],
+  "limitations": "One deterministic training-day batch; mechanism at saved checkpoint, not a reconstruction of optimization history",
+  "source_sha256": {
+    "src/demand/final_cnn.py": "8ea68fb6c7d6df9e8e396ae9cbeec0e13bd9bb97daf511843ecadb7192455664",
+    "src/demand/causal_timing.py": "af7099a33377ba66823d95537ec0e053e55b0a9d8a153c3d5b1976d06247ca48",
+    "src/demand/persistence_weather.py": "b430c24d8d28f7ab493d667333344cbd32f08102b55fe7a2263a299c91f5a128"
+  },
+  "batch_sha256": "9e0e6a491154d17b7c3d30996a5928c429fa98f6dd5845172ddcfc6f4150e09a",
+  "selected_demand_sha256": "9838962bbbafd48ca807082e5ac3cdd2c110a68e35a2bd0cd1a828ef1c1f6c33"
+}

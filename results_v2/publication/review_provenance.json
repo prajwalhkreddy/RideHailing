@@ -1,0 +1,6 @@
+{
+  "git_head": "100fbba55b9dc70ec2b0f543acf50f5415a1d42e",
+  "preexisting_status": " M .DS_Store\n M README.md\n M data/.DS_Store\n M requirements.txt\n M results_v2/pricing_dqn/README.md\n M src/charging/energy.py\n M src/demand/README.md\n M src/dispatch/dispatch.py\n M src/pricing/weighted_binned_sampler.py\n M src/rl/od_pricing_dqn.py\n M src/simulation/README.md\n M src/simulation/final_production.py\n M src/simulation/historical_request_replay.py\n M src/simulation/od_pricing_checkpoint.py\n M src/simulation/od_pricing_runtime.py\n M tests/test_historical_request_replay.py\n",
+  "master_sha256": "17ca4a5f8ad8181bb59eec418fb696e9aabd78fd3dcf32247c0627641a0b07dd",
+  "scope": "Documentation, saved-data figures and tables only; no training, inference or simulation"
+}

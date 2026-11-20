@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "eligible_counts": {
+    "train": 2830,
+    "validation": 718,
+    "test": 48
+  },
+  "dst_nonexistent_rows": 284,
+  "dst_excluded_demand": 0,
+  "request_total": 9140364.0,
+  "finite": true,
+  "causal_history": true,
+  "assumed_weather": true,
+  "protected_period_accessed": false,
+  "model_variant": "CAUSAL_CNN_FINAL_SOFTPLUS_V1"
+}

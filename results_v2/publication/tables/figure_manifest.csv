@@ -1,0 +1,15 @@
+figure,source,caption
+cnn_training_loss,results_v2/cnn_demand/,Jan–Feb training; March 1–15 validation — saved epoch losses
+cnn_baseline_comparison,results_v2/cnn_demand/,"Identical valid-grid populations; development = March 16, not final test"
+cnn_city_development,results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/forecasts.parquet,March 16 New York development — city totals
+cnn_high_low_grids,results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/forecasts.parquet,March 16 — representative training-ranked high (27) and low (57) demand grids
+cnn_spatial_error,results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/forecasts.parquet,March 16 00:00–00:30 NY — persisted true-grid raster
+sensitivity_weighting,results_v2/passenger_sensitivity/2026-11-17_methodology_decision/weighting_comparison.csv,Jan 1–March 15 descriptive comparison; overlapping conditioning pools
+sensitivity_conditional_support,prospective_acceptance_v1/sampling_contract.json,January–February prospective pools; no parametric tails
+sensitivity_group_counts,results_v2/passenger_sensitivity/2026-11-17_methodology_decision/assigned_population_proportions.csv,Jan 1–March 15 assigned groups — disjoint population shares
+sensitivity_acceptance,results_v2/passenger_sensitivity/2026-11-17_methodology_decision/acceptance_impact.csv,"Jan1–March15 saved diagnostics; population probabilities, not causal willingness-to-pay"
+dqn_episode_outcomes,results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/episode_metrics.csv,"March 1 00:00–16:00 NY — exploratory training, not policy evaluation"
+dqn_learning_replay,results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/slot_metrics.json,March 1 training diagnostics — 256 optimizer and soft-target updates
+federation_progress,results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/slot_metrics.json,"March 1 — genuine local updates, NONPRIVATE federation"
+routing_control,results_v2/federated_learning/2026-11-17_online_routing_rng_retry_002/control_comparison.csv,Routing changes; unchanged physical outcomes under private utility and exploratory pricing
+simulation_reconciliation,results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/episode_metrics.csv,Seven charging records are not seven completed sessions

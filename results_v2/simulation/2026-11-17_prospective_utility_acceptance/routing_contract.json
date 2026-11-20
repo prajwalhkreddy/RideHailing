@@ -1,0 +1,6 @@
+{
+  "version": "NONLEARNED_PRIVATE_UTILITY_ROUTING_V1",
+  "learned": false,
+  "probabilities": "idle-fleet deterministic-action frequencies; empty-grid STAY",
+  "utility": "existing operational_interface.decide"
+}
