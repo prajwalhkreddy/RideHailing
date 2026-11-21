@@ -91,14 +91,14 @@
 <h3>Next steps</h3>
 <ol>
 <li>Complete academic methodology review.</li>
-<li>Resolve decisions that materially affect the frozen experiment protocol.</li>
-<li>With explicit authorization, resume controlled OD-DQN development training from the authoritative checkpoint.</li>
-<li>Perform the configured frozen-policy development evaluations.</li>
-<li>Complete privacy and EV charging experiments under approved protocols.</li>
-<li>Conduct protected evaluation only after methodology and model selection are frozen.</li>
-<li>Prepare publication-ready comparative results.</li>
+<li>Review the complete passenger acceptance and pricing evidence.</li>
+<li>Approve pending research decisions.</li>
+<li>With explicit authorization, continue training from authoritative Episode 2; episodes 3–7 are not evidenced as complete.</li>
+<li>Perform frozen-policy development evaluation.</li>
+<li>Complete approved privacy and 10/20/30% EV studies, including charging-cycle validation.</li>
+<li>Conduct protected evaluation after freezing selection, then finalize the publication package.</li>
 </ol>
-<p>No training is authorized or launched by this documentation repair. Update this table only from new validated evidence.</p>
+<p>Training remains paused; this evidence-extraction task launches no training. Update this table only from new validated evidence.</p>
 <p><strong>Navigation:</strong> <a href="#c-end-to-end-architecture">Architecture</a> · <a href="#f-cnn-forecasting-implemented-not-the-active-hierarchical-input">CNN</a> · <a href="#g-passenger-elasticity-and-acceptance">Sensitivity</a> · <a href="#n-training-mathematics-and-hyperparameters">Mathematics</a> · <a href="#q-verified-experiments-and-latest-milestone">Results</a> · <a href="#t-open-methodological-decisions-and-experimental-limitations">Open decisions</a> · <a href="#u-reproducibility-and-execution-reference">Reproduction</a></p>
 <h2>B. Objectives and contributions under investigation</h2>
 <p>The intended contributions are an OD-specific pricing controller, empirically conditioned passenger response, local utility-preserving driver decisions, federated routing feedback and reproducible temporal simulation. Implemented contributions include versioned mathematical/information contracts, explicit historical-request replay, masked spatial responses, mixed-fleet safety and full-state checkpoint restoration. Their implementation is distinguishable from evidence of policy benefit. The present experiments establish bounded numerical and integration correctness; they do not identify causal willingness-to-pay, demonstrate privacy, or establish optimal pricing.</p>
@@ -598,6 +598,113 @@ $$</p>
 </table>
 <p>Total revenue USD 326,987.196945 reconciles to supported reward USD 326,204.8 plus fallback USD 782.396945. The final replay holds100,000 of306,304 generated transitions;206,304 were FIFO-evicted. Retained replay is97.319% zero reward, representing9,572OD identities. Twenty-seven distinct prior focused tests passed, zero failed. Committed-slot execution was57.59minutes, excluding initialization/checkpoint/recovery and interrupted work; peak recorded RSS4.86GB and two retained checkpoints3.10GB. These are bounded resource measurements, not full-run forecasts.</p>
 <p><img src="results_v2/publication/figures/dqn_episode_outcomes.png" alt="Bounded episode results" /></p>
+<h2>Two-Episode Passenger Acceptance and Pricing</h2>
+<p>The authoritative March 1 training run is <a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/README.md">multi-episode orchestration</a>, not an earlier March12 pilot or historical V3. Episode 1 spans 00:00–08:00 New York; Episode 2 spans 08:00–16:00 (05:00–21:00 UTC combined). Both contain 16 half-hour slots. The complete checkpoint audit ledgers were extracted without simulation, training, model inference or RNG reconstruction.</p>
+<table>
+<thead>
+<tr>
+<th>Outcome</th>
+<th style="text-align:right">Episode 1</th>
+<th style="text-align:right">Episode 2</th>
+<th style="text-align:right">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Eligible</td>
+<td style="text-align:right">30,359</td>
+<td style="text-align:right">38,486</td>
+<td style="text-align:right">68,845</td>
+</tr>
+<tr>
+<td>Accepted</td>
+<td style="text-align:right">8,354</td>
+<td style="text-align:right">9,864</td>
+<td style="text-align:right">18,218</td>
+</tr>
+<tr>
+<td>Passenger rejected</td>
+<td style="text-align:right">22,005</td>
+<td style="text-align:right">28,622</td>
+<td style="text-align:right">50,627</td>
+</tr>
+<tr>
+<td>Assigned</td>
+<td style="text-align:right">5,958</td>
+<td style="text-align:right">8,876</td>
+<td style="text-align:right">14,834</td>
+</tr>
+<tr>
+<td>Accepted but unmatched</td>
+<td style="text-align:right">2,396</td>
+<td style="text-align:right">988</td>
+<td style="text-align:right">3,384</td>
+</tr>
+<tr>
+<td>Revenue (USD)</td>
+<td style="text-align:right">133,576.496310</td>
+<td style="text-align:right">193,410.700636</td>
+<td style="text-align:right">326,987.196945</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Complete evidence:</strong> <a href="results_v2/publication/tables/two_episode_passenger_acceptance_details.csv">68,845 passenger rows</a>, <a href="results_v2/publication/tables/two_episode_passenger_acceptance_DATA_DICTIONARY.md">data dictionary</a>, <a href="results_v2/publication/tables/two_episode_slot_acceptance_summary.csv">all 32 slot summaries</a>, <a href="results_v2/publication/passenger_evidence_validation.json">hashes and reconciliation</a>, <a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/frozen_configuration.json">frozen configuration</a>, and <a href="scripts/export_two_episode_evidence.py">read-only exporter</a>.</p>
+<p>The checkpoint records contain original individual sensitivity draws, offered prices, raw acceptance ceilings and dispatch outcomes. Decimal CSV values originate from exact hexadecimal checkpoint floats. All 32 ordered request-ID hashes match the saved reconciliation records. No required passenger field is missing; <code>NA</code> rejection reasons mean not applicable for accepted requests. Runtime source references are <a href="src/simulation/historical_request_replay.py">request replay</a> and <a href="src/simulation/od_pricing_runtime.py">OD pricing</a>.</p>
+<p>Acceptance uses the <strong>recorded TLC trip distance converted from miles to kilometres</strong>, not the OD distance matrix. Both acceptance distance and its source-distance equivalent are retained. The common references are 22.354198442390455 USD and 4.616983790655043 km. The raw ceiling follows equation R3 without a minimum-price clamp; all 68,845 stored ceilings reproduce exactly before CSV serialization. Seven supported-OD actions yield fares from 6.60 to 94.70 USD. The separate fallback factor 1.0 applies to 36 requests and is not an eighth DQN action. January–February request-weighted elasticity draws and their actual conditional-group labels are preserved.</p>
+<p>Overall acceptance is 26.46%; assignment is 21.55% of eligible requests and 81.43% of accepted requests. Distance-band acceptance is 15.57%, 16.55%, 32.90%, 52.80% and 84.44% for [0,2), [2,5), [5,10), [10,20) and [20,infinity) km. These are descriptive observations under the configured formula, distance mixture and exploratory OD-slot actions, not causal willingness-to-pay estimates. Of 3,384 accepted-unmatched requests, 3,372 occurred at the lowest fare: high acceptance alone does not establish dispatch feasibility or revenue superiority.</p>
+<p>Supported OD accounts for 68,809 requests and 326,204.80 USD reward. The 36 fallback requests include 35 accepted and assigned, one rejected, and 782.396945 USD revenue. Fallback revenue is separated from supported-OD learning reward. All 70,106 source rows reconcile to 1,261 eligibility exclusions and 68,845 eligible requests.</p>
+<p><img src="results_v2/publication/figures/two_episode_acceptance_by_slot.png" alt="Acceptance and dispatch by slot" /></p>
+<p><img src="results_v2/publication/figures/two_episode_acceptance_strata.png" alt="Distance, factor, fare and elasticity strata" /></p>
+<p><img src="results_v2/publication/figures/two_episode_price_distributions.png" alt="Recorded price distributions" /></p>
+<p>Per-stratum denominators are in <a href="results_v2/publication/tables/two_episode_acceptance_by_distance.csv">distance</a>, <a href="results_v2/publication/tables/two_episode_acceptance_by_factor.csv">factor</a>, <a href="results_v2/publication/tables/two_episode_acceptance_by_fare.csv">fare</a>, <a href="results_v2/publication/tables/two_episode_acceptance_by_elasticity.csv">elasticity</a>, <a href="results_v2/publication/tables/two_episode_acceptance_by_weather_time.csv">weather/time</a> and <a href="results_v2/publication/tables/two_episode_acceptance_by_od_support.csv">OD support</a>. <a href="results_v2/publication/tables/two_episode_price_distribution_statistics.csv">Distribution statistics</a> include raw ceilings and offer-minus-ceiling margins. Accepted-but-unmatched is distinguished from passenger rejection throughout. Slot-level means include fallback requests; the slot CSV records pre-decision exploration and per-slot optimizer counts.</p>
+<h2>Research Figures and Tables Index</h2>
+<p>The <a href="results_v2/publication/tables/master_results_inventory.csv">complete results inventory</a> maps master sections and requested review outputs to verified artifacts, partial evidence and missing comparisons. It complements the <a href="results_v2/publication/tables/master_traceability.csv">82-requirement implementation matrix</a>. Graphs are presentation artifacts, not additional experiments. The master source fingerprint matches the <a href="results_v2/publication/master_specification_excerpt.md">reviewed full text</a>; its absent section 15 body remains explicitly unresolved.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Verified evidence</th>
+<th>Remaining limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CNN</td>
+<td><a href="results_v2/publication/figures/cnn_training_loss.svg">Loss</a>, <a href="results_v2/publication/figures/cnn_baseline_comparison.svg">baseline metrics</a>, <a href="results_v2/publication/figures/cnn_high_low_grids.svg">high/low grid series</a>, <a href="results_v2/publication/figures/cnn_city_development.svg">city totals</a>, <a href="results_v2/publication/figures/cnn_spatial_error.svg">spatial and signed errors</a>, <a href="results_v2/publication/figures/cnn_error_distribution.svg">error distribution</a></td>
+<td>Below historical baseline; development is not final evaluation</td>
+</tr>
+<tr>
+<td>Sensitivity</td>
+<td><a href="results_v2/publication/figures/sensitivity_conditional_support.svg">Weighted CDF/support</a>, <a href="results_v2/publication/figures/sensitivity_weighting.svg">weighting comparison</a>, <a href="results_v2/publication/figures/sensitivity_group_counts.svg">group proportions</a></td>
+<td>Comparison populations differ explicitly; weather assumptions remain</td>
+</tr>
+<tr>
+<td>Passenger pricing</td>
+<td><a href="results_v2/publication/tables/two_episode_passenger_acceptance_details.csv">Complete passenger table</a>, <a href="results_v2/publication/tables/two_episode_slot_acceptance_summary.csv">slot summaries</a>, <a href="results_v2/publication/figures/two_episode_weather_time_acceptance.svg">weather/time figure</a></td>
+<td>Training description; no policy superiority claim</td>
+</tr>
+<tr>
+<td>DQN</td>
+<td><a href="results_v2/publication/figures/dqn_learning_replay.svg">Exploration/loss/replay</a>, <a href="results_v2/publication/figures/dqn_episode_outcomes.svg">episode rewards</a></td>
+<td>Only episodes 1–2 completed</td>
+</tr>
+<tr>
+<td>Routing/FedAvg</td>
+<td><a href="results_v2/publication/figures/federation_progress.svg">Update progression</a>, <a href="results_v2/publication/figures/routing_control.svg">earlier March12 control</a></td>
+<td>NONPRIVATE; control is a separate experiment</td>
+</tr>
+<tr>
+<td>Fleet/charging</td>
+<td><a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json">Validation</a></td>
+<td>Single 10% EV fleet; seven event records do not establish completed cycles; waits/SOC trajectories not exported</td>
+</tr>
+<tr>
+<td>Reproducibility</td>
+<td><a href="results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/recovery_validation.json">Recovery</a>, <a href="results_v2/publication/passenger_evidence_validation.json">source hashes</a>, <a href="results_v2/publication/tables/passenger_evidence_figure_manifest.csv">new figure manifest</a></td>
+<td>Final protected and privacy/EV comparisons pending</td>
+</tr>
+</tbody>
+</table>
 <h2>R. Benchmark interpretation</h2>
 <p>The historical-average forecast beats both causal CNN variants on identical saved validation/development samples. The matched routing control establishes changed response estimates with identical physical outcomes while pricing learning was disabled. It does not establish no value from hierarchy. The two episode revenues concern different time windows under exploration and cannot be interpreted as policy improvement.</p>
 <p>No final fixed-price, myopic-pricing or trained-policy benchmark is reported as completed. No statistical significance or multi-seed generalization is claimed. Full EV10/20/30 comparison and privacy–utility trade-offs remain NOT_YET_EVALUATED. <a href="results_v2/publication/tables/routing_control.csv">Routing control table</a>, <a href="results_v2/publication/figures/routing_control.svg">control figure</a>, <a href="results_v2/publication/figures/dqn_learning_replay.svg">learning/replay diagnostics</a>, <a href="results_v2/publication/figures/federation_progress.svg">federation progress</a> and <a href="results_v2/publication/figures/simulation_reconciliation.svg">reward/charging reconciliation</a> show only recorded quantities.</p>

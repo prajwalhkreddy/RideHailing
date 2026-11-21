@@ -1,0 +1,6 @@
+figure,source,caption
+two_episode_acceptance_by_slot,results_v2/publication/tables/two_episode_passenger_acceptance_details.csv,Two-episode training: passenger acceptance and dispatch outcomes
+two_episode_acceptance_strata,results_v2/publication/tables/two_episode_passenger_acceptance_details.csv,Observed training acceptance; labels show request denominators (not causal effects)
+two_episode_price_distributions,results_v2/publication/tables/two_episode_passenger_acceptance_details.csv,"Recorded fares, raw ceilings and rejection margins; all eligible requests"
+two_episode_weather_time_acceptance,results_v2/publication/tables/two_episode_passenger_acceptance_details.csv,Recorded weather/time groups; denominators in companion CSV
+cnn_error_distribution,results_v2/cnn_demand/2026-11-18_softplus_causal_research_training/forecasts.parquet,Saved Softplus prediction errors; no new inference

@@ -36,14 +36,14 @@ Current pricing training uses **historical-average forecasts**, not the trained 
 ### Next steps
 
 1. Complete academic methodology review.
-2. Resolve decisions that materially affect the frozen experiment protocol.
-3. With explicit authorization, resume controlled OD-DQN development training from the authoritative checkpoint.
-4. Perform the configured frozen-policy development evaluations.
-5. Complete privacy and EV charging experiments under approved protocols.
-6. Conduct protected evaluation only after methodology and model selection are frozen.
-7. Prepare publication-ready comparative results.
+2. Review the complete passenger acceptance and pricing evidence.
+3. Approve pending research decisions.
+4. With explicit authorization, continue training from authoritative Episode 2; episodes 3–7 are not evidenced as complete.
+5. Perform frozen-policy development evaluation.
+6. Complete approved privacy and 10/20/30% EV studies, including charging-cycle validation.
+7. Conduct protected evaluation after freezing selection, then finalize the publication package.
 
-No training is authorized or launched by this documentation repair. Update this table only from new validated evidence.
+Training remains paused; this evidence-extraction task launches no training. Update this table only from new validated evidence.
 
 **Navigation:** [Architecture](#c-end-to-end-architecture) · [CNN](#f-cnn-forecasting-implemented-not-the-active-hierarchical-input) · [Sensitivity](#g-passenger-elasticity-and-acceptance) · [Mathematics](#n-training-mathematics-and-hyperparameters) · [Results](#q-verified-experiments-and-latest-milestone) · [Open decisions](#t-open-methodological-decisions-and-experimental-limitations) · [Reproduction](#u-reproducibility-and-execution-reference)
 
@@ -525,6 +525,51 @@ The decision packet records its pre-approval state; the later orchestration repo
 Total revenue USD 326,987.196945 reconciles to supported reward USD 326,204.8 plus fallback USD 782.396945. The final replay holds100,000 of306,304 generated transitions;206,304 were FIFO-evicted. Retained replay is97.319% zero reward, representing9,572OD identities. Twenty-seven distinct prior focused tests passed, zero failed. Committed-slot execution was57.59minutes, excluding initialization/checkpoint/recovery and interrupted work; peak recorded RSS4.86GB and two retained checkpoints3.10GB. These are bounded resource measurements, not full-run forecasts.
 
 ![Bounded episode results](results_v2/publication/figures/dqn_episode_outcomes.png)
+
+## Two-Episode Passenger Acceptance and Pricing
+
+The authoritative March 1 training run is [multi-episode orchestration](results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/README.md), not an earlier March12 pilot or historical V3. Episode 1 spans 00:00–08:00 New York; Episode 2 spans 08:00–16:00 (05:00–21:00 UTC combined). Both contain 16 half-hour slots. The complete checkpoint audit ledgers were extracted without simulation, training, model inference or RNG reconstruction.
+
+| Outcome | Episode 1 | Episode 2 | Total |
+|---|---:|---:|---:|
+| Eligible |30,359|38,486|68,845|
+| Accepted |8,354|9,864|18,218|
+| Passenger rejected |22,005|28,622|50,627|
+| Assigned |5,958|8,876|14,834|
+| Accepted but unmatched |2,396|988|3,384|
+| Revenue (USD) |133,576.496310|193,410.700636|326,987.196945|
+
+**Complete evidence:** [68,845 passenger rows](results_v2/publication/tables/two_episode_passenger_acceptance_details.csv), [data dictionary](results_v2/publication/tables/two_episode_passenger_acceptance_DATA_DICTIONARY.md), [all 32 slot summaries](results_v2/publication/tables/two_episode_slot_acceptance_summary.csv), [hashes and reconciliation](results_v2/publication/passenger_evidence_validation.json), [frozen configuration](results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/frozen_configuration.json), and [read-only exporter](scripts/export_two_episode_evidence.py).
+
+The checkpoint records contain original individual sensitivity draws, offered prices, raw acceptance ceilings and dispatch outcomes. Decimal CSV values originate from exact hexadecimal checkpoint floats. All 32 ordered request-ID hashes match the saved reconciliation records. No required passenger field is missing; `NA` rejection reasons mean not applicable for accepted requests. Runtime source references are [request replay](src/simulation/historical_request_replay.py) and [OD pricing](src/simulation/od_pricing_runtime.py).
+
+Acceptance uses the **recorded TLC trip distance converted from miles to kilometres**, not the OD distance matrix. Both acceptance distance and its source-distance equivalent are retained. The common references are 22.354198442390455 USD and 4.616983790655043 km. The raw ceiling follows equation R3 without a minimum-price clamp; all 68,845 stored ceilings reproduce exactly before CSV serialization. Seven supported-OD actions yield fares from 6.60 to 94.70 USD. The separate fallback factor 1.0 applies to 36 requests and is not an eighth DQN action. January–February request-weighted elasticity draws and their actual conditional-group labels are preserved.
+
+Overall acceptance is 26.46%; assignment is 21.55% of eligible requests and 81.43% of accepted requests. Distance-band acceptance is 15.57%, 16.55%, 32.90%, 52.80% and 84.44% for [0,2), [2,5), [5,10), [10,20) and [20,infinity) km. These are descriptive observations under the configured formula, distance mixture and exploratory OD-slot actions, not causal willingness-to-pay estimates. Of 3,384 accepted-unmatched requests, 3,372 occurred at the lowest fare: high acceptance alone does not establish dispatch feasibility or revenue superiority.
+
+Supported OD accounts for 68,809 requests and 326,204.80 USD reward. The 36 fallback requests include 35 accepted and assigned, one rejected, and 782.396945 USD revenue. Fallback revenue is separated from supported-OD learning reward. All 70,106 source rows reconcile to 1,261 eligibility exclusions and 68,845 eligible requests.
+
+![Acceptance and dispatch by slot](results_v2/publication/figures/two_episode_acceptance_by_slot.png)
+
+![Distance, factor, fare and elasticity strata](results_v2/publication/figures/two_episode_acceptance_strata.png)
+
+![Recorded price distributions](results_v2/publication/figures/two_episode_price_distributions.png)
+
+Per-stratum denominators are in [distance](results_v2/publication/tables/two_episode_acceptance_by_distance.csv), [factor](results_v2/publication/tables/two_episode_acceptance_by_factor.csv), [fare](results_v2/publication/tables/two_episode_acceptance_by_fare.csv), [elasticity](results_v2/publication/tables/two_episode_acceptance_by_elasticity.csv), [weather/time](results_v2/publication/tables/two_episode_acceptance_by_weather_time.csv) and [OD support](results_v2/publication/tables/two_episode_acceptance_by_od_support.csv). [Distribution statistics](results_v2/publication/tables/two_episode_price_distribution_statistics.csv) include raw ceilings and offer-minus-ceiling margins. Accepted-but-unmatched is distinguished from passenger rejection throughout. Slot-level means include fallback requests; the slot CSV records pre-decision exploration and per-slot optimizer counts.
+
+## Research Figures and Tables Index
+
+The [complete results inventory](results_v2/publication/tables/master_results_inventory.csv) maps master sections and requested review outputs to verified artifacts, partial evidence and missing comparisons. It complements the [82-requirement implementation matrix](results_v2/publication/tables/master_traceability.csv). Graphs are presentation artifacts, not additional experiments. The master source fingerprint matches the [reviewed full text](results_v2/publication/master_specification_excerpt.md); its absent section 15 body remains explicitly unresolved.
+
+| Category | Verified evidence | Remaining limitation |
+|---|---|---|
+| CNN | [Loss](results_v2/publication/figures/cnn_training_loss.svg), [baseline metrics](results_v2/publication/figures/cnn_baseline_comparison.svg), [high/low grid series](results_v2/publication/figures/cnn_high_low_grids.svg), [city totals](results_v2/publication/figures/cnn_city_development.svg), [spatial and signed errors](results_v2/publication/figures/cnn_spatial_error.svg), [error distribution](results_v2/publication/figures/cnn_error_distribution.svg) | Below historical baseline; development is not final evaluation |
+| Sensitivity | [Weighted CDF/support](results_v2/publication/figures/sensitivity_conditional_support.svg), [weighting comparison](results_v2/publication/figures/sensitivity_weighting.svg), [group proportions](results_v2/publication/figures/sensitivity_group_counts.svg) | Comparison populations differ explicitly; weather assumptions remain |
+| Passenger pricing | [Complete passenger table](results_v2/publication/tables/two_episode_passenger_acceptance_details.csv), [slot summaries](results_v2/publication/tables/two_episode_slot_acceptance_summary.csv), [weather/time figure](results_v2/publication/figures/two_episode_weather_time_acceptance.svg) | Training description; no policy superiority claim |
+| DQN | [Exploration/loss/replay](results_v2/publication/figures/dqn_learning_replay.svg), [episode rewards](results_v2/publication/figures/dqn_episode_outcomes.svg) | Only episodes 1–2 completed |
+| Routing/FedAvg | [Update progression](results_v2/publication/figures/federation_progress.svg), [earlier March12 control](results_v2/publication/figures/routing_control.svg) | NONPRIVATE; control is a separate experiment |
+| Fleet/charging | [Validation](results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json) | Single 10% EV fleet; seven event records do not establish completed cycles; waits/SOC trajectories not exported |
+| Reproducibility | [Recovery](results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/recovery_validation.json), [source hashes](results_v2/publication/passenger_evidence_validation.json), [new figure manifest](results_v2/publication/tables/passenger_evidence_figure_manifest.csv) | Final protected and privacy/EV comparisons pending |
 
 ## R. Benchmark interpretation
 

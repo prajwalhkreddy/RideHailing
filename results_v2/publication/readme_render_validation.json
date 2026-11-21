@@ -1,7 +1,7 @@
 {
   "status": "PASS",
-  "local_links": 111,
-  "unique_links": 100,
+  "local_links": 153,
+  "unique_links": 122,
   "link_errors": [],
   "links": [
     {
@@ -415,6 +415,216 @@
       "kind": "file"
     },
     {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/README.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_passenger_acceptance_details.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_passenger_acceptance_DATA_DICTIONARY.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_slot_acceptance_summary.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/passenger_evidence_validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/frozen_configuration.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "scripts/export_two_episode_evidence.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/historical_request_replay.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "src/simulation/od_pricing_runtime.py",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/two_episode_acceptance_by_slot.png",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/two_episode_acceptance_strata.png",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/two_episode_price_distributions.png",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_acceptance_by_distance.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_acceptance_by_factor.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_acceptance_by_fare.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_acceptance_by_elasticity.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_acceptance_by_weather_time.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_acceptance_by_od_support.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_price_distribution_statistics.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/master_results_inventory.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/master_traceability.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/master_specification_excerpt.md",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_training_loss.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_baseline_comparison.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_high_low_grids.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_city_development.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_spatial_error.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/cnn_error_distribution.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/sensitivity_conditional_support.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/sensitivity_weighting.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/sensitivity_group_counts.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_passenger_acceptance_details.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/two_episode_slot_acceptance_summary.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/two_episode_weather_time_acceptance.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/dqn_learning_replay.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/dqn_episode_outcomes.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/federation_progress.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/figures/routing_control.svg",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/pricing_dqn/2026-11-20_multi_episode_orchestration/recovery_validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/passenger_evidence_validation.json",
+      "exists": true,
+      "kind": "file"
+    },
+    {
+      "url": "results_v2/publication/tables/passenger_evidence_figure_manifest.csv",
+      "exists": true,
+      "kind": "file"
+    },
+    {
       "url": "results_v2/publication/tables/routing_control.csv",
       "exists": true,
       "kind": "file"
@@ -626,6 +836,103 @@
         1800,
         720
       ],
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/two_episode_acceptance_by_slot.png",
+      "format": "PNG",
+      "dimensions": [
+        1500,
+        600
+      ],
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/two_episode_acceptance_strata.png",
+      "format": "PNG",
+      "dimensions": [
+        1650,
+        1050
+      ],
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/two_episode_price_distributions.png",
+      "format": "PNG",
+      "dimensions": [
+        1800,
+        600
+      ],
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_training_loss.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_baseline_comparison.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_high_low_grids.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_city_development.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_spatial_error.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/cnn_error_distribution.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/sensitivity_conditional_support.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/sensitivity_weighting.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/sensitivity_group_counts.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/two_episode_weather_time_acceptance.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/dqn_learning_replay.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/dqn_episode_outcomes.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/federation_progress.svg",
+      "format": "SVG",
+      "readable": true
+    },
+    {
+      "path": "results_v2/publication/figures/routing_control.svg",
+      "format": "SVG",
       "readable": true
     },
     {
@@ -1139,7 +1446,7 @@
   "mermaid_blocks": 9,
   "restricted_grammar_errors": [],
   "markdown_parser": "markdown-it-py CommonMark plus tables",
-  "rendered_tables": 6,
+  "rendered_tables": 8,
   "math_engine": "Matplotlib MathText supplemental parser; NOT KaTeX/MathJax",
   "mermaid_engine": "Unavailable: no Node/Mermaid CLI installed",
   "visual_rendering": "UNVERIFIED: full GitHub browser rendering unavailable",
